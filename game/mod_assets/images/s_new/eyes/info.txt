@@ -1,0 +1,15 @@
+## The 'a' eyes were taken from https://www.reddit.com/r/DDLC/comments/7h40q6/ok_final_version_this_time_i_swear/ by Fj0rd_
+## The 'b' and 'f' eyes is an edit of the 'a' eyes by AlexanDDOS
+## The 'c' & 'e' eyes were taken from the original game
+## The 'd' eyes were created from the 'a' and 'c' eyes br AlexanDDOS
+
+## Each value are divided by 4 spaces
+## Follow the below struct:
+## [filename]    [position]    [size]    [role ID (@expID)]
+
+a.png    (465, 252)    (184, 56)    f_eyes@a ## Open eyes looking straight at the player
+b.png    (465, 252)    (184, 56)    f_eyes@b ## Open eyes looking at left (rel. to Sayori)
+c.png    (465, 252)    (184, 56)    f_eyes@c ## Closed eyes
+d.png    (465, 252)    (184, 56)    f_eyes@d ## Wink with the right eye (c+a)
+e.png    (465, 252)    (184, 56)    f_eyes@e ## Tightly closed eyes (>.<-like from Sayori's standing-pose 'p.png')
+f.png    (465, 252)    (184, 56)    f_eyes@f ## Half-closed eyes

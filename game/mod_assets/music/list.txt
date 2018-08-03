@@ -1,0 +1,8 @@
+#I see you decided to add new music to the music list.
+#
+#Follow the below syntax:
+#"Displayed Name" "Ren'Py filepath (relative to mod_assets/music)" #Single File
+#"Displayed Name" ["filepath1", "filepath2", ...] #File list
+#
+#You can also use filepath music options (<from>, <to> & <loop>) in the filepaths
+#I believe you have good taste in music
