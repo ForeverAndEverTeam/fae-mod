@@ -691,7 +691,7 @@ label s_reaction_t: #Tired player
     s 7adab "Oh, then you should have a rest."
     s 6acab "I think it will be better, if I close the game."
     s "I don't want to interfere with your sleep."
-    if get_day_time() == 0:
+    if get_time_of_day() == 0:
         s 6aaab "Good night [player]!"
     else:
         s 6aaab "Sweet dreams [player]!"
