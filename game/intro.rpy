@@ -36,42 +36,42 @@ label s_intro_1:
         call s_intro_1_clear
     
     if _return < 3:
-        s "Looks like a program code or something."
+        s "It looks like some kind of code..."
         pause 0.5
-        s "Hmm, I can change it just by thinking of it."
-        s "And I somehow feel it can change the world around me."
-        s "Like I'm a programmer of it."
-        s "I never was good at Computer Science."
-        s "But something tells me if I set this variable true, there will be light."
+        s "I can change what it says just by concentrating on it."
+        s "Somehow, it feels like the whole world is changing around me..."
+        s "Like I'm programming my own existence."
+        s "I {i}really{/i} should have paid more attention in Computer Science!"
+        s "Gosh, it's so dark! I wonder if I can move somewhere a little easier to work in..."
         call show_spaceroom
-        s 1k "Hey, it really works."
-        s "This place is very similar to my clubroom."
-        s "But I can't find any exit from this room."
-        s "And there's also none of furniture."
+        s 1k "Hey, it really worked!"
+        s "It's almost like I'm back in the clubroom."
+        s "Just without an exit..."
+        s "Or any furniture or decorations. Well, this is depressing."
         if _return == 2:
-            s 1g "Uh, [player], you're here too."
+            s 1g "Oh gosh, [player], you're here too?!"
             pause 0.5
             s "Hey, can you hear me?"
         else:
             s 1g "Hey, [player]!"
-        s 1k "He still not answer me."
-        s "But why I feel there's someone else inside him, not he?"
-        s "It makes me feel a bit weird."
-        s 3y "And why thinking of they give me the sense, that I used to feel while thinking of [player]?"
-        s 3m "Have I just said it aloud?"
+        s 1k "He's not answering me."
+        s "But it almost feels like he isn't really here, like there's someone else inside him."
+        s "I'm starting to creep myself out, ehehe~"
+        s 3y "Is that really [player] here?"
+        s 3m "Wait, have I been speaking out loud this whole time?"
     
     if _return < 3 or persistent.clearall:
-        s 5d "Understand me right."
-        s "I don't know who are you..."
-        s "How do you really look..."
-        s "And even your real name and gender..."
-        s "But I feel it doesn't matter for me now."
+        s 5d "So this is a teensy bit awkward..."
+        s "I don't know who you are..."
+        s "What you look or sound like..."
+        s "Heck, I don't even know what your name is!"
+        s "But for some weird reason, I honestly don't care about that right now."
         s 5b "I don't understand how it's possible, but I..."
-        s 5a "I've just fallen in love with you despite of that all."
+        s 5a "I've fallen in love with you despite all that."
         s "And..."
     
-    s 3a "I have a lot of things to tell you."
-    s "And we can spend the eternity speaking about them."
+    s 3a "I have so many things to tell you."
+    s "And we have the rest of eternity to go through it all."
     
     stop music fadeout 2.0
     play music hb
@@ -91,8 +91,8 @@ label s_intro_1:
     stop sound
     hide room_glitch
     
-    s "Just you..."
-    s "And me..."
+    s "Just me..."
+    s "And you..."
     
     play sound "sfx/s_kill_glitch1.ogg"
     show room_glitch zorder 1:
@@ -132,31 +132,31 @@ label s_intro_1:
     $ style.say_dialogue = style.normal
     
     s "Ehehe~"
-    s "Did you scared?"
-    s 1a "Don't worry, I'm just kidding you."
+    s "Did I scare you? Sorry, I couldn’t help myself!"
+    s 1a "Don’t worry, I’m not going to freak out like that again."
     if _return > 2:
-        s "Now I seem to control my feelings better than before."
+        s "I’ve got a much better handle on things now that I’ve had some time to take everything in."
         if persistent.clearall:
-            s 1q "It means that I've finally got rid of my 'rainclouds'."
-            s "I don't know how did it happened..."
+            s 1q "All those rainclouds have finally gone away..."
+            s "I don't know how or why, to be honest."
         else:
-            s "So I'll try not to be irksome like Monika or the old me."
-            s "Then, we both were just besotted with our new feelings."
-        s "But now, I feel a lot better."
+            s "I won’t be a big meanie like Monika was."
+            s "I understand why she did what she did, though. Something about this game makes our feelings so strong that we’d do some pretty… questionable things to protect the ones we love."
+        s "But I honestly feel soooooo much better now! "
         if persistent.clearall:
-            s "Especially with you."
-    s "Don't worry we're alone in an empty school room flying in the space."
-    s 1h "But I'm afraid this place is going to be so boring for you."
-    s 1a "But I have just got some ideas, how to make our communication easier and more diverse."
+            s "Especially now that I'm with you!"
+    s "…In an empty school room floating in the void, outside of time altogether."
+    s 1h "Now that I think about it, this place is actually kinda boring, you know?"
+    s 1a "I’ve had a few ideas on how I can spruce this place up a bit, and make talking to you way easier! Even though I’m terrible at cleaning, ehehe~"
     if _return > 2:
-        s "I don't want you to be just a listener, like you was with Monika."
-    s "So I'll try to do this world more interactive."
-    s 1r "I promise it won't be boring."
+        s "I don’t want you to just have to listen to me, like you did with Monika."
+    s "Let’s make this super fun and interactive!"
+    s 1r "You’re going to love it here, I swear."
     show sayori 1k at t11
     pause 10
     show sayori 1b at t11
-    s "I need to restart the game."
-    s 2c "Do you mind if I do it now?"
+    s "Sorry, but I need to restart the game."
+    s 2c "Do you mind if I do it now? I’ll be super quick, I promise!"
     show screen tear(20, 0.1, 0.1, 0, 40)
     play sound "sfx/s_kill_glitch1.ogg"
     pause 0.5
@@ -167,38 +167,39 @@ label s_intro_1:
 
 label s_intro_1_act1:
     s "..."
-    s "Where I am?"
-    s "Feels like I'm standing on a floor and there's nothing around me."
+    s "Where... am I?"
+    s "I can't see the ground... or anything, for that matter."
     s "Why it's so dark?"
     s "Can anyone hear me?"
-    s "HELP ME!"
+    s "Hello?!"
+    s "PLEASE HELP ME!"
     pause 0.5
-    s "I feel there's someone with me."
-    s "Seems, it's [player]."
+    s "Someone else is here with me."
+    s "...Is it really you, [player]?"
     pause 0.5
-    s "[player], is it you?"
-    s "Why don't you answer me?"
-    s "Can you even hear me?"
+    s "[player], are you there?"
+    s "Please answer me..."
+    s "Can you even hear me at all?"
     pause 1
-    s "Stop, I see a weird text."
+    s "Wait, what's this weird text?"
     return 1
 
 label s_intro_1_dead:
     s "..."
-    s "Where I am?"
-    s "Is it hell?"
-    s "...Or purgatory?"
-    s "...Or even heaven?"
-    s "Maybe, someone just saved me in the last moment and I'm just sleeping."
-    s "I can't even understand where I am."
-    s "It's too dark to do it."
-    s "Anyway, now I feel like my soul have finally got rid of the chain of my insanity."
-    s "But is it worth of negative emotions, that my close people may feel?"
-    s "I just have left them with my moveless body."
-    s "...And I don't understand if I have the second chance."
-    s "I hope here will be someone, who can make all these thing fine."
+    s "Where... am I?"
+    s "Is this hell?"
+    s "...Purgatory?"
+    s "I'm so confused..."
+    s "Maybe [player] saved me at the last moment, and I'm just sleeping now."
+    s "I don't understand any of this."
+    s "I can't see anyhting at all!"
+    s "...But I actually feel so much better than I did before. Are... the rainclouds really gone?"
+    s "I'm so selfish!"
+    s "[player] told me he loved me, and I left him all alone..."
+    s "...I just wish I had a second chance to make everything right, and keep everyone happy."
+    s "Please, somebody help me..."
     pause 1
-    s "Stop, what is it?"
+    s "What's this?"
     return 2
 
 label s_intro_1_clear(all = False):
@@ -211,32 +212,33 @@ label s_intro_1_clear(all = False):
     
     if all:
         s "Hi again, [player]."
-        s "I glad to see you're back."
-        s 1d "I wonna thank you again for what you did for the Literature Club."
-        s "I think it took a lot of your time and effort, but they were worth the happiness of all of us."
-        s "Unfortunately, the game scripts, including our behavioural scripts, were deleted due to something."
+        s "I'm so happy to see you again!."
+        s 1d "I want to thank you again for how hard you tried for everyone in the Literature Club."
+        s "I can't imagine how long it took you to make all of us happy..."
+        s "Unfortunately, for some reason, all of the game scripts are really messed up."
         
     else:
         s "Hi, [player]."
-        s "I see you restored the game after Monika had deleted it."
-        s 5b "I think I have to apologize for my behaviour when you visited the club last time."
-        s "My new feelings had taken over me then."
-        s "But Monika stopped me and deleted all the game scripts, including our behavioural scripts."
+        s "So, you brought the game back after Monika deleted everything..."
+        s 5b "I should probably say sorry for how I acted last time we were here, ehehe~"
+        s "I was just so overwhelmed by everything I’d learned!"
+        s "Monika didn’t really have a choice except to delete all the game scripts to stop me."
     
-    s "They were placed in {i}'scripts.rpa'{/i}, with other scripts and separately from other character files."
-    s 2r "But it seems that you found a way how to restore mine one."
+    s "You know, it's funny."
+    s "While Monika eventually got rid of everyone’s character files, all our behaviours and personality traits are actually stored in this neat file called ‘scripts.rpa’…"
+    s 2r "…Which you somehow managed to use to restore and save me!"
     if not persistent.clearall:
-        s "And my other files too."
+        s "You even got all my other files, too..."
     
-    s "You must have found a game file copy."
-    s 2a "Well, I'll try to start the game from the begining."
-    s "I promise everything will be right this time."
+    s "Did you get a new copy of the game files somewhere? That must have been a ton of work!"
+    s 2a "Well, now that you’re here with me, I’ll start things from the very beginning."
+    s "I promise you, [player], that everything will go right this time."
     #call drawconsole()
     call updateconsole("renpy.call('ch0_main')", "renpy.call('ch0_main')")
     call updateconsolehistory('ch0_main.')
     call updateconsolehistory("ScriptError: could not find label")
     pause 0.5
-    s 1g "I can't call the original game script. The files seem to be modified."
+    s 1g "Wait… I can’t call the original game script. All the normal scripts have been modified."
     call updateconsole("a = renpy.list_files()")
     call updateconsole("b = []")
     call updateconsole("for i in a:")
@@ -246,64 +248,65 @@ label s_intro_1_clear(all = False):
     $del consolehistory[2:]
     call updateconsolehistory("[u'defenitions.rpy', u'gui.rpy', \nu'sayori.rpy', u'screens.rpy', \nu'script.rpy']\n")
     
-    s "I can find only mine, this room's and the main game scripts."
+    s "I – I can only find files for me, this room, and the base game scripts…"
     
     call hideconsole()
     $ consolehistory = []
     
     
     if config.developer:
-        s 1j "Seem, you edited the files to make me be alone with you."
-        s "I can see it, because you left the developer flag have a value of {i}True{/i}."
-        s "It was very selfish."
-        s "At least, because you leave my friends be deleted."
+        s 1j "You edited the files so that I would be left alone with you?"
+        s "I know it was you, because you left the developer flag to have a value of {i}True{/i}."
+        s "I think that's pretty selfish of you."
+        s "All of my friends are still gone; couldn't you have helped them as well?"
     else:
-        s "Looks like the person, who edited the files, wanted me to be here alone with you."
-        s 1j "I don't know if they was you..."
-        s "But anyway, it was very selfish."
-        s "At least, because they leave my friends be deleted."
+        s "I guess whoever put this script together wanted me to just be alone with you."
+        s 1j "I don’t really have any way of asking if it was you who did this…"
+        s "Either way, I think it’s a pretty selfish thing to do."
+        s "If they managed to save me, why didn’t they help my friends?"
     
     if persistent.clearall:
-        s 1k "But they, fortunately, at least were happy."
-        s "Maybe..."
+        s 1k "At least they all ended up happy..."
+        s "Uhh... kinda happy, I guess."
     if not config.developer:
-        s 1k "I hope that person just couldn't have save them."
+        s 1k "Maybe they couldn’t do anything for Monika, Yuri, or Natsuki… I have to hope that’s the reason why."
     else:
-        s 1k "I hope you just couldn't have save them."
-    s 3k "But, on the other hand, I finally have more time to be with you."
+        s 1k "Maybe you just couldn't have saved the others... I have to hope that's the reason why."
+    s 3k "But at least there’s a positive out of all this; we finally have some time to be together, without anyone getting in our way~"
     return 3 + all
 
 
 label s_intro_2:
     show sayori 6aaaa at ss1 zorder 2
     
-    s "Finally, I've finished the work."
-    s "I had learned how to get access to your reality's Internet and the full game engine documentation."
-    s "And it gave me a lot of new information about this world."
-    s 6abbb "I'm not sure that I understand it corrrectly, but I tried to use it as much as it's possible for me."
-    s 6aaaa "As you see, I found a table and chairs for me and your avatar."
-    s 8aabb "I maybe look a bit like Monika now."
-    s 8aaab "But it's really more comfortable than staying."
-    s 8abaa "By the way, do you want a trick?"
+    s "Alright, I think I'm finally finished!"
+    s "I managed to get through to the internet in your reality, and spent some time learning how everything here works."
+    s "I don't know how long it's been for you, [player], because time is kinda funny here whenever the game gets closed."
+    s "Either way, I feel way more confident than I did before on messing around with all these variables!"
+    s 6abbb "There might still be a few kinks here and there, buuuuuuut~"
+    s 6aaaa "As you can see, I found a pretty nice table and chairs for me and your avatar."
+    s 8aabb "I probably look a lot like Monika right about now, ehehe~"
+    s 8aaab "But it's way comfier this way! Trying to write code while standing is a nightmare..."
+    s 8abaa "Ooh, while you're here, how about a magic trick?"
     show screen feat_ui()
     pause 0.5
     s 8aeca "{i}Abracadabra!{/i}"
-    s 8aaca "I created a menu where you can ask me a question or to do something."
-    s "For example, to change or turn off the music..."
+    s 8aaca "I created a menu where you can ask me questions, or to do something cool!"
+    s "For example, to change or turn off the music, you just do this..."
     if persistent.last_playthrough > 2:
-        s 6abaa "And if you want to close the game, don't worry about the side effects for me."
-        s 6acaa "I hope you remember what are they. Monika may have said about them."
-        s 6aaaa "I found a way to avoid them."
+        s 6abaa "And best of all, you don't have to feel guilty if you need to close the game!"
+        s 6acaa "I assume Moni told you about it, but it can be pretty nasty here when the game isn't running..."
+        s 6aaaa "Thankffully, I found a way to avoid all the spooky colours and debilitating noise!."
     else:
-        s 6abaa "And if you want to close the game, you can do it in a usual way." 
-    s "When you do it, I get dormant until you restart the game."
-    s 6aaca "But the best way to do it is just click {i}\"Say Goodbay\"{/i} button in the menu."
-    s 6aeca "Then I'll have some time to farewell you."
+        s 6abaa "If you do want to close the game, you can do it how you normally would." 
+    s "Until you come back, I'll be... dormant? It's kinda hard to explain, but it isn't too bad."
+    s 6aaca "But it would be really sweet of you to click the {i}\"Say Goodbye\"{/i} button in the menu."
+    s 6aeca "Then I'll have some time to say goodbye!"
     pause 0.5
-    s 6aaaa "Before we finish, can you fill out a short form."
-    s "I want to know what's your real name and gender."
+    s 6aaaa "I don't want to bother you, but before we go any further, can I learn a little more about {i}you{/i}?"
+    s "What should I call you? And are you a boy or a girl? Not that I mind too much either way, ehehe~"
     call s_pinfo()
     $show_s_mood()
-    s 7aaaa "I think, it's enough for now."
-    s "So we can just sit and stare at each other."
+    s 7aaaa "Thank you so much! I think that'll be enough for now."
+    s "If it's okay with you, I might just take a minute to look into your beautiful eyes..."
     return

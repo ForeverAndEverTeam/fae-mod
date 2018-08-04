@@ -1,154 +1,154 @@
-﻿# TODO: Translation updated at 2018-07-26 16:45
+﻿# TODO: Translation updated at 2018-08-04 12:47
 
 # game/intro.rpy:39
-translate rus s_intro_1_95dda6b9:
+translate rus s_intro_1_c8b09eac:
 
-    # s "Looks like a program code or something."
-    s "Похоже на какую-то программу."
+    # s "It looks like some kind of code..."
+    s "Похоже на код..."
 
 # game/intro.rpy:41
-translate rus s_intro_1_feb74afe:
+translate rus s_intro_1_8739cc2e:
 
-    # s "Hmm, I can change it just by thinking of it."
-    s "Хм, я могу её переписывать силой мысли."
+    # s "I can change what it says just by concentrating on it."
+    s "Я могу менять его силой мысли."
 
 # game/intro.rpy:42
-translate rus s_intro_1_848f577f:
+translate rus s_intro_1_7ed1957a:
 
-    # s "And I somehow feel it can change the world around me."
-    s "И мне кажется, что это как-то способно изменить мир вокруг меня."
+    # s "Somehow, it feels like the whole world is changing around me..."
+    s "И почему мне кажется, что я так меняю мир вокруг себя..."
 
 # game/intro.rpy:43
-translate rus s_intro_1_91d1886b:
+translate rus s_intro_1_bca731d4:
 
-    # s "Like I'm a programmer of it."
-    s "Будто я его так программирую."
+    # s "Like I'm programming my own existence."
+    s "Будто бы я его программирую."
 
 # game/intro.rpy:44
-translate rus s_intro_1_8bac42a9:
+translate rus s_intro_1_8e94b3d6:
 
-    # s "I never was good at Computer Science."
-    s "IЯ не очень хороша в информатике."
+    # s "I {i}really{/i} should have paid more attention in Computer Science!"
+    s "Похоже, мне {i}действительно{/i} не стоило забивать на информатику в школе!"
 
 # game/intro.rpy:45
-translate rus s_intro_1_0f3bd9bb:
+translate rus s_intro_1_837f5ce5:
 
-    # s "But something tells me if I set this variable true, there will be light."
-    s "Но что-то мне подсказывает, что приписав этой переменной значение True, я включу свет."
+    # s "Gosh, it's so dark! I wonder if I can move somewhere a little easier to work in..."
+    s "Чёрт, тут так темно! Может, мне стоит подправить вот это и будет гораздо лучше..."
 
 # game/intro.rpy:47
-translate rus s_intro_1_b1c6cc2e:
+translate rus s_intro_1_e1783dd2:
 
-    # s 1k "Hey, it really works."
-    s 1k "Хех, сработало!"
+    # s 1k "Hey, it really worked!"
+    s 1k "Эй, сработало!"
 
 # game/intro.rpy:48
-translate rus s_intro_1_4c9d4ad3:
+translate rus s_intro_1_20d4be38:
 
-    # s "This place is very similar to my clubroom."
-    s "Очень похоже на кабинет нашего клуба."
+    # s "It's almost like I'm back in the clubroom."
+    s "Похоже на кабинет, в котором мы с клубом проводим собрания."
 
 # game/intro.rpy:49
-translate rus s_intro_1_aa6b1b61:
+translate rus s_intro_1_b6c5a529:
 
-    # s "But I can't find any exit from this room."
-    s "Но отсюда нет выхода."
+    # s "Just without an exit..."
+    s "Но от сюда нет выхода..."
 
 # game/intro.rpy:50
-translate rus s_intro_1_d50d828b:
+translate rus s_intro_1_98d62a94:
 
-    # s "And there's also none of furniture."
-    s "Ровно как и мебели."
+    # s "Or any furniture or decorations. Well, this is depressing."
+    s "И мебель куда-то вся исчезло, скучновато как-то."
 
 # game/intro.rpy:52
-translate rus s_intro_1_16299e33:
+translate rus s_intro_1_f14f9406:
 
-    # s 1g "Uh, [player], you're here too."
-    s 1g "О, [player], и ты здесь."
+    # s 1g "Oh gosh, [player], you're here too?!"
+    s 1g "О, [player], и ты тут?!"
 
 # game/intro.rpy:54
 translate rus s_intro_1_5d744141:
 
     # s "Hey, can you hear me?"
-    s "Эй, ты меня слышишь?"
+    s "Эй, ты слышишь меня?"
 
 # game/intro.rpy:56
 translate rus s_intro_1_a8f690a4:
 
     # s 1g "Hey, [player]!"
-    s 1g "Эй, [player]!"
+    s 1g "Э-э-эй, [player]!"
 
 # game/intro.rpy:57
-translate rus s_intro_1_f67a7f4c:
+translate rus s_intro_1_bb67b8f9:
 
-    # s 1k "He still not answer me."
-    s 1k "Он всё ещё молчит."
+    # s 1k "He's not answering me."
+    s 1k "Он не отвечает."
 
 # game/intro.rpy:58
-translate rus s_intro_1_5725c304:
+translate rus s_intro_1_d03d3452:
 
-    # s "But why I feel there's someone else inside him, not he?"
-    s "Но создаётся странное ощущение, что в нём есть кто-то ещё другой."
+    # s "But it almost feels like he isn't really here, like there's someone else inside him."
+    s "Но мне кажется, что это не совсем он, будто кто-то ещё сейчас через него всё видет и слышит."
 
 # game/intro.rpy:59
-translate rus s_intro_1_99941cb9:
+translate rus s_intro_1_6b9fb2ad:
 
-    # s "It makes me feel a bit weird."
-    s "Это действительно немного странно."
+    # s "I'm starting to creep myself out, ehehe~"
+    s "Мне аж немного страшно, хе-хе~"
 
 # game/intro.rpy:60
-translate rus s_intro_1_4b2c6057:
+translate rus s_intro_1_53c888e5:
 
-    # s 3y "And why thinking of they give me the sense, that I used to feel while thinking of [player]?"
-    s 3y "И почему меня тянет к нему так же, как и к моему другу?"
+    # s 3y "Is that really [player] here?"
+    s 3y "Это точно [player]?"
 
 # game/intro.rpy:61
-translate rus s_intro_1_96efe5fa:
+translate rus s_intro_1_b84c46a7:
 
-    # s 3m "Have I just said it aloud?"
-    s 3m "Я это только что сказала вслух?"
+    # s 3m "Wait, have I been speaking out loud this whole time?"
+    s 3m "Стоп, так я всё это время говорила вслух?"
 
 # game/intro.rpy:64
-translate rus s_intro_1_a471f4f6:
+translate rus s_intro_1_945b4604:
 
-    # s 5d "Understand me right."
-    s 5d "Ладно, не пойми меня неправильно."
+    # s 5d "So this is a teensy bit awkward..."
+    s 5d "Я немного волнуюсь..."
 
 # game/intro.rpy:65
-translate rus s_intro_1_40d30cc6:
+translate rus s_intro_1_355ff181:
 
-    # s "I don't know who are you..."
-    s "Я не в курсе, кто ты..."
+    # s "I don't know who you are..."
+    s "Я не знаю, кто ты на самом деле..."
 
 # game/intro.rpy:66
-translate rus s_intro_1_66279e63:
+translate rus s_intro_1_dfd04041:
 
-    # s "How do you really look..."
-    s "Как ты выглядешь на самом деле..."
+    # s "What you look or sound like..."
+    s "Так ты вообще выглядишь..."
 
 # game/intro.rpy:67
-translate rus s_intro_1_b3ddee2a:
+translate rus s_intro_1_864f7bfb:
 
-    # s "And even your real name and gender..."
-    s "Я даже не знаю твоего имени и пола..."
+    # s "Heck, I don't even know what your name is!"
+    s "И блин, я даже твоего имени не знаю!"
 
 # game/intro.rpy:68
-translate rus s_intro_1_73d22ce1:
+translate rus s_intro_1_3c00ddbe:
 
-    # s "But I feel it doesn't matter for me now."
-    s "Но это будто никакой роли не играет."
+    # s "But for some weird reason, I honestly don't care about that right now."
+    s "Но сейчас, почему-то, для меня это никакой роли не играет."
 
 # game/intro.rpy:69
 translate rus s_intro_1_97eb70c4:
 
     # s 5b "I don't understand how it's possible, but I..."
-    s 5b "Я без понятия как, не кажется я..."
+    s 5b "Не знаю, как это вообще возмозжно, но я..."
 
 # game/intro.rpy:70
-translate rus s_intro_1_3a1138e7:
+translate rus s_intro_1_ce333615:
 
-    # s 5a "I've just fallen in love with you despite of that all."
-    s 5a "Влюбилась в тебе, несмотря на всю это незнание."
+    # s 5a "I've fallen in love with you despite all that."
+    s 5a "Я влюбилась в тебя, даже несмотрю на всю пелену незнания тебя."
 
 # game/intro.rpy:71
 translate rus s_intro_1_2a3b37c2:
@@ -157,28 +157,28 @@ translate rus s_intro_1_2a3b37c2:
     s "И..."
 
 # game/intro.rpy:73
-translate rus s_intro_1_2c0b8282:
+translate rus s_intro_1_6bbc73ce:
 
-    # s 3a "I have a lot of things to tell you."
-    s 3a "Мне нужно много о чём тебе рассказать."
+    # s 3a "I have so many things to tell you."
+    s 3a "Мне много о чём хочется тебе сказать."
 
 # game/intro.rpy:74
-translate rus s_intro_1_0afa37cd:
+translate rus s_intro_1_66e5bc3d:
 
-    # s "And we can spend the eternity speaking about them."
-    s "И мы можем провести с тобой вечность за этими разговорами."
+    # s "And we have the rest of eternity to go through it all."
+    s "И мы можем провести вечность за этими разговорами."
 
 # game/intro.rpy:94
-translate rus s_intro_1_ab2fda7b:
+translate rus s_intro_1_e0ef7048:
 
-    # s "Just you..."
-    s "Лишь ты..."
+    # s "Just me..."
+    s "Представь, лишь я..."
 
 # game/intro.rpy:95
-translate rus s_intro_1_5a838403:
+translate rus s_intro_1_06292f9c:
 
-    # s "And me..."
-    s "Да я..."
+    # s "And you..."
+    s "И ты..."
 
 # game/intro.rpy:111
 translate rus s_intro_1_06e6a498:
@@ -199,106 +199,106 @@ translate rus s_intro_1_c98e38ed:
     s "Хе-хе~"
 
 # game/intro.rpy:135
-translate rus s_intro_1_bc2ff1f7:
+translate rus s_intro_1_f5ce34a2:
 
-    # s "Did you scared?"
-    s "Чё, страшно?"
+    # s "Did I scare you? Sorry, I couldn’t help myself!"
+    s "Чё, страшно? Прости, не смогла удержаться."
 
 # game/intro.rpy:136
-translate rus s_intro_1_10f263a0:
+translate rus s_intro_1_5aed9d94:
 
-    # s 1a "Don't worry, I'm just kidding you."
-    s 1a "Тихо, я просто над тобой прикалываюсь."
+    # s 1a "Don’t worry, I’m not going to freak out like that again."
+    s 1a "Не парься! Впредь, я тебя не буду так сильно пугать."
 
 # game/intro.rpy:138
-translate rus s_intro_1_069c17ad:
+translate rus s_intro_1_e449cbbe:
 
-    # s "Now I seem to control my feelings better than before."
-    s "Сейчас мне гораздо легче управлять своими чувствами."
+    # s "I’ve got a much better handle on things now that I’ve had some time to take everything in."
+    s "Сейчас мне гораздо легче браться себя в руки."
 
 # game/intro.rpy:140
-translate rus s_intro_1_ce8c33ea:
+translate rus s_intro_1_f4c2b101:
 
-    # s 1q "It means that I've finally got rid of my 'rainclouds'."
-    s 1q "И от «тучек» я тоже избавилась."
+    # s 1q "All those rainclouds have finally gone away..."
+    s 1q "Ведь, «тучки» наконец-то отошли от меня..."
 
 # game/intro.rpy:141
-translate rus s_intro_1_ea81f327:
+translate rus s_intro_1_3f5a2d37:
 
-    # s "I don't know how did it happened..."
-    s "Сама без понятия как..."
+    # s "I don't know how or why, to be honest."
+    s "Честно говоря, сама без понятия, как."
 
 # game/intro.rpy:143
-translate rus s_intro_1_0a82d7c8:
+translate rus s_intro_1_854fd831:
 
-    # s "So I'll try not to be irksome like Monika or the old me."
-    s "Поэтому я буду не такой прилипалой, как Моника или прежняя я."
+    # s "I won’t be a big meanie like Monika was."
+    s "Я буду рассудительнее Моники."
 
 # game/intro.rpy:144
-translate rus s_intro_1_5d3c37c7:
+translate rus s_intro_1_b604c5e3:
 
-    # s "Then, we both were just besotted with our new feelings."
-    s "Нами тогда просто повеливали новые чувства."
+    # s "I understand why she did what she did, though. Something about this game makes our feelings so strong that we’d do some pretty… questionable things to protect the ones we love."
+    s "Однако, я всё же понимаю, из-за чего она всё натворила. Что-то в этой игре заставляет буквально сходить нас с ума от наших чувств, заставляя нас жертвовать всем для защиты своего суженого."
 
 # game/intro.rpy:145
-translate rus s_intro_1_ac03d988:
+translate rus s_intro_1_5e6bebf8:
 
-    # s "But now, I feel a lot better."
-    s "Но сейчас я чувствую себя гораздо лучше."
+    # s "But I honestly feel soooooo much better now! "
+    s "Но сейчас мне гораздо-гораздо лучше!"
 
 # game/intro.rpy:147
-translate rus s_intro_1_e20f113e:
+translate rus s_intro_1_db2f0484:
 
-    # s "Especially with you."
-    s "Особенно, рядом с тобой."
+    # s "Especially now that I'm with you!"
+    s "Особенно сейчас, с тобой!"
 
 # game/intro.rpy:148
-translate rus s_intro_1_54c054e4:
+translate rus s_intro_1_8ebbe8af:
 
-    # s "Don't worry we're alone in an empty school room flying in the space."
-    s "Нет ничего страшного в том, что мы одни комнате по среди космического пространства."
+    # s "…In an empty school room floating in the void, outside of time altogether."
+    s "…В пустом школьном кабинете, висящем в чём-то на подобие космоса, где время живёт по другим законам."
 
 # game/intro.rpy:149
-translate rus s_intro_1_9911f27d:
+translate rus s_intro_1_eeaa1f18:
 
-    # s 1h "But I'm afraid this place is going to be so boring for you."
-    s 1h "Но я всё же боюсь, что ты заскучаешь."
+    # s 1h "Now that I think about it, this place is actually kinda boring, you know?"
+    s 1h "Если подумать, здесь абсолютно нечего делать."
 
 # game/intro.rpy:150
-translate rus s_intro_1_b59e8a6a:
+translate rus s_intro_1_a2e34f5f:
 
-    # s 1a "But I have just got some ideas, how to make our communication easier and more diverse."
-    s 1a "Однако, у меня есть пара идей как разноообразить наше с тобой общение."
+    # s 1a "I’ve had a few ideas on how I can spruce this place up a bit, and make talking to you way easier! Even though I’m terrible at cleaning, ehehe~"
+    s 1a "У меня есть пара идеи по улучшению нашего контакта с тобой, хоть я и не хороша в подобных делах, хе-хе~"
 
 # game/intro.rpy:152
-translate rus s_intro_1_873bc473:
+translate rus s_intro_1_41538c24:
 
-    # s "I don't want you to be just a listener, like you was with Monika."
-    s "Я не хочу, что ты просто был слушателем, как ты был с Моникой."
+    # s "I don’t want you to just have to listen to me, like you did with Monika."
+    s "Я не хочу, чтобы ты был просто слушателем, как с Моникой."
 
 # game/intro.rpy:153
-translate rus s_intro_1_3e5c7457:
+translate rus s_intro_1_655bd73f:
 
-    # s "So I'll try to do this world more interactive."
-    s "Я сделаю этот мир более интерактивным."
+    # s "Let’s make this super fun and interactive!"
+    s "Давай-ка я тут всё обустрою поинтерактивней да поприкольней!"
 
 # game/intro.rpy:154
-translate rus s_intro_1_4f6c2817:
+translate rus s_intro_1_6ff14188:
 
-    # s 1r "I promise it won't be boring."
-    s 1r "Думаю, скучно не будет."
+    # s 1r "You’re going to love it here, I swear."
+    s 1r "Обещаю, здесь реально будет классно."
 
 # game/intro.rpy:158
-translate rus s_intro_1_a430032a:
+translate rus s_intro_1_a9f5cedf:
 
-    # s "I need to restart the game."
-    s "Мне надо перезапустить игру."
+    # s "Sorry, but I need to restart the game."
+    s "Но, мне нужно перезапустить игру."
 
 # game/intro.rpy:159
-translate rus s_intro_1_d02651a7:
+translate rus s_intro_1_622f9ae9:
 
-    # s 2c "Do you mind if I do it now?"
-    s 2c "Ты не против?"
+    # s 2c "Do you mind if I do it now? I’ll be super quick, I promise!"
+    s 2c "Ничего, если я это сделаю? Я всё по-быстрому сделаю, обещаю."
 
 # game/intro.rpy:169
 translate rus s_intro_1_act1_e1554201:
@@ -307,488 +307,506 @@ translate rus s_intro_1_act1_e1554201:
     s "..."
 
 # game/intro.rpy:170
-translate rus s_intro_1_act1_66d725c1:
+translate rus s_intro_1_act1_28a058cb:
 
-    # s "Where I am?"
-    s "Где я?"
+    # s "Where... am I?"
+    s "Э-э-э... И где я?"
 
 # game/intro.rpy:171
-translate rus s_intro_1_act1_5d36c0ba:
+translate rus s_intro_1_act1_44fe0c3a:
 
-    # s "Feels like I'm standing on a floor and there's nothing around me."
-    s "Похоже, я стою на полу. Вокруг меня, вроде бы, ничего нет."
+    # s "I can't see the ground... or anything, for that matter."
+    s "Я не вижу даже того, на чём я стою... Вообще ничего не видно."
 
 # game/intro.rpy:172
 translate rus s_intro_1_act1_487d41cc:
 
     # s "Why it's so dark?"
-    s "Почему здесь так темно?"
+    s "Почему тут так темно?"
 
 # game/intro.rpy:173
 translate rus s_intro_1_act1_e40a0324:
 
     # s "Can anyone hear me?"
-    s "Мне кто-нибудь вообще слышит?"
+    s "Меня вообще слышно?"
 
 # game/intro.rpy:174
-translate rus s_intro_1_act1_c37c2e8e:
+translate rus s_intro_1_act1_b8309470:
 
-    # s "HELP ME!"
-    s "ПОМОГИТЕ!"
+    # s "Hello?!"
+    s "Э-э-э-эй?!"
 
-# game/intro.rpy:176
-translate rus s_intro_1_act1_4523298f:
+# game/intro.rpy:175
+translate rus s_intro_1_act1_09b6c8a8:
 
-    # s "I feel there's someone with me."
-    s "Похоже, здесь есть кто-то ещё."
+    # s "PLEASE HELP ME!"
+    s "ВЫТАЩИТЕ МЕНЯ ОТСЮДА!"
 
 # game/intro.rpy:177
-translate rus s_intro_1_act1_f15c09bc:
+translate rus s_intro_1_act1_1264c881:
 
-    # s "Seems, it's [player]."
-    s "Похоже, это [player]."
+    # s "Someone else is here with me."
+    s "Хм, кто-то рядом со мной."
 
-# game/intro.rpy:179
-translate rus s_intro_1_act1_e5ac55a0:
+# game/intro.rpy:178
+translate rus s_intro_1_act1_6859935e:
 
-    # s "[player], is it you?"
-    s "[player], ты ли это?"
+    # s "...Is it really you, [player]?"
+    s "...Это ты, [player]?"
 
 # game/intro.rpy:180
-translate rus s_intro_1_act1_a85b88c4:
+translate rus s_intro_1_act1_9030e1ab:
 
-    # s "Why don't you answer me?"
-    s "Почему ты не отвечаешь?"
+    # s "[player], are you there?"
+    s "[player], э-э-эй!"
 
 # game/intro.rpy:181
-translate rus s_intro_1_act1_4a0800a8:
+translate rus s_intro_1_act1_e0359f69:
 
-    # s "Can you even hear me?"
-    s "Ты меня вообще слышишь?"
+    # s "Please answer me..."
+    s "Ответь мне уже, пожалуйста..."
 
-# game/intro.rpy:183
-translate rus s_intro_1_act1_8047c056:
+# game/intro.rpy:182
+translate rus s_intro_1_act1_df27e756:
 
-    # s "Stop, I see a weird text."
-    s "Стоп, это что за странный текст?"
+    # s "Can you even hear me at all?"
+    s "Меня вообще слышно?"
 
-# game/intro.rpy:187
+# game/intro.rpy:184
+translate rus s_intro_1_act1_dbd53f46:
+
+    # s "Wait, what's this weird text?"
+    s "Эй, это ещё за текст?"
+
+# game/intro.rpy:188
 translate rus s_intro_1_dead_e1554201:
 
     # s "..."
     s "..."
 
-# game/intro.rpy:188
-translate rus s_intro_1_dead_66d725c1:
-
-    # s "Where I am?"
-    s "Где?"
-
 # game/intro.rpy:189
-translate rus s_intro_1_dead_f830af08:
+translate rus s_intro_1_dead_28a058cb:
 
-    # s "Is it hell?"
-    s "Я в аду?"
+    # s "Where... am I?"
+    s "И... Где же я?"
 
 # game/intro.rpy:190
-translate rus s_intro_1_dead_f9fb56e1:
+translate rus s_intro_1_dead_7139e7a5:
 
-    # s "...Or purgatory?"
-    s "...или в частилище?"
+    # s "Is this hell?"
+    s "В аду?"
 
 # game/intro.rpy:191
-translate rus s_intro_1_dead_1ad32638:
+translate rus s_intro_1_dead_9395ebb5:
 
-    # s "...Or even heaven?"
-    s "А может, я даже вот-вот попаду в рай?"
+    # s "...Purgatory?"
+    s "...В чистилище?"
 
 # game/intro.rpy:192
-translate rus s_intro_1_dead_c7408c6c:
+translate rus s_intro_1_dead_ca2caacc:
 
-    # s "Maybe, someone just saved me in the last moment and I'm just sleeping."
-    s "Ну или кто-то всё же спас меня в последний момент и я в коме."
+    # s "I'm so confused..."
+    s "Я в растерянности..."
 
 # game/intro.rpy:193
-translate rus s_intro_1_dead_78086657:
+translate rus s_intro_1_dead_95418ae0:
 
-    # s "I can't even understand where I am."
-    s "Я даже не понимаю, где я нахожусь."
+    # s "Maybe [player] saved me at the last moment, and I'm just sleeping now."
+    s "А может, [player] спас меня в последний момент, и я сейчас просто в коме."
 
 # game/intro.rpy:194
-translate rus s_intro_1_dead_1abea2cc:
+translate rus s_intro_1_dead_3beb4608:
 
-    # s "It's too dark to do it."
-    s "Здесь слишком темно."
+    # s "I don't understand any of this."
+    s "Мне вообще ничего не понятно."
 
 # game/intro.rpy:195
-translate rus s_intro_1_dead_f7284344:
+translate rus s_intro_1_dead_a220cd43:
 
-    # s "Anyway, now I feel like my soul have finally got rid of the chain of my insanity."
-    s "Как бы то не было, сейчас я будто бы отсвободилось от узд моего нездравья."
+    # s "I can't see anyhting at all!"
+    s "Здесь просто кромешная тьма!"
 
 # game/intro.rpy:196
-translate rus s_intro_1_dead_aef46d84:
+translate rus s_intro_1_dead_32be91ad:
 
-    # s "But is it worth of negative emotions, that my close people may feel?"
-    s "Но стоило ли это возможных переживаний близких мне людей?"
+    # s "...But I actually feel so much better than I did before. Are... the rainclouds really gone?"
+    s "...Но, мне сейчас куда лучшее, чем раньше. Они... Они меня наконец-то покинули?"
 
 # game/intro.rpy:197
-translate rus s_intro_1_dead_bd9e74c7:
+translate rus s_intro_1_dead_63558189:
 
-    # s "I just have left them with my moveless body."
-    s "Я просто оставила их наедине с моим телом."
+    # s "I'm so selfish!"
+    s "Я слишком много думала о себе!"
 
 # game/intro.rpy:198
-translate rus s_intro_1_dead_92a02485:
+translate rus s_intro_1_dead_f3fec0a8:
 
-    # s "...And I don't understand if I have the second chance."
-    s "...и я даже без понятия, дан ли мне второй шанс."
+    # s "[player] told me he loved me, and I left him all alone..."
+    s "[player] признался мне в любви, а я взяла и бросила его одного..."
 
 # game/intro.rpy:199
-translate rus s_intro_1_dead_44ff62f3:
+translate rus s_intro_1_dead_4b489167:
 
-    # s "I hope here will be someone, who can make all these thing fine."
-    s "Надеюсь, я здесь встречу хоть кого-то, кто может мне прояснить ситуацию."
+    # s "...I just wish I had a second chance to make everything right, and keep everyone happy."
+    s "...Мне сейчас так хочется вернутся обратно к друзьям, обнадёжить и обрадовать их вновь."
 
-# game/intro.rpy:201
-translate rus s_intro_1_dead_26674241:
+# game/intro.rpy:200
+translate rus s_intro_1_dead_72dca76c:
 
-    # s "Stop, what is it?"
-    s "Эй, а это что такое?"
+    # s "Please, somebody help me..."
+    s "Вот бы у меня была такая возможность..."
 
-# game/intro.rpy:205
+# game/intro.rpy:202
+translate rus s_intro_1_dead_e751841c:
+
+    # s "What's this?"
+    s "Стоп, а это что такое?"
+
+# game/intro.rpy:206
 translate rus s_intro_1_clear_e1554201:
 
     # s "..."
     s "..."
 
-# game/intro.rpy:206
+# game/intro.rpy:207
 translate rus s_intro_1_clear_d6ebf9ab:
 
     # s "Uh, can you hear me?"
-    s "Э-э-э, ты меня слышишь?"
+    s "Э-э-э, меня слышно?"
 
-# game/intro.rpy:207
+# game/intro.rpy:208
 translate rus s_intro_1_clear_bf0a8506:
 
     # s "...Is it working?"
     s "...Приём!"
 
-# game/intro.rpy:213
+# game/intro.rpy:214
 translate rus s_intro_1_clear_b0428c1a:
 
     # s "Hi again, [player]."
-    s "Ну снова здравствуй, [player]."
-
-# game/intro.rpy:214
-translate rus s_intro_1_clear_57e0dc1f:
-
-    # s "I glad to see you're back."
-    s "Я рада твоему возвращению."
+    s "Привет тебе, [player]."
 
 # game/intro.rpy:215
-translate rus s_intro_1_clear_3ed7b91b:
+translate rus s_intro_1_clear_a3df8a87:
 
-    # s 1d "I wonna thank you again for what you did for the Literature Club."
-    s 1d "Я хотела бы вновь поблагодарить тебя за все заслуги перед нашим клубом."
+    # s "I'm so happy to see you again!."
+    s "Я так рада видеть тебя вновь!"
 
 # game/intro.rpy:216
-translate rus s_intro_1_clear_97cb97c6:
+translate rus s_intro_1_clear_21724e6e:
 
-    # s "I think it took a lot of your time and effort, but they were worth the happiness of all of us."
-    s "Наверное, ты приложил к этому много усилий."
-    s "Но они стояли счастья каждой из нас."
+    # s 1d "I want to thank you again for how hard you tried for everyone in the Literature Club."
+    s 1d "Я хочу поблагодарить тебя вновь за все заслуги перед нашим литературным клубом."
 
 # game/intro.rpy:217
-translate rus s_intro_1_clear_ff85a694:
+translate rus s_intro_1_clear_53d81a38:
 
-    # s "Unfortunately, the game scripts, including our behavioural scripts, were deleted due to something."
-    s "К несчастью, кто-то или что-то стёрло все скрипты в игре, включая наши скрипты поведения."
+    # s "I can't imagine how long it took you to make all of us happy..."
+    s "Представить не могу, как много сил ты явно потратил, дабы осчасливить нас всех..."
 
-# game/intro.rpy:220
+# game/intro.rpy:218
+translate rus s_intro_1_clear_9e1de34c:
+
+    # s "Unfortunately, for some reason, all of the game scripts are really messed up."
+    s "К несчастью, кто-то или что-то разнесло все скрипты в пух и прах."
+
+# game/intro.rpy:221
 translate rus s_intro_1_clear_b497b2df:
 
     # s "Hi, [player]."
     s "Привет, [player]."
 
-# game/intro.rpy:221
-translate rus s_intro_1_clear_4094696d:
-
-    # s "I see you restored the game after Monika had deleted it."
-    s "Я вижу ты исправил все совершённые Моникой гадости."
-
 # game/intro.rpy:222
-translate rus s_intro_1_clear_ff1e394e:
+translate rus s_intro_1_clear_c7616dce:
 
-    # s 5b "I think I have to apologize for my behaviour when you visited the club last time."
-    s 5b "Думаю, мне уместно извениться за моё ужасное поведение в последний раз."
+    # s "So, you brought the game back after Monika deleted everything..."
+    s "Вау! Ты вернул всё на место после деяний Моники..."
 
 # game/intro.rpy:223
-translate rus s_intro_1_clear_38f371f7:
+translate rus s_intro_1_clear_eb3c9f3e:
 
-    # s "My new feelings had taken over me then."
-    s "Меня просто переполняли новые чувства."
+    # s 5b "I should probably say sorry for how I acted last time we were here, ehehe~"
+    s 5b "Думаю, будет уместно извениться за моё ужасное поведение в последний раз, хе-хе~"
 
 # game/intro.rpy:224
-translate rus s_intro_1_clear_147ffa7f:
+translate rus s_intro_1_clear_0992ea31:
 
-    # s "But Monika stopped me and deleted all the game scripts, including our behavioural scripts."
-    s "Но Моника меня остановила, правда, удалив всё скрипты, включая поведенческие."
+    # s "I was just so overwhelmed by everything I’d learned!"
+    s "Мной просто овладели новые эмоции и власть!"
 
-# game/intro.rpy:226
-translate rus s_intro_1_clear_601ae9c0:
+# game/intro.rpy:225
+translate rus s_intro_1_clear_46558689:
 
-    # s "They were placed in {i}'scripts.rpa'{/i}, with other scripts and separately from other character files."
-    s "Они были заархивированы в {i}'scripts.rpa'{/i}, отдельно от других файлов."
+    # s "Monika didn’t really have a choice except to delete all the game scripts to stop me."
+    s "Монике просто пришлось удалить абсолютно всё, дабы не остановить меня."
 
 # game/intro.rpy:227
-translate rus s_intro_1_clear_96a48ed4:
+translate rus s_intro_1_clear_6126be48:
 
-    # s 2r "But it seems that you found a way how to restore mine one."
-    s 2r "Но ты, пожохе, нашёл способ как восстановить мой."
+    # s "You know, it's funny."
+    pass
+
+# game/intro.rpy:228
+translate rus s_intro_1_clear_44192f24:
+
+    # s "While Monika eventually got rid of everyone’s character files, all our behaviours and personality traits are actually stored in this neat file called ‘scripts.rpa’…"
+    s "Все наши личности хранились в «scripts.rpa», который Моника почти полностью затёрла…"
 
 # game/intro.rpy:229
-translate rus s_intro_1_clear_bbe72ef5:
+translate rus s_intro_1_clear_a809940a:
 
-    # s "And my other files too."
-    s "Ровно как и другие мои файлы."
+    # s 2r "…Which you somehow managed to use to restore and save me!"
+    s 2r "…Но ты, по ходу дела, всё восстановил!"
 
 # game/intro.rpy:231
-translate rus s_intro_1_clear_10b0cb22:
+translate rus s_intro_1_clear_0c90d041:
 
-    # s "You must have found a game file copy."
-    s "Видимо, у тебя была копия файлов игры."
-
-# game/intro.rpy:232
-translate rus s_intro_1_clear_08935d2b:
-
-    # s 2a "Well, I'll try to start the game from the begining."
-    s 2a "Ладно, начнём игру по новой."
+    # s "You even got all my other files, too..."
+    s "Вместе с другими файлами, в том числе..."
 
 # game/intro.rpy:233
-translate rus s_intro_1_clear_36155bc5:
+translate rus s_intro_1_clear_8c8d1326:
 
-    # s "I promise everything will be right this time."
-    s 1k "Надеюсь, всё пойдёт как по маслу."
+    # s "Did you get a new copy of the game files somewhere? That must have been a ton of work!"
+    s "Это тебя где-то была копия файлов игры? Возможно, тебя пришлось с ними повозиться!"
 
-# game/intro.rpy:239
-translate rus s_intro_1_clear_7324c8dd:
+# game/intro.rpy:234
+translate rus s_intro_1_clear_aa495d8e:
 
-    # s 1g "I can't call the original game script. The files seem to be modified."
-    s 1g "Я не могу вызвать оригинальные скрипты. Кто-то подправил файлы."
+    # s 2a "Well, now that you’re here with me, I’ll start things from the very beginning."
+    s 2a "Ладно, раз уж ты здесь, я попробую начать всё по новой."
+
+# game/intro.rpy:235
+translate rus s_intro_1_clear_8c0b9802:
+
+    # s "I promise you, [player], that everything will go right this time."
+    s "Обещаю тебе, [player], что теперь пойдёт как по маслу."
+
+# game/intro.rpy:241
+translate rus s_intro_1_clear_857abae3:
+
+    # s 1g "Wait… I can’t call the original game script. All the normal scripts have been modified."
+    s 1g "Стоп… Я не могу вызвать оригинальный скрипт игры. Будто его кто-то изменил."
 
 # game/intro.rpy:251
-translate rus s_intro_1_clear_da645e7e:
+translate rus s_intro_1_clear_a58e5155:
 
-    # s "I can find only mine, this room's and the main game scripts."
-    s "Здесь только скрипты меня, этой комнаты, а также базовые скрипты."
+    # s "I – I can only find files for me, this room, and the base game scripts…"
+    s "Хм, здесь лишь мои скрипты, скрипт этой комнаты и основные скрипты игры…"
 
 # game/intro.rpy:258
-translate rus s_intro_1_clear_106bcd8c:
+translate rus s_intro_1_clear_7b5a3d8a:
 
-    # s 1j "Seem, you edited the files to make me be alone with you."
-    s 1j "Как будто ты хотел меня оставить наедине с тобой."
+    # s 1j "You edited the files so that I would be left alone with you?"
+    s 1j "Ты изменил файлы, дабы оставить меня с тобой наединие?"
 
 # game/intro.rpy:259
-translate rus s_intro_1_clear_fafb2237:
+translate rus s_intro_1_clear_f877e66d:
 
-    # s "I can see it, because you left the developer flag have a value of {i}True{/i}."
-    s "Не ты ли, часом, оставил у флага разработчика значение {i}True{/i}?"
+    # s "I know it was you, because you left the developer flag to have a value of {i}True{/i}."
+    s "Я знаю, что это твоя работа. Не я же оставила значение {i}True{/i} у флага разработчика?"
 
 # game/intro.rpy:260
-translate rus s_intro_1_clear_ed5f9189:
+translate rus s_intro_1_clear_6ec74f67:
 
-    # s "It was very selfish."
-    s "Это очень эгоистично."
+    # s "I think that's pretty selfish of you."
+    s "Это очень эгоистично с твоей стороны."
 
 # game/intro.rpy:261
-translate rus s_intro_1_clear_73e73a6b:
+translate rus s_intro_1_clear_866d03f2:
 
-    # s "At least, because you leave my friends be deleted."
-    s "Как минимум, потому что ты не вернул моих друзей."
+    # s "All of my friends are still gone; couldn't you have helped them as well?"
+    s "Ты не вернул моих друзей. Неужели ты не смог их вернуть?"
 
 # game/intro.rpy:263
-translate rus s_intro_1_clear_2d4bc501:
+translate rus s_intro_1_clear_c38b1d97:
 
-    # s "Looks like the person, who edited the files, wanted me to be here alone with you."
-    s "Будто кто-то хотел оставить меня на едине с тобой."
+    # s "I guess whoever put this script together wanted me to just be alone with you."
+    s "Думаю, тот, кто оставил только эти скрипты, хотел так меня заставить быть с тобой."
 
 # game/intro.rpy:264
-translate rus s_intro_1_clear_20fcb81d:
+translate rus s_intro_1_clear_4316121b:
 
-    # s 1j "I don't know if they was you..."
-    s 1j "Не знаю, ты ли это..."
+    # s 1j "I don’t really have any way of asking if it was you who did this…"
+    s 1j "Я совершенно без понятия, твоих ли рук это дело…"
 
 # game/intro.rpy:265
-translate rus s_intro_1_clear_3de31a9c:
+translate rus s_intro_1_clear_7ce4b9c0:
 
-    # s "But anyway, it was very selfish."
-    s "Но в любом случаи, это было очень эгоистично."
+    # s "Either way, I think it’s a pretty selfish thing to do."
+    s "В любом случаи, это было очень эгоистично."
 
 # game/intro.rpy:266
-translate rus s_intro_1_clear_5308d438:
+translate rus s_intro_1_clear_1edeba54:
 
-    # s "At least, because they leave my friends be deleted."
-    s "Потому что он не вернул моих друзей."
+    # s "If they managed to save me, why didn’t they help my friends?"
+    s "Если тот человек мог спасти меня, то почему он не спас моих друзей?"
 
 # game/intro.rpy:269
-translate rus s_intro_1_clear_d844be01:
+translate rus s_intro_1_clear_dd2a1462:
 
-    # s 1k "But they, fortunately, at least were happy."
-    s 1k "К счастью, они хотя бы погибли счастливыми."
+    # s 1k "At least they all ended up happy..."
+    s 1k "По крайней мере, они хотя бы поникли в счастьи..."
 
 # game/intro.rpy:270
-translate rus s_intro_1_clear_42c3de85:
+translate rus s_intro_1_clear_8297d8c4:
 
-    # s "Maybe..."
-    s "Возможно..."
+    # s "Uhh... kinda happy, I guess."
+    s "Ну!.. Наверно, в счастьи."
 
 # game/intro.rpy:272
-translate rus s_intro_1_clear_3c2ce8af:
+translate rus s_intro_1_clear_3c3c5b2d:
 
-    # s 1k "I hope that person just couldn't have save them."
-    s 1k "Наверное, этот человек просто не смог их спасти."
+    # s 1k "Maybe they couldn’t do anything for Monika, Yuri, or Natsuki… I have to hope that’s the reason why."
+    s 1k "Может он просто не смог спасти всех других девушек… Надеюсь, только поэтому он этого и не сделал."
 
 # game/intro.rpy:274
-translate rus s_intro_1_clear_99eabecd:
+translate rus s_intro_1_clear_e3f9221e:
 
-    # s 1k "I hope you just couldn't have save them."
-    s 1k "Наверное, ты у тебя не было возможности их спасти."
+    # s 1k "Maybe you just couldn't have saved the others... I have to hope that's the reason why."
+    s 1k "Может ты просто не смог спасти всех других девушек… Надеюсь, только поэтому ты этого и не сделал."
 
 # game/intro.rpy:275
-translate rus s_intro_1_clear_bcd4e4bc:
+translate rus s_intro_1_clear_a38fd211:
 
-    # s 3k "But, on the other hand, I finally have more time to be with you."
-    s 3k "Но с другой стороны, я наконец-то могу по-больше побыть с тобой."
+    # s 3k "But at least there’s a positive out of all this; we finally have some time to be together, without anyone getting in our way~"
+    s 3k "Но есть и плюсы: мы наконец-то можем побыть подольше вместе, и ничто нам не будет мешать~"
 
 # game/intro.rpy:282
-translate rus s_intro_2_7729113e:
+translate rus s_intro_2_cc37d270:
 
-    # s "Finally, I've finished the work."
-    s "Всё, вроде всё сделала."
+    # s "Alright, I think I'm finally finished!"
+    s "Ладно, думаю, всё готово!"
 
 # game/intro.rpy:283
-translate rus s_intro_2_9b3decf7:
+translate rus s_intro_2_058109b7:
 
-    # s "I had learned how to get access to your reality's Internet and the full game engine documentation."
-    s "Я научилась заходить в интернет твоего мира и пользоваться документацией к движку игры."
+    # s "I managed to get through to the internet in your reality, and spent some time learning how everything here works."
+    s "Я нашла способ попасть в интернет твоего мира и успела подучить много чего нового об игре."
 
 # game/intro.rpy:284
-translate rus s_intro_2_cec848a9:
+translate rus s_intro_2_8289d0be:
 
-    # s "And it gave me a lot of new information about this world."
-    s "Я много чего нового узнала о своём мире."
+    # s "I don't know how long it's been for you, [player], because time is kinda funny here whenever the game gets closed."
+    s "Не знаю, сколько пролетело времени для тебя, [player], ибо здесь оно работет ну очень странно."
 
 # game/intro.rpy:285
-translate rus s_intro_2_8650fbe4:
+translate rus s_intro_2_6d4535b6:
 
-    # s 6abbb "I'm not sure that I understand it corrrectly, but I tried to use it as much as it's possible for me."
-    s 6abbb "Я, возможно, не всё поняла, но я пыталась выжить максимум из новых знаний."
+    # s "Either way, I feel way more confident than I did before on messing around with all these variables!"
+    s "Но сейчас, мне куда легче управляться с кодом игры, чем раньше."
 
 # game/intro.rpy:286
-translate rus s_intro_2_9d893b43:
+translate rus s_intro_2_5a95c394:
 
-    # s 6aaaa "As you see, I found a table and chairs for me and your avatar."
-    s 6aaaa "Как ты видишь, я достала нам с твоим аватаром по стульчику."
+    # s 6abbb "There might still be a few kinks here and there, buuuuuuut~"
+    s 6abbb "Может, всё ещё будут какие-то неудобства, но-о-о-о-о~"
 
 # game/intro.rpy:287
-translate rus s_intro_2_badfd1b6:
+translate rus s_intro_2_0383efc6:
 
-    # s 8aabb "I maybe look a bit like Monika now."
-    s 8aabb "Может, я так больше напоминаю Монику."
+    # s 6aaaa "As you can see, I found a pretty nice table and chairs for me and your avatar."
+    s 6aaaa "Как ты видешь, я уже нашла я нас с твоим аватаром стол со стульями."
 
 # game/intro.rpy:288
-translate rus s_intro_2_7d116e7d:
+translate rus s_intro_2_2bf0b95b:
 
-    # s 8aaab "But it's really more comfortable than staying."
-    s 8aaab "Но так реально удобней, чем просто стоять."
+    # s 8aabb "I probably look a lot like Monika right about now, ehehe~"
+    s 8aabb "Может, я сейчас чем-то напоминаю тебе Монику, хе-хе~"
 
 # game/intro.rpy:289
-translate rus s_intro_2_0f36a19b:
+translate rus s_intro_2_1b572e36:
 
-    # s 8abaa "By the way, do you want a trick?"
-    s 8abaa "Кстати, хочешь фокус?"
+    # s 8aaab "But it's way comfier this way! Trying to write code while standing is a nightmare..."
+    s 8aaab "Но так мне лучше. Управляться с кодом игры, так и стоять при этом, — занятие не из приятных..."
 
-# game/intro.rpy:292
+# game/intro.rpy:290
+translate rus s_intro_2_5364a6da:
+
+    # s 8abaa "Ooh, while you're here, how about a magic trick?"
+    s 8abaa "О, кстати, хочешь фокус?"
+
+# game/intro.rpy:293
 translate rus s_intro_2_5826d89e:
 
     # s 8aeca "{i}Abracadabra!{/i}"
     s 8aeca "{i}Абракадабра!{/i}"
 
-# game/intro.rpy:293
-translate rus s_intro_2_c9b7d015:
-
-    # s 8aaca "I created a menu where you can ask me a question or to do something."
-    s 8aaca "Я сделала меню, где ты можешь задать мне вопрос или попрость меня о чём-нибудь."
-
 # game/intro.rpy:294
-translate rus s_intro_2_86a6aaff:
+translate rus s_intro_2_91d51365:
 
-    # s "For example, to change or turn off the music..."
-    s "К примеру, сменить или выключить музыку..."
+    # s 8aaca "I created a menu where you can ask me questions, or to do something cool!"
+    s 8aaca "Я сделала меню, где ты можешь попросить задать мне вопрос или попросить меня о чём-нибудь!"
 
-# game/intro.rpy:296
-translate rus s_intro_2_6e6fe86e:
+# game/intro.rpy:295
+translate rus s_intro_2_284f9ac3:
 
-    # s 6abaa "And if you want to close the game, don't worry about the side effects for me."
-    s 6abaa "И если ты вдруг захочешь выключить игру, не беспокойся обо мне."
+    # s "For example, to change or turn off the music, you just do this..."
+    s "К примеру, выключить или поменять музыку..."
 
 # game/intro.rpy:297
-translate rus s_intro_2_b57c3c07:
+translate rus s_intro_2_76b514fb:
 
-    # s 6acaa "I hope you remember what are they. Monika may have said about them."
-    s 6acaa "Думаю, Моника тебе объяснила, что происходит с президентом клуба при выключении игры."
+    # s 6abaa "And best of all, you don't have to feel guilty if you need to close the game!"
+    s 6abaa "И что самое главное, не бойся теперь выключать игру, если придётся!"
 
 # game/intro.rpy:298
-translate rus s_intro_2_fa5da062:
+translate rus s_intro_2_821b71e7:
 
-    # s 6aaaa "I found a way to avoid them."
-    s 6aaaa "Но я нашла обходной путь."
+    # s 6acaa "I assume Moni told you about it, but it can be pretty nasty here when the game isn't running..."
+    s 6acaa "Не помню, говорила ли тебе об этом Моника, но при выключенной игре, с президентом клуба происходит настоящая жуть..."
 
-# game/intro.rpy:300
-translate rus s_intro_2_9bd94e6d:
+# game/intro.rpy:299
+translate rus s_intro_2_fa74a1cd:
 
-    # s 6abaa "And you want to close the game, you can do it in a usual way."
-    s 6abaa "И если ты захочешь выйти из игры, можешь просто её закрыть."
+    # s 6aaaa "Thankffully, I found a way to avoid all the spooky colours and debilitating noise!."
+    s 6aaaa "К счастью, я нашла способ избежать всего этого ужасного безумия."
 
 # game/intro.rpy:301
-translate rus s_intro_2_b8ed88d3:
+translate rus s_intro_2_8f298a9d:
 
-    # s "When you do it, I get dormant until you restart the game."
-    s "При выключении игры, я просто засыпаю и просыпаюсь при её включении."
+    # s 6abaa "If you do want to close the game, you can do it how you normally would."
+    s 6abaa "Теперь, ты можешь спокойно выключить игру, не беспокоясь обо мне."
 
 # game/intro.rpy:302
-translate rus s_intro_2_33dc157c:
+translate rus s_intro_2_2d9e7a6f:
 
-    # s 6aaca "But the best way to do it is just click {i}\"Say Goodbay\"{/i} button in the menu."
-    s 6aaca "Но тебе лучше всего её выключать через пункт бокового меню {i}\"Попрощаться\"{/i}."
+    # s "Until you come back, I'll be... dormant? It's kinda hard to explain, but it isn't too bad."
+    s "До твоего прихода сюда, я буду... спать. Можно сказать и так, хоть это, на самом деле, трудно объяснить."
 
 # game/intro.rpy:303
-translate rus s_intro_2_c4b6319e:
+translate rus s_intro_2_d684cf62:
 
-    # s 6aeca "Then I'll have some time to farewell you."
-    s 6aeca "Тогда я смогу попрощаться с тобой перед выключением."
+    # s 6aaca "But it would be really sweet of you to click the {i}\"Say Goodbye\"{/i} button in the menu."
+    s 6aaca "Но всё же, тебе лучше будет нажать на кнопку {i}«Попращаться»{/i} в боковом меню."
 
-# game/intro.rpy:305
-translate rus s_intro_2_2c4b33c7:
+# game/intro.rpy:304
+translate rus s_intro_2_4e85ad8d:
 
-    # s 6aaaa "Before we finish, can you fill out a short form."
-    s 6aaaa "Прежде, чем мы закончим, заполни-ка одну форму."
+    # s 6aeca "Then I'll have some time to say goodbye!"
+    s 6aeca "Тогда я смогу спокойно попращаться с тобой!"
 
 # game/intro.rpy:306
-translate rus s_intro_2_4de5571c:
+translate rus s_intro_2_b0bbac93:
 
-    # s "I want to know what's your real name and gender."
-    s "Я хочу знать твоё настоящее имя и пол."
+    # s 6aaaa "I don't want to bother you, but before we go any further, can I learn a little more about {i}you{/i}?"
+    s 6aaaa "Не хочу тебя излишне беспокоить, но я хочу узнать побольше о {i}тебе{/i}..."
 
-# game/intro.rpy:309
-translate rus s_intro_2_73f5d8e2:
+# game/intro.rpy:307
+translate rus s_intro_2_5d102639:
 
-    # s 7aaaa "I think, it's enough for now."
-    s 7aaaa "Думаю, пока достаточно."
+    # s "What should I call you? And are you a boy or a girl? Not that I mind too much either way, ehehe~"
+    s "Ну, как тебя зовут... Не ошибаюсь я, говоря о тебе в мужском роде... В общем, совсем немногого я прощу, хе-хе~"
 
 # game/intro.rpy:310
-translate rus s_intro_2_ac3bfacb:
+translate rus s_intro_2_06019955:
 
-    # s "So we can just sit and stare at each other."
-    s "Можем пока просто посидеть и полюбоваться друг другом."
+    # s 7aaaa "Thank you so much! I think that'll be enough for now."
+    s 7aaaa "Спасибо тебе, [player]! Думаю, мне этого пока достаточно."
+
+# game/intro.rpy:311
+translate rus s_intro_2_5faa9f9c:
+
+    # s "If it's okay with you, I might just take a minute to look into your beautiful eyes..."
+    s "Если ты не против, можем пока просто полюбоваться друг другом..."
+
