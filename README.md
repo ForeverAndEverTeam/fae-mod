@@ -31,8 +31,11 @@ sirrealist2 (drawing circle/line)
   
 Testers:  
 AlexanDDOS  
-Leon9023([Reddit](https://www.reddit.com/user/leon9023), [VK](https://vk.com/leon9023))  
-Evgeny Zotov([VK](https://vk.com/everlastingtolovesayori)) 
+Leon9023 ([Reddit](https://www.reddit.com/user/leon9023), [VK](https://vk.com/leon9023))  
+Evgeny Zotov ([VK](https://vk.com/everlastingtolovesayori)) 
+
+Proofreaders:  
+tberriman ([Reddit](https://www.reddit.com/user/tberriman))
   
 Speical Thanks:  
 Dan Salvato  
