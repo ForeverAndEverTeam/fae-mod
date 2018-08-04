@@ -36,7 +36,7 @@ translate rus strings:
 
     # new_screens.rpy:192
     old "Mute"
-    new "Выключть"
+    new "Выключить"
 
     # new_screens.rpy:222
     old "Back"

@@ -50,6 +50,9 @@ init -5 python:
         def __iter__(self):
             return iter(self.topics)
         
+        def __getitem__(self, key):
+            return self.topics[key]
+        
         def new_topic(self, name, label_suffix, available = True, id = None, related = None):
             topic = Topic(self.prefix + '_' + label_suffix, available, name = name, id = id, related = related)
             self.topics.append(topic)
@@ -139,7 +142,7 @@ init -5 python:
     
     question_cats[2].new_topic(_("How does it feel to be dead?"), 'death')
     if persistent.last_playthrough == 0:
-        question_cats[2][0].available = False
+        question_cats[2].topics[0].available = False
     question_cats[2].new_topic(_("Is it hard to program?"), 'programming')
         
     

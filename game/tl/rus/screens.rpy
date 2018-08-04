@@ -112,7 +112,7 @@ translate rus strings:
 
     # screens.rpy:965
     old "Unseen Text"
-    new "Непрочитанное"
+    new "Непрочитанного"
 
     # screens.rpy:966
     old "After Choices"

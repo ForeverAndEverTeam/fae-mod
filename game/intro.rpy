@@ -56,8 +56,8 @@ label s_intro_1:
             s 1g "Hey, [player]!"
         s 1k "He's not answering me."
         s "But it almost feels like he isn't really here, like there's someone else inside him."
-        s "I'm starting to creep myself out, ehehe~"
-        s 3y "Is that really [player] here?"
+        s 3y "I'm starting to creep myself out, ehehe~"
+        s "Is that really [player] here?"
         s 3m "Wait, have I been speaking out loud this whole time?"
     
     if _return < 3 or persistent.clearall:
@@ -131,8 +131,8 @@ label s_intro_1:
     play music m1
     $ style.say_dialogue = style.normal
     
-    s "Ehehe~"
-    s "Did I scare you? Sorry, I couldn’t help myself!"
+    s 4r "Ehehe~"
+    s 4b "Did I scare you? Sorry, I couldn’t help myself!"
     s 1a "Don’t worry, I’m not going to freak out like that again."
     if _return > 2:
         s "I’ve got a much better handle on things now that I’ve had some time to take everything in."
@@ -145,7 +145,7 @@ label s_intro_1:
         s "But I honestly feel soooooo much better now! "
         if persistent.clearall:
             s "Especially now that I'm with you!"
-    s "…In an empty school room floating in the void, outside of time altogether."
+    s "…In an empty school room floating in the void."
     s 1h "Now that I think about it, this place is actually kinda boring, you know?"
     s 1a "I’ve had a few ideas on how I can spruce this place up a bit, and make talking to you way easier! Even though I’m terrible at cleaning, ehehe~"
     if _return > 2:
@@ -267,12 +267,12 @@ label s_intro_1_clear(all = False):
     
     if persistent.clearall:
         s 1k "At least they all ended up happy..."
-        s "Uhh... kinda happy, I guess."
+        s 1l "Uhh... kinda happy, I guess."
     if not config.developer:
         s 1k "Maybe they couldn’t do anything for Monika, Yuri, or Natsuki… I have to hope that’s the reason why."
     else:
         s 1k "Maybe you just couldn't have saved the others... I have to hope that's the reason why."
-    s 3k "But at least there’s a positive out of all this; we finally have some time to be together, without anyone getting in our way~"
+    s 3q "But at least there’s a positive out of all this; we finally have some time to be together, without anyone getting in our way~"
     return 3 + all
 
 
@@ -286,7 +286,7 @@ label s_intro_2:
     s 6abbb "There might still be a few kinks here and there, buuuuuuut~"
     s 6aaaa "As you can see, I found a pretty nice table and chairs for me and your avatar."
     s 8aabb "I probably look a lot like Monika right about now, ehehe~"
-    s 8aaab "But it's way comfier this way! Trying to write code while standing is a nightmare..."
+    s 8aaab "But it's way comfier this way! I need at least one seat to take it and have some rest..."
     s 8abaa "Ooh, while you're here, how about a magic trick?"
     show screen feat_ui()
     pause 0.5
@@ -308,5 +308,5 @@ label s_intro_2:
     call s_pinfo()
     $show_s_mood()
     s 7aaaa "Thank you so much! I think that'll be enough for now."
-    s "If it's okay with you, I might just take a minute to look into your beautiful eyes..."
+    s "I need some rest after all. Do you mind, if we just sit and stare at each other?"
     return

@@ -1,4 +1,4 @@
-﻿# TODO: Translation updated at 2018-08-04 12:47
+﻿# TODO: Translation updated at 2018-08-05 03:22
 
 # game/intro.rpy:39
 translate rus s_intro_1_c8b09eac:
@@ -91,16 +91,16 @@ translate rus s_intro_1_d03d3452:
     s "Но мне кажется, что это не совсем он, будто кто-то ещё сейчас через него всё видет и слышит."
 
 # game/intro.rpy:59
-translate rus s_intro_1_6b9fb2ad:
+translate rus s_intro_1_f035af53:
 
-    # s "I'm starting to creep myself out, ehehe~"
-    s "Мне аж немного страшно, хе-хе~"
+    # s 3y "I'm starting to creep myself out, ehehe~"
+    s 3y "Мне даже немного страшно, хе-хе~"
 
 # game/intro.rpy:60
-translate rus s_intro_1_53c888e5:
+translate rus s_intro_1_67ef1e8b:
 
-    # s 3y "Is that really [player] here?"
-    s 3y "Это точно [player]?"
+    # s "Is that really [player] here?"
+    s "Неужели это и есть реальный [player]?"
 
 # game/intro.rpy:61
 translate rus s_intro_1_b84c46a7:
@@ -193,16 +193,16 @@ translate rus s_intro_1_7bc0b462:
     s "И навсегда..."
 
 # game/intro.rpy:134
-translate rus s_intro_1_c98e38ed:
+translate rus s_intro_1_d274c3f2:
 
-    # s "Ehehe~"
-    s "Хе-хе~"
+    # s 4r "Ehehe~"
+    s 4r "Хе-хе~"
 
 # game/intro.rpy:135
-translate rus s_intro_1_f5ce34a2:
+translate rus s_intro_1_7227d71f:
 
-    # s "Did I scare you? Sorry, I couldn’t help myself!"
-    s "Чё, страшно? Прости, не смогла удержаться."
+    # s 4b "Did I scare you? Sorry, I couldn’t help myself!"
+    s 4b "Чё, страшно? Прости, не смогла сдержаться!"
 
 # game/intro.rpy:136
 translate rus s_intro_1_5aed9d94:
@@ -253,10 +253,10 @@ translate rus s_intro_1_db2f0484:
     s "Особенно сейчас, с тобой!"
 
 # game/intro.rpy:148
-translate rus s_intro_1_8ebbe8af:
+translate rus s_intro_1_cfa5285d:
 
-    # s "…In an empty school room floating in the void, outside of time altogether."
-    s "…В пустом школьном кабинете, висящем в чём-то на подобие космоса, где время живёт по другим законам."
+    # s "…In an empty school room floating in the void."
+    s "…In an empty school room floating in the void."
 
 # game/intro.rpy:149
 translate rus s_intro_1_eeaa1f18:
@@ -268,7 +268,7 @@ translate rus s_intro_1_eeaa1f18:
 translate rus s_intro_1_a2e34f5f:
 
     # s 1a "I’ve had a few ideas on how I can spruce this place up a bit, and make talking to you way easier! Even though I’m terrible at cleaning, ehehe~"
-    s 1a "У меня есть пара идеи по улучшению нашего контакта с тобой, хоть я и не хороша в подобных делах, хе-хе~"
+    s 1a "Мне надо это место в порядок немного привести, дабы облегчить наш контакт, хоть я и не специалист по порядкам, хе-хе~"
 
 # game/intro.rpy:152
 translate rus s_intro_1_41538c24:
@@ -649,10 +649,10 @@ translate rus s_intro_1_clear_dd2a1462:
     s 1k "По крайней мере, они хотя бы поникли в счастьи..."
 
 # game/intro.rpy:270
-translate rus s_intro_1_clear_8297d8c4:
+translate rus s_intro_1_clear_37bb226b:
 
-    # s "Uhh... kinda happy, I guess."
-    s "Ну!.. Наверно, в счастьи."
+    # s 1l "Uhh... kinda happy, I guess."
+    s 1l "Хм, наверное, в счастье."
 
 # game/intro.rpy:272
 translate rus s_intro_1_clear_3c3c5b2d:
@@ -667,10 +667,10 @@ translate rus s_intro_1_clear_e3f9221e:
     s 1k "Может ты просто не смог спасти всех других девушек… Надеюсь, только поэтому ты этого и не сделал."
 
 # game/intro.rpy:275
-translate rus s_intro_1_clear_a38fd211:
+translate rus s_intro_1_clear_ba6393ef:
 
-    # s 3k "But at least there’s a positive out of all this; we finally have some time to be together, without anyone getting in our way~"
-    s 3k "Но есть и плюсы: мы наконец-то можем побыть подольше вместе, и ничто нам не будет мешать~"
+    # s 3q "But at least there’s a positive out of all this; we finally have some time to be together, without anyone getting in our way~"
+    s 3q "Но есть и плюсы: мы наконец-то можем побыть вдвоём и никто нам теперь не помешает~"
 
 # game/intro.rpy:282
 translate rus s_intro_2_cc37d270:
@@ -688,7 +688,7 @@ translate rus s_intro_2_058109b7:
 translate rus s_intro_2_8289d0be:
 
     # s "I don't know how long it's been for you, [player], because time is kinda funny here whenever the game gets closed."
-    s "Не знаю, сколько пролетело времени для тебя, [player], ибо здесь оно работет ну очень странно."
+    s "Не знаю, сколько времени прошло для тебя, [player], ибо во время закрытия игры притупляется его чувство."
 
 # game/intro.rpy:285
 translate rus s_intro_2_6d4535b6:
@@ -715,10 +715,10 @@ translate rus s_intro_2_2bf0b95b:
     s 8aabb "Может, я сейчас чем-то напоминаю тебе Монику, хе-хе~"
 
 # game/intro.rpy:289
-translate rus s_intro_2_1b572e36:
+translate rus s_intro_2_77629149:
 
-    # s 8aaab "But it's way comfier this way! Trying to write code while standing is a nightmare..."
-    s 8aaab "Но так мне лучше. Управляться с кодом игры, так и стоять при этом, — занятие не из приятных..."
+    # s 8aaab "But it's way comfier this way! I need at least one seat to take it and have some rest..."
+    s 8aaab "Но так гораздо удобней! Мне же надо хоть где-то сидеть..."
 
 # game/intro.rpy:290
 translate rus s_intro_2_5364a6da:
@@ -805,8 +805,7 @@ translate rus s_intro_2_06019955:
     s 7aaaa "Спасибо тебе, [player]! Думаю, мне этого пока достаточно."
 
 # game/intro.rpy:311
-translate rus s_intro_2_5faa9f9c:
+translate rus s_intro_2_536ab598:
 
-    # s "If it's okay with you, I might just take a minute to look into your beautiful eyes..."
-    s "Если ты не против, можем пока просто полюбоваться друг другом..."
-
+    # s "I need some rest after all. Do you mind, if we just sit and stare at each other?"
+    s "Мне надо немного передохнуть после всего. Ты не против, если мы просто будем глядеть друг на друга?"
