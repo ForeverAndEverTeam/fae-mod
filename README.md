@@ -9,35 +9,39 @@ Now, I'm trying to realize the most MAS features, including player questions and
 The special feature is that the mod is multi=language. Now you can select either English nor Russian as a game language. Esperanto translation also is WIP. I'm also planning to make sending other's translations able but now I can't say the exactly way.
 
 ## Credits  
-Programming:  
+**Programming:**  
 AlexanDDOS (This repository's auther, [Reddit](https://www.reddit.com/user/AlexanDDOS), [VK](https://vk.com/alexanddos), [FB](https://www.facebook.com/alexanDDOS))  
 Dan Salvato (original scripts)  
 DDLC Mod Template team (mod base)  
   
-Arts:  
+**Arts:**  
 Fj0rd_ ([Reddit](https://www.reddit.com/user/Fj0rd_), [original sitting Sayori art](https://www.reddit.com/r/DDLC/comments/7h40q6/ok_final_version_this_time_i_swear/))  
 AlexanDDOS  
 Team Salvato artists (original sprites)  
   
-Dialogs:  
+**Dialogs:**  
 AlexanDDOS  
   
-Translations:
+**Translations:**  
 AlexanDDOS (Russian & Esperanto)  
   
-SFX: 
+**SFX:**  
 Pipe98x (drawing cross)  
 sirrealist2 (drawing circle/line)  
   
-Testers:  
+**Testers:**  
 AlexanDDOS  
-Leon9023([Reddit](https://www.reddit.com/user/leon9023), [VK](https://vk.com/leon9023))  
-Evgeny Zotov([VK](https://vk.com/everlastingtolovesayori)) 
+Leon9023 ([Reddit](https://www.reddit.com/user/leon9023), [VK](https://vk.com/leon9023))  
+Evgeny Zotov ([VK](https://vk.com/everlastingtolovesayori)) 
+
+**Proofreaders**:  
+tberriman ([Reddit](https://www.reddit.com/user/tberriman))
   
-Speical Thanks:  
+**Speical Thanks**:  
 Dan Salvato  
 Monika After Story team  
 Ren'Py team  
+Reddit Community  
   
 ## License  
-See "LICENSE" and "IPGuidelines.md"
+See **"LICENSE"** and **"IPGuidelines.md"**.
