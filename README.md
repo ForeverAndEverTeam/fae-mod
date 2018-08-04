@@ -34,13 +34,13 @@ AlexanDDOS
 Leon9023 ([Reddit](https://www.reddit.com/user/leon9023), [VK](https://vk.com/leon9023))  
 Evgeny Zotov ([VK](https://vk.com/everlastingtolovesayori)) 
 
-Proofreaders:  
+**Proofreaders**:  
 tberriman ([Reddit](https://www.reddit.com/user/tberriman))
   
-Speical Thanks:  
+**Speical Thanks**:  
 Dan Salvato  
 Monika After Story team  
 Ren'Py team  
   
 ## License  
-See "LICENSE" and "IPGuidelines.md"
+See **"LICENSE"** and **"IPGuidelines.md"**
