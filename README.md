@@ -22,7 +22,7 @@ Team Salvato artists (original sprites)
 **Dialogs:**  
 AlexanDDOS  
   
-**Translations:**
+**Translations:**  
 AlexanDDOS (Russian & Esperanto)  
   
 **SFX:**  
@@ -41,6 +41,7 @@ tberriman ([Reddit](https://www.reddit.com/user/tberriman))
 Dan Salvato  
 Monika After Story team  
 Ren'Py team  
+Reddit Community  
   
 ## License  
-See **"LICENSE"** and **"IPGuidelines.md"**
+See **"LICENSE"** and **"IPGuidelines.md"**.
