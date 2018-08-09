@@ -157,7 +157,7 @@ Because of each feel them in their own way.
 One people feel them always bitter,
 Some of them, even if the fruit is of the best.
 Another ones feel them sweet and very tasty,
-Whatever friuts they have got.
+Whatever fruits they have got.
 
 For me, they have the taste of liquorice.
 I needed time to understand how sweet they are,
@@ -167,7 +167,7 @@ Which I had got after the first bites.
 Now all I want is just to eat my own fruit
 With the person, who helped me catch the real taste.
 But I should not forget to do my real job here:
-To find a way to make other feel the fruits sweet.""")
+To find a way to make others feel the fruits sweet.""")
     )
     
 default persistent.lastVersion = config.version
