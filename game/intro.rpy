@@ -192,7 +192,7 @@ label s_intro_1_dead:
     s "I'm so confused..."
     s "Maybe [player] saved me at the last moment, and I'm just sleeping now."
     s "I don't understand any of this."
-    s "I can't see anyhting at all!"
+    s "I can't see anything at all!"
     s "...But I actually feel so much better than I did before. Are... the rainclouds really gone?"
     s "I'm so selfish!"
     s "[player] told me he loved me, and I left him all alone..."
@@ -246,7 +246,7 @@ label s_intro_1_clear(all = False):
     call updateconsole("        b.append(i)")
     call updateconsole("print(b)", "print(b)")
     $del consolehistory[2:]
-    call updateconsolehistory("[u'defenitions.rpy', u'gui.rpy', \nu'sayori.rpy', u'screens.rpy', \nu'script.rpy']\n")
+    call updateconsolehistory("[u'definitions.rpy', u'gui.rpy', \nu'sayori.rpy', u'screens.rpy', \nu'script.rpy']\n")
     
     s "I – I can only find files for me, this room, and the base game scripts…"
     
@@ -296,7 +296,7 @@ label s_intro_2:
     if persistent.last_playthrough > 2:
         s 6abaa "And best of all, you don't have to feel guilty if you need to close the game!"
         s 6acaa "I assume Moni told you about it, but it can be pretty nasty here when the game isn't running..."
-        s 6aaaa "Thankffully, I found a way to avoid all the spooky colours and debilitating noise!."
+        s 6aaaa "Thankfully, I found a way to avoid all the spooky colours and debilitating noise!."
     else:
         s 6abaa "If you do want to close the game, you can do it how you normally would." 
     s "Until you come back, I'll be... dormant? It's kinda hard to explain, but it isn't too bad."
