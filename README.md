@@ -35,7 +35,7 @@ Leon9023 ([Reddit](https://www.reddit.com/user/leon9023), [VK](https://vk.com/le
 Evgeny Zotov ([VK](https://vk.com/everlastingtolovesayori)) 
 
 **Proofreaders**:  
-tberriman ([Reddit](https://www.reddit.com/user/tberriman))
+tberriman ([Reddit](https://www.reddit.com/user/tberriman))  
 [vermicellibug](https://github.com/vermicellibug)
   
 **Special Thanks**:  
