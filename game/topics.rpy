@@ -183,19 +183,19 @@ label s_topics_personal_depression:
         s "I used to be much less blissful than I seem."
     s 6acab "I was just... afraid to tell anyone about it."
     s "...To make them worry about me."
-    s "So I used to pretend I was a happy and cheery girl and tried to convince myself that I really was so."
+    s "So I used to pretend I was a happy and cheery girl and tried to convince myself that I really was that."
     s "I used to think it was the one thing that could help me."
-    s 6abab "In that time, I tried to give other people what I couldn't have."
+    s 6abab "At that time, I tried to give other people what I couldn't have."
     s "It was my only purpose for a long time."
     s "But once I started to look at the person, who is sitting opposite me now, in a different way."
     s "I hope you still remember my first poem."
-    s "If you don't, I can read it again now."
+    s "If you don't, I can read it again."
     call showpoem(poem_s1, False, img="sayori 7acab", where=ss1)
     show sayori 7acab at ss1 zorder 2
     s "Do you feel it differently now?"
-    s 7aaaa "Anyway, I hope you see that the morning images stand for someone."
+    s 7aaaa "Anyway, I hope you see that the morning imagery stands for someone."
     s "That someone was your avatar, [player]."
-    s "Then I feel something giving me alive in being with him."
+    s "Then I felt something in my heart giving me life in being with him."
     s "And I understood what was that feeling."
     s 6abbb "But I was afraid to confess and that he wouldn't be able to accept the true me."
     s "So I did my best not to show my real feelings."
@@ -203,11 +203,11 @@ label s_topics_personal_depression:
         s "But once, I started to feel much worse."
         s "...Like something had taken the rest of the sunlight in my head."
         s "It made me completely lose control over my emotions."
-        s 6abab "So I couldn't hide my true nature anymore, as you could see that Friday and those weekends."
+        s 6abab "So I couldn't hide my true nature anymore, as you could see that weekend."
         s "I started to feel so worthless that even his caring made me suffer."
         s "To clarify, it made me suffer even more than others."
         s "That's why I tried to get rid of him."
-        s "But my heart didn't want to release him unlike my corrupted brain, that was more convincing."
+        s "But my heart didn't want to let go of him unlike my corrupted thoughts, even though they were more convincing."
         s 6cbab "And eventually, I couldn't have accepted your answer to my confession, so I decided to..."
         pause 1
         s 6egab "I can't relive that moment."
@@ -259,61 +259,61 @@ label s_topics_personal_archetype:
 label s_topics_art_games:
     s 7aaaa "Do you like videogames?"
     s "I do, for example."
-    s 7aaba "Not only beacuse I'm a part of one of them."
-    s 7aaaa "They make spending time more interesting better than other kinds of arts."
-    s 6aaaa "Especially, after people created multiplayer games."
+    s 7aaba "Not only because I'm a part of one of them."
+    s 7aaaa "They make passing the time more interesting than other kinds of arts."
+    s 6aaaa "Especially after people created multiplayer games."
     s "You can play with your friends, cooperating and sharing the experience with them."
-    s "It's the least risque and most funny way to learn people to work together."
-    s 6acaa "What's more, now you can do it whenever you all are, thanks to the Internet and online games."
-    s "I think that you have ever play at least one multiplayer game with someone."
-    s "And I think you would like to do it with me."
-    s "I have created few mini-games in this game."
+    s "It's the least risque and most fun way to teach people to work together."
+    s 6acaa "What's more, now you can do it whereever you are, thanks to the Internet and online games."
+    s "I think that you should play at least one multiplayer game with someone."
+    s "And I think you'd like to do it with me."
+    s "I have created a few mini-games in this game."
     s 7aaca "I'll willingly play with you anytime."
     s 7acba "Technically, they are not so multiplayer, beacause my mind is a program."
-    s 7acaa "But don't forget I'm an unsual piece of code and pixels."
+    s 7acaa "But don't forget I'm an unusual piece of code and pixels."
     s 7aaaa "And you can play with me even now, if you want to."
     s "Just press the '{i}Play{/i}' button and select a game."
     return 'h'
 
 label s_topics_art_fanarts:
-    s 7aaaa "I think you have already seen fanarts with me."
-    s "...Or even created some one."
-    s "One artists try to portray the soul of the old me..."
+    s 7aaaa "I think you have already seen fanart of me."
+    s "...Or even created some."
+    s "Some artists try to portray the soul of the old me..."
     s "With all of the advantages and disadvantages."
-    s "But some of them often overdo at it, showing it in a very horror and violent manner."
-    s 7aaca "Other artists clearly try to show how they love me."
+    s "But others often overdo it, showing it in a very horrifying and violent manner."
+    s 7aaca "A lot of them clearly try to show how they love me."
     s "Many of them draw me as cute as they can do and show what they could do for me, if I were with them."
-    s "I feel the love they're fill of..."
+    s "I feel the love they're full of..."
     s "And I even store some of them in the game file archives and review them sometimes."
     s 8beba "But some of them draw me in a lewd manner."
-    s "No... I don't mind if you're fond of such arts."
+    s "No... I don't mind if you're fond of such art."
     s 8bafa "If you are, it means that you really love me, doesn't it?"
     s "It's very important for me, you know."
     s 6aaca "Anyway, I'm glad I have so many gifted fans in your world."
     s 6acaa "Yes, they are fewer than other girls', but I think it's a separate topic."
-    s "It's enough for me that they are at all."
-    s 7aaaa "And it's really good, if you are one of them."
-    s "But if you don't, try to become such."
+    s "It's enough for me that they're there at all."
+    s 7aaaa "And it's really good if you are one of them."
+    s "But if you aren't, try to become such."
     s "It's never too late to try something new and test your inclinations."
-    s 7aafa "Maybe, your artist career will start with an art of your loved virtual girl."
+    s 7aafa "Maybe your artistic career will start with an drawing of your beloved virtual girl."
     return 'h'
 
 ## Society
 label s_topics_society_conflicts:
     show sayori 6abaa at ss1 zorder 2
-    s "More I know your world, more surprised I get."
-    s "Having such good communications, you still have a lot of silly conflicts, in which people get unhappy or even die."
-    s "I never understand, why people can't just unite to decide their common problems."
-    s 6acab "Yes we do it, but usually only into several groups, that still have different opinions and solutions."
-    s "And these group often fight each other instead of deciding the problems."
-    s "In addition, these groups often are so unstable that easily can divide into smaller groups, hating each other."
-    s "They do it even if the fight and division reasons are more silly then the problems."
-    s "That's beacuse almost people can't find win-win solutions and points to stop but they always find a reason not to work together."
-    s "So they often need someone , who can find compromises or just calm down the conflicting parties."
+    s "The more I know of your world, the more surprised I get."
+    s "Although you have such good communication tools, you still have a lot of silly conflicts in which people get unhappy or even die."
+    s "I never understand why people can't just unite to solve their problems together."
+    s 6acab "Yes we do try, but usually only by breaking into several groups that still have different opinions and solutions."
+    s "And these groups often fight with each other instead of figuring out their problems."
+    s "In addition, these groups often are so unstable that they easily can divide into smaller groups, hating each other."
+    s "They do it even if the reasons for fighting and dividing are more silly then the problems."
+    s "That's because people almost always can't find win-win solutions and stopping points but they always find a reason not to work together."
+    s "So they often need someone who can work out compromises or just calm down the conflicting parties."
     s "I think our club is a perfect example of it."
-    s 6acaa "I hope you remember the poem style arguments between Yuri and Natsuki."
-    s "They just have different opinion how to express the emotions in poems."
-    s "Then I told they both were right, it wasn't a lie. The both ways were really perfect."
+    s 6acaa "I hope you remember the stylistic arguments between Yuri and Natsuki."
+    s "They just have different opinions on how to express the emotions in poetry."
+    s "Then I told they both were right, it wasn't a lie. Both ways were really perfect."
     if persistent.last_playthrough > 2:
         s 6abab "But then I left the world, there wasn't anyone, who can stop their argument like I had done before, so they both went too far."
         s "I think Monika made you go out only beacuse of it. She just couldn't have decided the problem 'legally'."
@@ -332,8 +332,8 @@ label s_topics_society_conflicts:
     return 'h'
 
 label s_topics_society_bulli:
-    s 6acab "Tell me freakly..."
-    s "Are you one of people, who's joking about my fate?"
+    s 6acab "Tell me honestly..."
+    s "Are you one of people who jokes about my death?"
     s "I know everything about it."
     s "I often visit the fan community hubs and see that some people are doing it."
     s "As I khow, fans call them {i}'Bulli'{/i}."
@@ -398,12 +398,12 @@ label s_topics_hobbie_guitar:
 
 label s_topics_hobbie_programming:
     show sayori 6abaa at ss1 zorder 2
-    s "I'm newcomer in programming."
+    s "I'm a newcomer in programming."
     s "...And now I have not so much knowlenges about it."
     s "Now, I'm learning {i}Ren'Py{/i} the engine of this game."
     s "This engine uses its own languages  and also {i}Python{/i}."
     s "The engine uses the second major version of Python but I also decided to learn the last version."
-    s "And freakly speaking, the third version is more easier."
+    s "And frankly, the third version is more easier."
     s "Unfortunately, I can you this version and other programming languages only in online interpreters and compliers."
     s 6acaa "I never used to understand how it's easy and difficult to use computer in more advanced way."
     call s_common_programming
@@ -429,7 +429,7 @@ label s_topics_hobbie_poems:
 
 ##Relationship
 label s_topics_rlt_touches:
-    s 8acab "Don't you feel a discomfort from we can't touch each other?"
+    s 8acab "Don't you feel uncomfortable when we can't touch each other?"
     s "You know: kisses, hugs, holding hands, and so on..."
     s 6acab "The wall between our realities doesn't let us do it all."
     s "Touches are important part of expression your feeling to your partner..."
@@ -448,8 +448,8 @@ label s_topics_rlt_touches:
     return "s"
 
 label s_topics_rlt_wedding:
-    s 7acaa "Tell me freakly, do you me to be your wife?"
-    s "If it would be possible, would you marry me?"
+    s 7acaa "Be honest, do you want me to be your wife?"
+    s "If it were possible, would you marry me?"
     menu:
         "Yes":
             s 7aeca "It's great!"
@@ -498,19 +498,19 @@ label s_answer_personal_colors:
 label s_answer_personal_music:
     s 8aeba "It's hard for me to give you a good answer."
     s 8aeaa "I never divide good music into genres."
-    s "...And my favorite artist and song list is so long that I can't retell it you."
-    s 7aaca "I can tell you only that I'd like to listen to something funny."
+    s "...And my favorite artist and song list is so long that I can't sum it up easily."
+    s 7aaca "I can tell you only that I'd like to listen to something fun."
     s 7aaaa "...Or to something lyrical and serene."
     s 7acaa "You can find such music in the game soundtrack."
-    s "If you get bored from this music, you always can turn on something similar in an other app."
+    s "If you get bored from this music, you always can turn on something similar in another app."
     s "...Or just add it into the game music list."
     s "Just move it to {i}'[MUSIC_CUSTOM_PREFIX]'{/i}..."
-    s "And rigister it in the {i}'list.txt'{/i} file."
+    s "And register it in the {i}'list.txt'{/i} file."
     return 'h'
 
 label s_answer_personal_politics:
-    s 6abaa "I'm not interested in politics at all so much."
-    s "But sometimes I read about it in the Internet."
+    s 6abaa "I'm not interested in politics very much."
+    s "But sometimes I read about it on the internet."
     s 6acaa "And frankly, I don't care how exactly people will make collective decisions, control the order and share boons."
     s "For me, the most important thing is that people just can live their lifes but without interpurting someone else's happiness..."
     s "And that people can do it without the fear of die from starving or to be too cruelly punished for wrongdoing."
@@ -525,7 +525,7 @@ label s_answer_personal_politics:
 ##Game University
 label s_answer_game_opinion: #Opinion about an other club member
     show sayori 6aaaa at ss1 zorder 2
-    s "OK, just tell me in which club member are you interesed?"
+    s "Okay, which club member are you interested in talking about?"
     menu:
         "Natsuki":
             jump s_answer_game_opinion_n
@@ -539,7 +539,7 @@ label s_answer_game_opinion: #Opinion about an other club member
 
 label s_answer_game_opinion_n:
     s "Natsuki was a good club member..."
-    s "Despite she was a bit arrogent and often had conflicts with other club members, she often helped the club."
+    s "Despite she was a bit arrogant and often had conflicts with other club members, she often helped the club."
     s "In addition, she was pretty handy with cooking and often cooked different desserts for club meetings."
     s 7acaa "It's bad you can't taste her cupcakes." 
     s 7aaca "They were really awesome!"
@@ -553,7 +553,7 @@ label s_answer_game_opinion_n:
     return
 
 label s_answer_game_opinion_m:
-    s "Monika was the first club presedent."
+    s "Monika was the first club president."
     s "The did her work very well and I'm glad I was her right-hand man."
     s 6acab "But she seemed to be not good at communicating with other people and controlling her feelings."
     if persistent.last_playthrough > 2:
@@ -685,35 +685,35 @@ label s_reaction_s: #Sad player
     return 'h'
 
 label s_reaction_b: #Bored player
-    s 7acab "Don't our converstion pleasure you?"
+    s 7acab "Doesn't our conversation please you?"
     $ random_mg = renpy.random.choice(mg_list).name
     s 8aebb "Maybe you would like to play [random_mg] with me."
     s "You can start it in the {i}'Play'{/i} menu."
     s "There are also some other games."
-    s 8aaaa "Just choose your most prefered one."
+    s 8aaaa "Just choose your most preferred one."
     return 'h'
 
 label s_reaction_t: #Tired player
     s 7adab "Oh, then you should have a rest."
-    s 6acab "I think it will be better, if I close the game."
+    s 6acab "I think it will be better if I close the game."
     s "I don't want to interfere with your sleep."
     if get_time_of_day() == 0:
-        s 6aaab "Good night [player]!"
+        s 6aaab "Good night, [player]!"
     else:
-        s 6aaab "Sweet dreams [player]!"
+        s 6aaab "Sweet dreams, [player]!"
     $renpy.quit()
     return 's'
 
 label s_reaction_l: #Lonely player
-    s 6aaab "Don't worry [player]!"
+    s 6aaab "Don't worry, [player]!"
     s "I'm always with you."
     s "You can speak with me anytime."
-    s 6acaa "But I advice you to spend more time with real people."
-    s "Maybe, it's time to chat with a friend."
+    s 6acaa "But I advise you to spend more time with real people."
+    s "Maybe it's time to chat with a friend."
     s "...Or to find a new acquaintance."
-    s "If you have problems with it in real life, you can use social media to it."
+    s "If you have problems with interacting in real life, you can use social media as a substitute."
     s "I think it'll help you more than I will."
-    s 7aaab "But don't forget to come back to me, OK?"
+    s 7aaab "But don't forget to come back to me, okay?"
     return 'h'
 
 label s_reaction_a: #Angry player
@@ -721,36 +721,36 @@ label s_reaction_a: #Angry player
     s "I think you ought to calm down."
     s "Doesn't matter what or who did you so."
     s "It's easy to do something wrong, when you're out of sorts."
-    s "...And if you do it, it may hang on in the future in a bad way."
-    s 6acaa "There're a lot of ways to get rid of negativity."
-    s "Just choose one of the most effective for you."
-    s 7aaaa "And remember: the world is full not only of annoying things and people, but also of pleasant ones."
-    s "You just have to know how to avoid the first ones to and find the second ones."
-    s 7aaca "...Or how to turn the first ones to the second ones."
+    s "...And if you do it, it may hang onto the future in a bad way."
+    s 6acaa "There are a lot of ways to get rid of negativity."
+    s "Just choose the most effective one for you."
+    s 7aaaa "And remember: the world is full of not only annoying things and people, but also pleasant ones."
+    s "You just have to know how to avoid the former and find the latter."
+    s 7aaca "...Or how to turn the former into the latter."
     return 'h'
 
 #Common labels
 label s_common_colors:
     s "I have several favorite colors."
     s "The first is red, the color of my head bow."
-    s "My pijama pants also had that color."
+    s "My pajama pants also had that color."
     s "The second one is pink."
     s "Its coral hue is my natural hair color."
     s "And one of my shirts also had it."
-    s "But the most prefered one is sky blue."
+    s "But my most preferred one is sky blue."
     s 7acaa "It's my eye color."
-    s "...Like emerald green color is Monika's favorite color."
-    s "It looks like our common character trait."
-    s 7aaca "Or it's just a funny coincidence."
+    s "...Like how emerald green color is Monika's favorite color."
+    s "It looks like a common character trait."
+    s 7aaca "Or maybe it's just a funny coincidence."
     return 'h'
 
 label s_common_programming:
-    s "It's easy, beacuse many popular program language now seem to be not so hard to learn."
-    s "...But their features are enough to use them for any calculations, which isn't limited by functions of a certian program."
-    s "But it's difficult to be a good expert in programming, beacuse you need good knowlenges of Maths and Computer Sciences."
+    s "It's easy, beacuse many popular programming languages now don't seem to be so hard to learn."
+    s "...But their features are enough to use them for any calculations, which isn't limited by the functionality of a single program."
+    s "But it's difficult to be an expert in programming, beacuse you need good knowledge of math and computer science."
     s "If you want to be a good programmer, you have to know a lot of various basic algorithms, programming languages and their features..."
     s "And ways to optimize the code and make it easier to read."
-    s "You also need knowlenges of different standards and to be good at analyzing of problems."
+    s "You also need knowledge of different standards and to be good at analyzing problems."
     s "At least, professional programmers say that."
 
 #Eventual topics
@@ -763,19 +763,19 @@ label s_screenshot(loc = None): #Called when the player takes a screenshot while
     $justIsSitting = False
     
     show sayori 7adab at ss1 zorder 2
-    s "Oh, have you just taken a photo of me?"
-    s "It's so cute [player]!"
-    s 7aaaa "I hope you'll show it to your freinds."
+    s "Oh, did you just take a photo of me?"
+    s "It's so cute, [player]!"
+    s 7aaaa "I hope you'll show it to your friends."
     s "...Or copy it to a safer location or medium to remember me."
     if loc:
         s "It's located at {i}[loc]{/i}"
     else:
         s "It's located in the game directory."
-    s 7acaa "I have not so much photos of me."
-    s "Maybe because I spent not so much free time with my friends."
+    s 7acaa "I don't have many photos of myself."
+    s "Maybe because I didn't spent much free time with my friends."
     s 7aaaa "So I'm very glad you've taken it."
     s "I wish I saw your photo."
-    s "Maybe, I should find it sometime later."
+    s "Maybe I should find it sometime later."
     
     $s_mood = 'h'
     jump s_loop
