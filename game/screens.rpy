@@ -1468,7 +1468,7 @@ screen confirm(message, yes_action, no_action):
             spacing 30
             
             if message == layout.QUIT:
-                label _("Are you sure you want to quit without saying goodbay?"):
+                label _("Are you sure you want to quit without saying goodbye?"):
                     style "confirm_prompt"
                     xalign 0.5
             else:
