@@ -213,42 +213,42 @@ label mg_ttt_s_comment(id = 0): #Sayori's comment; 0/1 = Sayori's victory/defeat
     if id == 0:
         $randId = renpy.random.randint(0, 2)
         if randId == 0:
-            s 2q "OK, I win this time."
-            s "You should have better tactic next time."
+            s 2q "Okay, I win this game."
+            s "You should have a better strategy next time."
         elif randId == 1:
-            s 2r "I've finished my line!"
-            s 2a "Just improve your tactic and try again."
+            s 2r "Three in a row!"
+            s 2a "Just work on your tactics and try again."
         else:
             s 2e "Don't worry!"
-            s "Maybe, you'll win next time."
+            s "Maybe you'll win next time."
     elif id == 1:
         $randId = renpy.random.randint(0, 1)
         if randId == 0:
-            s 5b "OK, you win!"
-            s 5a "Next time I'll be more cunning."
+            s 5b "Okay, you win!"
+            s 5a "Next time I'll be more crafty."
         else:
-            s 1n "Oh, you've just finish your line."
-            s 1l "You seem to be more cunning than me."
-            s "Next time, I'll try better."
+            s 1n "Oh, you've just got three in a row."
+            s 1l "You seem to be more clever than me."
+            s "Next time I'll try harder."
     elif id == 2:
         $randId = renpy.random.randint(0, 1)
         if randId == 0:
-            s 1k "Oh, the field is full."
-            s "And there's not any full line."
+            s 1k "Oh, the board is full."
+            s "And no one got three in a row."
             s "Let's just try again."
         else:
             s 4q "Don't worry!"
-            s "Tic-Tac-Toe games often end up with draw."
-            s "Maybe, there will be a winner in a next game."
+            s "Tic-Tac-Toe games often end up in a draw."
+            s "Maybe there will be a winner in the next game."
     else:
         $randId = renpy.random.randint(0, 1)
         if randId == 0:
             s 4o "Are you giving up?"
             s 4c "Then we'll start again, but I'll get a point for this round."
         else:
-            s 3g "What's up [player]?"
-            s "OK, I'll restart the game..."
-            s 3r "But I'll be this round winner."
+            s 3g "What's up, [player]?"
+            s "Okay, I'll restart the game..."
+            s 3r "But I'll be this round's winner."
     return
 
 label mg_ttt_s_turn:

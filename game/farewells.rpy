@@ -14,9 +14,9 @@ label s_farewell:
     $renpy.quit()
 
 #Farewells
-label s_farewell_1: #The really first farewell of this mod
+label s_farewell_1: #The actual first farewell of this mod
     show sayori 6acab at ss1 zorder 2
-    s "Are you qiutting the game?" 
+    s "Are you quitting the game?" 
     s 6abab "Then see you later, [player]!"
     return
 
@@ -24,7 +24,7 @@ label s_farewell_2:
     show sayori 7aaaa at ss1 zorder 2
     s "Goodbye, [player]!"
     s "Come back when you feel alone."
-    s 7aaca "I always can spend time with you."
+    s 7aaca "I can always spend time with you."
     return
 
 label s_farewell_3:
@@ -36,17 +36,17 @@ label s_farewell_3:
 label s_farewell_4:
     show sayori 7aaaa at ss1 zorder 2
     s "Bye-bye!"
-    s "I wish you good luck and mood."
-    s 7aaca "You can take some of mine now, if you need."
+    s "I wish you health and happiness."
+    s 7aaca "You can take some of mine, if you need it."
     return
 
 label s_farewell_5:
     if get_time_of_day() == 0:
         s 7aaaa "Good night, [player]!"
-        s 7acaa "You should sleep enough to be in a good temper and not tired."
+        s 7acaa "You should sleep enough so you're in a good mood and not too tired."
     elif get_time_of_day() < 3:
         s 7aaaa "Have a good day, [player]!"
-        s 7aaaa "I wish you successfully do everything you planned for today."
+        s 7aaaa "I hope you accomplish everything you planned for today."
     else:
         s 7aaaa "See you later, [player]!"
         if get_time_of_day(launch_dt.hour) == 3:

@@ -105,7 +105,7 @@ screen talk_ui():
         textbutton _("Ask a question") keysym '1' action Function(renpy.call, "s_topicmenu", 0)
         textbutton _("Repeat converstion") keysym '2' action Function(renpy.call, "s_topicmenu", 1)
         textbutton _("I feel...") keysym '3' action Function(renpy.call, "s_topicmenu", 2)
-        textbutton _("Say goodbay") keysym '4' action Jump("s_farewell")
+        textbutton _("Say goodbye") keysym '4' action Jump("s_farewell")
         textbutton _("Change information") keysym '5' action Function(renpy.call, "s_pinfo", True)
         if config.developer:
             textbutton "{i}Clean Sayori's memory{/i}" keysym '0' action [Function(reset_topics), Jump("s_talkmenu")]
