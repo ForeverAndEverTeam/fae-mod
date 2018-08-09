@@ -130,9 +130,10 @@ label s_greeting_3: #Greeting in a random mod langauge expecting the current
     show sayori 6aaaa at ss1 zorder 2
     python:
         greeting_lang = None
-        while not greeting_lang or (type(greeting_lang) != tuple and\
-        greeting_lang.code == _preferences.language or greeting_lang[0].code == _preferences.language):
+        while not greeting_lang or greeting_lang.code == _preferences.language:
             greeting_lang = renpy.random.choice(lang_dict.values())
+            if type(greeting_lang) == tuple:
+                greeting_lang = greeting_lang[0]
         
         
         if greeting_lang.code:
