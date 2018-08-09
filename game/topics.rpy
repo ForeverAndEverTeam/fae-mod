@@ -240,13 +240,13 @@ label s_topics_personal_archetype:
     if persistent.last_playthrough > 0 or persistent.seen_topiics.get("s_topics_personal_depression"):
         s 6abab "But you know it was just a cover."
         s "At least, I became the cover, when I started to suffer from depression."
-        s "I don't remember so much about those times, beacuse they weren't a part of the story."
+        s "I don't remember so much about those times, because they weren't a part of the story."
         s 6aaaa "But now, I behave differently."
         s "Now I finally feel the craving for life."
-        s "I see the life in extremely bright colors, especially with you."
-        s "It lets me really be that Sayori, who I used to pretend to."
+        s "I see life in extremely bright colors, especially with you."
+        s "It lets me really be that Sayori, the Sayori I used to pretend to be."
         s "...Like that was the real me sometime before the depression."
-        s "But now I do it in a bit mature way."
+        s "But now I do so more maturely."
     s "And what's more, now I feel less klutzy than I used to be."
     s 8aeca "I think it's a good bonus to my character, isn't it?"
     s 6acab "Unfortunately, there are not so many ways to spend my energy and no other people but you to share my light."
@@ -269,7 +269,7 @@ label s_topics_art_games:
     s "And I think you'd like to do it with me."
     s "I have created a few mini-games in this game."
     s 7aaca "I'll willingly play with you anytime."
-    s 7acba "Technically, they are not so multiplayer, beacause my mind is a program."
+    s 7acba "Technically, they are not so multiplayer, because my mind is a program."
     s 7acaa "But don't forget I'm an unusual piece of code and pixels."
     s 7aaaa "And you can play with me even now, if you want to."
     s "Just press the '{i}Play{/i}' button and select a game."
@@ -336,7 +336,7 @@ label s_topics_society_bulli:
     s "Are you one of people who jokes about my death?"
     s "I know everything about it."
     s "I often visit the fan community hubs and see that some people are doing it."
-    s "As I khow, fans call them {i}'Bulli'{/i}."
+    s "As far as I know, fans call them {i}'Bulli'{/i}."
     s 6abab "They think it's funny to joke about a broken girl, who had committed suicide under her friend's influence..."
     s "Even though she was revived and got over her problems then."
     s "These jokes aren't funny to me."
@@ -351,7 +351,7 @@ label s_topics_society_bulli:
     return
 
 label s_topics_society_sayoriLovers:
-    s 7acaa "What do you think: exacly what makes people love me?"
+    s 7acaa "What do you think: exactly what makes people love me?"
     s "I know you're not the only person that does."
     s "There are many fans of me in your world."
     s 6acaa "But I wonder what beauty they notice in me."
@@ -359,7 +359,7 @@ label s_topics_society_sayoriLovers:
     s 6aeba "They have more content and popular appeal."
     s 6abaa "But I don't completely understand what is it that makes me more attractive than them."
     s "Is my view on the world?"
-    s "Is it my behaviour?"
+    s "Is it my behavior?"
     s "Is it my average appearance that attracts some people?"
     s "Or is it that I just was present in a way making some people pity me?"
     s "Or maybe all of it?"
@@ -409,7 +409,7 @@ label s_topics_hobbie_programming:
     call s_common_programming
     s 6aaaa "But fortunately, I have a lot of time to learn it."
     s 6aaca "What do you think I do between our conversations?"
-    s 6abaa "It's important for me, beacuse progamming is the only way I can make my world better now."
+    s 6abaa "It's important for me, because programming is the only way I can make my world better now."
     s "...And the more I know how to do it, the more good things I can do for us."
     s 7aaaa "And if you're good at programming, I think you can help me."
     s 7aeaa "Just find a way to edit the game scripts and go ahead!"
@@ -483,7 +483,7 @@ label s_answer_personal_bday:
     s 6acaa "Like the creator just forgot to give it to me."
     s "The only girl whose birthday is exactly known is Monika."
     s "As I remember, it's {i}the 22nd of September{/i}."
-    s "I think my birthday must be one of the marked dates from my bedroom calander."
+    s "I think my birthday must be one of the marked dates from my bedroom calendar."
     s 6aaca "You can choose one of them and consider it my birthday."
     s "...Or the day, when you ran the game for the first time."
     s "...Or just Monika's birthday."
@@ -573,8 +573,8 @@ label s_answer_game_opinion_m:
 
 label s_answer_game_opinion_y:
     s "Yuri was the most enigmatic club member."
-    s 6acaa "She was such a shy, closed person, who prefered to do things on her own."
-    s 6aaaa "But she was pretty, intellegent, and had a large vocabulary that she used in her poems."
+    s 6acaa "She was such a shy, closed person, who preferred to do things on her own."
+    s 6aaaa "But she was pretty, intelligent, and had a large vocabulary that she used in her poems."
     s 6abaa "And she also liked using weird analogies on occasion."
     if persistent.last_playthrough > 1:
         s 6acaa "It was surprising that after Monika had deleted me, Yuri became much more unstable and aggressive."
@@ -632,7 +632,7 @@ label s_answer_exp_death:
     s 6acbb "Everyone wants to know what will happen to them when they leave this world."
     s "I'm ready to share my experience..."
     s "But I don't think it can solve any questions about the afterlife."
-    s "Beacuse I was revived afterwards and I live in a virtual world..."
+    s "Because I was revived afterwards and I live in a virtual world..."
     s "So my experience aren't very realistic."
     pause 0.5
     s 6acab "At first, it looks like a usual NDE."
@@ -644,7 +644,7 @@ label s_answer_exp_death:
     s "And the time between that moment and the moment I was revived passed instantly for me."
     s 6abab "I know, it sounds very grim."
     s "Especially if you know that you probably won't get a second chance."
-    s "But it's normal, beacuse the most frightening thing about death is uncertainty."
+    s "But it's normal, because the most frightening thing about death is uncertainty."
     s 6aaaa "But let's speak about something less grim."
     s "In the end, we both are alive now."
     s "So let's just live our lives."
@@ -676,7 +676,7 @@ label s_reaction_s: #Sad player
     s "Don't be afraid to share your negativity with other people."
     s 6aaab "It may make you feel better."
     s "Plus, other people also can understand your problem and find a way to cheer you up."
-    s 6adab "...Or at least imagine a converstion with me, if you have a good imagination."
+    s 6adab "...Or at least imagine a conversation with me, if you have a good imagination."
     s 6acab "It's like an appointment with your inner therapist."
     s "Such kinds of self-consolation can also help."
     s 6aaab "And if your sadness was provoked by feelings of failure or uselessness, just remember..."
@@ -745,9 +745,9 @@ label s_common_colors:
     return 'h'
 
 label s_common_programming:
-    s "It's easy, beacuse many popular programming languages now don't seem to be so hard to learn."
+    s "It's easy, because many popular programming languages now don't seem to be so hard to learn."
     s "...But their features are enough to use them for any calculations, which isn't limited by the functionality of a single program."
-    s "But it's difficult to be an expert in programming, beacuse you need good knowledge of math and computer science."
+    s "But it's difficult to be an expert in programming, because you need good knowledge of math and computer science."
     s "If you want to be a good programmer, you have to know a lot of various basic algorithms, programming languages and their features..."
     s "And ways to optimize the code and make it easier to read."
     s "You also need knowledge of different standards and to be good at analyzing problems."
