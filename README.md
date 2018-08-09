@@ -36,6 +36,7 @@ Evgeny Zotov ([VK](https://vk.com/everlastingtolovesayori))
 
 **Proofreaders**:  
 tberriman ([Reddit](https://www.reddit.com/user/tberriman))
+[vermicellibug](https://github.com/vermicellibug)
   
 **Special Thanks**:  
 Dan Salvato  
