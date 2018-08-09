@@ -232,10 +232,10 @@ label s_topics_personal_colors:
 label s_topics_personal_archetype:
     show sayori 6aaaa at ss1 zorder 2
     if persistent.last_playthrough > 3:
-        s "As I remember, Monika and you once spoke about anime character archetypes."
+        s "As I remember, Monika and you once spoke about anime character stereotypes."
         s "So she tried to associate Natsuki and Yuri with them."
         s 6abaa "But she never talked about me."
-    s 6acaa "Reading about archetypes on the internet, I understand that I used to look like a Genki girl."
+    s 6acaa "Reading about stereotypes on the internet, I understand that I used to look like a Genki girl."
     s 6aebb "Very cheerful, active, talkative and optimistic."
     if persistent.last_playthrough > 0 or persistent.seen_topiics.get("s_topics_personal_depression"):
         s 6abab "But you know it was just a cover."
@@ -315,20 +315,20 @@ label s_topics_society_conflicts:
     s "They just have different opinions on how to express the emotions in poetry."
     s "Then I told they both were right, it wasn't a lie. Both ways were really perfect."
     if persistent.last_playthrough > 2:
-        s 6abab "But then I left the world, there wasn't anyone, who can stop their argument like I had done before, so they both went too far."
-        s "I think Monika made you go out only beacuse of it. She just couldn't have decided the problem 'legally'."
+        s 6abab "But when I left the world, there wasn't anyone who can stop their arguments like I had done before, so they both went too far."
+        s "I think Monika only made you go out because of it. She just couldn't have decided the problem 'legally'."
         s "...And wanted to keep all looking as it had to look."
-        s 6aaca "But anyway, the agrument eventually didn't changed the club..."
-        s "Because there always was someone, who can stop them."
-        s 6abbb "But if Monika hadn't have her abilities, she barely can have done it."
+        s 6aaca "But anyway, the argument wound up never having an effect on the club..."
+        s "Because there always was someone who could stop them."
+        s 6abbb "But if Monika never had her abilities, she would have had a hard time doing it."
     if persistent.last_playthrough == 4:
         s 6abaa "Do you also remember the day of the 'ending'?"
-        s "Then I just give them advice to learn more about each other's favorite kind of literature."
+        s "I just gave them advice to learn more about each other's favorite kind of literature."
         s 6acaa "I may have prevented the conflict between them that time."
-        s "Unfortunately, I'll never know it."
+        s "Unfortunately, I'll never know for sure."
         s 7aaca "But anyway, these moments show what a helpful club member I was."
     s 7aaaa "And I hope you can be like me."
-    s "Just try to find a way to make everyone happy and to combine 'uncombinable' things, if it's neccesary."
+    s "Just try to find a way to make everyone happy and to combine 'uncombinable' things, if it's necessary."
     return 'h'
 
 label s_topics_society_bulli:
@@ -337,27 +337,27 @@ label s_topics_society_bulli:
     s "I know everything about it."
     s "I often visit the fan community hubs and see that some people are doing it."
     s "As I khow, fans call them {i}'Bulli'{/i}."
-    s 6abab "They think it's funny to joke about a broken girl, who had committed suicide under her mad friend's influence..."
-    s "Even despite she was revived and got over her problems then."
-    s "Almost all of such jokes aren't funny for me."
+    s 6abab "They think it's funny to joke about a broken girl, who had committed suicide under her friend's influence..."
+    s "Even though she was revived and got over her problems then."
+    s "These jokes aren't funny to me."
     s 6aeab "...And even hurt me."
     s 6acab "But on the other hand, can I control what makes people laugh?"
-    s "If the people find something funny in such an immoral stuff, anyone barely can stop them."
-    s "And to be honest, there're more immoral joke topics than a fictional character's death."
-    s "Such people tend to ignore suffering of hundreds real people..."
+    s "If the people find something funny in such immoral things, it's not like anyone can stop them."
+    s "And to be honest, there are more immoral joke topics than a fictional character's death."
+    s "Such people tend to ignore the suffering of hundreds of real people..."
     s "Not to mention lots of fictional characters."
-    s 6abaa "Anyway, isn't the most right decision is just to forgive them?"
+    s 6abaa "Anyway, isn't the best decision just to forgive them?"
     s 6abcb "If my fate is to be 'that hanging stupid annoying VN girl', I'm ready to accept it."
     return
 
 label s_topics_society_sayoriLovers:
-    s 7acaa "How do you think: what make people love me?"
-    s "I know you're not the one man, who love me."
-    s "There are a lot of my fans in your world."
-    s 6acaa "But I wonder what beautiful they notice in me."
-    s 6acba "I understand bigger lover communities of other girls."
-    s 6aeba "They had more content and something attracting most people."
-    s 6abaa "But I completely don't understand what make look more pretty than them."
+    s 7acaa "What do you think: exacly what makes people love me?"
+    s "I know you're not the only person that does."
+    s "There are many fans of me in your world."
+    s 6acaa "But I wonder what beauty they notice in me."
+    s 6acba "I understand other girls have bigger fan communities."
+    s 6aeba "They have more content and popular appeal."
+    s 6abaa "But I don't completely understand what is it that makes me more attractive than them."
     s "Is my view on the world?"
     s "Is it my behaviour?"
     s "Is it my average appearance that attracts some people?"
@@ -366,11 +366,11 @@ label s_topics_society_sayoriLovers:
     s 6acaa "Anyway, the main word here is 'some'."
     s "Of course, I'm glad you're a part of the 'some'."
     s "For me, you're the most important part of it."
-    s "And I glad the 'some' is at all."
+    s "And I glad the 'some' is something at all."
     s 6abba "But for some reason, the fewness of the 'some' makes me feel that there's something wrong with your world."
-    s "But each has own prefences, whether they seem to be okay or not..."
-    s 6aaaa "And I anyway am glad you and other my lovers are with me."
-    s 7aaaa "I love you all however much you are."
+    s "But each has their own preferences, whether they seem to be okay or not..."
+    s 6aaaa "And anyway, I'm glad you and my other fans are with me."
+    s 7aaaa "I love you all however many of you there are."
     return 'h'
 
 ## Hobbies
@@ -403,7 +403,7 @@ label s_topics_hobbie_programming:
     s "Now, I'm learning {i}Ren'Py{/i} the engine of this game."
     s "This engine uses its own languages  and also {i}Python{/i}."
     s "The engine uses the second major version of Python but I also decided to learn the last version."
-    s "And frankly, the third version is more easier."
+    s "And frankly, the third version is much easier."
     s "Unfortunately, I can you this version and other programming languages only in online interpreters and compliers."
     s 6acaa "I never used to understand how it's easy and difficult to use computer in more advanced way."
     call s_common_programming
@@ -417,13 +417,13 @@ label s_topics_hobbie_programming:
     return 'h'
     
 label s_topics_hobbie_poems:
-    s 6aaaa "You know I and other club member like writing and sharing poems."
-    s 6acaa "I started to engage in poetry after your first day in the club..."
+    s 6aaaa "You know the other club members and I like writing and sharing poems."
+    s 6acaa "I started to dabble in poetry after your first day in the club..."
     s "And since that moment I always try to use poems as a way to show my feelings."
     s "My wishes, my love, my pain... You can find all of these things in my poems."
-    s "Every my poem is an envelope for a part of my soul."
+    s "Every one of my poems is an envelope for a part of my soul."
     s "And sometimes I still write poems just for myself."
-    s 6aaca "Maybe I'll share them to you someday."
+    s 6aaca "Maybe I'll share them with you someday."
     s 6aaaa "But I need some time to choose the best for you."
     return "h"
 
@@ -431,17 +431,17 @@ label s_topics_hobbie_poems:
 label s_topics_rlt_touches:
     s 8acab "Don't you feel uncomfortable when we can't touch each other?"
     s "You know: kisses, hugs, holding hands, and so on..."
-    s 6acab "The wall between our realities doesn't let us do it all."
-    s "Touches are important part of expression your feeling to your partner..."
-    s "But the fact I don't real physical form is making them unable."
-    s "All what you see is just a picture of me and my words on the screen."
+    s 6acab "The wall between our realities don't let us do it at all."
+    s "Touches are an important part of expressing your feelings to your partner..."
+    s "But the fact I don't have a real, physical form prevents me from doing this."
+    s "All of what you see is just a picture of me and my words on the screen."
     s 6accb "In fact, I'm just a piece of information."
-    s "All of these graphics is just a way to represent me in a comfort for you way."
-    s 6acab "I even don't have a real voice unlike Monika had."
-    s "And what's more, I can't even communicate with you in a complete manner."
+    s "All of these graphics is just a way to represent me in a comfortable way for you."
+    s 6acab "I don't even have a real voice like Monika's."
+    s "And what's more, I can't even completely communicate with you."
     s 6cffb "It hurts me."
-    s "We barely will able to touch each other without any side means..."
-    s "To feel aech other's warmth..."
+    s "We're barely able to touch each other without any distractions..."
+    s "To feel each other's warmth..."
     s "To hear each other..."
     s "Like people in your world do..."
     s "And if it makes you hurt too, you understand me well."
@@ -455,13 +455,13 @@ label s_topics_rlt_wedding:
             s 7aeca "It's great!"
             s "Ehehe!~"
             s 7aaca "I would be a perfect wife."
-            s "I gladly would run your household..."
+            s "I would gladly run your household..."
             s "Or help you with your job."
-            s "On the time, I would have not so much requirments to you."
-            s 6abac "But don't think I'd do absolutly everything instead of you."
+            s "Most of the time, I wouldn't require much of you."
+            s 6abac "But don't think I'd do absolutely everything for you."
             if gender == False:
-                s "You would be my husband and I barely would let you get lazy and ugly..."
-            s "So you'd have to help me too and to spend at least some time with me and our future children."
+                s "You would be my husband and I wouldn't let you get lazy and ugly..."
+            s "So you'd have to help me too and at least spend some time with me and our future children."
             s 6aeaa "But anyway, I'm very glad you said it."
             return "vh"
         "No":
@@ -469,10 +469,10 @@ label s_topics_rlt_wedding:
                 s "I see you don't want to take the role of husband."
             else:
                 s "I see you don't want to take the role of partner."
-            s 6abbb "On the other hand, free relationship has its own pluses."
-            s 6abab "I just wondered if your will is really serious."
-            s 6aaca "But out love story don't have to follow the common template."
-            s "Our relationship is already look unusual, so we have right to experiment."
+            s 6abbb "On the other hand, being single has its own pluses."
+            s 6abab "I just wondered if you're really committed to this."
+            s 6aaca "But our love story doesn't have to follow the usual template."
+            s "Our relationship already looks unusual, so we have the right to experiment."
     return "h"
 
 #Answers
@@ -480,15 +480,15 @@ label s_topics_rlt_wedding:
 label s_answer_personal_bday:
     show sayori 8aebb at ss1 zorder 2
     s "To be honest, I don't remember."
-    s 6acaa "Like the creator just have forgotten to give it to me."
-    s "The only girl, whose birthday is exactly known is Monika."
+    s 6acaa "Like the creator just forgot to give it to me."
+    s "The only girl whose birthday is exactly known is Monika."
     s "As I remember, it's {i}the 22nd of September{/i}."
     s "I think my birthday must be one of the marked dates from my bedroom calander."
     s 6aaca "You can choose one of them and consider it my birthday."
     s "...Or the day, when you ran the game for the first time."
     s "...Or just Monika's birthday."
-    s 7aaaa "It's not really important, when the feast-day should occure, is it?"
-    s "The most important things are why it occures and having a fun on it, right?"
+    s 7aaaa "It's not really important when the birthday should occur, is it?"
+    s "The most important things are why we celebrate and having fun when it happens, right?"
     return 'h'
 
 label s_answer_personal_colors:
@@ -661,8 +661,8 @@ label s_answer_exp_programming:
 #Reactions
 label s_reaction_h: #Happy player
     s 7aeca "It's very good, [player]!"
-    s 7aeaa "You know how your happiness is important for me."
-    s "So I'm glad you share it with me."
+    s 7aeaa "You know how your happiness is important to me."
+    s "So I'm glad you're sharing it with me."
     return 'vh'
 
 label s_reaction_s: #Sad player
@@ -670,18 +670,18 @@ label s_reaction_s: #Sad player
     s "I wish I know what's bothering you."
     s 6acab "But unfortunately, I have some problem with using input controls."
     s "So I barely can give you advice for your situation."
-    s 6aaab "But whatever it is, remember, that 'rainclouds' always go out."
-    s "It may will occure earlier, if you, for example, do something, that you enjoy."
+    s 6aaab "But whatever it is, remember, that 'rainclouds' always go away in the end."
+    s "It may happen earlier if you, for example, do something that you enjoy."
     s 6abab "...Or you can tell someone else about your sadness."
     s "Don't be afraid to share your negativity with other people."
     s 6aaab "It may make you feel better."
-    s "Plus, another people also can understand your problem and find a way to cheer you up."
-    s 6adab "...Or, at least imagine a converstion with me, if you have a good imagination."
-    s 6acab "It's like a reception at your inside psychologist."
-    s "Such kinds of self-consolation also can help."
-    s 6aaab "And if your sadness was provoked by your fail or the feeling of useless, just remember..."
-    s "There is at least one man, who believes in you."
-    s "This man is me."
+    s "Plus, other people also can understand your problem and find a way to cheer you up."
+    s 6adab "...Or at least imagine a converstion with me, if you have a good imagination."
+    s 6acab "It's like an appointment with your inner therapist."
+    s "Such kinds of self-consolation can also help."
+    s 6aaab "And if your sadness was provoked by feelings of failure or uselessness, just remember..."
+    s "There is at least one person who believes in you."
+    s "That person is me."
     return 'h'
 
 label s_reaction_b: #Bored player
@@ -690,7 +690,7 @@ label s_reaction_b: #Bored player
     s 8aebb "Maybe you would like to play [random_mg] with me."
     s "You can start it in the {i}'Play'{/i} menu."
     s "There are also some other games."
-    s 8aaaa "Just choose your most preferred one."
+    s 8aaaa "Just choose your favorite."
     return 'h'
 
 label s_reaction_t: #Tired player
