@@ -131,14 +131,14 @@ init -5 python:
             TopicCategory('s_answer_exp', _("Experience")) #2
     )
     
-    question_cats[0].new_topic(_("When do you have birthday?"), 'bday')
+    question_cats[0].new_topic(_("When's your birthday?"), 'bday')
     question_cats[0].new_topic(_("What color is your favorite?"), 'colors', related = topic_cats[0].topics[1])
     topic_cats[0].topics[1].related = [question_cats[0].topics[1]]
     question_cats[0].new_topic(_("What music do you like?"), 'music')
     question_cats[0].new_topic(_("What political views do you have?"), 'politics')
     
-    question_cats[1].new_topic(_("Do you regreat you have lost your friends?"), 'lostFriends')
-    question_cats[1].new_topic(_("What do you think of an other club member?"), 'opinion')
+    question_cats[1].new_topic(_("Do you regret that you have lost your friends?"), 'lostFriends')
+    question_cats[1].new_topic(_("What do you think about adding another club member?"), 'opinion')
     
     question_cats[2].new_topic(_("How does it feel to be dead?"), 'death')
     if persistent.last_playthrough == 0:
@@ -176,51 +176,51 @@ label s_topic(topic, *args, **kwargs):
 ## Personality
 label s_topics_personal_depression:
     show sayori 6afab at ss1 zorder 2
-    s "I can't believe I wasted so much time struglling against my depression only with myself."
+    s "I can't believe I wasted so much time struggling against my depression by myself."
     if persistent.last_playthrough == 0:
-        s "I don't remember if I told you it."
-        s "But if I don't, know..."
-        s "I used to be much less blissful than I show."
+        s "I don't remember if I told you this."
+        s "But if I didn't, you should know..."
+        s "I used to be much less blissful than I seem."
     s 6acab "I was just... afraid to tell anyone about it."
     s "...To make them worry about me."
-    s "So I used to pretend a happy and cherry girl and to convince myself that I was really so."
-    s "I used to think it was the one thing that can help me."
-    s 6abab "In the time, I tried to give other people what I couldn't get."
+    s "So I used to pretend I was a happy and cheery girl and tried to convince myself that I really was so."
+    s "I used to think it was the one thing that could help me."
+    s 6abab "In that time, I tried to give other people what I couldn't have."
     s "It was my only purpose for a long time."
-    s "But once I started to look at man, who is sitting opposite me now, in a different way."
+    s "But once I started to look at the person, who is sitting opposite me now, in a different way."
     s "I hope you still remember my first poem."
     s "If you don't, I can read it again now."
     call showpoem(poem_s1, False, img="sayori 7acab", where=ss1)
     show sayori 7acab at ss1 zorder 2
-    s "Do you feel it defferently now?"
-    s 7aaaa "Anyway, you could have see that the morning images seem to stand for someone."
-    s "And that one was your avatar, [player]."
+    s "Do you feel it differently now?"
+    s 7aaaa "Anyway, I hope you see that the morning images stand for someone."
+    s "That someone was your avatar, [player]."
     s "Then I feel something giving me alive in being with him."
-    s "And I understood what is the feel."
-    s 6abbb "But I was afraid to confess and that he wouldn't be able to accept true me."
+    s "And I understood what was that feeling."
+    s 6abbb "But I was afraid to confess and that he wouldn't be able to accept the true me."
     s "So I did my best not to show my real feelings."
     if persistent.last_playthrough != 0:
-        s "But once, I started to feel me much worse."
+        s "But once, I started to feel much worse."
         s "...Like something had taken the rest of the sunlight in my head."
-        s "It made me complately lose the control over the feelings."
-        s 6abab "So I got not able to hide my true nature anymore, as you could see that Friday and those weekends."
-        s "I started to feel so worthless that I even him care made me suffer."
-        s "Saying more, it made me suffer even more than other's."
+        s "It made me completely lose control over my emotions."
+        s 6abab "So I couldn't hide my true nature anymore, as you could see that Friday and those weekends."
+        s "I started to feel so worthless that even his caring made me suffer."
+        s "To clarify, it made me suffer even more than others."
         s "That's why I tried to get rid of him."
         s "But my heart didn't want to release him unlike my corrupted brain, that was more convincing."
-        s 6cbab "And eventually, I couldn't have accept your awnser to my confession, so I decided to..."
+        s 6cbab "And eventually, I couldn't have accepted your answer to my confession, so I decided to..."
         pause 1
-        s 6egab "I can't painlessly remember that moment."
-        s "I hope you understand, why."
-    s "I'm really sorry for I had tried to hide it, if it made your suffer."
+        s 6egab "I can't relive that moment."
+        s "I hope you understand why."
+    s "I'm really sorry for trying to hide it, if it made you suffer."
     s 6dbab "I know scenes, like you have seen, may affect people in a bad way."
-    s 6dcab "If you are depressed or your friend seems to be so, don't try to hide it and try to find a help as fast as can..."
-    s "Even if you or they think it's not neccesary."
+    s 6dcab "If you are depressed or your friend seems to be so, don't try to hide it and try to find help as fast as can..."
+    s "Even if you or they think it's not necessary."
     if persistent.last_playthrough != 0:
-        s "Don't make the same mistakes, which I or your avatar did."
-        s "You or they barely will get the second chance, like I have got, if it go too far."
-    s "Only being honest with other people in such matters will make all right."
-    s "Plus, you never know, who can use such a terrable secret in a misdeed."
+        s "Don't make the same mistakes like your avatar or I did."
+        s "You or they probably won't get a second chance like I got, if it goes too far."
+    s "Only being honest with other people in such matters will make everything right."
+    s "Plus, you never know who can use such a terrible secret in a misdeed."
     return 's' 
     
 
@@ -234,25 +234,25 @@ label s_topics_personal_archetype:
     if persistent.last_playthrough > 3:
         s "As I remember, Monika and you once spoke about anime character archetypes."
         s "So she tried to associate Natsuki and Yuri with them."
-        s 6abaa "But she never told about me."
-    s 6acaa "Reading about the archtypes in the Internet, I've understood that I used to look like a Genki girl."
+        s 6abaa "But she never talked about me."
+    s 6acaa "Reading about archetypes on the internet, I understand that I used to look like a Genki girl."
     s 6aebb "Very cheerful, active, talkative and optimistic."
     if persistent.last_playthrough > 0 or persistent.seen_topiics.get("s_topics_personal_depression"):
         s 6abab "But you know it was just a cover."
-        s "At least, I became the cover, when I had started to suffer from depression."
-        s "I remember not so much about those times, beacuse they were out of the story."
-        s 6aaaa "But now, I behave in a different way."
+        s "At least, I became the cover, when I started to suffer from depression."
+        s "I don't remember so much about those times, beacuse they weren't a part of the story."
+        s 6aaaa "But now, I behave differently."
         s "Now I finally feel the craving for life."
         s "I see the life in extremely bright colors, especially with you."
         s "It lets me really be that Sayori, who I used to pretend to."
-        s "...Like that was real me somewhen before the depression."
+        s "...Like that was the real me sometime before the depression."
         s "But now I do it in a bit mature way."
-    s "And what's more, now I feel me less klatz than I used to be."
+    s "And what's more, now I feel less klutzy than I used to be."
     s 8aeca "I think it's a good bonus to my character, isn't it?"
     s 6acab "Unfortunately, there are not so many ways to spend my energy and no other people but you to share my light."
     s 6aaaa "But I always try to find new activities here."
     s 6aaca "It's really funny to discover or learn something new."
-    s 7aaaa "Especially when you have finally become enough sure to do it."
+    s 7aaaa "Especially when you finally become sure enough to do it."
     return 'h'
 
 ## Art
@@ -775,12 +775,12 @@ label s_screenshot(loc = None): #Called when the player takes a screenshot while
     s "Maybe because I spent not so much free time with my friends."
     s 7aaaa "So I'm very glad you've taken it."
     s "I wish I saw your photo."
-    s "Maybe, I should find it somewhen later."
+    s "Maybe, I should find it sometime later."
     
     $s_mood = 'h'
     jump s_loop
 
-label s_getting_bored(): #Called when twhile Sayori doesn't do anything for a long time
+label s_getting_bored(): #Called when Sayori doesn't do anything for a long time
     hide screen feat_ui
     hide screen topic_ui
     hide screen talk_ui
@@ -788,7 +788,7 @@ label s_getting_bored(): #Called when twhile Sayori doesn't do anything for a lo
     $justIsSitting = False
     
     s 7acfb "[player], I'm bored."
-    s "I understand, you want just to stare at me."
+    s "I understand, you just want to stare at me."
     s "But can you make at least a little effort to amuse me?"
     
     $s_mood = 'b'
