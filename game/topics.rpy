@@ -138,7 +138,7 @@ init -5 python:
     question_cats[0].new_topic(_("What political views do you have?"), 'politics')
     
     question_cats[1].new_topic(_("Do you regret that you have lost your friends?"), 'lostFriends')
-    question_cats[1].new_topic(_("What do you think about adding another club member?"), 'opinion')
+    question_cats[1].new_topic(_("What's your opinion on the other club members?"), 'opinion')
     
     question_cats[2].new_topic(_("How does it feel to be dead?"), 'death')
     if persistent.last_playthrough == 0:
@@ -596,7 +596,7 @@ label s_answer_game_opinion_mc:
     s "We had much in common and our houses were near each other."
     s "Maybe that's why we became friends and I fell in love with him."
     s 6abaa "...Or maybe it was just the creator's plan to make me either more friendly or less romantic of a character."
-    s 6acaa "Anyway, he always did him best to help me."
+    s 6acaa "Anyway, he always did his best to help me."
     if persistent.last_playthrough != 0:
         s "Even after I confessed my depression, he did it despite me telling him not to do it."
         s "He even left the festival to check if I was fine."
