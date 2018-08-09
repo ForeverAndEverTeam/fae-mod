@@ -210,7 +210,7 @@ label s_topics_personal_depression:
     s 6abbb "But I was so, so scared. How could he have ever loved the real me?"
     s "So I did my best not to show my real feelings."
     if persistent.last_playthrough != 0:
-        s "Yet as hard as I tried, I just ffelt worse and worse."
+        s "Yet as hard as I tried, I just felt worse and worse."
         s "...Like something was stealing the rest of the sunshine in my head."
         s "It made me complately lose control over my feelings."
         s 6abab "I couldn't hide any more; you saw that over that last weekend."
