@@ -37,7 +37,7 @@ Evgeny Zotov ([VK](https://vk.com/everlastingtolovesayori))
 **Proofreaders**:  
 tberriman ([Reddit](https://www.reddit.com/user/tberriman))
   
-**Speical Thanks**:  
+**Special Thanks**:  
 Dan Salvato  
 Monika After Story team  
 Ren'Py team  
