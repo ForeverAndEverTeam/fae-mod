@@ -159,7 +159,7 @@ init -5 python:
     moods = (
         (_("Happy"), "h"), ## (Mood name, Reaction ID)
         (_("Sad"), "s"),
-        (_("Boring"), "b"),
+        (_("Bored"), "b"),
         (_("Tired"), "t"),
         (_("Angry"), "a"),
         (_("Lonely"), "l")
