@@ -139,7 +139,7 @@ init -5 python:
             TopicCategory('s_answer_exp', _("Experience")) #2
     )
     
-    question_cats[0].new_topic(_("When do you have birthday?"), 'bday')
+    question_cats[0].new_topic(_("When is your birthday?"), 'bday')
     question_cats[0].new_topic(_("What color is your favorite?"), 'colors', related = topic_cats[0].topics[1])
     topic_cats[0].topics[1].related = [question_cats[0].topics[1]]
     question_cats[0].new_topic(_("What music do you like?"), 'music')
@@ -147,8 +147,8 @@ init -5 python:
     question_cats[0].new_topic(_("Do you believe in God?"), 'god')
     question_cats[0].new_topic(_("Do you really love me?"), 'love')
     
-    question_cats[1].new_topic(_("Do you regreat you have lost your friends?"), 'lostFriends')
-    question_cats[1].new_topic(_("What do you think of an other club member?"), 'opinion')
+    question_cats[1].new_topic(_("Do you regret you have lost your friends?"), 'lostFriends')
+    question_cats[1].new_topic(_("What do you think of one of the other club members?"), 'opinion')
     
     question_cats[2].new_topic(_("How does it feel to be dead?"), 'death')
     if persistent.last_playthrough == 0:
