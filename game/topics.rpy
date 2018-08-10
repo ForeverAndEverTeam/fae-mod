@@ -212,7 +212,7 @@ label s_topics_personal_depression:
     if persistent.last_playthrough != 0:
         s "Yet as hard as I tried, I just felt worse and worse."
         s "...Like something was stealing the rest of the sunshine in my head."
-        s "It made me complately lose control over my feelings."
+        s "It made me completely lose control over my feelings."
         s 6abab "I couldn't hide any more; you saw that over that last weekend."
         s "I started to feel so worthless that even him caring made me suffer."
         s "Why was someone who made me feel so amazing wasting all his time on someone broken like me?"
