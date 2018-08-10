@@ -870,7 +870,7 @@ label s_reaction_s: #Sad player
     s "People are social creatures; we depend on each other to stay strong."
     s 6aaab "It may make you feel better."
     s "Plus, another person can often consider and understand your problem and find a way to cheer you up."
-    s 6adab "...Or, at least imagine a converstion with me, if you have a good imagination."
+    s 6adab "...Or, at least imagine a conversation with me, if you have a good imagination."
     s 6acab "Whatever it is, know that I'll always be here for you."
     s 6aaab "And if you're sad because you feel worthless, or alone, or that nobody cares..."
     s "There's always going to be one person that believes you can do anything."
