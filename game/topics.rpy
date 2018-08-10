@@ -317,7 +317,8 @@ label s_topics_personal_conservatism:
     s "But trying to live in the past can destroy you."
     s "It's like a maze: you might think you're going the wrong way and want to go back to the beginning when things were easier, but it might only {i}seem{/i} to be wrong..."
     s "It's just all part of being human, I guess."
-    s 6abbb "It cost me my life to learn all of this, you know. I love you, and I don't want anyone to make the mistakes I did..."
+    if persistent.last_playthrough > 0:
+        s 6abbb "It cost me my life to learn all of this, you know. I love you, and I don't want anyone to make the mistakes I did..."
     s 6abab "So, don't try and swim upstream; just go with the flow, and focus on what you {i}can{/i} change. You'll see so many more fishies that way! Ehehe~"
 
 ## Art
@@ -332,9 +333,9 @@ label s_topics_art_games:
     s 6acaa "What's more, online games have allowed friendships and connections to go beyond physical boundaries!"
     s "Surely you've played some kind of game against someone else."
     s "Even if you haven't, I'd love to play with you!"
-    s "Ehehehe, that probably didn't come out the way I intended..."
+    s 7aaca "Ehehehe, that probably didn't come out the way I intended..."
     s "I've made a few basic games we can share and compete in, right here!"
-    s 7aaca "I won't just let you beat me!"
+    s 7acac "I won't just let you beat me!"
     s 7acba "Although now that I think about it, you would really just be playing against a computer anyway, seeing as I'm just a bunch of code and pixels..."
     s 7aaca "But I'm one of the cutest piles of code around!"
     s 7aaaa "If you ever really do want to play me in something..."
@@ -349,7 +350,7 @@ label s_topics_art_fanarts:
     s "With all of the advantages and disadvantages."
     s "It can kinda hurt seeing your mistakes and worst moments thrown back at you like that, especially when they go overboard..."
     s 7aaca "Although other artists go just as far to try to show how much they care for me."
-    s "Many of them draw me as cute as they can and show everyone what they could do for me, if I were with them."
+    s "Many of them draw me as cute as they can and show all what they could do for me, if I were with them."
     s "I even store some of my favourites in the game file archives."
     s 8beba "But some of them draw me in a lewd manner."
     s "...I don't really mind if you're fond of pieces like that."
