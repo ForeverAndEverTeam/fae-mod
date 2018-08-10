@@ -103,7 +103,7 @@ screen talk_ui():
         align (1.0, 0.5)
         offset (-10, 0)
         textbutton _("Ask a question") keysym '1' action Function(renpy.call, "s_topicmenu", 0)
-        textbutton _("Repeat converstion") keysym '2' action Function(renpy.call, "s_topicmenu", 1)
+        textbutton _("Repeat conversation") keysym '2' action Function(renpy.call, "s_topicmenu", 1)
         textbutton _("I feel...") keysym '3' action Function(renpy.call, "s_topicmenu", 2)
         textbutton _("Say goodbye") keysym '4' action Jump("s_farewell")
         textbutton _("Change information") keysym '5' action Function(renpy.call, "s_pinfo", True)
