@@ -29,6 +29,8 @@ init -5 python:
                 self.__dict__[attr] = value
         
         def __call__(self, *args, **kwargs):
+            global justIsSitting
+            
             self.seen = True
             
             config.allow_skipping = True

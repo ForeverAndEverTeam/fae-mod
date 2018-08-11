@@ -84,6 +84,8 @@ init python:
             self.available = True
         
         def __call__(self, *args, **kwargs):
+            global justIsSitting
+            
             if self.preparation:
                 self.preparation(self, *args, **kwargs)
             justIsSitting = False
@@ -189,7 +191,7 @@ screen topic_ui(ss): #0 = questions, 1 = repeat, 2= feelings; #[TopicCategory] s
                 for i in subscreen:
                     if config.developer or i.seen:
                         textbutton i.name action [Function(subscreen, i)]
-                        textbutton _("Back") action SetScreenVariable("subscreen", 1)
+                    textbutton _("Back") action SetScreenVariable("subscreen", 1)
             else:
                 for i in subscreen:
                     textbutton i.name action [Function(subscreen, i)] text_italic not i.seen
