@@ -576,9 +576,10 @@ label s_topics_lifestyle_travels:
 label s_topics_lifestyle_oversleeping:
     s 6acaa "Hey, have you ever overslept?"
     s "As you know, I was pretty bad at getting up on time."
-    s "And even when I woke up, just finding a reason to force myself out of bed took a while..."
-    s "I pretty much never had time for any kind of breakfast..."
-    s 6acbb "Although I was so pre-occupied with making the rainclouds go away that I never really wanted it."
+    if persistent.last_playthrough > 0:
+        s "And even when I woke up, just finding a reason to force myself out of bed took a while..."
+        s "I pretty much never had time for any kind of breakfast..."
+        s 6acbb "Although I was so pre-occupied with making the rainclouds go away that I never really wanted it."
     s 6acaa "Anyway, oversleeping is awful when you have to follow a schedule."
     s "It's such a big problem because almost all our lives, schedules are adapted for early-wakers."
     s "Why people can't just make different working and studying hours for people who wake up at different times?"
