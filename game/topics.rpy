@@ -141,7 +141,7 @@ init -5 python:
             TopicCategory('s_answer_exp', _("Experience")) #2
     )
     
-    question_cats[0].new_topic(_("When do you have birthday?"), 'bday')
+    question_cats[0].new_topic(_("When is your birthday?"), 'bday')
     question_cats[0].new_topic(_("What color is your favorite?"), 'colors', related = topic_cats[0].topics[1])
     topic_cats[0].topics[1].related = [question_cats[0].topics[1]]
     question_cats[0].new_topic(_("What music do you like?"), 'music')
@@ -149,8 +149,8 @@ init -5 python:
     question_cats[0].new_topic(_("Do you believe in God?"), 'god')
     question_cats[0].new_topic(_("Do you really love me?"), 'love')
     
-    question_cats[1].new_topic(_("Do you regreat you have lost your friends?"), 'lostFriends')
-    question_cats[1].new_topic(_("What do you think of an other club member?"), 'opinion')
+    question_cats[1].new_topic(_("Do you regret you have lost your friends?"), 'lostFriends')
+    question_cats[1].new_topic(_("What do you think of one of the other club members?"), 'opinion')
     
     question_cats[2].new_topic(_("How does it feel to be dead?"), 'death')
     if persistent.last_playthrough == 0:
@@ -161,7 +161,7 @@ init -5 python:
     moods = (
         (_("Happy"), "h"), ## (Mood name, Reaction ID)
         (_("Sad"), "s"),
-        (_("Boring"), "b"),
+        (_("Bored"), "b"),
         (_("Tired"), "t"),
         (_("Angry"), "a"),
         (_("Lonely"), "l")
@@ -214,7 +214,7 @@ label s_topics_personal_depression:
     if persistent.last_playthrough != 0:
         s "Yet as hard as I tried, I just felt worse and worse."
         s "...Like something was stealing the rest of the sunshine in my head."
-        s "It made me complately lose control over my feelings."
+        s "It made me completely lose control over my feelings."
         s 6abab "I couldn't hide any more; you saw that over that last weekend."
         s "I started to feel so worthless that even him caring made me suffer."
         s "Why was someone who made me feel so amazing wasting all his time on someone broken like me?"
@@ -873,7 +873,7 @@ label s_reaction_s: #Sad player
     s "People are social creatures; we depend on each other to stay strong."
     s 6aaab "It may make you feel better."
     s "Plus, another person can often consider and understand your problem and find a way to cheer you up."
-    s 6adab "...Or, at least imagine a converstion with me, if you have a good imagination."
+    s 6adab "...Or, at least imagine a conversation with me, if you have a good imagination."
     s 6acab "Whatever it is, know that I'll always be here for you."
     s 6aaab "And if you're sad because you feel worthless, or alone, or that nobody cares..."
     s "There's always going to be one person that believes you can do anything."
