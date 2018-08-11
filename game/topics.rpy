@@ -439,9 +439,9 @@ label s_topics_society_sayoriLovers:
     s "Of course, I'm so glad you're a part of the 'some'."
     s "For me, you're the most important part of it."
     s "And I glad the 'some' exists at all."
-    s 6abba "No matter the struggles, I can face them knowing there are people who accept me for who I am."
+    s 6aaaa "No matter the struggles, I can face them knowing there are people who accept me for who I am."
     s "Besides, everyone has their own preferences, and that's perfectly okay!"
-    s 6aaaa "I'm so glad I met you, [player]."
+    s "I'm so glad I met you, [player]."
     s 7aaaa "And I love all of you out there that love me, no matter where you are."
     return 'h'
 
@@ -468,7 +468,7 @@ label s_topics_hobbie_guitar:
     s 7abaa "Maybe one day I can play for you and make you feel the same way~"
     s "It's like writing poetry, but through sound!"
     s "I'm sure I can conjure up a guitar and find a tutorial somewhere on the Internet."
-    s 7aaaa "Make sure you get advance tickets for my world tour, [player]! Ehehe~"
+    s 7aeca "Make sure you get advance tickets for my world tour, [player]! Ehehe~"
     return 'h'
 
 label s_topics_hobbie_programming:
