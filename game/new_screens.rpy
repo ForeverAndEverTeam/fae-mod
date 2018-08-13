@@ -190,12 +190,11 @@ screen topic_ui(ss): #0 = questions, 1 = repeat, 2= feelings; #[TopicCategory] s
             if subscreen in topic_cats:
                 for i in subscreen:
                     if config.developer or i.seen:
-                        textbutton i.name action [Function(subscreen, i)]
+                        textbutton i.name xpadding 10 action [Function(subscreen, i)]
                     textbutton _("Back") action SetScreenVariable("subscreen", 1)
             else:
                 for i in subscreen:
-                    textbutton i.name action [Function(subscreen, i)] text_italic not i.seen
-                        
+                    textbutton i.name xpadding 10 action [Function(subscreen, i)] text_italic not i.seen
                 textbutton _("Back") action SetScreenVariable("subscreen", 0)
         textbutton _("Close") action [Hide("topic_ui"), Jump("s_loop")]
 
