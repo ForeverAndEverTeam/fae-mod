@@ -1,9 +1,9 @@
 ﻿# TODO: Translation updated at 2018-07-28 13:12
 
-# game/farewells.rpy:4
-translate rus s_farewell_1_d018c9a6:
+# game/farewells.rpy:19
+translate rus s_farewell_1_f3958667:
 
-    # s "Are you qiutting the game?"
+    # s "Are you quitting the game?"
     s "Ты уже уходишь?"
 
 # game/farewells.rpy:5
@@ -24,10 +24,10 @@ translate rus s_farewell_2_66d308ad:
     # s "Come back when you feel alone."
     s "Возврщайся, как заскучаешь."
 
-# game/farewells.rpy:12
-translate rus s_farewell_2_7bf73074:
+# game/farewells.rpy:27
+translate rus s_farewell_2_0d72d10b:
 
-    # s 7aaca "I always can spend time with you."
+    # s 7aaca "I can always spend time with you."
     s 7aaca "Я всегда смогу провести с тобой время."
 
 # game/farewells.rpy:17
@@ -50,17 +50,6 @@ translate rus s_farewell_4_b4fdd37a:
     # s "Bye-bye!"
     s "Пока-пока!"
 
-# game/farewells.rpy:39
-translate rus s_farewell_4_e4ed2644:
-
-    # s "I wish you good luck and mood."
-    s "Хорошего тебе настроения и удачи."
-
-# game/farewells.rpy:40
-translate rus s_farewell_4_49b2265a:
-
-    # s 7aaca "You can take some of mine now, if you need."
-    s 7aaca "Можешь сейчас взять у меня немного, если хочешь."
 
 # game/farewells.rpy:44
 translate rus s_farewell_5_a8da6f09:
@@ -68,10 +57,10 @@ translate rus s_farewell_5_a8da6f09:
     # s 7aaaa "Good night, [player]!"
     s 7aaaa "Спокойной ночи, [player]!"
 
-# game/farewells.rpy:45
-translate rus s_farewell_5_1fda713b:
+# game/farewells.rpy:46
+translate rus s_farewell_5_dcb8c0ac:
 
-    # s 7acaa "You should sleep enough to be in a good temper and not tired."
+    # s 7acaa "You should sleep enough so you're in a good mood and not too tired."
     s 7acaa "Хороший сон — залог бодрости и хорошего настроения."
 
 # game/farewells.rpy:47
@@ -80,10 +69,10 @@ translate rus s_farewell_5_c2b67bd3:
     # s 7aaaa "Have a good day, [player]!"
     s 7aaaa "Хорошего тебе дня, [player]!"
 
-# game/farewells.rpy:48
-translate rus s_farewell_5_d546339b:
+# game/farewells.rpy:49
+translate rus s_farewell_5_f8caa2c4:
 
-    # s 7aaaa "I wish you successfully do everything you planned for today."
+    # s 7aaaa "I hope you accomplish everything you planned for today."
     s 7aaaa "Пусть у тебя с успехом свершится всё на сегодня запланированное."
 
 # game/farewells.rpy:50
@@ -110,3 +99,14 @@ translate rus s_farewell_5_d542c3c8:
     else:
         s "Я рада, что ты провёл этот день со мной."
 
+# game/farewells.rpy:39
+translate rus s_farewell_4_5d8035b0:
+
+    # s "I wish you health and happiness."
+    s "Счастья и здоровья тебе!"
+
+# game/farewells.rpy:40
+translate rus s_farewell_4_26b90d04:
+
+    # s 7aaca "You can take some of mine, if you need it."
+    s 7aaca "Можешь взять у меня немножко, если хочешь."

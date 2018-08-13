@@ -162,10 +162,6 @@ translate rus strings:
     old "OK"
     new "OK"
 
-    # screens.rpy:1471
-    old "Are you sure you want to quit without saying goodbay?"
-    new "Ты действительно хочешь выйти, не попрощавшись?"
-
     # screens.rpy:1484
     old "Yes"
     new "Да"
@@ -178,10 +174,6 @@ translate rus strings:
     old "Skipping"
     new "Пропуск"
 
-# TODO: Translation updated at 2018-07-31 18:46
-
-translate rus strings:
-
     # screens.rpy:449
     old "Please enter your name"
     new "Введите своё имя:"
@@ -189,4 +181,8 @@ translate rus strings:
     # screens.rpy:806
     old "Saving unable: save file may be corrupt."
     new "Сохранение невозможно: файл может быть повреждён."
+
+    # screens.rpy:1471
+    old "Are you sure you want to quit without saying goodbye?"
+    new "Ты действительно хочешь выйти, не попрощавшись?"
 

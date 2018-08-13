@@ -78,3 +78,15 @@ translate rus strings:
     old "Play (P)"
     new "Поиграть (P)"
 
+# TODO: Translation updated at 2018-08-11 14:54
+
+translate rus strings:
+
+    # new_screens.rpy:108
+    old "Repeat conversation"
+    new "Повторить разговор"
+
+    # new_screens.rpy:110
+    old "Say goodbye"
+    new "Попрощаться"
+

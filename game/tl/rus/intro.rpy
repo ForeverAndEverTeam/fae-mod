@@ -757,9 +757,9 @@ translate rus s_intro_2_821b71e7:
     s 6acaa "Не помню, говорила ли тебе об этом Моника, но при выключенной игре, с президентом клуба происходит настоящая жуть..."
 
 # game/intro.rpy:299
-translate rus s_intro_2_fa74a1cd:
+translate rus s_intro_2_32862da1:
 
-    # s 6aaaa "Thankffully, I found a way to avoid all the spooky colours and debilitating noise!."
+    # s 6aaaa "Thankfully, I found a way to avoid all the spooky colours and debilitating noise!."
     s 6aaaa "К счастью, я нашла способ избежать всего этого ужасного безумия."
 
 # game/intro.rpy:301
@@ -809,3 +809,12 @@ translate rus s_intro_2_536ab598:
 
     # s "I need some rest after all. Do you mind, if we just sit and stare at each other?"
     s "Мне надо немного передохнуть после всего. Ты не против, если мы просто будем глядеть друг на друга?"
+# TODO: Translation updated at 2018-08-11 14:54
+
+# game/intro.rpy:195
+translate rus s_intro_1_dead_fb9fefab:
+
+    # s "I can't see anything at all!"
+    s "Мне вообще ничего не видно!"
+
+
