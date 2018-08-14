@@ -1,16 +1,8 @@
 default persistent.last_playthrough = 4
 
 label show_spaceroom:
-    show mask_2
-    show mask_3
-    show room_mask as rm:
-        size (320,180)
-        pos (30,200)
-    show room_mask2 as rm2:
-        size (320,180)
-        pos (935,200)
-    show monika_room
-    show monika_room_highlight
+    $backgrounds.show('spaceroom')
+    hide black
     
     $ s_name = persistent.s_name
     show sayori 1a at f11 zorder 2

@@ -36,7 +36,7 @@ translate epo strings:
 
     # new_screens.rpy:147
     old "Mute"
-    new "Surdigi"
+    new "Malŝalti"
 
     # new_screens.rpy:177
     old "Back"

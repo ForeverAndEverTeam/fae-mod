@@ -663,9 +663,8 @@ screen game_menu(title, scroll=None):
 
     use navigation
 
-    if not main_menu and persistent.playthrough == 2 and not persistent.menu_bg_m and renpy.random.randint(0, 49) == 0:
-        on "show" action Show("game_menu_m")
-
+    on "hide" action SetDict(globals(), 'from_menu', True)
+    
     textbutton _("Return"):
         style "return_button"
 
@@ -928,6 +927,7 @@ style slot_button_text:
 ## https://www.renpy.org/doc/html/screen_special.html#preferences
 
 screen preferences():
+    on "hide" action Function(renpy.scene)
 
     tag menu
 
@@ -977,14 +977,17 @@ screen preferences():
                                 i = i[0]
                         textbutton i.name sensitive Language(i.code) action [Language(i.code), Function(renpy.call_in_new_context, "change_s_name", i.s_names[0])]
                 
+                $ s_names = get_s_names(_preferences.language)
+                if len(s_names) > 1:
+                    vbox:
+                        style_prefix "radio"
+                        label _("Name Spelling")
+                        for i in s_names:
+                            textbutton i action [Function(renpy.call_in_new_context, "change_s_name", i), SelectedIf(s_name == i)]
                 vbox:
-                    $ s_names = get_s_names(_preferences.language)
-                    if len(s_names) > 1:
-                        vbox:
-                            style_prefix "radio"
-                            label _("Name Spelling")
-                            for i in s_names:
-                                textbutton i action [Function(renpy.call_in_new_context, "change_s_name", i), SelectedIf(s_name == i)]
+                    style_prefix "check"
+                    label _("Background")
+                    textbutton _('Static') action [SetField(persistent, "static_bg", not persistent.static_bg), SetDict(globals(), 'update_bg', True), SelectedIf(persistent.static_bg)]
                     
 
             null height (4 * gui.pref_spacing)

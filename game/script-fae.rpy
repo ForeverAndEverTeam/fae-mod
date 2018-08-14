@@ -2,60 +2,24 @@ default persistent.currentmusic = 0
 default persistent.playergender = None # False = male, True = female, None = unknown/other
 default persistent.playerbdate = get_now().date()
 
-
-image mask_child:
-    "images/cg/monika/child_2.png"
-    xtile 2
-
-image mask_mask:
-    "images/cg/monika/mask.png"
-    xtile 3
-
-image mask_mask_flip:
-    "images/cg/monika/mask.png"
-    xtile 3 xzoom -1
-
-
-image maskb:
-    "images/cg/monika/maskb.png"
-    xtile 3
-
-image mask_test = AnimatedMask("#ff6000", "mask_mask", "maskb", 0.10, 32)
-image mask_test2 = AnimatedMask("#ffffff", "mask_mask", "maskb", 0.03, 16)
-image mask_test3 = AnimatedMask("#ff6000", "mask_mask_flip", "maskb", 0.10, 32)
-image mask_test4 = AnimatedMask("#ffffff", "mask_mask_flip", "maskb", 0.03, 16)
-
-image mask_2:
-    "images/cg/monika/mask_2.png"
-    xtile 3 subpixel True
-    block:
-        xoffset 1280
-        linear 1200 xoffset 0
-        repeat
-
-image mask_3:
-    "images/cg/monika/mask_3.png"
-    xtile 3 subpixel True
-    block:
-        xoffset 1280
-        linear 180 xoffset 0
-        repeat
-
-image monika_room = "images/cg/monika/monika_room.png"
-image monika_room_highlight:
-    "images/cg/monika/monika_room_highlight.png"
-    function monika_alpha
-
-
-image room_glitch = "images/cg/monika/monika_bg_glitch.png"
-
-image room_mask = LiveComposite((1280, 720), (0, 0), "mask_test", (0, 0), "mask_test2")
-image room_mask2 = LiveComposite((1280, 720), (0, 0), "mask_test3", (0, 0), "mask_test4")
-
-
+default update_bg = False
+default from_menu = False
 
 init python:
-    #config.developer = True # I'm a god of this world too.
+    
+    config.developer = True # I'm a god of this world too.
+    
+    def periodic_callback():
+        global update_bg, from_menu
+    
+        if update_bg and from_menu:
+            backgrounds.hide_current(True)
+            backgrounds.show()
+            renpy.restart_interaction()
+            update_bg = False
+            from_menu = False
+    
+    config.periodic_callback = periodic_callback
     
     def reset_topics():
         persistent.seen_topics = {}
@@ -201,16 +165,7 @@ label s_autoload:
     $ s_name = persistent.s_name or "Sayori"
     $ gender = persistent.playergender
 
-    show mask_2
-    show mask_3
-    show room_mask as rm:
-        size (320,180)
-        pos (30,200)
-    show room_mask2 as rm2:
-        size (320,180)
-        pos (935,200)
-    show monika_room
-    show monika_room_highlight
+    $backgrounds.show('spaceroom')
     
     $music_switch(persistent.currentmusic or 0)
 
@@ -227,6 +182,7 @@ label s_autoload:
             call expression get_random_gretting().label
     
     $ launch_dt = get_now()
+    $ persistent.lastVersion = config.version
     jump s_loop
 
 label s_loop:

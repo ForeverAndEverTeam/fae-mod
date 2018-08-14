@@ -160,7 +160,7 @@ translate epo strings:
 
     # screens.rpy:1038
     old "Mute All"
-    new "Surdigi Ĉion"
+    new "Dampi Ĉiujn Sonojn"
 
     # screens.rpy:1165
     old "The dialogue history is empty."

@@ -186,3 +186,15 @@ translate rus strings:
     old "Are you sure you want to quit without saying goodbye?"
     new "Ты действительно хочешь выйти, не попрощавшись?"
 
+# TODO: Translation updated at 2018-08-14 20:08
+
+translate rus strings:
+
+    # screens.rpy:989
+    old "Background"
+    new "Задний план"
+
+    # screens.rpy:990
+    old "Static"
+    new "Статичный"
+

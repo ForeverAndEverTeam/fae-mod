@@ -181,7 +181,7 @@ translate rus mg_ttt_s_comment_6d99833d:
 translate rus mg_ttt_s_comment_29120090:
 
     # s "Maybe you'll win next time."
-    s "Ладно, может моя в следующий раз возьмёт?"
+    s "Может, твоя в следующий раз возьмёт?"
 
 # game/mg_ttt.rpy:227
 translate rus mg_ttt_s_comment_c9e6c07d:
