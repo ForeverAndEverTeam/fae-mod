@@ -44,14 +44,23 @@ init -10 python:
         else:
             return "sayori_text"
     
-    if renpy.windows:
-        import locale, subprocess
+    if True:
+        lang = None
         
-        lang = subprocess.check_output("wmic os get Locale", shell=True)
-        lang = int(lang.split('\n')[1], 16)
-        lang = locale.windows_locale.get(lang) or "en"
-        lang = lang[:2]
-        
+        if renpy.windows:
+            import locale, subprocess
+            
+            lang = subprocess.check_output("wmic os get Locale", shell=True)
+            lang = int(lang.split('\n')[1], 16)
+            lang = locale.windows_locale.get(lang) or "en"
+            lang = lang[:2]
+            
+        else:
+            import os
+            
+            lang = os.environ.get("LANG") or 'en'
+            lang = lang[:2]
+            
         for l in lang_dict.values():
             if type(l) == tuple:
                 l = l[0]
