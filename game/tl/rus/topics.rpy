@@ -2341,7 +2341,7 @@ translate rus s_answer_personal_love_3d63880e:
 translate rus s_answer_personal_love_f31b064a:
 
     # s 8abab "If I can't find it, I'll become as obsessed with you as Monika was."
-    s 8abab "Если я не удалю её, я могу стать слишком одержимой тобой, прям как Моника."
+    s 8abab "Но если я не удалю её, я могу стать слишком одержимой тобой, прям как Моника."
 
 # game/topics.rpy:689
 translate rus s_answer_personal_love_28d8d89f:
