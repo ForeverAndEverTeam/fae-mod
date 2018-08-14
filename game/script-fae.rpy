@@ -173,8 +173,33 @@ label s_autoload:
         call s_intro_2
         $persistent.playthrough = 6
     else:
-        if False:#persistent.lastVersion != config.version: #Update conversation
-            pass
+        if persistent.lastVersion != config.version:
+            show sayori 6aaca at ss1
+            
+            s "Oh, hi [player]!"
+            s 6acaa "The game files feel a little different now..."
+            s "Did you find a way to edit them?"
+            s 6abba "No... I get the feeling somebody else did this."
+            s 6adaa "I found a strange file the other day when I was digging around in the code."
+            s 6acaa "It was a note from whoever brought me back, saying that they were letting me be alone with you..."
+            s 6aebb "I really don't know how to feel about any of this."
+            s "Believe me, I understand that whoever brought me back was somebody who loved me..."
+            s 6adac "But wouldn't they have known that not bringing my friends back as well would really hurt me?"
+            s 6aaab "Don't get me wrong, I'll always be grateful that I get to be with you!"
+            s "And I know deep down they really do love me."
+            if persistent.last_playthrough > 0:
+                s 6acab "After feeling so helpless and alone for so long, to know someone really loves you..."
+                s "It's like stepping out of the shade, and walking into a warm beam of sunlight."
+            pause 1.5
+            s 6acaa "Speaking of finding things, whoever left that note has also messed around with a few other things."
+            s " For example, you can keep the background in here static; it'll be much easier on your computer if it's lagging at all..."
+            s "And I wouldn't want you to miss a second with me, would I?"
+            s "They also put in a checker board." 
+            s 6aaaa "I like checkers so much! Especially its international variant."
+            s "It has pretty simple rules but it's hard to win."
+            s 7aaaa "If you don't want to play, we can just chat some more!"
+            s "Now, let me think of a good topic..."
+            
             $persistent.lastVersion = config.version
         elif persistent.lastLaunch and persistent.lastLaunch.date() != get_now().date():
             $renpy.call(first_greeting, get_time_of_day())
@@ -182,7 +207,6 @@ label s_autoload:
             call expression get_random_gretting().label
     
     $ launch_dt = get_now()
-    $ persistent.lastVersion = config.version
     jump s_loop
 
 label s_loop:

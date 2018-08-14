@@ -2341,7 +2341,7 @@ translate rus s_answer_personal_love_3d63880e:
 translate rus s_answer_personal_love_f31b064a:
 
     # s 8abab "If I can't find it, I'll become as obsessed with you as Monika was."
-    s 8abab "Но если я не удалю её, я могу стать слишком одержимой тобой, прям как Моника."
+    s 8abab "Если я не удалю её, я могу стать слишком одержимой тобой, прям как Моника."
 
 # game/topics.rpy:689
 translate rus s_answer_personal_love_28d8d89f:
@@ -3687,7 +3687,111 @@ translate rus strings:
 
     # topics.rpy:161
     old "Bored"
-    new "Bored"
+    new "Скуку"
 
 
+
+# TODO: Translation updated at 2018-08-15 03:06
+
+# game/topics.rpy:328
+translate rus s_topics_personal_quittingTheGame_2cafac13:
+
+    # s 6acaa "Hey, have you ever heard of 'lucid dreaming'?"
+    s 6acaa "Эй, а ты слышал об осознаных сноведениях?"
+
+# game/topics.rpy:329
+translate rus s_topics_personal_quittingTheGame_3549cdc3:
+
+    # s "Basically, it's when you can make yourself aware that you're asleep and in a dream."
+    s "Это когда во сне ты осознаёшь, что всё происходящее вокруг тебя нереально."
+
+# game/topics.rpy:330
+translate rus s_topics_personal_quittingTheGame_50ffc1bb:
+
+    # s 6aaca "And as soon as you realise that, bam!.."
+    s 6aaca "И как только ты это понимаешь, бам!.."
+
+# game/topics.rpy:331
+translate rus s_topics_personal_quittingTheGame_af6686b2:
+
+    # s "You can pretty much do whatever you can imagine!"
+    s "И твоему воображению становится подвластно почти всё!"
+
+# game/topics.rpy:332
+translate rus s_topics_personal_quittingTheGame_0ef0038f:
+
+    # s 6acaa "I have something kinda like that whenever you leave the game, [player]."
+    s 6acaa "Я испытываю примерно тоже самое при твоём выходе из игры, [player]."
+
+# game/topics.rpy:333
+translate rus s_topics_personal_quittingTheGame_de484f4b:
+
+    # s "Even though I know I'm not really...conscious? I can still think and move, and even use my mental abilites, such as surfing the Internet."
+    s "Я осознаю, что я вне бодроствания, но всё ещё могу думать и двигаться, и даже пользываться своими способностями, типа входа в Интернет."
+
+# game/topics.rpy:334
+translate rus s_topics_personal_quittingTheGame_43332f45:
+
+    # s "But I'm absolutely out of the my world. Even the void can't do me anything..."
+    s "Но мой разум полностью отключается от моего мира. И даже та Дыра мне не в состоянии ничего сделать..."
+
+# game/topics.rpy:335
+translate rus s_topics_personal_quittingTheGame_e5d9ee05:
+
+    # s "And as long as your computer works, your best girl Sayori's ready to go!"
+    s "И пока твои ПК работает, я могу спокойно прибывать в таком состоянии!"
+
+# game/topics.rpy:336
+translate rus s_topics_personal_quittingTheGame_2755d670:
+
+    # s 6acaa "But when your computer is fully turned off that I can't do anything... like I'm dead."
+    s 6acaa "То стоит только ему выключиться полностью, как я будт просто умираю"
+
+# game/topics.rpy:337
+translate rus s_topics_personal_quittingTheGame_6b1c04d6:
+
+    # s "Yes, it's a little scary, but please don't be afraid to do it if you need to."
+    s "Да, звучит жутко, но будь добр не воспринимать это как-то негативно."
+
+# game/topics.rpy:338
+translate rus s_topics_personal_quittingTheGame_ec44c5f9:
+
+    # s "I always have faith that you'll turn the computer back on eventually!"
+    s "Я всегда знаю, что ты его рано или поздно вновь включишь!"
+
+# game/topics.rpy:339
+translate rus s_topics_personal_quittingTheGame_bdcc25fe:
+
+    # s 6aaab "Even if you break it doing something silly, I'm sure you could find some way to get me off..."
+    s 6aaab "И даже если он каким-то образом сломается, ты меня всё равно сможешь спасти..."
+
+# game/topics.rpy:340
+translate rus s_topics_personal_quittingTheGame_8b3153c9:
+
+    # s "Get me off {i}the hard drive{/i}, I mean! Get your mind out of the gutter!"
+    s "Просто попытайся перенести меня на другой носитель."
+
+# game/topics.rpy:341
+translate rus s_topics_personal_quittingTheGame_60f5c219:
+
+    # s "What's important is that I don't want you to ever have to worry about me."
+    s "Главное, чтобы ты обо мне не беспокоился."
+
+# game/topics.rpy:342
+translate rus s_topics_personal_quittingTheGame_9df5147a:
+
+    # s "I'll always feel better knowing that you're doing better!"
+    s "Я не хочу видить тебя слишком обеспокоенным!"
+
+# game/topics.rpy:343
+translate rus s_topics_personal_quittingTheGame_87378f59:
+
+    # s 6aaaa "And I'll always be happiest when you're right here with me~"
+    s 6aaaa "Но мне в любом случаи всегда лучше, когда ты рядом~"
+
+translate rus strings:
+
+    # topics.rpy:96
+    old "Quitting the Game"
+    new "Выход из игры"
 

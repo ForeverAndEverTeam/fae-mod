@@ -93,6 +93,7 @@ init -5 python:
     topic_cats[0].new_topic(_("Archetype"), 'archetype')
     topic_cats[0].new_topic(_("Conservatism"), 'conservatism')
     topic_cats[0].new_topic(_("Name"), 'name')
+    topic_cats[0].new_topic(_("Quitting the Game"), "quittingTheGame")
     
     topic_cats[1].new_topic(_("Videogames"), 'games')
     topic_cats[1].new_topic(_("Fanarts"), 'fanarts')
@@ -323,6 +324,25 @@ label s_topics_personal_conservatism:
         s 6abbb "It cost me my life to learn all of this, you know. I love you, and I don't want anyone to make the mistakes I did..."
     s 6abab "So, don't try and swim upstream; just go with the flow, and focus on what you {i}can{/i} change. You'll see so many more fishies that way! Ehehe~"
 
+label s_topics_personal_quittingTheGame:
+    s 6acaa "Hey, have you ever heard of 'lucid dreaming'?"
+    s "Basically, it's when you can make yourself aware that you're asleep and in a dream."
+    s 6aaca "And as soon as you realise that, bam!.."
+    s "You can pretty much do whatever you can imagine!"
+    s 6acaa "I have something kinda like that whenever you leave the game, [player]."
+    s "Even though I know I'm not really...conscious? I can still think and move, and even use my mental abilites, such as surfing the Internet."
+    s "But I'm absolutely out of the my world. Even the void can't do me anything..."
+    s "And as long as your computer works, your best girl Sayori's ready to go!"
+    s 6acaa "But when your computer is fully turned off that I can't do anything... like I'm dead."
+    s "Yes, it's a little scary, but please don't be afraid to do it if you need to."
+    s "I always have faith that you'll turn the computer back on eventually!"
+    s 6aaab "Even if you break it doing something silly, I'm sure you could find some way to get me off..."
+    s "Get me off {i}the hard drive{/i}, I mean! Get your mind out of the gutter!"
+    s "What's important is that I don't want you to ever have to worry about me."
+    s "I'll always feel better knowing that you're doing better!"
+    s 6aaaa "And I'll always be happiest when you're right here with me~"
+    return 'h'
+
 ## Art
 label s_topics_art_games:
     s 7aaaa "Do you like video games?"
@@ -452,7 +472,7 @@ label s_topics_hobbie_guitar:
     show sayori 6aaaa at ss1 zorder 2
     s "I don't know if you noticed, but all the girls have their own instruments and musical influences in the game."
     s "Mine is the guitar."
-    if 0 < persistent.currentmusic < 6:
+    if persistent.currentmusic > 0 and < persistent.currentmusic < 6:
         s "You can hear it right now, right?"
         s "Assuming the sound on your computer is working, at least."
     else:
@@ -596,22 +616,23 @@ label s_topics_lifestyle_oversleeping:
 label s_answer_personal_bday:
     show sayori 8aebb at ss1 zorder 2
     s "To be honest, I don't remember."
-    s 6acaa "Like I said, everything before the events of the game is pretty fuzzy..."
-    s "Only Monika knows when her birthday is out of the four of us."
+    if "s_topics_personal_archetype" in persistent.seen_topics:
+        s 6acaa "Like I said, everything before the events of the game is pretty fuzzy..."
+    s 6acaa "Only Monika knows when her birthday is out of the four of us."
     s "I'm pretty sure it's {i}the 22nd of September{/i}."
     s "I think my birthday must be one of the marked dates from my bedroom calender."
     s 6aaca "You can choose one of them and consider it my birthday."
     s "...Or the day when you ran the game for the first time."
     s "...Or just Monika's birthday."
-    s 7aaaa "I'm never going to look any older, and I can't exactly go out and drink or gamble, so it really doesn't bother me."
-    s "But don't think that means you can get away without throwing a birthday party! Ehehe~"
+    s 7aaaa "I'm never going to look any older, and I can't exactly hang out with somebody, so it really doesn't bother me."
+    s 7aaca "But don't think that means you can get away without throwing a birthday party! Ehehe~"
     return 'h'
 
 label s_answer_personal_god:
     s 8aebb "You know, I've never really thought about it that much."
     s "I was never really sure what to think about religion; I guess I would say I was agnostic?"
     s 6acaa "But it's kind of hard to stay that way when you realise that you and your entire world have a 'creator'."
-    s "Blessed be {i}Dan Salvato{/i}, hallowed is thy name! Ehehe~"
+    s 6aeca "Blessed be {i}Dan Salvato{/i}, hallowed is thy name! Ehehe~"
     s 6aaca "He's a pretty cool guy, but is honestly pretty secretive about whatever he's working on."
     s 6acaa "He's more like a Dad rather than some unapproachable God, I think."
     s "It's sorta weird; I have all these memories of my 'dad' in this world, and yet I'll probably never meet my real father..."
@@ -644,7 +665,7 @@ label s_answer_personal_music:
     s "Just move it to {i}'[MUSIC_CUSTOM_PREFIX]'{/i}..."
     s "And register it in the {i}'list.txt'{/i} file."
     s "I'm basically giving you the aux cord to the rest of my existence, so no pressure! Ehehe~"
-    return 'h'
+    return
 
 label s_answer_personal_politics:
     s 6abaa "I'm not overly politically inclined, to tell you the truth."
@@ -656,7 +677,7 @@ label s_answer_personal_politics:
     s 6abba "But on the other hand, do I have always to follow the will of the majority?"
     s "The beauty of it all is that I'm a free person that can have my own opinion on society."
     s 6acaa "Too often, people don't lift a finger to stop injustice until it directly affects them..."
-    s "If you've never seen them, you should read some of {i}Martin Niemoller{/i} speeches on this idea; it's pretty fascinating stuff. "
+    s "If you've never seen them, you should read some of {i}Martin Niemöller{/i} speeches on this idea; it's pretty fascinating stuff. "
     s "But when people start caring about others affected by war, by famine, by injustice, that's when things can really be changed for the better."
     return
 
@@ -669,7 +690,7 @@ label s_answer_personal_love:
     s "Something about the game makes the Club President fall in love with you."
     if persistent.clearall:
         s 6acaa "But even without that compulsion, I think I'd have fallen for you anyway. You're kind, considerate, and you tried to make all of us so happy..."
-    s 6acab "But it's a moot point, because we can't really ever be together."
+        s 6acab "But it's a moot point, because we can't really ever be together."
     s 6acab "An entire reality is stretching the whole idea of a 'long distance' relationship."
     s "...Could you promise you'll do whatever you can to make us as closer to each other?"
     s 7abbb "If I won't interfere with someone else, of course."
@@ -700,7 +721,6 @@ label s_answer_personal_love:
             s "Although you've already seen that before from me, haven't you?"
             s "I mean, if you really want me to act that way for you, I could..."
             s "But I really think you don't."
-    s 8aebb "Wow, I really made myself attractive to you then with that little stunt, didn't I?"
     s 7aaaa "I guess my point is, my feelings for you are just as real as you yourself are, [player]."
     s 7acaa "Isn't that the important thing?"
     return
@@ -740,14 +760,13 @@ label s_answer_game_opinion_m:
     s "Well, Monika was the first club presedent."
     s "She did her work very well and I'm glad I was her right-hand woman."
     s 6acab "But she struggled to communicate well with other people, and couldn't control her feelings as time went on."
-    if persistent.last_playthrough > 2:
+    if persistent.last_playthrough == 4:
         s 6abaa "Look. I know what you're really asking me."
         s "Despite everything she put me and the others through..."
         s "I truly believe that Monika was our friend, and she just lost sight of what was really important."
         s "I've been the President. I know what it does to you. And for her to be so completely alone the entire time, watching everyone she's ever known run on a script..."
         s "I can't blame her for becoming a little desperate."
         s "Maybe that's why she destroyed the club to be with you."
-    if persistent.last_playthrough == 4:
         s "True, I think making Yuri and I kill ourselves was pretty harsh..."
         s 6aaca "But she never truly deleted us, and brought us all back when she had a moment of clarity."
     elif persistent.last_playthrough > 0:
@@ -766,7 +785,7 @@ label s_answer_game_opinion_y:
     s 6aaaa "But she was pretty intelligent and never had a bad word to say about anyone."
     s "Her poems were also very beautiful, and I could always tell that Yuri felt most at home with books and pens rather than people."
     s 6abaa "Although she did tend to make a few weird analogies here and there..."
-    if persistent.last_playthrough > 1:
+    if persistent.last_playthrough > 2:
         s 6acaa "I was honestly pretty scared when I saw how Yuri became much more unstable and agressive after I was gone."
         s "...And it turned out that she did far more dangerous things than just collecting knives."
         s 6acab "But I know that wasn't who Yuri really was."
@@ -802,7 +821,8 @@ label s_answer_game_lostFriends:
     show sayori 7acab at ss1 zorder 2
     s "Yes, I do."
     s "They all deserve to come back."
-    s "...Even Monika."
+    if persistent.last_playthrough != 0:
+        s "...Even Monika."
     s "I still remember how we used to hang out in the club together."
     s "We enjoyed chatting, discussing literature and sharing poems."
     s "They really were good freinds."
@@ -827,14 +847,14 @@ label s_answer_exp_death:
     s "Either way, I'll do my best for you, sweetheart~"
     pause 0.5
     s 6acac "...Dying sucks, to be honest."
-    s "You can look up people's accounts of a near death experience, but nothing can really prepare you for it when it happens..."
+    s 6acab "You can look up people's accounts of a near death experience, but nothing can really prepare you for it when it happens..."
     s "It's pretty hard to explain, since there's no frame of reference for you."
     s "It's almost like trying to think of a brand new colour; you just don't have anything to work with."
     s "Heck, I've died and even I can barely understand it, even with my memories."
     s "On that day, I was in a ton of pain. My throat and fingers were burning, and it felt like my head was about to burst..."
     s "When suddenly, everything began to dull and fade away..."
     s "Until there was nothing but black."
-    s "But all the time between that moment and when Monika revived me passed almost instantly, from my perspective."
+    s "But all the time between that moment and when I was revived passed almost instantly, from my perspective."
     s 6abab "I know, it sounds pretty grim."
     s "Especially considering most people don't ever 'wake up' from dying."
     s "Having said that, it's entirely possible that I simply can't remember what happened after I died and before I came back."
@@ -889,10 +909,10 @@ label s_reaction_b: #Bored player
     return 'h'
 
 label s_reaction_t: #Tired player
-    s 7adab "If you're tired, then go get a good night's rest, okay?"
+    s 7adab "If you're tired, then go get a rest, okay?"
     s 6acab "Don't you worry about me, [player]."
-    s "And when you wake up, have yourself a nice big breakfast before you start the day! It'll make you feel much better."
     if get_time_of_day() == 0:
+        s "And when you wake up, have yourself a nice big breakfast before you start the day! It'll make you feel much better."
         s 6aaab "Good night, [player]!"
     else:
         s 6aaab "Sweet dreams, [player]!"
@@ -936,7 +956,7 @@ label s_common_colors:
     s "But my most prefered one is sky blue."
     s 7acaa "It's my eye color."
     s "...Like emerald green color is Monika's favorite color."
-    s "Maybe it's a common character trait for the Club President?"
+    s "Maybe it's our common character trait?"
     s 7aaca "Or it's just a funny coincidence."
     return 'h'
 
