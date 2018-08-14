@@ -49,8 +49,8 @@ image monika_room_highlight:
 
 image room_glitch = "images/cg/monika/monika_bg_glitch.png"
 
-image room_mask = LiveComposite((1280, 720), (0, 0), "mask_test", (0, 0), "mask_test2", xysize = (320,180), pos = (30,200))
-image room_mask2 = LiveComposite((1280, 720), (0, 0), "mask_test3", (0, 0), "mask_test4", xysize = (320,180), pos = (935,200))
+image rm = LiveComposite((1280, 720), (0, 0), "mask_test", (0, 0), "mask_test2", pos = (0,380), zoom = 0.25)
+image rm2 = LiveComposite((1280, 720), (0, 0), "mask_test3", (0, 0), "mask_test4", pos = (600,380), zoom = 0.25)
 
 image monika_room_static = "mod_assets/images/bg/spaceroom_bg.png"
 
@@ -146,8 +146,8 @@ init -8 python:
         else:
             renpy.show('mask_2', layer = 'bg')
             renpy.show('mask_3', layer = 'bg')
-            renpy.show('room_mask', layer = 'bg')
-            renpy.show('room_mask2', layer = 'bg')
+            renpy.show('rm', layer = 'bg')
+            renpy.show('rm2', layer = 'bg')
             renpy.show('monika_room', layer = 'bg')
             renpy.show('monika_room_highlight', layer = 'bg')
     def sroom_d():
