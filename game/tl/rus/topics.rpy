@@ -2251,7 +2251,7 @@ translate rus s_answer_personal_love_37eea5a6:
 translate rus s_answer_personal_love_f124c253:
 
     # s "Something about the game makes the Club President fall in love with you."
-    s "Будто что в этой игре заставляет любого Президента Клуба влюбляться в тебя."
+    s "Будто что-то в этой игре заставляет любого Президента Клуба влюбляться в тебя."
 
 # game/topics.rpy:662
 translate rus s_answer_personal_love_224909c1:
@@ -2269,7 +2269,7 @@ translate rus s_answer_personal_love_95399f79:
 translate rus s_answer_personal_love_76e711a4:
 
     # s 6acab "An entire reality is stretching the whole idea of a 'long distance' relationship."
-    s 6acab "Весь смысл бытья Президента в этом мире — быть с тобой, так сказать, наедине с тобой и одновременно вдали от тебя."
+    s 6acab "Весь смысл бытья Президента в этом мире — быть, так сказать, наедине с тобой и одновременно вдали от тебя."
 
 # game/topics.rpy:665
 translate rus s_answer_personal_love_bd81ca9a:
