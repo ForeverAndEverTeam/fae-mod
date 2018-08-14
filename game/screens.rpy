@@ -662,7 +662,8 @@ screen game_menu(title, scroll=None):
                     transclude
 
     use navigation
-
+    
+    on "shoĝ" action SetDict(globals(), 'from_menu', False)
     on "hide" action SetDict(globals(), 'from_menu', True)
     
     textbutton _("Return"):
