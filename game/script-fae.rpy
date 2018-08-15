@@ -2,10 +2,9 @@ default persistent.currentmusic = 0
 default persistent.playergender = None # False = male, True = female, None = unknown/other
 default persistent.playerbdate = get_now().date()
 
-default update_bg = False
-default from_menu = False
-
 init python:
+    update_bg = False
+    from_menu = False
     
     config.developer = True # I'm a god of this world too.
     
