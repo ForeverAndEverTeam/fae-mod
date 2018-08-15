@@ -3284,7 +3284,7 @@ translate rus s_reaction_a_3940ef60:
 translate rus s_common_colors_5823bf8b:
 
     # s "Well, I have several favorite colors."
-    s "Ну, у меня их аш нексколько."
+    s "Ну, у меня их аж несколько."
 
 # game/topics.rpy:922
 translate rus s_common_colors_0c34f955:
@@ -3308,7 +3308,7 @@ translate rus s_common_colors_dbabba7b:
 translate rus s_common_colors_80ef9d0d:
 
     # s "Its coral hue is my natural hair color."
-    s "У меня волосы его коралового отттенка."
+    s "У меня волосы его коралового оттенка."
 
 # game/topics.rpy:926
 translate rus s_common_colors_67d18f07:
