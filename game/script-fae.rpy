@@ -194,7 +194,6 @@ label s_autoload:
             s " For example, you can keep the background in here static; it'll be much easier on your computer if it's lagging at all..."
             s "And I wouldn't want you to miss a second with me, would I?"
             s "They also put in a checker board." 
-            s 6aaaa "I like checkers so much! Especially its international variant."
             s "It has pretty simple rules but it's hard to win."
             s 7aaaa "If you don't want to play, we can just chat some more!"
             s "Now, let me think of a good topic..."
