@@ -118,7 +118,7 @@ translate rus s_topics_personal_depression_2dcc1fd4:
 translate rus s_topics_personal_depression_57dbfa72:
 
     # s "So I did my best not to show my real feelings."
-    s "Проэтому я скрывала свои чувства до последнего."
+    s "Поэтому я скрывала свои чувства до последнего."
 
 # game/topics.rpy:206
 translate rus s_topics_personal_depression_27169100:
@@ -130,7 +130,7 @@ translate rus s_topics_personal_depression_27169100:
 translate rus s_topics_personal_depression_6b37555a:
 
     # s "...Like something was stealing the rest of the sunshine in my head."
-    s "...Будто что окончательно высасало весь свет из моей головы."
+    s "...Будто что-то окончательно забрало весь свет из моей головы."
 
 # game/topics.rpy:208
 translate rus s_topics_personal_depression_13d15196:
@@ -541,7 +541,7 @@ translate rus s_topics_personal_conservatism_d12c24d8:
 translate rus s_topics_personal_conservatism_d5a4902d:
 
     # s 6abba "Although nostalgia aside, it might have been true for me."
-    s 6abba "И излишняя склонность к настольгии была когда,."
+    s 6abba "И излишняя склонность к настольгии была когда-то и у меня."
 
 # game/topics.rpy:300
 translate rus s_topics_personal_conservatism_4b601b54:
@@ -565,7 +565,7 @@ translate rus s_topics_personal_conservatism_f95741e0:
 translate rus s_topics_personal_conservatism_eae47c4a:
 
     # s 6acab "Constant despair and fear is no way to live, take it from me."
-    s 6acab "Кругом было лишь отчаянеие и страх."
+    s 6acab "Кругом были лишь отчаяние и страх."
 
 # game/topics.rpy:304
 translate rus s_topics_personal_conservatism_6b7f9e58:
@@ -589,19 +589,19 @@ translate rus s_topics_personal_conservatism_7abc3033:
 translate rus s_topics_personal_conservatism_d212e2da:
 
     # s "...Are you afraid of losing anything precious to you, [player]?"
-    s "...Ты же не боишься потять всё, что тебе дорого, [player]?"
+    s "...Ты же ведь не чересчур боишься потярять всё, что тебе дорого, [player]?"
 
 # game/topics.rpy:308
 translate rus s_topics_personal_conservatism_5b58c7e0:
 
     # s 6aaca "There's plenty of good change to be had. For example, technology can make people's lives easier, or even allow them to live where they may not have even a little bit earlier."
-    s 6aaca "А ведь нас ждёт много приятных перемен. К примеру, технологии могут упростить людской быт, или даже позволить людям селиться в совершенно новых местах, где раньше они не могли."
+    s 6aaca "А ведь нас ждёт много приятных перемен. К примеру, технологии упрощают быт людей, и даже позволяют им селиться в тех местах, где раньше они не могли жить."
 
 # game/topics.rpy:309
 translate rus s_topics_personal_conservatism_9ccf9a49:
 
     # s 6acaa "There's nothing wrong with looking back sometimes, or remembering the past fondly..."
-    s 6acaa "Нет ничего плохого в том, чтобы оглянуться назад, или в детальном изучении прошлого..."
+    s 6acaa "Нет ничего плохого в том, чтобы оглянуться назад, или детально изучить прошлое..."
 
 # game/topics.rpy:310
 translate rus s_topics_personal_conservatism_2cee7447:
@@ -613,13 +613,13 @@ translate rus s_topics_personal_conservatism_2cee7447:
 translate rus s_topics_personal_conservatism_b732d359:
 
     # s "It's like a maze: you might think you're going the wrong way and want to go back to the beginning when things were easier, but it might only {i}seem{/i} to be wrong..."
-    s "Это как в лабиринте: тебе может казаться, что ты на прямом пути к тупику, поэтому ты хочешь вернуться назад, когда всё было куда проще, но твой путь может {i}лишь казаться{/i} неверным..."
+    s "Это как в лабиринте: тебе казатся, что ты на прямом пути к тупику, поэтому возращаешься назад, когда всё было куда проще, но этот путь может {i}лишь казаться{/i} неверным..."
 
 # game/topics.rpy:312
 translate rus s_topics_personal_conservatism_b9b5ca44:
 
     # s "It's just all part of being human, I guess."
-    s "По моему, всё это — лишь часть человеческой природы."
+    s "Данное чувство, скорее, — лишь часть человеческой природы."
 
 # game/topics.rpy:313
 translate rus s_topics_personal_conservatism_f7a96e83:
@@ -627,11 +627,11 @@ translate rus s_topics_personal_conservatism_f7a96e83:
     # s 6abbb "It cost me my life to learn all of this, you know. I love you, and I don't want anyone to make the mistakes I did..."
     s 6abbb "В кончном счёте, лично я в этом «лабиринте» так и сгинула, не найдя выхода. И я не хочу, чтобы кто-то ещё повторил мою судьбу..."
 
-# game/topics.rpy:314
-translate rus s_topics_personal_conservatism_0bbcff4e:
+# game/topics.rpy:325
+translate rus s_topics_personal_conservatism_b3b6da42:
 
-    # s 6abab "So, don't try and swim upstream; just go with the flow, and focus on what you {i}can{/i} change. You'll see so many more fishies that way! Ehehe~"
-    s 6abab "Так что, даже не пытайся плыть против течения. Плыви по нему и сконцентрируйся на том, что {i}именно в твоих силах{/i} изменить. Так, твой улов будет куда большим! Хе-хе~"
+    # s 6aaca "So, don't try and swim upstream; just go with the flow, and focus on what you {i}can{/i} change. You'll see so many more fishies that way! Ehehe~"
+    s 6aaca "Так что, даже не пытайся плыть против течения. Плыви по нему и сконцентрируйся на том, что {i}именно в твоих силах{/i} изменить. Так, твой улов будет куда большим! Хе-хе~"
 
 # game/topics.rpy:318
 translate rus s_topics_art_games_a25de04a:
@@ -3308,7 +3308,7 @@ translate rus s_common_colors_dbabba7b:
 translate rus s_common_colors_80ef9d0d:
 
     # s "Its coral hue is my natural hair color."
-    s "У меня волосы его коралового оттенка."
+    s "У меня волосы его коралового отттенка."
 
 # game/topics.rpy:926
 translate rus s_common_colors_67d18f07:
@@ -3794,4 +3794,3 @@ translate rus strings:
     # topics.rpy:96
     old "Quitting the Game"
     new "Выход из игры"
-

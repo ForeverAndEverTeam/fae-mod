@@ -322,8 +322,9 @@ label s_topics_personal_conservatism:
     s "It's just all part of being human, I guess."
     if persistent.last_playthrough > 0:
         s 6abbb "It cost me my life to learn all of this, you know. I love you, and I don't want anyone to make the mistakes I did..."
-    s 6abab "So, don't try and swim upstream; just go with the flow, and focus on what you {i}can{/i} change. You'll see so many more fishies that way! Ehehe~"
-
+    s 6aaca "So, don't try and swim upstream; just go with the flow, and focus on what you {i}can{/i} change. You'll see so many more fishies that way! Ehehe~"
+    return
+    
 label s_topics_personal_quittingTheGame:
     s 6acaa "Hey, have you ever heard of 'lucid dreaming'?"
     s "Basically, it's when you can make yourself aware that you're asleep and in a dream."
