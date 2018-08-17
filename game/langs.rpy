@@ -44,7 +44,7 @@ init -10 python:
         else:
             return "sayori_text"
     
-    if True:
+    try:
         lang = None
         
         if renpy.windows:
@@ -67,3 +67,5 @@ init -10 python:
             if l.unix_code == lang:
                 config.default_language = l.code
                 break
+    except:
+        pass
