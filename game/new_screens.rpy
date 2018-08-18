@@ -253,7 +253,7 @@ screen feat_ui():
         align (0.01, 0.99)
         spacing 5
         
-        if persistent.playthrough > 5:
+        if persistent.playthrough > 5 and justIsSitting:
             textbutton _("Talk (T)") xpadding 0 xsize 200 keysym 't' action Jump("s_talkmenu")
             textbutton _("Music (M)") xpadding 0 xsize 200 keysym 'm' action Jump("s_musicmenu")
             textbutton _("Play (P)") xpadding 0 xsize 200 keysym 'p' action Jump("s_gamemenu")
