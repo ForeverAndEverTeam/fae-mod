@@ -30,50 +30,58 @@ screen poem(currentpoem, paper="paper"):
             null height 100
     vbar value YScrollValue(viewport="vp") style "poem_vbar"
 
+## This file is for overriding specific declarations from DDLC
+## Use this if you want to change a few variables, but don't want
+## to replace entire script files that are otherwise fine.
+
 ## Normal overrides
 ## These overrides happen after any of the normal init blocks in scripts.
 ## Use these to change variables on screens, effects, and the like.
+
 init 10 python:
     # Override the poems (to make them translatable)
-    if cur_lang().code == "epo":
+    
+    if cur_lang().code == "rus":
+    
         poem_s1 = Poem(
         author = "sayori",
-        title = "Kara Sumlun'",
-        text = """\
-La manier' de via ellitigo
-Fartigas min, ke mi mankegas al vi.
-Teneraj kisoj de vi en mian frunton
-Vekas kuŝantan min ĉiumatene.
-
-Ĉu volas fidi min forigi la nubaĉojn
-Aŭ nur promeni kun mi ekster mia hejm'?
-Pro ke la ĉiel' nun estas tia klara, 
-Mi nun sekrete volas diri, ke mi fidas vin.
-
-Se vi ne estus nun, do mi dum ĉiam dormus.
-Sed ne, ne estas mi freneza. 
-
-Mi nur ankoraŭ ne matenmanĝis."""
-        )
-    elif cur_lang().code == "rus":
-        poem_s1 = Poem(
-        author = "sayori",
-        title = "Дорогой рассвет",
-        text = """\
-Лучами бьёшься ты мне сквозь веки,
+        title = _("Дорогой рассвет"),
+        text = _("""\
+Лучами бьёшься ты сквозь веки,
 Как будто каждое утро ждёшь меня.
-Меня целуешь прямо в лобик
+Меня целуешь прямо у лобик
 Сонливую, будя меня.
 
-Хотелось ли тебе со мной сыграть?
+Хотелось ли тебе со мной играть?
 Или со мной развеять тучи?
 От неба втайне хочется сказать:
 Тебе доверяюсь при любом я случаи.
 
-Если б не ты, я бы спала,
+Если б не ты — я бы спала,
 Спала бы сном я вечным.
-Нет, я — не псих, я голодна.
-На завтрак наложите есть мне."""
+Нет, я не больна, я голодна.
+На завтрак наложите есть мне.""")
+        )
+    elif cur_lang().code == "epo":
+    
+        poem_s1 = Poem(
+        author = "sayori",
+        title = _("Kara Sunlum'"),
+        text = _("""\
+Vi lumas tra miaj palpebroj.
+Ĝi min fartigas, ke mi mankis al vi.
+Tenere kisas vi na mia frunto,
+Kaj tiel vi min ellitigas.
+
+Ĉu volas fidi min forigi la nubaĉojn
+Aŭ nur promeni kun mi ekster mia hejm'?
+Pro ke la ĉiel' nun estas tiel klara, 
+Mi nun sekrete volas danki vin.
+
+Se vi ne estus nun, do mi dum ĉiam dormus.
+Sed ne, ne estas mi freneza. 
+
+Mi nur ankoraŭ ne matenmanĝis.""")
         )
     
 

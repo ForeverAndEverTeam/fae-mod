@@ -9,3 +9,6 @@ transform ss2: #Left position
         tinstant(480, 1)
     on replace:
         tcommon(480, 1) 
+
+transform ss1i: #Defualt position (instant)
+    tinstant(620, 1)

@@ -1,140 +1,179 @@
-﻿# TODO: Translation updated at 2018-08-17 00:20
+﻿# TODO: Translation updated at 2018-08-19 16:00
 
-# game/mg_checkers.rpy:333
-translate rus mg_checkers_s_comment_42001c4e:
+# game/mg_checkers.rpy:708
+translate rus mg_checkers_s_comment_2c9002d2:
 
-    # s 2q "Okay, I win this game."
-    s 2q "Okay, I win this game."
+    # s 6aaca "Okay, I win this game."
+    s 6aaca "Ладно, в этот раз моя взяла."
 
-# game/mg_checkers.rpy:334
+# game/mg_checkers.rpy:709
 translate rus mg_checkers_s_comment_4e02270b:
 
     # s "You should have a better strategy next time."
-    s "You should have a better strategy next time."
+    s "Просто попробуй улучшить свою тактику к следующей игре."
 
-# game/mg_checkers.rpy:336
-translate rus mg_checkers_s_comment_cf3eef3c:
+# game/mg_checkers.rpy:711
+translate rus mg_checkers_s_comment_5f35ed09:
 
-    # s 2r "Three in a row!"
-    s 2r "Three in a row!"
+    # s 6acaa "Uh, you have no more turns."
+    s 6acaa "У, кажется, тебе больше нечем ходить."
 
-# game/mg_checkers.rpy:337
-translate rus mg_checkers_s_comment_6d99833d:
+# game/mg_checkers.rpy:712
+translate rus mg_checkers_s_comment_ec35b575:
 
-    # s 2a "Just work on your tactics and try again."
-    s 2a "Just work on your tactics and try again."
+    # s "Just work on your tactics and try again."
+    s "Просто попробуй улучшить свою тактику к следующему разу."
 
-# game/mg_checkers.rpy:339
-translate rus mg_checkers_s_comment_3e81d1f2:
+# game/mg_checkers.rpy:714
+translate rus mg_checkers_s_comment_4fb3f9e1:
 
-    # s 2e "Don't worry!"
-    s 2e "Don't worry!"
+    # s 6acaa "Don't worry!"
+    s 6aaca "Да ладно!"
 
-# game/mg_checkers.rpy:340
+# game/mg_checkers.rpy:715
 translate rus mg_checkers_s_comment_29120090:
 
     # s "Maybe you'll win next time."
-    s "Maybe you'll win next time."
+    s "Выигрешь в следующий раз."
 
-# game/mg_checkers.rpy:344
-translate rus mg_checkers_s_comment_c9e6c07d:
+# game/mg_checkers.rpy:719
+translate rus mg_checkers_s_comment_431df6aa:
 
-    # s 5b "Okay, you win!"
-    s 5b "Okay, you win!"
+    # s 6aaca "Okay, you win!"
+    s 6aaca "Ладно, ты меня победил!"
 
-# game/mg_checkers.rpy:345
-translate rus mg_checkers_s_comment_63b23100:
+# game/mg_checkers.rpy:720
+translate rus mg_checkers_s_comment_477dbdb1:
 
-    # s 5a "Next time I'll be more crafty."
-    s 5a "Next time I'll be more crafty."
+    # s 6aeca "Next time I'll be more crafty."
+    s 6aeca "Впредь, буду хитрей."
 
-# game/mg_checkers.rpy:347
-translate rus mg_checkers_s_comment_a68f46ca:
+# game/mg_checkers.rpy:722
+translate rus mg_checkers_s_comment_feb6010b:
 
-    # s 1n "Oh, you've just got three in a row."
-    s 1n "Oh, you've just got three in a row."
+    # s 6aebb "You have just smashed all my army."
+    s 6aebb "Ты буквально разбил моё войско."
 
-# game/mg_checkers.rpy:348
-translate rus mg_checkers_s_comment_3e22e250:
+# game/mg_checkers.rpy:723
+translate rus mg_checkers_s_comment_3aeb7cf7:
 
-    # s 1l "You seem to be more clever than me."
-    s 1l "You seem to be more clever than me."
+    # s 6aaaa "You seem to be more clever than me."
+    s 6aaaa "А ты по-смышлённей меня."
 
-# game/mg_checkers.rpy:349
+# game/mg_checkers.rpy:724
 translate rus mg_checkers_s_comment_532a0df9:
 
     # s "Next time I'll try harder."
-    s "Next time I'll try harder."
+    s 6acaa "Но не надейся на моё поражение в следующей игре."
 
-# game/mg_checkers.rpy:353
-translate rus mg_checkers_s_comment_05b487b6:
+# game/mg_checkers.rpy:728
+translate rus mg_checkers_s_comment_a1eb6ee3:
 
-    # s 1k "Oh, the board is full."
-    s 1k "Oh, the board is full."
+    # s 6acaa "This battle ended up without any result..."
+    s 6acaa "Этот бой оказался безрузльтатым..."
 
-# game/mg_checkers.rpy:354
-translate rus mg_checkers_s_comment_ece20f36:
+# game/mg_checkers.rpy:729
+translate rus mg_checkers_s_comment_b1401dd5:
 
-    # s "And no one got three in a row."
-    s "And no one got three in a row."
+    # s "Despite the talent of both the commanders."
+    s "Даже несмотря на талантливость обоих полководцев."
 
-# game/mg_checkers.rpy:355
-translate rus mg_checkers_s_comment_d0db50f9:
+# game/mg_checkers.rpy:730
+translate rus mg_checkers_s_comment_39044114:
 
-    # s "Let's just try again."
-    s "Let's just try again."
+    # s "But the war seems to go on, doesn't it?"
+    s "Но война ещё не закончена, так ведь?"
 
-# game/mg_checkers.rpy:357
-translate rus mg_checkers_s_comment_2ab8610c:
+# game/mg_checkers.rpy:732
+translate rus mg_checkers_s_comment_840ea41f:
 
-    # s 4q "Don't worry!"
-    s 4q "Don't worry!"
+    # s 6acaa "I'm surprised as much as you are."
+    s 6acaa "Я удивлена не меньше тебя."
 
-# game/mg_checkers.rpy:358
-translate rus mg_checkers_s_comment_74ea3341:
+# game/mg_checkers.rpy:733
+translate rus mg_checkers_s_comment_0da9df2c:
 
-    # s "Tic-Tac-Toe games often end up in a draw."
-    s "Tic-Tac-Toe games often end up in a draw."
+    # s "So, let's just share the point."
+    s 6aebb "Но ведь мы оба получим по пол-очку, не так ли?"
 
-# game/mg_checkers.rpy:359
-translate rus mg_checkers_s_comment_aa3ca34f:
+# game/mg_checkers.rpy:735
+translate rus mg_checkers_s_comment_f7588d42:
 
-    # s "Maybe there will be a winner in the next game."
-    s "Maybe there will be a winner in the next game."
+    # s 6acab "If checkers is a battle simulator, than draw game is the worse game!"
+    s 6acab "А ведь если так посудить, ничья — это наихудший исход шашек!"
+    s "Шашки — это же симулятор сражения, ведь так?"
 
-# game/mg_checkers.rpy:363
-translate rus mg_checkers_s_comment_375167e8:
+# game/mg_checkers.rpy:736
+translate rus mg_checkers_s_comment_21a4ac12:
 
-    # s 4o "Are you giving up?"
-    s 4o "Are you giving up?"
+    # s "Because so much people died but their sacrifice is absolutely vain after all."
+    s "И получается, куча людей только что погибло абсолютно за зря."
 
-# game/mg_checkers.rpy:364
-translate rus mg_checkers_s_comment_f6cb1c46:
+# game/mg_checkers.rpy:737
+translate rus mg_checkers_s_comment_f84fb72f:
 
-    # s 4c "Then we'll start again, but I'll get a point for this round."
-    s 4c "Then we'll start again, but I'll get a point for this round."
+    # s "But maybe, the next one won't be so."
+    s "Но я надеюсь, что в следующей игре такого не будет."
 
-# game/mg_checkers.rpy:366
-translate rus mg_checkers_s_comment_e6e4b3f2:
+# game/mg_checkers.rpy:741
+translate rus mg_checkers_s_comment_fec432e6:
 
-    # s 3g "What's up, [player]?"
-    s 3g "What's up, [player]?"
+    # s 6acab "Are you giving up?"
+    s 6acab "Ты уже сдаёшься?"
 
-# game/mg_checkers.rpy:367
-translate rus mg_checkers_s_comment_7dceabf0:
+# game/mg_checkers.rpy:742
+translate rus mg_checkers_s_comment_52101cb6:
 
-    # s "Okay, I'll restart the game..."
-    s "Okay, I'll restart the game..."
+    # s 6aaaa "Then we'll start again, but I'll get a point for this game."
+    s 6aaaa "Ладно, начнём по новой, но очко будет полностью моим."
 
-# game/mg_checkers.rpy:368
-translate rus mg_checkers_s_comment_b6c1f00a:
+# game/mg_checkers.rpy:744
+translate rus mg_checkers_s_comment_660b9166:
 
-    # s 3r "But I'll be this round's winner."
-    s 3r "But I'll be this round's winner."
+    # s 6acaa "What's up, [player]?"
+    s 6acaa "Что-то не так, [player]?"
+
+# game/mg_checkers.rpy:745
+translate rus mg_checkers_s_comment_6168d080:
+
+    # s "Do you think, you'll lose?"
+    s "Ты боишься, что ты проиграешь?"
+
+# game/mg_checkers.rpy:746
+translate rus mg_checkers_s_comment_277f2651:
+
+    # s 6aaca "Or you just want to do a honorable thing?"
+    s 6aaca "Или ты просто хотел мне так поддаться?"
+
+# game/mg_checkers.rpy:747
+translate rus mg_checkers_s_comment_039320d6:
+
+    # s 6acaa "Anyway, according to the game rules, you lose this game."
+    s 6acaa "В любом случаи, по правилам игры, ты уже этот бой проиграл."
+
+# game/mg_checkers.rpy:748
+translate rus mg_checkers_s_comment_3d55f5cd:
+
+    # s "But maybe, you'll will win me next time."
+    s "Но может, тебе повезёт в следующий раз."
 
 translate rus strings:
 
-    # mg_checkers.rpy:45
+    # mg_checkers.rpy:50
     old "Checkers"
-    new "Checkers"
+    new "Шашки"
+
+# TODO: Translation updated at 2018-08-19 16:55
+
+# game/mg_checkers.rpy:763
+translate rus mg_checkers_s_comment_97f3749a:
+
+    # s 8abaa "Don't you think, that this game is going to be endless?"
+    s 8abaa "Мне кажется, ты мы так можем хоть до бесконечности играть?"
+
+# game/mg_checkers.rpy:764
+translate rus mg_checkers_s_comment_d0415c01:
+
+    # s "I think you should take a draw, shouldn't you?" nointeract
+    s "Может, возмёшь ничью?" nointeract
 

@@ -264,7 +264,7 @@ label mg_ttt_s_turn:
 label mg_ttt_quit:
     hide screen mg_ttt_scr
     hide sayori
-    $show_s_mood(ss2)
+    $show_s_mood(ss1)
     with dissolve
     python:
         justIsSitting = True

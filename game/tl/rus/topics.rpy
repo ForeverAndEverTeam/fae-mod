@@ -637,7 +637,7 @@ translate rus s_topics_personal_conservatism_b3b6da42:
 translate rus s_topics_art_games_a25de04a:
 
     # s 7aaaa "Do you like video games?"
-    s 7aaaa "Эй, а ты любишь видеоигры?"
+    s 7aaaa "Слушай, а ты любишь видеоигры?"
 
 # game/topics.rpy:319
 translate rus s_topics_art_games_7f1d5ff3:
@@ -673,7 +673,7 @@ translate rus s_topics_art_games_c0bdd968:
 translate rus s_topics_art_games_4e6944d4:
 
     # s "It's just a really wholesome way to enjoy yourself and connect with people you care about."
-    s "Это действительно неплохой способ развлечься не только одному, они с близкими тебе людьми."
+    s "Это действительно неплохой способ развлечься не только одному, но с близкими тебе людьми."
 
 # game/topics.rpy:325
 translate rus s_topics_art_games_43010ac2:
@@ -3697,7 +3697,7 @@ translate rus strings:
 translate rus s_topics_personal_quittingTheGame_2cafac13:
 
     # s 6acaa "Hey, have you ever heard of 'lucid dreaming'?"
-    s 6acaa "Эй, а ты слышал об осознаных сноведениях?"
+    s 6acaa "Эй, а ты знаешь об осознаных сноведениях?"
 
 # game/topics.rpy:329
 translate rus s_topics_personal_quittingTheGame_3549cdc3:
@@ -3745,7 +3745,7 @@ translate rus s_topics_personal_quittingTheGame_e5d9ee05:
 translate rus s_topics_personal_quittingTheGame_2755d670:
 
     # s 6acaa "But when your computer is fully turned off that I can't do anything... like I'm dead."
-    s 6acaa "То стоит только ему выключиться полностью, как я будт просто умираю"
+    s 6acaa "То стоит только ему выключиться полностью, как я будто просто умираю."
 
 # game/topics.rpy:337
 translate rus s_topics_personal_quittingTheGame_6b1c04d6:
@@ -3763,7 +3763,7 @@ translate rus s_topics_personal_quittingTheGame_ec44c5f9:
 translate rus s_topics_personal_quittingTheGame_bdcc25fe:
 
     # s 6aaab "Even if you break it doing something silly, I'm sure you could find some way to get me off..."
-    s 6aaab "И даже если он каким-то образом сломается, ты меня всё равно сможешь спасти..."
+    s 6aaab "И даже если он каким-то образом сломается, ты меня всё равно сможешь спасти, ведь так?"
 
 # game/topics.rpy:340
 translate rus s_topics_personal_quittingTheGame_8b3153c9:
@@ -3775,13 +3775,19 @@ translate rus s_topics_personal_quittingTheGame_8b3153c9:
 translate rus s_topics_personal_quittingTheGame_60f5c219:
 
     # s "What's important is that I don't want you to ever have to worry about me."
-    s "Главное, чтобы ты обо мне не беспокоился."
+    if gender:
+        s "Главное, чтобы ты обо мне не беспокоилась."
+    else:
+        s "Главное, чтобы ты обо мне не беспокоился."
 
 # game/topics.rpy:342
 translate rus s_topics_personal_quittingTheGame_9df5147a:
 
     # s "I'll always feel better knowing that you're doing better!"
-    s "Я не хочу видить тебя слишком обеспокоенным!"
+    if gender:
+        s "Я не хочу видить тебя слишком обеспокоенной!"
+    else:
+        s "Я не хочу видить тебя слишком обеспокоенным!"
 
 # game/topics.rpy:343
 translate rus s_topics_personal_quittingTheGame_87378f59:
