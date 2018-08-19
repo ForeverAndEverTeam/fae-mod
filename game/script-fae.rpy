@@ -6,7 +6,7 @@ init python:
     update_bg = False
     from_menu = False
     
-    config.developer = True # I'm a god of this world too.
+    #config.developer = True # I'm a god of this world too.
     
     def periodic_callback():
         global update_bg, from_menu
