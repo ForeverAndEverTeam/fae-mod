@@ -89,7 +89,6 @@ init python:
             if self.preparation:
                 self.preparation(self, *args, **kwargs)
             justIsSitting = False
-            renpy.show("sayori 6aaaa", at_list = [ss1i])
             if self.label and not kwargs.get("restart"):
                 renpy.call_in_new_context(self.label)
         

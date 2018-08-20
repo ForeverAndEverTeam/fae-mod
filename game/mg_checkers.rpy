@@ -411,7 +411,7 @@ init 10 python:
                 if p & 1:
                     if p & 2 != x & 2:
                         if shifts[(i + 2) % 4] and board[shifts[(i + 2) % 4][0]] & 1 == 0:
-                            return eval - 25
+                            return eval - 15
                     else:
                         eval += 5
                         if shifts[(i + 2) % 4] and board[shifts[(i + 2) % 4][0]] & 2 == x & 2:
@@ -707,7 +707,7 @@ screen mg_checkers_scr():
 
 label mg_checkers:
     $justIsSitting = False
-    show sayori 6aaaa at ss1
+    show sayori 6aaaa at ss1i
     call screen mg_checkers_scr() nopredict
     return
 
