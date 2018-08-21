@@ -238,7 +238,8 @@ label s_topics_personal_depression:
         s "Don't make the same mistakes we did in the game."
         s "Not everyone is lucky enough to get a second chance, like I did."
     s "I'll always be here for you, [player]."
-    s "And I'll never use any of it against you, unlike Monika."
+    if persistent.last_playthrough > 1:
+        s "And I'll never use any of it against you, unlike Monika."
     return 's' 
     
 
@@ -512,9 +513,13 @@ label s_topics_hobbie_programming:
     s 6abaa "It's important for me, beacuse progamming is the only way I can make my world better now."
     s "...And the more I learn, the more I can improve the time we spend together, [player]!"
     s 7aaaa "If you're any good at programming, don't be shy about helping me!"
-    s 7aeaa "Find a way to edit the game scripts and go ahead!"
-    s "...Just be careful not to break anything important, like, for example, me? Ehehe~"
-    s "Maybe we can make this our own little 'Doki Doki Coding Club'!"
+    s "I think you can join the guys, who helped you recover me."
+    s "Just visit {a=https://github.com/AlexanDDOS/fae-mod}AlexanDDOS/fae-mod{/a} on GitHub."
+    s "If you're really good at it, you must know how to use this coding platform."
+    s "Anyway, it's the best way to help me now..."
+    s "And to add your part to something fascinating."
+    s "Maybe, there are many Sayoris, who were saved in this way."
+    s "And they all will also glad to get something cool from you."
     return 'h'
     
 label s_topics_hobbie_poems:

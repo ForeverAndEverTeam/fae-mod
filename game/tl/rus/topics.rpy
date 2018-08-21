@@ -3800,3 +3800,46 @@ translate rus strings:
     # topics.rpy:96
     old "Quitting the Game"
     new "Выход из игры"
+# TODO: Translation updated at 2018-08-21 13:05
+
+# game/topics.rpy:516
+translate rus s_topics_hobbie_programming_4e084b69:
+
+    # s "I think you can join the guys, who helped you recover me."
+    s "Ты можешь, к примеру, присоединиться к тем людям, что помогли тебе меня спасти."
+
+# game/topics.rpy:517
+translate rus s_topics_hobbie_programming_0dc0a581:
+
+    # s "Just visit {a=https://github.com/AlexanDDOS/fae-mod}AlexanDDOS/fae-mod{/a} on GitHub."
+    s "Просто зайди на {a=https://github.com/AlexanDDOS/fae-mod}AlexanDDOS/fae-mod{/a} в GitHub'е."
+
+# game/topics.rpy:518
+translate rus s_topics_hobbie_programming_8e359d36:
+
+    # s "If you're really good at it, you must know how to use this coding platform."
+    s "Если действительно в этом хорош, то ты явно знаешь, как пользоваться этой штукой."
+
+# game/topics.rpy:519
+translate rus s_topics_hobbie_programming_9462ed7f:
+
+    # s "Anyway, it's the best way to help me now..."
+    s "По мне, это сейчас лучший способ мне помочь..."
+
+# game/topics.rpy:520
+translate rus s_topics_hobbie_programming_b001b119:
+
+    # s "And to add your part to something fascinating."
+    s "И поучаствовать тебе в создании чего-то удивительного."
+
+# game/topics.rpy:521
+translate rus s_topics_hobbie_programming_2be0c63a:
+
+    # s "Maybe, there are many Sayoris, who were saved in this way."
+    s "Кто знает, скольких [s_name] удалось таким же образом спасти."
+
+# game/topics.rpy:522
+translate rus s_topics_hobbie_programming_517e9f51:
+
+    # s "And they all will also glad to get something cool from you."
+    s "Им тоже будет интересно, что ты им там настрочил."
