@@ -105,6 +105,8 @@ init -10 python:
     greetings.append(Greeting("s_greeting_2"))
     greetings.append(Greeting("s_greeting_3"), 0.1)
     greetings.append(Greeting("s_greeting_4"))
+    greetings.append(Greeting("s_greeting_5"))
+    greetings.append(Greeting("s_greeting_6"))
      
     
     first_greeting = "s_greeting_first" #Greeting label, called in the first meeting of the day. Gets the current day time as an argument. 
@@ -153,8 +155,8 @@ label s_greeting_3: #Greeting in a random mod langauge expecting the current
     return
 
 label s_greeting_3_eng:
-    s "Hello, darling! {#Don't translate this string from English!}"
-    s 6aeca "I'm glad to see you're back. {#And this one too}"
+    s "Hello, darling!{#Don't translate this string from English!}"
+    s 6aeca "I'm glad to see you're back.{#And this one too}"
     pause 0.5
     s 6aebb "I'm sorry, if you haven't understand me."
     s 6aaaa "I just revise my English."
@@ -168,21 +170,37 @@ label s_greeting_3_eng:
     return
 
 label s_greeting_3_rus:
-    s "Привет, дорогуша! {#Don't translate this string from Russian!}"
-    s 6aeca "Я рада, что ты здесь. {#And this one too}"
+    s "Привет, дорогуша!{#Don't translate this string from Russian!}"
+    s 6aeca "Я рада, что ты здесь.{#And this one too}"
     return
 
 label s_greeting_3_epo:
-    s "Saluton, mia karulo! {#Don't translate this string from Esperanto!}"
-    s 6aeca "Kia ĝojo revidi vin! {#And this one too}"
+    s "Saluton, mia karulo!{#Don't translate this string from Esperanto!}"
+    s 6aeca "Kia ĝojo revidi vin!{#And this one too}"
     return
 
 label s_greeting_4:
     show sayori 7aaaa at ss1 zorder 2
     s "Uh, hi again!"
     s 7acaa "I hope nothing bad happened with you while I was sleeping."
+    s "I want you to be have all right, you know."
+    s "At least, if you don't have it, you'll tell me, won't you?"
     return
 
+label s_greeting_5:
+    show sayori 7aeca at ss1 zorder 2
+    s "You're back, ehehe~"
+    s 7acaa "It's pretty boring, when you're not here."
+    s "You're my only friend now, you know..."
+    s "And you also know how to cheer me up."
+    s "Maybe, you'll do it now?"
+
+label s_greeting_6:
+    show sayori 7aaaa at ss1 zorder 2
+    s "Oh, hi again!"
+    s "I was surfing the internet, when you came back."
+    s "And to be honest, even it don't give me as much joy as you give."
+    s "So I'm glad, you're back."
 
 #Special greetings
 
@@ -230,5 +248,17 @@ label s_greeting_first(time_of_day):
         s 6abaa "...If you don't dislike them, of course."
         s 7aaaa "However, if you have come here, let's spend some time together."
     elif time_of_day != 1 or ee_chance > 0.1:
-        s "I'm glad you're visiting me today."
-        s "Let's spend this day together!"
+        $ chance = renpy.random.random()
+        if chance < (1.0/3.0):
+            s "I'm glad you're visiting me today."
+            s "Let's spend this day together!"
+        elif chance < (2.0/3.0):
+            s "I'm glad, you're back."
+            s "I'll do my best to make this day really pleasant."
+        else:
+            s 7aaaa "You're here, so I hope you have something good to share today."
+            s 7acaa "Even if you don't, it won't be bad."
+            s "Your life doesn't have to consist of good stripes only."
+            s 7aeca "But I can do it a bit better anyway."
+    
+    return

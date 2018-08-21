@@ -43,7 +43,7 @@ translate rus s_greeting_3_be4c208b:
 translate rus s_greeting_3_8d8154bc:
 
     # s 6aaaa "I just revise my [greeting_lang]."
-    s 6aaaa "Я просто практикую [greeting_lang]."
+    s 6aaaa "Я просто практикую свой [greeting_lang]."
 
 # game/greetings.rpy:141
 translate rus s_greeting_3_38b43f1e:
@@ -328,4 +328,147 @@ translate rus s_greeting_4_2fe260f6:
 
     # s 7acaa "I hope nothing bad happened with you while I was sleeping."
     s 7acaa "Надеюсь, с тобой ничего плохого не случилось за время моего сна."
+
+# TODO: Translation updated at 2018-08-21 13:05
+
+# game/greetings.rpy:156
+translate rus s_greeting_3_eng_5d47655e:
+
+    # s "Hello, darling!{#Don't translate this string from English!}"
+    s "Hello, darling!{#Don't translate this string from English!}"
+
+# game/greetings.rpy:157
+translate rus s_greeting_3_eng_fd389dd2:
+
+    # s 6aeca "I'm glad to see you're back.{#And this one too}"
+    s 6aeca "I'm glad to see you're back.{#And this one too}"
+
+# game/greetings.rpy:171
+translate rus s_greeting_3_rus_f542204b:
+
+    # s "Привет, дорогуша!{#Don't translate this string from Russian!}"
+    s "Привет, дорогуша!{#Don't translate this string from Russian!}"
+
+# game/greetings.rpy:172
+translate rus s_greeting_3_rus_ece49d6d:
+
+    # s 6aeca "Я рада, что ты здесь.{#And this one too}"
+    s 6aeca "Я рада, что ты здесь.{#And this one too}"
+
+# game/greetings.rpy:176
+translate rus s_greeting_3_epo_a3831bf2:
+
+    # s "Saluton, mia karulo!{#Don't translate this string from Esperanto!}"
+    s "Saluton, mia karulo!{#Don't translate this string from Esperanto!}"
+
+# game/greetings.rpy:177
+translate rus s_greeting_3_epo_53ab129e:
+
+    # s 6aeca "Kia ĝojo revidi vin!{#And this one too}"
+    s 6aeca "Kia ĝojo revidi vin!{#And this one too}"
+
+# TODO: Translation updated at 2018-08-21 15:01
+
+# game/greetings.rpy:186
+translate rus s_greeting_4_cfc9418c:
+
+    # s "I want you to be have all right, you know."
+    s "Ты знаешь, что я хочу, чтобы у тебя всё было о'кей."
+
+# game/greetings.rpy:187
+translate rus s_greeting_4_baf50106:
+
+    # s "At least, if you don't have it, you'll tell me, won't you?"
+    s "Во всяком случаи, если тебя всё же что-то тревожет, ты же мне об этом скажешь, так?"
+
+# game/greetings.rpy:192
+translate rus s_greeting_5_be9c6b66:
+
+    # s "You're back, ehehe~"
+    s "Я вновь здесь, хе-хе~"
+
+# game/greetings.rpy:193
+translate rus s_greeting_5_534c8a80:
+
+    # s 7acaa "It's pretty boring, when you're not here."
+    s 7acaa "Здесь пипец как скучно без тебя."
+
+# game/greetings.rpy:194
+translate rus s_greeting_5_da2ff6ab:
+
+    # s "You're my only friend now, you know..."
+    s "Я  ж, ведь, только с тобой сейчас и дружу..."
+
+# game/greetings.rpy:195
+translate rus s_greeting_5_22d3eb20:
+
+    # s "And you also know how to cheer me up."
+    s "И ты всегда знаешь, как поднять мне настроение."
+
+# game/greetings.rpy:196
+translate rus s_greeting_5_8b0f7cf8:
+
+    # s "Maybe, you'll do it now?"
+    s "Может, попытаешься сейчас?"
+
+# game/greetings.rpy:200
+translate rus s_greeting_6_d02eb0b8:
+
+    # s "Oh, hi again!"
+    s "О, снова привет!"
+
+# game/greetings.rpy:201
+translate rus s_greeting_6_cc4bba94:
+
+    # s "I was surfing the internet, when you came back."
+    s "Я как раз тут сидела в интеренет."
+
+# game/greetings.rpy:202
+translate rus s_greeting_6_619441a4:
+
+    # s "And to be honest, even it don't give me as much joy as you give."
+    s "И честно говоря, даже там я не получаю столько удовольствия, сколько рядом с тобой."
+
+# game/greetings.rpy:203
+translate rus s_greeting_6_6eece0cb:
+
+    # s "So I'm glad, you're back."
+    s "Так что, я рада твоему приходу."
+
+# game/greetings.rpy:256
+translate rus s_greeting_first_0e70b863:
+
+    # s "I'm glad, you're back."
+    s "Я рада, что ты здесь."
+
+# game/greetings.rpy:257
+translate rus s_greeting_first_a1ac3cb0:
+
+    # s "I'll do my best to make this day really pleasant."
+    s "Я попытаюсь сдедлать этот день хотя бы чуть ярче."
+
+
+# game/greetings.rpy:259
+translate rus s_greeting_first_e0b4dfde:
+
+    # s 7aaaa "You're here, so I hope you have something good to share today."
+    s 7aaaa "Надюесь, ты прищёл ко мне с хорошими вестями."
+
+# game/greetings.rpy:260
+translate rus s_greeting_first_90c94c7c:
+
+    # s 7acaa "Even if you don't, it won't be bad."
+    s 7acaa "Даже если нет, то ничего страшного."
+
+# game/greetings.rpy:261
+translate rus s_greeting_first_f36604a7:
+
+    # s "Your life doesn't have to consist of good stripes only."
+    s "Твоя жизнь не должна состоять сплошь из белых полос."
+
+# game/greetings.rpy:262
+translate rus s_greeting_first_a82a1189:
+
+    # s 7aeca "But I can do it a bit better anyway."
+    s 7aeca "Но я всё же могу, при неободимости, сделать твои полосы чуть светлей."
 
