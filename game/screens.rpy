@@ -1007,6 +1007,9 @@ screen preferences():
                     label _("Auto-Forward Time")
 
                     bar value Preference("auto-forward time")
+                    
+                    label _("Talk Delay")
+                    bar value FieldValue(persistent, "talk_delay", range=140, max_is_zero=True, style="slider", offset=20)
 
                 vbox:
 

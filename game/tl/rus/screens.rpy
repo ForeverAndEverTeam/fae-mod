@@ -198,3 +198,11 @@ translate rus strings:
     old "Static"
     new "Статичный"
 
+# TODO: Translation updated at 2018-08-21 11:43
+
+translate rus strings:
+
+    # screens.rpy:1011
+    old "Talk Delay"
+    new "Задержка между монологами"
+

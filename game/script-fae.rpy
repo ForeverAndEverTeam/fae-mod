@@ -2,6 +2,9 @@ default persistent.currentmusic = 0
 default persistent.playergender = None # False = male, True = female, None = unknown/other
 default persistent.playerbdate = get_now().date()
 
+default persistent.s_name = cur_lang().s_names[0]
+default persistent.talk_delay = 20
+
 init python:
     update_bg = False
     from_menu = False
@@ -221,10 +224,10 @@ label s_loop:
         config.skip_indicator = False
     
     
-    # Wait 40 to 120 seconds before saying something new
+    # Wait before saying something new
     if not random_topics_banned:
         window hide(config.window_hide_transition)
-        $ waittime = renpy.random.randint(40, 120)
+        $ waittime = renpy.random.randint(40 + round(persistent.talk_delay * 0.75), 40 + persistent.talk_delay)
         $ renpy.pause(waittime)
         window auto
     else:
