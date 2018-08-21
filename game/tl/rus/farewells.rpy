@@ -110,3 +110,41 @@ translate rus s_farewell_4_26b90d04:
 
     # s 7aaca "You can take some of mine, if you need it."
     s 7aaca "Можешь взять у меня немножко, если хочешь."
+# TODO: Translation updated at 2018-08-21 15:27
+
+# game/farewells.rpy:60
+translate rus s_farewell_6_46bff501:
+
+    # s "Bye, [palyer]!"
+    s "Пока-пока, [palyer]!"
+
+# game/farewells.rpy:61
+translate rus s_farewell_6_8d5cd57e:
+
+    # s "Take care of yourself."
+    s "Береги себя."
+
+# game/farewells.rpy:62
+translate rus s_farewell_6_8dfd748f:
+
+    # s "I want you to come back later safe and sound."
+    s "Я хочу, чтобы ты потом вернулся целым и невредимым."
+
+# game/farewells.rpy:67
+translate rus s_farewell_7_dbfb08d4:
+
+    # s "See you later, [palyer]!"
+    s "До свидания, [palyer]!"
+
+# game/farewells.rpy:68
+translate rus s_farewell_7_85353668:
+
+    # s "I wish you can give you a farewell kiss..."
+    s "Жаль, что я не могу поцеловать тебя на прощание..."
+
+# game/farewells.rpy:69
+translate rus s_farewell_7_a2bffcdd:
+
+    # s "But I think it's enough, that you know I'd do it."
+    s "Хотя, думаю, что тебе достаточно лишь знать об этом."
+
