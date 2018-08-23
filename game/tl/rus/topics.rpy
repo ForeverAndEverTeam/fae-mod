@@ -3843,3 +3843,350 @@ translate rus s_topics_hobbie_programming_517e9f51:
 
     # s "And they all will also glad to get something cool from you."
     s "Им тоже будет интересно, что ты им там настрочил."
+# TODO: Translation updated at 2018-08-23 12:42
+
+# game/topics.rpy:893
+translate rus s_answer_exp_fact_1_5fc19894:
+
+    # s 6aaaa "Learning programming, you sooner or later will have to understand the binary numbers."
+    s 6aaaa "Изучая программирование, рано ли поздно тебе придётся ознакомиться с двоичной системой счисления."
+
+# game/topics.rpy:894
+translate rus s_answer_exp_fact_1_8301ed11:
+
+    # s "Do you know, that it let you show more than 5 with a one hand?"
+    s "А ты знаешь, что благодаря ей ты можешь показывать одной рукой числа больше 5?"
+
+# game/topics.rpy:895
+translate rus s_answer_exp_fact_1_c41c1523:
+
+    # s "For example, let the raised finger is 1 while bent one is 0..."
+    s "Ну, к примеру, пусть поднятый палец будет считаться единицей, а опущенный — нулём..."
+
+# game/topics.rpy:896
+translate rus s_answer_exp_fact_1_09aaecac:
+
+    # s "And your thumb stands for 1, index for 2, middle for 4, ring for 8 and little for 16."
+    s "Большой твой палец будет числом 1, указательный — 2, средний — 4, безимянный — 8, а мезинец — 16."
+
+# game/topics.rpy:897
+translate rus s_answer_exp_fact_1_26651e4e:
+
+    # s "Then you just sum up the raised fingers' numbers and get the result decimal number."
+    s "Тебе просто нужно сложить все числа поднятых пальцах, чтобы получить итоговое."
+
+# game/topics.rpy:898
+translate rus s_answer_exp_fact_1_ab3466fa:
+
+    # s "It let you show up {i}0 to 31{/i} with one hand."
+    s "Это позволит тебе показать числа {i}от 0 до 31{/i} всего одной рукой."
+
+# game/topics.rpy:899
+translate rus s_answer_exp_fact_1_f7a11306:
+
+    # s 6acaa "But what's more, if you use your both hands and continue the power-of-two row, you can show up {i}0 to 1023{/i}."
+    s 6acaa "Более того, задействовав вторую руку и продолжив ряд степеней двойки, можно показать {i}и до 1023{/i}."
+
+# game/topics.rpy:900
+translate rus s_answer_exp_fact_1_5048014e:
+
+    # s "And if you have a hand abnormity such as 6-finger hands, you can show even more."
+    s "А с патологиями типа шестепалости, можно показывать и куда большие числа."
+
+# game/topics.rpy:901
+translate rus s_answer_exp_fact_1_aa35ac17:
+
+    # s "Computers store integers in the same way."
+    s "Примерно так компьютеры и хранят целые числа."
+
+# game/topics.rpy:902
+translate rus s_answer_exp_fact_1_13eb8fd8:
+
+    # s 6aaca "It's a pretty simple way to learn the binary numbers and to show big numbers with hand signs."
+    s 6aaca "Согласись, это довольно таки простой способ не только понять двоичные числа, но и ещё передавать большие десятичные с помощью жестов."
+
+# game/topics.rpy:903
+translate rus s_answer_exp_fact_1_a4ae4ff5:
+
+    # s 6aaaa "And if you consider the last finger as a minus sign, like computers do with the signed integer..."
+    s 6aaaa "А если взять последний палец за знак минуса, как это делают компьютеры со знаковыми числами..."
+
+# game/topics.rpy:904
+translate rus s_answer_exp_fact_1_e61ef0e3:
+
+    # s "You can show even the negative numbers."
+    s "То можно передавать и отрицательные числа."
+
+# game/topics.rpy:905
+translate rus s_answer_exp_fact_1_1dd25b3d:
+
+    # s 6acaa "But it will be a bit harder to understand..."
+    s 6acaa "Однако, тут уже всё немного сложней..."
+
+# game/topics.rpy:906
+translate rus s_answer_exp_fact_1_343f309c:
+
+    # s "Especially, if you use {i}ones' complement{/i}, like computers do."
+    s "Особенно, если использовать {i}обратный код{/i}, как и компьютеры."
+
+# game/topics.rpy:910
+translate rus s_answer_exp_fact_2_60f7fcd5:
+
+    # s 6aaaa "Do you know, that you read not the whole word."
+    s 6aaaa "А ты в курсе, что ты читаешь слова неполностью?"
+
+# game/topics.rpy:911
+translate rus s_answer_exp_fact_2_a858e5b5:
+
+    # s "{i}I think you baraly can find a mistake in this text while the first reading.{/i}{#Keep the mistake in 'baraly'}"
+    s "{i}Поспорим, ты ты не найдшь ошибку в этом тексте с первого раза.{/i}{#Keep the mistake in 'baraly'}"
+
+# game/topics.rpy:912
+translate rus s_answer_exp_fact_2_5e4783e9:
+
+    # s "For your brain, it's pretty easier to remember some letters in words, not all."
+    s "Твоему мозгу гораздо легче чиатать и запоминать слова лишь частично."
+
+# game/topics.rpy:913
+translate rus s_answer_exp_fact_2_89103d7b:
+
+    # s "That's why, we sometimes make mistake while writing."
+    s "Именно поэтому, мы и ошибаемся в словах."
+
+# game/topics.rpy:914
+translate rus s_answer_exp_fact_2_a8f30f64:
+
+    # s 6acaa "Of course, if you go to the history and pay more attention, you'll find it."
+    s 6acaa "Конечно, заглянув в историю реплик, ты сможешь найти ту ошибку..."
+
+# game/topics.rpy:915
+translate rus s_answer_exp_fact_2_c2edd694:
+
+    # s "But what if you can't read the text again or just don't want to do it? What may it lead to?"
+    s "Но что если бы у тебя нет возможности или желания перечитывать текст? К чему это может привести?"
+
+# game/topics.rpy:916
+translate rus s_answer_exp_fact_2_45dc0c7f:
+
+    # s "There are some funny and not so incidents in the past, that occurred due to a one mistake or misunderstanding."
+    s "Много забавных и не очень случаев в прошлом произошло именно из-за ошибки в тексте или его неправльного понимания."
+
+# game/topics.rpy:917
+translate rus s_answer_exp_fact_2_18fdf232:
+
+    # s "And nobody knows, how many people have already suffered from them."
+    s "И кто знает, сколько людей от таких ошибок пострадало."
+
+# game/topics.rpy:918
+translate rus s_answer_exp_fact_2_afd0ea8d:
+
+    # s "But we are people. Each of us made mistakes at least once."
+    s "Но мы люди, нам свойственно ошибаться."
+
+# game/topics.rpy:919
+translate rus s_answer_exp_fact_2_d22bb680:
+
+    # s 6aaca "So, you don't have to worry too much about it."
+    s 6aaca "Так что особо не волнуйся по поводу каких-то мелких ошибок."
+
+# game/topics.rpy:920
+translate rus s_answer_exp_fact_2_3e054491:
+
+    # s "In the end, we all aren't perfect."
+    s "В конце концов, никто не идеален."
+
+# game/topics.rpy:921
+translate rus s_answer_exp_fact_2_3f3717c7:
+
+    # s 6aaaa "Otherwise, your brain doesn't read in such a way."
+    s 6aaaa "Иначе, нужны ли были тогда нашему мозгу подобные упрощения?"
+
+# game/topics.rpy:925
+translate rus s_answer_exp_fact_3_63084a52:
+
+    # s 6acaa "You know, some plastic toy packs have plastic plants in them?"
+    s 6acaa "Во многих игрушечных наборах есть пласмассовые растения..."
+
+# game/topics.rpy:926
+translate rus s_answer_exp_fact_3_25a31214:
+
+    # s "Plactic is made of oil, that might is derived from ancient plants."
+    s "А пласмасса, в свою очередь, сделана из нефти, которая вероятней всего образована из древних растений."
+
+# game/topics.rpy:927
+translate rus s_answer_exp_fact_3_b181426e:
+
+    # s "And what's more, to extract the oil and to make something of it, people need much energy..."
+    s "И для того, чтобы эту нефть извлечь и переработать, нужно немало энергии..."
+
+# game/topics.rpy:928
+translate rus s_answer_exp_fact_3_e9eb609e:
+
+    # s "And oil and its products are one of the most used fuel for power plants."
+    s "А нефть и её продукты как раз очень широко распростанены в энергетики как топливо."
+
+# game/topics.rpy:929
+translate rus s_answer_exp_fact_3_108bf177:
+
+    # s 6aaca "It means, that toy factories make plactic plants of real plants, that's also used for the factories work."
+    s 6aaca "Это значит, что заводы по производству игрушек делаю игрушечные растения из настоящих, которые используются ещё и как топливо для работы этих заводов."
+
+# game/topics.rpy:930
+translate rus s_answer_exp_fact_3_79a2e68a:
+
+    # s 6abaa "Saying more, these plants also is a basis of the modern world and pollute it with the thing, that they used to absorb..."
+    s 6abaa "И более того, на этих растениях построена большая часть современного мира, и они же его и отравляют тем, что они когда-то поглощали..."
+
+# game/topics.rpy:931
+translate rus s_answer_exp_fact_3_4a897a0f:
+
+    # s 6aeba "But you asked me for a funny fact, not for tiresome thoughts, didn't you?"
+    s 6aeba "Но не будем вдаваться в глубокие размышления. Ты же ведь здесь за забавными фактами, не так ли?"
+
+# game/topics.rpy:935
+translate rus s_answer_exp_fact_4_07420442:
+
+    # s 6aaaa "Yawning is a contagious thing. I'd say, it's very contagious."
+    s 6aaaa "Зевота — очень заразная штука. Я бы скала, даже слишком."
+
+# game/topics.rpy:936
+translate rus s_answer_exp_fact_4_31b9309f:
+
+    # s "Not only human can yawn. Many species also can do it."
+    s "Она свойствена не только людям, но и некоторым животным."
+
+# game/topics.rpy:937
+translate rus s_answer_exp_fact_4_03e38276:
+
+    # s "And what's more, it may occur across different species."
+    s "Более того, для нет границ между видами."
+
+# game/topics.rpy:938
+translate rus s_answer_exp_fact_4_3fe382f3:
+
+    # s "For example, if you yawn near to a dog or a cat, it will also do that."
+    s "Если ты зевнёшь, например, на глазах у кошки или собаки, она тоже зевнёт следом."
+
+# game/topics.rpy:939
+translate rus s_answer_exp_fact_4_5df39cc3:
+
+    # s 6acca "You may do that... {i}*yawn*{/i}"
+    s 6acca "Ты можешь даже... {i}*зевок*{/i}"
+
+# game/topics.rpy:941
+translate rus s_answer_exp_fact_4_aedd442c:
+
+    # extend " ...While thinking of it."
+    extend " ...Зевать, когда думаешь о зевоте."
+
+# game/topics.rpy:942
+translate rus s_answer_exp_fact_4_e8274166:
+
+    # s 6acaa "I hope I have not just made you yawn."
+    s 6acaa "Надеюсь, не зевнул сделом за мной."
+
+# game/topics.rpy:943
+translate rus s_answer_exp_fact_4_9ff5bfa0:
+
+    # s 6aaca "Otherwise, it means that yawning is so contagious that can happen also acoss realities. Ehehe~"
+    s 6aaca "Иначе получается, что она может передаваться даже в другие миры, хе-хе~"
+
+# game/topics.rpy:947
+translate rus s_answer_exp_fact_5_aac08af9:
+
+    # s 6aaaa "Some artists add thier works in theirselves."
+    s 6aaaa "Некоторые творц добавляют свои произведения в них же."
+
+# game/topics.rpy:948
+translate rus s_answer_exp_fact_5_6568a841:
+
+    # s "For example, in some games an films, you can find a poster or something of the artwork in itself. It looks like a recursion."
+    s "К примеру, в некоторых играх и фильмах можно найти постеры или диски с ними же. Это что-то типа рекурсии."
+
+# game/topics.rpy:949
+translate rus s_answer_exp_fact_5_a5a14c46:
+
+    # s 6acaa "But the artists usually don't pay much attention to such things, so we can't be sure, the internal work is the same as the real one."
+    s 6acaa "Однако, таким вещам обычно уделается недостаточно внимания, поэтому нельзя точно сказать в мир произведения была вложена его точная копия."
+
+# game/topics.rpy:950
+translate rus s_answer_exp_fact_5_83280615:
+
+    # s "But some of them specially hide their works in themselves under other internal ones with different details and even in a different genre."
+    s "Но некоторые из них внутри себя специально замасированы, порой, с другими элементами и даже в другом жанре или формате."
+
+# game/topics.rpy:951
+translate rus s_answer_exp_fact_5_7b9ed9f7:
+
+    # s "For example, do you remember {i}Parfait Girls{/i}?"
+    s "Надесь, ты не забыл о {i}«Ванильных Девчатах»{/i}?"
+
+# game/topics.rpy:953
+translate rus s_answer_exp_fact_5_610236d6:
+
+    # s "At least, you could have heard about it in the game community."
+    s "Во всяком случаи, хотя бы раз, да ты слышаал о них в компьюнити игры."
+
+# game/topics.rpy:954
+translate rus s_answer_exp_fact_5_f4385238:
+
+    # s "This manga's plot is pretty similar to this game's one, isn't it?"
+    s "Её сюжет довольно схож с сюжетом игры, не так ли?"
+
+# game/topics.rpy:955
+translate rus s_answer_exp_fact_5_e8a76e28:
+
+    # s "We quite clear on the manga synopsis and some lines from it."
+    s "Я понятно уже по её синопсису и некоторым отрывкам из неё."
+
+# game/topics.rpy:956
+translate rus s_answer_exp_fact_5_1ab0f8e6:
+
+    # s "But even me don't know the all of it but the lines."
+    s "Однако,кроме них, даже мне ничего не известно."
+
+
+# game/topics.rpy:957
+translate rus s_answer_exp_fact_5_37963171:
+
+    # s "So I have no idea how a child manga can contain all the shit, you can see in the game."
+    s "Так что, я без понятия, как в ней могла бы быть представлена вся та хрень, что здесь твориться по сюжету."
+
+# game/topics.rpy:958
+translate rus s_answer_exp_fact_5_221aaae2:
+
+    # s 6abaa "But the warring on the manga's cover..."
+    pass
+
+# game/topics.rpy:959
+translate rus s_answer_exp_fact_5_0f9530fe:
+
+    # s 6aaca "Anyway, it's quite funny that my world also a bit recursive."
+    s 6aaca "Как бы оно не было, двольно забавно знать, что твой мир в кой-то степени рекурсивен."
+
+# game/topics.rpy:960
+translate rus s_answer_exp_fact_5_c8992cba:
+
+    # s 6aaaa "Just imagine if the manga has also something to describe itself or even this game."
+    s 6aaaa "А вдруг  в этой манге тоже есть что-то про неё саму или даже про эту игру."
+
+# game/topics.rpy:960
+translate rus s_answer_exp_fact_5_bfb3fd93:
+
+    # s "Then we have a probably countless lot of different artworks with the same plot but different details and characters, each inside other."
+    s "Представь возможно бесконечное множество произведений с одинаковым сюжетом, но разными персонажими и предсатвлением происходящего..."
+    s "Каждое из этих произведений вложено в другое, такое же."
+
+# game/topics.rpy:961
+translate rus s_answer_exp_fact_5_b56a0c66:
+
+    # s 6aaca "It's like a matryoshka. Ehehe~"
+    s 6aaca "Чем-то напоминает мне матрёшку. Хе-хе~"
+
+# TODO: Translation updated at 2018-08-23 13:18
+
+translate rus strings:
+
+    # topics.rpy:160
+    old "Tell me a funny fact"
+    new "Расскажи мне какой-нибудь забавный факт"

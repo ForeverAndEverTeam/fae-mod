@@ -157,6 +157,7 @@ init -5 python:
     if persistent.last_playthrough == 0:
         question_cats[2][0].avsilable = False
     question_cats[2].new_topic(_("Is it hard to program?"), 'programming')
+    question_cats[2].new_topic(_("Tell me a funny fact"), 'fact')
         
     
     moods = (
@@ -877,6 +878,88 @@ label s_answer_exp_programming:
     call s_common_programming
     return 'h'
 
+label s_answer_exp_fact:
+    python:
+        if not persistent.s_facts:
+            persistent.s_facts = range(1, 6)
+        
+        fact_id = renpy.random.choice(persistent.s_facts)
+        persistent.s_facts.remove(fact_id)
+    
+    call expression 's_answer_exp_fact_' + str(fact_id)
+    return 'h'
+
+label s_answer_exp_fact_1: #Fingers and the binary numbers
+    s 6aaaa "Learning programming, you sooner or later will have to understand the binary numbers."
+    s "Do you know, that it let you show more than 5 with a one hand?"
+    s "For example, let the raised finger is 1 while bent one is 0..."
+    s "And your thumb stands for 1, index for 2, middle for 4, ring for 8 and little for 16."
+    s "Then you just sum up the raised fingers' numbers and get the result decimal number."
+    s "It let you show up {i}0 to 31{/i} with one hand."
+    s 6acaa "But what's more, if you use your both hands and continue the power-of-two row, you can show up {i}0 to 1023{/i}."
+    s "And if you have a hand abnormity such as 6-finger hands, you can show even more."
+    s "Computers store integers in the same way."
+    s 6aaca "It's a pretty simple way to learn the binary numbers and to show big numbers with hand signs."
+    s 6aaaa "And if you consider the last finger as a minus sign, like computers do with the signed integer..."
+    s "You can show even the negative numbers."
+    s 6acaa "But it will be a bit harder to understand..."
+    s "Especially, if you use {i}ones' complement{/i}, like computers do."
+    return
+
+label s_answer_exp_fact_2: #Interpreting words
+    s 6aaaa "Do you know, that you read not the whole word."
+    s "{i}I think you baraly can find a mistake in this text while the first reading.{/i}{#Keep the mistake in 'baraly'}"
+    s "For your brain, it's pretty easier to remember some letters in words, not all."
+    s "That's why, we sometimes make mistake while writing."
+    s 6acaa "Of course, if you go to the history and pay more attention, you'll find it."
+    s "But what if you can't read the text again or just don't want to do it? What may it lead to?"
+    s "There are some funny and not so incidents in the past, that occurred due to a one mistake or misunderstanding."
+    s "And nobody knows, how many people have already suffered from them."
+    s "But we are people. Each of us made mistakes at least once."
+    s 6aaca "So, you don't have to worry too much about it."
+    s "In the end, we all aren't perfect."
+    s 6aaaa "Otherwise, your brain doesn't read in such a way."
+    return
+
+label s_answer_exp_fact_3: #Oil and plants
+    s 6acaa "You know, some plastic toy packs have plastic plants in them?"
+    s "Plactic is made of oil, that might is derived from ancient plants."
+    s "And what's more, to extract the oil and to make something of it, people need much energy..."
+    s "And oil and its products are one of the most used fuel for power plants."
+    s 6aaca "It means, that toy factories make plactic plants of real plants, that's also used for the factories work."
+    s 6abaa "Saying more, these plants also is a basis of the modern world and pollute it with the thing, that they used to absorb..."
+    s 6aeba "But you asked me for a funny fact, not for tiresome thoughts, didn't you?"
+    return
+
+label s_answer_exp_fact_4: #Yawning
+    s 6aaaa "Yawning is a contagious thing. I'd say, it's very contagious."
+    s "Not only human can yawn. Many species also can do it."
+    s "And what's more, it may occur across different species."
+    s "For example, if you yawn near to a dog or a cat, it will also do that."
+    s 6acca "You may do that... {i}*yawn*{/i}"
+    show sayori 6aaaa at ss1
+    extend " ...While thinking of it."
+    s 6acaa "I hope I have not just made you yawn."
+    s 6aaca "Otherwise, it means that yawning is so contagious that can happen also acoss realities. Ehehe~"
+    return
+
+label s_answer_exp_fact_5: #Arts inside themselves
+    s 6aaaa "Some artists add thier works in theirselves."
+    s "For example, in some games an films, you can find a poster or something of the artwork in itself. It looks like a recursion."
+    s 6acaa "But the artists usually don't pay much attention to such things, so we can't be sure, the internal work is the same as the real one."
+    s "But some of them specially hide their works in themselves under other internal ones with different details and even in a different genre."
+    s "For example, do you remember {i}Parfait Girls{/i}?"
+    if not (persistent.clear[0] or persistent.clear[1]):
+        s "At least, you could have heard about it in the game community."
+    s "This manga's plot is pretty similar to this game's one, isn't it?" 
+    s "We quite clear on the manga synopsis and some lines from it."
+    s "But even me don't know the all of it but the lines."
+    s "So I have no idea how a child manga can contain all the shit, you can see in the game."
+    s 6abaa "But the warring on the manga's cover..."
+    s 6aaca "Anyway, it's quite funny that my world also a bit recursive."
+    s 6aaaa "Just imagine if the manga has also something to describe itself or even this game."
+    s "Then we have a probably countless lot of different artworks with the same plot but different details and characters, each inside other."
+    s 6aaca "It's like a matryoshka. Ehehe~"
 
 #Reactions
 label s_reaction_h: #Happy player
