@@ -4198,13 +4198,10 @@ translate rus strings:
     # topics.rpy:160
     old "Tell me a funny fact"
     new "Расскажи мне какой-нибудь забавный факт"
+
 # TODO: Translation updated at 2018-08-24 08:11
-
-    s "While all your fingers by themselves show its binary representation, where the finger with the least decimal value is the rightest digit."
-
 # game/topics.rpy:900
 translate rus s_answer_exp_fact_1_ab3466fa:
 
     # s "It let you show up {i}0 to 31{/i} with one hand."
     s "Так можно показывать числа {i}от 0 до 31{/i} всего лишь одной рукой."
-
