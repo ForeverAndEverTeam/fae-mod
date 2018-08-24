@@ -30,6 +30,14 @@ screen poem(currentpoem, paper="paper"):
             null height 100
     vbar value YScrollValue(viewport="vp") style "poem_vbar"
 
+#Styling for the console text
+style console_text:
+    font "mod_assets/fonts/Fantasque/FantasqueSansMono-Regular.ttf"
+    color "#fff"
+    size 18
+    outlines []
+    #slow_cps 20
+
 ## This file is for overriding specific declarations from DDLC
 ## Use this if you want to change a few variables, but don't want
 ## to replace entire script files that are otherwise fine.

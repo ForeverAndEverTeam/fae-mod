@@ -3858,28 +3858,36 @@ translate rus s_answer_exp_fact_1_8301ed11:
     s "А ты знаешь, что благодаря ей ты можешь показывать одной рукой числа больше 5?"
 
 # game/topics.rpy:895
-translate rus s_answer_exp_fact_1_c41c1523:
+translate rus s_answer_exp_fact_1_cbdcbd27:
 
-    # s "For example, let the raised finger is 1 while bent one is 0..."
-    s "Ну, к примеру, пусть поднятый палец будет считаться единицей, а опущенный — нулём..."
+    # s "For example, let the raised finger is the binary 1 while bent one is the binary 0..."
+    s "Пусть поднятый палец в двоичной системе будет значить единицу, а опущенный — 0..."
 
 # game/topics.rpy:896
-translate rus s_answer_exp_fact_1_09aaecac:
+translate rus s_answer_exp_fact_1_0fdb83c8:
 
-    # s "And your thumb stands for 1, index for 2, middle for 4, ring for 8 and little for 16."
-    s "Большой твой палец будет числом 1, указательный — 2, средний — 4, безимянный — 8, а мезинец — 16."
+    # s "But while getting a decimal number, your riased thumb will stand for 1, index for 2, middle for 4, ring for 8 and little for 16."
+    s "Но при получении десятичного числа, поднятый большой палец начинает значить число 1, указательный — 2..."
+    s "Средний палец будет 4, безымянный — 8 а мизинчик — 16."
 
 # game/topics.rpy:897
-translate rus s_answer_exp_fact_1_26651e4e:
+translate rus s_answer_exp_fact_1_a605c9ec:
 
-    # s "Then you just sum up the raised fingers' numbers and get the result decimal number."
-    s "Тебе просто нужно сложить все числа поднятых пальцах, чтобы получить итоговое."
+    # s "Then you just sum up the raised fingers' decimals to get the result decimal number..."
+    s "Теперь все десятичные числа на поднятых пальцах надо сложить, чтобы получить итоговое дестичное..."
 
 # game/topics.rpy:898
-translate rus s_answer_exp_fact_1_ab3466fa:
+translate rus s_answer_exp_fact_1_8b980952:
 
-    # s "It let you show up {i}0 to 31{/i} with one hand."
-    s "Это позволит тебе показать числа {i}от 0 до 31{/i} всего одной рукой."
+    # s "While all your fingers by themselves show its binary representation, where the finger with the least decimal value is the rightest digit."
+    s "А вся рука сама по себе бужет показывать то, как это число выглядило бы в двоичном виде..."
+    s "При чём палец с наимеьшим десятичным значением — самое правая цифра в этом виде."
+
+# game/topics.rpy:899
+translate rus s_answer_exp_fact_1_fc7d1da8:
+
+    # s "For example, you can show 13 with making {font=mod_assets/fonts/Fantasque/FantasqueSansMono-Regular.ttf}01101{/font} by your fingers."
+    s "К примеру, 13 можно показать, выстроив пальцы в двоичное число {font=mod_assets/fonts/Fantasque/FantasqueSansMono-Regular.ttf}01101{/font}."
 
 # game/topics.rpy:899
 translate rus s_answer_exp_fact_1_f7a11306:
@@ -4190,3 +4198,13 @@ translate rus strings:
     # topics.rpy:160
     old "Tell me a funny fact"
     new "Расскажи мне какой-нибудь забавный факт"
+# TODO: Translation updated at 2018-08-24 08:11
+
+    s "While all your fingers by themselves show its binary representation, where the finger with the least decimal value is the rightest digit."
+
+# game/topics.rpy:900
+translate rus s_answer_exp_fact_1_ab3466fa:
+
+    # s "It let you show up {i}0 to 31{/i} with one hand."
+    s "Так можно показывать числа {i}от 0 до 31{/i} всего лишь одной рукой."
+
