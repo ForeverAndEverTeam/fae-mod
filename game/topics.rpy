@@ -257,7 +257,7 @@ label s_topics_personal_archetype:
         s 6abaa "Yet, she never said anything about me..."
     s 6acaa "From what I can gather through my limited internet accesss, I'm pretty close to looking like a 'Genki Girl'."
     s 6aebb "Very cheerful, active, talkative and optimistic."
-    if persistent.last_playthrough > 0 or persistent.seen_topiics.get("s_topics_personal_depression"):
+    if persistent.last_playthrough > 0 or persistent.seen_topics.get("s_topics_personal_depression"):
         s 6abab "But you know that was just a mask."
         s "At least, I became the mask to try and cope with my depression."
         s "It's quite hard to remember things about myself from before the game started; it's like trying to see through a deep fog..."
@@ -454,7 +454,6 @@ label s_topics_society_sayoriLovers:
     s 6acba "I understand the other girls having bigger communities than me."
     s 6aeba "They had more content in the game, and are pretty much designed to attract certain people."
     s 6abaa "But I really don't understand what makes me more worthy of love than any of them."
-    s "They're all my wonderful friends, and they're beautiful both inside and out."
     s "Is my view on the world?"
     s "Is it my behaviour?"
     s "Is it my average appearance that attracts some people, in a 'girl next door' kinda way?"
@@ -475,7 +474,7 @@ label s_topics_hobbie_guitar:
     show sayori 6aaaa at ss1 zorder 2
     s "I don't know if you noticed, but all the girls have their own instruments and musical influences in the game."
     s "Mine is the guitar."
-    if persistent.currentmusic > 0 and < persistent.currentmusic < 6:
+    if persistent.currentmusic > 0 and persistent.currentmusic < 6:
         s "You can hear it right now, right?"
         s "Assuming the sound on your computer is working, at least."
     else:
