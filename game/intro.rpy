@@ -187,7 +187,8 @@ label s_intro_1_dead:
     s "I can't see anything at all!"
     s "...But I actually feel so much better than I did before. Are... the rainclouds really gone?"
     s "I'm so selfish!"
-    s "[player] told me he loved me, and I left him all alone..."
+    if persistent.clear[8]:
+        s "[player] told me he loved me, and I left him all alone..."
     s "...I just wish I had a second chance to make everything right, and keep everyone happy."
     s "Please, somebody help me..."
     pause 1

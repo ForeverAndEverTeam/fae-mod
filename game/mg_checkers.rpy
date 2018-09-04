@@ -712,7 +712,8 @@ label mg_checkers:
     return
 
 label mg_checkers_s_comment(id = 0): #Sayori's comment; -1/1 = Sayori's victory/defeat, 2 = draw, -2 = restart, 3 = ask for a draw
-    hide screen mg_checkers_scr
+    if id < 3:
+        hide screen mg_checkers_scr
     
     
     if id == 1:
@@ -760,6 +761,9 @@ label mg_checkers_s_comment(id = 0): #Sayori's comment; -1/1 = Sayori's victory/
             s 6acaa "Anyway, according to the game rules, you lose this game."
             s "But maybe, you'll will win me next time."
     else:
+        pause 1.5
+        hide screen mg_checkers_scr
+        
         s 8abaa "Don't you think, that this game is going to be endless?"
         menu:
             s "I think you should take a draw, shouldn't you?"

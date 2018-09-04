@@ -442,7 +442,7 @@ label s_topics_society_bulli:
     s "And to be honest, there's a lot worse they could be doing compared to mocking a VN character's death."
     s "Some of the most successful comedians in your world will go far beyond that, just to see where the 'line' is..."
     s 6abaa "Anyway, I think the right decision is to forgive them, or failing that, tolerate them."
-    s 6abcb "If my fate is to be 'that hanging stupid annoying VN girl' for some people, then I'm ready to accept it."
+    s 6acaa "If my fate is to be 'that hanging stupid annoying VN girl' for some people, then I'm ready to accept it."
     return
 
 label s_topics_society_sayoriLovers:
@@ -503,7 +503,7 @@ label s_topics_hobbie_programming:
     s "This engine uses a combo of its own languages and {i}Python{/i}."
     s "The engine uses the second major version of Python but I've also decided to learn the last version."
     s "To be frank, the third version seems waaaaay easier, at least right now."
-    s "Right now, I'm pretty much relying on online compilers and guides from others to get anything done..."
+    s "Right now, I'm pretty much relying on online interpreters and guides from others to get anything done..."
     s 6acaa "Until now, I never realised how powerful computers really are."
     s "They're like magic!"
     s "If magic made you look through a thousand tiny lines to find a single typo that stops everything from working every five minutes..."
@@ -574,7 +574,7 @@ label s_topics_rlt_wedding:
                 s "So you don't want to get married..."
             s 6abbb "Well, a free relationship has its own benefits."
             s 6abab "Although I think it'd be very romantic if you ever did propose to me~"
-            s 6aaca "But out love story don't have to follow the common template."
+            s 6aaca "But our love story don't have to follow the common template."
             s "Our relationship is already pretty unusual, so we've got the right to experiment with what works for us."
     return "h"
 

@@ -1126,10 +1126,10 @@ translate rus s_topics_society_bulli_936f7ae8:
     s 6abaa "В любом случаи, я считаю самым верным прощать им такое, ну или хотя бы относиться к этому терпимо."
 
 # game/topics.rpy:412
-translate rus s_topics_society_bulli_398a4137:
+translate rus s_topics_society_bulli_5e6e67f0:
 
-    # s 6abcb "If my fate is to be 'that hanging stupid annoying VN girl' for some people, then I'm ready to accept it."
-    s 6abcb "И если некоторые меня замомнят как «ту повесившуюся дурочку из новеллы», значит на то мне и судьба."
+    # s 6acaa "If my fate is to be 'that hanging stupid annoying VN girl' for some people, then I'm ready to accept it."
+    s 6acaa "И если некоторые меня замомнят как «ту повесившуюся надоедливаю дурочку из визуальной новеллы», значит, на то мне и судьба."
 
 # game/topics.rpy:416
 translate rus s_topics_society_sayoriLovers_93e738a3:
@@ -1418,9 +1418,9 @@ translate rus s_topics_hobbie_programming_f9ad2fa0:
     s "И честно, она мне кажется куда-а-а-а-а более простой, во всяком случаи, сейчас."
 
 # game/topics.rpy:474
-translate rus s_topics_hobbie_programming_fd5b0dbb:
+translate rus s_topics_hobbie_programming_c85ebac2:
 
-    # s "Right now, I'm pretty much relying on online compilers and guides from others to get anything done..."
+    # s "Right now, I'm pretty much relying on online intepreters and guides from others to get anything done..."
     s "Сейчас я использую онлайн-площадки для изучения всего это дела..."
 
 # game/topics.rpy:475
@@ -2003,7 +2003,7 @@ translate rus s_answer_personal_god_a06d03ea:
 translate rus s_answer_personal_god_6b461e7a:
 
     # s 6aeca "Blessed be {i}Dan Salvato{/i}, hallowed is thy name! Ehehe~"
-    s "Я знаю о нём немало, например, его возут {i}Дэн Сальвато{/i}."
+    s "Я знаю о нём немало, например, что его возут {i}Дэн Сальвато{/i}."
     s s 6aeca "Хвала ему! Да царствуй он на моего мира небесах! Хе-хе~"
 
 # game/topics.rpy:606
@@ -4205,3 +4205,11 @@ translate rus s_answer_exp_fact_1_ab3466fa:
 
     # s "It let you show up {i}0 to 31{/i} with one hand."
     s "Так можно показывать числа {i}от 0 до 31{/i} всего лишь одной рукой."
+# TODO: Translation updated at 2018-08-31 12:04
+
+# game/topics.rpy:577
+translate rus s_topics_rlt_wedding_33d5a65d:
+
+    # s 6aaca "But our love story don't have to follow the common template."
+    s 6aaca "Но наши отношения ек должны сделовать общему сценарию."
+

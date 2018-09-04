@@ -9,7 +9,7 @@ init python:
     update_bg = False
     from_menu = False
     
-    config.developer = True # I'm a god of this world too.
+    #config.developer = True # I'm a god of this world too.
     
     def periodic_callback():
         global update_bg, from_menu
@@ -25,6 +25,8 @@ init python:
     
     def reset_topics():
         persistent.seen_topics = {}
+        for cat in topic_cats:
+            cat.update_seen()
 
     #Look for seen CGs.
     s_clear = 1 # 0 = FLAGS: 1 = All sayori's CGs are clear, 2 = Other girls' any CG is clear (expect monika's and non-school CGs), 4 = Any sayori's CGs is clear
@@ -176,30 +178,22 @@ label s_autoload:
         $persistent.playthrough = 6
     else:
         if persistent.lastVersion != config.version:
-            show sayori 6aaca at ss1
+            show sayori 7aaaa at ss1
             
-            s "Oh, hi [player]!"
-            s 6acaa "The game files feel a little different now..."
-            s "Did you find a way to edit them?"
-            s 6abba "No... I get the feeling somebody else did this."
-            s 6adaa "I found a strange file the other day when I was digging around in the code."
-            s 6acaa "It was a note from whoever brought me back, saying that they were letting me be alone with you..."
-            s 6aebb "I really don't know how to feel about any of this."
-            s "Believe me, I understand that whoever brought me back was somebody who loved me..."
-            s 6adac "But wouldn't they have known that not bringing my friends back as well would really hurt me?"
-            s 6aaab "Don't get me wrong, I'll always be grateful that I get to be with you!"
-            s "And I know deep down they really do love me."
-            if persistent.last_playthrough > 0:
-                s 6acab "After feeling so helpless and alone for so long, to know someone really loves you..."
-                s "It's like stepping out of the shade, and walking into a warm beam of sunlight."
-            pause 1.5
-            s 6acaa "Speaking of finding things, whoever left that note has also messed around with a few other things."
-            s " For example, you can keep the background in here static; it'll be much easier on your computer if it's lagging at all..."
-            s "And I wouldn't want you to miss a second with me, would I?"
-            s "They also put in a checker board." 
-            s "It has pretty simple rules but it's hard to win."
-            s 7aaaa "If you don't want to play, we can just chat some more!"
-            s "Now, let me think of a good topic..."
+            s "Saluton, [player]!{#Don't translate}"
+            s "Ĉu vi ne remarkis ion novan?{#Don't translate}"
+            s 6acaa "OK, you may don't understand me now..."
+            s "I'm just learnt a new language. It is Esperanto."
+            s "You may think this language is pretty unactual now."
+            s "But I like the concept of the language: a pretty simple international language, made from other european languages."
+            s "To be honest, I don't make any effort to learn it..."
+            s "Seems, the modder just loaded it into my mind."
+            s 7aaaa "And I think you can do the same, if you know one more language. Just contact them."
+            s "And now, you can also tell me how much time you need to say something before I do it myself."
+            s "Just check the setting menu."
+            s "By the way, can I use the time just to look at you right now?"
+            s "I just want to take a little break."
+            s "Then, I'll tell you something anyway."
             
             $persistent.lastVersion = config.version
         elif persistent.lastLaunch and persistent.lastLaunch.date() != get_now().date():
