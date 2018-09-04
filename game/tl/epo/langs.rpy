@@ -4,11 +4,11 @@ translate epo strings:
 
     # langs.rpy:18
     old "English"
-    new "English"
+    new "Algla"
 
     # langs.rpy:19
     old "Russian"
-    new "Russian"
+    new "Rusa"
 
 # TODO: Translation updated at 2018-08-31 12:04
 
