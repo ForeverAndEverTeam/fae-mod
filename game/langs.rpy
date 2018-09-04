@@ -16,8 +16,8 @@ init -10 python:
     
     lang_dict = OrderedDict() #Language list
     lang_dict["eng"] = GameLang(None, _("English"), False, ("Sayori", ), "en"),
-    lang_dict["rus"] = GameLang("rus", _("Russian"), True, ("Саёри", "Сайори"))#, #Key sould be equal value.code (exp. English)
-    #lang_dict["epo"] = GameLang("epo", _("Esperanto"), True, ("Sajori", ), "eo") #WIP, to be finished in a next version
+    lang_dict["rus"] = GameLang("rus", _("Russian"), True, ("Саёри", "Сайори")), #Key sould be equal value.code (exp. English)
+    lang_dict["epo"] = GameLang("epo", _("Esperanto"), True, ("Sajori", "Sayori"), "eo")
     
     def cur_lang():
         lang = lang_dict.get(_preferences.language) or lang_dict["eng"]
