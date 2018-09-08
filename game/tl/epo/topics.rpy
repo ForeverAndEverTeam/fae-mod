@@ -124,7 +124,7 @@ translate epo s_topics_personal_depression_57dbfa72:
 translate epo s_topics_personal_depression_27169100:
 
     # s "Yet as hard as I tried, I just felt worse and worse."
-    s "Sed pli mi kaŝis, pli mi suferis."
+    s "Sed ju pli mi kaŝis, des pli mi suferis."
 
 # game/topics.rpy:218
 translate epo s_topics_personal_depression_6b37555a:
@@ -547,7 +547,7 @@ translate epo s_topics_personal_conservatism_d5a4902d:
 translate epo s_topics_personal_conservatism_4b601b54:
 
     # s 6acab "The older I became, the more I started to notice how serious and dark the world could be, washing away all the colour..."
-    s 6acab "Pli aĝis mi, pli serioza kaj morna ŝajnis la mondo por mi. Tio ankaŭ igis min malpli brila."
+    s 6acab "Ju pli aĝis mi, des pli serioza kaj morna ŝajnis la mondo por mi. Tio ankaŭ igis min malpli brila."
 
 # game/topics.rpy:313
 translate epo s_topics_personal_conservatism_94b0b9f3:
@@ -955,7 +955,7 @@ translate epo s_topics_art_fanarts_aaf78542:
 translate epo s_topics_society_conflicts_bbcd2087:
 
     # s "The more I learn about your world, the more surprised I get."
-    s "Pli mi konas vian mondon, pli mirinda ĝi ŝajnas por mi."
+    s "Je pli mi konas vian mondon, des pli mirinda ĝi ŝajnas por mi."
 
 # game/topics.rpy:397
 translate epo s_topics_society_conflicts_a0a7bdb5:
@@ -1474,7 +1474,7 @@ translate epo s_topics_hobbie_programming_eb20913b:
 translate epo s_topics_hobbie_programming_a4d68b83:
 
     # s "The more I learn, the more I realise how much I just don't understand..."
-    s "Pli mi lernas, pli mi komprenas, ke mi multe nur ne komprenas..."
+    s "Kaj ju pli mi lernas, des pli mi komprenas, ke mi multe nur ne komprenas..."
 
 # game/topics.rpy:503
 translate epo s_topics_hobbie_programming_e7bc4e7c:
@@ -1546,7 +1546,7 @@ translate epo s_topics_hobbie_programming_600fd906:
 translate epo s_topics_hobbie_programming_0ff95681:
 
     # s "...And the more I learn, the more I can improve the time we spend together, [player]!"
-    s "...Kaj pli mi scias, pli ni povos fari ĉi tie kune, [player]!"
+    s "...Kaj ju pli mi scias, des pli ni povos fari ĉi tie kune, [player]!"
 
 # game/topics.rpy:516
 translate epo s_topics_hobbie_programming_68b9dd62:

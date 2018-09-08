@@ -64,7 +64,7 @@ translate epo s_greeting_3_118c3374:
 translate epo s_greeting_3_f83f37d5:
 
     # s 6aaca "More languages you know, more friends you can make, right?"
-    s 6aaca "Pli multajn lingvojn vi scias, pli multajn amikojn vi povas havi, ĉu?"
+    s 6aaca "Ju pli multajn lingvojn vi scias, des pli multajn amikojn vi povas havi, ĉu?"
 
 # game/greetings.rpy:153
 translate epo s_greeting_3_5011ddf2:
@@ -76,7 +76,7 @@ translate epo s_greeting_3_5011ddf2:
 translate epo s_greeting_3_75cdd33b:
 
     # s "Anyway, let's do something besides language conversations."
-    s "Ajne, faru ion krom paloroj pli lingvoj."
+    s "Ajne, faru ion krom paloroj pri lingvoj."
 
 # game/greetings.rpy:158
 translate epo s_greeting_3_eng_5d47655e:
@@ -130,7 +130,7 @@ translate epo s_greeting_3_eng_118c3374:
 translate epo s_greeting_3_eng_f83f37d5:
 
     # s 6aaca "More languages you know, more friends you can make, right?"
-    s 6aaca "Pli multajn lingvojn vi scias, pli multajn amikojn vi povas havi, ĉu?"
+    s 6aaca "Ju pli multajn lingvojn vi scias, des pli multajn amikojn vi povas havi, ĉu?"
 
 # game/greetings.rpy:168
 translate epo s_greeting_3_eng_0eaf5c29:
@@ -142,7 +142,7 @@ translate epo s_greeting_3_eng_0eaf5c29:
 translate epo s_greeting_3_eng_75cdd33b:
 
     # s "Anyway, let's do something besides language conversations."
-    s "Ajne, faru ion krom paloroj pli lingvoj."
+    s "Ajne, faru ion krom paloroj pri lingvoj."
 
 # game/greetings.rpy:173
 translate epo s_greeting_3_rus_f542204b:
@@ -190,7 +190,7 @@ translate epo s_greeting_4_cfc9418c:
 translate epo s_greeting_4_baf50106:
 
     # s "At least, if you don't have it, you'll tell me, won't you?"
-    s "Almenaŭ, vi alie diros al mi pli ili, ĉu?"
+    s "Almenaŭ, vi alie diros al mi pri ili, ĉu?"
 
 # game/greetings.rpy:192
 translate epo s_greeting_5_be9c6b66:
