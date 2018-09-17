@@ -399,7 +399,7 @@ label s_topics_art_fanarts:
 
 label s_topics_art_lit:
     s 6acaa "As you know, this game was about a {i}literature{/} club..."
-    s 6abba "At least, before I changed everything here."
+    s 6abba "At least, before everything changed here."
     s 6acaa "And as I remember, [player] once told, that I didn't seem to be fond of literature."
     s "And freakly speaking, he was right."
     s "Even from Nat's view on literature, I can't say I'm a literature lover."
