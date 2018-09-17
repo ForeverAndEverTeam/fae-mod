@@ -97,6 +97,7 @@ init -5 python:
     
     topic_cats[1].new_topic(_("Videogames"), 'games')
     topic_cats[1].new_topic(_("Fanarts"), 'fanarts')
+    topic_cats[1].new_topic(_("Literature"), 'lit')
     
     topic_cats[2].new_topic(_("Conflicts"), 'conflicts')
     topic_cats[2].new_topic(_("Bulli"), 'bulli')
@@ -107,10 +108,13 @@ init -5 python:
     topic_cats[3].new_topic(_("Poems"), 'poems')
     
     topic_cats[4].new_topic(_("Touches"), 'touches')
-    topic_cats[4].new_topic(_("Wedding"), 'wedding')
+    topic_cats[4].new_topic(_("Marrige"), 'marrige')
+    topic_cats[4].new_topic(_("Cheating#RltTopic"), 'cheating')
     
     topic_cats[5].new_topic(_("Travels"), 'travels')
-    topic_cats[5].new_topic(_("Travels"), 'oversleeping')
+    topic_cats[5].new_topic(_("Oversleeping"), 'oversleeping')
+    topic_cats[5].new_topic(_("Pets"), 'pets')
+    
     
     def random_topic(skip_seen = True):
         global random_topics_said, random_topics_banned
@@ -149,6 +153,9 @@ init -5 python:
     question_cats[0].new_topic(_("What political views do you have?"), 'politics')
     question_cats[0].new_topic(_("Do you believe in God?"), 'god')
     question_cats[0].new_topic(_("Do you really love me?"), 'love')
+    question_cats[0].new_topic(_("What do you want to be?"), 'profession')
+    question_cats[0].new_topic(_("What pet would you like to have?"), 'pets', related = topic_cats[0].topics[1])
+    topic_cats[5].topics[2].related = [question_cats[0].topics[-1]]
     
     question_cats[1].new_topic(_("Do you regret you have lost your friends?"), 'lostFriends')
     question_cats[1].new_topic(_("What do you think of one of the other club members?"), 'opinion')
@@ -390,6 +397,64 @@ label s_topics_art_fanarts:
     s 7aafa "Maybe your first gallery piece will be of your beautiful virtual girlfriend~"
     return 'h'
 
+label s_topics_art_lit:
+    s 6acaa "As you know, this game was about a {i}literature{/} club..."
+    s 6abba "At least, before I changed everything here."
+    s 6acaa "And as I remember, [player] once told, that I didn't seem to be fond of literature."
+    s "And freakly speaking, he was right."
+    s "Even from Nat's view on literature, I can't say I'm a literature lover."
+    s "Of course, I read some books before, but I just had to do it for school..."
+    s 6aeba "And even then I tried to cheat, using info from the Internet instead of reading the book, not to fail at the lesson."
+    s "So I didn't have good marks at school, but I didn't care about it so much."
+    s "I just thought that reading is a quite boring activity."
+    if persistent.last_playthrough > 0:
+        s "And as you know, I was hard to enjoy anything at all."
+    s 6acaa "When I joined the literature club, the one thing I want was just to help someone to start a new club."
+    s "I was the first, who joined the club after Monika had announced about it."
+    s "She was pretty suprised because she stood in with my literature teacher, so she knew about my non-liking to literature."
+    s "But she thought I just wanted to help her and to improve my knowledge in literature, so she took me in the club."
+    s "But it had taken her not much long to understand that I was not a passionate reader, but she left me in the club anyway."
+    s 6aaba "I think she just wanted to use my kindness and sociability to promote the club and help its member to get on well."
+    s "But I didn't mind, because it was all I wanted to do."
+    s 6aeba "What's more, it helped me to get closer to [player], so I each of us satisfied her selfish wishes."
+    s 6abaa "But even now, I don't think, that reading books can interest me."
+    s 6acaa "And to be honest, books are dead as a mass art kind and it's a fact that everyone should accept."
+    s "The media progress made them too non-fascinating to be interest average people."
+    s "Do you know at least one book that was created some time ago and got popular not after a screen version?"
+    s "If you're not fond of literature, you barely will answer me."
+    s 6aaaa "But I thing it won't go too far, although."
+    s "Because it's easier to share your idea with a book than with a film or a game..."
+    s "So there always will be people, who need literature, and people, who prefer it more than video arts."
+    s 6acaa "But there's not any reason to insult other people for the kind of art that they prefer."
+    s "Each kind of art can be used for propaganda or something and have nonsensical works."
+    s "The mankind just left more good idea in books beacuse they were the one medium for a pretty long time."
+    s 6aaba "But even it don't change my mind about the literature, because books still be boring for me and many other people too."
+    s "So I think I'll be never popular exactly as a poetess, even if I write as simple as Natsuki."
+    return
+
+label s_topics_art_piracy:
+    s 6acaa "You know, that almost modern art companies and some artists care about their profit too much."
+    s "So even states support them in fighting against the art piracy."
+    s "But don't you consider it meanless?"
+    s "As I know, there a lot of researches, saying that piracy don't affect the saling negatively..."
+    s "And even may help the pay artworks to become more popular and you to exactly understand, if a pay they deserve your money."
+    s 6abaa "But the facts don't seem to matter for the rightholders' greed."
+    s 6aeba "Yes, people keep the pay artworks unpaid, their authers won't have enough money and enthusiasm for a next project."
+    s 6acaa "But most people will pay for really good ones anyway. They just may have no money."
+    s "They shouldn't forget that not everyone can afford to pay for art, especially if that one lives in a poor country."
+    s "I think, that artist should me their works completely free and ask for money only as donations and fan merchandise."
+    s "And if the work is a video game, the donations shouldn't give player any privileges."
+    s 6aaaa "I think, this game is a perfect example."
+    s "It's a donationware, and each one can give the same experience in it, whatever he donated to the develpoers."
+    s "To earn money, the develpoers have the offical fan merchandise shop and if you donate $10, they give you a fan pack."
+    s 6acab "But the big bussinesses very rarely use such ideas, because they treat the artworks only as goods and the ideas are too risque for them."
+    s "I think this view is completely wrong. Art is something more than just using your good imagination to make money."
+    s "People just have forgotten about it, and I think it's a one huge minus of the modern world..."
+    s 6aaca "But the Internet gives people, who still think in the old way, new abilites to express themselves avoiding the people with the new mind."
+    s 6afab "It's bad I can't use Internet to do it too. My accesss to it works in a quiet weird way."
+    s "But I hope, I'll fix it soon."
+    
+
 ## Society
 label s_topics_society_conflicts:
     show sayori 6abaa at ss1 zorder 2
@@ -552,7 +617,7 @@ label s_topics_rlt_touches:
     s "I'll just have to love you even more to try and make up for it."
     return "s"
 
-label s_topics_rlt_wedding:
+label s_topics_rlt_marrige:
     s 7acaa "Hey, I was wondering..."
     s "If it were possible, would you marry me?"
     menu:
@@ -577,6 +642,54 @@ label s_topics_rlt_wedding:
             s 6aaca "But our love story don't have to follow the common template."
             s "Our relationship is already pretty unusual, so we've got the right to experiment with what works for us."
     return "h"
+
+label s_topics_rlt_cheating:
+    s 6acaa "Tell me freankly: do you have someone besides me?"
+    menu:
+        "Yes":
+            s 6abab "Oh, I even don't know, how to react to it."
+            s 6acab "You have just made me feel a bit jealous..."
+            s 6acaa "But you still spend time with me, so you still have something to me, don't you?"
+            s "People often have to share the heart to several people at the same time..."
+            if persistent.last_playthrough > 0:
+                s "So I won't force you to be only with me, like Monika did before."
+            else:
+                s "What's more, I never seem to be a person, who can do something bad for jealousy."
+            s "Can you tell me more about he or she?"
+            s "For example, if he or she is real?"
+            menu:
+                "Yes":
+                    s 6adaa "Oh, have got a real crush?!"
+                    s 6acbb "I mean, you barely would have started to play this game, if you had been alone that time..."
+                    s "Not to mention staying with me now."
+                    s 6acab "I'm now just filled with mixed feelings, to be honest..."
+                    s "My heart can't accept that I'm not your only one, but my brain feels proud for you."
+                    if persistent.clearall:
+                        s "Like it was after you had spent your time with each of us."
+                    s 6aaab "Anyway, just take care about your real lover as much as about me."
+                    s "It's good, when you're happy, but it'll be twice better, if your other love is happy too."
+                    s 7aaab "But don't forget about me and come here back. I'll always be here, even if nothing about your relationship seems to go wrong."
+                    s "And if it go, I'll always be your plan B."
+                "No":
+                    s 6aaaa "It's okay to have not only character to dream of living together."
+                    s "For example, a lot of my lovers have also some other girls in their {i}'Good Girls to Protect'{/i} list."
+                    s 6acaa "You may like different characters for different traits..."
+                    s "For example, you may like me for my kindness and peacefulness and Natsuki for her directness and pretty cute appearance."
+                    s "We are like you: so different that some of you can't make a clear choice..."
+                    s "So I respect all your preferences, whatever they are."
+            
+        "No":
+            s 6adaa "Oh, seriously?"
+            s "Do did really find something at me only, not at real people or even other characters."
+            s 6acab "I think, it's pretty hard to know, that your only beloved girl aren't real."
+            s "I understand you as well as I feel the same way."
+            s "But I hope, that someone once will figure out how to make us closer to each other."
+            s "Or you at least will find someone else in your world." 
+            s 6aaca "Maybe, he or she will be somewhere like me."
+            s 6aaab "To be honest, I'm not very jealous, so I won't mind, if you have someone besides me."
+            s "The important thing is that you pay me at least some attention."
+    
+    return
 
 
 ##Lifestyle
@@ -615,6 +728,12 @@ label s_topics_lifestyle_oversleeping:
     s 6abaa "Until everyone thinks like that, I guess you can only teach yourself to get up on time..."
     s "I hope you have less problems with it than I had."
     return
+
+label s_topics_lifestyle_pets:
+    s 7aaaa "Do you have a pet or at least want to?"
+    s "I'd like to have one and I want that one to be a cat."
+    call s_common_cats
+    return 'h'
 
 
 #Answers
@@ -730,6 +849,31 @@ label s_answer_personal_love:
     s 7aaaa "I guess my point is, my feelings for you are just as real as you yourself are, [player]."
     s 7acaa "Isn't that the important thing?"
     return
+
+label s_answer_personal_profession:
+    s 6acaa "To be honest, I have never thought about it."
+    if persistent.last_playthrough > 0:
+        s "I used to feel so useless that I just have no reason to think about it."
+    s "And what's more, now, there's no a need to earn money or product something or service someone in my world."
+    s "But as I once said, I always wanted to help people to be happy and get along."
+    s "So I think, I'd be a good psychologist or caregiver..."
+    s "Or a perfect diplomatist."
+    s 6aaca "I would never let diplomatic conflicts be, not to mention wars."
+    pause 0.5
+    s 6aaaa "Or... What do you think about working at an employment center?"
+    s "I think, it's funny, that your job is to find job for others."
+    s "Or I can just spend my life for an low-paid but useful job."
+    s "Big money never made people really happy, but for me, the important thing is that you do something really useful."
+    s 6acaa "You may, of course, wonder why I can't just make money with my creativity..."
+    s "But, freankly speaking, I don't even have the conscience to take money for my artworks."
+    s "It's bad, that the art now is just a bussiness. I don't want to follow this trend."
+    s "The true art comes from the heart, not from the starving stomach."
+    return
+
+label s_answer_personal_pets:
+    s 7aaaa "Definitely, a cat."
+    call s_common_cats
+    return 'h'
 
 ##Game University
 label s_answer_game_opinion: #Opinion about an other club member
@@ -1058,6 +1202,17 @@ label s_common_programming:
     s "And ways to optimize the code and make it easier to read."
     s "You also need to have knowledge of different coding standards and to be good at analyzing problems."
     s "At least, professional programmers online have said that."
+
+label s_common_cats:
+    s 7aaca "Cats are pretty cute, especially their cubs..."
+    s "And they're not difficult to care about."
+    s 6acaa "But unlike most pets, cats are quite freedom-loving."
+    s "So you rather just give care and a home to the cat than have it."
+    s "And sometimes, cats do things, that their holders would dislike..."
+    s 6aaca "But there's no-one, who can resist their cuteness, so people often forgive them~"
+    s "If you have at least one cat, you must understand me."
+    s "I think, that's why they were kinda holy animals in Ancient Egypt."
+    return
 
 #Eventual topics
 
