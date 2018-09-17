@@ -134,13 +134,13 @@ screen music_ui(p = 0):
         hbox:
             spacing 324
             
-            if music_list_len > 7:
+            if music_list_len > 8:
                 if page > 0:
-                    textbutton ("<") xpadding 0 xsize 48 keysym '8' action SetScreenVariable("page", page-1) #Previous Page
+                    textbutton ("<") xpadding 0 xsize 48 keysym 'K_LEFT' action SetScreenVariable("page", page-1) #Previous Page
                 else:
                     null width 48
                 if music_list_len >= (page+1) * 7:
-                    textbutton (">") xpadding 0 xsize 48 keysym '9' action SetScreenVariable("page", page+1) #Next Page
+                    textbutton (">") xpadding 0 xsize 48 keysym 'K_RIGHT' action SetScreenVariable("page", page+1) #Next Page
         
         hbox:
             spacing 100
@@ -166,6 +166,7 @@ screen minigame_ui():
 
 screen topic_ui(ss): #0 = questions, 1 = repeat, 2= feelings; #[TopicCategory] show the category
     default subscreen = subscreen
+    default page = 0
     
     style_prefix "choice"
     
@@ -193,8 +194,19 @@ screen topic_ui(ss): #0 = questions, 1 = repeat, 2= feelings; #[TopicCategory] s
                         textbutton i.name xpadding 10 action [Function(subscreen, i)]
                     textbutton _("Back") action SetScreenVariable("subscreen", 1)
             else:
-                for i in subscreen:
+                for i in subscreen[7 * page: 7 * page + 7]:
                     textbutton i.name xpadding 10 action [Function(subscreen, i)] text_italic not i.seen
+                hbox:
+                    spacing 324
+                    
+                    if len(subscreen.topics) > 8:
+                        if page > 0:
+                            textbutton ("<") xpadding 0 xsize 48 keysym 'K_LEFT' action SetScreenVariable("page", page-1) #Previous Page
+                        else:
+                            null width 48
+                        if len(subscreen.topics) >= (page+1) * 7:
+                            textbutton (">") xpadding 0 xsize 48 keysym 'K_RIGHT' action SetScreenVariable("page", page+1) #Next Page
+                        
                 textbutton _("Back") action SetScreenVariable("subscreen", 0)
         textbutton _("Close") action [Hide("topic_ui"), Jump("s_loop")]
 
