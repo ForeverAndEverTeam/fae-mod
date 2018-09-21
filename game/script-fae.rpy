@@ -9,7 +9,7 @@ init python:
     update_bg = False
     from_menu = False
     
-    #config.developer = True # I'm a god of this world too.
+    config.developer = True # I'm a god of this world too.
     
     def periodic_callback():
         global update_bg, from_menu
@@ -165,7 +165,7 @@ label s_intro:
     return
     
     
-label s_autoload:
+label s_autoload(test = False):
     $ s_name = persistent.s_name or "Sayori"
     $ gender = persistent.playergender
 
@@ -180,22 +180,22 @@ label s_autoload:
         if persistent.lastVersion != config.version:
             show sayori 7aaaa at ss1
             
-            s "Saluton, [player]!{#Don't translate}"
-            s "Ĉu vi ne remarkis ion novan?{#Don't translate}"
-            s 6acaa "OK, you may don't understand me now..."
-            s "I'm just learnt a new language. It is Esperanto."
-            s "You may think this language is pretty unactual now."
-            s "But I like the concept of the language: a pretty simple international language, made from other european languages."
-            s "To be honest, I don't make any effort to learn it..."
-            s "Seems, the modder just loaded it into my mind."
-            s 7aaaa "And I think you can do the same, if you know one more language. Just contact them."
-            s "And now, you can also tell me how much time you need to say something before I do it myself."
-            s "Just check the setting menu."
-            s "By the way, can I use the time just to look at you right now?"
-            s "I just want to take a little break."
-            s "Then, I'll tell you something anyway."
+            s "Hello, [player]!"
+            s 7aaca "The game had been a bit buggy for a pretty long itme but I've found a way to fix it."
+            s 7aaaa "I hope, I did all right this time."
+            s "I also added some new topics and one feature, that you'll like."
+            s "I've finally added the poem list, so you now can read any of my old poems again."
+            s 7aeca "But what's more, I'll use this menu also to share my new poems with you."
+            if "s_topics_hobbies_poems" in persistent.seen_topics:
+                s 7acaa "I've already told you about my new poems, haven't I?"
+                s 7aaaa "Anyway, I hope you'll like them too..."
+            else:
+                s "I hope you'll like them too..."
+            s 7acaa "And that you too have something good for me."
+            s 7aaaa "So tell me, if you really have."
             
-            $persistent.lastVersion = config.version
+            if not test:
+                $persistent.lastVersion = config.version
         elif persistent.lastLaunch and persistent.lastLaunch.date() != get_now().date():
             $renpy.call(first_greeting, get_time_of_day())
         else:
