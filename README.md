@@ -1,8 +1,9 @@
 # Doki Doki Literature Club "Forever & Ever"  
 *Note: don't clone the master branch to download the mod. Use a stable release instead!*  
+  
 **"Forever & Ever"** is a [Doki Doki Literature Club](http://ddlc.moe) mod providing you the ability to be alone with **Sayori**. This mod is designed like [Monika After Story](https://github.com/Monika-After-Story/MonikaModDev) but has a few differences to date, including the wonderful Sayori as the star of the show.  
 ## History
-After the release of [Monika After Story](https://github.com/Monika-After-Story/MonikaModDev), there were a few attempts to create similar mods for other DDLC characters. But nobody had published a _proper_ mod for Sayori, despite the new abilities she got at the end of the game. As a Sayori lover, I was strongly dissatisfied by the fake ["Sayori After Story"](https://www.reddit.com/r/DDLC/comments/8nviad/mod_release_sayori_after_story/) troll mod, so I decided to create a serious one for my beloved doki.
+After the release of [Monika After Story](https://github.com/Monika-After-Story/MonikaModDev), there were a few attempts to create similar mods for other DDLC characters. But nobody had published a _proper_ mod for Sayori, despite the new abilities she got at the end of the game. As a Sayori lover, I was strongly dissatisfied by the fake ["Sayori After Story"](https://www.reddit.com/r/DDLC/comments/8nviad/mod_release_sayori_after_story/) mod, so I decided to create a real one for my beloved 'doki'.  
 
 ## Features  
 As of now, I am trying to implement most of the MAS features, including player questions and mini-games (currently there's only Tic-Tac-Toe). The dialogue was written by me and is based on the original game story as well as Sayori's character and experiences (toning down the worst character traits, though).  
