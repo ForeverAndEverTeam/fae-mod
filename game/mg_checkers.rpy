@@ -208,9 +208,9 @@ init 10 python:
             if unb_lens[1] == 0:
                 return 2
             else:
-                return 1
+                return -1
         elif unb_lens[1] == 0:
-            return -1
+            return 1
         
         return 0
     
@@ -304,7 +304,7 @@ init 10 python:
                     checkers.atakes = []
                     checkers.state = checkers_check_state()
                     if checkers.state:
-                        renpy.call("renpy.mg_checkers_s_comment", checkers.state)
+                        renpy.call("mg_checkers_s_comment", checkers.state)
                     else:
                         renpy.call_in_new_context("mg_checkers_s_turn")
                     break
@@ -341,7 +341,7 @@ init 10 python:
         
         checkers.state = checkers_check_state()
         if checkers.state:
-            renpy.call("renpy.mg_checkers_s_comment", checkers.state)
+            renpy.call("mg_checkers_s_comment", checkers.state)
 
     
     def checkers_best_turn(party, depth = 1, eval = 0, last_turn = None, alpha = float("-inf"), beta = float("inf")):
