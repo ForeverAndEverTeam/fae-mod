@@ -201,6 +201,7 @@ label s_greeting_6:
     s "I was surfing the internet, when you came back."
     s "And to be honest, even it don't give me as much joy as you give."
     s "So I'm glad, you're back."
+    return
 
 #Special greetings
 
