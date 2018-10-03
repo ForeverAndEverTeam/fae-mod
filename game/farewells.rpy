@@ -8,7 +8,7 @@ label s_farewell:
     $ config.allow_skipping = True
     $ config.skip_indicator = True
     
-    call expression "s_farewell_" + str(renpy.random.randint(1, 8))
+    call expression "s_farewell_" + str(renpy.random.randint(1, 7))
     
     $persistent.lastLaunch = get_now()
     $renpy.quit()
@@ -57,14 +57,14 @@ label s_farewell_5:
 
 label s_farewell_6:
     show sayori 7aaaa at ss1 zorder 2
-    s "Bye, [palyer]!"
+    s "Bye, [player]!"
     s "Take care of yourself."
     s "I want you to come back later safe and sound."
     return
 
 label s_farewell_7:
     show sayori 7aaaa at ss1 zorder 2
-    s "See you later, [palyer]!"
+    s "See you later, [player]!"
     s "I wish you can give you a farewell kiss..."
     s "But I think it's enough, that you know I'd do it."
     return

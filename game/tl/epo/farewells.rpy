@@ -105,8 +105,8 @@ translate epo s_farewell_5_d542c3c8:
 # game/farewells.rpy:60
 translate epo s_farewell_6_46bff501:
 
-    # s "Bye, [palyer]!"
-    s "Ĝis, [palyer]!"
+    # s "Bye, [player]!"
+    s "Ĝis, [player]!"
 
 # game/farewells.rpy:61
 translate epo s_farewell_6_8d5cd57e:
@@ -123,8 +123,8 @@ translate epo s_farewell_6_8dfd748f:
 # game/farewells.rpy:67
 translate epo s_farewell_7_dbfb08d4:
 
-    # s "See you later, [palyer]!"
-    s "Ĝis la redivo, [palyer]!"
+    # s "See you later, [player]!"
+    s "Ĝis la redivo, [player]!"
 
 # game/farewells.rpy:68
 translate epo s_farewell_7_85353668:

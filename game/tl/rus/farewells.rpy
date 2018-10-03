@@ -115,8 +115,8 @@ translate rus s_farewell_4_26b90d04:
 # game/farewells.rpy:60
 translate rus s_farewell_6_46bff501:
 
-    # s "Bye, [palyer]!"
-    s "Пока-пока, [palyer]!"
+    # s "Bye, [player]!"
+    s "Пока-пока, [player]!"
 
 # game/farewells.rpy:61
 translate rus s_farewell_6_8d5cd57e:
@@ -133,8 +133,8 @@ translate rus s_farewell_6_8dfd748f:
 # game/farewells.rpy:67
 translate rus s_farewell_7_dbfb08d4:
 
-    # s "See you later, [palyer]!"
-    s "До свидания, [palyer]!"
+    # s "See you later, [player]!"
+    s "До свидания, [player]!"
 
 # game/farewells.rpy:68
 translate rus s_farewell_7_85353668:

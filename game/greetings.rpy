@@ -194,6 +194,7 @@ label s_greeting_5:
     s "You're my only friend now, you know..."
     s "And you also know how to cheer me up."
     s "Maybe, you'll do it now?"
+    return
 
 label s_greeting_6:
     show sayori 7aaaa at ss1 zorder 2
