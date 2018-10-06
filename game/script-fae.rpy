@@ -1,6 +1,7 @@
 default persistent.currentmusic = 0
 default persistent.playergender = None # False = male, True = female, None = unknown/other
 default persistent.playerbdate = get_now().date()
+default persistent.first_launch = get_now()
 
 default persistent.s_name = cur_lang().s_names[0]
 default persistent.talk_delay = 20
@@ -113,30 +114,7 @@ init python:
     random_topics_banned = None #None = non-banned, [timedate] = banned from
     
     ## New poems
-    poem_new_s1 = Poem(
-    author = "sayori",
-    title = _("Taste of the life"),
-    text = _("""\
-The universe gives fruits of life to all of us.
-They all have diverse size and shape.
-But no-one knows their real savor,
-Because of each feel them in their own way.
-
-One people feel them always bitter,
-Some of them, even if the fruit is of the best.
-Another ones feel them sweet and very tasty,
-Whatever fruits they have got.
-
-For me, they have the taste of liquorice.
-I needed time to understand how sweet they are,
-To get rid of those unpleasant feelings,
-Which I had got after the first bites.
-
-Now all I want is just to eat my own fruit
-With the person, who helped me catch the real taste.
-But I should not forget to do my real job here:
-To find a way to make others feel the fruits sweet.""")
-    )
+    
     
 default persistent.lastVersion = config.version
 
@@ -181,7 +159,7 @@ label s_autoload(test = False):
             show sayori 7aaaa at ss1
             
             s "Hello, [player]!"
-            s 7aaca "The game had been a bit buggy for a pretty long itme but I've found a way to fix it."
+            s 7aaca "The game had been a bit buggy for a pretty long time but I've found a way to fix it."
             s 7aaaa "I hope, I did all right this time."
             s "I also added some new topics and one feature, that you'll like."
             s "I've finally added the poem list, so you now can read any of my old poems again."

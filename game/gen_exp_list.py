@@ -5,7 +5,8 @@ file_list = (
     'farewells.rpy',
     'topics.rpy',
     'intro.rpy',
-    'script-fae.rpy'
+    'script-fae.rpy',
+    'poems.rpy'
 )
 extra_exp = ( #Add expressions from the Python scripts here
     '7aeaa',

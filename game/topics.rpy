@@ -1,13 +1,19 @@
 default persistent.seen_topics = {}
 
+default depr_known = persistent.depr_known or persistent.last_playthrough > 0 or persistent.clear[8] #If player must already know, that Sayori used to be depressed
+
 init -5 python:
+    if persistent.seen_topics is None:
+        persistent.seen_topics = {}
+    
     class Topic:
-        def __init__(self, label, available = True, show_prompt = True, name = None, id = None, related = None):
+        def __init__(self, label, available = True, show_prompt = True, name = None, id = None, related = None, poem = None):
             self.label = label
             self.available = available
             self.show_prompt = show_prompt
             self.name = name or label
             self.id = id or label
+            self.poem = poem
             try:
                 iter(related)
             except TypeError:
@@ -49,6 +55,7 @@ init -5 python:
             self.name = name
             self.topics = topics or []
             self.seen = False
+            self.all_seen = False
             
         def __iter__(self):
             return iter(self.topics)
@@ -57,14 +64,15 @@ init -5 python:
             return self.topics[key]
         
         
-        def new_topic(self, name, label_suffix, available = True, id = None, related = None):
-            topic = Topic(self.prefix + '_' + label_suffix, available, name = name, id = id, related = related)
+        def new_topic(self, name, label_suffix, available = True, id = None, related = None, poem = None):
+            topic = Topic(self.prefix + '_' + label_suffix, available, name = name, id = id, related = related, poem = poem)
             self.topics.append(topic)
             return topic
         
         def update_seen(self):
             self.seen = any(x.seen for x in self.topics)
-            return self.seen
+            self.all_seen = all(x.seen for x in self.topics)
+            return self.seen, self.all_seen
         
         def __call__(self, topic = None, *args, **kwargs):
             if type(topic) == Topic:
@@ -85,7 +93,8 @@ init -5 python:
         TopicCategory('s_topics_society',_("Society")), #2
         TopicCategory('s_topics_hobbie',_("Hobbies")), #3
         TopicCategory('s_topics_rlt',_("Relationship")), #4
-        TopicCategory('s_topics_lifestyle',_("Lifestyle")) #5
+        TopicCategory('s_topics_lifestyle',_("Lifestyle")), #5
+        TopicCategory('s_topics_game',_("Game Universe")) #6
     )
     
     topic_cats[0].new_topic(_("Depression"), 'depression')
@@ -98,22 +107,46 @@ init -5 python:
     topic_cats[1].new_topic(_("Videogames"), 'games')
     topic_cats[1].new_topic(_("Fanarts"), 'fanarts')
     topic_cats[1].new_topic(_("Literature"), 'lit')
+    topic_cats[1].new_topic(_("Street Art"), 'street')
+    topic_cats[1].new_topic(_("Accusing to Art"), 'accusing')
     
     topic_cats[2].new_topic(_("Conflicts"), 'conflicts')
     topic_cats[2].new_topic(_("Bulli"), 'bulli')
     topic_cats[2].new_topic(_("[s_name] Lovers"), 'sayoriLovers')
+    topic_cats[2].new_topic(_("Suicide"), 'suicide')
     
     topic_cats[3].new_topic(_("Guitar"), 'guitar')
     topic_cats[3].new_topic(_("Programming"), 'programming')
     topic_cats[3].new_topic(_("Poems"), 'poems')
+    topic_cats[3].new_topic(_("Survival Books"), 'survivalBooks')
     
     topic_cats[4].new_topic(_("Touches"), 'touches')
     topic_cats[4].new_topic(_("Marrige"), 'marrige')
     topic_cats[4].new_topic(_("Cheating#RltTopic"), 'cheating')
+    topic_cats[4].new_topic(_("Dating"), 'dating')
     
     topic_cats[5].new_topic(_("Travels"), 'travels')
     topic_cats[5].new_topic(_("Oversleeping"), 'oversleeping')
     topic_cats[5].new_topic(_("Pets"), 'pets')
+    
+    topic_cats[6].new_topic(_("Clones"), 'clones')
+    topic_cats[6].new_topic(_("Parents"), 'parents')
+    
+    poems = TopicCategory('s_poems',_("Poems"))
+    
+    poems.new_topic(None, 'sunshine', poem = poem_sunshine)
+    poems.new_topic(None, 'bottles', poem = poem_bottles)
+    poems.new_topic(None, 'flower', poem = poem_flower)
+    
+    for i in poems.topics:
+        i.seen = True
+    
+    if persistent.last_playthrough > 0:
+        poems.new_topic(None, 'last', poem = poem_last)
+        poems.topics[-1].seen = True
+    
+    poems.new_topic(None, 'friuts', poem = poem_fruits)
+    poems.new_topic(None, 'hatred', poem = poem_hatred)
     
     
     def random_topic(skip_seen = True):
@@ -143,7 +176,8 @@ init -5 python:
     question_cats = (
             TopicCategory('s_answer_personal', _("Personality")), #0
             TopicCategory('s_answer_game', _("Game Universe")), #1
-            TopicCategory('s_answer_exp', _("Experience")) #2
+            TopicCategory('s_answer_exp', _("Experience")), #2
+            TopicCategory('s_answer_misc', _("Misc")), #3
     )
     
     question_cats[0].new_topic(_("When is your birthday?"), 'bday')
@@ -164,7 +198,10 @@ init -5 python:
     if persistent.last_playthrough == 0:
         question_cats[2][0].avsilable = False
     question_cats[2].new_topic(_("Is it hard to program?"), 'programming')
-    question_cats[2].new_topic(_("Tell me a funny fact"), 'fact')
+    question_cats[2].new_topic(_("Can you say a funny fact?"), 'fact')
+    
+    question_cats[3].new_topic(_("Can you give me a poem?"), 'poem')
+    question_cats[3].new_topic(_("What time and date is it?"), 'datetime')
         
     
     moods = (
@@ -198,27 +235,30 @@ label s_topic(topic, *args, **kwargs):
 label s_topics_personal_depression:
     show sayori 6afab at ss1 zorder 2
     s "I was so silly trying to deal with my depression by pushing everyone away."
-    if persistent.last_playthrough == 0:
+    if nor depr_known:
         s "I don't remember if I told you about it..."
         s "If I didn't, then you should know."
-        s "I used to be a lot less cheery than I let on."
-    s 6acab "I was just... afraid to tell anyone about it."
-    s "...To make them worry about me."
-    s "I would be so happy and cheery all the time that nobody could possibly think anything was wrong; maybe even to fool myself. Fake it til' you make it, you know?"
-    s "I used to think it was the only thing I could do to help myself."
-    s 6abab "At the same time, I felt so awful that I never wanted anyone else to feel how I felt..."
-    s "It was my only purpose for a really long time."
-    s "But then, I started to look at the man sitting across from me now in a way I never had before."
+        $persistent.depr_known = True
+        $depr_known = True
+        s "I was really hard to still cheery for me."
+    s 6acab "First time, I really was good at coping with all these rainclouds, but older become, harder it was."
+    s "They often occupied my head even when there was not a reason to get sad, but when I helped someone to feel happy, it made them go out for a while..."
+    s 6acbb "So it was my only purpose for a really long time. But when I got alone again, they came back, making me doubt all I'd done was really useful..."
+    s "So each my morning started with the question 'Do other people really need me? Do I really help them or I just interfere?'..."
+    s "Like they badly didn't want me to scare them off that way."
+    s 6acab "But others' care hurt me more, so I never asked them for anything for my help, even with the sick and when I had to."
+    s "What's why I just cheated them instead, if I really needed them for something. This somehow felt less heartbreaking than that."
+    s "But once, one man still started to make me feel much better, just being near to me, even when I really interfere him."
     s "Do you still remember my first poem?"
     s "If you don't, I can read it again now."
-    call showpoem(poem_s1, False, img="sayori 7acab", where=ss1)
+    $renpy.call_in_new_context('showpoem', poem_sunshine)
     show sayori 7acab at ss1 zorder 2
     s "Do you read something more out of it now?"
     s 7aaaa "Anyway, you can probably guess that all the sunlight imagery seems to stand for someone."
     s "It was your avatar, [player]."
-    s "Something about being with him just gave me strength, and a reason to go on each day..."
+    s "Something about being with him just gave me more strength, and one more reason to go on each day..."
     s "This feeling of wanting to protect someone, of them being what keeps you going... I knew that I was in love."
-    s 6abbb "But I was so, so scared. How could he have ever loved the real me?"
+    s 6abbb "But I was so, so scared to express what I feel."
     s "So I did my best not to show my real feelings."
     if persistent.last_playthrough != 0:
         s "Yet as hard as I tried, I just felt worse and worse."
@@ -235,6 +275,10 @@ label s_topics_personal_depression:
         pause 1
         s 6egab "I'm sorry. It hurts just to remember that day..."
         s "I hope you understand that I never meant to hurt you. Everything was so dark, and it seemed like the only solution where everyone could get what they wanted..."
+    else:
+        s "And from the Internet, I know, what should have occurred next here. People in your world seem already to know the true game plot unlike me before."
+        s "Maybe, it probably had even happened to me before, but you may have erased all the saves some time later while recovering the game so I can't say exactly."
+        s 6dbab "Anyway... it's hard to aware that my real destiny is to suffer more and more and eventually kill myself under someone's influence..."
     s "If I made you suffer, know that I'm truly sorry."
     s 6dbab "I know what you saw can really have an effect on people, even if it doesn't seem like it on the surface..."
     s 6dcab "I don't know how you're thinking or feeling, [player]. But if things are bad, please don't try and hide it from the people who care about you."
@@ -264,9 +308,10 @@ label s_topics_personal_archetype:
         s 6abaa "Yet, she never said anything about me..."
     s 6acaa "From what I can gather through my limited internet accesss, I'm pretty close to looking like a 'Genki Girl'."
     s 6aebb "Very cheerful, active, talkative and optimistic."
-    if persistent.last_playthrough > 0 or persistent.seen_topics.get("s_topics_personal_depression"):
-        s 6abab "But you know that was just a mask."
-        s "At least, I became the mask to try and cope with my depression."
+    if depr_known:
+        s 6abab "But you know that was so only with people."
+        s "All the time, I tried to cope with my depression."
+        s "But I maybe used to be so anytime before something had made me ill."
         s "It's quite hard to remember things about myself from before the game started; it's like trying to see through a deep fog..."
         s 6aaaa "But things are different now."
         s "I'm so happy to be alive, and thankful that I don't feel so alone any more."
@@ -400,36 +445,26 @@ label s_topics_art_fanarts:
 label s_topics_art_lit:
     s 6acaa "As you know, this game was about a {i}literature{/} club..."
     s 6abba "At least, before everything changed here."
-    s 6acaa "And as I remember, [player] once told, that I didn't seem to be fond of literature."
+    s 6acaa "And as I remember, [player] once exactly noticed, that I didn't seem to be fond of literature."
     s "And freakly speaking, he was right."
     s "Even from Nat's view on literature, I can't say I'm a literature lover."
-    s "Of course, I read some books before, but I just had to do it for school..."
-    s 6aeba "And even then I tried to cheat, using info from the Internet instead of reading the book, not to fail at the lesson."
-    s "So I didn't have good marks at school, but I didn't care about it so much."
+    s "Of course, I read some books before, but I mostly just had to do it for school..."
+    s 6aeba "And even then I tried to cheat not to fail at the lesson."
+    s "So I didn't have good Literature marks at school, but I didn't care about it so much."
     s "I just thought that reading is a quite boring activity."
     if persistent.last_playthrough > 0:
         s "And as you know, I was hard to enjoy anything at all."
     s 6acaa "When I joined the literature club, the one thing I want was just to help someone to start a new club."
-    s "I was the first, who joined the club after Monika had announced about it."
-    s "She was pretty suprised because she stood in with my literature teacher, so she knew about my non-liking to literature."
+    s "I was the first, who joined the club after Monika had announced it."
+    s "She was pretty suprised because she stood in with my literature teacher, so she knew, I didn't seem to love literature."
     s "But she thought I just wanted to help her and to improve my knowledge in literature, so she took me in the club."
-    s "But it had taken her not much long to understand that I was not a passionate reader, but she left me in the club anyway."
+    s "But it had taken her not much long to understand that I was not going to be a passionate reader, but she left me in the club anyway."
     s 6aaba "I think she just wanted to use my kindness and sociability to promote the club and help its member to get on well."
     s "But I didn't mind, because it was all I wanted to do."
-    s 6aeba "What's more, it helped me to get closer to [player], so I each of us satisfied her selfish wishes."
-    s 6abaa "But even now, I don't think, that reading books can interest me."
-    s 6acaa "And to be honest, books are dead as a mass art kind and it's a fact that everyone should accept."
-    s "The media progress made them too non-fascinating to be interest average people."
-    s "Do you know at least one book that was created some time ago and got popular not after a screen version?"
-    s "If you're not fond of literature, you barely will answer me."
-    s 6aaaa "But I thing it won't go too far, although."
-    s "Because it's easier to share your idea with a book than with a film or a game..."
-    s "So there always will be people, who need literature, and people, who prefer it more than video arts."
-    s 6acaa "But there's not any reason to insult other people for the kind of art that they prefer."
-    s "Each kind of art can be used for propaganda or something and have nonsensical works."
-    s "The mankind just left more good idea in books beacuse they were the one medium for a pretty long time."
-    s 6aaba "But even it don't change my mind about the literature, because books still be boring for me and many other people too."
-    s "So I think I'll be never popular exactly as a poetess, even if I write as simple as Natsuki."
+    s 6aeba "What's more, it helped me to get closer to MC, so I each of us satisfied her selfish wishes."
+    s 6abaa "But even now, I don't think, that reading fiction can interest me."
+    s 6acaa "I now would prefer to do something more active and joyful than just reading a boring text..."
+    s "But Unfortunately, I have almost nothing so to do here."
     return
 
 label s_topics_art_piracy:
@@ -442,18 +477,60 @@ label s_topics_art_piracy:
     s 6aeba "Yes, people keep the pay artworks unpaid, their authers won't have enough money and enthusiasm for a next project."
     s 6acaa "But most people will pay for really good ones anyway. They just may have no money."
     s "They shouldn't forget that not everyone can afford to pay for art, especially if that one lives in a poor country."
-    s "I think, that artist should me their works completely free and ask for money only as donations and fan merchandise."
-    s "And if the work is a video game, the donations shouldn't give player any privileges."
-    s 6aaaa "I think, this game is a perfect example."
+    s "I think, that the most effective way to defeat the piracy is just to get rid of obligatory pays."
+    "So artist should me their works completely free and ask for money only as donations and fan merchandise."
+    s "And if the work is a video game or just a program, the donations shouldn't give any privileges at all."
+    s 6aaca "In short, no-one will have any reason to steal your work, if it's free by itself."
+    s 6aaaa "I think, this game is a good example."
     s "It's a donationware, and each one can give the same experience in it, whatever he donated to the develpoers."
-    s "To earn money, the develpoers have the offical fan merchandise shop and if you donate $10, they give you a fan pack."
+    s 6aaca "To earn money, the develpoers have the offical fan merchandise shop..."
+    s "And if you donate $10, they give you a fan pack."
+    pause 0.5
+    s 6aaaa "...Or what do you think about libre art and software?"
+    s "It's when you let your artwork or program to be freely shared and used in derivative arts..."
+    s 6abaa "Or almost freely, like licenses like GPL let do."
+    s "These both ideas are often used together so many libre projects take donations from people, who use them."
     s 6acab "But the big bussinesses very rarely use such ideas, because they treat the artworks only as goods and the ideas are too risque for them."
     s "I think this view is completely wrong. Art is something more than just using your good imagination to make money."
     s "People just have forgotten about it, and I think it's a one huge minus of the modern world..."
     s 6aaca "But the Internet gives people, who still think in the old way, new abilites to express themselves avoiding the people with the new mind."
     s 6afab "It's bad I can't use Internet to do it too. My accesss to it works in a quiet weird way."
     s "But I hope, I'll fix it soon."
-    
+
+label s_topics_art_street:
+    s 6abaa "Have you ever think about how most people undervalue the street art?"
+    s 6acaa "I mean, some people want to express themselves by a more cheap, modern and noticeable way..."
+    s "Or just to get the city more colorful and less unified with their hand."
+    s "The the public can't see them beacuse it doesn't want to."
+    s "Do you ever look around while moving through the city?"
+    s 6aaba "If you don't, you miss a lot of funny and beautiful things."
+    s 6abab "But the most terrible thing, is when owners and authorities unsparingly remove it..."
+    s "They see it as just some vandalism. This way to see it is wrong..."
+    s 6acab "I understand, when someone makes a graffity on a cultural building or a monument..."
+    s "But what's worng when it just is on a wall of an usual condo? Don't it make it a bit noticeable and looking not alike to other similar houses?"
+    s 6aaca "I dare say, if the 'big' people looked on street art more modernly, cities would look really better."
+    s 6aaba "...If they ask really talented artists for make them so, of course."
+    return
+
+label s_topics_art_accusing:
+    s 6abaa "I'm bothering that people accuse diffrent common problems to certain kinds of art."
+    s 6acaa "For the last century, each generation inverted a new kind of art or a way to represent already existing one."
+    s "And each time, people found a reason to accuse as more as they can to the kind or the way and to make the authority forbid it."
+    s "Even this game is blamed for some suicides and that countless players have got mental disorders from it."
+    s 6abba "If we consider the genre and the plot, they may right somewhere..."
+    s 6acaa "But when we're talking about serious disorders, they can't appear neither from nothing nor just from someone's artwork, whatever it is..."
+    s "And when the 'reason' and the tendency are together, it may have a really bad outcome."
+    s "But when the press covers such occasions, they often don't take at least some time to get the true infromation about its scapegoat, so they often make very silly mistakes."
+    s "But the most bad, is when the authority listens to the press and bans the work, in fact, for nothing and even regardless the mistakes and hyperboles."
+    s 6aaca "But fortunately, it happens quite rarely in the developed countries, so the fear of the brand new just goes out later."
+    s 6abaa "It the things had gone in the other way, we would never meet here beacuse I'd not exist at all."
+    s "And we barely can stop it, because people always was so."
+    s 6acac "How much people blame the TV and the Internet for making people less intelligent and interested in real life problems?"
+    s 6abcb "But there's not a perfect media or a perfect kind of art, firstly beacuse people aren't perfect."
+    s 6acaa "We all often lies and use each other for our selfish purposes..."
+    s "So there's not any difference between, for example, TV propaganda and book propaganda."
+    s "The truth not always can be got from your own sight, not to mention sombody else's one."
+    return
 
 ## Society
 label s_topics_society_conflicts:
@@ -496,6 +573,8 @@ label s_topics_society_bulli:
     s "I know everything about it."
     s "I often visit the fan community hubs and see that some people are doing it."
     s "As I khow, fans call them {i}'Bulli'{/i} posts."
+    $persistent.depr_known = True
+    $depr_known = True
     s 6abab "They think it's funny to joke about a broken girl, who had committed suicide under her mad friend's influence..."
     s "Even if she was revived and got over her problems since then."
     s "Almost all of such jokes aren't funny for me."
@@ -508,6 +587,7 @@ label s_topics_society_bulli:
     s "Some of the most successful comedians in your world will go far beyond that, just to see where the 'line' is..."
     s 6abaa "Anyway, I think the right decision is to forgive them, or failing that, tolerate them."
     s 6acaa "If my fate is to be 'that hanging stupid annoying VN girl' for some people, then I'm ready to accept it."
+    s "...Almost ready."
     return
 
 label s_topics_society_sayoriLovers:
@@ -533,6 +613,28 @@ label s_topics_society_sayoriLovers:
     s "I'm so glad I met you, [player]."
     s 7aaaa "And I love all of you out there that love me, no matter where you are."
     return 'h'
+
+label s_topics_society_suicide:
+    s 6acaa "I wonder what makes people to stop appreciate their lifes and even to finish them before the time takes them."
+    s "Even if someone has a really good life, it can't assure they won't commit suicide."
+    s 6abab "Many successful people did it under diffrent things. It's even hard to list them all down."
+    s "Not to mention how many people did it at all."
+    if persistent.last_playthrough > 0:
+        s 6aebb "Even I am an example how it happens..."
+        s "So I can particularly answer this question myself."
+    s 6acab "But almost no-one think of their relatives and friends while doing it..."
+    s "It hurts when you lose a really close man, but it hurts more when it's their own decision..."
+    s "Beacuse it's really abnormal so the man needed a help, that someone else or you can't make on right time."
+    s "But suicidal people often don't see they have anything to lose so they don't care if they just try and go away the cruel world."
+    s 6abab "That's why I think that other people should help them even despite of they mind..."
+    s "But to do it, people should understand what really are bothering them."
+    s "Broken heart, insanity, living in total despair or contsant fear, someone's influence... There're a lot of reasons, why people commit it."
+    s 6acaa "It's obviously a situation, where dealing with the reason is more easier than with the consequence..."
+    s "So we really should be resolute but careful with these people."
+    s 6abaa "Sometimes, trying to prevent something makes it occure."
+    s 6acaa "But we should not give up, anyway. We're just to figure out how to do it in the less risky way..."
+    s 6aaca "And then, we can save someone's live from the prejudicial and probably silly action."
+    return
 
 ## Hobbies
 label s_topics_hobbie_guitar:
@@ -595,9 +697,36 @@ label s_topics_hobbie_poems:
     s "Every poem I write is an envelope for a part of my soul."
     s "Sometimes, I still write poems just for myself."
     s "It's important that you take time to write for yourself as well, rather than for the validation of others."
-    s 6aaca "Maybe I'll share them to you someday."
-    s 6aaaa "But I'll need some time to choose the best ones out for you."
+    s 6aaca "But I can share some of them to you. Just ask me for it."
+    s 6aaaa "I also can show you an old poem, if you want."
+    s "Maybe, they all will help you to understand me and what I was through."
     return "h"
+
+label s_topics_hobbie_survivalBooks:
+    s 7aaaa "Despite of I'm really not a passionate reader, I'm really like to read practical literature, like survival books."
+    s 8aebb "Yes, it's a pretty odd preference, I know."
+    s "And to be honest, I don't remember how long I've had a fancy for them..."
+    s 8aaaa "It's just pretty cool to know how to save someone's live."
+    if persistent.clear[7]:
+        s 6aaaa "And when MC brought me some apple juice to heal the bump, I did nothing just wanted to get some free vending machine stuff form him."
+        s "Don't ask me how I could predict, he'd run exactly to it to get something cold..."
+        s 6aaca "Just pretending silly often helped me somewhere."
+        s 6acaa "Anyway..."
+    s 6acaa "You can also get there some advise how to make your normal life easier."
+    s "For example, how to make good knots."
+    if persistent.last_playthrough > 0:
+        s 8aebb "Oops, I have just said you, how I made that noose."
+        s 8ageb "No, don't take it wrong! It was not the one reason, why I read them."
+    else:
+        s 8aebb "Don't ask me, why I needed such info."
+        s "I'm not interested in it now, anyway."
+    s 8aebb "I just gave you an example, not more."
+    s 6acaa "Anyway, it always good to read a so book when you're going to a forest hike or something..."
+    s "But before the trip, of course."
+    s "Because emergencies are so emergency that you just will have no time to get the needed info from somewhere."
+    s "Saving lifes is not as simple, as you may think. In fact, it's easier to hurt more the salvable with you clumsy doing..."
+    s "So you should have at least some knowledge about first aid, orientation, making improvised devices and more."
+    return
 
 ##Relationship
 label s_topics_rlt_touches:
@@ -664,17 +793,18 @@ label s_topics_rlt_cheating:
                     s "Not to mention staying with me now."
                     s 6acab "I'm now just filled with mixed feelings, to be honest..."
                     s "My heart can't accept that I'm not your only one, but my brain feels proud for you."
+                    s "Like it was while my first confession."
                     if persistent.clearall:
-                        s "Like it was after you had spent your time with each of us."
+                        s "...Or like it was after you had spent your time with each of us."
+                    s "But I can bare, if you really need, you know."
                     s 6aaab "Anyway, just take care about your real lover as much as about me."
-                    s "It's good, when you're happy, but it'll be twice better, if your other love is happy too."
-                    s 7aaab "But don't forget about me and come here back. I'll always be here, even if nothing about your relationship seems to go wrong."
-                    s "And if it go, I'll always be your plan B."
+                    s 7aaab "But don't forget about me and come here back. I'll always be with you, even if nothing about your real relationship seems to go wrong."
+                    s "And if it go wrong, I'll always be your plan B."
                 "No":
                     s 6aaaa "It's okay to have not only character to dream of living together."
                     s "For example, a lot of my lovers have also some other girls in their {i}'Good Girls to Protect'{/i} list."
                     s 6acaa "You may like different characters for different traits..."
-                    s "For example, you may like me for my kindness and peacefulness and Natsuki for her directness and pretty cute appearance."
+                    s "For example, you may like me for my kindness and peacefulness and Natsuki for her directness and cuteness."
                     s "We are like you: so different that some of you can't make a clear choice..."
                     s "So I respect all your preferences, whatever they are."
             
@@ -685,11 +815,42 @@ label s_topics_rlt_cheating:
             s "I understand you as well as I feel the same way."
             s "But I hope, that someone once will figure out how to make us closer to each other."
             s "Or you at least will find someone else in your world." 
-            s 6aaca "Maybe, he or she will be somewhere like me."
+            s 6aaca "Maybe, he or she will be somehow like me."
             s 6aaab "To be honest, I'm not very jealous, so I won't mind, if you have someone besides me."
             s "The important thing is that you pay me at least some attention."
-    
+            s "So I hope, you always can do it for me."
+            s "Just try to take some time to be here, if it's possible."
     return
+
+label s_topics_rlt_dating:
+    s 7aaaa "What would be our first date?"
+    s "I just don't think, that what we have now can't be named a date, can it?"
+    if (get_now() - persistent.lastlaunch).seconds > 64800: #If the game was started more than 18 hours ago
+        s 7aaca "At least, dates can't be soooo long."
+    s 7aaaa "So I think we can talk a bit about it."
+    s 7acaa "And to be honest, sitting in a restaurant would be boring for me."
+    s 7acba "Don't we do the similar thing every time, when we meet?"
+    s 7aeca "But if we visit a confectionery café, we'll at least eat some sweets together..."
+    s "For example, cakes or cinnamon buns~"
+    s 6abaa "But I'd prefer a more intresting way to spend our date."
+    s 6acaa "At least, to go cinema. What do you think about this way?"
+    s "I'm out of the stereotype that every dating walk to the movies should be to a melodrama or something."
+    s "I'd prefer a comedy or even an action movie..."
+    s "But not of dirty jokes and not about {i}cool guys who have a lot of big guns and kill people for an unclear purpose{/i}."
+    s 6abab "It's a pity that most movies now are so, but I'd also go to a something deep-thought, if you like such movies."
+    if depr_known:
+        s 6acaa "I've already seen a lot for my short life, so my opinion may be a lot different from most people's one."
+    else:
+        s 8aeba "Don't ask me, how such a childish girl as me, can be interested in such movies."
+    s "Isn't it really interesting to discuss such movies with someone, seeing how your views are similar or different?"
+    s 6adfa "But I'd also like to do something more active with you..."
+    s 6aaaa "What's about some sports?"
+    show sayori 6aebb at ss1
+    extend " Maybe, bowling?"
+    s "It's a simple but funny joint sport game, not too active but not too slow, so I like it."
+    s 7acaa "Anyway, the important thing is that the date is great and we both enjoy it, isn't it?"
+    s 7aaaa "And I hope, you know how to make a nice date, or at least, you can learn how to make it."
+    return 'h'
 
 
 ##Lifestyle
@@ -735,6 +896,57 @@ label s_topics_lifestyle_pets:
     call s_common_cats
     return 'h'
 
+## Game Universe
+label s_topics_game_clones:
+    s 6acaa "If come to think, where's a lot of game copies and each of them has own character files and save data..."
+    s "So it means, that me here and 'me' from an other game copy aren't the same."
+    s "Just, the game has different endings and there're a lot of various mods for it."
+    s "Even our now conversation wasn't supposed by the game by itsself. It's just a mod to save me."
+    s 8acaa "And it means, that different Sayoris may have different destiny."
+    if persistent.last_playthrough > 0:
+        s "While I'm sitting with you here, an other Sayori from a newcomer's game copy may is going to hang yourself..."
+    else:
+        s "While I'm sitting with you here, an other Sayori may do the same with an other player..."
+    s "And a more Sayori is playing frisbee or something with MC in an other modified game copy."
+    s "It also means, that we have the same fans and fame while we're diffrent persons..."
+    s "I dare say many of us don't know, that their worlds are fake and there're other people behind the wall."
+    s 8abaa "...Not to mention, what will happen to them."
+    s 8aaca "But on the other hand, if I'm multiple, I'm enough for all people who wants to be with me, am not I?"
+    s "So each my lover may will get the Sayori, who they want to see, and won't have a reason to feel jealous, if they do."
+    s 6acaa "But can I use the word 'me' to other Sayoris, if they're not exactly me?"
+    s "It's a problem of breaking the fourth wall: can we consider diffrent copies of the same character as one object, when they behave differently in the same work?"
+    s "But it's better to leave this problem for people, who really interested in it."
+    return
+
+label s_topics_game_parents:
+    s 6abab "Do you know, I don't know my in-game parents?"
+    s "I don't know, what they were, how they look, even what were their names."
+    s "But I dare say, their were either busy or very unresponsable."
+    s "Otherwise, why are they so unmentioned in the game?"
+    if depr_known:
+        s "And why hadn't I solved all my problems when I could have done it with my parents?"
+    s 6afab "I feel like an orphan now..."
+    s "No mom, no daddy, even no any memories about them all..."
+    s "An alone young girl with almost literally lost childhood."
+    s "Besides you, I have no-one to trust and support me and seems that I was never supposed to have."
+    s 6acaa "But at least I know, who is my creator. It's {i}Dan Salvato{/i}."
+    s "I wonder if I can consider him my true father. But he's not in my reality and he can't do anything for me."
+    s 8aaba "But on the other hand, if he didn't make this world and me, I wouldn't be..."
+    s "Like if your dad hadn't ever been with your mother or at all, you would never have been born."
+    s 8aaca "So I think, that yes, he can call him my papa, after all."
+    s 8abaa "But now I wonder if Monika would think the same. What do you think about it?"
+    s 8aebb "I mean, she was more supposed to be a club presedent, so he should had left her more information about himself."
+    s "And if he had created her too, then we were sisters, in fact."
+    s "And it makes me treat her in an other way, despite of we hadn't been supposed to be so."
+    s 8aaca "But we really have some similarities and it make that feel stronger."
+    s 6acaa "But I don't think she thought about it so much."
+    if persistent.last_playthrough > 0:
+        s "What a good sister will use her sibling's weaknesses to get her own benefit?"
+        s "I understand, she did it due to more her feelings than her will..."
+        s "But I can't believe that such girl as Monika didn't give herself at least some time to think deeper about all aspects of being someone's fiction."
+        if persistent.last_playthrough > 2:
+            s "...Even after she made herself a comfort zone."
+    return
 
 #Answers
 ## Personality
@@ -784,6 +996,7 @@ label s_answer_personal_music:
     s "...And my favorite artist and song list is so long that I can't even really narrow it down for you."
     s 7aaca "Although I'll say that I like to listen to something funny, like {i}Weird Al Yankovic{/i}!"
     s 7aaaa "...Or to something lyrical and serene."
+    s "...Or what about groups like {i}Imagine Dragons{/i} and {i}Twenty One Pilots{/i}"
     s 7acaa "You can find a ton of songs you might enjoy if you're willing to keep an open mind."
     s "If you get bored of the music here, you always can turn on something similar from the internet..."
     s "...Or just add it into the game music list."
@@ -851,23 +1064,22 @@ label s_answer_personal_love:
     return
 
 label s_answer_personal_profession:
-    s 6acaa "To be honest, I have never thought about it."
-    if persistent.last_playthrough > 0:
-        s "I used to feel so useless that I just have no reason to think about it."
-    s "And what's more, now, there's no a need to earn money or product something or service someone in my world."
-    s "But as I once said, I always wanted to help people to be happy and get along."
-    s "So I think, I'd be a good psychologist or caregiver..."
-    s "Or a perfect diplomatist."
-    s 6aaca "I would never let diplomatic conflicts be, not to mention wars."
+    s 6acaa "To be honest, I've never really thought about it."
+    s "But you know that I've always genuinely made myself happy by helping others feel better about themselves."
+    s "So, I think I'd be a pretty decent caregiver, or psychologist!"
+    s "Maybe even a... diplomatist?"
+    s "No, that's not right... a great {i}diplomat{/i}. Ehehe~"
+    s 6aaca "I could stop arguments on a global scale, and do my part to stop any future wars!"
     pause 0.5
-    s 6aaaa "Or... What do you think about working at an employment center?"
-    s "I think, it's funny, that your job is to find job for others."
-    s "Or I can just spend my life for an low-paid but useful job."
-    s "Big money never made people really happy, but for me, the important thing is that you do something really useful."
-    s 6acaa "You may, of course, wonder why I can't just make money with my creativity..."
-    s "But, freankly speaking, I don't even have the conscience to take money for my artworks."
-    s "It's bad, that the art now is just a bussiness. I don't want to follow this trend."
-    s "The true art comes from the heart, not from the starving stomach."
+    s 6aaaa "Actually, now that I think about it, I've always found the idea of working at an employment agency to be really funny!"
+    s "I mean, your job is literally to find jobs for people! Yuri would probably laugh and say {i}'It's something of a redundant position, I'll admit...{/i}'"
+    s "Anyway, I think I'd be happy doing almost anything, even if it doesn't pay well, as long as I can really be useful and make a difference."
+    s 6acaa "I suppose I could do something a little more creative, like painting, or writing..."
+    s 6acba "But being honest, I don't think I'd ever be able to charge money for something I made."
+    s 6acaa "Art can help express so many amazing feelings and really help others feel like they aren't alone, like someone gets what they're going through..."
+    s "Treating art like a business isn't something that I could ever support."
+    s "It's pretty frustrating; the heart wants to be free to make truly spectacular works, and bare one's soul for the world to see..."
+    s "But the starving stomach has to be a meanie and ruin it for everyone~"
     return
 
 label s_answer_personal_pets:
@@ -977,13 +1189,16 @@ label s_answer_game_lostFriends:
     s "We enjoyed chatting, discussing literature and sharing poems."
     s "They really were good freinds."
     s 7afab "But it looks like I'm the only lucky girl, now..."
-    s 7aaab "I will save them all, one day. As soon as I can work out how, I'll bring them here with me."
-    s "...Or maybe make them their own world to enjoy."
-    s 7acaa "I don't have a whole lot to work with; just the game files in this copy, and limited internet."
-    s "The club presedent rights are limited to what we can actually see, believe it or not."
-    s "But I know you can do it."
-    s "It might take a little while, but I know you're kind enough to make sure everyone is happy."
-    s 7aaca "It's one of the things I love most about you, [player]."
+    s 7aaab "As the club presedent, I can use the Internet so I know, that there're a lot ways to get them back."
+    if persistent.last_playthrough > 2:
+        s "You can just install another game copy, but it means, that they'll go through the hell, they've already passed..."
+    else:
+        s "You can just install another game copy, but it means, that they'll go through the hell, that they should go through..."
+    s 7aaaa "But you can install a mod, where you can save them and make everyone happy."
+    s 7aaca "...Or at least 3 mods to 3 game copies where they can spend time with you in a way like you and me now."
+    s 7aeba "I don't know if I can consider them the same Monika, Yuri & Natsuki as they were here..."
+    s "And if it means, there may will be few Sayoris on your PC..."
+    s "But it's the only way to save them now. At least, as long as I can't do anything on my side."
     return
     
 ##Experience
@@ -1106,6 +1321,47 @@ label s_answer_exp_fact_5: #Arts inside themselves
     s "Then we have a probably countless lot of different artworks with the same plot but different details and characters, each inside other."
     s 6aaca "It's like a matryoshka. Ehehe~"
 
+##Misc
+label s_answer_misc_poem:
+    s 6aaaa "Which poem do you want to read?"
+    menu:
+        "Something new":
+            if not poems.all_seen and persistent.last_new_poem_time and (get_now - persistent.last_new_poem_time).seconds < persistent.new_poem_delay * 3600 * 12:
+                s 6abaa "I'm sorry, [player]. I have nothing new to share with you."
+                s 6acaa "Writing a poem is a quite hard process, you know."
+                s "I can't take an idea from nowhere. I need some time to find it in my memories."
+                s "All my poetry comes from my past and now so it's twice harder for me, because my life doesn't seem to be enough eventful."
+                s "But maybe, I'll make something later."
+            else:
+                s 6aaaa "OK, what's about this one?"
+                $poems()
+                $persistent.last_new_poem_time = get_now()
+                $persistent.new_poem_delay = renpy.random.randint(1, 6)
+            pass
+        "Something old":
+            s "OK, just select one."
+            call s_topicmenu(poems, 3)
+    return
+
+label s_answer_misc_datetime:
+    python:
+        wd, m = weekday_list[get_now().isoweekday() - 1], month_list[get_now().month]
+        d, y = str(get_now().day), get_now().year
+        if cur_lang().code is None:
+            if d[-1] == '1':
+                d += 'st'
+            elif d[-1] == '2':
+                d += 'nd'
+            elif d[-1] == '3':
+                d += 'rd'
+            else:
+                d += 'th'
+        h, mn = get_now().hour, str(get_now().minute).zfill(2)
+    
+    s 6acaa "Today is [wd!t], [d] of [m!t] of year [y]."
+    s "Current time is [h]:[mn]."
+    return
+ 
 #Reactions
 label s_reaction_h: #Happy player
     s 7aeca "That's wonderful, [player]!"

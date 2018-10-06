@@ -164,8 +164,9 @@ screen minigame_ui():
         
         textbutton _("Close") action [Hide("minigame_ui"), Jump("s_loop")]
 
-screen topic_ui(ss): #0 = questions, 1 = repeat, 2= feelings; #[TopicCategory] show the category
+screen topic_ui(ss, cat = 0): #0 = questions, 1 = repeat, 2= feelings, 3 = poetry; #[TopicCategory] show the category
     default subscreen = subscreen
+    default cat = cat
     default page = 0
     
     style_prefix "choice"
@@ -176,38 +177,43 @@ screen topic_ui(ss): #0 = questions, 1 = repeat, 2= feelings; #[TopicCategory] s
         
         if subscreen == 0:
             for i in question_cats:
-                textbutton i.name action SetScreenVariable("subscreen", i)
+                textbutton i.name action [SetScreenVariable("subscreen", i), SetScreenVariable("cat", 1)]
             textbutton _("Back") action [Hide("topic_ui"), Jump("s_talkmenu")]
         elif subscreen == 1:
             for i in topic_cats:
                 if i.name and (config.developer or i.seen):
-                    textbutton i.name action SetScreenVariable("subscreen", i)
+                    textbutton i.name action [SetScreenVariable("subscreen", i), SetScreenVariable("cat", 1)]
             textbutton _("Back") action [Hide("topic_ui"), Jump("s_talkmenu")]
         elif subscreen == 2:
             for i in moods:
                 textbutton i[0] action [Function(renpy.call, "s_react", i[1])]
             textbutton _("Back") action [Hide("topic_ui"), Jump("s_talkmenu")]
         else:
-            if subscreen in topic_cats:
-                for i in subscreen:
+            if cat == 0:
+                for i in subscreen[7 * page: 7 * page + 7]:
                     if config.developer or i.seen:
                         textbutton i.name xpadding 10 action [Function(subscreen, i)]
-                    textbutton _("Back") action SetScreenVariable("subscreen", 1)
-            else:
+            elif cat == 1:
                 for i in subscreen[7 * page: 7 * page + 7]:
                     textbutton i.name xpadding 10 action [Function(subscreen, i)] text_italic not i.seen
-                hbox:
-                    spacing 324
-                    
-                    if len(subscreen.topics) > 8:
-                        if page > 0:
-                            textbutton ("<") xpadding 0 xsize 48 keysym 'K_LEFT' action SetScreenVariable("page", page-1) #Previous Page
-                        else:
-                            null width 48
-                        if len(subscreen.topics) >= (page+1) * 7:
-                            textbutton (">") xpadding 0 xsize 48 keysym 'K_RIGHT' action SetScreenVariable("page", page+1) #Next Page
-                        
-                textbutton _("Back") action SetScreenVariable("subscreen", 0)
+            elif cat == 3:
+                $lc = cur_lang().code or 'eng'
+                for i in subscreen[7 * page: 7 * page + 7]:
+                    if i.seen:
+                        textbutton (i.poem.title.get(lc) or i.poem.title['eng']) xpadding 10 action [Function(subscreen, i)]
+            
+        hbox:
+            spacing 324
+            
+            if type(subscreen) != int and len(subscreen.topics) > 8:
+                if page > 0:
+                    textbutton ("<") xpadding 0 xsize 48 keysym 'K_LEFT' action SetScreenVariable("page", page-1) #Previous Page
+                else:
+                    null width 48
+                if len(subscreen.topics) >= (page+1) * 7:
+                    textbutton (">") xpadding 0 xsize 48 keysym 'K_RIGHT' action SetScreenVariable("page", page+1) #Next Page
+        if type(subscreen) != int and cat < 3:
+            textbutton _("Back") action [SetScreenVariable("subscreen", cat), SetScreenVariable("page", 0)]
         textbutton _("Close") action [Hide("topic_ui"), Jump("s_loop")]
 
 screen pinfo_ui(): #Player info screen
@@ -288,11 +294,11 @@ label s_musicmenu(page = 0):
     call screen music_ui(page)
     jump s_loop
 
-label s_topicmenu(subscreen = 0):
+label s_topicmenu(subscreen = 0, t = 0):
     $show_s_mood(ss2, True)
     hide screen feat_ui
     hide screen talk_ui
-    call screen topic_ui(subscreen)
+    call screen topic_ui(subscreen, t)
     jump s_loop
 
 label s_gamemenu():
