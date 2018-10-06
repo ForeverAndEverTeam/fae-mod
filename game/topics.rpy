@@ -145,7 +145,7 @@ init -5 python:
         poems.new_topic(None, 'last', poem = poem_last)
         poems.topics[-1].seen = True
     
-    poems.new_topic(None, 'friuts', poem = poem_fruits)
+    poems.new_topic(None, 'fruits', poem = poem_fruits)
     poems.new_topic(None, 'hatred', poem = poem_hatred)
     
     

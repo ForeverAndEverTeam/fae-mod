@@ -585,7 +585,7 @@ label s_poems_last:
 
 label s_poems_fruits:
     call showpoem(poem_fruits)
-    s 6acaa "This poems is about how diffrent people see the world and the life diffrently."
+    s 6acaa "This poems is about how different people see the world and the life diffrently."
     s "As you know most people can be divided into pessimists and optimists..."
     s "The first see many things negatively so they're just viewers of the boring and meaningless show..."
     s 6aaca "While the second see the things in the opposite way so they hope that everything goes to be okay, even if it doesn't seem so."
