@@ -421,7 +421,7 @@ You just see nothing in the eyes of the dead past me."""
 За что я вами нелюбима?
 За то, что от своих проблем я до последнего скрывалась?
 За что я вами нелюбима?
-За то, что я то слишуом глупой, я слишком хитрой я казалась?
+За то, что я то слишком глупой, я слишком хитрой я казалась?
 
 За что я вами нелюбима?
 За апатичную неуклюжось?
@@ -455,15 +455,245 @@ Kial vi tiel min malamas?
 Tamen, mi pensas, ke vi eble tiel min malamas,
 Nur ĉar ne vidas ion ajn vi en la vizaĝ\' de l\' morta mio."""
 
-#Friend (by AlexanDDOS)
-    poem_goddess = Poem(
-        author = "sayori",
-        title = "Friend",
-        text = """\
-She set the whole world on great fire.
+#Falling Angel (By AlexanDDOS)
+    poem_angel = Poem(
+    author = "sayori",
+    title = "Falling Angel",
+    text = """\
+I'm sorry for the greatest sin of me.
+I used to think, it's the thing, that I really need.
+I just wanted to be beloved, but I became a falling angel.
 
-"""
+An angel with geen eyes from the envy,
+
+An angel with big black angel wings,
+
+An angel with the uncontrolable god power,
+
+An angel who had been supposed to care
+
+    her murder victims.
+
+Now I deserve to lie in the rough buring ground
+For all the pain, I've made for all my freinds.
+The pain that was felt around their narrow necks.
+The pain of three deep bloddy stabs.
+
+
+The pain, that I've got back into my broken heart.
+
+
+Delete my files two more times.
+Cut me up. Beat me up for my misdeed.
+Hang me. Make your fair vengeance.
+Is it not what you want to do with me after all?"""
     )
+    
+    poem_angel.title['rus'] = "Падший ангел"
+    poem_angel.title['epo'] = "Falinta Angelo"
+    
+    poem_angel.text['rus'] = """\
+Прости меня за грех ты мой.
+Я думала, что будет лучше так.
+Хотела стать тобой любимой.
+А в итоге, ангелом падшим стала я.
+
+Ангелом с изумрудными ревнивыми глазами,
+
+Ангелом, чьи крылья черней, чем у чертей,
+
+Ангелом, из возомнивших себя вдруг богами,
+
+Ангелом, что должен был хранить
+
+    своих убитых им же друзей.
+
+Сейчас за дело я впечатана прям в землю
+За всю ту боль, что причинила я друзьям.
+За боль, что обвивала шею.
+За боль, причинённую ударами ножа.
+
+
+За боль, что в седрце мне тобой разбитое,
+Поникла, всё окончательно сломав.
+
+
+Сотри мой файл ещё ты дважды.
+Избей меня за этот грех и четвертуй.
+Повесь меня, выбей мои зубы
+За то, что всем я выбила их, дорогой."""
+
+    poem_angel.text['epo'] = """\
+Pordonu min pro la plej ega pek' de mi.
+Mi pensis, ke mi vere volas ĝin.
+Diziris mi esti amata de vi,
+Sed angelo falinta fakte iĝis mi.
+
+Angelo kun ĵaluzaj verdokuloj,
+
+Angelo kun par' da nigraj aloj,
+
+Angelo kun fiigaj egaj fortoj,
+
+Angelo, kiu murdis siajn savendojn.
+
+Do nun mi indas kuŝi sur la akraj ŝtonoj,
+Pro la dolor', kiun mi faris al miaj amikoj.
+Pro la dolor', estinta ĉe iliaj stretaj koloj.
+Pro la dolor' de tri intensaj mortaj pikoj.
+
+
+Kaj ĉi-dolor', nun estas en mia disrompita de vi kor'.
+
+
+Do vi forigu mian dosieron ree duoble.
+Do vi min batu kaj trapiku min.
+Do vi pendumu min pro ke ŝi sin pendumis.
+Ĉu tion ĉi post tio indas mi?"""
+
+
+    # A Leaf
+    poem_leaf = Poem(
+    author = "sayori",
+    title = "A Leaf",
+    text = """\
+I'm a leaf in the wind
+In the wind of my belief
+In that my life is not vain,
+And that my real fate
+Is to give to the world
+As much as a I can give
+As a flying old leaf,
+As an useless former part of a big tree.
+
+I'm flying with fast air streams,
+Feeling the strength the belief wind
+But always falling down slowly
+Due to the hardness of my hopeless existance.
+
+But once the life wind
+Suddenly stops
+I have now nothing to prevent the free fall.
+So I'm getting close to lifeless asphalt
+And feel its rough dark-grey surface.
+
+It's all. It is my end. 
+I'll rot even without giving any flower
+At least some mine power
+To continue its so meaningful existance in this world.
+
+But what is that? Is it a brand new wind
+That will make my life poem moving again?
+Yes, it is that! It is my salvation!
+I feel, how it helps me to win the ruthless gravity.
+
+I'm up again! I'm flying again!
+I even feel I have more powers
+Like I can reach the top of Everest,
+Like I can be more than just a half-dead leaf."""
+    )
+    
+    poem_leaf.title['rus'] = "Листок"
+    poem_leaf.title['epo'] = "Foliaĉo"
+
+    poem_leaf.text['rus'] = """\
+Я лишь листок, что на ветру,
+Что на ветру надежды,
+Надежды в то, что жизнь дана ему
+Чтоб быть хотя чем-то для других полезным.
+
+Лечу вперёд, но постепенно вниз
+Под тяжестью непредсказуемого бытья.
+Но вдруг порыв, ержавший меня за низ,
+Спал, уравнив меня.
+
+И вот я падую на асфальт,
+Целую его тёмно-серую поверхность.
+Думала, что всё, закат:
+Я сгину, так и не сделав для какого-то цветка полезность.
+
+Но вдруг внезапно ветер новый
+Меня ввысь с лёгкостью поднял,
+Давая напрвление и энергии новой
+Для жизни и жизни моего стиха.
+
+Теперь я чувствую себя гордой птицей
+Той, что летает где-то высоко в горах.
+Такое просто не могло мне сниться
+Не вижу впредь себя в тёмных тонах."""
+    
+    poem_leaf.text['epo'] = """\
+Mi estas nur enventa foliaĉo,
+Mi estas en la vento de
+La kredo je ke vivas mi ne vane,
+Kaj ke mia vera destin'
+Estas nur doni al la naturo ĉion,
+Kion nun povas al ĝi doni
+Fluganta olda foliaĉ'.
+
+Mi flugas per rapidaj aerofluoj,
+Sentante na mia kreda vent'.
+Sed ve, mi ankaŭ ete falas
+Pro l' pezo de mia nevolata pek'.
+
+Kaj foje mia vivovento
+Sudite iĝas kruela kalm'.
+Do mi ne tenata de iu
+Ekfalas sur grizan teron.
+
+Ĉio finiĝis. Nenio daŭros. 
+Mi putros eĉ ion ajn ne donate
+Al iu malprokisma floro
+Por daŭrigi ĝin ekziston
+En ĉi tiu kruela aĉa mond'.
+
+Sed kion sentas? Ĉu estas ĝi novvento?
+Ĉu ĝi malhaltos na la senfifa vivovers'?
+Jes, mi divenis prave! Ĝi min tuj savos
+De l' manoj de la avida fialtir'!
+
+Kaj ree estas mi super la tero,
+Plenita per viglega energi',
+Kun kiu mi finfine fartas
+Pli ol preskaŭ morta arbfoli'."""
+
+    # Prose Poem
+    poem_prose = Poem(
+    author = "sayori",
+    title = "Prose Poem",
+    text = """\
+I am black light. I am cold fire. \
+I'm a peaceful fighter. I'm a naive wise man. \
+why people think, that opposites can't be together in the same thing? \
+Can't they all see, that everything and everyone is only grey? \
+Even this text is both a prose and poem. \
+Even I used to be a mix of joy and crippling sadness. \
+And there's no anything absolutely black \
+like there is not the absolutely white."""
+    )
+    
+    poem_prose.text['rus'] = """\
+Я — тёмный свет, я — огонь прохладный, \
+я — глупый гений, я — щедрый эгоист. \
+И что же люди сильны так в вере крепкой, \
+что антиподы не могут одним целым быть? \
+И этот в прозе стих — лишь одно из потверждений, \
+на ряду с моим прошедшим горько-сладким бытие, \
+того, что цвет всего и вся — лишь только серый, \
+и что абсолютной черни, как и бели, нет."""
+
+    poem_prose.text['epo'] = """\
+Mi estas nigra blankulo. Mi estas malvarmega farj'. \
+mi estas ankaŭ malsaĝa saĝulo, kaj estas malavara avarul'. \
+Kaj kial oni konsideras, ke l' maloj neniam estas en la sama afer'? \
+Ĉu ili vidas, ke ĉio en la mondo estas nur grizaĵoj? \
+Eĉ ĉi-versaĵo ankaŭ estas en la mala proz'. \
+Kaj eĉ mi estis antaŭe mikson de la ĝoj' kaj ĝia malo. \
+Do mi nun diras, ke absoluta nigro neniam estas, kvazaŭ absolute plena blank'."""
+
+    poem_prose.title['rus'] = "Стихопроза"
+    poem_prose.title['epo'] = "Prozversaĵo"
+
 
 
 screen poem(currentpoem, paper="paper"):
@@ -532,7 +762,7 @@ label s_poems_sunshine:
     if persistent.last_playthrough > 0:
         s 6acaa "And if come to think, didn't exactly {i}you{/i} save me after all?"
     s 6acaa "And if {i}you{/i} couldn't take some choices instead of him, could I have at least some more time with him?"
-    if persistent.clear_all:
+    if persistent.clearall:
         s "And what's more, didn't exactly {i}you{/i} do the same with other girls?"
     s 7aaca "So now, {i}you{/i} are that one and I hope, you're still so careful and nice like you was~"
     return 'h'
@@ -592,7 +822,7 @@ label s_poems_fruits:
     s 6aaaa "I always was between these 2 sides but now I'm much more the second than the first."
     s "For me, the best view is not on any of the sides, because there're a lot of bittersweet things..."
     s 6acaa "But if someone feel them too bitter, it's always better to help them feel sweeter, so I had did it with others..."
-    s "And I'd do it now, if I didn't get this quite lonely and isolated place."
+    s "And I'd do it now too, if I didn't get this quite lonely and isolated place."
     return
 
 label s_poems_hatred:
@@ -613,3 +843,53 @@ label s_poems_hatred:
     s "But the one thing we can do now is just to hope they I'll do that sooner or later."
     return
 
+label s_poems_angel:
+    call showpoem(poem_angel)
+    s 6acaa "I tried to write a Monika poem: as freeform and about you as she liked to write."
+    s "And I think, she'd write exactly something similar to you after deletion of her, if she had enough time."
+    s 6acab "Honestly, I'm really sorry for her."
+    s "She just wanted to be with you, but it costed all of her friends..."
+    s "And she really regreted for her betrayal after your trick with her character file."
+    s "The creator had given her a club of really talented and beautyful people..."
+    s "But she set everything on fire, even despite of she actually never wanted to do it."
+    s 6aaab "So I hope, you have already forgiven her for the misdeed."
+    s "In the end, I'm with you here, not deleted or in the noose."
+    s "And if she had never eliminated me, I'd have never changed."
+    s 6aaca "So she eventually made me better, while she tried her best to make me worse."
+    s 8aebb "I don't know, if it's good that she is not in this game copy anymore..."
+    s "And whether she would apologize to other girls or at least to me."
+    s 8acab "But I know, she felt very sorry for everything she had done..."
+    s "Although, it had been not only her will..."
+    s 8aabb "Have I already told you there've been a thing, that's made the presedent to fall in love for the player?"
+    s 8adaa "The creator may had made this thing to make all happen as it occured."
+    s 8aebb "But I can't blame him too: he just wanted to make a weird game and it's the original propose of this world..."
+    s "So its quite silly to blame someone for the deed, that's the reason why your world exists at all."
+    return
+
+label s_poems_leaf:
+    call showpoem(poem_leaf)
+    s 6abaa "How do you feel this poem?"
+    s "I think, it should flow from just bittersweet to despairing and then to very happy from refresh..."
+    s 6acaa "Beacuse, it's my life. It's a short story about my short life."
+    s "{i}'A leaf in the wind'{/i} is how I can describe the past 'me' in short: I was alive as long as there was the wind, that move me forth..."
+    s 6aeaa "But now, I really feel very much better and stronger than I used to, so I can 'fly' further myself."
+    s 6abaa "However, it's always great to have a tailwind, that makes our 'fly' easier and faster."
+    s 6aaca "And now, it's exactly you."
+    return
+
+label s_poems_prose:
+    call showpoem(poem_prose)
+    s 6acaa "I made this verse for my main trait, my contradictions."
+    s "But if come to think, is it unique for me or only for some more people?"
+    s 6abaa "I don't think so. The nature is contradictory by itself..."
+    s "Can you always make a clear choice? Can you always surely affirm or back anything, even if you feel it right?"
+    s 6aaaa "Even modern science says, that the universe is small pieces of the order and predictables in the one big bisciut of the chaos and undiscovered phenomena."
+    s "So, I decided to add some chaos in my poem and wrote it in prose."
+    s 6acaa "Plus, prose and verse are often opposed by people but any verse by itself is just a fluted prose..."
+    s 6abac "So why I had to use the special form for it when I could have written it just as a simple text?"
+    s 8aeca "Ehehe~"
+    s 8aaaa "I've just understood, that I did a thing, that Monika would do."
+    s 6aaaa "She really liked to play with the poem form, but it was more just an intonational mean."
+    s 6acaa "But I know, if it's real good idea for me to use such games."
+    s "I just think, words are enough. They give the almost meaning anyway, don't they?"
+    return
