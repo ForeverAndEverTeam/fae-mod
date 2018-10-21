@@ -160,15 +160,15 @@ label s_autoload(test = False):
             
             s "Hello, [player]!"
             s 7aaca "The game had been a bit buggy for a pretty long time but I've found a way to fix it."
-            s 7aaaa "I hope, I did all right this time."
-            s "I also added some new topics and one feature, that you'll like."
+            s 7aaaa "I think, I did all right this time."
+            s "I also added one feature, that you'll like."
             s "I've finally added the poem list, so you now can read any of my old poems again."
             s 7aeca "But what's more, I'll use this menu also to share my new poems with you."
             if "s_topics_hobbies_poems" in persistent.seen_topics:
                 s 7acaa "I've already told you about my new poems, haven't I?"
-                s 7aaaa "Anyway, I hope you'll like them too..."
+                s 7aaaa "Anyway, I hope you like them too..."
             else:
-                s "I hope you'll like them too..."
+                s "I hope you like them too..."
             s 7acaa "And that you too have something good for me."
             s 7aaaa "So tell me, if you really have."
             
