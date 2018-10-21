@@ -3,6 +3,7 @@ init -9 python:
     bodies['6'] = Body(SpriteInfo(0, '6', (0, 0), (1020, 703))) ## Folded Arms
     bodies['7'] = Body(SpriteInfo(0, '7', (0, 0), (1020, 703)), (SpriteInfo(0, "7_rf", (390, 283), (83, 116)),))## Right fist on a cheek (original pose)
     bodies['8'] = Body(SpriteInfo(0, '8', (0, 0), (1020, 703)), (SpriteInfo(0, "8_fgs", (492, 363), (90, 46)),))## Finger-to-finger (like standing pos #5)
+    bodies['9'] = Body(SpriteInfo(0, '9', (0, 0), (1020, 703))) ## Finger up
     
     #Skins
     exp_codes[0]['a'] = DummySprite()## Dummy image

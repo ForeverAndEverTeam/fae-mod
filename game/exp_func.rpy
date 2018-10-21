@@ -24,7 +24,7 @@ init -10 python:
     def l_range(t, *args):
         al = len(args)
         f = 97
-        s = al > 1 and args[1] or 1
+        s = args[1] if al > 1 else 1
         
         if al == 0:
             t = ord(t)
