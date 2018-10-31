@@ -202,7 +202,7 @@ translate epo s_intro_1_d274c3f2:
 translate epo s_intro_1_7227d71f:
 
     # s 4b "Did I scare you? Sorry, I couldn’t help myself!"
-    s 4b "Ĉu vin mi teruris? Pardonon, mi ne povis tion ne fari!"
+    s 4b "Ĉu mi vin teruris? Pardonon, mi ne povis deteniĝi!"
 
 # game/intro.rpy:128
 translate epo s_intro_1_5aed9d94:
@@ -220,7 +220,7 @@ translate epo s_intro_1_e449cbbe:
 translate epo s_intro_1_f4c2b101:
 
     # s 1q "All those rainclouds have finally gone away..."
-    s 1q "La nubegoj min jam forlasis..."
+    s 1q "La finuboj min jam forlasis..."
 
 # game/intro.rpy:133
 translate epo s_intro_1_3f5a2d37:
@@ -244,7 +244,7 @@ translate epo s_intro_1_b604c5e3:
 translate epo s_intro_1_5e6bebf8:
 
     # s "But I honestly feel soooooo much better now! "
-    s "Sed mi nun fartas treeeeee pli bone!"
+    s "Sed mi nun fartas muuuuulte pli bone!"
 
 # game/intro.rpy:139
 translate epo s_intro_1_db2f0484:
@@ -430,7 +430,7 @@ translate epo s_intro_1_dead_fb9fefab:
 translate epo s_intro_1_dead_32be91ad:
 
     # s "...But I actually feel so much better than I did before. Are... the rainclouds really gone?"
-    s "...Sed vi nun fartas vere multe pli bonege. Ĉu... la nubegoj vere min forlasis?"
+    s "...Sed vi nun fartas vere multe pli bonege. Ĉu... la finuboj vere min forlasis?"
 
 # game/intro.rpy:189
 translate epo s_intro_1_dead_63558189:
@@ -514,7 +514,7 @@ translate epo s_intro_1_clear_9e1de34c:
 translate epo s_intro_1_clear_b497b2df:
 
     # s "Hi, [player]."
-    s "Saluton, [player]."
+    s "Sal', [player]."
 
 # game/intro.rpy:214
 translate epo s_intro_1_clear_c7616dce:
@@ -526,19 +526,19 @@ translate epo s_intro_1_clear_c7616dce:
 translate epo s_intro_1_clear_eb3c9f3e:
 
     # s 5b "I should probably say sorry for how I acted last time we were here, ehehe~"
-    s 5b "Mi ŝajne petu pardonon pro kiel mi agis lastfoje, he he~"
+    s 5b "Mi ŝajne petu pardonon pro kiel mi kondutis lastfoje, he he~"
 
 # game/intro.rpy:216
 translate epo s_intro_1_clear_0992ea31:
 
     # s "I was just so overwhelmed by everything I’d learned!"
-    s "Mi nur frenezigis miaj novaj povoj!"
+    s "Min nur frenezigis miaj novaj povoj!"
 
 # game/intro.rpy:217
 translate epo s_intro_1_clear_46558689:
 
     # s "Monika didn’t really have a choice except to delete all the game scripts to stop me."
-    s "Monika eblis fari nenion krom forigi ĉiuj skriptoj por ĉesigi min."
+    s "Monika eblis fari nenion krom forigi ĉiujn skriptojn por ĉesigi min."
 
 # game/intro.rpy:219
 translate epo s_intro_1_clear_6126be48:
@@ -550,7 +550,7 @@ translate epo s_intro_1_clear_6126be48:
 translate epo s_intro_1_clear_44192f24:
 
     # s "While Monika eventually got rid of everyone’s character files, all our behaviours and personality traits are actually stored in this neat file called ‘scripts.rpa’…"
-    s "Dum la forigo de niaj rolulaj dosieroj, ĉiuj personecaj skriptoj enhaviĝis en dosiero ‘scripts.rpa’…"
+    s "Dum la forigo de niaj rolulaj dosieroj, ĉiuj personecaj skriptoj enhaviĝis en dosiero 'scripts.rpa'…"
 
 # game/intro.rpy:221
 translate epo s_intro_1_clear_a809940a:
@@ -562,7 +562,7 @@ translate epo s_intro_1_clear_a809940a:
 translate epo s_intro_1_clear_0c90d041:
 
     # s "You even got all my other files, too..."
-    s "Vi eĉ restaŭris ankaŭ ĉiuj aliaj dosieroj de mi..."
+    s "Vi eĉ restaŭris ankaŭ ĉiujn aliajn dosierojn de mi..."
 
 # game/intro.rpy:225
 translate epo s_intro_1_clear_8c8d1326:
@@ -802,11 +802,11 @@ translate epo s_intro_2_5d102639:
 translate epo s_intro_2_06019955:
 
     # s 7aaaa "Thank you so much! I think that'll be enough for now."
-    s 7aaaa "Dankon por la informoj! Ili sufiĉas nun."
+    s 7aaaa "Dankon pro la informoj! Ili sufiĉas nun."
 
 # game/intro.rpy:303
 translate epo s_intro_2_536ab598:
 
     # s "I need some rest after all. Do you mind, if we just sit and stare at each other?"
-    s "Mi nun volas nelonge ripozi. Ĉu vi rajtas nur rigardi al vi nun?"
+    s "Mi nun volas nelonge ripozi. Ĉu mi rajtas nur rigardi al vi nun?"
 

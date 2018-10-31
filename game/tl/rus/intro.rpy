@@ -1,4 +1,4 @@
-﻿# TODO: Translation updated at 2018-08-05 03:22
+﻿    # TODO: Translation updated at 2018-08-05 03:22
 
 # game/intro.rpy:39
 translate rus s_intro_1_c8b09eac:
@@ -526,7 +526,7 @@ translate rus s_intro_1_clear_c7616dce:
 translate rus s_intro_1_clear_eb3c9f3e:
 
     # s 5b "I should probably say sorry for how I acted last time we were here, ehehe~"
-    s 5b "Думаю, будет уместно извениться за моё ужасное поведение в последний раз, хе-хе~"
+    s 5b "Думаю, будет уместно извиниться за моё ужасное поведение в последний раз, хе-хе~"
 
 # game/intro.rpy:224
 translate rus s_intro_1_clear_0992ea31:
@@ -538,7 +538,7 @@ translate rus s_intro_1_clear_0992ea31:
 translate rus s_intro_1_clear_46558689:
 
     # s "Monika didn’t really have a choice except to delete all the game scripts to stop me."
-    s "Монике просто пришлось удалить абсолютно всё, дабы не остановить меня."
+    s "Монике просто пришлось удалить абсолютно всё, дабы остановить меня."
 
 # game/intro.rpy:227
 translate rus s_intro_1_clear_6126be48:

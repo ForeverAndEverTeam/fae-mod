@@ -40,7 +40,7 @@ translate epo s_greeting_3_be4c208b:
 translate epo s_greeting_3_8d8154bc:
 
     # s 6aaaa "I just revise my [greeting_lang]."
-    s 6aaaa "Mi nur provis mian parolon en [greeting_lang]."
+    s 6aaaa "Mi nur provis mian parolon en [greeting_lang!t]."
 
 # game/greetings.rpy:149
 translate epo s_greeting_3_38b43f1e:
@@ -304,7 +304,7 @@ translate epo s_greeting_first_9b8664bb:
 translate epo s_greeting_first_90a9a39d:
 
     # s "Hello, [player]!"
-    s "Saluton, [player]!"
+    s "Sal', [player]!"
 
 # game/greetings.rpy:235
 translate epo s_greeting_first_803a4458:

@@ -75,10 +75,10 @@ label import_ddlc_persistent:
         #Open the persistent save file as old_persistent
         #open the persistent save file at save_path
         f=file(save_path,"rb")
-        sx=f.read().decode("zlib")
+        s=f.read().decode("zlib")
         f.close()
         
-        old_persistent=loads(sx)
+        old_persistent=loads(s)
         
         # Optionally print file to text (for debugging purposes)
         #dumpPersistentToFile(old_persistent,basedir + '/old_persistent.txt')

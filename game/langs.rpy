@@ -1,7 +1,3 @@
-#Unicode Sayori's style
-style sayori_text_unicode is sayori_text:
-    font "mod_assets/fonts/gnyrwn971.ttf"
-
 # Mod language functions
 init -10 python:
     from collections import OrderedDict

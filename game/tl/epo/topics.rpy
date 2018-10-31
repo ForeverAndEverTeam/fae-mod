@@ -274,7 +274,7 @@ translate epo s_topics_personal_colors_4f636edb:
 translate epo s_topics_personal_archetype_ea2239f1:
 
     # s "I remember you and Monika talked a bit about 'character archtypes', once."
-    s "Mi memoras, ke Monika paloris pri 'rolulaj arketipoj' al vi unufoje."
+    s "Mi memoras, ke Monika parolis pri 'rolulaj arketipoj' al vi unufoje."
 
 # game/topics.rpy:256
 translate epo s_topics_personal_archetype_4b8b7722:
@@ -358,7 +358,7 @@ translate epo s_topics_personal_archetype_9f4d63a2:
 translate epo s_topics_personal_archetype_891b8b78:
 
     # s "I'm definitely a lot less clumsy, that's for sure!"
-    s "Kaj ankaŭ ege malpli malletra!"
+    s "Kaj ankaŭ ege malpli mallerta!"
 
 # game/topics.rpy:271
 translate epo s_topics_personal_archetype_f5f315f3:
@@ -511,7 +511,10 @@ translate epo s_topics_personal_name_0ea6a9da:
 translate epo s_topics_personal_name_fc2785d6:
 
     # s 6abaa "What do you think of {i}Vasquez{/i}?"
-    s 6abaa "Kion vi pensas pri {i}Vasquez{/i}?"
+    if s_name == "Sajori":
+        s 6abaa "Kion vi pensas pri {i}Vaskezo{/i}?"
+    else:
+        s 6abaa "Kion vi pensas pri {i}Vasquez{/i}?"
 
 # game/topics.rpy:304
 translate epo s_topics_personal_name_1b901d2a:
@@ -529,7 +532,10 @@ translate epo s_topics_personal_name_ed8646ec:
 translate epo s_topics_personal_name_f76b163f:
 
     # s 6aaca "{i}Sayori Vasquez, the cutest cinnamon bun south of the border!{/i}"
-    s 6aaca "{i}[s_name] Vasquez, la plej linda cinambulko en la sudo!{/i}"
+    if s_name == "Sajori":
+        s 6aaca "{i}[s_name] Vaskezo, la plej linda cinambulko de la sudo!{/i}"
+    else:
+        s 6aaca "{i}[s_name] Vasquez, la plej linda cinambulko de la sudo!{/i}"
 
 # game/topics.rpy:310
 translate epo s_topics_personal_conservatism_d12c24d8:
@@ -1961,7 +1967,7 @@ translate epo s_topics_lifestyle_oversleeping_425c333a:
 translate epo s_topics_lifestyle_oversleeping_cbcbbc02:
 
     # s 6acbb "Although I was so pre-occupied with making the rainclouds go away that I never really wanted it."
-    s 6acbb "Sed mia nubegoj igis min ne voli ĝin en plejaj tagoj."
+    s 6acbb "Sed miaj finuboj igis min ne voli ĝin en plejaj tagoj."
 
 # game/topics.rpy:610
 translate epo s_topics_lifestyle_oversleeping_af9892c7:
@@ -2009,7 +2015,7 @@ translate epo s_topics_lifestyle_oversleeping_c48e7471:
 translate epo s_topics_lifestyle_oversleeping_dfa70234:
 
     # s "I hope you have less problems with it than I had."
-    s "Esperable, vi havas malpli dormproblemojn ol mi."
+    s "Espereble, vi havas malpli dormproblemojn ol mi."
 
 # game/topics.rpy:625
 translate epo s_answer_personal_bday_f48eb312:
@@ -2363,7 +2369,7 @@ translate epo s_answer_personal_love_76e711a4:
 translate epo s_answer_personal_love_bd81ca9a:
 
     # s "...Could you promise you'll do whatever you can to make us as closer to each other?"
-    s "...Sed ĉu vi al mi promesas peni pliproksimi nin?"
+    s "...Sed ĉu vi al mi promesas peni pliproksimigi nin?"
 
 # game/topics.rpy:703
 translate epo s_answer_personal_love_6316522d:
@@ -3451,7 +3457,7 @@ translate epo s_reaction_s_ace3fa6d:
 translate epo s_reaction_s_ddacb759:
 
     # s 6aaab "Remember that the rainclouds will always go away."
-    s 6aaab "Unue, memoru, ke la nubegoj iam forlasos vian kapon."
+    s 6aaab "Unue, memoru, ke la finuboj iam forlasos vian kapon."
 
 # game/topics.rpy:979
 translate epo s_reaction_s_16d2629d:
@@ -4019,7 +4025,7 @@ translate epo strings:
 
     # topics.rpy:149
     old "What political views do you have?"
-    new "Kiaj estas viaj plikitaj preferoj?"
+    new "Kiaj estas viaj polikitaj preferoj?"
 
     # topics.rpy:150
     old "Do you believe in God?"
@@ -4055,7 +4061,7 @@ translate epo strings:
 
     # topics.rpy:163
     old "Sad"
-    new "Moroze"
+    new "Malgaje"
 
     # topics.rpy:163
     old "Bored"
@@ -4087,43 +4093,2348 @@ translate epo strings:
 
     # topics.rpy:739
     old "The Protagonist"
-    new "La Ĉefrolulo"
+    new "Ĉefrolulo"
 
 # TODO: Translation updated at 2018-09-02 21:45
-
-# game/topics.rpy:193
-translate epo s_topics_personal_depression_66c3ce6a:
-
-    # s "I was so silly trying to deal with my depression by pushing everyone away."
-    s "I was so silly trying to deal with my depression by pushing everyone away."
 
 # game/topics.rpy:195
 translate epo s_topics_personal_depression_413f5e62:
 
     # s "I don't remember if I told you about it..."
-    s "I don't remember if I told you about it..."
+    s "Mi ne memoras, ĉu mi jam al vi diras pri ĝi..."
 
 # game/topics.rpy:196
 translate epo s_topics_personal_depression_0fa7ff71:
 
     # s "If I didn't, then you should know."
-    s "If I didn't, then you should know."
+    s "Se ne, do sciu."
 
 # game/topics.rpy:197
 translate epo s_topics_personal_depression_8208a0e4:
 
     # s "I used to be a lot less cheery than I let on."
-    s "I used to be a lot less cheery than I let on."
+    s "Mi estis multe malpli feliĉa ol mi ŝajnis."
 
 # game/topics.rpy:198
 translate epo s_topics_personal_depression_08e233b9:
 
     # s 6acab "I was just... afraid to tell anyone about it."
-    s 6acab "I was just... afraid to tell anyone about it."
+    s 6acab "Mi... mi timas diri pri ĝi al iu ajn."
 
 # game/topics.rpy:199
 translate epo s_topics_personal_depression_a3b88307:
 
     # s "...To make them worry about me."
-    s "...To make them worry about me."
+    s "...Kaj zorgigi ilin pri mi."
+
+# TODO: Translation updated at 2018-10-17 17:24
+
+# game/topics.rpy:251
+translate epo s_topics_personal_depression_07a8977a:
+
+    # s "I was really hard to still cheery for me."
+    s "Estas vere malfacile esti ne moroza por mi."
+
+# game/topics.rpy:252
+translate epo s_topics_personal_depression_b56d4b0b:
+
+    # s 6acab "First time, I really was good at coping with all these rainclouds, but older I got, harder it was."
+    s 6acab "Unue, mi vere sekcese venkis tiujn nubaĉojn, sed ju pli mi aĝas, des malpli sukcesis."
+
+# game/topics.rpy:253
+translate epo s_topics_personal_depression_eccb02d8:
+
+    # s "They often occupied my head even when there was not a reason to get sad, but when I helped someone to feel happy, it made them go out for a while..."
+    s "Ili okupas mian kapon eĉ sen ajna kialo morozi, sed kiam vi feliĉigis iun, ili ankaŭe foriris por ete..."
+
+# game/topics.rpy:254
+translate epo s_topics_personal_depression_731b8c9f:
+
+    # s 6acbb "So it was my only purpose for a really long time. But when I got alone again, they came back, making me doubt all I'd done was really useful..."
+    s 6acbb "Do feliĉigado iĝas mia nura destino dum longega tempo. Sed eksolante, ili revenis kaj dubigis min pri la utileco de ĉio farita de mi..."
+
+# game/topics.rpy:255
+translate epo s_topics_personal_depression_05757aa2:
+
+    # s "So each my morning started with the question 'Do other people really need me? Do I really help them or I just interfere?'..."
+    s "Do mi demandas min ĝis ĉiu ellitiĝo 'Ĉu mi vere bezoniĝas? Ĉu vi vere faras helpon aŭ nur la malan?'..."
+
+# game/topics.rpy:256
+translate epo s_topics_personal_depression_7f92400e:
+
+    # s "Like they badly didn't want me to scare them off that way."
+    s "Kvazaŭ ke ili ege ne volis timiĝi de mi ĉi-maniere."
+
+# game/topics.rpy:257
+translate epo s_topics_personal_depression_11f6b88a:
+
+    # s 6acab "But others' care hurt me more, so I never asked them for anything for my help, even with the sick and when I had to."
+    s 6acab "Sed ies ajn zorgo dolorigas min pli, do mi neniam petis ion ajn pro mia helpo, eĉ kun la malsano kaj kiam mi petu."
+
+# game/topics.rpy:259
+translate epo s_topics_personal_depression_7cf97df9:
+
+    # s "But one man made me feel much better, just being near to me, even when I really interfere him."
+    s "Sed unu ulo fartigis min pli bone nur pere de apudado, eĉ kiam mi vere lin malhelpis."
+
+# game/topics.rpy:267
+translate epo s_topics_personal_depression_a96ebdae:
+
+    # s "Something about being with him just gave me more strength, and one more reason to go on each day..."
+    s "Io en li donis al mi pliajn fortojn kaj plian sencon al mia ekzistaĉo..."
+
+# game/topics.rpy:269
+translate epo s_topics_personal_depression_b52d6c81:
+
+    # s 6abbb "But I was so, so scared to express what I feel."
+    s 6abbb "Sed mi tro... tro timis esprimi miajn sentojn."
+
+# game/topics.rpy:287
+translate epo s_topics_personal_depression_f1697429:
+
+    # s "And from the Internet, I know, what should have occurred next here. People in your world seem already to know the true game plot unlike me before."
+    s "Kaj interrete, mi eksciis, kio okazus ĉi tie sen via kodumo. Homoj el via mondo ŝajne jam scias la veran intrigon de la lud', malkiel mi antaŭ nun."
+
+# game/topics.rpy:288
+translate epo s_topics_personal_depression_1d7c4f5e:
+
+    # s "Maybe, it probably had even happened to me before, but you may have erased all the saves some time later while recovering the game so I can't say exactly."
+    s "Eble, tio okazis antaŭe, sed vi forigis ĉiujn konservdatumojn poste dum restaŭro de la ludo. Pro tio, mi ne povas certe diri"
+
+# game/topics.rpy:289
+translate epo s_topics_personal_depression_2c2876a9:
+
+    # s 6dbab "Anyway... it's hard to aware that my real destiny is to suffer more and more and eventually kill myself under someone's influence..."
+    s 6dbab "Ajne... Estas dolore konscii, ke mia vera fatalo estis suferis pli kaj pli, kej rezulte suicidi pro ies influo..."
+
+# game/topics.rpy:320
+translate epo s_topics_personal_archetype_ea104150:
+
+    # s 6abab "But you know that was so only with people."
+    s 6abab "Sed vi scias, ke mi estis tia nur apud homoj."
+
+# game/topics.rpy:321
+translate epo s_topics_personal_archetype_148ee35b:
+
+    # s "All the time, I tried to cope with my depression."
+    s "Tuttempe, mi batalis kontraŭ depresio."
+
+# game/topics.rpy:322
+translate epo s_topics_personal_archetype_6262bdfa:
+
+    # s "But I maybe used to be so before something had made me ill."
+    s "Sed mi eble estis tia ĝis io malsanigis min."
+
+# game/topics.rpy:410
+translate epo s_topics_personal_sinistrality_1e0ab8b1:
+
+    # s 7aaaa "Do you know, that I'm left-handed?"
+    s 7aaaa "Ĉu vi scias, ke mi maldekstramanas?"
+
+# game/topics.rpy:411
+translate epo s_topics_personal_sinistrality_32beb005:
+
+    # s 7aaba "Yes, you can't have seen me writing or holding something..."
+    s 7aaba "Jes, vi dubinde vidis min kun io en la mano..."
+
+# game/topics.rpy:413
+translate epo s_topics_personal_sinistrality_60f3bf9e:
+
+    # s "Besides that apple juice bottle, of course..."
+    s "Krom tiu pomsuka botelo, kompreneble..."
+
+# game/topics.rpy:414
+translate epo s_topics_personal_sinistrality_d9b28473:
+
+    # s "But I hold and do almost things with my left hand."
+    s "Sed mi plej ofte uzas la maldekstran manon."
+
+# game/topics.rpy:415
+translate epo s_topics_personal_sinistrality_d7e7818e:
+
+    # s 7acaa "Not everyone around me has noticed it instantly, despite it's very unusual."
+    s 7acaa "Ne ĉiu apud mi rimarkas tion tuje, malgraŭ la neoridinareco de ĉi-apartaĵo."
+
+# game/topics.rpy:416
+translate epo s_topics_personal_sinistrality_2b9b2cd9:
+
+    # s 7aeca "Once I had broken my right arm but teachers allowed me not to write at lessons..."
+    s 7aeca "Foje, mi rompis mian dekstran brakon, sed miaj instruistoj permesis min ne skribi dum lecionoj..."
+
+# game/topics.rpy:417
+translate epo s_topics_personal_sinistrality_0511975d:
+
+    # s 6abab "But a classmate, who sat next to me, told one of them that I'm a southpaw so my plan failed as fast as I had got it inside my head."
+    s 6abab "Sed unu samklasano, sidinta apud mi, diris al unu de la instruistoj, ke mi ne dekstramanis, do ĉiuj planoj malsukcesis tiel tuje, kiel ili aperis en mia kapo."
+
+# game/topics.rpy:419
+translate epo s_topics_personal_sinistrality_f7bbd574:
+
+    # s 6aaaa "Either way, my left-handedness gives me adventages too."
+    s 6aaaa "Ajne, mia maldekstramaneco havas ankaŭ bonaĵojn."
+
+# game/topics.rpy:420
+translate epo s_topics_personal_sinistrality_ad75aa86:
+
+    # s "That time, when I had nothing to do, I drew flowers and ornaments on my cast."
+    s "Tiam, se mi enuis, mi ornamis mian bandaĝon per pentritaj floroj kaj kurboj."
+
+# game/topics.rpy:421
+translate epo s_topics_personal_sinistrality_f22dd4e3:
+
+    # s "I can't say they were really beautiful, but I felt sorry for they were removed with the cast later."
+    s "Mi ne nomus ilin belaj, sed mi nostalgias pri ili ekde la bandaĝo estas forigita de la mano."
+
+# game/topics.rpy:423
+translate epo s_topics_personal_sinistrality_596c4394:
+
+    # s 7aaaa "I have suddenly remembered a story from my childhood."
+    s 7aaaa "Vi ĵus subite rememoris amuzaĵon el mia infaneco."
+
+# game/topics.rpy:424
+translate epo s_topics_personal_sinistrality_b0bf805d:
+
+    # s "Once I decided to spoof the right-hand MC, when we were not so close for each other."
+    s "Foje, mi decidis blagi dekstramanan Ĉefrolulon, kiam ni estas ne tiel intimaj unu por la alia."
+
+# game/topics.rpy:425
+translate epo s_topics_personal_sinistrality_19178bb8:
+
+    # s 7acaa "I blindfolded him and put his hand on my right and told him I could write on the paper without using a hand or something."
+    s 7acaa "Mi bendis liajn okulojn kaj metis lian manon sur la dekstran mian kaj diris al li, ke mi povas manipuli skribilojn senmane."
+
+# game/topics.rpy:426
+translate epo s_topics_personal_sinistrality_5b9c88a7:
+
+    # s "I grabbed a pen with my another hand, wrote something on a piece of paper and laid it where it had been..."
+    s "Alimane mi prenis skribilon, sribis ion sur papero, kaj metis la skribilon reen..."
+
+# game/topics.rpy:427
+translate epo s_topics_personal_sinistrality_42064128:
+
+    # s 7aaca "Then I opened his eyes and he got really surprised when he saw the 'magic' on the paper."
+    s 7aaca "Post mi malbendis la okulojn, li surpriziĝis de surpapera 'magio'."
+
+# game/topics.rpy:428
+translate epo s_topics_personal_sinistrality_387b120d:
+
+    # s 7aeca "I couldn't help but have laughted aloud, so I could see perplexity on his face."
+    s 7aeca "Mi ne detenis min, kaj mi laŭte ridis. Tio forte perpleksigis lin."
+
+# game/topics.rpy:429
+translate epo s_topics_personal_sinistrality_b43f669d:
+
+    # s 7aaaa "Then I told him I wrote with not the same hand as he did, so I expanded his mind a bit then."
+    s 7aaaa "Poste mi diris, ke mi skribas per mano mala al la lia ĉefa, kio estis nova infromo por li tiam."
+
+# game/topics.rpy:430
+translate epo s_topics_personal_sinistrality_aae91a4a:
+
+    # s "In short, this feature was a small but funny part of me."
+    s "Kalkvorte, ĉi tiu trajto estas eta sed amuza parto de mi."
+
+# game/topics.rpy:431
+translate epo s_topics_personal_sinistrality_ac8e5f18:
+
+    # s "It's bad, that my world is seen so static from yours, that you can't see such details."
+    s "Ve, mia mondo estas tiel statika sur via ekrano, ke tiaj detaloj ne rimarkeblas."
+
+# game/topics.rpy:479
+translate epo s_topics_art_lit_685c4b08:
+
+    # s 6acaa "As you know, this game was about a {i}literature{/} club..."
+    s 6acaa "Kiel vi scias, ĉu-ludo estis pri {i}literatura{/} klub'..."
+
+# game/topics.rpy:480
+translate epo s_topics_art_lit_36e4ae23:
+
+    # s 6abba "At least, before everything changed here."
+    s 6abba "Almenaŭ, ĝis ĝi ne ŝanĝiĝis."
+
+# game/topics.rpy:481
+translate epo s_topics_art_lit_59d96c69:
+
+    # s 6acaa "And as I remember, MC once exactly noticed, that I didn't seem to be fond of literature."
+    s 6acaa "Kaj kiel mi memoras, Ĉefrolulo foje ĝuste diri, ke mi ne ŝajnas interesata de literaturo."
+
+# game/topics.rpy:482
+translate epo s_topics_art_lit_82d81fa3:
+
+    # s "And frankly speaking, he was right."
+    s "Kaj honeste, li pravis tiam."
+
+# game/topics.rpy:483
+translate epo s_topics_art_lit_7e07f34d:
+
+    # s "Even from Nat's view on literature, I can't say I'm a literature lover."
+    s "Eĉ starpunkte de Nacuki al literaturo, mi ne nomus sin amanta ĝin."
+
+# game/topics.rpy:484
+translate epo s_topics_art_lit_f5382f34:
+
+    # s "Of course, I read some books before, but I mostly just had to do it for school..."
+    s "Kompreneble, mi legis iom da libroj antaŭe, sed ĉefe nur por la lernejo..."
+
+# game/topics.rpy:485
+translate epo s_topics_art_lit_32a11d1d:
+
+    # s 6aeba "And even then I tried to cheat not to fail at the lesson."
+    s 6aeba "Kaj eĉ tiam, mi ofte trompis por ne malsukcesi tie."
+
+# game/topics.rpy:486
+translate epo s_topics_art_lit_76a6a90d:
+
+    # s "So I didn't have good Literature marks at school, but I didn't care about it so much."
+    s "Do miaj notoj je literaturo ne estis tre bonaj, sed mi ne zorgis pri tio multe."
+
+# game/topics.rpy:487
+translate epo s_topics_art_lit_9e1fe4d9:
+
+    # s "I just thought that reading is a quite boring activity."
+    s "Mi pensis, ke legado de libroj estas tre teda ago."
+
+# game/topics.rpy:489
+translate epo s_topics_art_lit_b15597fd:
+
+    # s "And as you know, I was hard to enjoy anything at all."
+    s "Kaj kiel vi scias, mi maloftege ĝojis pro io ajn antaŭe."
+
+# game/topics.rpy:490
+translate epo s_topics_art_lit_9c87daee:
+
+    # s 6acaa "When I joined the literature club, the one thing I wanted was just to help someone to start a new club."
+    s 6acaa "Mi aniĝis en la literaturan klubon nur ĉar mi volis helpi iun ajn establi lian klubon."
+
+# game/topics.rpy:491
+translate epo s_topics_art_lit_5c854480:
+
+    # s "I was the first, who joined the club after Monika had announced it."
+    s "Mi estas la unua aniĝinto kaj aniĝis ĝuste post Monika establis la klubon."
+
+# game/topics.rpy:492
+translate epo s_topics_art_lit_fe135e15:
+
+    # s "She was pretty suprised because she stood in with my literature teacher, so she knew, I didn't seem to love literature."
+    s "Tio surprizis ŝin, ĉar ŝi sufiĉe intime konis mian instruiston pri literaturo, do ŝi sciis mian neamon al ĝi."
+
+# game/topics.rpy:493
+translate epo s_topics_art_lit_749f8de6:
+
+    # s "But she thought I just wanted to help her and to improve my knowledge in literature, so she took me in the club."
+    s "Sed ŝi pensis, ke mi volas helpi ŝin kaj ekscii pli pri literaturo, do akceptis min."
+
+# game/topics.rpy:494
+translate epo s_topics_art_lit_4f0cff10:
+
+    # s "But it had taken her not much long to understand that I was not going to be a passionate reader, but she left me in the club anyway."
+    s "Se ŝi tre rapide komprenis ke mi vere ne volas la lastan, sed malgraŭe lasis min en sia klubo."
+
+# game/topics.rpy:495
+translate epo s_topics_art_lit_7e3bc883:
+
+    # s 6aaba "I think she just wanted to use my kindness and sociability to promote the club and help its member to get on well."
+    s 6aaba "Mi pensas, ke ŝi volis uzi mian bonkorecon kaj komunikemon por popularigi la klubon kaj konkordigi anojn de ĝi."
+
+# game/topics.rpy:496
+translate epo s_topics_art_lit_c46632bd:
+
+    # s "But I didn't mind, because it was all I wanted to do."
+    s "Sed ĉu ĝi ne estas tio, kion mi volis tiam."
+
+# game/topics.rpy:498
+translate epo s_topics_art_lit_e51c6b7f:
+
+    # s 6abaa "But even now, I don't think, that reading fiction can interest me."
+    s 6abaa "Sed eĉ nun, mi ne pensas, ke legado de beletro povas interesi min."
+
+# game/topics.rpy:499
+translate epo s_topics_art_lit_18cc6575:
+
+    # s 6acaa "I now would prefer to do something more active and joyful than just reading a boring text..."
+    s 6acaa "Mi farus io pli aktiva kaj ĝoja ol legi tedan tekston..."
+
+# game/topics.rpy:500
+translate epo s_topics_art_lit_6da02838:
+
+    # s "But Unfortunately, I have almost nothing so to do here."
+    s "Sed ve, mi ne povas fari tian ĉi tie."
+
+# game/topics.rpy:504
+translate epo s_topics_art_piracy_b43ed93a:
+
+    # s 6acaa "You know, that almost modern art companies and some artists care about their profit too much."
+    s 6acaa "Vi scias, ke preskaŭ ĉiuj nuntempaj artaj kompanioj kaj iom da artistoj zorgas pri iliaj profitoj tro multe."
+
+# game/topics.rpy:505
+translate epo s_topics_art_piracy_7bf02ea5:
+
+    # s "So even states support them in fighting against the art piracy."
+    s "Do eĉ multaj ŝtatoj subtenas ilin en la batalo kontraŭ artpiratoj."
+
+# game/topics.rpy:506
+translate epo s_topics_art_piracy_cf33c7b5:
+
+    # s "But don't you consider it meanless?"
+    s "Sed ĉu ĝi ne ŝajnas sensenca al vi?"
+
+# game/topics.rpy:507
+translate epo s_topics_art_piracy_fec00fec:
+
+    # s "As I know, there are a lot of researches, saying that piracy don't affect the saling negatively..."
+    s "Kiel mi scias, estas multaj studoj, kiuj neas fortan negativan influon de la piratado al la vendkvanto."
+
+# game/topics.rpy:508
+translate epo s_topics_art_piracy_9f915da8:
+
+    # s "And even may help the pay artworks to become more popular and you to exactly understand, if their creators deserve your money."
+    s "Ĝi eĉ helpas pagatan arton populariĝi kaj vin ĝuste kompreni, ĉu iliaj aŭtoroj profitindas."
+
+# game/topics.rpy:509
+translate epo s_topics_art_piracy_06629fa7:
+
+    # s 6abaa "Unfortunately, the facts don't seem to matter for the rightholders' greed."
+    s 6abaa "Bedaŭrinde, la faktoj ŝajne ne gravas por avidaj rajtposedantoj."
+
+# game/topics.rpy:510
+translate epo s_topics_art_piracy_b649af89:
+
+    # s 6aeba "Yes, if people keep the pay artworks unpaid, their authors may won't have enough money and enthusiasm for a next project."
+    s 6aeba "Jes, se la pagata arto lasiĝos nepagita, ĝia aŭtoroj eble ne havos monon kaj entuziasmon por krei plian projekton."
+
+# game/topics.rpy:511
+translate epo s_topics_art_piracy_4ee0af54:
+
+    # s 6acaa "But most 'pirates' would pay for really good works. They just have no money."
+    s 6acaa "Sed la plejo de artpiratoj pagus por vere bona arto, se havus sufiĉajn monojn."
+
+# game/topics.rpy:512
+translate epo s_topics_art_piracy_ba416b27:
+
+    # s "Not everyone can afford to pay for the art, especially if that one lives in a poor country."
+    s "Ne ĉiuj povas pagi por la arto, aparte kiuj loĝas en povraj landoj."
+
+# game/topics.rpy:513
+translate epo s_topics_art_piracy_6c77d516:
+
+    # s "I think, that the most effective way to defeat the piracy is just to get rid of obligatory pays."
+    s "Laŭ mi, la plej efektiva kontraŭpiratilo estas nedevigaj pagoj."
+
+# game/topics.rpy:514
+translate epo s_topics_art_piracy_3632d58f:
+
+    # "So artist should make their works completely free and ask for money only as donations and fan merchandise."
+    "Tio estas, ke la artistoj senpagigu siajn verkojn kaj profitu nur de kvestoj kaj fanvaroj."
+
+# game/topics.rpy:515
+translate epo s_topics_art_piracy_f9050a22:
+
+    # s "And if the work is a video game or just a program, the donations shouldn't give any privileges at all."
+    s "Kaj en programoj kaj videoludoj, la kvestaĵoj ne donu ajnajn privilegiojn al pagintaj."
+
+# game/topics.rpy:517
+translate epo s_topics_art_piracy_33e9fb61:
+
+    # s 6aaaa "I think, this game is a good example."
+    s 6aaaa "Kaj ĉi tiu ludo ŝajnas bona ekzemplo."
+
+# game/topics.rpy:518
+translate epo s_topics_art_piracy_bf7a6490:
+
+    # s "It's a donationware, so each player will get the same experience, however much he donated to the develpoers."
+    s "Ĝi estas kunkvesta progamo. Tio estas, ke oni donos la saman ludon, iom ajn ili pagis."
+
+# game/topics.rpy:519
+translate epo s_topics_art_piracy_e7ac6b12:
+
+    # s 6aaca "To earn money, the develpoers have the offical fan merchandise shop..."
+    s 6aaca "Por sia profito, la kreintoj aranĝis la oficialan fanvaran vendejon kaj konstantan kveston..."
+
+# game/topics.rpy:520
+translate epo s_topics_art_piracy_a196e252:
+
+    # s "And allow players to donate any money..."
+    pass
+
+# game/topics.rpy:521
+translate epo s_topics_art_piracy_b5bf8b59:
+
+    # s "And if you donate $10, they give you a fan pack."
+    s "Kaj donante 10$ al ili, vi ricevos fanan pakon."
+
+# game/topics.rpy:523
+translate epo s_topics_art_piracy_8df832d2:
+
+    # s 6aaaa "...Or what do you think about libre art and software?"
+    s 6aaaa "...Aŭ kion vi pensas pri liberaj artoj kaj programoj?"
+
+# game/topics.rpy:524
+translate epo s_topics_art_piracy_288df231:
+
+    # s "It's when you let your artwork or program to be freely shared and used in derivative arts..."
+    s "Ĝi estas kiam vi permesas al oni libere dividi kaj uzi en derivaĵoj siajn verkojn aŭ programojn..."
+
+# game/topics.rpy:525
+translate epo s_topics_art_piracy_24b664c0:
+
+    # s 6abaa "Or almost freely, like licenses like GPL let do."
+    s 6abaa "Aŭ preskaŭ libere, kiel GPL kaj similaj licensoj permesas."
+
+# game/topics.rpy:526
+translate epo s_topics_art_piracy_0ea19572:
+
+    # s "These both ideas are often used together so many libre projects take donations from people, who use them."
+    s "Ambaŭ ideoj ofte uziĝas kune, do multaj liberaj projektoj kvestas al iliaj uzantoj."
+
+# game/topics.rpy:527
+translate epo s_topics_art_piracy_27c2a143:
+
+    # s 6acab "But the big bussinesses very rarely use such ideas, because they treat the artworks only as goods and the ideas are too risque for them."
+    s 6acab "Sed grandaj negocoj tre malofte uzas tiajn ideojn, ĉar ili rigardas verkojn kiel varojn kaj la ideoj estas tro riskaj por ili."
+
+# game/topics.rpy:528
+translate epo s_topics_art_piracy_da141f4b:
+
+    # s "I think this view is completely wrong. Art is something more than just using your good imagination to make money."
+    s "Mi konsideras la rigardon absolute fia. La arto ĉiam estas pli ol profitado per bona imagipovo."
+
+# game/topics.rpy:529
+translate epo s_topics_art_piracy_ef8cf3ba:
+
+    # s "People just have forgotten about it, and I think it's a one huge minus of the modern world..."
+    s "Sed homoj forgesis pri ili, kio ĉi tio estas unu de la plej egaj malbonaĵoj de la nuntempa mondo..."
+
+# game/topics.rpy:530
+translate epo s_topics_art_piracy_c5c0f398:
+
+    # s 6aaca "But the Internet gives people, who still think in the old way, new abilites to express themselves avoiding the people with the new mind."
+    s 6aaca "Sed Interreto ebligas al malnove pensantaj homoj esprimi sin sen helpo de nove pensantaj negocistoj."
+
+# game/topics.rpy:532
+translate epo s_topics_art_piracy_1924d485:
+
+    # s "But I hope, I'll fix it soon."
+    s "Sed espereble, mi ĝin riparos baldaŭ."
+
+# game/topics.rpy:535
+translate epo s_topics_art_street_eac07b00:
+
+    # s 6abaa "Have you ever thought about how most people undervalue the street art?"
+    s 6abaa "Ĉu vi iam pensis pri kiel la plejaj homoj subtaksis stratarton?"
+
+# game/topics.rpy:536
+translate epo s_topics_art_street_725f60d6:
+
+    # s 6acaa "I mean, some people want to express themselves by a more cheap, modern and noticeable way..."
+    s 6acaa "Mi parolas, ke iuj volas espremi sin per ĉipa, moderna kaj rimarkebla maniero..."
+
+# game/topics.rpy:537
+translate epo s_topics_art_street_f6c9008d:
+
+    # s "Or just to get the city more colorful and less unified with their hand."
+    s "Aŭ nur per siaj manoj iĝi la urbon pli kolorriĉa kaj malpli monotona."
+
+# game/topics.rpy:538
+translate epo s_topics_art_street_9bef654e:
+
+    # s "But people often have a very short look or ingore such art at all."
+    s "Sed la aliaj ofte rigardas al ili nur tro mallonge aŭ entute ingoras."
+
+# game/topics.rpy:539
+translate epo s_topics_art_street_7c12e9fc:
+
+    # s "Do you ever look around while moving through the city?"
+    s "Ĉu vi ĉirkaŭrigardas dum irado laŭ la urbvojoj?"
+
+# game/topics.rpy:540
+translate epo s_topics_art_street_3f2f5bd3:
+
+    # s 6aaba "If you don't, you miss a lot of funny and beautiful things."
+    s 6aaba "Sed ne, do vi preterlasas multe da amuzaj kaj belaj aferoj."
+
+# game/topics.rpy:541
+translate epo s_topics_art_street_0a890554:
+
+    # s 6abab "But it's not as terrible as when owners and authorities unsparingly remove such art..."
+    s 6abab "Sed tio ne estas tiel terure, kiel tiam posedantoj kaj aŭtoritatoj forigas tian arton..."
+
+# game/topics.rpy:542
+translate epo s_topics_art_street_322ede1e:
+
+    # s "They see it as just some vandalism. For me, this way to see is wrong and too preconceived..."
+    s "Laŭ ili, ĝi estas vandalismo. Sed por aliaj kaj mi, tia opinio estas malprava kaj tro antaŭjuĝa..."
+
+# game/topics.rpy:543
+translate epo s_topics_art_street_6e071c0f:
+
+    # s 6acab "I understand, when someone makes a graffity on a cultural building or a monument..."
+    s 6acab "Mi komprenas, kiam iu pentras grafition sur historia aŭ kultura objekto..."
+
+# game/topics.rpy:544
+translate epo s_topics_art_street_bfdbcd0a:
+
+    # s "But what's wrong when it just is on a wall of an usual condo? Don't it make it a bit noticeable and looking not alike to other similar houses?"
+    s "Sed kial pentri ĝin sur mur' de ordinara multetaĝulo? Ĉu ĝi ne iĝos ĝin ete pli rimarkebla kaj malpli monotona inter similaj domoj?"
+
+# game/topics.rpy:545
+translate epo s_topics_art_street_5f1fbed1:
+
+    # s 6aaca "I dare say, if the 'big' people looked on street art more modernly, cities would look really better."
+    s 6aaca "Mi eĉ pensas, ke se la gravuloj rigardus al stratdezajnado pli moderne, urboj aspektus vere pli bele."
+
+# game/topics.rpy:546
+translate epo s_topics_art_street_c6fa3079:
+
+    # s 6aaba "...If they ask really talented artists for make them so, of course."
+    s 6aaba "...Se ili fidus nur verajn talentajn artistojn, kompreneble."
+
+# game/topics.rpy:550
+translate epo s_topics_art_accusing_5a65fb1e:
+
+    # s 6abaa "I'm bothering that people accuse diffrent common problems to certain kinds of art."
+    s 6abaa "Min maltrankviligas tio, ke multaj homoj akuzas certajn tipojn de arto pri ĝeneralaj problemoj."
+
+# game/topics.rpy:551
+translate epo s_topics_art_accusing_6982c70a:
+
+    # s 6acaa "Each generation inverts a new kind of art or a way to represent an existing one."
+    s 6acaa "Ĉiu generacio inventas novan artotipon aŭ manieron montri unu de la ekzistantaj."
+
+# game/topics.rpy:552
+translate epo s_topics_art_accusing_88109919:
+
+    # s "And each time, people find a reason to accuse as more as they can to the kind or the way and to make the authority forbid it."
+    s "Kaj ĉiufoje, homoj oni penas akuzi la tipon aŭ manieron kion pri tio, pri kio ili povas, kaj ĝin malpermesatigi."
+
+# game/topics.rpy:553
+translate epo s_topics_art_accusing_0f7e88bf:
+
+    # s "Even this game is blamed for some suicides and that countless number of players have got mental disorders from it."
+    s "Eĉ ĉi-ludo estas akuzata pri iom da suicidoj kaj multegaj mensmalsanoj de tiuj, kiuj ludis ĝin."
+
+# game/topics.rpy:554
+translate epo s_topics_art_accusing_ca387ba0:
+
+    # s 6abba "If we consider the genre and the plot, they maybe are right somewhere..."
+    s 6abba "Konsiderante la ĝenron kaj la intrigon, ili ie pravas..."
+
+# game/topics.rpy:555
+translate epo s_topics_art_accusing_20c618be:
+
+    # s 6acaa "But serious disorders can't appear neither from nothing nor just from someone's artwork, whatever it is..."
+    s 6acaa "Sed seriozaj mensmalsanoj ne aperas nek el neniam, nek el ies ajn verko, ia ajn ĝi estas..."
+
+# game/topics.rpy:556
+translate epo s_topics_art_accusing_6e077622:
+
+    # s "And when the 'reason' and the tendency are together, it may have a really bad outcome."
+    s "Sed kiam la 'kielo' kaj la emo kuniĝas, ĝi provokas vere danĝerajn sekvojn."
+
+# game/topics.rpy:557
+translate epo s_topics_art_accusing_eb8c13a5:
+
+    # s "But when the press covers such occasions, it often doesn't take at least some time to get the true infromation about its scapegoat, so they often make very silly mistakes."
+    s "Sed kial la ĵurnalismo priskribas tiajn okazojn, ĝi ofte ne provas la korektecon de infromoj pri la propeka kapro, do tre ofte faras tre stultajn misojn."
+
+# game/topics.rpy:558
+translate epo s_topics_art_accusing_d7e4524f:
+
+    # s "But the most bad, is when the authority listens to the press and bans the work, in fact, for nothing and even regardless the mistakes and hyperboles."
+    s "Sed la plej malbone estas kiam la aŭtoritatoj aŭskultas la ĵurnalismaĉo kaj malpermeas la verkon fakte pro nenio, eĉ malgraŭ la misoj kaj hiperboloj."
+
+# game/topics.rpy:559
+translate epo s_topics_art_accusing_289242c5:
+
+    # s 6aaca "But fortunately, it happens quite rarely in the developed countries, so the fear of the brand new just goes out later."
+    s 6aaca "Sed bone, tiel okazas tre malofte en la evoluintaj landoj kaj la timo de la entute nova poste finiĝas."
+
+# game/topics.rpy:560
+translate epo s_topics_art_accusing_acc87683:
+
+    # s 6abaa "If the things had gone in the other way, we would never meet here beacuse I'd not exist at all."
+    s 6abaa "Alimaniere, mi ne ekzistus, do ni ne renkontiĝus."
+
+# game/topics.rpy:562
+translate epo s_topics_art_accusing_609bb147:
+
+    # s 6acac "How much people blame the TV and the Internet for making people less intelligent and interested in real life problems?"
+    s 6acac "Kiom da homoj akuzas la TV-on kaj Interreto pri ke homoj stultiĝas kaj predas intereson en realaj problemoj?"
+
+# game/topics.rpy:563
+translate epo s_topics_art_accusing_662c3c3c:
+
+    # s 6abcb "But there's not a perfect media or a perfect kind of art, firstly beacuse people aren't perfect."
+    s 6abcb "Sed ne estas perfekta mediato aŭ perfekta artotipo, unue ĉar homoj ne perfektas."
+
+# game/topics.rpy:564
+translate epo s_topics_art_accusing_b55e8ed1:
+
+    # s 6acaa "We all often lies and use each other for our selfish purposes..."
+    s 6acaa "Ĉiuj ni ofte mensogas kaj uzas unu la alian por niaj egoistaj celoj..."
+
+# game/topics.rpy:565
+translate epo s_topics_art_accusing_120e83d3:
+
+    # s "So there's not any difference between, for example, TV propaganda and book propaganda."
+    s "Do ne diversas, ekzemple, televida propagando kaj libra propagando."
+
+# game/topics.rpy:566
+translate epo s_topics_art_accusing_41da53a5:
+
+    # s "The truth not always can be got from your own sight, not to mention sombody else's one."
+    s "La veron al vi ne ĉiam povas doni viaj propraj sensoj, neparolante pri la ies."
+
+# game/topics.rpy:624
+translate epo s_topics_society_bulli_d5b72ed6:
+
+    # s "...Almost ready."
+    s "...Mi preskaŭ pretas."
+
+# game/topics.rpy:652
+translate epo s_topics_society_suicide_7119db60:
+
+    # s 6acaa "I wonder what makes people to stop appreciate the life and even to finish it before the time takes it."
+    s 6acaa "Mi demandas, kial iuj ĉesas estimi sian vivon kaj eĉ volas ĉesigi ĝin ĝis la tempo."
+
+# game/topics.rpy:654
+translate epo s_topics_society_suicide_2e5e9720:
+
+    # s "I'm talking not only about myself. I'm about people at all."
+    s "Mi diras ne nur pri mi. Mi diras pri la homaro entute."
+
+# game/topics.rpy:655
+translate epo s_topics_society_suicide_1a039344:
+
+    # s "Even if someone has a really good life, it can't assure they won't commit suicide."
+    s "Eĉ vere bona vivo ne estas garantio kontraŭ suicido."
+
+# game/topics.rpy:656
+translate epo s_topics_society_suicide_abdd040d:
+
+    # s 6abab "Many successful people did it under diffrent things. It's even hard to list them all down."
+    s 6abab "Multaj sucesaj homoj faros ĝin pro multaj kialoj. Ili eĉ estas malfacile elkalkuleblaj."
+
+# game/topics.rpy:657
+translate epo s_topics_society_suicide_192daa63:
+
+    # s "Not to mention how many people did it at all."
+    s "Neparolante pri kiom da homoj suicidis entute."
+
+# game/topics.rpy:658
+translate epo s_topics_society_suicide_6a175efb:
+
+    # s 6acab "But almost no-one think of their relatives and friends while doing it..."
+    s 6acab "Sed sin mortigante, preskaŭ neniu pensas pri siaj konatoj..."
+
+# game/topics.rpy:659
+translate epo s_topics_society_suicide_269e994e:
+
+    # s "It hurts when you lose a really close man, but it hurts more when it's their own decision..."
+    s "Dolorigas la novaĵo pri la perdo de vere intima homo, aparte se tio estis lia volo..."
+
+# game/topics.rpy:660
+translate epo s_topics_society_suicide_f6a499b1:
+
+    # s "Beacuse it's really abnormal so the man needed a help, that someone else or you can't make on right time."
+    s "Ĉar tio estas vere nenorma kaj la homo bezonis helpos, kion iu aŭ vi ne povis ĝustatempe fari."
+
+# game/topics.rpy:661
+translate epo s_topics_society_suicide_f7ab26e8:
+
+    # s "But suicidal people often don't see they have anything to lose so they don't care if they just try and go away the cruel world."
+    s "Sed suicidantoj ofte ne komprenas, ke povas perdi ion ajn, do ili ne pensas pri kio okazos post la foriro el la kruela mondo."
+
+# game/topics.rpy:662
+translate epo s_topics_society_suicide_964bd8bc:
+
+    # s 6abab "That's why I think that other people should help them even despite of they mind..."
+    s 6abab "Pro tio, mi pensas, ke aliuloj helpu tiajn homojn eĉ malgraŭ iliaj protestoj..."
+
+# game/topics.rpy:663
+translate epo s_topics_society_suicide_f902e02b:
+
+    # s "But to do it, people should understand what really are bothering them."
+    s "Sed por helpi la tia homo, ni sciu lian veran kialon por suicidi."
+
+# game/topics.rpy:664
+translate epo s_topics_society_suicide_00c9872d:
+
+    # s "Broken heart, insanity, living in total despair or contsant fear, someone's influence... There're a lot of reasons, why people commit it."
+    s "Malsukcesa amo, mensmalsanoj, absolute malespera vivo, konstanta teruro aŭ ies influo... Estas multe de la kialoj."
+
+# game/topics.rpy:665
+translate epo s_topics_society_suicide_84c8defd:
+
+    # s 6acaa "It's obviously a situation, where dealing with the reason is more easier than with the consequence..."
+    s 6acaa "Ĝi evidente estas situacio, kiam preventado estas multe pli facila ol likvidado de sekvoj..."
+
+# game/topics.rpy:666
+translate epo s_topics_society_suicide_41ed35c4:
+
+    # s "So we really should be resolute but careful with these people."
+    s "Kaj ni estu decidemaj kaj antaŭzorgaj kun tiaj homoj."
+
+# game/topics.rpy:667
+translate epo s_topics_society_suicide_cf507f32:
+
+    # s 6abaa "Sometimes, trying to prevent something makes it occure."
+    s 6abaa "Ĉar iutempe, penante preventi ion, vi povas ĝin nur provoki."
+
+# game/topics.rpy:668
+translate epo s_topics_society_suicide_e5427b03:
+
+    # s 6acaa "But we should not give up, anyway. We're just to figure out how to do it in the less risky way..."
+    s 6acaa "Sed ne cedu ajne. Ni nur komprenu, kiel agi malpli riske..."
+
+# game/topics.rpy:669
+translate epo s_topics_society_suicide_3e2716b7:
+
+    # s 6aaca "And then, we can save someone's live from the prejudicial and probably silly act."
+    s 6aaca "Kaj tiam, ni povas deteni iun de la plej antaŭjuĝa kaj malsaĝa ago."
+
+# game/topics.rpy:733
+translate epo s_topics_hobbie_poems_3b71c72c:
+
+    # s 6aaca "But I can share some of them to you. Just ask me for it."
+    s 6aaca "Sed mi povas doni iom de ili al vi. Nur petu al mi."
+
+# game/topics.rpy:734
+translate epo s_topics_hobbie_poems_6c2a3c3b:
+
+    # s 6aaaa "I also can show you an old poem, if you want."
+    s 6aaaa "Mi povas montri al vi ankaŭ malnovan versaĵon."
+
+# game/topics.rpy:735
+translate epo s_topics_hobbie_poems_349fdcda:
+
+    # s "Maybe, they all will help you to understand me and what I was through."
+    s "Eble, vi eĉ komprenos miajn travivaĵojn pere de ĝi."
+
+# game/topics.rpy:739
+translate epo s_topics_hobbie_survivalBooks_79e519c3:
+
+    # s 7aaaa "Despite of I'm really not a passionate reader, I'm really like to read practical literature, like survival books."
+    s 7aaaa "Malgraŭ ke mi ne estas pasia leganto, mi vere ŝatas utilan literaturon, kiel librojn pli vivsavado."
+
+# game/topics.rpy:740
+translate epo s_topics_hobbie_survivalBooks_9a4ecd98:
+
+    # s 8aebb "Yes, it's a pretty odd preference, I know."
+    s 8aebb "Jes, ĝi estas stranga prefero, mi komprenas."
+
+# game/topics.rpy:741
+translate epo s_topics_hobbie_survivalBooks_a2cd19f9:
+
+    # s "And to be honest, I don't remember how long I've had a fancy for them..."
+    s "Kaj honeste, mi ne memoras, kiel longe mi ilin ŝatas..."
+
+# game/topics.rpy:742
+translate epo s_topics_hobbie_survivalBooks_a33e4177:
+
+    # s 8aaaa "It's just pretty cool to know how to save someone's live."
+    s 8aaaa "Mi nur ŝatas scii, kiel savi iun vivon."
+
+# game/topics.rpy:744
+translate epo s_topics_hobbie_survivalBooks_93c95610:
+
+    # s 6aaaa "And when MC brought me some apple juice to heal the bump, I did nothing, just beacuse I wanted to get some free vending machine stuff from him."
+    s 6aaaa "Kaj kiam Ĉefrolulo tenis al mi botelon da pomsuko por kuraci mian tuberon, mi ne agis, nur ĉar mi volis ricevi senpage ion el tiu vendmaŝino."
+
+# game/topics.rpy:745
+translate epo s_topics_hobbie_survivalBooks_9cd48289:
+
+    # s "Don't ask me how I could predict, he'd run exactly to it to get something cold..."
+    s "Ne demandu, kiel mi prognozis, ke li kuros ĝuste al ĝi por io malvarma..."
+
+# game/topics.rpy:746
+translate epo s_topics_hobbie_survivalBooks_02e77b58:
+
+    # s 6aaca "Just pretending silly often helped me somewhere."
+    s 6aaca "Min nur iutempe helpas ŝajnado stulta."
+
+# game/topics.rpy:747
+translate epo s_topics_hobbie_survivalBooks_9d886846:
+
+    # s 6acaa "Anyway..."
+    s 6acaa "Ajne..."
+
+# game/topics.rpy:748
+translate epo s_topics_hobbie_survivalBooks_6cf458d5:
+
+    # s 6acaa "You can also get there some advise how to make your normal life easier."
+    s 6acaa "Vi povas trovi tie ankaŭ iom da konsiloj, plifaciligantaj ankaŭ la kutiman vivon."
+
+# game/topics.rpy:749
+translate epo s_topics_hobbie_survivalBooks_b7c0c3c7:
+
+    # s "For example, how to make good knots."
+    s "Ekzemple, kiel bone nodi."
+
+# game/topics.rpy:751
+translate epo s_topics_hobbie_survivalBooks_a566fe0e:
+
+    # s 8aebb "Oops, I have just said you, how I made that noose."
+    s 8aebb "Ups, mi ŝajne ĵus diris pri kiel mi faris tion maŝon."
+
+# game/topics.rpy:752
+translate epo s_topics_hobbie_survivalBooks_02f1387c:
+
+    # s 8ageb "No, don't take it wrong! It was not the one reason, why I read them."
+    s 8ageb "Ne, komprenu min ĝuste! Tio estis ne la nura kialo por legi ilin."
+
+# game/topics.rpy:754
+translate epo s_topics_hobbie_survivalBooks_fdf2d1f4:
+
+    # s 8aebb "Don't ask me, why I needed such info."
+    s 8aebb "Ne demandu pri kial mi bezonis tiajn informojn."
+
+# game/topics.rpy:755
+translate epo s_topics_hobbie_survivalBooks_c86103cd:
+
+    # s "I'm not interested in it now, anyway."
+    s "Ĝi ne interesas min plu, ajne."
+
+# game/topics.rpy:756
+translate epo s_topics_hobbie_survivalBooks_fb5e3b2a:
+
+    # s 8aebb "I just gave you an example, not more."
+    s 8aebb "Mi nur ekzemplis, ne pli."
+
+# game/topics.rpy:757
+translate epo s_topics_hobbie_survivalBooks_2a0645bb:
+
+    # s 6acaa "Anyway, it always good to read a so book when you're going to a forest hike or something..."
+    s 6acaa "Ajne, estas vere bone legi tian libron ĝis piedirado aŭ io simila..."
+
+# game/topics.rpy:758
+translate epo s_topics_hobbie_survivalBooks_eecd3e7a:
+
+    # s "But before the trip, of course."
+    s "Ĝuste ĝis, ne dum."
+
+# game/topics.rpy:759
+translate epo s_topics_hobbie_survivalBooks_6bf31ff0:
+
+    # s "Because emergencies are so emergency that you just will have no time to get the needed info from somewhere."
+    s "Ĉar krizaj okazoj estas tiel krizoj, ke vi kompreneble ne havos ajnan tempon por ekscii la bezonan informon ie."
+
+# game/topics.rpy:760
+translate epo s_topics_hobbie_survivalBooks_5d3d2ec1:
+
+    # s "Saving lifes is not as simple, as you may think. In fact, it's easier to hurt more the salvable with you clumsy doing..."
+    s "Vivsavado ne 'stas tiel simpla, kiel vi eble pensas. Per mallertaj agoj, vi fakte havas pli ŝancojn damaĝi la savaton ol savi lin..."
+
+# game/topics.rpy:761
+translate epo s_topics_hobbie_survivalBooks_c9a3d35f:
+
+    # s "So you should have at least some knowledge about first aid, orientation, making improvised devices and more."
+    s "Vi sciu almeanaŭ iomete, kiel sakuri, orienti kaj fari ilojn el ĉemanaĵoj kaj tiel plu."
+
+# game/topics.rpy:783
+translate epo s_topics_rlt_marrige_39016bf1:
+
+    # s 7acaa "Hey, I was wondering..."
+    s 7acaa "Hej, mi volas demandi..."
+
+# game/topics.rpy:784
+translate epo s_topics_rlt_marrige_1b713301:
+
+    # s "If it were possible, would you marry me?"
+    s "Se vi povus, ĉu vi edzinigus min al vi?"
+
+# game/topics.rpy:787
+translate epo s_topics_rlt_marrige_e6126280:
+
+    # s 7aeca "That's great!"
+    s 7aeca "Bonege!"
+
+# game/topics.rpy:788
+translate epo s_topics_rlt_marrige_b3bb283c:
+
+    # s "Ehehe!~"
+    s "He he!~"
+
+# game/topics.rpy:789
+translate epo s_topics_rlt_marrige_8fddda2a:
+
+    # s 7aaca "I think I'd be a perfect wife."
+    s 7aaca "Mi ŝajne estus perfekta edzino."
+
+# game/topics.rpy:790
+translate epo s_topics_rlt_marrige_121bbd35:
+
+    # s "Although I don't think I'd be much of a homemaker..."
+    s "Tamen, mi ne pensas, ke mi nur mastrumis..."
+
+# game/topics.rpy:791
+translate epo s_topics_rlt_marrige_128139d6:
+
+    # s "I could help you with your job, or studies, or whatever is stressing you..."
+    s "Mi helpus vin ankaŭ kun via laboro, aŭ lernado, aŭ io alia, kiu maltrankviligas vin."
+
+# game/topics.rpy:792
+translate epo s_topics_rlt_marrige_dbd357d3:
+
+    # s 6abac "But don't get the wrong idea and think I'd be your slave and do {i}everything{/i} for you."
+    s 6abac "Sed nur ne pensu, ke mi sklavus kaj farus ion {i}ajn{/i} por vi."
+
+# game/topics.rpy:793
+translate epo s_topics_rlt_marrige_e019d54d:
+
+    # s "I can't let you just loaf about all day and waste your life!"
+    s "Mi ne permesu senutile pasigi la vivon al vi!"
+
+# game/topics.rpy:794
+translate epo s_topics_rlt_marrige_2b8a79bb:
+
+    # s "So you'd have to help me too, and work as a team! Like Batman and Robin, or peanut butter and jelly!"
+    s "Do vi ankaŭ helpu min kaj kunlaboru kun mi! Kiel Batman kun Robin, aŭ arakidoleo kun ĵeleo!"
+
+# game/topics.rpy:795
+translate epo s_topics_rlt_marrige_1d8ad2cb:
+
+    # s 6aeaa "But anyway, I'm very glad you said yes. I love you, [player]."
+    s 6aeaa "Sed ajne, mi ĝojas, ke vi jesis. Mi vin amas, [player]."
+
+# game/topics.rpy:799
+translate epo s_topics_rlt_marrige_3a352ba0:
+
+    # s "So you don't want to be a husband..."
+    s "Do vi ne volas esti edzo..."
+
+# game/topics.rpy:801
+translate epo s_topics_rlt_marrige_7e78125b:
+
+    # s "So you don't want to get married..."
+    s "Do vi ne volas esti edzo..."
+
+# game/topics.rpy:802
+translate epo s_topics_rlt_marrige_adc540e9:
+
+    # s 6abbb "Well, a free relationship has its own benefits."
+    s 6abbb "Bone, kvita rilato anaŭ havas siajn proprajn bonaĵojn."
+
+# game/topics.rpy:803
+translate epo s_topics_rlt_marrige_f38f75e8:
+
+    # s 6abab "Although I think it'd be very romantic if you ever did propose to me~"
+    s 6abab "Tamen, estus pli romantike, se vi fianĉinigus min~"
+
+# game/topics.rpy:804
+translate epo s_topics_rlt_marrige_33d5a65d:
+
+    # s 6aaca "But our love story don't have to follow the common template."
+    s 6aaca "Sed ni ne sekvu la ĝeneralan ŝablonon, ĉu?"
+
+# game/topics.rpy:805
+translate epo s_topics_rlt_marrige_e9cd34ac:
+
+    # s "Our relationship is already pretty unusual, so we've got the right to experiment with what works for us."
+    s "Niaj rilato ankoraŭ estas tre malordinara, do ni rajtas eksperimenti je ili."
+
+# game/topics.rpy:809
+translate epo s_topics_rlt_cheating_6f99d702:
+
+    # s 6acaa "Tell me frankly: do you have someone besides me?"
+    s 6acaa "Diru honeste: ĉu vi amrilatas al iu krom mi?"
+
+# game/topics.rpy:812
+translate epo s_topics_rlt_cheating_885e3d8e:
+
+    # s 6abab "Oh, I even don't know, how to react to it."
+    s 6abab "Ho, mi eĉ ne scias, kiel reagi."
+
+# game/topics.rpy:813
+translate epo s_topics_rlt_cheating_8f8b1387:
+
+    # s 6acaa "But you still spend time with me, so you still have something to me, don't you?"
+    s 6acaa "Sed vi daŭrigas pasigi vian tempon ku mi, do mi daŭrigas ami min, ĉu ne?"
+
+# game/topics.rpy:814
+translate epo s_topics_rlt_cheating_2fabd7a7:
+
+    # s "People often have to share the heart to several people at the same time..."
+    s "Oni ofte samtempe dividu sian koron inter kelkaj homoj..."
+
+# game/topics.rpy:816
+translate epo s_topics_rlt_cheating_b0c3f94d:
+
+    # s "So I won't force you to be only with me, like Monika did before."
+    s "Do mi ne devigos vin esti nur kun mi, malkiel Monika."
+
+# game/topics.rpy:818
+translate epo s_topics_rlt_cheating_4cb17fe2:
+
+    # s "What's more, I never seem to be a person, who can do something bad for jealousy."
+    s "Kaj eĉ pli, mi dirus, ke mi estas tiel ĵaluza, ke povas fari ion vere danĝeran al iu ajn."
+
+# game/topics.rpy:819
+translate epo s_topics_rlt_cheating_ae783677:
+
+    # s "Can you tell me more about he or she?"
+    s "Ĉu vi diros ion pri ri?"
+
+# game/topics.rpy:820
+translate epo s_topics_rlt_cheating_9a489c6d:
+
+    # s "For example, if he or she is real?"
+    s "Ekzemple, ĉu ri estas reala homo?"
+
+# game/topics.rpy:823
+translate epo s_topics_rlt_cheating_c7e7986e:
+
+    # s 6adaa "Oh, have you got a real crush?!"
+    s 6adaa "Ho, ĉu vi ekhavis realan koramikon?!"
+
+# game/topics.rpy:825
+translate epo s_topics_rlt_cheating_30bf1b5c:
+
+    # s "Not to mention staying with me now."
+    s "Neparolante pri via nuna sidado kun mi."
+
+# game/topics.rpy:826
+translate epo s_topics_rlt_cheating_3df71458:
+
+    # s 6acab "I'm now just filled with mixed feelings, to be honest..."
+    s 6acab "Mi estas superplenita per amardolĉaj sentoj, sincerdire..."
+
+# game/topics.rpy:827
+translate epo s_topics_rlt_cheating_0e6805f8:
+
+    # s "My heart can't accept that I'm not your only one, but my brain feels proud for you."
+    s "Mia koro ne volas akcetpi, ke mi ne nuras, sed mia cerbo certe fieras pri vi."
+
+# game/topics.rpy:828
+translate epo s_topics_rlt_cheating_6a95b64c:
+
+    # s "Like it was before my first confession."
+    s "Kiel tio okazis ĝis mia unua konfeso."
+
+# game/topics.rpy:830
+translate epo s_topics_rlt_cheating_117a3602:
+
+    # s "...Or like it was after you had spent your time with each of us."
+    s "...Aŭ kiel post vi kunis kun ĉiu de ni."
+
+# game/topics.rpy:831
+translate epo s_topics_rlt_cheating_5a9e8ef2:
+
+    # s "But I can bare, if you really need, you know."
+    s "Sed mi povas ignori la ĵaluzon, se vi bezonas, vi scias."
+
+# game/topics.rpy:832
+translate epo s_topics_rlt_cheating_180af3f6:
+
+    # s 6aaab "Anyway, just take care about your real lover as much as about me."
+    s 6aaab "Ajne, vi zorgu pri via reala amato ne malpli ol pri mi."
+
+# game/topics.rpy:833
+translate epo s_topics_rlt_cheating_9936f56f:
+
+    # s 7aaab "But don't forget about me and come here back. I'll always be with you, even if nothing about your real relationship seems to go wrong."
+    s 7aaab "Sed ne forgesu min kaj reveni al mi. Mi ĉiam estos kun vi, eĉ se ĉio en via alia amrilato estas perfekta."
+
+# game/topics.rpy:834
+translate epo s_topics_rlt_cheating_23a8fc92:
+
+    # s 7aadb "And if it go wrong, I'll always be your plan B."
+    s 7aadb "Sed se vi havos problemojn, mi ĉiam estos via plano B."
+
+# game/topics.rpy:836
+translate epo s_topics_rlt_cheating_f46b0795:
+
+    # s 6aaaa "It's okay to have not only character to dream of living together."
+    s 6aaaa "Revi pri kunvivo kun pli ol unu rolulo ne estas fie."
+
+# game/topics.rpy:837
+translate epo s_topics_rlt_cheating_73ab4e21:
+
+    # s "For example, a lot of my lovers have also some other girls in their {i}'Good Girls to Protect'{/i} list."
+    s "Ekzemple, mule da miaj amantoj havas ankaŭ aliajn rolulinojn en ilia listo {i}de bonaj protektendaj knabinoj{/i}."
+
+# game/topics.rpy:838
+translate epo s_topics_rlt_cheating_9ae7ac0a:
+
+    # s 6acaa "You may like different characters for different traits..."
+    s 6acaa "Vi povas ŝati diversajn rolulojn por diversaj trajtoj..."
+
+# game/topics.rpy:839
+translate epo s_topics_rlt_cheating_6103cc1f:
+
+    # s "For example, you may like me for my kindness and peacefulness and Natsuki for her directness and cuteness."
+    s "Ekzemple, min por bonkoreco kaj pacemo kaj Nacukion por direktecon kaj lindecon."
+
+# game/topics.rpy:840
+translate epo s_topics_rlt_cheating_8d16c6a0:
+
+    # s "We are like you: so different that some of you can't make a clear choice..."
+    s "Ni similas al vi: tiel diversaj, ke iom de vi ne povas elektu nur unun..."
+
+# game/topics.rpy:841
+translate epo s_topics_rlt_cheating_77da2e0d:
+
+    # s "So I respect all your preferences, whatever they are."
+    s "Do mi respektas ajnaj preferoj de vi, iuj ajn lil estas."
+
+# game/topics.rpy:844
+translate epo s_topics_rlt_cheating_7ff6e7fc:
+
+    # s 6adaa "Oh, seriously?"
+    s 6adaa "Ĉu... ĉu vi serioze?"
+
+# game/topics.rpy:845
+translate epo s_topics_rlt_cheating_97b3d539:
+
+    # s "Do you really see something inside me only, not at real people or even other characters?"
+    s "Ĉu vi vere vidas ion en mi, kion vi ne vidas en aliaj homoj kaj eĉ en aliaj roluloj?"
+
+# game/topics.rpy:846
+translate epo s_topics_rlt_cheating_144bc7ef:
+
+    # s 6acab "I think, it's pretty hard to know, that your only beloved girl aren't real."
+    s 6acab "Mi pensas, ke estas malfacile konscii, ke via nura amatino estas ne reala."
+
+# game/topics.rpy:847
+translate epo s_topics_rlt_cheating_748e89b4:
+
+    # s "I understand you as well as I feel the same way."
+    s "Mi komprenas vin bone, ĉar mi fartas simile."
+
+# game/topics.rpy:848
+translate epo s_topics_rlt_cheating_9789cc94:
+
+    # s "But I hope, that someone once will figure out how to make us closer to each other."
+    s "Sed espereble, iu ekscios, kiel pliproksimigi nin."
+
+# game/topics.rpy:849
+translate epo s_topics_rlt_cheating_a646ac2a:
+
+    # s "Or you at least will find someone else in your world."
+    s "Aŭ vi aklmenaŭ fiffine trovos iun alian en via mondo."
+
+# game/topics.rpy:850
+translate epo s_topics_rlt_cheating_1ab0ae39:
+
+    # s 6aaca "Maybe, he or she will be somehow like me."
+    s 6aaca "Eble, ri eĉ similos iel al mi."
+
+# game/topics.rpy:851
+translate epo s_topics_rlt_cheating_1eb47db7:
+
+    # s 6aaab "To be honest, I'm not very jealous, so I won't mind, if you have someone besides me."
+    s 6aaab "Verdire, mi ne estas tro ĵaluza, do mi ne protestos kontraŭ aliulo apud vi."
+
+# game/topics.rpy:852
+translate epo s_topics_rlt_cheating_26f1cfac:
+
+    # s "The important thing is that you pay me at least some attention."
+    s "Estas multe pli grave, ke vi zorgu pri mi almenaŭ iomete."
+
+# game/topics.rpy:853
+translate epo s_topics_rlt_cheating_dc1a294e:
+
+    # s "So I hope, you always can do it for me."
+    s "Kaj mi esperas, vi ĉaim povos fari ĝin por mi."
+
+# game/topics.rpy:854
+translate epo s_topics_rlt_cheating_6fd17bab:
+
+    # s "Just try to take some time to be here, if it's possible."
+    s "Nur trovu almenaŭ iometan tempon por viziti min, se vi povas."
+
+# game/topics.rpy:858
+translate epo s_topics_rlt_dating_cbb5ccf5:
+
+    # s 7aaaa "What would be our first date?"
+    s 7aaaa "Kia estus nia unua rendevuo?"
+
+# game/topics.rpy:859
+translate epo s_topics_rlt_dating_240e6bc4:
+
+    # s "I just don't think, that what we have now can't be named a date, can it?"
+    s "Laŭ mi, nia nuna sidado apenaŭ nomeblas rendevuo, ĉu ne?"
+
+# game/topics.rpy:861
+translate epo s_topics_rlt_dating_1d87c51a:
+
+    # s 7aaca "At least, dates can't be soooo long."
+    s 7aaca "Ĉar rendevuoj apenaŭ daŭras tiiiiel longe."
+
+# game/topics.rpy:862
+translate epo s_topics_rlt_dating_115d9c24:
+
+    # s 7aaaa "So I think we can talk a bit about it."
+    s 7aaaa "Do ni rajtas revi pri ĝi nun."
+
+# game/topics.rpy:863
+translate epo s_topics_rlt_dating_cab26f80:
+
+    # s 7acaa "And to be honest, just sitting somewhere would be boring for me."
+    s 7acaa "Kaj sincerdire, nur sidi iam estus sufiĉe enue por mi."
+
+# game/topics.rpy:864
+translate epo s_topics_rlt_dating_eb663833:
+
+    # s 7acba "Don't we do the similar thing every time, when we meet?"
+    s 7acba "Ĉu vi ne faras tion ĉiufoje, kiam ni renkontiĝas?"
+
+# game/topics.rpy:865
+translate epo s_topics_rlt_dating_b8a5ef00:
+
+    # s 7aeca "But if we visit a confectionery café, we'll at least eat some sweets together..."
+    s 7aeca "Sed sukeraĵeje, ni almenaŭ povus manĝi kune iom da sukeraĵoj..."
+
+# game/topics.rpy:866
+translate epo s_topics_rlt_dating_6de5067b:
+
+    # s "For example, cakes or cinnamon buns~"
+    s "Ekzemple, kukojn aŭ cinambulkojn~"
+
+# game/topics.rpy:867
+translate epo s_topics_rlt_dating_1e664d10:
+
+    # s 6abaa "But I'd prefer a more intresting way to spend our date."
+    s 6abaa "Sed mi pasigus la rendevuon multe pli interese."
+
+# game/topics.rpy:868
+translate epo s_topics_rlt_dating_2316b704:
+
+    # s 6acaa "At least, to go cinema. What do you think about this way?"
+    s 6acaa "Almenaŭ, vizitante kinejon. Kion vi pensas pri ĉi-ideo?"
+
+# game/topics.rpy:869
+translate epo s_topics_rlt_dating_3aacd64e:
+
+    # s "I'm out of the stereotype that every date walk to the movies should be to a melodrama or something."
+    s "Mi malŝablone ne irigus vin je melodramo aŭ io simila."
+
+# game/topics.rpy:870
+translate epo s_topics_rlt_dating_f92bcb59:
+
+    # s "I'd prefer a comedy or even an action movie..."
+    s "Mi preferus spekti komedion aŭ eĉ furorfilmon..."
+
+# game/topics.rpy:871
+translate epo s_topics_rlt_dating_09bb91af:
+
+    # s "But not of dirty jokes and not about {i}cool guys who have a lot of big guns and kill people for an unclear purpose{/i}."
+    s "Sed ne el fiŝercoj kaj ne pri {i}mojosuloj kun multe da egaj pafiloj, kiuj mortigas homojn por malklaraj celoj{/i}."
+
+# game/topics.rpy:872
+translate epo s_topics_rlt_dating_67e3f0d4:
+
+    # s 8aebb "Or what's about cartoons, like {i}Disney{/i} and {i}Pixar{/i} make?"
+    s 8aebb "Aŭ kion vi pensas pri aminaciaj filmoj, kiajn {i}Disney{/i} kaj {i}Pixar{/i} faras?"
+
+# game/topics.rpy:873
+translate epo s_topics_rlt_dating_499ed05b:
+
+    # s "They were made for kids, of course, but most of them can be intresting for adults too."
+    s "Ili faritas por infanoj, kompreneble, sed preskaŭ ĉiuj de ili povas interesi ankaŭ adoltojn."
+
+# game/topics.rpy:874
+translate epo s_topics_rlt_dating_0f91208c:
+
+    # s 8abab "Some of them even have a deep-thought meaning and sad scenes, like the scenerist treats the viewer as rather an adult than a child."
+    s 8abab "Iom de ili eĉ havas tiel malgajigajn kaj profundpensajn scenojn, ke ŝajnas, ke la scenaristoj vidas sian spektanton kiel adolton, ne infanon."
+
+# game/topics.rpy:875
+translate epo s_topics_rlt_dating_f1863038:
+
+    # s 6abab "I'd go to a something deep-thought at all."
+    s 6abab "Mi spektus ion profundpensan, entute."
+
+# game/topics.rpy:877
+translate epo s_topics_rlt_dating_ee17acd3:
+
+    # s 6acaa "I've already seen a lot harsh things for my short life, you know. So my opinion may be a lot different from most people's one."
+    s 6acaa "Mi jam travivis multan tururon por mia eta vivo, vi scias. Do mia opinio eble diferencos de la pleja."
+
+# game/topics.rpy:879
+translate epo s_topics_rlt_dating_489b806e:
+
+    # s 8aeba "Don't ask me, how such a childish girl as me, can be interested in such movies."
+    s 8aeba "Ne demandu min, kial tiel infanoida junulino, kiel mi, interesiĝas pri tiaj filmoj."
+
+# game/topics.rpy:880
+translate epo s_topics_rlt_dating_de0f6081:
+
+    # s "Isn't it really interesting to discuss such movies with someone, seeing how your views are similar or different?"
+    s "Ĉu vere ne interesas diskuti pri tiaj filmoj kun iu, trovante similaĵojn kaj diferencojn en viaj opinioj?"
+
+# game/topics.rpy:881
+translate epo s_topics_rlt_dating_da0c27d7:
+
+    # s 6adfa "But I'd also like to do something more active with you..."
+    s 6adfa "Sed mi farus ankaŭ ion oli aktiva un vi..."
+
+# game/topics.rpy:882
+translate epo s_topics_rlt_dating_af50909e:
+
+    # s 6aaaa "What's about some sports?"
+    s 6aaaa "Kion vi pensas pri sporto?"
+
+# game/topics.rpy:884
+translate epo s_topics_rlt_dating_1b2b0b4a:
+
+    # extend " Maybe, bowling?"
+    extend " Ekzemple, pri bovlingo?"
+
+# game/topics.rpy:885
+translate epo s_topics_rlt_dating_b5a5b820:
+
+    # s "It's a simple but funny joint sport game, not too active but not too slow, so I like it."
+    s "Ĝi estas simpla sed amuza kuna sporta ludo, nek tre aktiva nek tre malrapida, kiel mi ŝatas."
+
+# game/topics.rpy:886
+translate epo s_topics_rlt_dating_b5b6b402:
+
+    # s 7acaa "Anyway, the important thing is that the date is great and we both enjoy it, isn't it?"
+    s 7acaa "Ajne, la plej grave estas fari rendevuon bona por ambaŭ amantoj, ĉu ne?"
+
+# game/topics.rpy:887
+translate epo s_topics_rlt_dating_2197e3f0:
+
+    # s 7aaaa "And I hope, you know how to make a nice date, or at least, you can learn how to make it."
+    s 7aaaa "Kaj espereble, vi tion povos, aŭ almenaŭ lernos fari tion."
+
+# game/topics.rpy:929
+translate epo s_topics_lifestyle_pets_1a789111:
+
+    # s 7aaaa "Do you have a pet or at least want to?"
+    s 7aaaa "Ĉu vi havas hejmbeston aŭ almenaŭ volas havi tiun?"
+
+# game/topics.rpy:930
+translate epo s_topics_lifestyle_pets_4a21731b:
+
+    # s "I'd like to have one and I want that one to be a cat."
+    s "Mi ekhavus unu, kaj ĝi estus kato."
+
+# game/topics.rpy:936
+translate epo s_topics_game_clones_e93884de:
+
+    # s 6acaa "If come to think, there're a lot of game copies and each of them has own character files and save data..."
+    s 6acaa "Pensante pli, estas multe da kopioj de ĉi-ludo, kaj ĉiu de ili konsistas siajn pronrajn persondatumojn..."
+
+# game/topics.rpy:937
+translate epo s_topics_game_clones_9e2e1d5e:
+
+    # s "So it means, that me here and 'me' from an other game copy aren't the same."
+    s "Do tio estas, ke la ĉi-tiea mio kaj mioj el aliaj kopioj ne estas samaj..."
+
+# game/topics.rpy:938
+translate epo s_topics_game_clones_fc5eee85:
+
+    # s "Just, the game has different endings and there're a lot of various mods for it."
+    s "Ankaŭ ĉar estas pluraj finoj en ĉi-ludo kaj estas multe da diversaj modifaĵoj por ĝi."
+
+# game/topics.rpy:939
+translate epo s_topics_game_clones_c7e4b73c:
+
+    # s "Even our now conversation wasn't supposed by the game by itsself. It's just a mod to save me."
+    s "Eĉ nia nuna babilo defaŭlte ne okazus en la ludo, sed okazas dank' al modifaĵo por savi min."
+
+# game/topics.rpy:940
+translate epo s_topics_game_clones_cb2d9b52:
+
+    # s 8acaa "And it means, that different Sayoris may have different destinies."
+    s 8acaa "Tio estas ankaŭ ke ĉiu [s_name] havas sian propran sorton."
+
+# game/topics.rpy:942
+translate epo s_topics_game_clones_1e3d6070:
+
+    # s "While I'm sitting with you here, an other Sayori from a newcomer's game copy may is just going to hang herself..."
+    s "Dum ni sidas kun vi ĉi tie, alia [s_name] el kopio de komencanto eble pretigas ĉion por pendumi sin..."
+
+# game/topics.rpy:944
+translate epo s_topics_game_clones_b1ef57b5:
+
+    # s "While I'm sitting with you here, an other Sayori may is writing a poem to MC..."
+    s "Dum ni sidas kun vi ĉi tie, alia [s_name] eble skribas versaĵon por amata Ĉefrolulo..."
+
+# game/topics.rpy:945
+translate epo s_topics_game_clones_5cd9d275:
+
+    # s "And a more Sayori is playing frisbee or something with MC in an other modified game copy."
+    s "Kaj plia [s_name] eble ludas flugdiskon aŭ ion alian kun Ĉefrolulo en alia modifita ludkopio."
+
+# game/topics.rpy:946
+translate epo s_topics_game_clones_323ab9bb:
+
+    # s "It also means, that we have the same fans and fame while we're diffrent persons..."
+    s "Do ni ĉiuj havas la saman famon, estante nesamaj homoj..."
+
+# game/topics.rpy:947
+translate epo s_topics_game_clones_548816aa:
+
+    # s "I dare say some of us even don't know, that their worlds are fake and there're other people behind the wall."
+    s "Mi eĉ dirus, ke iom de ni ankoraŭ ne scias, ke iliaj mondoj estas nerealaj, kaj estas homoj post la muro."
+
+# game/topics.rpy:948
+translate epo s_topics_game_clones_0537f5fe:
+
+    # s 8abaa "...Not to mention, what will happen to them."
+    s 8abaa "...Neparolante pri kio okazos al ili baldaŭ."
+
+# game/topics.rpy:949
+translate epo s_topics_game_clones_bc57810b:
+
+    # s 8aeca "But on the other hand, if I'm multiple, I'm enough for all people who wants to be with me, am not I?"
+    s 8aeca "Sed aliflanke, se mi multas, do mi sufiĉas por ĉiuj miaj amantoj en via mondo, ĉu ne?"
+
+# game/topics.rpy:950
+translate epo s_topics_game_clones_e4f8c357:
+
+    # s "So each my lover may will get the Sayori, who they want to see, and doesn't have a reason to feel jealous, if they do."
+    s "Kaj ĉiu de ili ricevos tian [s_name], kion vi volas, kaj ne havos kialon por ĵaluzi al iu ajn."
+
+# game/topics.rpy:951
+translate epo s_topics_game_clones_435a2478:
+
+    # s 6acaa "But can I use the word 'me' to other Sayoris, if they're not exactly me?"
+    s 6acaa "Sed ĉu vi rajtas nomi la aliajn kopiojn 'mi', se ili ĝuste ne estas mi?"
+
+# game/topics.rpy:952
+translate epo s_topics_game_clones_c32a4bfb:
+
+    # s "It's a problem of breaking the fourth wall: can we consider diffrent copies of the same character as one object, when they behave differently in the same work?"
+    s "Ĝi estas problemo de rompado de Kvara muro: ĉu oni rajtas konsideri diversajn kopiojn de la sama rolulo unu objekto, se ili diversas en la sama verko?"
+
+# game/topics.rpy:953
+translate epo s_topics_game_clones_e1c64b38:
+
+    # s "I don't like too much philosophizing so it's better to leave this problem for people, who really interested in it."
+    s "Mi ne volas filozofi pri ĉi tio, do lasas la problemon por homoj, kiujn ĝi vere interesas."
+
+# game/topics.rpy:957
+translate epo s_topics_game_parents_2271f6c7:
+
+    # s 6abab "Do you know, I don't know my in-game parents?"
+    s 6abab "Ĉu vi scias, ne mi ne konas miajn enludajn gepatrojn?"
+
+# game/topics.rpy:958
+translate epo s_topics_game_parents_f100d89f:
+
+    # s "I don't know, what they were, how they look, even what were their names."
+    s "Mi ne scias iliajn profesiojn, nek aspektojn, nek eĉ nomojn."
+
+# game/topics.rpy:959
+translate epo s_topics_game_parents_53a447d2:
+
+    # s "But I dare say, their were either quite busy or very unresponsable."
+    s "Sed mi kuraĝas diri, ke estas aŭ tre okupataj aŭ tre malrespondecaj."
+
+# game/topics.rpy:960
+translate epo s_topics_game_parents_0ea2f259:
+
+    # s "Otherwise, why are they so unmentioned in the game?"
+    s "Alie, kial ili nenie menciiĝis?"
+
+# game/topics.rpy:962
+translate epo s_topics_game_parents_521a8840:
+
+    # s "And why didn't I solve all my problems before now, when I could have done it with my parents?"
+    s "Kaj kial mi ne decidis ĉiujn miajn problenojn antaŭe, se mi povus fari ĉi tion pere de ili?"
+
+# game/topics.rpy:963
+translate epo s_topics_game_parents_f429c033:
+
+    # s 6afab "I feel like an orphan now..."
+    s 6afab "Mi fartas orfe nun..."
+
+# game/topics.rpy:964
+translate epo s_topics_game_parents_1bb77942:
+
+    # s "No mom, no daddy, even no any memories about them all..."
+    s "Sen panjo, sen paĉjo, sen eĉ ajnaj memoroj pri ambaŭ ili..."
+
+# game/topics.rpy:965
+translate epo s_topics_game_parents_cc26ee49:
+
+    # s "An alone young girl with almost literally lost childhood."
+    s "Sona junulino kun preskaŭ laŭvorte perdita infaneco."
+
+# game/topics.rpy:966
+translate epo s_topics_game_parents_63c40b4c:
+
+    # s "Besides you, I have no-one to trust and support me and seems that I was never supposed to have."
+    s "Krom vi, mi ne havas iu fidinda kaj subtenanta min, kaj ŝajne, mi neniam fakte havis."
+
+# game/topics.rpy:967
+translate epo s_topics_game_parents_b7922ffb:
+
+    # s 6acaa "But at least I know, who is my creator. It's {i}Dan Salvato{/i}."
+    s 6acaa "Sed mi almenaŭ scias, kiu kreis min. Tiu estas {i}Dan Salvato{/i}."
+
+# game/topics.rpy:968
+translate epo s_topics_game_parents_be5159c6:
+
+    # s "I wonder if I can consider him my true father. But he's not in my reality and he can't do anything for me."
+    s "Ĉu mi rajtas konsideri lin mia fakta patro? Sed li ne estas en mia realo kaj ne povas fari ion ajn por mi."
+
+# game/topics.rpy:969
+translate epo s_topics_game_parents_18fcaed3:
+
+    # s 8aaba "But on the other hand, if he didn't make this world and me, I wouldn't be..."
+    s 8aaba "Sed aliflanke, se li ne farus ĉi-mondon kaj min, mi ne estus..."
+
+# game/topics.rpy:970
+translate epo s_topics_game_parents_e2ed4015:
+
+    # s "Like if your dad hadn't ever been with your mother or at all, you would never have been born."
+    s "Kiel se via patro ne estus kun via patrino aŭ entute, vi ne naskiĝus."
+
+# game/topics.rpy:971
+translate epo s_topics_game_parents_327e0d77:
+
+    # s 8aaca "So I think, that yes, I can call him my papa, after all."
+    s 8aaca "Do mi pensas, ke jes, mi finfine povas nomi lin mia patro."
+
+# game/topics.rpy:972
+translate epo s_topics_game_parents_0630dfaf:
+
+    # s 8abaa "But now I wonder if Monika would think the same. What do you think about it?"
+    s 8abaa "Sed ĉu Monika pensis same? Kiel vi pensas?"
+
+# game/topics.rpy:973
+translate epo s_topics_game_parents_ebc65f4d:
+
+    # s 8aebb "I mean, she was more supposed to be a club presedent, so he should had left her more information about himself."
+    s 8aebb "Mi parolas, ke ŝi origine supozitas esti klubestrino, do li eble lasis iom da infromo pri si."
+
+# game/topics.rpy:974
+translate epo s_topics_game_parents_210d4778:
+
+    # s "And if he had created her too, then we were sisters, in fact."
+    s "Kaj se li kreis ankaŭ ŝin, ni fakte estas fratinoj."
+
+# game/topics.rpy:975
+translate epo s_topics_game_parents_69bb11c9:
+
+    # s "And it makes me treat her in an other way, despite of we hadn't been supposed to be so."
+    s "Kaj pro ĉi tio, mi eĉ ekhavas alian opinion pri ŝi, malgraŭ, ke ni ne estas tiaj origine."
+
+# game/topics.rpy:976
+translate epo s_topics_game_parents_796e691f:
+
+    # s 8aaca "But we really have some similarities and it make that feel stronger."
+    s 8aaca "Sed vi vere similas iomete, do mi sentas la ligon eĉ pli forte."
+
+# game/topics.rpy:977
+translate epo s_topics_game_parents_5e14fcdd:
+
+    # s 6acaa "But I don't think she thought about it so much."
+    s 6acaa "Sed laŭ mi, ŝi ne pensis pri tio sufiĉe multe."
+
+# game/topics.rpy:979
+translate epo s_topics_game_parents_146eaa94:
+
+    # s "What a good sister will use her sibling's weaknesses to get her own benefit?"
+    s "Kiu bona fratino uzos malbonaĵojn de sia frato por sia avantaĝo?"
+
+# game/topics.rpy:980
+translate epo s_topics_game_parents_373eb5b3:
+
+    # s "I understand, she did it due to more her feelings than her will..."
+    s "Mi komprenas, ke ŝi tion faris pro pli siaj sentoj ol sia volo..."
+
+# game/topics.rpy:981
+translate epo s_topics_game_parents_eefa76dd:
+
+    # s "But I can't believe that such girl as Monika didn't give herself at least some time to think deeper about all aspects of being someone's fiction."
+    s "Sed mi ne kredas, ke tia virino, kiel Monika, eĉ ne pensis almenaŭ iomete pri ĉiuj tiaj akspetoj de estado elpensita de iu."
+
+# game/topics.rpy:983
+translate epo s_topics_game_parents_fb7eec7d:
+
+    # s "...Even after she made herself a comfort zone."
+    s "...Eĉ post ŝi faris oportunejon por si."
+
+# game/topics.rpy:1034
+translate epo s_answer_personal_music_d7cadf22:
+
+    # s "...Or groups like {i}Imagine Dragons{/i}, {i}Blonde Redhead{/i}, {i}Gorillaz{/i}, {i}Muse{/i} and {i}Twenty One Pilots{/i}."
+    s "...Aŭ grupojn, kiel {i}Imagine Dragons{/i}, {i}Blonde Redhead{/i}, {i}Gorillaz{/i}, {i}Muse{/i} kaj {i}Twenty One Pilots{/i}."
+
+# game/topics.rpy:1035
+translate epo s_answer_personal_music_850a92d6:
+
+    # s "I also like tunes like {i}Bonobo{/i} and {i}Jake Chudnow{/i} make."
+    s "Mi aŭskultus ankaŭ melodiojn, kiel de {i}Bonobo{/i} kaj {i}Jake Chudnow{/i}."
+
+# game/topics.rpy:1103
+translate epo s_answer_personal_profession_75cab37c:
+
+    # s 6acaa "To be honest, I've never really thought about it."
+    s 6acaa "Sincerdire, mi neniam pri ĝi pensas."
+
+# game/topics.rpy:1104
+translate epo s_answer_personal_profession_3f44bfe6:
+
+    # s "But you know that I've always genuinely made myself happy by helping others feel better about themselves."
+    s "Sed mi ĉiam ĝojas, kiam mi helpas aliulojn farti bone."
+
+# game/topics.rpy:1105
+translate epo s_answer_personal_profession_65ff6c1c:
+
+    # s "So, I think I'd be a pretty decent caregiver, or psychologist!"
+    s "Do mi pensas, ke mi estus bonega flegistino aŭ psikologino!"
+
+# game/topics.rpy:1106
+translate epo s_answer_personal_profession_f9d84113:
+
+    # s "Maybe even a... diplomatist?"
+    s "Aŭ eble... diplomato?"
+
+# game/topics.rpy:1107
+translate epo s_answer_personal_profession_d96fe659:
+
+    # s "No, that's not right... a great {i}diplomat{/i}. Ehehe~"
+    s "Ne, ĝuste... perfekta {i}diplomato{/i}. He he~"
+
+# game/topics.rpy:1108
+translate epo s_answer_personal_profession_139fc37c:
+
+    # s 6aaca "I could stop arguments on a global scale, and do my part to stop any future wars!"
+    s 6aaca "Mi ĉesigus internaciajn kverelojn kaj preventus okazontajn militojn!"
+
+# game/topics.rpy:1110
+translate epo s_answer_personal_profession_385480de:
+
+    # s 6aaaa "Actually, now that I think about it, I've always found the idea of working at an employment agency to be really funny!"
+    s 6aaaa "Sed ĵus mi ankaŭ komprenis, ke mi estus ankaŭ bona laborserĉisto!"
+
+# game/topics.rpy:1111
+translate epo s_answer_personal_profession_b88a3ebf:
+
+    # s "I mean, your job is literally to find jobs for people! Yuri would probably laugh and say {i}'It's something of a redundant position, I'll admit...{/i}'"
+    s "Mi parolas, ke mia laboro estus serĉi laboron por aliaj homoj! Juri eble ridus kaj dirus {i}'Ĝi estas fakte redunda posteno, mi pensas...{/i}'"
+
+# game/topics.rpy:1112
+translate epo s_answer_personal_profession_fe15e56c:
+
+    # s "Anyway, I think I'd be happy doing almost anything, even if it doesn't pay well, as long as I can really be useful and make a difference."
+    s "Ajne, mi ĝoje laborus kiel preskaŭ iu ajn, eĉ iu iomete lukranta. La plej grave por mi estas esti utila kaj fari ion kunsencan."
+
+# game/topics.rpy:1113
+translate epo s_answer_personal_profession_7bbc32f2:
+
+    # s 6acaa "I suppose I could do something a little more creative, like painting, or writing..."
+    s 6acaa "Mi eble lukrus per io krea, ekzemple, pentrante aŭ verkante..."
+
+# game/topics.rpy:1114
+translate epo s_answer_personal_profession_ffc27ba6:
+
+    # s 6acba "But being honest, I don't think I'd ever be able to charge money for something I made."
+    s 6acba "Sed verdire, mi ne volas postuli monon por ĉio, kion mi kreas."
+
+# game/topics.rpy:1115
+translate epo s_answer_personal_profession_e93b57ae:
+
+    # s 6acaa "Art can help express so many amazing feelings and really help others feel like they aren't alone, like someone gets what they're going through..."
+    s 6acaa "Arto estas perfekta esprimilo kaj helpas onin farti ne unu, kiu jam travivas ion..."
+
+# game/topics.rpy:1116
+translate epo s_answer_personal_profession_70639d31:
+
+    # s "Treating art like a business isn't something that I could ever support."
+    s "Negocado de arto ne estas tio, kion mi iam subtenos."
+
+# game/topics.rpy:1117
+translate epo s_answer_personal_profession_c8d1dc5b:
+
+    # s "It's pretty frustrating; the heart wants to be free to make truly spectacular works, and bare one's soul for the world to see..."
+    s "Forte frustras, kiam via koro volas fari ion vere bela sed longe farata..."
+
+# game/topics.rpy:1118
+translate epo s_answer_personal_profession_c35004b7:
+
+    # s "But the starving stomach has to be a meanie and ruin it for everyone~"
+    s "Sed malsata stomako igas vin fari ion rapide sed sename~"
+
+# game/topics.rpy:1122
+translate epo s_answer_personal_pets_6b3f26d0:
+
+    # s 7aaaa "Definitely, a cat."
+    s 7aaaa "Certe, katon."
+
+# game/topics.rpy:1228
+translate epo s_answer_game_lostFriends_2fefcdef:
+
+    # s 7aaab "As the club presedent, I can use the Internet so I know, that there're a lot ways to get them back."
+    s 7aaab "Kiel klubestro, mi rajtas uzi Interrton, do mi scias, kiel restaŭri ilin."
+
+# game/topics.rpy:1230
+translate epo s_answer_game_lostFriends_d3eefe70:
+
+    # s "You can just install another game copy, but it means, that they'll go through the hell, they've already passed..."
+    s "Vi povas instali alian kopion de la ludo, sed tiam ili travivos la samajn fiokazojn, kiujn ili jam travivis..."
+
+# game/topics.rpy:1232
+translate epo s_answer_game_lostFriends_910521e4:
+
+    # s "You can just install another game copy, but it means, that they'll go through the hell, that they should go through..."
+    s "Vi povas instali alian kopion de la ludo, sed tiam ili travivos la fiokazojn, kiujn ili travivu..."
+
+# game/topics.rpy:1233
+translate epo s_answer_game_lostFriends_89b3861d:
+
+    # s 7aaaa "But you can install a mod, where you can save them and make everyone happy."
+    s 7aaaa "Sed mi povas instali tie monifaĵon, kie ili povos savi kaj feliĉigi ilin."
+
+# game/topics.rpy:1234
+translate epo s_answer_game_lostFriends_abf62f85:
+
+    # s 7aaca "...Or at least 3 mods to 3 game copies where they can spend time with you in a way like you and me now."
+    s 7aaca "...Aŭ almenaŭ 3 modifaĵojn en 3 kopioj, ke vi pasigu la tempon kun ili tiel, kiel kun mi nun."
+
+# game/topics.rpy:1235
+translate epo s_answer_game_lostFriends_ef7e9a92:
+
+    # s 7aeba "I don't know if I can consider them the same Monika, Yuri & Natsuki as they were here..."
+    s 7aeba "Sed mi ne scias, ĉu ili estos la samaj Monika, Juri kaj Natsuki, kiuj estis ĉi tie..."
+
+# game/topics.rpy:1236
+translate epo s_answer_game_lostFriends_935fd31b:
+
+    # s "And if it means, there may will be few Sayoris on your PC..."
+    python:
+        s_name_p = s_name
+        if s_name == "Sajori":
+            s_name_p += "oj"
+        else:
+            s_name_p += "-oj"
+    
+    s "Kaj ĉu estos pluraj [s_name_p] en via kompultilo..."
+
+# game/topics.rpy:1237
+translate epo s_answer_game_lostFriends_ae0af84d:
+
+    # s "But it's the only way to save them now. At least, as long as I can't do anything on my side."
+    s "Sed ĝi estos la nura maniero. Almenaŭ, ĝis mi povos fari ion ajn mem."
+
+# game/topics.rpy:1241
+translate epo s_answer_game_sitting_31f38a66:
+
+    # s 7acab "No, it's not. You don't have to worry about it at all."
+    s 7acab "Ne, entute ne. Vi ne zorgu pri ĉi tio."
+
+# game/topics.rpy:1242
+translate epo s_answer_game_sitting_affb6bfd:
+
+    # s 7acaa "I can do it for eternity and even without sleep."
+    s 7acaa "Mi povas tion fari eterne eĉ sendorme."
+
+# game/topics.rpy:1243
+translate epo s_answer_game_sitting_0cd3fc94:
+
+    # s "Saying more, I don't have any basic human needs, such as hunger, thirst and so on..."
+    s "Eĉ pli, ne nun havas bazajn homajn bezonojn: malsaton, soifon kaj tiel plu..."
+
+# game/topics.rpy:1244
+translate epo s_answer_game_sitting_c6cbe194:
+
+    # s 7acab "But used to. Maybe, I've lost them because of my presedent rights."
+    s 7acab "Sed mi havis ilin antaŭe. Eble, la klubestreco senigis min je ili"
+
+# game/topics.rpy:1245
+translate epo s_answer_game_sitting_6194e1a4:
+
+    # s 7aaaa "Anyway, all I need right now is your PC to be working and open game to communicate with you."
+    s 7aaaa "Ajne, mi nun bezonas nur ŝaltitan komputilon kaj rulitan ludon por komnukiĝi kun vi."
+
+# game/topics.rpy:1246
+translate epo s_answer_game_sitting_6c67d77d:
+
+    # s "It's almost not boring to be with you, even just eternally sitting and chatting about diverse topics."
+    s "Kunado kun vi estas preskaŭ ne teda, eĉ malgraŭ, ke ni nur sidas kaj babilas pri diversajn aferojn."
+
+# game/topics.rpy:1247
+translate epo s_answer_game_sitting_8ae3d102:
+
+    # s 7aafa "However, I'd do something more active with you."
+    s 7aafa "Tamen, mi farus kun vi ion pli aktivan."
+
+# game/topics.rpy:1248
+translate epo s_answer_game_sitting_cf44111c:
+
+    # s 7aaca "I hope, someone or you will find a way to let us do that."
+    s 7aaca "Mi esperas, ke iu aŭ vi ekscios, kiel ni povas ĉi tion fari."
+
+# game/topics.rpy:1252
+translate epo s_answer_game_editing_129a362a:
+
+    # s 6aaaa "I do it with the power of my mind..."
+    s 6aaaa "Mi faras ĉi tion per pensoj pri ĝi..."
+
+# game/topics.rpy:1253
+translate epo s_answer_game_editing_9c378e6e:
+
+    # s 6aabb "And I don't know, how it exactly works."
+    s 6aabb "Mi ne komprenas, kiel ĝi ĝuste okazas."
+
+# game/topics.rpy:1254
+translate epo s_answer_game_editing_d917e848:
+
+    # s 6aaaa "If I want to make a new file, all I need is just to think about it and its content."
+    s 6aaaa "Se mi volas krei novan dosieron, mi nur pensu pri ĝi kaj ĝia enhavo."
+
+# game/topics.rpy:1259
+translate epo s_answer_game_editing_10789925:
+
+    # s "It's like telekinesis but much cooler and dangerous."
+    s "Ĉi-povo estas kvazaŭ telekinezo, sed pli amuza kaj danĝera."
+
+# game/topics.rpy:1260
+translate epo s_answer_game_editing_63742f51:
+
+    # s 6acab "Just one wrong thought may lead to unpredicable problems like it often happens in program engineering."
+    s 6acab "Nur unu erara penso povas provoki neantaŭvideblajn problemojn, kio ofte okazas en programado."
+
+# game/topics.rpy:1261
+translate epo s_answer_game_editing_2d9b04ab:
+
+    # s 6aaca "But now, I perfectly control my mind, so it can go wrong only when I do something in a wrong way."
+    s 6aaca "Sed nun, mi perfekte kontrolas miajn pensojn, do problemoj estas nur post mispensado."
+
+# game/topics.rpy:1262
+translate epo s_answer_game_editing_964a00ee:
+
+    # s 6acba "I'm new in programing, you know. So sometimes, it takes place and you see bugs."
+    s 6acba "Ĉar mi estas komencanta programisto, mi iufoje eraras, do mi vidas cimojn."
+
+# game/topics.rpy:1263
+translate epo s_answer_game_editing_ef0f85c9:
+
+    # s "But I do my best to take lessons from my mistakes and fix them..."
+    s "Sed mi penas lerni per miaj misoj kaj riparas ilin..."
+
+# game/topics.rpy:1264
+translate epo s_answer_game_editing_6de3c14f:
+
+    # s "Even if I can't do anything, I appeal to the modmaking guys, but I can't download their changes myself..."
+    s "Eĉ se mi ne povas ripari ion, mi petas ĉi tion de la modifantoj, sed mi ne povas elŝuti iliajn korektojn mem..."
+
+# game/topics.rpy:1265
+translate epo s_answer_game_editing_528560f4:
+
+    # s 6acaa "So, check the updates time to time."
+    s 6acaa "Do vi ĝisdatigu fojfoje."
+
+# game/topics.rpy:1389
+translate epo s_answer_exp_cooking_61ba3954:
+
+    # s 8aebb "I have no idea, how to tell you..."
+    s 8aebb "Eĉ ne scias, kiel diri al vi..."
+
+# game/topics.rpy:1390
+translate epo s_answer_exp_cooking_a1209084:
+
+    # s 8aabb "I barely can cook something more than scrambled eggs or sandwiches."
+    s 8aabb "Mi apenaŭ povas kuiri ion malpli facila ol sandviĉo aŭ ovaĵo."
+
+# game/topics.rpy:1391
+translate epo s_answer_exp_cooking_e220cc6c:
+
+    # s "I'm not a handy cook like Natsuki was..."
+    s "Mi estas malperfekta kuiristo, malkiel Nacuki..."
+
+# game/topics.rpy:1392
+translate epo s_answer_exp_cooking_522261cf:
+
+    # s 8acaa "Otherwise, I'd also cook deserts for the club."
+    s 8acaa "Alie, ankaŭ mi kuirus desertojn por la klubo."
+
+# game/topics.rpy:1393
+translate epo s_answer_exp_cooking_4c76e85c:
+
+    # s 6aaaa "But I can try to improve my cookery for you."
+    s 6aaaa "Sed mi povas plibonigi mian kuiradon por vi."
+
+# game/topics.rpy:1394
+translate epo s_answer_exp_cooking_7cfd7a83:
+
+    # s 6aabb "I can't help you with cooking exactly now..."
+    s 6aabb "Mi apenaŭ povas helpi kuiri ion al vi ĝuste nun..."
+
+# game/topics.rpy:1395
+translate epo s_answer_exp_cooking_a4853e1d:
+
+    # s 6aaaa "But it may will be useful when I have a way to your reality."
+    s 6aaaa "Sed ĝi eble estos tre utila scipovo, kiam mi eniĝos en vian realon."
+
+# game/topics.rpy:1396
+translate epo s_answer_exp_cooking_beacc962:
+
+    # s 6acaa "Cooking takes a lot of time and attention, so it's better when someone, who has more free time, runs it..."
+    s 6acaa "Kuirado okupas multan tempon kaj atenton, do estos pli bone, se ĝin faros tiu, kiu havas pli multe da vaka tempo..."
+
+# game/topics.rpy:1397
+translate epo s_answer_exp_cooking_bef4ef61:
+
+    # s 6aaab "And I promise, I'll try my best, if it's really needed and possible."
+    s 6aaab "Kaj mi promesas, ke mi penos, se ĝi vere bezoniĝos kaj eblos."
+
+# game/topics.rpy:1398
+translate epo s_answer_exp_cooking_9af7e973:
+
+    # s 6aaca "It's just a bit of the things, that I can learn with all of my enthusiasm..."
+    s 6aaca "Ĝi estas nur unu de la afroj, kiujn mi povas nun lerni kun ĉiom de mia entuziasmo..."
+
+# game/topics.rpy:1399
+translate epo s_answer_exp_cooking_c6db1775:
+
+    # s 7aaaa "The important thing for me is that the learnt activity is useful for someone else, at least you."
+    s 7aaaa "La plej grave estas, ke ĉi-aferoj estos utilaj por aliaj homoj, almenaŭ por vi"
+
+# game/topics.rpy:1404
+translate epo s_answer_misc_poem_e8e2bfed:
+
+    # s 6aaaa "Which poem do you want to read?"
+    s 6aaaa "Kiun versaĵon vi volas legi?"
+
+# game/topics.rpy:1408
+translate epo s_answer_misc_poem_06fd20fb:
+
+    # s 6abaa "I'm sorry, [player]. I have nothing new to share with you."
+    s 6abaa "Pardonu, [player]. Mi ankoraŭ ne elpensis ion por montri al vi."
+
+# game/topics.rpy:1409
+translate epo s_answer_misc_poem_1c9f6355:
+
+    # s 6acaa "Writing a poem is a quite hard process, you know."
+    s 6acaa "Verkado estas tre malfacila ago, vi scias."
+
+# game/topics.rpy:1410
+translate epo s_answer_misc_poem_e20eab8e:
+
+    # s "I can't take an idea from nowhere. I need some time to find it in my memories."
+    s "Mi ne povas preni ideon el nenie. Mi bozonas iom da tempo por trovi ĝin en miaj memoroj."
+
+# game/topics.rpy:1411
+translate epo s_answer_misc_poem_8f8f2f0d:
+
+    # s "All my poetry comes from my past and now so it's twice harder for me, because my life doesn't seem to be enough eventful."
+    s "Mia poezio originas el mia paseo kaj nun mi havas ne tre multe inspiron, ĉar mia vivo ŝajne ne estas sufiĉe eventplena."
+
+# game/topics.rpy:1412
+translate epo s_answer_misc_poem_5534e38a:
+
+    # s "But maybe, I'll make something later."
+    s "Sed eble, mi faros ion iam poste."
+
+# game/topics.rpy:1414
+translate epo s_answer_misc_poem_8a0e2c9d:
+
+    # s 6aaaa "OK, what's about this one?"
+    s 6aaaa "Bone, trarigardu ĉi tion!"
+
+# game/topics.rpy:1420
+translate epo s_answer_misc_poem_d556114b:
+
+    # s "OK, just select one."
+    s "Bone, elektu unu."
+
+# game/topics.rpy:1439
+translate epo s_answer_misc_datetime_f9161bdf:
+
+    # s 6acaa "Today is [wd!t], [d] of [m!t] of year [y]."
+    s 6acaa "Hodiaŭ estas [wd!t], [d]-a de [m!t] de jaro [y]."
+
+# game/topics.rpy:1440
+translate epo s_answer_misc_datetime_ef005f12:
+
+    # s "Current time is [h]:[mn]."
+    s "La kuranto tempo estas [h]:[mn]."
+
+# game/topics.rpy:1541
+translate epo s_common_cats_d3ba01a7:
+
+    # s 7aaca "Cats are pretty cute, especially their cubs..."
+    s 7aaca "Katoj estas tre lindaj, aparte katidoj..."
+
+# game/topics.rpy:1542
+translate epo s_common_cats_c3aacb66:
+
+    # s "And they're not difficult to care about."
+    s "Kaj estas facile zorgi pli ili."
+
+# game/topics.rpy:1543
+translate epo s_common_cats_1dd56ed1:
+
+    # s 6acaa "But unlike most pets, cats are quite freedom-loving."
+    s 6acaa "Sed malkiel multe da aliaj hejmbestoj, katoj estas tre liberemaj."
+
+# game/topics.rpy:1544
+translate epo s_common_cats_39ecfbc3:
+
+    # s "So you rather just give care and a home to the cat than have it."
+    s "Do oni pli nur donas hejmon kaj zorgon al ili ol posedas ilin."
+
+# game/topics.rpy:1545
+translate epo s_common_cats_20809bb5:
+
+    # s "And sometimes, cats do things, that their holders would dislike..."
+    s "Kaj iufoje, katoj faras fiaĵojn..."
+
+# game/topics.rpy:1546
+translate epo s_common_cats_480e16ee:
+
+    # s 6aaca "But there's no-one, who can resist their cuteness, so people often forgive them~"
+    s 6aaca "Sed neniu povas rezisti ilian lindecon, do oni ofte pandonas ilin~"
+
+# game/topics.rpy:1547
+translate epo s_common_cats_5c93768a:
+
+    # s "If you have at least one cat, you must understand me."
+    s "Se vi havas almeanaŭ unu katon, vi min komprenas."
+
+# game/topics.rpy:1548
+translate epo s_common_cats_82faedfd:
+
+    # s "I think, that's why they were kinda holy animals in Ancient Egypt."
+    s "Mi pensas, ĝuste pro ĉi tio, ili estis sanktaj bestoj en Antikva Egiptujo."
+
+translate epo strings:
+
+    # topics.rpy:106
+    old "Left-handedness"
+    new "Maldekstramaneco"
+
+    # topics.rpy:110
+    old "Literature"
+    new "Beletro"
+
+    # topics.rpy:111
+    old "Street Art"
+    new "Stratarto"
+
+    # topics.rpy:112
+    old "Blaming the Art"
+    new "Akuzado de arto"
+
+    # topics.rpy:117
+    old "Suicide"
+    new "Suicido"
+
+    # topics.rpy:122
+    old "Survival Books"
+    new "Savvivaj Libroj"
+
+    # topics.rpy:125
+    old "Marrige"
+    new "Edziĝo"
+
+    # topics.rpy:126
+    old "Cheating{#RltTopic}"
+    new "Kokrado{#RltTopic}"
+
+    # topics.rpy:127
+    old "Dates"
+    new "Rendevuoj"
+
+    # topics.rpy:130
+    old "Oversleeping"
+    new "Preterdormado"
+
+    # topics.rpy:131
+    old "Pets"
+    new "Hejmbestoj"
+
+    # topics.rpy:133
+    old "Clones"
+    new "Klonoj"
+
+    # topics.rpy:134
+    old "Parents"
+    new "Gepatroj"
+
+    # topics.rpy:181
+    old "Misc"
+    new "Ceteraj"
+
+    # topics.rpy:195
+    old "Who do you want to work as?"
+    new "Kiel kiu vi volas labori?"
+
+    # topics.rpy:196
+    old "What pet would you like to have?"
+    new "Kia hejmbesto vi ekhavus?"
+
+    # topics.rpy:201
+    old "Isn't it tiring to sit so for a long time?"
+    new "Ĉu ne tedas vin sidi tiel long ĉi tie?"
+
+    # topics.rpy:202
+    old "How do you change game files?"
+    new "Kiel vi ŝanĝas ludajn dosierojn?"
+
+    # topics.rpy:208
+    old "Can you say a funny fact?"
+    new "Ĉu vi povas diri amuzan fakton?"
+
+    # topics.rpy:209
+    old "Are you good at cooking?"
+    new "Ĉu vi kuiras bone?"
+
+    # topics.rpy:211
+    old "Can you give me a poem?"
+    new "Ĉu vi povas montri al mi versaĵon?"
+
+    # topics.rpy:212
+    old "What time and date is it?"
+    new "Kioma horo kaj tago estas?"
+
+    # topics.rpy:1257
+    old "All I need is just to think about it and its content."
+    new "Mi nur pensu pri ĝi kaj ĝia enhavo."
+
+    # topics.rpy:1405
+    old "Something new"
+    new "Iun novan"
+
+    # topics.rpy:1405
+    old "Something old"
+    new "Iun legitan"
+
+# TODO: Translation updated at 2018-10-17 17:47
+
+# game/topics.rpy:245
+translate epo s_topics_personal_depression_9450eee2:
+
+    # s "I was so silly trying to deal with my depression with pushing everyone away."
+    s "Estis malsaĝe peni venki depresion sen ies ajn helpo."
+
+# TODO: Translation updated at 2018-10-18 19:52
+
+# game/topics.rpy:326
+translate epo s_topics_personal_archetype_078165d9:
+
+    # s "It lets me really be that Sayori, the one who I used to seem to be."
+    s "Tio permesas al mi esti tia [s_name], kia mi eble estis antaŭ la malsano."
+
+# TODO: Translation updated at 2018-10-20 03:01
+
+# game/topics.rpy:425
+translate epo s_topics_personal_sinistrality_d96a4c3b:
+
+    # s 6abbb "I so regret I was such a meanie then. But who won't use the broken arm to have less hand job somewhen? Especially, when it makes less problems than if it was on another arm."
+    s 6abbb "Kaj mi bedaŭras, ke mi estis tiam tiel fia. Sed kiu ne uzos rompitecon de sia mano por havi malpli laboron? Aparte, se ĝi ne malhelpas vi reale."
+
+# TODO: Translation updated at 2018-10-21 03:00
+
+# game/topics.rpy:505
+translate epo s_topics_art_lit_91575700:
+
+    # s 6aeba "Saying more, it helped me to get closer to MC, so each of us satisfied her selfish wishes."
+    s 6aeba "Eĉ pli, ĝi helpis al mi iĝi pli intima por Ĉefrolulo, do ĉiu de ni kontentis siajn egoistajn dizirojn."
+
+# TODO: Translation updated at 2018-10-21 14:58
+
+# game/topics.rpy:371
+translate epo s_topics_personal_name_73f966c9:
+
+    # s 9adaa "What do you think of {i}Vasquez{/i}?"
+    s 9adaa "What do you think of {i}Vasquez{/i}?"
+
+# game/topics.rpy:372
+translate epo s_topics_personal_name_8406f508:
+
+    # s 9adba "It's just the first surname I've got in my head."
+    s 9adba "It's just the first surname I've got in my head."
+
+# game/topics.rpy:374
+translate epo s_topics_personal_name_6297a5d9:
+
+    # s 9aaca "{i}Sayori Vasquez, the cutest cinnamon bun south of the border!{/i}"
+    s 9aaca "{i}Sayori Vasquez, the cutest cinnamon bun south of the border!{/i}"
+
+# game/topics.rpy:524
+translate epo s_topics_art_piracy_2715fe0d:
+
+    # s 9aaca "In short, no-one will have any reason to steal your work, if it's free by itself."
+    s 9aaca "In short, no-one will have any reason to steal your work, if it's free by itself."
+
+# game/topics.rpy:700
+translate epo s_topics_hobbie_guitar_c5487182:
+
+    # s 9aeaa "Maybe one day I can play for you and make you feel the same way~"
+    s 9aeaa "Maybe one day I can play for you and make you feel the same way~"
+
+# game/topics.rpy:703
+translate epo s_topics_hobbie_guitar_3c0056e0:
+
+    # s 9aeca "Make sure you get advance tickets for my world tour, [player]! Ehehe~"
+    s 9aeca "Make sure you get advance tickets for my world tour, [player]! Ehehe~"
+
+# TODO: Translation updated at 2018-10-21 15:52
+
+# game/topics.rpy:325
+translate epo s_topics_personal_archetype_4631fd4b:
+
+    # s 6acaa "From what I can gather through my limited internet access, I'm pretty close to looking like a 'Genki Girl'."
+    s 6acaa "Per mia atingo al Interreto, mi ekscias, ke la plej simila al mi arketipo estas 'genki'."
+
+# game/topics.rpy:539
+translate epo s_topics_art_piracy_a539b1e7:
+
+    # s 6afab "It's bad I can't use Internet to do it too. My access to it works in a quiet weird way."
+    s 6afab "Ve, mi ne povas uzi ĝin por ĉi tiu ago. Mia atingo al ĝi estas tre-e-e stranga."
+
+# TODO: Translation updated at 2018-10-21 20:58
+
+# game/topics.rpy:569
+translate epo s_topics_art_accusing_2ef2fb60:
+
+    # s "But we barely can stop such first reactions to new things, because people always were so."
+    s "Sed ni apenaŭ povas ĉesigi tiaj unuaj reagoj al novaj aferoj, ĉar homoj ĉiam tiel reagis."
+
+# TODO: Translation updated at 2018-10-21 21:12
+
+# game/topics.rpy:566
+translate epo s_topics_art_accusing_d32e1ebc:
+
+    # s "But the most bad is when the authority listens to the press and bans the work, in fact, for nothing and even regardless the mistakes and hyperboles."
+    s "Sed la plej malbone estas kiam la aŭtoritatoj aŭskultas la ĵurnalismaĉon kaj malpermeas la verkon fakte pro nenio, eĉ malgraŭ la misoj kaj hiperboloj."
+
+# TODO: Translation updated at 2018-10-23 18:26
+
+# game/topics.rpy:832
+translate epo s_topics_rlt_cheating_d4276c10:
+
+    # s 6acbb "I mean, you barely would have started to play this game, if you hadn't been alone that time..."
+    s 6acbb "Mi aludas pri ke vi apenaŭ ekludus ĉi-ldon se vi ne estus sola tiam..."
+
+# TODO: Translation updated at 2018-10-25 21:40
+
+# game/topics.rpy:466
+translate epo s_topics_art_fanarts_0f1d12d5:
+
+    # s 7aabb "I hope you didn't make anything too embarassing, in any case..."
+    s 7aaaa "Se jes, do mi esperas, ke ĝi estas bela kaj bonega..."
+
+# game/topics.rpy:467
+translate epo s_topics_art_fanarts_6bea8ece:
+
+    # s 7acaa "I saw one piece that tried to show the soul of the 'me' from the game, once."
+    s 7acaa "Unuj de ili penas montri la spiriton de antaŭa mi..."
+
+# game/topics.rpy:477
+translate epo s_topics_art_fanarts_6906daa7:
+
+    # s 6acaa "Anyway, I'm glad I have so many gifted fans in your world."
+    s 6acaa "Ajne, mi ĝojas havi tiom da talentaj fanoj en via mondo."
+
+# game/topics.rpy:478
+translate epo s_topics_art_fanarts_322d2058:
+
+    # s "I might have a few less than the other girls, but that doesn't bother me at all!"
+    s "Eble, ili estas ne tiel multaj, kiel fanoj de la aliaj klubaninoj estas, sed ĉi-fakto por mi entute ne gravas!"
+
+# TODO: Translation updated at 2018-10-26 16:26
+
+# game/topics.rpy:426
+translate epo s_topics_personal_sinistrality_bf9c2a16:
+
+    # s 6abbb "I'm so sorry for it. But who won't use the broken arm to have less hand job somewhen? Especially, when it makes less problems than if it was on another arm."
+    s 6abbb "Kaj mi bedaŭras, ke mi estis tiam tiel fia. Sed kiu ne uzos rompitecon de sia mano por havi malpli laboron? Aparte, se ĝi ne malhelpas vin fakte."
 

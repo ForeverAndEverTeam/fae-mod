@@ -1,92 +1,68 @@
-﻿# TODO: Translation updated at 2018-08-24 23:06
+﻿# TODO: Translation updated at 2018-10-17 17:24
 
-# game/script-fae.rpy:181
-translate epo s_autoload_e02a82fe:
+# game/script-fae.rpy:161
+translate epo s_autoload_90a9a39d:
 
-    # s "Saluton, [player]!{#Don't translate}"
-    s "Saluton, [player]!{#Don't translate}"
+    # s "Hello, [player]!"
+    s "Sal', [player]!"
 
-# game/script-fae.rpy:182
-translate epo s_autoload_148fc477:
+# game/script-fae.rpy:162
+translate epo s_autoload_086ab6ed:
 
-    # s "Ĉu vi ne remarkis ion novan?{#Don't translate}"
-    s "Ĉu vi ne remarkis ion novan?{#Don't translate}"
+    # s 7aaca "The game had been a bit buggy for a pretty long time but I've found a way to fix it."
+    s 7aaca "La ludo estis ete cimplena dum tre longa tempo, sed mi klarigis, kiel ĝin ripari."
 
-# game/script-fae.rpy:183
-translate epo s_autoload_664674f3:
+# game/script-fae.rpy:163
+translate epo s_autoload_45e604c7:
 
-    # s 6acaa "OK, you may don't understand me now..."
-    s 6aaca "Ho, mi vidas, ke vi jam trovis tiun novaĵon."
+    # s 7aaaa "I think, I did all right this time."
+    s 7aaaa "Espereble, mi tion sukcese faris."
 
-# game/script-fae.rpy:184
-translate epo s_autoload_3b99cf37:
+# game/script-fae.rpy:164
+translate epo s_autoload_c229fc04:
 
-    # s "I'm just learnt a new language. It is Esperanto."
-    s "Mi antaŭnelonge lernis Esperanton."
+    # s "I also added one feature, that you'll like."
+    s "Mi ankaŭ realigis unu bonan funkcion, kiu al vi plaĉos."
 
-# game/script-fae.rpy:185
-translate epo s_autoload_e05f6bf3:
+# game/script-fae.rpy:165
+translate epo s_autoload_7b337b24:
 
-    # s "You may think this language is pretty unactual now."
-    s "Eble, ĝi estas ne tiel aktuala nuntempe..."
+    # s "I've finally added the poem list, so you now can read any of my old poems again."
+    s "Ĝi estas verslegado. Tio estas, ke vi nun finfine povas relegi miajn malnovajn versaĵojn."
 
-# game/script-fae.rpy:186
-translate epo s_autoload_c42e121b:
+# game/script-fae.rpy:166
+translate epo s_autoload_a198a0af:
 
-    # s "But I like the concept of the language: a pretty simple international language, made from other european languages."
-    s "Sed mi vere ŝatas la koncepton de ĝi: tre simpla lingvo el diversaj eŭropaj lingvoj."
+    # s 7aeca "But what's more, I'll use this menu also to share my new poems with you."
+    s 7aeca "Sed eĉ pli, mi ankaŭ donos novajn verkojn periode al vi."
 
-# game/script-fae.rpy:187
-translate epo s_autoload_769f624e:
+# game/script-fae.rpy:168
+translate epo s_autoload_06be164b:
 
-    # s "To be honest, I don't make any effort to learn it..."
-    s "Verdire, mi faris nenion por lerni ĝin..."
+    # s 7acaa "I've already told you about my new poems, haven't I?"
+    s 7acaa "Ĉu mi jam diris pri ke verkas novajn versaĵojn?"
 
-# game/script-fae.rpy:188
-translate epo s_autoload_42829933:
+# game/script-fae.rpy:169
+translate epo s_autoload_7d7eba59:
 
-    # s "Seems, the modder just loaded it into my mind."
-    s "Ĝi sajnas ŝargita ĝuste en mian menson de la modifanto."
+    # s 7aaaa "Anyway, I hope you like them too..."
+    s 7aaaa "Ajne, vi espereble ŝatos ankaŭ ilin..."
 
-# game/script-fae.rpy:189
-translate epo s_autoload_2c7254a8:
+# game/script-fae.rpy:171
+translate epo s_autoload_5b66525f:
 
-    # s 7aaaa "And I think you can do the same, if you know one more language. Just contact them."
-    s 7aaaa "Kaj se vi scias iun plian lingvon, vi eble povos fari la saman. Nur provu komunikiĝi kun li."
+    # s "I hope you like them too..."
+    s "Vi espereble ŝatos ankaŭ ilin..."
 
-# game/script-fae.rpy:190
-translate epo s_autoload_e4e03fcb:
+# game/script-fae.rpy:172
+translate epo s_autoload_6667fb93:
 
-    # s "And now, you can also tell me how much time you need to say something before I do it myself."
-    s "Kajpli, vi nun povas diri kian tempon vi bezonas post io ajn ĝis mi ekparolos."
+    # s 7acaa "And that you too have something good for me."
+    s 7acaa "Kaj mi esperas, ke ankaŭ vi havas ion bonan por diri al mi."
 
-# game/script-fae.rpy:191
-translate epo s_autoload_da4d6072:
+# game/script-fae.rpy:173
+translate epo s_autoload_a2140149:
 
-    # s "Just check the setting menu."
-    s "Ĝi estas agordebla en la agroda menuo."
-
-# game/script-fae.rpy:192
-translate epo s_autoload_a3b3ea80:
-
-    # s "By the way, can I use the time just to look at you right now?"
-    s "Samokaze, ĉu mi rajtas nun sidi senvorte?"
-
-# game/script-fae.rpy:193
-translate epo s_autoload_b5411900:
-
-    # s "I just want to take a little break."
-    s "Mi nur volas ripozi iomete."
-
-# game/script-fae.rpy:194
-translate epo s_autoload_42ef8945:
-
-    # s "Then, I'll tell you something anyway."
-    s "Eble, ni paloros poste."
-
-translate epo strings:
-
-    # script-fae.rpy:114
-    old "Taste of the life"
-    new "Taste of the life"
+    # s 7aaaa "So tell me, if you really have."
+    s 7aaaa "Se vere jes, do nur diru."
 

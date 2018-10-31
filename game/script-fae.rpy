@@ -71,7 +71,7 @@ init python:
     
     def screenshot_topic(location):
         screenshot_notice(location)
-        if not persistent.seen_topics.get("s_screenshot") and justIsSitting:
+        if not ("s_screenshot" in persistent.seen_topics) and justIsSitting:
             special_topics("firstscreenshot", location)
     
     config.screenshot_callback = screenshot_topic

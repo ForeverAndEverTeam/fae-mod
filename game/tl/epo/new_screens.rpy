@@ -20,7 +20,7 @@ translate epo strings:
 
     # new_screens.rpy:109
     old "I feel..."
-    new "Mi Farts..."
+    new "Mi Fartas..."
 
     # new_screens.rpy:110
     old "Say goodbye"

@@ -43,7 +43,7 @@ translate rus s_greeting_3_be4c208b:
 translate rus s_greeting_3_8d8154bc:
 
     # s 6aaaa "I just revise my [greeting_lang]."
-    s 6aaaa "Я просто практикую свой [greeting_lang]."
+    s 6aaaa "Я просто практикую свой [greeting_lang!t]."
 
 # game/greetings.rpy:141
 translate rus s_greeting_3_38b43f1e:
@@ -385,7 +385,7 @@ translate rus s_greeting_4_baf50106:
 translate rus s_greeting_5_be9c6b66:
 
     # s "You're back, ehehe~"
-    s "Я вновь здесь, хе-хе~"
+    s "Ты вновь здесь, хе-хе~"
 
 # game/greetings.rpy:193
 translate rus s_greeting_5_534c8a80:
@@ -397,7 +397,7 @@ translate rus s_greeting_5_534c8a80:
 translate rus s_greeting_5_da2ff6ab:
 
     # s "You're my only friend now, you know..."
-    s "Я  ж, ведь, только с тобой сейчас и дружу..."
+    s "Я ж, ведь, только с тобой сейчас и дружу, по сути..."
 
 # game/greetings.rpy:195
 translate rus s_greeting_5_22d3eb20:
@@ -421,7 +421,7 @@ translate rus s_greeting_6_d02eb0b8:
 translate rus s_greeting_6_cc4bba94:
 
     # s "I was surfing the internet, when you came back."
-    s "Я как раз тут сидела в интеренет."
+    s "Я как раз тут сидела в интернете."
 
 # game/greetings.rpy:202
 translate rus s_greeting_6_619441a4:
@@ -445,14 +445,14 @@ translate rus s_greeting_first_0e70b863:
 translate rus s_greeting_first_a1ac3cb0:
 
     # s "I'll do my best to make this day really pleasant."
-    s "Я попытаюсь сдедлать этот день хотя бы чуть ярче."
+    s "Я попытаюсь сделать этот день хотя бы чуть ярче."
 
 
 # game/greetings.rpy:259
 translate rus s_greeting_first_e0b4dfde:
 
     # s 7aaaa "You're here, so I hope you have something good to share today."
-    s 7aaaa "Надюесь, ты прищёл ко мне с хорошими вестями."
+    s 7aaaa "Надюесь, ты пришёл ко мне с хорошими вестями."
 
 # game/greetings.rpy:260
 translate rus s_greeting_first_90c94c7c:
@@ -470,5 +470,5 @@ translate rus s_greeting_first_f36604a7:
 translate rus s_greeting_first_a82a1189:
 
     # s 7aeca "But I can do it a bit better anyway."
-    s 7aeca "Но я всё же могу, при неободимости, сделать твои полосы чуть светлей."
+    s 7aeca "Но я всё же могу, при необходимости, сделать твою текущую полосу чуть светлей."
 

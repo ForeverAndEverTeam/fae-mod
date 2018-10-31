@@ -115,8 +115,8 @@ translate rus s_farewell_4_26b90d04:
 # game/farewells.rpy:60
 translate rus s_farewell_6_46bff501:
 
-    # s "Bye, [player]!"
-    s "Пока-пока, [player]!"
+    # s "Bye, [palyer]!"
+    s "Пока-пока, [palyer]!"
 
 # game/farewells.rpy:61
 translate rus s_farewell_6_8d5cd57e:
@@ -133,8 +133,8 @@ translate rus s_farewell_6_8dfd748f:
 # game/farewells.rpy:67
 translate rus s_farewell_7_dbfb08d4:
 
-    # s "See you later, [player]!"
-    s "До свидания, [player]!"
+    # s "See you later, [palyer]!"
+    s "До свидания, [palyer]!"
 
 # game/farewells.rpy:68
 translate rus s_farewell_7_85353668:
@@ -147,4 +147,18 @@ translate rus s_farewell_7_a2bffcdd:
 
     # s "But I think it's enough, that you know I'd do it."
     s "Хотя, думаю, что тебе достаточно лишь знать об этом."
+
+# TODO: Translation updated at 2018-10-06 15:23
+
+# game/farewells.rpy:60
+translate rus s_farewell_6_6e992571:
+
+    # s "Bye, [player]!"
+    s "Пока-пока, [player]!"
+
+# game/farewells.rpy:67
+translate rus s_farewell_7_37bc89e5:
+
+    # s "See you later, [player]!"
+    s "Увидимся попозже, [player]!"
 

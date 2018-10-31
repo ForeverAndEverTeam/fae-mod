@@ -177,7 +177,7 @@ screen topic_ui(ss, cat = 0): #0 = questions, 1 = repeat, 2= feelings, 3 = poetr
         
         if subscreen == 0:
             for i in question_cats:
-                textbutton i.name action [SetScreenVariable("subscreen", i), SetScreenVariable("cat", 1)]
+                textbutton i.name action [SetScreenVariable("subscreen", i), SetScreenVariable("cat", 0)]
             textbutton _("Back") action [Hide("topic_ui"), Jump("s_talkmenu")]
         elif subscreen == 1:
             for i in topic_cats:
@@ -189,11 +189,11 @@ screen topic_ui(ss, cat = 0): #0 = questions, 1 = repeat, 2= feelings, 3 = poetr
                 textbutton i[0] action [Function(renpy.call, "s_react", i[1])]
             textbutton _("Back") action [Hide("topic_ui"), Jump("s_talkmenu")]
         else:
-            if cat == 0:
+            if cat == 1:
                 for i in subscreen[7 * page: 7 * page + 7]:
                     if config.developer or i.seen:
                         textbutton i.name xpadding 10 action [Function(subscreen, i)]
-            elif cat == 1:
+            elif cat == 0:
                 for i in subscreen[7 * page: 7 * page + 7]:
                     textbutton i.name xpadding 10 action [Function(subscreen, i)] text_italic not i.seen
             elif cat == 3:

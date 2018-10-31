@@ -105,8 +105,8 @@ translate epo s_farewell_5_d542c3c8:
 # game/farewells.rpy:60
 translate epo s_farewell_6_46bff501:
 
-    # s "Bye, [player]!"
-    s "Ĝis, [player]!"
+    # s "Bye, [palyer]!"
+    s "Ĝis, [palyer]!"
 
 # game/farewells.rpy:61
 translate epo s_farewell_6_8d5cd57e:
@@ -123,8 +123,8 @@ translate epo s_farewell_6_8dfd748f:
 # game/farewells.rpy:67
 translate epo s_farewell_7_dbfb08d4:
 
-    # s "See you later, [player]!"
-    s "Ĝis la redivo, [player]!"
+    # s "See you later, [palyer]!"
+    s "Ĝis la redivo, [palyer]!"
 
 # game/farewells.rpy:68
 translate epo s_farewell_7_85353668:
@@ -137,4 +137,18 @@ translate epo s_farewell_7_a2bffcdd:
 
     # s "But I think it's enough, that you know I'd do it."
     s "Sed mi pensas, ke via scio pri tio estas sufiĉa."
+
+# TODO: Translation updated at 2018-10-17 17:24
+
+# game/farewells.rpy:60
+translate epo s_farewell_6_6e992571:
+
+    # s "Bye, [player]!"
+    s "Ĝis, [player]!"
+
+# game/farewells.rpy:67
+translate epo s_farewell_7_37bc89e5:
+
+    # s "See you later, [player]!"
+    s "Ĝis la revido, [player]!"
 

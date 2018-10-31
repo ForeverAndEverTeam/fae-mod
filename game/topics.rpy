@@ -84,7 +84,7 @@ init -5 python:
         def __iter__(self):
             return iter(self.topics)
     
-    derp_known = False
+    derp_known = True
     try:
         depr_known = persistent.depr_known or persistent.last_playthrough > 0 or persistent.clear[8] #If player must already know, that Sayori used to be depressed
     except:
@@ -137,17 +137,11 @@ init -5 python:
     topic_cats[6].new_topic(_("Clones"), 'clones')
     topic_cats[6].new_topic(_("Parents"), 'parents')
     
-
-    
     poems = TopicCategory('s_poems',_("Poems"))
     
     poems.new_topic(None, 'sunshine', poem = poem_sunshine)
     poems.new_topic(None, 'bottles', poem = poem_bottles)
     poems.new_topic(None, 'flower', poem = poem_flower)
-    if persistent.last_playthrough > 0:
-        poems.new_topic(None, 'leaf', poem = poem_leaf)
-    if persistent.last_playthrough > 3:
-        poems.new_topic(None, 'angel', poem = poem_angel)
     
     for i in poems.topics:
         i.seen = True
@@ -159,6 +153,11 @@ init -5 python:
     if derp_known:
         poems.new_topic(None, 'prose', poem = poem_prose)
     
+    if persistent.last_playthrough > 0:
+        poems.new_topic(None, 'leaf', poem = poem_leaf)
+    if persistent.last_playthrough > 3:
+        poems.new_topic(None, 'angel', poem = poem_angel)
+    poems.new_topic(None, 'afterlight', poem = poem_afterlight)
     poems.new_topic(None, 'fruits', poem = poem_fruits)
     poems.new_topic(None, 'hatred', poem = poem_hatred)
     
@@ -423,7 +422,7 @@ label s_topics_personal_sinistrality:
     s 7acaa "Not everyone around me has noticed it instantly, despite it's very unusual."
     s 7aeca "Once I had broken my right arm but teachers allowed me not to write at lessons..."
     s 6abab "But a classmate, who sat next to me, told one of them that I'm a southpaw so my plan failed as fast as I had got it inside my head."
-    s 6abbb "I so regret I was such a meanie then. But who won't use the broken arm to have less hand job somewhen? Especially, when it makes less problems than if it was on another arm."
+    s 6abbb "I'm so sorry for it. But who won't use the broken arm to have less hand job somewhen? Especially, when it makes less problems than if it was on another arm."
     s 6aaaa "Either way, my left-handedness gives me adventages too."
     s "That time, when I had nothing to do, I drew flowers and ornaments on my cast."
     s "I can't say they were really beautiful, but I felt sorry for they were removed with the cast later."
@@ -463,8 +462,8 @@ label s_topics_art_games:
 label s_topics_art_fanarts:
     s 7aaaa "Seeing fanart of yourself is something I don't think I'll ever get fully used to."
     s "...Have you ever made any art of me, [player]?"
-    s "I hope you didn't make anything too embarassing, in any case..."
-    s "I saw one piece that tried to show the soul of the 'me' from the game, once."
+    s 7aabb "I hope you didn't make anything too embarassing, in any case..."
+    s 7acaa "I saw one piece that tried to show the soul of the 'me' from the game, once."
     s "With all of the advantages and disadvantages."
     s "It can kinda hurt seeing your mistakes and worst moments thrown back at you like that, especially when they go overboard..."
     s 7aaca "Although other artists go just as far to try to show how much they care for me."
@@ -473,9 +472,8 @@ label s_topics_art_fanarts:
     s 8beba "But some of them draw me in a lewd manner."
     s "...I don't really mind if you're fond of pieces like that."
     s 8bafa "After all, physical attraction can be a big part of love~"
-    s "And I'm so lucky to have someone as beautiful as you here with me, [player], inside and out."
-    s 6aaca "Anyway, I'm glad I have so many gifted fans in your world."
-    s 6acaa "I might have a few less than the other girls, but that doesn't bother me at all!"
+    s 6acaa "Anyway, I'm glad I have so many gifted fans in your world."
+    s "I might have a few less than the other girls, but that doesn't bother me at all!"
     s "I appreciate every single person who tries to connect with me through their work, no matter what."
     s 7aaaa "Especially if you're one of them."
     s "If you're not, maybe you should try making something one day!"
@@ -829,7 +827,7 @@ label s_topics_rlt_cheating:
             menu:
                 "Yes":
                     s 6adaa "Oh, have you got a real crush?!"
-                    s 6acbb "I mean, you barely would have started to play this game, if you had been alone that time..."
+                    s 6acbb "I mean, you barely would have started to play this game, if you hadn't been alone that time..."
                     s "Not to mention staying with me now."
                     s 6acab "I'm now just filled with mixed feelings, to be honest..."
                     s "My heart can't accept that I'm not your only one, but my brain feels proud for you."
@@ -1373,7 +1371,7 @@ label s_answer_exp_fact_4: #Yawning
     extend " ...While thinking of it."
     s 6acaa "I hope I have not just made you yawn."
     s 6aaca "Otherwise, it means that yawning is so contagious that can happen also acoss realities. Ehehe~"
-    return
+    return 'h'
 
 label s_answer_exp_fact_5: #Arts inside themselves
     s 6aaaa "Some artists add thier works in theirselves."
@@ -1392,6 +1390,7 @@ label s_answer_exp_fact_5: #Arts inside themselves
     s 6aaaa "Just imagine if the manga has also something to describe itself or even this game."
     s "Then we have a probably countless lot of different artworks with the same plot but different details and characters, each inside other."
     s 6aaca "It's like a matryoshka. Ehehe~"
+    return 'h'
 
 label s_answer_exp_cooking:
     s 8aebb "I have no idea, how to tell you..."
@@ -1405,14 +1404,14 @@ label s_answer_exp_cooking:
     s 6aaab "And I promise, I'll try my best, if it's really needed and possible."
     s 6aaca "It's just a bit of the things, that I can learn with all of my enthusiasm..."
     s 7aaaa "The important thing for me is that the learnt activity is useful for someone else, at least you."
-    return
+    return 'h'
 
 ##Misc
 label s_answer_misc_poem:
     s 6aaaa "Which poem do you want to read?"
     menu:
         "Something new":
-            if not poems.all_seen and persistent.last_new_poem_time and (get_now - persistent.last_new_poem_time).seconds < persistent.new_poem_delay * 3600 * 12:
+            if not poems.all_seen and persistent.last_new_poem_time and (get_now() - persistent.last_new_poem_time).seconds < persistent.new_poem_delay * 3600 * 12:
                 s 6abaa "I'm sorry, [player]. I have nothing new to share with you."
                 s 6acaa "Writing a poem is a quite hard process, you know."
                 s "I can't take an idea from nowhere. I need some time to find it in my memories."
@@ -1554,7 +1553,7 @@ label s_common_cats:
     s 6aaca "But there's no-one, who can resist their cuteness, so people often forgive them~"
     s "If you have at least one cat, you must understand me."
     s "I think, that's why they were kinda holy animals in Ancient Egypt."
-    return
+    return 'h'
 
 #Eventual topics
 

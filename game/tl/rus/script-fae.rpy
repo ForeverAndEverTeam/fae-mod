@@ -1,92 +1,94 @@
-﻿# TODO: Translation updated at 2018-08-21 13:05
+﻿# TODO: Translation updated at 2018-10-06 15:23
 
-# game/script-fae.rpy:181
-translate rus s_autoload_e02a82fe:
+# game/script-fae.rpy:161
+translate rus s_autoload_90a9a39d:
 
-    # s "Saluton, [player]!{#Don't translate}"
-    s "Saluton, [player]!{#Don't translate}"
+    # s "Hello, [player]!"
+    s "Ну привет, [player]!"
 
-# game/script-fae.rpy:182
-translate rus s_autoload_148fc477:
+# game/script-fae.rpy:162
+translate rus s_autoload_086ab6ed:
 
-    # s "Ĉu vi ne remarkis ion novan?{#Don't translate}"
-    s "Ĉu vi ne remarkis ion novan?{#Don't translate}"
+    # s 7aaca "The game had been a bit buggy for a pretty long time but I've found a way to fix it."
+    s 7aaca "Здесь было довольно много багов в последнее время, но я их, кажется, исправила."
 
-# game/script-fae.rpy:183
-translate rus s_autoload_664674f3:
+# game/script-fae.rpy:163
+translate rus s_autoload_f34e45d5:
 
-    # s 6acaa "OK, you may don't understand me now..."
-    s 6acaa "Хм, скорее всего, ты меня сейчас не понял..."
+    # s 7aaaa "I hope, I did all right this time."
+    s 7aaaa "Нечего же странного пока не произошло, верно?"
 
-# game/script-fae.rpy:184
-translate rus s_autoload_3b99cf37:
+# game/script-fae.rpy:164
+translate rus s_autoload_d1e03af7:
 
-    # s "I'm just learnt a new language. It is Esperanto."
-    s "Я просто решила проверить свой эсперанто."
+    # s "I also added some new topics and one feature, that you'll like."
+    s "Я также сделала новые темы для разговоров и ещё одну штуку, которую ты точно заценишь."
 
-# game/script-fae.rpy:185
-translate rus s_autoload_e05f6bf3:
+# game/script-fae.rpy:165
+translate rus s_autoload_7b337b24:
 
-    # s "You may think this language is pretty unactual now."
-    s "Знаю, этот язык, мягко говоря, не актуален в наше время."
+    # s "I've finally added the poem list, so you now can read any of my old poems again."
+    s "Я наконец-то собрала все свои стихи в одно меню, так что теперь ты можешь перечитывать мои старые стихи."
 
-# game/script-fae.rpy:186
-translate rus s_autoload_c42e121b:
+# game/script-fae.rpy:166
+translate rus s_autoload_a198a0af:
 
-    # s "But I like the concept of the language: a pretty simple international language, made from other european languages."
-    s "Однако мне нарвится сама концепция языка: простой язык для международного общения, сделанный из множествва европейских языков."
+    # s 7aeca "But what's more, I'll use this menu also to share my new poems with you."
+    s 7aeca "Но самое прикольное — это то, что с его помощью я буду также показывать тебе своё новое творчество."
 
-# game/script-fae.rpy:187
-translate rus s_autoload_769f624e:
+# game/script-fae.rpy:168
+translate rus s_autoload_06be164b:
 
-    # s "To be honest, I don't make any effort to learn it..."
-    s "Но честно говоря, я вообще поняла, что знаю его только сейчас..."
+    # s 7acaa "I've already told you about my new poems, haven't I?"
+    s 7acaa "Я те тебе рассказывала о нём, так?"
 
-# game/script-fae.rpy:188
-translate rus s_autoload_42829933:
+# game/script-fae.rpy:169
+translate rus s_autoload_42cc59d7:
 
-    # s "Seems, the modder just loaded it into my mind."
-    s "Похоже, тот модмейкер просто загрузил мне его прямо в мозг."
+    # s 7aaaa "Anyway, I hope you'll like them too..."
+    s 7aaaa "Как бы то не было, я надеюсь, тебе оно тоже понравится..."
 
-# game/script-fae.rpy:189
-translate rus s_autoload_2c7254a8:
+# game/script-fae.rpy:171
+translate rus s_autoload_6f7e8ec9:
 
-    # s 7aaaa "And I think you can do the same, if you know one more language. Just contact them."
-    s 7aaaa "Знаешь, если ты знаешь ещё какой-нибудь язык, то вы с модмейкером договоритесь и добавите мне и его?"
+    # s "I hope you'll like them too..."
+    s "Уверяю, что тебе оно тоже понравится..."
 
-# game/script-fae.rpy:190
-translate rus s_autoload_e4e03fcb:
+# game/script-fae.rpy:172
+translate rus s_autoload_6667fb93:
 
-    # s "And now, you can also tell me how much time you need to say something before I do it myself."
-    s "И ещё, теперь ты можешь мне указать, сколько примерно времени тебе нужно между нашими разговрами."
+    # s 7acaa "And that you too have something good for me."
+    s 7acaa "И я надеюсь, что у тебя тоже есть что-то интересное для меня."
 
-# game/script-fae.rpy:191
-translate rus s_autoload_da4d6072:
+# game/script-fae.rpy:173
+translate rus s_autoload_a2140149:
 
-    # s "Just check the setting menu."
-    s "Ты можешь подправить его в меню настроек."
+    # s 7aaaa "So tell me, if you really have."
+    s 7aaaa "Если есть, просто расскажи."
 
-# game/script-fae.rpy:192
-translate rus s_autoload_a3b3ea80:
+# TODO: Translation updated at 2018-10-12 16:05
 
-    # s "By the way, can I use the time just to look at you right now?"
-    s "Кстати, могу ли я просто пока посмотреть на тебя?"
+# game/script-fae.rpy:163
+translate rus s_autoload_45e604c7:
 
-# game/script-fae.rpy:193
-translate rus s_autoload_b5411900:
+    # s 7aaaa "I think, I did all right this time."
+    s 7aaaa "I think, I did all right this time."
 
-    # s "I just want to take a little break."
-    s "Я просто хочу немного отдохнуть."
+# game/script-fae.rpy:164
+translate rus s_autoload_c229fc04:
 
-# game/script-fae.rpy:194
-translate rus s_autoload_42ef8945:
+    # s "I also added one feature, that you'll like."
+    s "I also added one feature, that you'll like."
 
-    # s "Then, I'll tell you something anyway."
-    s "А потом, может что-нибудь тебе и скажу."
+# game/script-fae.rpy:169
+translate rus s_autoload_7d7eba59:
 
-translate rus strings:
+    # s 7aaaa "Anyway, I hope you like them too..."
+    s 7aaaa "Anyway, I hope you like them too..."
 
-    # script-fae.rpy:114
-    old "Taste of the life"
-    new "Taste of the life"
+# game/script-fae.rpy:171
+translate rus s_autoload_5b66525f:
+
+    # s "I hope you like them too..."
+    s "I hope you like them too..."
 
