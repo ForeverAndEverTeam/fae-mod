@@ -75,6 +75,7 @@ label import_ddlc_persistent:
         #Open the persistent save file as old_persistent
         #open the persistent save file at save_path
         f=file(save_path,"rb")
+        renpy.dynamic('s')
         s=f.read().decode("zlib")
         f.close()
         
