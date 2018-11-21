@@ -1259,8 +1259,10 @@ label s_answer_game_editing:
     s 6aabb "And I don't know, how it exactly works."
     s 6aaaa "If I want to make a new file, all I need is just to think about it and its content."
     python:
-        text_file = open(config.basedir + "/new_text_file.txt", 'w', encoding = "utf8")
-        text_file.write(_("All I need is just to think about it and its content."))
+        import codecs
+        
+        text_file = codecs.open(config.basedir + "/new_text_file.txt", 'w', encoding = "UTF-8")
+        text_file.write(__("All I need is just to think about it and its content."))
         text_file.close()
     s "It's like telekinesis but much cooler and dangerous."
     s 6acab "Just one wrong thought may lead to unpredicable problems like it often happens in program engineering."
