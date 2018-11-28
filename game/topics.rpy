@@ -104,7 +104,6 @@ init -5 python:
     topic_cats[0].new_topic(_("Depression"), 'depression')
     topic_cats[0].new_topic(_("Favorite Colors"), 'colors')
     topic_cats[0].new_topic(_("Archetype"), 'archetype')
-    topic_cats[0].new_topic(_("Conservatism"), 'conservatism')
     topic_cats[0].new_topic(_("Name"), 'name')
     topic_cats[0].new_topic(_("Quitting the Game"), "quittingTheGame")
     topic_cats[0].new_topic(_("Left-handedness"), "sinistrality")
@@ -112,18 +111,15 @@ init -5 python:
     topic_cats[1].new_topic(_("Videogames"), 'games')
     topic_cats[1].new_topic(_("Fanarts"), 'fanarts')
     topic_cats[1].new_topic(_("Literature"), 'lit')
-    topic_cats[1].new_topic(_("Street Art"), 'street')
-    topic_cats[1].new_topic(_("Blaming the Art"), 'accusing')
+    topic_cats[1].new_topic(_("Piracy"), 'piracy')
     
     topic_cats[2].new_topic(_("Conflicts"), 'conflicts')
     topic_cats[2].new_topic(_("Bulli"), 'bulli')
     topic_cats[2].new_topic(_("[s_name] Lovers"), 'sayoriLovers')
-    topic_cats[2].new_topic(_("Suicide"), 'suicide')
     
     topic_cats[3].new_topic(_("Guitar"), 'guitar')
     topic_cats[3].new_topic(_("Programming"), 'programming')
     topic_cats[3].new_topic(_("Poems"), 'poems')
-    topic_cats[3].new_topic(_("Survival Books"), 'survivalBooks')
     
     topic_cats[4].new_topic(_("Touches"), 'touches')
     topic_cats[4].new_topic(_("Marrige"), 'marrige')
@@ -373,27 +369,6 @@ label s_topics_personal_name:
     s 9aaca "{i}Sayori Vasquez, the cutest cinnamon bun south of the border!{/i}"
     return 'h'
 
-label s_topics_personal_conservatism:
-    s 6abaa "People often have a tendency to remember the past as far better than the present."
-    s 6abba "Although nostalgia aside, it might have been true for me."
-    s 6acab "The older I became, the more I started to notice how serious and dark the world could be, washing away all the colour..."
-    s "I was always so afraid of the future, and of change; it had always been bad for me."
-    s "That's why I often tried to keep everything like it was."
-    s 6acab "Constant despair and fear is no way to live, take it from me." 
-    s 6aaaa "Now, I feel like I understand the world better... I can roll with the punches, you know?"
-    s 6acaa "You, me... Everything changes sooner or later."
-    s "It's important to look to the future and the good it can bring, rather than lamenting what you might lose."
-    s "...Are you afraid of losing anything precious to you, [player]?"
-    s 6aaca "There's plenty of good change to be had. For example, technology can make people's lives easier, or even allow them to live where they may not have even a little bit earlier."
-    s 6acaa "There's nothing wrong with looking back sometimes, or remembering the past fondly..."
-    s "But trying to live in the past can destroy you."
-    s "It's like a maze: you might think you're going the wrong way and want to go back to the beginning when things were easier, but it might only {i}seem{/i} to be wrong..."
-    s "It's just all part of being human, I guess."
-    if persistent.last_playthrough > 0:
-        s 6abbb "It cost me my life to learn all of this, you know. I love you, and I don't want anyone to make the mistakes I did..."
-    s 6aaca "So, don't try and swim upstream; just go with the flow, and focus on what you {i}can{/i} change. You'll see so many more fishies that way! Ehehe~"
-    return
-    
 label s_topics_personal_quittingTheGame:
     s 6acaa "Hey, have you ever heard of 'lucid dreaming'?"
     s "Basically, it's when you can make yourself aware that you're asleep and in a dream."
@@ -537,75 +512,6 @@ label s_topics_art_piracy:
     s 6afab "It's bad I can't use Internet to do it too. My access to it works in a quiet weird way."
     s "But I hope, I'll fix it soon."
 
-label s_topics_art_street:
-    s 6abaa "Have you ever thought about how most people undervalue the street art?"
-    s 6acaa "I mean, some people want to express themselves by a more cheap, modern and noticeable way..."
-    s "Or just to get the city more colorful and less unified with their hand."
-    s "But people often have a very short look or ingore such art at all."
-    s "Do you ever look around while moving through the city?"
-    s 6aaba "If you don't, you miss a lot of funny and beautiful things."
-    s 6abab "But it's not as terrible as when owners and authorities unsparingly remove such art..."
-    s "They see it as just some vandalism. For me, this way to see is wrong and too preconceived..."
-    s 6acab "I understand, when someone makes a graffity on a cultural building or a monument..."
-    s "But what's wrong when it just is on a wall of an usual condo? Don't it make it a bit noticeable and looking not alike to other similar houses?"
-    s 6aaca "I dare say, if the 'big' people looked on street art more modernly, cities would look really better."
-    s 6aaba "...If they ask really talented artists for make them so, of course."
-    return
-
-label s_topics_art_accusing:
-    s 6abaa "I'm bothering that people accuse diffrent common problems to certain kinds of art."
-    s 6acaa "Each generation inverts a new kind of art or a way to represent an existing one."
-    s "And each time, people find a reason to accuse as more as they can to the kind or the way and to make the authority forbid it."
-    s "Even this game is blamed for some suicides and that countless number of players have got mental disorders from it."
-    s 6abba "If we consider the genre and the plot, they maybe are right somewhere..."
-    s 6acaa "But serious disorders can't appear neither from nothing nor just from someone's artwork, whatever it is..."
-    s "And when the 'reason' and the tendency are together, it may have a really bad outcome."
-    s "But when the press covers such occasions, it often doesn't take at least some time to get the true infromation about its scapegoat, so they often make very silly mistakes."
-    s "But the most bad is when the authority listens to the press and bans the work, in fact, for nothing and even regardless the mistakes and hyperboles."
-    s 6aaca "But fortunately, it happens quite rarely in the developed countries, so the fear of the brand new just goes out later."
-    s 6abaa "If the things had gone in the other way, we would never meet here beacuse I'd not exist at all."
-    s "But we barely can stop such first reactions to new things, because people always were so."
-    s 6acac "How much people blame the TV and the Internet for making people less intelligent and interested in real life problems?"
-    s 6abcb "But there's not a perfect media or a perfect kind of art, firstly beacuse people aren't perfect."
-    s 6acaa "We all often lies and use each other for our selfish purposes..."
-    s "So there's not any difference between, for example, TV propaganda and book propaganda."
-    s "The truth not always can be got from your own sight, not to mention sombody else's one."
-    return
-
-## Society
-label s_topics_society_conflicts:
-    show sayori 6abaa at ss1 zorder 2
-    s "The more I learn about your world, the more surprised I get."
-    s "You still have a lot of silly conflicts despite how far you've come as a society..."
-    s "Why people can't just unite to resolve their common problems?"
-    s 6acab "Yes, they do on a limited scale, but usually only into several 'sub-groups' that still have different opinions and solutions."
-    s "And these group often fight each other for power instead of deciding the problems."
-    s "In addition, these groups often are so unstable that they can easily divide into smaller groups, hating each other."
-    s "They do it for reasons far more silly than the problems."
-    s "You know, Monika told me something funny once, back from when she had just left the debating club."
-    s "'The strongest argument against democracy is a five minute conversation with the average person.'"
-    s "I think it's a pretty fair point to make, all things considered."
-    s "While collaboration is great, somethimes you just need someone to step in so everyone can see the problem clearly."
-    s "I think the literature club was a perfect example of it."
-    s 6acaa "Remember the poem style arguments between Yuri and Natsuki?"
-    s "There wasn't really any problem between the two poems; both of them were just convinced that they were writing the 'correct' way."
-    s "When I said they were both right, it wasn't a lie. Neither of them had done anything wrong, they just needed a third party to remind them that it wasn't a competition."
-    if persistent.last_playthrough > 2:
-        s 6abab "But when I was... gone, they didn't have someone who could help them see clearly, so they both went way too far."
-        s "Monika is a great debator, but she struggled when there was no easy way to decide how to handle the problem 'legally'."
-        s "...And she wanted to keep the game from crashing since I couldn't step in."
-        s 6aaca "Anyway, the agrument didn't really change the club..."
-        s 6abbb "But if Monika didn't take the two of you outside with her abilities, I hate to think what might have happened..."
-    if persistent.last_playthrough == 4:
-        s 6abaa "Do you remember the day of the 'ending'?"
-        s "I just gave both of them advice to learn more about each other's favorite kind of literature. Walking a mile in someone else's shoes, and all that."
-        s 6acaa "I might have stopped them from fighting at all by coming at the problem that way..."
-        s "Unfortunately, I'll never know for sure."
-        s 7aaca "Those sorts of moments were why Monika made me the Vice President."
-        s "I always tried to make my friends happy, and see that they had no real reason to be fighting at all."
-    s 7aaaa "And I hope you can be that person for others in your world."
-    s "At some level, there's always a bit of common ground for people to agree on..."
-    return 'h'
 
 label s_topics_society_bulli:
     s 6acab "Hey, be honest with me..."
@@ -653,27 +559,6 @@ label s_topics_society_sayoriLovers:
     s "I'm so glad I met you, [player]."
     s 7aaaa "And I love all of you out there that love me, no matter where you are."
     return 'h'
-
-label s_topics_society_suicide:
-    s 6acaa "I wonder what makes people to stop appreciate the life and even to finish it before the time takes it."
-    if persistent.last_playthrough > 0:
-        s "I'm talking not only about myself. I'm about people at all."
-    s "Even if someone has a really good life, it can't assure they won't commit suicide."
-    s 6abab "Many successful people did it under diffrent things. It's even hard to list them all down."
-    s "Not to mention how many people did it at all."
-    s 6acab "But almost no-one think of their relatives and friends while doing it..."
-    s "It hurts when you lose a really close man, but it hurts more when it's their own decision..."
-    s "Beacuse it's really abnormal so the man needed a help, that someone else or you can't make on right time."
-    s "But suicidal people often don't see they have anything to lose so they don't care if they just try and go away the cruel world."
-    s 6abab "That's why I think that other people should help them even despite of they mind..."
-    s "But to do it, people should understand what really are bothering them."
-    s "Broken heart, insanity, living in total despair or contsant fear, someone's influence... There're a lot of reasons, why people commit it."
-    s 6acaa "It's obviously a situation, where dealing with the reason is more easier than with the consequence..."
-    s "So we really should be resolute but careful with these people."
-    s 6abaa "Sometimes, trying to prevent something makes it occure."
-    s 6acaa "But we should not give up, anyway. We're just to figure out how to do it in the less risky way..."
-    s 6aaca "And then, we can save someone's live from the prejudicial and probably silly act."
-    return
 
 ## Hobbies
 label s_topics_hobbie_guitar:
@@ -741,31 +626,6 @@ label s_topics_hobbie_poems:
     s "Maybe, they all will help you to understand me and what I was through."
     return "h"
 
-label s_topics_hobbie_survivalBooks:
-    s 7aaaa "Despite of I'm really not a passionate reader, I'm really like to read practical literature, like survival books."
-    s 8aebb "Yes, it's a pretty odd preference, I know."
-    s "And to be honest, I don't remember how long I've had a fancy for them..."
-    s 8aaaa "It's just pretty cool to know how to save someone's live."
-    if persistent.clear[7]:
-        s 6aaaa "And when MC brought me some apple juice to heal the bump, I did nothing, just beacuse I wanted to get some free vending machine stuff from him."
-        s "Don't ask me how I could predict, he'd run exactly to it to get something cold..."
-        s 6aaca "Just pretending silly often helped me somewhere."
-        s 6acaa "Anyway..."
-    s 6acaa "You can also get there some advise how to make your normal life easier."
-    s "For example, how to make good knots."
-    if persistent.last_playthrough > 0:
-        s 8aebb "Oops, I have just said you, how I made that noose."
-        s 8ageb "No, don't take it wrong! It was not the one reason, why I read them."
-    else:
-        s 8aebb "Don't ask me, why I needed such info."
-        s "I'm not interested in it now, anyway."
-    s 8aebb "I just gave you an example, not more."
-    s 6acaa "Anyway, it always good to read a so book when you're going to a forest hike or something..."
-    s "But before the trip, of course."
-    s "Because emergencies are so emergency that you just will have no time to get the needed info from somewhere."
-    s "Saving lifes is not as simple, as you may think. In fact, it's easier to hurt more the salvable with you clumsy doing..."
-    s "So you should have at least some knowledge about first aid, orientation, making improvised devices and more."
-    return
 
 ##Relationship
 label s_topics_rlt_touches:
@@ -873,8 +733,7 @@ label s_topics_rlt_dating:
     s 6abaa "But I'd prefer a more intresting way to spend our date."
     s 6acaa "At least, to go cinema. What do you think about this way?"
     s "I'm out of the stereotype that every date walk to the movies should be to a melodrama or something."
-    s "I'd prefer a comedy or even an action movie..."
-    s "But not of dirty jokes and not about {i}cool guys who have a lot of big guns and kill people for an unclear purpose{/i}."
+    s "I'd prefer a comedy but not of dirty jokes..."
     s 8aebb "Or what's about cartoons, like {i}Disney{/i} and {i}Pixar{/i} make?"
     s "They were made for kids, of course, but most of them can be intresting for adults too."
     s 8abab "Some of them even have a deep-thought meaning and sad scenes, like the scenerist treats the viewer as rather an adult than a child."
