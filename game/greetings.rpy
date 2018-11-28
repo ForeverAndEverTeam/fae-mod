@@ -191,17 +191,16 @@ label s_greeting_5:
     show sayori 7aeca at ss1 zorder 2
     s "You're back, ehehe~"
     s 7acaa "It's pretty boring, when you're not here."
-    s "You're my only friend now, you know..."
+    s "You're my only friend here now, you know..."
     s "And you also know how to cheer me up."
     s "Maybe, you'll do it now?"
     return
 
 label s_greeting_6:
-    show sayori 7aaaa at ss1 zorder 2
-    s "Oh, hi again!"
-    s "I was surfing the internet, when you came back."
-    s "And to be honest, even it don't give me as much joy as you give."
-    s "So I'm glad, you're back."
+    show sayori 6aeca at ss1 zorder 2
+    s "Oh, you're back!"
+    s 6aaaa "I'm glad to see you again..."
+    s "Let's spend some time together."
     return
 
 #Special greetings
