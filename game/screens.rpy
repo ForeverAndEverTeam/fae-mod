@@ -259,7 +259,7 @@ screen input(prompt):
     window:
 
         vbox:
-            xpos gui.text_xpos
+            xpos gui.text_xpos + gui.text_width / 2
             xanchor 0.5
             ypos gui.text_ypos
 

@@ -104,14 +104,15 @@ screen talk_ui():
     vbox:
         align (1.0, 0.5)
         offset (-10, 0)
-        textbutton _("Ask a question") keysym '1' action Function(renpy.call, "s_topicmenu", 0)
-        textbutton _("Repeat conversation") keysym '2' action Function(renpy.call, "s_topicmenu", 1)
+        textbutton _("Ask a question") keysym '1' action Function(renpy.call, "s_topicmenu", 0, 0)
+        textbutton _("Repeat conversation") keysym '2' action Function(renpy.call, "s_topicmenu", 1, 1)
         textbutton _("I feel...") keysym '3' action Function(renpy.call, "s_topicmenu", 2)
-        textbutton _("Say goodbye") keysym '4' action Jump("s_farewell")
-        textbutton _("Change information") keysym '5' action Function(renpy.call, "s_pinfo", True)
+        textbutton _("Ask for help...") keysym '4' action Function(renpy.call, "s_topicmenu", 4)
+        textbutton _("Say goodbye") keysym '5' action Jump("s_farewell")
+        textbutton _("Change information") keysym '6' action Function(renpy.call, "s_pinfo", True)
         if config.developer:
             textbutton "{i}Clean Sayori's memory{/i}" keysym '0' action [Function(reset_topics), Jump("s_talkmenu")]
-        textbutton _("Close") keysym '6' action [Hide("talk_ui"), Jump("s_loop")]
+        textbutton _("Close") keysym '7' action [Hide("talk_ui"), Jump("s_loop")]
 
 screen music_ui(p = 0):
     default page = p
@@ -165,7 +166,7 @@ screen minigame_ui():
         textbutton _("Close") action [Hide("minigame_ui"), Jump("s_loop")]
 
 screen topic_ui(ss, cat = 0): #0 = questions, 1 = repeat, 2= feelings, 3 = poetry; #[TopicCategory] show the category
-    default subscreen = subscreen
+    default subscreen = ss
     default cat = cat
     default page = 0
     
@@ -188,11 +189,14 @@ screen topic_ui(ss, cat = 0): #0 = questions, 1 = repeat, 2= feelings, 3 = poetr
             for i in moods:
                 textbutton i[0] action [Function(renpy.call, "s_react", i[1])]
             textbutton _("Back") action [Hide("topic_ui"), Jump("s_talkmenu")]
+        elif subscreen == 4:
+            textbutton _("Open a website") action [Function(renpy.call, "s_assistant_askUrl")]
+            textbutton _("Back") action [Hide("topic_ui"), Jump("s_talkmenu")]
         else:
             if cat == 1:
                 for i in subscreen[7 * page: 7 * page + 7]:
                     if config.developer or i.seen:
-                        textbutton i.name xpadding 10 action [Function(subscreen, i)]
+                        textbutton i.name xpadding 10 text_italic not i.seen action [Function(subscreen, i)]
             elif cat == 0:
                 for i in subscreen[7 * page: 7 * page + 7]:
                     textbutton i.name xpadding 10 action [Function(subscreen, i)] text_italic not i.seen
