@@ -16,6 +16,8 @@ init -10 python:
             self.min = min_value
         
         def append(self, obj, length):
+            if self.list:
+                length += self.list[-1][1]
             self.list.append((obj, length))
         
         def __getattr__(self, attr):
@@ -24,22 +26,22 @@ init -10 python:
         def __getitem__(self, index):
             err = IndexError('list index out of range')
             
-            if len(self.list) > 0:
-                if index >= self.min:
-                    if index <= self.list[0][1]:
-                        return self.list[0][0]
-                    else:
-                        r = self.list[0][1]
-                        for i in self.list[1:]:
-                            r += i[1]
-                            if index <= r:
-                                return i[0]
+            if self.list:
+                if index >= self.min and index <= self.list[-1]:
+                    s, e = 0, len(self.list)
+                    
+                    while s < e:
+                        m = (s+e) // 2
+                        ml = self.list[m][1]
+                        
+                        if index > ml:
+                            s = m + 1
                         else:
-                            raise err
-                else:
-                    raise err
-            else:
-                raise err
+                            e = m
+                    
+                    if index <= self.list[e][1]:
+                        return self.list[e][0]
+            raise err
         
         def values(self):
             return [x[0] for x in self.list]
