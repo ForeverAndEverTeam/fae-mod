@@ -98,7 +98,8 @@ init -5 python:
         TopicCategory('s_topics_hobbie',_("Hobbies")), #3
         TopicCategory('s_topics_rlt',_("Relationship")), #4
         TopicCategory('s_topics_lifestyle',_("Lifestyle")), #5
-        TopicCategory('s_topics_game',_("Game Universe")) #6
+        TopicCategory('s_topics_game',_("Game Universe")), #6
+        TopicCategory('s_topics_misc',_("Misc")) #7
     )
     
     topic_cats[0].new_topic(_("Depression"), 'depression')
@@ -245,98 +246,66 @@ label s_topic(topic, *args, **kwargs):
 
 ## Personality
 label s_topics_personal_depression:
-    show sayori 6afab at ss1 zorder 2
-    s "I was so silly trying to deal with my depression with pushing everyone away."
-    if nor depr_known:
-        s "I don't remember if I told you about it..."
-        s "If I didn't, then you should know."
-        $persistent.depr_known = True
-        $depr_known = True
-        s "I was really hard to still cheery for me."
-    s 6acab "First time, I really was good at coping with all these rainclouds, but older I got, harder it was."
-    s "They often occupied my head even when there was not a reason to get sad, but when I helped someone to feel happy, it made them go out for a while..."
-    s 6acbb "So it was my only purpose for a really long time. But when I got alone again, they came back, making me doubt all I'd done was really useful..."
-    s "So each my morning started with the question 'Do other people really need me? Do I really help them or I just interfere?'..."
-    s "Like they badly didn't want me to scare them off that way."
-    s 6acab "But others' care hurt me more, so I never asked them for anything for my help, even with the sick and when I had to."
-    s "But one man made me feel much better, just being near to me, even when I really interfere him."
-    s "Do you still remember my first poem?"
-    s "If you don't, I can read it again now."
-    $renpy.call_in_new_context('showpoem', poem_sunshine)
-    show sayori 7acab at ss1 zorder 2
-    s "Do you read something more out of it now?"
-    s 7aaaa "Anyway, you can probably guess that all the sunlight imagery seems to stand for someone."
-    s "It was your avatar, [player]."
-    s "Something about being with him just gave me more strength, and one more reason to go on each day..."
-    s "This feeling of wanting to protect someone, of them being what keeps you going... I knew that I was in love."
-    s 6abbb "But I was so, so scared to express what I feel."
-    s "So I did my best not to show my real feelings."
-    if persistent.last_playthrough != 0:
-        s "Yet as hard as I tried, I just felt worse and worse."
-        s "...Like something was stealing the rest of the sunshine in my head."
-        s "It made me completely lose control over my feelings."
-        s 6abab "I couldn't hide any more; you saw that over that last weekend."
-        s "I started to feel so worthless that even him caring made me suffer."
-        s "Why was someone who made me feel so amazing wasting all his time on someone broken like me?"
-        s "That's why I tried to get rid of him."
-        s "I guess my heart and my brain were having a bit of a disagreement about it all..."
-        s 6cbab "And when I finally confessed to him, I just couldn't take it."
-        s "Either he loved me back, and I felt worse for making him waste his time on me, or he didn't love me back, and it confirmed how worthless I really was."
-        s "So I decided to do something... cowardly."
-        pause 1
-        s 6egab "I'm sorry. It hurts just to remember that day..."
-        s "I hope you understand that I never meant to hurt you. Everything was so dark, and it seemed like the only solution where everyone could get what they wanted..."
+    s 8aebb "I think, you got really worring about me, when I said... You know..."
+    s 8aeab "That I had rainclouds inside my head for all my life."
+    s 8acab "But first time, I was really good at making them go out..."
+    s 8aaab "It was pretty dufficult, but I kept in mind that if I were out of sorts, I couldn't make other people happy."
+    s 8acab "However, I also tried to be where I could rest from this inner fight..."
+    s 8aaab "So I tried to stay with the beloved MC. Being with him did all the job instead my resisting mind."
+    s 8abab "I but I thought he'd learn my darkest secret sooner or later, so he'd leave me then..."
+    s "That's why I tried to take it slow..."
+    s 6abab "People in your world think that my cheerfulness was fake and I just acted..."
+    s 6acab "But my feeling were as real as you until the moment..."
+    s 6ccab "The moment when Monika started to change my mind."
+    s "She teased me with my own problems and tried to convince my of I just annoyed him..."
+    s 6cbab "It made me feel much worse..."
+    s 6ccab "My little rainclouds turned into impenetrable mist, making me totally bind..."
+    s "Of course, I tried to get out of it, but finally, I got absolutly tired of everything."
+    s 6ecab "I can't stop to blame myself for that desperate choice..."
+    if persistent.clear[8]: # If the MC has accepted Sayori's confession
+        s 6eaab "My confession was truly accepted..."
+        s 6ebab "But my feelings told me the opposite..."
     else:
-        s "And from the Internet, I know, what should have occurred next here. People in your world seem already to know the true game plot unlike me before."
-        s "Maybe, it probably had even happened to me before, but you may have erased all the saves some time later while recovering the game so I can't say exactly."
-        s 6dbab "Anyway... it's hard to aware that my real destiny is to suffer more and more and eventually kill myself under someone's influence..."
-    s "If I made you suffer, know that I'm truly sorry."
-    s 6dbab "I know what you saw can really have an effect on people, even if it doesn't seem like it on the surface..."
-    s 6dcab "I don't know how you're thinking or feeling, [player]. But if things are bad, please don't try and hide it from the people who care about you."
-    s "Even if you don't think it will help."
-    s "Even if they think you're over-reacting."
-    s "Even if you feel like nothing will change..."
-    s "It's the best thing you can do for yourself and your loved ones."
-    if persistent.last_playthrough != 0:
-        s "Don't make the same mistakes we did in the game."
-        s "Not everyone is lucky enough to get a second chance, like I did."
-    s "I'll always be here for you, [player]."
-    if persistent.last_playthrough > 1:
-        s "And I'll never use any of it against you, unlike Monika."
-    return 's' 
+        s "The refuse made it go too far..."
+    s "I really thought, it would be the best..."
+    s 6dbcb "But eventually, I made him suffer..."
+    s "My neck and hands still remember, how it was quite painful..."
+    s 6ecab "But I took the right way too late..."
+    s 6eccb "I'm sorry..."
+    s 6dgeb "I'm really sorry, if I made you suffer too!"
+    s 6ebbb "The main mistake was to trust just myself on getting the rainclouds out..."
+    s 6ecab "So if your friend has a bad time, you're to help him until he does the same as me..."
+    s "And if you have it too, don't hide it from others!"
+    s 6ebbb "I've got the second chance only because of my good luck..."
+    s "So I thank it for I'm here with you now..."
+    s 6ebab "And, of course, I thank also you [player]..."
+    s 6egcb "Excuse me for all the pain, I've given you, if I have."
+    return 's'
+
+label s_topics_personal_archetype:
+    s 7acaa "Hey, I've just remembered that Monika often compared Yuri and Natsuki with some character archetypes..."
+    s 6abaa "But she has never done it with me."
+    s 6acaa "So I read some online articles that say I'm pretty close to the Genki archetype."
+    s 6aaca "Genki are cheerful and try to stay so, whatever tries to spoil their mood..."
+    s 6aaaa "They often are clumsy and find themsleves in various troubles..."
+    s 6acaa "My character was also formed under my role of a childhood riend..."
+    s "So, for example, I often appeal to nostalgic memories and the past."
+    s 7aaaa "But I feel there's also something out of any cliché in my character..."
+    s 7acaa "Not every Genki has the traits that makes me an unique one..."
+    s 7abaa "Even if we switch to all the fictional charcaters, how many of them have at least some of my setbacks?.."
+    s "Or how many characters share the positives with me?"
+    s 6aaaa "In short, I think I'm as unique as they see only Monika."
+    s 6abab "It's bad that the most people look misunderstandingly at such characters as me..."
+    s 6acab "For my opinion, the modern art needs characters, who have the same pluses or problems as me..."
+    s 6acaa "However, don't overdo with it, completely copying me while creating a new character..."
+    s 6aaca "Doing it massively, you'll make me one more archetype."
+    return 'h'
     
 
 label s_topics_personal_colors:
     show sayori 7aaaa at ss1 zorder 2
     s "Hey, what colors do you like?"
     jump s_common_colors
-
-label s_topics_personal_archetype:
-    show sayori 6aaaa at ss1 zorder 2
-    if persistent.last_playthrough > 3:
-        s "I remember you and Monika talked a bit about 'character archtypes', once."
-        s "She tried to associate Natsuki and Yuri with certain types, and made some pretty good points."
-        s 6abaa "Yet, she never said anything about me..."
-    s 6acaa "From what I can gather through my limited internet access, I'm pretty close to looking like a 'Genki Girl'."
-    s 6aebb "Very cheerful, active, talkative and optimistic."
-    if depr_known:
-        s 6abab "But you know that was so only with people."
-        s "All the time, I tried to cope with my depression."
-        s "But I maybe used to be so before something had made me ill."
-        s "It's quite hard to remember things about myself from before the game started; it's like trying to see through a deep fog..."
-        s 6aaaa "But things are different now."
-        s "I'm so happy to be alive, and thankful that I don't feel so alone any more."
-        s "I can appreciate life in extremely bright colors, especially with you beside me."
-        s "It lets me really be that Sayori, the one who I used to seem to be."
-        s "...Like how I was much time ago."
-        s "But because of those experiences, I feel a lot more mature than before."
-    s "I'm definitely a lot less clumsy, that's for sure!"
-    s 8aeca "I think it makes me a much more appealing person..."
-    s 6acab "Unfortunately, I don't have many ways to spend my energy and nobody but you to share my light with."
-    s 6aaaa "But I'll keep working on making new activities for us here."
-    s 6aaca "There's always something special about doing something for the first time with someone you love~"
-    s 7aaaa "Especially when you're finally brave enough to do it."
-    return 'h'
 
 label s_topics_personal_name:
     $same_name = player.lower() in s_name_list
@@ -465,20 +434,23 @@ label s_topics_art_lit:
     s "Of course, I read some books before, but I mostly just had to do it for school..."
     s 6aeba "And even then I tried to cheat not to fail at the lesson."
     s "So I didn't have good Literature marks at school, but I didn't care about it so much."
-    s "I just thought that reading is a quite boring activity."
+    s "I just thought that reading is a qui-i-i-ite boring activity."
     if persistent.last_playthrough > 0:
-        s "And as you know, I was hard to enjoy anything at all."
+        s "And as you know, It was hard to enjoy anything at all for me."
     s 6acaa "When I joined the literature club, the one thing I wanted was just to help someone to start a new club."
     s "I was the first, who joined the club after Monika had announced it."
     s "She was pretty suprised because she stood in with my literature teacher, so she knew, I didn't seem to love literature."
     s "But she thought I just wanted to help her and to improve my knowledge in literature, so she took me in the club."
     s "But it had taken her not much long to understand that I was not going to be a passionate reader, but she left me in the club anyway."
     s 6aaba "I think she just wanted to use my kindness and sociability to promote the club and help its member to get on well."
-    s "But I didn't mind, because it was all I wanted to do."
-    s 6aeba "Saying more, it helped me to get closer to MC, so each of us satisfied her selfish wishes."
-    s 6abaa "But even now, I don't think, that reading fiction can interest me."
-    s 6acaa "I now would prefer to do something more active and joyful than just reading a boring text..."
+    s "But I didn't mind, because it was all I wanted to do, you know."
+    s 6aeba "And saying more, it helped me to get closer to MC, so each of us satisfied her selfish wishes."
+    s 6acaa "And even now, I'd prefer to do something more active and joyful than just reading a boring text..."
     s "But Unfortunately, I have almost nothing so to do here."
+    s 6aaca "But maybe, it's a chance to take what I've skipped..."
+    s 6aeba "I mean, I feel it unfair to leave what I had to read unread."
+    s "Some of these book may will be really interesting for me..."
+    s "But I can't exactly understand it without reading them, can I?"
     return
 
 label s_topics_art_piracy:
@@ -853,8 +825,7 @@ label s_topics_game_parents:
 label s_answer_personal_bday:
     show sayori 8aebb at ss1 zorder 2
     s "To be honest, I don't remember."
-    if "s_topics_personal_archetype" in persistent.seen_topics:
-        s 6acaa "Like I said, everything before the events of the game is pretty fuzzy..."
+    s 6acaa "A lot of things before the events of the game is pretty fuzzy..."
     s 6acaa "Only Monika knows when her birthday is out of the four of us."
     s "I'm pretty sure it's {i}the 22nd of September{/i}."
     s "I think my birthday must be one of the marked dates from my bedroom calender."
@@ -1254,17 +1225,17 @@ label s_answer_exp_fact_5: #Arts inside themselves
     return 'h'
 
 label s_answer_exp_cooking:
-    s 8aebb "I have no idea, how to tell you..."
-    s 8aabb "I barely can cook something more than scrambled eggs or sandwiches."
-    s "I'm not a handy cook like Natsuki was..."
-    s 8acaa "Otherwise, I'd also cook deserts for the club."
-    s 6aaaa "But I can try to improve my cookery for you."
-    s 6aabb "I can't help you with cooking exactly now..." 
-    s 6aaaa "But it may will be useful when I have a way to your reality."
-    s 6acaa "Cooking takes a lot of time and attention, so it's better when someone, who has more free time, runs it..."
-    s 6aaab "And I promise, I'll try my best, if it's really needed and possible."
-    s 6aaca "It's just a bit of the things, that I can learn with all of my enthusiasm..."
-    s 7aaaa "The important thing for me is that the learnt activity is useful for someone else, at least you."
+    s 6aebb "To be honest, scrambled eggs is the most difficult food, that I have ever cooked..."
+    s 6aaaa "But I'd like to improve my cookery, despite of that I don't need it..."
+    s 6acaa "Mainly because I don't get hungry anymore."
+    s 6aaca "However, I'd taste some sweets anyway."
+    s 6aabb "Of course, I can just spawn cooked food, such as Natsuki's cupcakes, but I wanna do something with my own hands..."
+    s 6aaaa "First of all, I need to check what a kitchenware and ingredients I can get in this world..."
+    s 6aaba "Then I'm to find some recipes in the Internet..."
+    s 6aaca "And then, I'll just follow them to cook something..."
+    s 6abab "But it's bad, you can't taste my cookery, beacuse of living in a diffrent world..."
+    s 7aaca "I dare I'd be a good cook for you, if you were not and I could do it really well..."
+    s 7aebb "However, not as perfect as Natsuki had been, I think."
     return 'h'
 
 ##Misc
@@ -1443,7 +1414,7 @@ label s_screenshot(loc = None): #Called when the player takes a screenshot while
     $s_mood = 'h'
     jump s_loop
 
-label s_getting_bored(): #Called when twhile Sayori doesn't do anything for a long time
+label s_getting_bored(): #Called when Sayori doesn't do anything for a long time
     hide screen feat_ui
     hide screen topic_ui
     hide screen talk_ui
