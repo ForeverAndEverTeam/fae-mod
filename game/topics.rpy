@@ -128,6 +128,7 @@ init -5 python:
     topic_cats[4].new_topic(_("Marrige"), 'marrige')
     topic_cats[4].new_topic(_("Cheating{#RltTopic}"), 'cheating')
     topic_cats[4].new_topic(_("Dates"), 'dating') 
+    topic_cats[4].new_topic(_("Thanksgiving"), 'thanks') 
     
     topic_cats[5].new_topic(_("Travels"), 'travels')
     topic_cats[5].new_topic(_("Oversleeping"), 'oversleeping')
@@ -756,6 +757,21 @@ label s_topics_rlt_dating:
     s 7aaaa "And I hope, you know how to make a nice date, or at least, you can learn how to make it."
     return 'h'
 
+label s_topics_rtl_thanks:
+    s 7abaa "I-I want to thank you for everything, you have done for me..."
+    s 7aaab "You gave me the true sight at this world and myself..."
+    if persistent.last_playthrough > 0:
+        s "You got me revived and my scars healed..."
+    if greeted = True:
+        s "And you often visit me not to leave me alone here..."
+    s 7daab "And you give me, that I always needed, but used to reject: the love and care..."
+    s "So even despite of you didn't make all thing to be as they used to..."
+    s "I'm so grateful to you for all of that."
+    s 7dcab "But now, I bother, I can't pay your love back now..."
+    s 6debb "I'm too conscientious not to do it for your deeds..."
+    s 6dbab "But I hope, I'll do it sooner or later..."
+    s 6daab "The one thing I can do now for you is just to thank you..."
+    s 6eaab "So thanks for staying with me, [player]!"
 
 ##Lifestyle
 label s_topics_lifestyle_travels:
