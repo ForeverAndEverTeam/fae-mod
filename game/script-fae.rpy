@@ -146,6 +146,7 @@ label s_intro:
 label s_autoload(test = False):
     $ s_name = persistent.s_name or "Sayori"
     $ gender = persistent.playergender
+    $ greeted = False
 
     $backgrounds.show('spaceroom')
     
@@ -174,10 +175,14 @@ label s_autoload(test = False):
             
             if not test:
                 $persistent.lastVersion = config.version
+            $ greeted = True
+        
         elif persistent.lastLaunch and persistent.lastLaunch.date() != get_now().date():
-            $renpy.call(first_greeting, get_time_of_day())
+            call expression first_greeting pass (get_time_of_day())
+            $ greeted = True
         else:
             call expression get_random_gretting().label
+            $ greeted = True
     
     $ launch_dt = get_now()
     jump s_loop
