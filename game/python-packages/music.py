@@ -23,8 +23,10 @@ def music_register(name, path):
         music_list_len += 1
 
 def read_list(filelist = "list.txt"):
+        new = 0
         try:
             f = renpy.file(MUSIC_CUSTOM_PREFIX + filelist)
+            fs = []
             
             for line in f.readlines():
                 info = []
@@ -53,17 +55,20 @@ def read_list(filelist = "list.txt"):
                         s += line[pos]
                     pos += 1
                 
-                if len(info) == 2 and type(info[0]) == unicode:
+                if len(info) == 2 and (type(info[0]) == unicode or type(info[0]) == str):
                     pos = info[1].rfind('>') + 1
                     info[1] = info[1][:pos] + MUSIC_CUSTOM_PREFIX + info[1][pos:]
                     music_register(*info)
+                    new += 1
         
         except IOError:
             if filelist != 'list.txt':
                 return music_custom_find()
+        
+        return new
 
 def autoscan(append = True, music_dir = MUSIC_CUSTOM_PREFIX):
-    new = False
+    new = 0
     
     l = os.listdir(config.basedir + '/game/' + music_dir)
     l = filter(lambda x: x.rsplit('.', 1)[1] in compatible_formats, l)
@@ -75,13 +80,13 @@ def autoscan(append = True, music_dir = MUSIC_CUSTOM_PREFIX):
         
         if append:
             for j in music_list:
-                if j[1][-il:] == i:
+                if j[1].rsplit('/', 1)[-1].rsplit('>', 1)[-1] == i:
                     found = True
                     break
         
         if not found:
             music_register(i.split('.')[0], MUSIC_CUSTOM_PREFIX + '/' + i)
-            new = True
+            new += 1
         
     return new
 
