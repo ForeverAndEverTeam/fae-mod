@@ -149,7 +149,7 @@ label s_autoload(test = False):
 
     $backgrounds.show('spaceroom')
     
-    $music_switch(persistent.currentmusic or 0)
+    $music.switch(persistent.currentmusic or 0)
 
     if persistent.playthrough == 5:
         call s_intro_2

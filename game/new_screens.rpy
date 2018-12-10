@@ -1,7 +1,9 @@
 init python:
-    import os, re
+    import music
+    music.config, music.renpy = config, renpy
+    music.persistent = persistent
     
-    music_list = [
+    music.music_list = [
     ("Just Monika", audio.m1), 
     ("Okay everyone!", audio.t5), 
     (_("Okay everyone! ([s_name] version)"), audio.tsayori), 
@@ -13,66 +15,10 @@ init python:
     ("My Confession", audio.t10),
     ("I Still Love You", audio.mend)
     ]
-    MUSIC_FALLBACK = -1
+    music.music_list_len = len(music.music_list)
     
-    MUSIC_CUSTOM_PREFIX = "mod_assets/music/"
-    
-    def music_rigister(name, path):
-        music_list.append((name, path))
-        
-    def music_custom_find(filelist = "list.txt"):
-        global music_list_len
-        
-        try:
-            f = renpy.file(MUSIC_CUSTOM_PREFIX + filelist)
-            
-            for line in f.readlines():
-                info = []
-                pos = 0
-                closed = True
-                s = ""
-                l = info
-                le = len(line)
-                
-                while pos < le and line[pos] != '#' and line[pos] != '\n':
-                    if line[pos] == '\"':
-                        if pos > 0 and line[pos-1] == '\\':
-                            s = s[:-1] + "\""
-                        elif not closed:
-                            closed = True
-                            l.append(s)
-                            s = ""
-                        else:
-                            closed = False
-                    elif line[pos+1] == '[' and closed and line[pos] != '\\':
-                        l = []
-                    elif line[pos+1] == ']' and closed and line[pos] != '\\':
-                        info.append(l)
-                        l = info
-                    elif not closed:
-                        s += line[pos]
-                    pos += 1
-                
-                if len(info) == 2 and type(info[0]) == unicode:
-                    pos = info[1].rfind('>') + 1
-                    info[1] = info[1][:pos] + MUSIC_CUSTOM_PREFIX + info[1][pos:]
-                    music_rigister(*info)
-        
-        except IOError:
-            if filelist != 'list.txt':
-                return music_custom_find()
-        finally:
-            music_list_len = len(music_list)
-    
-    music_custom_find()
-    
-    def music_switch(id = MUSIC_FALLBACK):
-        if id > (globals().get("music_list_len") or len(music_list)) - 1:
-            return music_switch()
-        renpy.music.stop()
-        persistent.currentmusic = id
-        if id >= 0:
-            renpy.music.queue(music_list[id][1], loop=True)
+    music.read_list()
+    scaned_new = music.autoscan()
     
     #Mini-game info classreturn
     class minigame:
@@ -125,29 +71,29 @@ screen music_ui(p = 0):
         
         $keysym_i = 0
         
-        for i in range(7 * page, min(7 * (page+1), music_list_len)):
+        for i in range(7 * page, min(7 * (page+1), music.music_list_len)):
             if persistent.currentmusic != i:
                 $keysym_i += 1
-                textbutton music_list[i][0] xpadding 0 keysym str(keysym_i) action [Function(music_switch, i),Hide("music_ui"), Jump("s_loop")]
+                textbutton music.music_list[i][0] xpadding 0 keysym str(keysym_i) action [Function(music.switch, i),Hide("music_ui"), Jump("s_loop")]
         
         $del keysym_i
         
         hbox:
             spacing 324
             
-            if music_list_len > 8:
+            if music.music_list_len > 8:
                 if page > 0:
                     textbutton ("<") xpadding 0 xsize 48 keysym 'K_LEFT' action SetScreenVariable("page", page-1) #Previous Page
                 else:
                     null width 48
-                if music_list_len >= (page+1) * 7:
+                if music.music_list_len >= (page+1) * 7:
                     textbutton (">") xpadding 0 xsize 48 keysym 'K_RIGHT' action SetScreenVariable("page", page+1) #Next Page
         
         hbox:
             spacing 100
             
             if persistent.currentmusic > 0:
-                textbutton _("Mute") xpadding 0 xsize 160 keysym '0' action [Function(music_switch, -1), Hide("music_ui"), Jump("s_loop")]
+                textbutton _("Mute") xpadding 0 xsize 160 keysym '0' action [Function(music.switch, -1), Hide("music_ui"), Jump("s_loop")]
                 textbutton _("Close") xpadding 0 xsize 160 action [Hide("music_ui"), Jump("s_loop")]
             else:
                 textbutton _("Close") action [Hide("music_ui"), Jump("s_loop")]
