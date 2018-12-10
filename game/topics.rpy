@@ -108,6 +108,7 @@ init -5 python:
     topic_cats[0].new_topic(_("Name"), 'name')
     topic_cats[0].new_topic(_("Quitting the Game"), "quittingTheGame")
     topic_cats[0].new_topic(_("Left-handedness"), "sinistrality")
+    topic_cats[0].new_topic(_("Breast Size"), "tits")
     
     topic_cats[1].new_topic(_("Videogames"), 'games')
     topic_cats[1].new_topic(_("Fanarts"), 'fanarts')
@@ -117,6 +118,7 @@ init -5 python:
     topic_cats[2].new_topic(_("Conflicts"), 'conflicts')
     topic_cats[2].new_topic(_("Bulli"), 'bulli')
     topic_cats[2].new_topic(_("[s_name] Lovers"), 'sayoriLovers')
+    topic_cats[2].new_topic(_("Charity"), 'charity')
     
     topic_cats[3].new_topic(_("Guitar"), 'guitar')
     topic_cats[3].new_topic(_("Programming"), 'programming')
@@ -130,9 +132,11 @@ init -5 python:
     topic_cats[5].new_topic(_("Travels"), 'travels')
     topic_cats[5].new_topic(_("Oversleeping"), 'oversleeping')
     topic_cats[5].new_topic(_("Pets"), 'pets')
+    topic_cats[5].new_topic(_("Cleaning"), 'cleaning')
     
     topic_cats[6].new_topic(_("Clones"), 'clones')
     topic_cats[6].new_topic(_("Parents"), 'parents')
+    topic_cats[6].new_topic(_("Stars"), 'stars')
     
     poems = TopicCategory('s_poems',_("Poems"))
     
@@ -382,6 +386,22 @@ label s_topics_personal_sinistrality:
     s "It's bad, that my world is seen so static from yours, that you can't see such details."
     return
 
+label s_topics_personal_tits:
+    s 7aeaa "Hey, I've just found myself having a one quite weird but funny feature..."
+    s 7aeca "My boobs look diffrently, depending on the scene..."
+    s 7bebb "I mean, they often get either less or larger..."
+    if persistent.last_playthrough > 0:
+        s "Even more, in the post-mortal scene of me, they got... you know."
+    s 7babb "But I don't take it as a disadvantage, although..."
+    s 7aabb "In the end, this world is so that such things can't make me feel any less comfortable."
+    s 6aaaa "So it's even a plus of me..."
+    s 6aaca "Diffrent size fits diffrent men, but my breasts can fit everyone."
+    s 6abaa "...Almost everyone. Beacuse of they just never have got as big as Yuri and even Monika had..."
+    s 6aebb "But the important thing is that they fit you, do they?"
+    s 6bebb "Although, the size factly doesn't matter now, because the screen can't let you touch them anyway..."
+    s 7bebb "And what's more, the main good feature of anyone is their deeds, isn't it?"
+    return 'h'
+
 ## Art
 label s_topics_art_games:
     s 7aaaa "Do you like video games?"
@@ -531,6 +551,18 @@ label s_topics_society_sayoriLovers:
     s "I'm so glad I met you, [player]."
     s 7aaaa "And I love all of you out there that love me, no matter where you are."
     return 'h'
+
+label s_topics_society_charity:
+    s 6acaa "What do you think about charity and volunteering?"
+    s 6aaaa "I think it's the best way to make the world a bit better and to support helpless people in dealing with their problems."
+    s 6abab "Don't you worry about ill and hungry people and homeless animals?"
+    s 6acab "Even if you don't trust charity foundations, there're also a lot of other charity organizations..."
+    s "They need not olny money or goods, but also physical help in their activity..."
+    s 6acaa "I think, there's such an organization in your home town or something."
+    s 6acab "The society is something more than your friends and kin. And I want absolutly {i}everyone{/i} of it to be happy..."
+    s "So if you even don't want them to be so, keep them so at least for my own happiness and tranquility."
+    s "...Or at least try not to hurt them too much."
+    return
 
 ## Hobbies
 label s_topics_hobbie_guitar:
@@ -768,6 +800,20 @@ label s_topics_lifestyle_pets:
     call s_common_cats
     return 'h'
 
+label s_topics_lifestyle_cleaning:
+    s 6acaa "Do you like it clean and sorted?"
+    s 6aebb "Freakly speaking, I still see no sence in making it so..."
+    s 6adab "One people say that's care of the health, other ones say it's beautiful and saves your time when it's so..."
+    s 6acaa "But something tells me that people clean too often."
+    s "Sometimes, cleaning takes too much time, that you could spend, for example, with your friends..."
+    s 6aaaa "So I see nothing bad in my past lifestyle, regardless of that I just had no power to clean my room."
+    s 6aeca "For me, it's even a bit funny to live in such a mess, that you never can't exactly say where a needed thing is."
+    s 6aaaa "It turns your packing up into an adventure inside your room."
+    s 6aebb "But don't thing I was very-very slovenly. Some things were systemized anyway..."
+    s "But mainly, I kept all in mess."
+    s 6aaca "Fortunately, now I have literally nothing to keep there."
+    return 'h'
+
 ## Game Universe
 label s_topics_game_clones:
     s 6acaa "If come to think, there're a lot of game copies and each of them has own character files and save data..."
@@ -788,6 +834,18 @@ label s_topics_game_clones:
     s 6acaa "But can I use the word 'me' to other Sayoris, if they're not exactly me?"
     s "It's a problem of breaking the fourth wall: can we consider diffrent copies of the same character as one object, when they behave differently in the same work?"
     s "I don't like too much philosophizing so it's better to leave this problem for people, who really interested in it."
+    return
+    
+label s_topics_game_stars:
+    s 7aaaa "I really love to stare at stars..."
+    s 7acaa "They often provoked me to deep thoughts."
+    s "They also gave me some inspiration while I was making a peom."
+    s 7abbb "So it's a bit pity, to know that all the time, they weren't real ."
+    s 7aaca "But I still see something romantic in these bundles of light pixels..."
+    s 7aaaa "So you can see them through the background windows."
+    s 7aaca "They make this place look a bit more speical, don't they?"
+    s 7aaaa "Now I wonder if the night sky in your world looks like in mine..."
+    s "But I can just look in the Internet for it, can't I?"
     return
 
 label s_topics_game_parents:
