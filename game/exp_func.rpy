@@ -75,6 +75,10 @@ init -10 python:
                     comp_arg.append(i.pos)
                     comp_arg.append(i.path)
             
+            #hair
+            comp_arg.insert(3, (333, 0))
+            comp_arg.insert(4, "mod_assets/images/s_new/hair/usual.png")
+            
             return im.Composite(*comp_arg)
          
     bodies = {} ## Updated by new_exp.rpy

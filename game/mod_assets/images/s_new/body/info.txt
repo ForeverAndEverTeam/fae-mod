@@ -12,7 +12,7 @@
 6.png    (0, 0)    (1020, 703)    b_b@6
 ## Right fist on a cheek (original pose)
 7.png    (0, 0)    (1020, 703)    b_b@7
-7_rf.png    (390, 283)    (83, 116)    b_f@7
+7_rf.png    (390, 270)    (83, 129)    b_f@7
 ## Finger-to-finger (like standing pos #5)
 8.png    (0, 0)    (1020, 703)    b_b@8
 8_fgs.png    (492, 363)    (90, 46)    b_f@8
