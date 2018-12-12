@@ -43,5 +43,6 @@ for file in file_list:
     except IOError:
         print("File not found: " + file)
 
+exp = sorted(exp)
 with open('exp.txt', 'w') as output:
     output.write('\n'.join(exp))
