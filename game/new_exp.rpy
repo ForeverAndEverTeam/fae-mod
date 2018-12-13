@@ -1,7 +1,7 @@
 init -9 python:
     #Bodies
     bodies['6'] = Body(SpriteInfo(0, '6', (0, 0), (1020, 703))) ## Folded Arms
-    bodies['7'] = Body(SpriteInfo(0, '7', (0, 0), (1020, 703)), (SpriteInfo(0, "7_rf", (390, 283), (83, 116)),))## Right fist on a cheek (original pose)
+    bodies['7'] = Body(SpriteInfo(0, '7', (0, 0), (1020, 703)), (SpriteInfo(0, "7_rf", (390, 270), (83, 129)),))## Right fist on a cheek (original pose)
     bodies['8'] = Body(SpriteInfo(0, '8', (0, 0), (1020, 703)), (SpriteInfo(0, "8_fgs", (492, 363), (90, 46)),))## Finger-to-finger (like standing pos #5)
     bodies['9'] = Body(SpriteInfo(0, '9', (0, 0), (1020, 703))) ## Finger up
     
@@ -35,3 +35,7 @@ init -9 python:
     exp_codes[3]['a'] = SpriteInfo(4, 'a', (473, 225), (182, 24))##  Normal eyebrows
     exp_codes[3]['b'] = SpriteInfo(4, 'b', (477, 219), (176, 26))##  Upset eyebrows
     exp_codes[3]['c'] = SpriteInfo(4, 'c', (486, 246), (162, 12))##  Frowning eyebrows
+    
+    #Hair styles
+    CUSTOM_TEMPLATES['hair']['usual'] = (SpriteInfo('hair', 'usual', (333, 0), paths = CUSTOM_PATHS), _('Usual hair'))
+    CUSTOM_TEMPLATES['hair']['santa'] = (SpriteInfo('hair', 'santa_hat', (333, 0), paths = CUSTOM_PATHS), _('Santa hat'))
