@@ -38,4 +38,4 @@ init -9 python:
     
     #Hair styles
     CUSTOM_TEMPLATES['hair']['usual'] = (SpriteInfo('hair', 'usual', (333, 0), paths = CUSTOM_PATHS), _('Usual hair'))
-    CUSTOM_TEMPLATES['hair']['santa'] = (SpriteInfo('hair', 'santa_hat', (333, 0), paths = CUSTOM_PATHS), _('Santa hat'))
+    CUSTOM_TEMPLATES['hair']['santa'] = (SpriteInfo('hair', 'santa_hat', (333, -74), paths = CUSTOM_PATHS), _('Santa hat'))

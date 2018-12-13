@@ -1,5 +1,6 @@
 init -10 python:
     bg_day = False #Changed by '01bg.rpy', if the current BG has day/high light
+    s_ypos = 0
     
     if not persistent.customization:
         persistent.customization = {
@@ -87,37 +88,50 @@ init -10 python:
             self.front.append(sprite)
         
         def get_composite(self, exp_code = "", custom_dict = {}, day = False):
-            comp_arg = [self.back.size, self.back.pos, self.back.path]
-            if day:
-                comp_arg[2] = self.back.path_day
+            global s_ypos
             
-            for i in range(len(exp_code)):
-                exp = exp_codes[i][exp_code[i]]
-                if len(exp.path):
-                    comp_arg.append(exp.pos)
-                    if day:
-                        comp_arg.append(exp.path_day)
-                    else:
-                        comp_arg.append(exp.path)
-            for i in self.front:
-                if len(i.path):
-                    comp_arg.append(i.pos)
-                    if day:
-                        comp_arg.append(i.path_day)
-                    else:
-                        comp_arg.append(i.path)
+            comp_arg = [(self.back.size[0], 720), self.back.pos, self.back.path]
+            offset = list(self.back.pos)
             
             #hair
             hair = get_custom('hair', custom_dict.get('hair'))
             
             if hair:
                 hair = hair[0]
-                comp_arg.insert(3, hair.pos) #(333, 0)
-                if day:
-                    comp_arg.insert(4, hair.path_day)
-                else:
-                    comp_arg.insert(4, hair.path)
+                if hair.pos[1] < offset[1]:
+                    offset[1] = -hair.pos[1]
             
+            if day:
+                comp_arg[2] = self.back.path_day
+            
+            if hair:
+                comp_arg.append((hair.pos[0], 0))
+                if day:
+                    comp_arg.append(hair.path_day)
+                else:
+                    comp_arg.append(hair.path)
+            
+            for i in range(len(exp_code)):
+                exp = exp_codes[i][exp_code[i]]
+                if len(exp.path):
+                    pos = (exp.pos[0] + offset[0], exp.pos[1] + offset[1])
+                    comp_arg.append(pos)
+                    if day:
+                        comp_arg.append(exp.path_day)
+                    else:
+                        comp_arg.append(exp.path)
+            for i in self.front:
+                if len(i.path):
+                    pos = (i.pos[0] + offset[0], i.pos[1] + offset[1])
+                    comp_arg.append(pos)
+                    if day:
+                        comp_arg.append(i.path_day)
+                    else:
+                        comp_arg.append(i.path)
+            
+            comp_arg[0] = (comp_arg[0][0] + offset[0], comp_arg[0][1] + offset[1])
+            comp_arg[1] = (comp_arg[1][0] + offset[0], comp_arg[1][1] + offset[1])
+            s_ypos = -offset[1]
             return im.Composite(*comp_arg)
         
         def dyn_d(self, exp):
