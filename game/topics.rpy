@@ -818,15 +818,15 @@ label s_topics_lifestyle_pets:
 
 label s_topics_lifestyle_cleaning:
     s 6acaa "Do you like it clean and sorted?"
-    s 6aebb "Freakly speaking, I still see no sence in making it so..."
+    s 6aebb "Freakly speaking, I still see no reason to keep it so..."
     s 6adab "One people say that's care of the health, other ones say it's beautiful and saves your time when it's so..."
     s 6acaa "But something tells me that people clean too often."
-    s "Sometimes, cleaning takes too much time, that you could spend, for example, with your friends..."
+    s "Sometimes, cleaning takes so much time, that you could spend, for example, with your friends..."
     s 6aaaa "So I see nothing bad in my past lifestyle, regardless of that I just had no power to clean my room."
     s 6aeca "For me, it's even a bit funny to live in such a mess, that you never can't exactly say where a needed thing is."
     s 6aaaa "It turns your packing up into an adventure inside your room."
     s 6aebb "But don't thing I was very-very slovenly. Some things were systemized anyway..."
-    s "But mainly, I kept all in mess."
+    s "But mainly, I kept everything in mess."
     s 6aaca "Fortunately, now I have literally nothing to keep there."
     return 'h'
 
