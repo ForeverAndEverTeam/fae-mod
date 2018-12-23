@@ -36,6 +36,13 @@ init -10 python:
         """
         if day:
             file += "_d"
+            path = "%s/%s/%s.png" % (MOD_IMAGES_PATH, paths[part], file)
+            try:
+                f = renpy.file(path)
+                f.close()
+                return path
+            except:
+                file = file[:-2]
         return "%s/%s/%s.png" % (MOD_IMAGES_PATH, paths[part], file)
     
     def l_range(t, *args):
@@ -72,12 +79,14 @@ init -10 python:
     exp_codes = [{}, {}, {}, {}] ## Updated by sprites.rpy
     
     CUSTOM_TEMPLATES = {
-        'hair': {}
+        'hair': {},
+        'hair_front': {},
+        'hair_back': {}
     }
     
     def get_custom(t, name):
         if not (t is None or name is None):
-            return CUSTOM_TEMPLATES[t][name]
+            return CUSTOM_TEMPLATES[t].get(name)
     
     class Body:
         def __init__(self, back, front = None):
@@ -95,21 +104,19 @@ init -10 python:
             
             #hair
             hair = get_custom('hair', custom_dict.get('hair'))
+            hair_front = get_custom('hair_front', custom_dict.get('hair'))
+            hair_back = get_custom('hair_back', custom_dict.get('hair'))
+            hair_layers = [hair_back, hair, hair_front]
             
-            if hair:
-                hair = hair[0]
-                if hair.pos[1] < offset[1]:
-                    offset[1] = -hair.pos[1]
+            for h in hair_layers:
+                if h:
+                    h = h[0]
+                    if h.pos[1] < offset[1]:
+                        offset[1] = -h.pos[1]
             
             if day:
                 comp_arg[2] = self.back.path_day
             
-            if hair:
-                comp_arg.append((hair.pos[0], 0))
-                if day:
-                    comp_arg.append(hair.path_day)
-                else:
-                    comp_arg.append(hair.path)
             
             for i in range(len(exp_code)):
                 exp = exp_codes[i][exp_code[i]]
@@ -128,6 +135,25 @@ init -10 python:
                         comp_arg.append(i.path_day)
                     else:
                         comp_arg.append(i.path)
+            
+            for i in range(2):
+                if hair_layers[i]:
+                    h = hair_layers[i][0]
+                    comp_arg.insert(1 + i * 2, (h.pos[0], 0))
+                    if day:
+                        comp_arg.insert((1 + i) * 2, h.path_day)
+                    else:
+                        comp_arg.insert((1 + i) * 2, h.path)
+            
+            if hair_front:
+                last = len(comp_arg)
+                last -= len(self.front)
+                
+                comp_arg.insert(last - 1, (hair_front.pos[0], 0))
+                if day:
+                    comp_arg.insert(last, hair_front.path_day)
+                else:
+                    comp_arg.insert(last, hair_front.path)
             
             comp_arg[0] = (comp_arg[0][0] + offset[0], comp_arg[0][1] + offset[1])
             comp_arg[1] = (comp_arg[1][0] + offset[0], comp_arg[1][1] + offset[1])
