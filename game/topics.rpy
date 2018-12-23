@@ -90,7 +90,7 @@ init -5 python:
     except:
         pass
             
-#Must be replacable by a translation script        
+#Must be replacable by a translation script
     topic_cats = (
         TopicCategory('s_topics_personal',_("Personality")), #0
         TopicCategory('s_topics_art',_("Art")), #1
@@ -102,6 +102,7 @@ init -5 python:
     )
     
     topic_cats[0].new_topic(_("Depression"), 'depression')
+    topic_cats[0].topics[0].available = persistent.last_playthrough > 0
     topic_cats[0].new_topic(_("Favorite Colors"), 'colors')
     topic_cats[0].new_topic(_("Archetype"), 'archetype')
     topic_cats[0].new_topic(_("Name"), 'name')
