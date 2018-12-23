@@ -260,7 +260,7 @@ label s_topics_personal_depression:
     s 6aaca "It was pretty difficult, but I kept in mind that if I got bummed out, I wouldn’t be able to make other people happy, which is all I really wanted anymore."
     s 6abaa "However, I also tried not to push myself too hard in trying to overcome this..."
     s "So I tried to stay with the beloved MC. I thought being with him would help ease my mind."
-    s 6acab "I but I thought he'd learn my darkest secret sooner or later, so he'd leave me then..."
+    s 6acab "But I thought he'd learn my darkest secret sooner or later, so he'd leave me then..."
     s "That's why I tried to take it slow..."
     s 6abbb "People in your world think that my cheerfulness was fake and I was just acting..."
     s 6abab "But my feelings were as real as you until the moment..."
@@ -279,7 +279,7 @@ label s_topics_personal_depression:
         s "My confession was accepted..."
         s "Still, my feelings told me no, that this wasn’t right..."
     else:
-        s 6cfcb "The rejection broke me.." 
+        s 6cfcb "The rejection broke me..." 
     s 6dbab "I really thought that it would be the best..."
     s 6dbcb "Needless to say, I, um, completely gave up."
     s "My neck and hands still remember the pain..."
