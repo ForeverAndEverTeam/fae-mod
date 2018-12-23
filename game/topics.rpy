@@ -486,6 +486,42 @@ label s_topics_art_lit:
     s 6adbc "What’s that? 'Reddit'? Is it what need?"
     s 6adba "The club has a page there?"
     return
+    
+
+## Society
+label s_topics_society_conflicts:
+    show sayori 6abaa at ss1 zorder 2
+    s "The more I learn about your world, the more surprised I get."
+    s "You still have a lot of silly conflicts despite how far you've come as a society..."
+    s "Why people can't just unite to resolve their common problems?"
+    s 6acab "Yes, they do on a limited scale, but usually only into several 'sub-groups' that still have different opinions and solutions."
+    s "And these group often fight each other for power instead of deciding the problems."
+    s "In addition, these groups often are so unstable that they can easily divide into smaller groups, hating each other."
+    s "They do it for reasons far more silly than the problems."
+    s "You know, Monika told me something funny once, back from when she had just left the debating club."
+    s "'The strongest argument against democracy is a five minute conversation with the average person.'"
+    s "I think it's a pretty fair point to make, all things considered."
+    s "While collaboration is great, somethimes you just need someone to step in so everyone can see the problem clearly."
+    s "I think the literature club was a perfect example of it."
+    s 6acaa "Remember the poem style arguments between Yuri and Natsuki?"
+    s "There wasn't really any problem between the two poems; both of them were just convinced that they were writing the 'correct' way."
+    s "When I said they were both right, it wasn't a lie. Neither of them had done anything wrong, they just needed a third party to remind them that it wasn't a competition."
+    if persistent.last_playthrough > 2:
+        s 6abab "But when I was... gone, they didn't have someone who could help them see clearly, so they both went way too far."
+        s "Monika is a great debator, but she struggled when there was no easy way to decide how to handle the problem 'legally'."
+        s "...And she wanted to keep the game from crashing since I couldn't step in."
+        s 6aaca "Anyway, the agrument didn't really change the club..."
+        s 6abbb "But if Monika didn't take the two of you outside with her abilities, I hate to think what might have happened..."
+    if persistent.last_playthrough == 4:
+        s 6abaa "Do you remember the day of the 'ending'?"
+        s "I just gave both of them advice to learn more about each other's favorite kind of literature. Walking a mile in someone else's shoes, and all that."
+        s 6acaa "I might have stopped them from fighting at all by coming at the problem that way..."
+        s "Unfortunately, I'll never know for sure."
+        s 7aaca "Those sorts of moments were why Monika made me the Vice President."
+        s "I always tried to make my friends happy, and see that they had no real reason to be fighting at all."
+    s 7aaaa "And I hope you can be that person for others in your world."
+    s "At some level, there's always a bit of common ground for people to agree on..."
+    return 'h'
 
 label s_topics_society_bulli:
     s 6acab "Hey, be honest with me..."
