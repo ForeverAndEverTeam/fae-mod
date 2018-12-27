@@ -146,14 +146,20 @@ init -10 python:
                         comp_arg.insert((1 + i) * 2, h.path)
             
             if hair_front:
-                last = len(comp_arg)
-                last -= len(self.front)
-                
-                comp_arg.insert(last - 1, (hair_front.pos[0], 0))
-                if day:
-                    comp_arg.insert(last, hair_front.path_day)
+                last = 0
+                if len(self.front):
+                    last = len(comp_arg) - 3
+                    last -= len(self.front)
                 else:
-                    comp_arg.insert(last, hair_front.path)
+                    last = len(comp_arg)
+                
+                hair_front = hair_front[0]
+                
+                comp_arg.insert(last, (hair_front.pos[0], 0))
+                if day:
+                    comp_arg.insert(last + 1, hair_front.path_day)
+                else:
+                    comp_arg.insert(last + 1, hair_front.path)
             
             comp_arg[0] = (comp_arg[0][0] + offset[0], comp_arg[0][1] + offset[1])
             comp_arg[1] = (comp_arg[1][0] + offset[0], comp_arg[1][1] + offset[1])

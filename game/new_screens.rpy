@@ -53,7 +53,7 @@ screen talk_ui():
         textbutton _("Ask a question") keysym '1' action Function(renpy.call, "s_topicmenu", 0, 0)
         textbutton _("Repeat conversation") keysym '2' action Function(renpy.call, "s_topicmenu", 1, 1)
         textbutton _("I feel...") keysym '3' action Function(renpy.call, "s_topicmenu", 2)
-        textbutton _("Ask for help...") keysym '4' action Function(renpy.call, "s_topicmenu", 4)
+        textbutton _("Ask for...") keysym '4' action Function(renpy.call, "s_topicmenu", 4)
         textbutton _("Say goodbye") keysym '5' action Jump("s_farewell")
         textbutton _("Change information") keysym '6' action Function(renpy.call, "s_pinfo", True)
         if config.developer:
@@ -137,6 +137,7 @@ screen topic_ui(ss, cat = 0): #0 = questions, 1 = repeat, 2= feelings, 3 = poetr
             textbutton _("Back") action [Hide("topic_ui"), Jump("s_talkmenu")]
         elif subscreen == 4:
             textbutton _("Open a website") action [Function(renpy.call, "s_assistant_askUrl")]
+            textbutton _("Change appearance") action [Function(renpy.call, "s_customizationmenu")]
             textbutton _("Back") action [Hide("topic_ui"), Jump("s_talkmenu")]
         else:
             if cat == 1:
@@ -214,6 +215,64 @@ screen pinfo_ui(): #Player info screen
             
         textbutton _("OK") xpadding 0 xsize 150 xalign 0.5 action [Return(bdate), SensitiveIf(len(player))]
 
+screen customize_ui():
+    default cur_hair = 0
+    default processed = False
+    
+    if not processed:
+        python:
+            cl = {
+                'hair': CUSTOM_TEMPLATES['hair']
+            }
+            
+            nl = {}
+            
+            for i in cl:
+                li = cl[i]
+                if type(cl[i]) != dict:
+                    li = li[0]
+                L = []
+                v = li.values()
+                k = li.keys()
+                for j in range(len(v)):
+                    L.append(k[j])
+                    if k[j] == persistent.customization[i]:
+                        SetScreenVariable("cur_" + i, j)()
+                nl[i] = L
+                    
+                SetScreenVariable("cl", nl)()
+                SetScreenVariable("processed", True)()
+                
+                
+            def set_custom(l, t, i):
+                persistent.customization[t] = l[t][i]
+                SetScreenVariable("cur_" + t, i)()
+            
+            lens = {
+                'hair': len(cl['hair'])
+            }
+            
+    
+    textbutton "<" action Function(set_custom, cl, 'hair', (cur_hair - 1) if cur_hair > 0 else (lens['hair'] - 1)):
+        style "choice_button"
+        anchor (0.5, 0.5)
+        xpadding 0
+        xsize 42
+        ycenter 0.15
+        xalign 0.1
+    textbutton ">" action Function(set_custom, cl, 'hair', (cur_hair + 1) % lens['hair']):
+        style "choice_button"
+        anchor (0.5, 0.5)
+        xpadding 0
+        xsize 42
+        ycenter 0.15
+        xalign 0.9
+    
+    textbutton "OK!" action Return():
+        style "choice_button"
+        xcenter 0.5
+        yalign 0.95
+
 screen feat_ui():
     style_prefix "choice"
     
@@ -257,6 +316,12 @@ label s_gamemenu():
     call screen minigame_ui() nopredict
     jump s_loop
 
+label s_customizationmenu():
+    $show_s_mood(ss1, False)
+    hide screen feat_ui
+    hide screen talk_ui
+    call screen customize_ui()
+    jump s_loop
 
 label s_pinfo(jump_to_s_loop = False):
     $show_s_mood(ss2, True)
