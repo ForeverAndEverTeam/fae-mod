@@ -254,8 +254,8 @@ Is but a barren wasteland!"""
     
     poem_flower.text['epo'] = """\Inter miaj gamboj
 La resta floro estas kaj min loĝas.
-Mi kaptas l' tigon kaj de la radik' ĝin liberigas,
-Kaj la lastan gajan momenton mi per miaj fingroj karesas.
+Mi kaptas ĝian tigon kaj de l' radik' ĝin liberigas,
+Kaj la lastan gajijan momenton mi per miaj fingroj karesas.
 
 Sed kiel longe mi tenu la gajon?
 Nun, mi rigardante al io ajn,
@@ -264,14 +264,14 @@ Kiu estas dezerta kaj jam ankaŭ malviva."""
 
     poem_flower.text['rus'] = """\
 Передо мной красуется последний цветок,
-Своим внешним видом меня манит он.
+Своим внешним видом он меня манит.
 Возьму-ка за стебель и вырву с корнём,
 Посмотрев на него, как на последний радости огонёк.
 
-Что же теперь?
-Куда я не взгляну,
+Что же теперь, как мне долго этим огоньком любваться?
+Ведь теперь нету смысла, куда не взгляну,
 Мне видно лишь пустое выжженное поле,
-В котором стою я одна."""
+Которым мне только со слезами любоваться."""
     
 #Get Out of My Head (aka %)
     poem_last = Poem(
@@ -318,7 +318,7 @@ Bonvolu foriĝi el mia cerbaĉo ĝis mi faros tion, kion konsilis al mi ŝi.
 Bonvolu foriĝi el mia cerbaĉo ĝis mi montros al vi, kiel amas mi vin.
 Bonvolu foriĝi el mia cerbaĉo ĝis mi finos ĉi tiun aĉan versaĵon.\n\n\n\n\n\n\n
 Sed ĝi fakte neniam finiĝos.
-Ĝi nur haltos kun mi baldaŭ.'''
+Ĝi nur haltos kun mi por eterne baldaŭ.'''
     
 #Fruits of the life (by AlexanDDOS)
     poem_fruits = Poem(
@@ -333,17 +333,17 @@ Because of each feel them in their own way.
 One people feel them always bitter,
 Some of them, even if the fruit is of the best.
 Another ones feel them sweet and very tasty,
-Whatever fruits they have got.
+Whatever fruits they have got in their hands.
 
-For me, they have the taste of liquorice.
+For me, they have the taste of liquorice sweets.
 I needed time to understand how sweet they are,
 To get rid of those unpleasant feelings,
-Which I had got after the first bites.
+Which I had got after my first bites.
 
 Now all I want is just to eat my own fruit
-With the person, who helped me catch the real taste.
+With the person, who helped me to catch the real taste.
 But I should not forget to do my real job here:
-To find a way to make others feel the fruits sweet.'''
+To find a way to make others feel the fruits the same.'''
     )
 
     poem_fruits.title["rus"] = "Плоды древа жизни"
@@ -388,7 +388,7 @@ Helpi dolĉigi fruktojn de aliaj homoj."""
 Сейчас хочу я просто есть свой плод
 С тем, кто мне сладость ту помог понять.
 Но всё же стоит долг мне помнить:
-Плодам чужим я сладости должна давать."""
+Плодам чужим я сладости должна также давать."""
 
 #Hatred (by AlexanDDOS)
     poem_hatred = Poem(
@@ -421,7 +421,7 @@ You just see nothing in the eyes of the dead past me."""
 За что я вами нелюбима?
 За то, что от своих проблем я до последнего скрывалась?
 За что я вами нелюбима?
-За то, что я то слишком глупой, я слишком хитрой я казалась?
+За то, что я то слишком глупой, то слишком хитрой я казалась?
 
 За что я вами нелюбима?
 За апатичную неуклюжось?
@@ -520,8 +520,8 @@ Is it not what you want to do with me after all?"""
 
 Сотри мой файл ещё ты дважды.
 Избей меня за этот грех и четвертуй.
-Повесь меня, выбей мои зубы
-За то, что натварила я, дорогой."""
+Повесь меня, выбей мои за зубы зубы,
+За то, что я натварила, дорогой."""
 
     poem_angel.text['epo'] = """\
 Pardonu min pro la plej ega pek' de mi.
@@ -578,8 +578,8 @@ And feel its rough dark-grey surface.
 
 It's all. It is my end. 
 I'll rot even without giving any flower
-At least some mine power
-To continue its so meaningful existance in this world.
+At least some power of dying me
+To continue its meaningful existance in this hard world.
 
 But what is that? Is it a brand new wind
 That will make my life poem moving again?
@@ -603,8 +603,8 @@ Like I can be more than just a half-dead leaf."""
 
 Лечу вперёд, но постепенно вниз
 Под тяжестью непредсказуемого бытья.
-Но вдруг порыв, ержавший меня за низ,
-Спал, уравнив меня.
+Но вдруг порыв, державший меня за низ,
+Спал, быстро уравнив меня.
 
 И вот я падую на асфальт,
 Целую его тёмно-серую поверхность.
@@ -612,14 +612,14 @@ Like I can be more than just a half-dead leaf."""
 Я сгину, так и не сделав для какого-то цветка полезность.
 
 Но вдруг внезапно ветер новый
-Меня ввысь с лёгкостью поднял,
+Меня с лёгкостью поднял ввысь,
 Давая напрвление и энергии новой
-Для жизни и жизни моего стиха.
+Для жизни мне, и чтоб мне написать новую рукопись.
 
 Теперь я чувствую себя гордой птицей
 Той, что летает где-то высоко в горах.
 Такое просто не могло мне сниться
-Не вижу впредь себя в тёмных тонах."""
+Не вижу впредь себя в гниющего листа тонах."""
     
     poem_leaf.text['epo'] = """\
 Mi estas nur enventa foliaĉo,
@@ -663,7 +663,7 @@ Pli ol preskaŭ morta arbfoli'."""
     text = """\
 I am black light. I am cold fire. \
 I'm a peaceful fighter. I'm a naive wise man. \
-why people think, that opposites can't be together in the same thing? \
+Why people think, that opposites can't be together in the same thing? \
 Can't they all see, that everything and everyone is only grey? \
 Even this text is both a prose and poem. \
 Even I used to be a mix of joy and crippling sadness. \
