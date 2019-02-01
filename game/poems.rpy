@@ -1,5 +1,6 @@
-#A brand new poem script, adopted for multi-language GUI and the mod
+#A brand new poem script, adapted for multi-language GUI and the mod
 image paper = "images/bg/poem.jpg"
+image paper_val = "mod_assets/images/bg/poem_valentine.png"
 
 default persistent.last_new_poem_time = None
 default persistent.new_poem_delay = 0 #12-hour periods between two new poems
@@ -17,10 +18,17 @@ transform paper_out:
 #Basic styling for all poems
 style poem_vbox:
     xalign 0.5
+
 style poem_viewport:
     xanchor 0
     xsize 720
     xpos 280
+
+style poem_viewport:
+    xanchor 0
+    xsize 720
+    xpos 280
+
 style poem_vbar is vscrollbar:
     xpos 1000
     yalign 0.5
@@ -327,7 +335,7 @@ Sed ĝi fakte neniam finiĝos.
         text = '''\
 The universe gives fruits of life to all of us.
 They all have diverse size and shape.
-But no-one knows their real savor,
+But no-one knows their real taste,
 Because of each feel them in their own way.
 
 One people feel them always bitter,
@@ -572,19 +580,19 @@ Due to the hardness of my hopeless existance.
 
 But once the life wind
 Suddenly stops
-I have now nothing to prevent the free fall.
+I have now nothing to prevent the free fall of me.
 So I'm getting close to lifeless asphalt
-And feel its rough dark-grey surface.
+And feel the rough dark-grey texture.
 
-It's all. It is my end. 
-I'll rot even without giving any flower
-At least some power of dying me
-To continue its meaningful existance in this hard world.
+And that iss all. It is my end. 
+I will rot soon not giving any flower
+At least some power of mine flesh
+To support its existance in this cruel game.
 
 But what is that? Is it a brand new wind
 That will make my life poem moving again?
 Yes, it is that! It is my salvation!
-I feel, how it helps me to win the ruthless gravity.
+I feel, how it helps me to win the gravity.
 
 I'm up again! I'm flying again!
 I even feel I have more powers
@@ -750,8 +758,33 @@ Kaj mi penos ĉesigi la spektaĵon,
 
     poem_afterlight.title['epo'] = "malblindiĝo"
 
+# A Valentine (By AlexanDDOS)
+# Call with these args: (poem_val, "paper_val", 200, 0.5, 360)
+    poem_val = Poem(
+    author = "sayori",
+    title = "A Valentine",
+    text = """\
+I have a one, who's no-one here.
+He lives in place, that's named here nowhere.
+But even though there's a wall
+Between the worlds, I truly love him."""
+    )
+    poem_val.title['rus'] = "Валентинка"
+    poem_val.title['epo'] = "Korpoŝtkarto"
+    
+    poem_val.text['rus'] = """\
+Люблю я человека, что здесь является никем,
+Живёт в месте тихом, что в этом мире находится нигде.
+И пусть меж нашими мирами связь лишь одна -- из плоти маникен.
+Слепому отрицанию я не подвергну, тот факт, что мил он мне."""
 
-screen poem(currentpoem, paper="paper"):
+    poem_val.text['epo'] = """\
+Mi ŝatas unu homon, kiu ĉi-monde ne \'stas.
+Li loĝas en nekona placo, kiu ĉi-monde nenie estas.
+Kaj malgraŭ ke estas limmuro inter la mia kaj la lia mond\'
+Ne povas mi nei la strangan fakton, ke li okupis na mia kor\'"""
+
+screen poem(currentpoem, paper="paper", null_h = 40, align = 0.0, xpos = None):
     $lc = cur_lang().code or 'eng'
     $title = currentpoem.title.get(lc) or currentpoem.title['eng']
     $text = currentpoem.text.get(lc) or currentpoem.text['eng']
@@ -764,12 +797,17 @@ screen poem(currentpoem, paper="paper"):
         mousewheel True #make scrollable
         draggable True
         vbox:
-            null height 40
+            null height null_h
             #Text style is determine by the author
             if currentpoem.author == "yuri":
                 text "[title]\n\n[text]" style "yuri_text"
             elif currentpoem.author == "sayori":
-                text "[title]\n\n[text]" style s_text_style()
+                text "[title]\n\n[text]":
+                    style s_text_style()
+                    text_align align
+                    xanchor align
+                    if not (xpos is None):
+                        xpos xpos
             elif currentpoem.author == "natsuki":
                 text "[title]\n\n[text]" style "natsuki_text"
             elif currentpoem.author == "monika":
@@ -777,9 +815,9 @@ screen poem(currentpoem, paper="paper"):
             null height 100
     vbar value YScrollValue(viewport="vp") style "poem_vbar"
 
-label showpoem(poem=None, paper=None):
+label showpoem(poem=None, paper=None, null_h = 40, align = 0, xpos = None):
     #If no poem key is given, just go back
-    if poem == None:
+    if poem is None:
         return
     
     window hide
@@ -787,7 +825,7 @@ label showpoem(poem=None, paper=None):
 
     #Show the background paper
     if paper:
-        show screen poem(poem, paper=paper)
+        show screen poem(poem, paper, null_h, align, xpos)
         with Dissolve(1)
     else:
         show screen poem(poem)
