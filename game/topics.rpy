@@ -126,7 +126,8 @@ init -5 python:
         TopicCategory('s_topics_hobbie',_("Hobbies")), #3
         TopicCategory('s_topics_rlt',_("Relationship")), #4
         TopicCategory('s_topics_lifestyle',_("Lifestyle")), #5
-        TopicCategory('s_topics_game',_("Game Universe")) #6
+        TopicCategory('s_topics_game',_("Game Universe")), #6
+        TopicCategory('s_topics_game',_("Food")) #7
     )
     
     topic_cats[0].new_topic(_("Depression"), 'depression')
@@ -171,6 +172,11 @@ init -5 python:
     topic_cats[6].new_topic(_("Parents"), 'parents')
     topic_cats[6].new_topic(_("Stars"), 'stars')
     topic_cats[6].new_topic(_("In-game Time"), 'time')
+    
+    topic_cats[7].new_topic(_("Ice Cream"), 'iceCream')
+    topic_cats[7].new_topic(_("Cinnamon Bun"), 'cinnamonBun')
+    topic_cats[7].new_topic(_("Cupcakes"), 'cupcakes')
+    topic_cats[7].new_topic(_("Breakfast"), 'breakfest') #Save this typo here and below not to make me edit the mod translations
     
     poems = TopicCategory('s_poems',_("Poems"))
     
