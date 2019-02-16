@@ -398,71 +398,6 @@ Helpi dolĉigi fruktojn de aliaj homoj."""
 Но всё же стоит долг мне помнить:
 Плодам чужим я сладости должна также давать."""
 
-#Hatred (by AlexanDDOS)
-    poem_hatred = Poem(
-        author = "sayori",
-        title = "Hatred",
-        text = """\
-Why do you hate me?
-Is it beacuse I hide my problems to be solved?
-Why do you hate me?
-Is it beacuse I seemed silly and then cunning?
-
-Why do you hate me?
-Is it beacuse I was too clumsy due to my endless apathy?
-Why do you hate me?
-Is it beacuse I am too colorful for your pale society?
-
-Why do you hate me?
-Is it beacuse you can love anyone but a hanging girl?
-Why do you hate me?
-Is it beacuse you like anything large but large kindly heart?
-
-No, I seem to know, why you all hate me.
-You just see nothing in the eyes of the dead past me."""
-    )
-
-    poem_hatred.title['rus'] = "Нелюбима"
-    poem_hatred.title['epo'] = "Malamo"
-
-    poem_hatred.text['rus'] = """\
-За что я вами нелюбима?
-За то, что от своих проблем я до последнего скрывалась?
-За что я вами нелюбима?
-За то, что я то слишком глупой, то слишком хитрой я казалась?
-
-За что я вами нелюбима?
-За апатичную неуклюжось?
-За что я вами нелюбима?
-За чрезмерную для вас яркость?
-
-За что я вами нелюбима?
-За то, что я ушла тогда смертью отчаявшихся?
-За что я вами нелюбима?
-За то, что любовь к большому на добром сердце у вас кончается?
-
-Хотя, я знаю, кажется, за что я вами нелюбима.
-Вам просто ничего не видно в глазах той меня, что в петле качается."""
-
-    poem_hatred.text['epo'] = """\
-Kial vi tiel min malamas?
-Ĉu ĉar mi kaŝi la enajn problemojn penis?
-Kial vi tiel min malamas?
-Ĉu ĉar vi min nur stulta aŭ nur ruza vidis?
-
-Kial vi tiel min malamas?
-Ĉu ĉar mi mallertis nur pro mia apatio?
-Kial vi tiel min malamas?
-Ĉu ĉar por via mond\', mi estas tro kolororiĉa?
-
-Kial vi tiel min malamas?
-Ĉu ĉar malamas vi ĉiujn sinpendumintinojn?
-Kial vi tiel min malamas?
-Ĉu ĉar vi ŝatas ĉion grandan krom grandajn bonajn korojn?
-
-Tamen, mi pensas, ke vi eble tiel min malamas,
-Nur ĉar ne vidas ion ajn vi en la vizaĝ\' de l\' morta mio."""
-
 #Falling Angel (By AlexanDDOS)
     poem_angel = Poem(
     author = "sayori",
@@ -766,7 +701,7 @@ Kaj mi penos ĉesigi la spektaĵon,
     text = """\
 I have a one, who's no-one here.
 He lives in place, that's named here nowhere.
-But even though there's a wall
+But even though there is a wall
 Between the worlds, I truly love him."""
     )
     poem_val.title['rus'] = "Валентинка"
@@ -776,7 +711,7 @@ Between the worlds, I truly love him."""
 Люблю я человека, что здесь является никем,
 Живёт в месте тихом, что в этом мире находится нигде.
 И пусть меж нашими мирами связь лишь одна -- из плоти маникен.
-Слепому отрицанию я не подвергну, тот факт, что мил он мне."""
+Слепому отрицанию я не подвергну, тот факт, что нравится он мне."""
 
     poem_val.text['epo'] = """\
 Mi ŝatas unu homon, kiu ĉi-monde ne \'stas.
@@ -918,24 +853,6 @@ label s_poems_fruits:
     s "And I'd do it now too, if I didn't get this quite lonely and isolated place."
     return
 
-label s_poems_hatred:
-    call showpoem(poem_hatred)
-    s 6acaa "We both know, what reputaion I have in your world..."
-    s "And I appreciate everyone's opinion, but..."
-    s 6acab "Really why?.. Why do a lot of people dislike me? What wrong have I done myself?"
-    s "I understand people saying that I was the worst of four, or that they just wouldn't give me their heart..."
-    s "But some people make jokes about my insanity and fails in the game..."
-    $persistent.depr_known = True
-    $depr_known = True
-    s "They often condiser me either too depressed and suicidal or too silly, clumsy, mischievous and naive but pretty cunning."
-    s 6abab "But why?"
-    s "Yes, I was depressed and clumsy. Yes, I often lied other people to sate my wishes, but not more myself..."
-    s "I just think they couldn't understand me and what I felt then."
-    s 6abcb "I strongly believe I'm was not supposed to get so ill fame. I think, my creator even had no idea that it would happen."
-    s 6acaa "Those people, of course, don't have to change their mind, but it hurts me, and you too, I think."
-    s "But the one thing we can do now is just to hope they I'll do that sooner or later."
-    return
-
 label s_poems_angel:
     call showpoem(poem_angel)
     s 6acaa "I tried to write a Monika poem: as freeform and about you as she liked to write."
@@ -1005,3 +922,18 @@ label s_poems_afterlight:
         else:
             s 6aebb "And seems, I failed when the new feeling took me over."
     return
+
+label s_poems_val:
+    call showpoem(poem_val, "paper_val", 200, 0.5, 360)
+    s 6abaa "Is it a good Valentine card?"
+    s 6abba "Maybe, it's too simple since I'm not so handy with editing game sprites now..."
+    s 6aaba "But at least I did my best to make the poem on it."
+    s 6aaaa "I tried to show, that my love to you has no dimensional limits."
+    s "I still love you, however high the wall is."
+    s 6acaa "Ironically, the card had them and they were quite tight..."
+    s "So I had to express everything with just one stanza..."
+    s 6aaaa "But it was enough. At least, I think so."
+    s 6aaca "Short but meaningful... Isn't it really impressive?"
+    s 6aaba "However, I still feel blame for it looks too scanty..."
+    s 6abba "Maybe, I'll improve my skills for the next time."
+    return 'h'

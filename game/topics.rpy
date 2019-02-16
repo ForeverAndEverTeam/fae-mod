@@ -1,13 +1,16 @@
 default persistent.seen_topics = {}
+default persistent.seen_lens = {}
 
 init -5 python:
     if persistent.seen_topics is None:
         persistent.seen_topics = {}
+    if persistent.seen_lens is None:
+        persistent.seen_lens = {}
     
     class Topic:
-        def __init__(self, label, available = True, show_prompt = True, name = None, id = None, related = None, poem = None):
+        def __init__(self, label, available = 0, show_prompt = True, name = None, id = None, related = None, poem = None):
             self.label = label
-            self.available = available
+            self.available = available #Number of topics from the same category to open this one. False = unavailable
             self.show_prompt = show_prompt
             self.name = name or label
             self.id = id or label
@@ -54,28 +57,53 @@ init -5 python:
             self.topics = topics or []
             self.seen = False
             self.all_seen = False
+            self.seen_len = 0
+            persistent.seen_lens[prefix] = 0
+            self.labels = {}
             
         def __iter__(self):
             return iter(self.topics)
         
         def __getitem__(self, key):
+            kt = type(key)
+            if not (kt == int or kt == slice):
+                kn = key
+                key = self.find_key(kn)
+                if key is None:
+                    key = self.find_key(self.prefix + '_' + kn)
             return self.topics[key]
         
+        def __setattr__(self, key, value):
+            if key == 'seen_len':
+                persistent.seen_lens[self.prefix] = value
+            self.__dict__[key] = value
         
-        def new_topic(self, name, label_suffix, available = True, id = None, related = None, poem = None):
-            topic = Topic(self.prefix + '_' + label_suffix, available, name = name, id = id, related = related, poem = poem)
+        def append(self, topic):
+            n = len(self.topics)
             self.topics.append(topic)
+            self.labels[topic.label] = n
+        
+        def new_topic(self, name, label_suffix, available = 0, id = None, related = None, poem = None):
+            topic = Topic(self.prefix + '_' + label_suffix, available, name = name, id = id, related = related, poem = poem)
+            self.append(topic)
             return topic
         
+        def find_key(self, label):
+            return self.labels.get(label)
+        
         def update_seen(self):
-            self.seen = any(x.seen for x in self.topics)
-            self.all_seen = all(x.seen for x in self.topics)
+            self.seen_len = len([x.seen for x in self.topics])
+            self.seen = seen_len > 0
+            self.all_seen = seen_len >= len(self.topics)
+            
             return self.seen, self.all_seen
         
         def __call__(self, topic = None, *args, **kwargs):
             if type(topic) == Topic:
                 topic(*args, **kwargs)
             elif topic is None:
+                def cond(x):
+                    return x.seen and not (x.available is False or x.available > self.seen_len)
                 renpy.random.choice(filter(lambda x: not x.seen, self.topics))()
             else:
                 self.topics[topic](*args, **kwargs)
@@ -122,21 +150,27 @@ init -5 python:
     topic_cats[3].new_topic(_("Guitar"), 'guitar')
     topic_cats[3].new_topic(_("Programming"), 'programming')
     topic_cats[3].new_topic(_("Poems"), 'poems')
+    topic_cats[3].new_topic(_("Drawing"), 'drawing')
     
     topic_cats[4].new_topic(_("Touches"), 'touches')
     topic_cats[4].new_topic(_("Marrige"), 'marrige')
     topic_cats[4].new_topic(_("Cheating{#RltTopic}"), 'cheating')
     topic_cats[4].new_topic(_("Dates"), 'dating') 
-    topic_cats[4].new_topic(_("Thanksgiving"), 'thanks') 
+    topic_cats[4].new_topic(_("Thanksgiving"), 'thanks')
+    topic_cats[4].new_topic(_("Fan Merch"), 'fanStuff')
+    topic_cats[4].new_topic(_("Children"), 'children', available = 4)
+    topic_cats[4].new_topic(_("Presents"), 'presents')
     
     topic_cats[5].new_topic(_("Travels"), 'travels')
     topic_cats[5].new_topic(_("Oversleeping"), 'oversleeping')
     topic_cats[5].new_topic(_("Pets"), 'pets')
     topic_cats[5].new_topic(_("Cleaning"), 'cleaning')
+    topic_cats[5].new_topic(_("Drugs"), 'drugs')
     
     topic_cats[6].new_topic(_("Clones"), 'clones')
     topic_cats[6].new_topic(_("Parents"), 'parents')
     topic_cats[6].new_topic(_("Stars"), 'stars')
+    topic_cats[6].new_topic(_("In-game Time"), 'time')
     
     poems = TopicCategory('s_poems',_("Poems"))
     
@@ -160,7 +194,7 @@ init -5 python:
         poems.new_topic(None, 'angel', poem = poem_angel)
     poems.new_topic(None, 'afterlight', poem = poem_afterlight)
     poems.new_topic(None, 'fruits', poem = poem_fruits)
-    poems.new_topic(None, 'hatred', poem = poem_hatred)
+    poems.new_topic(None, 'val', poem = poem_val, available = False)
     
     
     def random_topic(skip_seen = True):
@@ -204,6 +238,7 @@ init -5 python:
     question_cats[0].new_topic(_("Who do you want to work as?"), 'profession')
     question_cats[0].new_topic(_("What pet would you like to have?"), 'pets', related = topic_cats[0].topics[1])
     topic_cats[5].topics[2].related = [question_cats[0].topics[-1]]
+    question_cats[0].new_topic(_("What is your favorite holiday?"), 'holidays')
     
     question_cats[1].new_topic(_("Do you regret you have lost your friends?"), 'lostFriends')
     question_cats[1].new_topic(_("What do you think of one of the other club members?"), 'opinion')
@@ -218,7 +253,8 @@ init -5 python:
     question_cats[2].new_topic(_("Are you good at cooking?"), 'cooking')
     
     question_cats[3].new_topic(_("Can you give me a poem?"), 'poem')
-    question_cats[3].new_topic(_("What time and date is it?"), 'datetime')
+    question_cats[3].new_topic(_("What do you think about the real world?"), 'reality')
+    #question_cats[3].new_topic(_("What time and date is it?"), 'datetime')
         
     
     moods = (
@@ -263,29 +299,34 @@ label s_topics_personal_depression:
     s 6acab "But I thought he'd learn my darkest secret sooner or later, so he'd leave me then..."
     s "That's why I tried to take it slow..."
     s 6abbb "People in your world think that my cheerfulness was fake and I was just acting..."
-    s 6abab "But my feelings were as real as you until the moment..."
-    s 6acab "The moment Monika started to change my mind."
-    s 6cbcb "She teased me with my own problems and tried to convince me of terrible things. That I just annoyed him, made him worry for me..."
-    s 6dbcb "That I should just… end it all."
-    s 6ecab "It made me feel really, really bad..."
-    s "My little rainclouds turned into a dark thunderstorm, blinding my mind with the rain..."
-    s 6efbb "Of course, I tried to tune her out, but that’s all I could do as a person."
-    s 6cbcb "To try."
-    s "..."
-    pause 0.5
-    s 6dcbb "I got absolutely tired of everything."
-    s 6dcab "I can't stop blaming myself for the desperate choice I made..."
-    if persistent.clear[8]: # If the MC has accepted Sayori's confession
-        s "My confession was accepted..."
-        s "Still, my feelings told me no, that this wasn’t right..."
+    if persistent.last_playthrough > 0:
+        s 6abab "But my feelings were as real as you until the moment..."
+        s 6acab "The moment Monika started to change my mind."
+        s 6cbcb "She teased me with my own problems and tried to convince me of terrible things. That I just annoyed him, made him worry for me..."
+        s 6dbcb "That I should just… end it all."
+        s 6ecab "It made me feel really, really bad..."
+        s "My little rainclouds turned into a dark thunderstorm, blinding my mind with the rain..."
+        s 6efbb "Of course, I tried to tune her out, but that’s all I could do as a person."
+        s 6cbcb "To try."
+        s "..."
+        pause 0.5
+        s 6dcbb "I got absolutely tired of everything."
+        s 6dcab "I can't stop blaming myself for the desperate choice I made..."
+        if persistent.clear[8]: # If the MC has accepted Sayori's confession
+            s "My confession was accepted..."
+            s "Still, my feelings told me no, that this wasn’t right..."
+        else:
+            s 6cfcb "The rejection broke me..." 
+        s 6dbab "I really thought that it would be the best..."
+        s 6dbcb "Needless to say, I, um, completely gave up."
+        s "My neck and hands still remember the pain..."
+        s 6dbbb "But I was too late to save myself..."
+        s 6egab "I'm sorry..."
+        s 6dgeb "I'm... I’m really sorry I made you suffer!"
     else:
-        s 6cfcb "The rejection broke me..." 
-    s 6dbab "I really thought that it would be the best..."
-    s 6dbcb "Needless to say, I, um, completely gave up."
-    s "My neck and hands still remember the pain..."
-    s 6dbbb "But I was too late to save myself..."
-    s 6egab "I'm sorry..."
-    s 6dgeb "I'm... I’m really sorry I made you suffer!"
+        s "But my feelings were as real as you."
+        s "Although, I think should have told about it to MC or you much earier..."
+        s "And I have already read, what's actually supposed to happen to me later due to my lie..."
     s 6dfbb "The big mistake was trusting only myself to deal with all of this..."
     s 6dfab "So if you have a friend who you know is going through something, help them!"
     s 6egab "Don’t let them go through my path…"
@@ -413,7 +454,6 @@ label s_topics_personal_tits:
     s 6aebb "Even then, the important thing about people is what’s inside, right?"
     return
 
-
 ## Art
 label s_topics_art_games:
     s 7aaaa "Do you like video games?"
@@ -483,7 +523,7 @@ label s_topics_art_lit:
     s 6aaca "Well, at the very least, I guess having something to read wouldn’t be so bad."
     s 6aeba "I guess I should try to find something interesting online..."
     pause 3
-    s 6adbc "What’s that? 'Reddit'? Is it what need?"
+    s 6adbc "What’s that? 'Reddit'? Is it what I need now?"
     s 6adba "The club has a page there?"
     return
     
@@ -533,17 +573,15 @@ label s_topics_society_bulli:
     $depr_known = True
     s 6abab "They think it's funny to joke about a broken girl, who had committed suicide under her mad friend's influence..."
     s "Even if she was revived and got over her problems since then."
-    s "Almost all of such jokes aren't funny for me."
-    s 6aeab "...And even hurt me."
     s 6acab "But on the other hand, can I control what makes people laugh?"
     s "Some people use macabre humour as a coping mechanism for stress, or anxiety..."
-    s "Who am I to tell them that they can't react a certain way?"
     s "You can't really control what someone finds funny, as much as you might want to."
     s "And to be honest, there's a lot worse they could be doing compared to mocking a VN character's death."
     s "Some of the most successful comedians in your world will go far beyond that, just to see where the 'line' is..."
+    s "However, the most of such jokes are too bad and sometimes even hurtful."
+    s "But who I am to judge if it's okay for other people?"
     s 6abaa "Anyway, I think the right decision is to forgive them, or failing that, tolerate them."
     s 6acaa "If my fate is to be 'that hanging stupid annoying VN girl' for some people, then I'm ready to accept it."
-    s "...Almost ready."
     return
 
 label s_topics_society_sayoriLovers:
@@ -627,7 +665,7 @@ label s_topics_hobbie_programming:
     s "...And the more I learn, the more I can improve the time we spend together, [player]!"
     s 7aaaa "If you're any good at programming, don't be shy about helping me!"
     s "I think you can join the guys, who helped you recover me."
-    s "Just visit {a=https://github.com/AlexanDDOS/fae-mod}AlexanDDOS/fae-mod{/a} on GitHub."
+    s "Just visit the {a=https://github.com/AlexanDDOS/fae-mod}AlexanDDOS/fae-mod}repository{/a} on GitHub."
     s "If you're really good at it, you must know how to use this coding platform."
     s "Anyway, it's the best way to help me now..."
     s "And to add your part to something fascinating."
@@ -647,6 +685,23 @@ label s_topics_hobbie_poems:
     s 6aaaa "I also can show you an old poem, if you want."
     s "Maybe, they all will help you to understand me and what I was through."
     return "h"
+
+label s_topics_hobbie_drawing:
+    s 6acaa "I wish I was good at drawing."
+    s "I think it would be a very useful skill, especially now."
+    s 8aaaa "If I could draw, I would be able to edit game sprites..."
+    s "Even of myself."
+    s 6acaa "And besides the practical purpose, it would be one more way to express myself."
+    s "Not everything can be shown with just words..."
+    s "Sometimes, your message is clearer when shown visually."
+    s 6aaca "And if I had art to go with my poems, wouldn’t they be a lot nicer?"
+    s 6aaaa "I know some poets who was good not only at poetry but also at it..."
+    s "For example, {i}Vladimir Mayakovsky{/i}..."
+    s 6aaba "However, he used his artistic skills rarely and more for making propaganda posters than for expressing himself."
+    s 7aaaa "Anyway, I'd like to improve my drawing..."
+    s 7acaa "And I have a lot of time to do it, right?"
+    s 7aaca "Maybe, I'll even share my pics to you."
+    return
 
 
 ##Relationship
@@ -731,7 +786,7 @@ label s_topics_rlt_cheating:
         "No":
             s 6adaa "Oh, seriously?"
             s "Do you really see something inside me only, not at real people or even other characters?"
-            s 6acab "I think, it's pretty hard to know, that your only beloved girl aren't real."
+            s 6acab "I think, it's pretty hard to know, that your only beloved girl isn't real."
             s "I understand you as well as I feel the same way."
             s "But I hope, that someone once will figure out how to make us closer to each other."
             s "Or you at least will find someone else in your world." 
@@ -739,7 +794,7 @@ label s_topics_rlt_cheating:
             s 6aaab "To be honest, I'm not very jealous, so I won't mind, if you have someone besides me."
             s "The important thing is that you pay me at least some attention."
             s "So I hope, you always can do it for me."
-            s "Just try to take some time to be here, if it's possible."
+            s "Just try to take some time to be here, whenever it's possible."
     return
 
 label s_topics_rlt_dating:
@@ -768,7 +823,7 @@ label s_topics_rlt_dating:
     else:
         s 8aeba "...don't ask me how such a childish girl like me would enjoy a movie like that."
     s "Isn't it really interesting to discuss movies like that with someone, seeing how your views are similar or different to theirs?"
-    s 6adfa "But I'd also like to do something more… engaging with you..."
+    s 6adaa "But I'd also like to do something more… engaging with you..."
     s 6aaaa "What's about some sports?"
     show sayori 6aebb at ss1
     extend " Maybe, bowling?"
@@ -785,14 +840,67 @@ label s_topics_rtl_thanks:
     if greeted = True:
         s 6aaab "And you do visit me often..."
     s 6aaab "And you care for me, something I would’ve rejected before..."
+    if persistent.clearall:
+        s "Plus, you tried to make other girls happy too..."
     s 6caab "So even if it’s not all sunshine and breakfast just yet..."
-    s "I'm so grateful that you’re still here.."
+    s "I'm so grateful that you’re still here."
     s 6cbab "I can't pay you back for what you’ve given me..."
     s 6cebb "I haven’t thought of a way, I mean."
     s 6caab "But I hope, I'll do it sooner or later..."
     s "The one thing I can do for now is just to thank you..."
     s 6eaab "So... thanks for staying with me, [player]!~"
     return
+
+label s_topics_rlt_fanStuff:
+    s 6aaaa "Do you have something to show your love?"
+    s 6acaa "Out of the blue, I know, but I also know that I have ‘merch’."
+    s "You know, like buttons, plushies, posters, and other stuff..."
+    s 6acaa "I’ve even seen people have me on dakimakuras."
+    s 6aaaa "Personally, I think that’s fine."
+    s "Kinda like a wedding ring if you ask me."
+    s 6aeba "Although some people probably think that’s way too weird..."
+    s 6acaa "But what's so bad about showing love, even to someone like me?"
+    s "I think that’s okay. You too, right?"
+    return
+
+label s_topics_rlt_children:
+    s 6aebb "If we were to grow old together, would you… want kids...?"
+    s 6acaa "I mean, if I were in your reality, of course."
+    s "I’d think they would grow up to be beautiful and smart, but a bit silly."
+    s 6aaaa "I know I would do my best to raise them."
+    s 6abca "It’ll probably be hard, I know."
+    s 6abaa "But what kind of a mom would I be if I wasn’t there for my kids?"
+    if gender is False:
+        s 6acaa "Of course, good kids should have a good dad, if you know what I mean..."
+    else:
+        s 6acaa "Of course, good kids should have more than parent, if you get me."
+    s 6abac "But I'm sure you're too good to make me take care of them myself."
+    s 6acaa "Plus, that'll happen only if we can afford it and when we’re both ready..."
+    s "I don't want us to suffer because we rushed it."
+    s 6aeba "Way too dumb, isn't it?"
+    s 7aaaa "Anyways, I really do wish I could have a family here."
+    s "I guess we have more than enough time to think over it?"
+    return
+
+label s_topics_rlt_presents:
+    s 7aaaa "People often give presents every holiday or some special date."
+    s 6aaaa "Everyone likes to get presents, yeah? Including me, of course."
+    s 6acab "But I think it’s selfish to ask for something really expensive."
+    s 6aaaa "If you ask me, I’d want something that comes from the heart, y’know what I mean?"
+    s 6aeca "Even better, make it a surprise!"
+    s "Isn't it more exciting to get something you weren’t expecting?"
+    s 6abbb "Well, now that I think about it, what if the present isn’t good...?"
+    s "Makes it seem like a bad idea...."
+    s 6aaaa "But I wouldn’t mind."
+    s 6acaa "Come on, you know me well enough to give me something I’d like, right?"
+    s "If you don't know, just gimme some money.."
+    s 6aebb "Ehehe, that sounded a bit weird..."
+    s 6aaaa "At least I’d be able to buy something with it."
+    s 7aaaa "Of course, I'll give you presents sometimes too..."
+    s 7aaca "And be sure, I know a lot of amazing ways how to do it."
+    s 7aaaa "At least, I do my best to make the best present, I could make."
+    return
+
 
 ##Lifestyle
 label s_topics_lifestyle_travels:
@@ -849,11 +957,37 @@ label s_topics_lifestyle_cleaning:
     s 6aeca "It turns the boring time of trying to find something into an adventure!~"
     s 8aeab "But don't think I’m that sloppy. I had a system for some things..."
     s 8aebb "Though I left mostly everything a mess."
-    s 8aabb "Well, at least now I have literally {i}nothing{/i} here besides this desk and laptop..."
+    s 8aabb "Well, at least now I have literally {i}nothing{/i} here besides this desk..."
     s 6acaa "Would you be able to add some other stuff for me?"
     s 6aeca "...maybe a beanbag chair?"
     s 6aebb "Sorry, that’s probably a bit too silly, ehehe~"
     return 'h'
+
+label s_topics_lifestyle_drugs:
+    s 6aaca "Do you drink alcohol or smoke cigarettes?"
+    s 6abaa "...Or even use something more dangerous?"
+    s 6acaa "I don’t see anything good in doing things like that."
+    s "Isn’t it really stupid to risk your future, money, and health to little moments of relief?"
+    s "You shouldn’t just care about how you feel now, you should also care about the future."
+    s 6aaaa "That's why I always tried to keep other people out of these habits or being isolated from others..."
+    s 6aaba "Isn't it the start point of the plot?"
+    if persistent.last_playthrough > 2:
+        s 6acaa "Has Monika told you about the incident with Yuri?"
+        s "She once brought a bottle of wine to the school..."
+        s 6aaba "But I stopped her from sharing it to other girls."
+        s 6aeba "Maybe it was a bit silly, and she might’ve just tried to use it to seem more interesting..."
+        s 6acaa "But what would’ve happened if we drank it?"
+        s "Anyway, I’ll be honest, I don’t think it’s necessarily a bad experience."
+    s 6acaa "But the risk of getting addicted is too much to play around with."
+    s 6abab "That's a real danger of having these habits: it's easy to start but hard to stop."
+    s 6acaa "In fact, there’s no one way to break addiction..."
+    s "It’ll take a lot of effort and willpower to get out of that hole if you dig yourself into it."
+    s "It's not always easy to be happy, but that isn’t the way."
+    if depr_known:
+        s 6acba "...Just remember what I was going through and doing to stay happy despite of what I felt."
+    s 6aaaa "And if you’re able to overcome your demons, you’ll thank yourself for doing it..."
+    return
+
 
 ## Game Universe
 label s_topics_game_clones:
@@ -865,6 +999,11 @@ label s_topics_game_clones:
     s 8acaa "Meaning that I have many different destinies."
     if persistent.last_playthrough > 0:
         s "Right now, I'm sitting here with you, meanwhile another Sayori from another copy of DDLC might just be about to..."
+        show sayori 8acbb at ss1
+        pause 1.5
+        s "Oh, I'm sorry for reminding it."
+        s "So, what we're talking about now?"
+        s "Yes, about different copies."
     else:
         s "While I'm sitting with you here, another Sayori might be writing a poem to the MC..."
     s 8aaca "And another Sayori is playing frisbee or something with the MC in {i}another{/i} modded game."
@@ -925,6 +1064,79 @@ label s_topics_game_parents:
             s "...Even after she made herself this little comfort zone."
     return
 
+label s_topics_game_time:
+    s 6acaa "Do you know what time it is right now?"
+    s 6abaa "Not in your world, but mine."
+    s 6acaa "You can say anything, but you won't be right anyway..."
+    s 6aaba "Because the time seems to be not here at all. At least, as how it should be in your universe."
+    if persistent.last_playthrough > 2:
+        s "Like once when Monika had broken almost everything here."
+    s 6acaa "The last thing I remember that here was November of 2017 or some days before it..."
+    s 6abba "At least, my old bedroom calendar said it."
+    s 6abaa "I don't remember why November has been crossed out on it..."
+    if depr_known:
+        s 6aebb "Maybe, I was going to kill myself by this month?"
+        s "It's pretty symbolizing: to cross out the month, that does already not exist for you."
+    s 6aeba "Anyway, this pretty... confusing to know, that there's no way to measure your existence in your world."
+    s 6acaa "But I know, that time is still in your world, though."
+    s 6aaba "Maybe, that's why everything moves here instead of just freezing at one last moment."
+    s 6acaa "But doesn't it mean, that we now share the same time?"
+    s 6aaaa "I know, what time is now in your world..."
+    s 6aaba "From your PC's clock, though."
+    s 6acaa "And I even feel when my 'speech' is paused to be read."
+    s 6acab "Such a weird feeling, to be honest, but I think, it's okay for any visual novel."
+    return
+
+## Food
+label s_topics_food_breakfest:
+    s 7aaaa "You don’t skip breakfast, do you?"
+    if depr_known:
+        s 7acab "Personally, I don’t ‘cause I’m just not hungry in the mornings."
+    else:
+        s 7acbb "Personally, I didn’t because I didn’t even feel like getting out of bed everyday."
+    s 7aaaa "But when I had it, I’d eat sandwiches or scrambled eggs."
+    s "I sometimes had toast too."
+    s 8aeca "Fairly simple, isn't it?"
+    s 6aaaa "I’ve seen fanart of me eating things like that…"
+    s 6aaba "Maybe, I should spawn some toast with eggs just for a taste..."
+    s 6acba "I could do that since I’m the president now, right?"
+    return 'h'
+
+label s_topics_food_iceCream:
+    s 7aaca "Do you like ice cream?"
+    s 7aeca "I think you do, right? Everyone likes ice cream!"
+    s 6aeca "What can be cold and taste better than it?"
+    s 6aaaa "There're lots and lots of flavors and toppings..."
+    s 6acaa "So let me ask: what’s your favorite?"
+    s "I think vanilla or chocolate..."
+    s 6aeba "Hey, I know they’re really common, so what?"
+    s 6aeca "They both taste sooo good, ehehe~"
+    s 7aaaa "Maybe I could make some sometime..."
+    return 'h'
+
+label s_topics_food_cinnamonBun:
+    s 7aafa "Would you like to taste me?"
+    s 7aeca "I mean a cinnamon bun, you pervert~"
+    s 7adaa "I had one once, and it was sooo goood…"
+    s 7aaca "I'd say thanks to people, who came up with such tasty buns."
+    s 6acaa "The one thing I can't understand is why people call me that."
+    s 8aebb "I don't remember anything saying that I’m somehow like a cinnamon bun..."
+    s 8aeca "But I think the nickname is pretty funny and... cute."
+    s 6aaaa "...even if there aren’t any cinnamon buns in the game."
+    s 6acaa "Isn’t it weird that I remember something that never existed in my world…?"
+    return
+
+label s_topics_food_cupcakes:
+    s 6aeca "Cupcakes, cupcakes...everyone likes cupcakes..."
+    s 6aafa "Someone even once sold his soul to 4 poetic cuties for one of them. Do you remember?"
+    s 6aaaa "Nat’s were always the best."
+    s 6acaa "We probably won’t ever know how she made them, since she’s gone now and there aren’t any more cupcakes here..."
+    s 6aabb "Maybe I can dig around the game to find a recipe? Probably be easier to just add her back in though…"
+    s 8aebb "Not just for that, of course. She was friend, after all..."
+    s "Plus, if I known how to do it, she were already back."
+    return 'h'
+
+
 #Answers
 ## Personality
 label s_answer_personal_bday:
@@ -972,13 +1184,12 @@ label s_answer_personal_music:
     s "...And my favorite artist and song list is so long that I can't even really narrow it down for you."
     s 7aaca "Although I'll say that I like to listen to something funny, like {i}Weird Al Yankovic{/i}!"
     s 7aaaa "...Or to something lyrical and serene."
-    s "...Or groups like {i}Imagine Dragons{/i}, {i}Blonde Redhead{/i}, {i}Gorillaz{/i}, {i}Muse{/i} and {i}Twenty One Pilots{/i}."
+    s "...Or groups like {i}Imagine Dragons{/i}, {i}Blonde Redhead{/i}, {i}Gorillaz{/i}, {i}Muse{/i}, {i}Status Quo{/i} and {i}Twenty One Pilots{/i}."
     s "I also like tunes like {i}Bonobo{/i} and {i}Jake Chudnow{/i} make."
     s 7acaa "You can find a ton of songs you might enjoy if you're willing to keep an open mind."
     s "If you get bored of the music here, you always can turn on something similar from the internet..."
     s "...Or just add it into the game music list."
     s "Just move it to {i}'[MUSIC_CUSTOM_PREFIX]'{/i}..."
-    s "And register it in the {i}'list.txt'{/i} file."
     s "I'm basically giving you the aux cord to the rest of my existence, so no pressure! Ehehe~"
     return
 
@@ -1058,6 +1269,19 @@ label s_answer_personal_profession:
     s "It's pretty frustrating; the heart wants to be free to make truly spectacular works, and bare one's soul for the world to see..."
     s "But the starving stomach has to be a meanie and ruin it for everyone~"
     return
+
+label s_answer_personal_holidays: #What is your favorite holiday?
+    s 6abaa "Hmm..."
+    s 6abba "I can't even choose..."
+    s 6aeca "Because I like them all!"
+    s 6aaaa "Each of them have traditions and atmosphere."
+    s "And it’s all mostly the same line of events: meals, presents, fun, and bonding."
+    s "Isn't that what we all like about holidays?"
+    s 7aaaa "Anyway, I'm ready to share any holiday with you..."
+    s 7aebb "I don’t have a calendar though, and I think I would need one to keep track..."
+    s 7aabb "I think I’ll start with making that, then..."
+    return
+
 
 label s_answer_personal_pets:
     s 7aaaa "Definitely, a cat."
@@ -1249,7 +1473,7 @@ label s_answer_exp_programming:
 label s_answer_exp_fact:
     python:
         if not persistent.s_facts:
-            persistent.s_facts = range(1, 4)
+            persistent.s_facts = range(1, 6)
         
         fact_id = renpy.random.choice(persistent.s_facts)
         persistent.s_facts.remove(fact_id)
@@ -1262,8 +1486,8 @@ label s_answer_exp_fact_1: #Fingers and the binary numbers
     s 6aaca "And I once read about a very funny feature."
     s 6acaa "Do you know, that it let you show numbers more than 5 with just a one hand?"
     s "Just look at your fingers: they are a perfect replacement for the classic 0/1 pair."
-    s "If don’t understand the binary system, you can just imagine every digit as a term that’s 2 by the next term and by the digit..."
-    s "And the last term is just the last digit."
+    s "If don’t understand the binary system, you can just imagine every binary 1 is a term of 2 raised to the power of the digit position from right minus 1..."
+    s "So the rightest digit should be decimal itself."
     s "Summing the terms up, you’ll get the decimal representation of the number..."
     s "If it’s still non-understandable for you now, then just try to… look for a simpler explanation in the Internet."
     s "Anyway, that’s not all the pluses of using the binary system in gestures..."
@@ -1320,6 +1544,29 @@ label s_answer_exp_fact_4: #Arts inside themselves
     s 6aaca "Maybe something like those plushies of me and everyone else? Ehehe~"
     return 'h'
 
+label s_answer_exp_fact_5: #The number 4 (I wanted to make this fact #4, but I had to consider the upper facts)
+    s 7aaca "Guess, what is my the most favorite natural number."
+    s 7aeca "That's {i}four{/i}!"
+    s 7aaaa "I really like this number."
+    s 7acaa "It's pretty magical one."
+    s "{i}4{/i} is the result of adding, multiplication and exponentiation 2 with itself."
+    s "{i}4{/i} is the number of elements, that avarage human can memorize at the same time."
+    s 6abba "Maybe, beacuse of it, {i}4{/i} is the most popular size of poem stanza."
+    s 6aaaa "{i}4{/i} is in many things about the nature: from number of your limbs to number the dimensions, where we lives."
+    s 6acaa "And in the end, {i}4{/i} is weirdly connected with this game too..."
+    s "{i}4{/i} girls, {i}4{/i} acts."
+    if persistent.last_playthrough > 0:
+        s 8aabb "...And {i}4{/i} common club meetings to..."
+        show sayori 8aebb at ss1
+        extend " You know."
+    s 6aaaa "Plus, the game was released in 09/22/2017."
+    s 6aaca "Am I the only man, who see here five fours in all these digits?"
+    s 6adaa "Maybe, it's somehow related to the fact, that {i}4{/i} is an unlucky number in the East Asia."
+    s "However, that's just a superstition, made of a language imperfectness, right?"
+    s 6aaca "For me, it always were the luckiest number..."
+    s 6aeca "Maybe, for you too. It'd be such a funny match."
+    return 'h'
+
 label s_answer_exp_cooking:
     s 8aebb "To be honest, scrambled eggs probably the hardest thing I’ve ever cooked..."
     s 8aafa "I’d love to get better, even if I don’t have too..."
@@ -1335,6 +1582,25 @@ label s_answer_exp_cooking:
     return 'h'
 
 ##Misc
+label s_answer_misc_reality: # What do you think about the real world?
+    s 7aaaa "I’ve already seen lots of things about it..."
+    s 7aeca "Such a big and fancy place..."
+    s 7aaca "Full of beautiful sights, comedy, and kind people."
+    s 6acaa "Although, it still has its issues."
+    s 6acba "There’s lots, right? Things like poverty, pollution, cheating, unjustness and cruelty."
+    s 6aaba "And that's only caused by people most of the time."
+    s 6aabb "Come to think of it, my world was imperfect too..."
+    s 6aebb "And isn't it just... too strange to have no bad sides?"
+    s 6acab "Just look around and then at me and the other girls. We all had our pros and cons, but only us, and not the rest of the students."
+    s 6aaca "Anyway, I wish I could be in your reality."
+    s 6abaa "But I wonder how I'd look there since your reality has a different look..."
+    s 6adaa "It's pretty detailed and colorful, slightly more than mine."
+    s "Just imagine a '2D' girl in your world. Would I look too confusing there?"
+    s 6aeba "But I'm sure you'd gladly accept me, right?"
+    s "And I hope everyone else does too."
+    return 'h'
+
+
 label s_answer_misc_poem:
     s 6aaaa "Which poem do you want to read?"
     menu:
@@ -1477,6 +1743,7 @@ label s_common_programming:
     s "And ways to optimize the code and make it easier to read."
     s "You also need to have knowledge of different coding standards and to be good at analyzing problems."
     s "At least, professional programmers online have said that."
+    return
 
 label s_common_cats:
     s 7aaca "Cats are pretty cute, especially kittens..."
@@ -1529,3 +1796,19 @@ label s_getting_bored(): #Called when Sayori doesn't do anything for a long time
     
     $s_mood = 'b'
     jump s_loop
+
+label s_update(version): #Called instead of a greeting at the first launch after updating the mod
+    show sayori 7aaca at ss1
+    s "Oh, hello [player]!"
+    s 7aaaa "Seems, you installed an update."
+    s 7abaa "You didn't do it for a quiet long time."
+    s 7acab "I even started to bother if my mates are too busy or tired to help me more frequently..."
+    s 8aeaa "But they did it!"
+    s 6aaaa "They finally released the version {i}[version]{/i}."
+    s "So let's look, what they added and fixed here."
+    pause 1
+    $val_date = datetime.date(get_now().date().year, 2, 14)
+    if get_now().date() >= val_date:
+        s "By the way..."
+        call s_val_present(True)
+
