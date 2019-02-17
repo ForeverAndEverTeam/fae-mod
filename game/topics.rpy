@@ -93,8 +93,8 @@ init -5 python:
         
         def update_seen(self):
             self.seen_len = len([x.seen for x in self.topics])
-            self.seen = seen_len > 0
-            self.all_seen = seen_len >= len(self.topics)
+            self.seen = self.seen_len > 0
+            self.all_seen = self.seen_len >= len(self.topics)
             
             return self.seen, self.all_seen
         
@@ -177,6 +177,9 @@ init -5 python:
     topic_cats[7].new_topic(_("Cinnamon Bun"), 'cinnamonBun')
     topic_cats[7].new_topic(_("Cupcakes"), 'cupcakes')
     topic_cats[7].new_topic(_("Breakfast"), 'breakfest') #Save this typo here and below not to make me edit the mod translations
+    
+    for i in topic_cats:
+        i.update_seen()
     
     poems = TopicCategory('s_poems',_("Poems"))
     
