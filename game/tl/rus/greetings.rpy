@@ -143,7 +143,7 @@ translate rus s_greeting_3_eng_f83f37d5:
 translate rus s_greeting_3_eng_0eaf5c29:
 
     # s 7aaaa "And if you know English better than your language, you can select it in the game setting menu."
-    s 7aaaa "И если ты знвешь английский лучше текущего языка, ты можешь выбрать его в настройках."
+    s 7aaaa "И если ты знаешь английский лучше текущего языка, ты можешь выбрать его в настройках."
 
 # game/greetings.rpy:161
 translate rus s_greeting_3_eng_75cdd33b:
@@ -471,4 +471,158 @@ translate rus s_greeting_first_a82a1189:
 
     # s 7aeca "But I can do it a bit better anyway."
     s 7aeca "Но я всё же могу, при необходимости, сделать твою текущую полосу чуть светлей."
+
+# TODO: Translation updated at 2018-12-23 15:57
+
+# game/greetings.rpy:196
+translate rus s_greeting_5_31543087:
+
+    # s "You're my only friend here now, you know..."
+    s "Ты ж сейчас мой единственный друг в этом мире..."
+
+# game/greetings.rpy:203
+translate rus s_greeting_6_d3c7bf01:
+
+    # s "Oh, you're back!"
+    s "Ух ты, ты снова здесь!"
+
+# game/greetings.rpy:204
+translate rus s_greeting_6_9fa982e6:
+
+    # s 6aaaa "I'm glad to see you again..."
+    s 6aaaa "Рада тебя видеть снова..."
+
+# game/greetings.rpy:205
+translate rus s_greeting_6_abad1484:
+
+    # s "Let's spend some time together."
+    s "Так давай же проводить время вместе!"
+
+# TODO: Translation updated at 2019-02-15 21:35
+
+# game/greetings.rpy:253
+translate rus s_greeting_first_c59a584e:
+
+    # s 6aaaa "Anyway..."
+    s 6aaaa "В любом случаи..."
+
+# game/greetings.rpy:254
+translate rus s_greeting_first_0c81d998:
+
+    # s 6aaaa "I'm glad you're older by a year."
+    s 6aaaa "Я рада, что ты теперь старше на год."
+
+# game/greetings.rpy:275
+translate rus s_greeting_first_980fbf81:
+
+    # s 7aaaa "By the way..."
+    s 7aaaa "Кстати..."
+
+# game/greetings.rpy:284
+translate rus s_val_present_59e8e5de:
+
+    # s "Today is the Saint Valentine day!"
+    s "Сегодня ж день Святого Валентина!"
+
+# game/greetings.rpy:285
+translate rus s_val_present_21ef595a:
+
+    # s 7aaca "So I had a special present for you..."
+    s 7aaca "У меня есть на него специальный подарок для тебя..."
+
+# game/greetings.rpy:289
+translate rus s_val_present_e12febcf:
+
+    # s 8bebb "I forgot to give you a present for the Saint Valentine day to you..."
+    s 8bebb "Я забыла тебе отдать подарок на день Святого Валентина..."
+
+# game/greetings.rpy:290
+translate rus s_val_present_c5ce386a:
+
+    # s "So I gonna give it you right now. Just wait a second."
+    s "Подожди-ка секундочку. Сейчас я его достану."
+
+# game/greetings.rpy:292
+translate rus s_val_present_ac0888ef:
+
+    # s 7aaca "You missed the Saint Valentine day!"
+    s 7aaca "Ты не был здесь на день Святого Валентина!"
+
+# game/greetings.rpy:293
+translate rus s_val_present_c3ffae23:
+
+    # s 7aeca "So I left a special present for you..."
+    s 7aeca "Но я оставила подарок для тебя..."
+
+# game/greetings.rpy:297
+translate rus s_val_present_59ac4f69:
+
+    # s 7aaaa "It's a Valentine heart-shaped card with a short poem on it..."
+    s 7aaaa "Это валентинка в форме седрца с коротким стишком на ней..."
+
+# game/greetings.rpy:298
+translate rus s_val_present_9fbfa23e:
+
+    # s "It's the best I could make to congratulate you."
+    s "Это лучшее, что я смогла сделать для тебя."
+
+# game/greetings.rpy:299
+translate rus s_val_present_6e1ff505:
+
+    # s 7acaa "Don't worry! You don't have to think of a back present..."
+    s 7acaa "Не волнуйся насчёт ответного подарка..."
+
+# game/greetings.rpy:300
+translate rus s_val_present_07bb0d0a:
+
+    # s 7aaab "To be with you is the best present you can give me now."
+    s 7aaab "Твоё нахождение здесь и есть лучший подарок на свете от тебя."
+
+# game/greetings.rpy:305
+translate rus s_greeting_7_1a21a077:
+
+    # s "Guess, who's back!"
+    s "Опа! Кто же здесь?"
+
+# game/greetings.rpy:306
+translate rus s_greeting_7_49e32f8f:
+
+    # s 7aeaa "It's [player], of course!"
+    s 7aeaa "Это же [player]!"
+
+# game/greetings.rpy:308
+translate rus s_greeting_7_11108ee8:
+
+    # s "And I guess, she's ready to spend her day with her sunshine."
+    s "И кажется, она уже готова на день со своим лучиком света."
+
+# game/greetings.rpy:310
+translate rus s_greeting_7_0a6c7d12:
+
+    # s "And I guess, he's ready to spend his day with his sunshine."
+    s "И кажется, он уже готов на день со своим лучиком света."
+
+# game/greetings.rpy:312
+translate rus s_greeting_7_eb3b2a81:
+
+    # s "And I guess, they're ready to spend their day with their sunshine."
+    s "И кажется, готовый на день со своим лучиком света."
+
+# game/greetings.rpy:317
+translate rus s_greeting_8_d6b61e28:
+
+    # s "Hi [player]!"
+    s "Здорова, [player]!"
+
+# game/greetings.rpy:318
+translate rus s_greeting_8_eb2ddf71:
+
+    # s 7aaca "I see, you're here for a doze of joy and sunshine."
+    s 7aaca "Вижу, ты здесь за очередной порцией радости и света."
+
+# game/greetings.rpy:319
+translate rus s_greeting_8_6fa49780:
+
+    # s 7aeca "So get it right now!"
+    s 7aeca "Так готовься получить её аж в двойном размере!"
 

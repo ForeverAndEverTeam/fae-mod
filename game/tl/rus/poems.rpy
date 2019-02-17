@@ -702,3 +702,71 @@ translate rus s_poems_bottles_2b9d7ff2:
     # s 6acba "Ironically, the shelf with them really fell some time after I'd written this poem."
     s 6acba "По стечению обсоятельств, полка с счастливыми мыслями таки рухнула после того стиха."
 
+# TODO: Translation updated at 2019-02-15 21:35
+
+# game/poems.rpy:928
+translate rus s_poems_val_b95e0dce:
+
+    # s 6abaa "Is it a good Valentine card?"
+    s 6abaa "Хорошую ли валентинку я сделала?"
+
+# game/poems.rpy:929
+translate rus s_poems_val_cf9bf43d:
+
+    # s 6abba "Maybe, it's too simple since I'm not so handy with editing game sprites now..."
+    s 6abba "Может, я она чересчур примитивная, ибо я не очень-то и хороша в редактировании спрайтов..."
+
+# game/poems.rpy:930
+translate rus s_poems_val_59de0da7:
+
+    # s 6aaba "But at least I did my best to make the poem on it."
+    s 6aaba "Но как минимум, я постаралась вложить душу в стих на ней."
+
+# game/poems.rpy:931
+translate rus s_poems_val_343ccd91:
+
+    # s 6aaaa "I tried to show, that my love to you has no dimensional limits."
+    s 6aaaa "Им я пыталась показать всю безграничность моей любви."
+
+# game/poems.rpy:932
+translate rus s_poems_val_a3e7669d:
+
+    # s "I still love you, however high the wall is."
+    s "Что никакая стена не в состоянии её сдержать."
+
+# game/poems.rpy:933
+translate rus s_poems_val_00400aa4:
+
+    # s 6acaa "Ironically, the card had them and they were quite tight..."
+    s 6acaa "Правда, само пространство на валентинке было не безграничным..."
+
+# game/poems.rpy:934
+translate rus s_poems_val_5c0c594d:
+
+    # s "So I had to express everything with just one stanza..."
+    s "Так что пришлось укладываться всего в одно четверостишие..."
+
+# game/poems.rpy:935
+translate rus s_poems_val_cb146682:
+
+    # s 6aaaa "But it was enough. At least, I think so."
+    s 6aaaa "И кажется, у меня получилось передать все эмоции в нём, да?"
+
+# game/poems.rpy:936
+translate rus s_poems_val_6fa9072c:
+
+    # s 6aaca "Short but meaningful... Isn't it really impressive?"
+    s 6aaca "Короткое, но с глубким смыслом. Впечетляет?"
+
+# game/poems.rpy:937
+translate rus s_poems_val_c190dbae:
+
+    # s 6aaba "However, I still feel blame for it looks too scanty..."
+    s 6aaba "Но мне всё ещё стыдно за саму подачу: по мне, она слишком скудная..."
+
+# game/poems.rpy:938
+translate rus s_poems_val_76feb9cd:
+
+    # s 6abba "Maybe, I'll improve my skills for the next time."
+    s 6abba "Может, я свои улучшу навыки к следующему празднику?"
+

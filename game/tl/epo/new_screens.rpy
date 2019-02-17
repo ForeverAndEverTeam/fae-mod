@@ -78,3 +78,19 @@ translate epo strings:
     old "Play (P)"
     new "Ludi (P)"
 
+# TODO: Translation updated at 2018-12-29 00:32
+
+translate epo strings:
+
+    # new_screens.rpy:56
+    old "Ask for..."
+    new "Ask for..."
+
+    # new_screens.rpy:139
+    old "Open a website"
+    new "Open a website"
+
+    # new_screens.rpy:140
+    old "Change appearance"
+    new "Change appearance"
+

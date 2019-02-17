@@ -90,3 +90,23 @@ translate rus strings:
     old "Say goodbye"
     new "Попрощаться"
 
+# TODO: Translation updated at 2018-12-23 15:57
+
+translate rus strings:
+
+    # new_screens.rpy:56
+    old "Ask for..."
+    new "Ask for..."
+
+    # new_screens.rpy:139
+    old "Open a website"
+    new "Open a website"
+
+# TODO: Translation updated at 2019-01-10 22:34
+
+translate rus strings:
+
+    # new_screens.rpy:140
+    old "Change appearance"
+    new "Change appearance"
+

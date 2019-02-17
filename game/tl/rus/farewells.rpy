@@ -162,3 +162,17 @@ translate rus s_farewell_7_37bc89e5:
     # s "See you later, [player]!"
     s "Увидимся попозже, [player]!"
 
+# TODO: Translation updated at 2019-02-15 21:35
+
+# game/farewells.rpy:74
+translate rus s_farewell_8_bebd2f9c:
+
+    # s "Ciao, [player]!"
+    s "Чао, [player]!"
+
+# game/farewells.rpy:75
+translate rus s_farewell_8_df9529ea:
+
+    # s "I'll wait for you."
+    s "Я буду тебя ждать."
+

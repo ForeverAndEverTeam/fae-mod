@@ -420,3 +420,163 @@ translate epo s_greeting_first_a82a1189:
     # s 7aeca "But I can do it a bit better anyway."
     s 7aeca "Sed ajne, mi povas ete plifeliĉigi ĉi-tagon."
 
+# TODO: Translation updated at 2018-12-29 00:32
+
+# game/greetings.rpy:196
+translate epo s_greeting_5_31543087:
+
+    # s "You're my only friend here now, you know..."
+    s "Ve estas mia nura ĉi-placa amiko, vi scias..."
+
+# game/greetings.rpy:203
+translate epo s_greeting_6_d3c7bf01:
+
+    # s "Oh, you're back!"
+    s "Ho, vi revenis!"
+
+# game/greetings.rpy:204
+translate epo s_greeting_6_9fa982e6:
+
+    # s 6aaaa "I'm glad to see you again..."
+    s 6aaaa "Mi ĝojas revidi vin..."
+
+# game/greetings.rpy:205
+translate epo s_greeting_6_abad1484:
+
+    # s "Let's spend some time together."
+    s "Do ni daŭre estu kune."
+
+# TODO: Translation updated at 2019-02-08 12:40
+
+# game/greetings.rpy:273
+translate epo s_greeting_7_1a21a077:
+
+    # s "Guess, who's back!"
+    s "Divenu, kiu revenis!"
+
+# game/greetings.rpy:274
+translate epo s_greeting_7_49e32f8f:
+
+    # s 7aeaa "It's [player], of course!"
+    s 7aeaa "Ĝi estas ja [player]!"
+
+# game/greetings.rpy:276
+translate epo s_greeting_7_11108ee8:
+
+    # s "And I guess, she's ready to spend her day with her sunshine."
+    s "Kaj mi supozas, ke ŝi pretas distri sin kun sia sunlum'."
+
+# game/greetings.rpy:278
+translate epo s_greeting_7_0a6c7d12:
+
+    # s "And I guess, he's ready to spend his day with his sunshine."
+    s "Kaj mi supozas, ke li pretas distri sin kun sia sunlum'."
+
+# game/greetings.rpy:280
+translate epo s_greeting_7_eb3b2a81:
+
+    # s "And I guess, they're ready to spend their day with their sunshine."
+    s "Kaj mi supozas, ke ri pretas distri sin kun sia sunlum'."
+
+# game/greetings.rpy:285
+translate epo s_greeting_8_d6b61e28:
+
+    # s "Hi [player]!"
+    s "Sal', [player]!"
+
+# game/greetings.rpy:286
+translate epo s_greeting_8_eb2ddf71:
+
+    # s 7aaca "I see, you're here for a doze of joy and sunshine."
+    s 7aaca "Ĉu vi venis por dozo da gajo kaj hela suna lumo."
+
+# game/greetings.rpy:287
+translate epo s_greeting_8_6fa49780:
+
+    # s 7aeca "So get it right now!"
+    s 7aeca "Do ricevu min nun!"
+
+# TODO: Translation updated at 2019-02-08 16:14
+
+# game/greetings.rpy:253
+translate epo s_greeting_first_c59a584e:
+
+    # s 6aaaa "Anyway..."
+    s 6aaaa "Ajne..."
+
+# game/greetings.rpy:254
+translate epo s_greeting_first_0c81d998:
+
+    # s 6aaaa "I'm glad you're older by a year."
+    s 6aaaa "Mi ĝojas pri ke vi ekaĝis pli."
+
+# game/greetings.rpy:275
+translate epo s_greeting_first_980fbf81:
+
+    # s 7aaaa "By the way..."
+    s 7aaaa "Kaj ankaŭ..."
+
+# TODO: Translation updated at 2019-02-08 17:08
+
+# game/greetings.rpy:284
+translate epo s_val_present_59e8e5de:
+
+    # s "Today is the Saint Valentine day!"
+    s "Hodiaŭ estas tago de Sankta Valentino!"
+
+# game/greetings.rpy:285
+translate epo s_val_present_21ef595a:
+
+    # s 7aaca "So I had a special present for you..."
+    s 7aaca "Kaj mi havas donacon por vi..."
+
+# game/greetings.rpy:288
+translate epo s_val_present_ac0888ef:
+
+    # s 7aaca "You missed the Saint Valentine day!"
+    s 7aaca "Ni ne renkontiĝis en tago de Sankta Valentino!"
+
+# game/greetings.rpy:289
+translate epo s_val_present_c3ffae23:
+
+    # s 7aeca "So I left a special present for you..."
+    s 7aeca "Do mi lasis donacon por vi..."
+
+# game/greetings.rpy:293
+translate epo s_val_present_59ac4f69:
+
+    # s 7aaaa "It's a Valentine heart-shaped card with a short poem on it..."
+    s 7aaaa "Ĝi estas sanktvalentintaga koroida karto kun versaĵeto sur ĝi..."
+
+# game/greetings.rpy:294
+translate epo s_val_present_9fbfa23e:
+
+    # s "It's the best I could make to congratulate you."
+    s "Ĝi estas la plej bona, kion mi povis fari por gratuli vin."
+
+# game/greetings.rpy:295
+translate epo s_val_present_6e1ff505:
+
+    # s 7acaa "Don't worry! You don't have to think of a back present..."
+    s 7acaa "Sed vi ne zorgu pri rea donaco por mi..."
+
+# game/greetings.rpy:296
+translate epo s_val_present_07bb0d0a:
+
+    # s 7aaab "To be with you is the best present you can give me now."
+    s 7aaab "Via kunesto kun mi nun estas la plej bona donaco de vi."
+
+# TODO: Translation updated at 2019-02-14 22:33
+
+# game/greetings.rpy:289
+translate epo s_val_present_e12febcf:
+
+    # s 8bebb "I forgot to give you a present for the Saint Valentine day to you..."
+    s 8bebb "Mi forgesis doni sanktavalentintagan doncon al vi..."
+
+# game/greetings.rpy:290
+translate epo s_val_present_c5ce386a:
+
+    # s "So I gonna give it you right now. Just wait a second."
+    s "Do mi ĝuste nun donacos. Nur atendu iomete."
+

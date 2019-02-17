@@ -663,17 +663,83 @@ translate epo s_poems_afterlight_e1b06c61:
 
 # TODO: Translation updated at 2018-10-29 22:24
 
-# game/poems.rpy:807
+# game/poems.rpy:1019
+translate epo s_poems_val_b95e0dce:
+
+    # s 6abaa "Is it a good Valentine card?"
+    s 6abaa "Ĉu ĝi estas bona sanktvalentintaga karto?"
+
+# game/poems.rpy:1020
+translate epo s_poems_val_cf9bf43d:
+
+    # s 6abba "Maybe, it's too simple since I'm not so handy with editing game sprites now..."
+    s 6abba "Eble, ĝi estas tro simpla, ĉar mi ankoraŭ ne estas sufiĉe lerta je redaktado de ludgrafiko..."
+
+# game/poems.rpy:1021
+translate epo s_poems_val_59de0da7:
+
+    # s 6aaba "But at least I did my best to make the poem on it."
+    s 6aaba "Sed mi almenaŭ penis fari bonegan versaĵon por ĝi..."
+
+# game/poems.rpy:1022
+translate epo s_poems_val_343ccd91:
+
+    # s 6aaaa "I tried to show, that my love to you has no dimensional limits."
+    s 6aaaa "Kaj por montri, ke mia amo ne limiĝas monde."
+
+# game/poems.rpy:1023
+translate epo s_poems_val_a3e7669d:
+
+    # s "I still love you, however high the wall is."
+    s "Mi ĉiam amos vin, malgraŭ de la alto de la limmuro."
+
+# game/poems.rpy:1024
+translate epo s_poems_val_00400aa4:
+
+    # s 6acaa "Ironically, the card had them and they were quite tight..."
+    s 6acaa "Ironie, spaco sur la karto estis strete limita..."
+
+# game/poems.rpy:1025
+translate epo s_poems_val_5c0c594d:
+
+    # s "So I had to express everything with just one stanza..."
+    s "Do mi penis esprimi ĉion nur per unu strofo..."
+
+# game/poems.rpy:1026
+translate epo s_poems_val_cb146682:
+
+    # s 6aaaa "But it was enough. At least, I think so."
+    s 6aaaa "Tamen, ĝi sufiĉis. Almenaŭ, laŭ mi."
+
+# game/poems.rpy:1027
+translate epo s_poems_val_6fa9072c:
+
+    # s 6aaca "Short but meaningful... Isn't it really impressive?"
+    s 6aaca "Eta sed sencplena... Ĉu ĝi estas vere impresa?"
+
+# game/poems.rpy:1028
+translate epo s_poems_val_c190dbae:
+
+    # s 6aaba "However, I still feel blame for it looks too scanty..."
+    s 6aaba "Kvankam, mi daŭre mallaŭdas min pro la povreco de la karto..."
+
+# game/poems.rpy:1029
+translate epo s_poems_val_76feb9cd:
+
+    # s 6abba "Maybe, I'll improve my skills for the next time."
+    s 6abba "Eble, mi poste estos pli lerta."
+
+# TODO: Translation updated at 2019-02-13 19:14
+
+# game/poems.rpy:780
 translate epo s_poems_sunshine_d5de3656:
 
     # s 6acaa "Do you know, that this poem is about your avatar, [player]?"
-    s 6acaa "Ĉu vi scias, ke ĉi tiu versaĵo estas pri via avataro, [player]?"
+    s 6acaa "Ĉu vi scias, ke ĉi-versaĵo estas pri via avataro, [player]?"
 
-# TODO: Translation updated at 2018-10-29 23:13
-
-# game/poems.rpy:831
+# game/poems.rpy:804
 translate epo s_poems_bottles_2b9d7ff2:
 
     # s 6acba "Ironically, the shelf with them really fell some time after I'd written this poem."
-    s 6acba "Ironie, la botela ŝranko ja falis post mi montris ĉi-versaĵon al vi."
+    s 6acba "Ironie, la ŝranko vere falis post mi verkis ĉi-versaĵon."
 

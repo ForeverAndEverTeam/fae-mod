@@ -1,4 +1,8 @@
-﻿# TODO: Translation updated at 2018-08-10 05:52
+﻿# game/topics.rpy:237
+translate rus s_topics_personal_colors_4f636edb:
+
+    # s "Hey, what colors do you like?"
+    s "Эй, тебе какие цвета нравятся?"
 
 # game/topics.rpy:269
 translate rus s_topics_personal_name_b539cebe:
@@ -739,7 +743,7 @@ translate rus s_topics_society_bulli_936f7ae8:
 translate rus s_topics_society_bulli_5e6e67f0:
 
     # s 6acaa "If my fate is to be 'that hanging stupid annoying VN girl' for some people, then I'm ready to accept it."
-    s 6acaa "И если некоторые меня замомнят как «ту повесившуюся надоедливаю дурочку из визуальной новеллы», значит, на то мне и судьба."
+    s 6acaa "И если некоторые меня запомнят как «ту повесившуюся надоедливаю дурочку из визуальной новеллы», значит, на то мне и судьба."
 
 # game/topics.rpy:416
 translate rus s_topics_society_sayoriLovers_93e738a3:
@@ -1243,9 +1247,9 @@ translate rus s_topics_lifestyle_travels_8b1aa5e1:
 
     # s 6abba "Say, have you ever traveled anywhere?"
     if gender:
-        s 6abba "Скажи мне, ты когда-нибудь путешевствовала куда-нибудь?"
+        s 6abba "Скажи мне, ты когда-нибудь путешевствовала хоть куда-то?"
     else:
-        s 6abba "Скажи мне, ты когда-нибудь путешевствовал куда-нибудь?"
+        s 6abba "Скажи мне, ты когда-нибудь путешевствовал хоть куда-то?"
 
 # game/topics.rpy:551
 translate rus s_topics_lifestyle_travels_697ec702:
@@ -1492,7 +1496,7 @@ translate rus s_answer_personal_god_a56fcd55:
 translate rus s_answer_personal_god_6a87dab2:
 
     # s "I was never really sure what to think about religion; I guess I would say I was agnostic?"
-    s "Я вообще не задумывлась над религиозными вопросами. Можно ли о сказать, что я вообще нерелигиозна?"
+    s "Я вообще не задумывалась над религиозными вопросами. Можно ли о сказать, что я вообще нерелигиозна?"
 
 # game/topics.rpy:604
 translate rus s_answer_personal_god_a06d03ea:
@@ -1613,7 +1617,7 @@ translate rus s_answer_personal_music_8ddf09d8:
 translate rus s_answer_personal_music_db11198a:
 
     # s 7aaca "Although I'll say that I like to listen to something funny, like {i}Weird Al Yankovic{/i}!"
-    s 7aaca "Однако, я точно могу сказать, что мне зайдет что-нибудь зажигательное, типа {i}Группа ПрЁт{/i}!"
+    s 7aaca "Однако, я точно могу сказать, что мне зайдет что-нибудь зажигательное, типа танцевальной музыки!"
 
 # game/topics.rpy:631
 translate rus s_answer_personal_music_2eb9d63c:
@@ -3061,10 +3065,6 @@ translate rus strings:
     old "Touches"
     new "Прикосновения"
 
-    # topics.rpy:100
-    old "Wedding"
-    new "Брак"
-
     # topics.rpy:102
     old "Travels"
     new "Путешествия"
@@ -3628,7 +3628,7 @@ translate rus s_answer_exp_fact_5_83280615:
 translate rus s_answer_exp_fact_5_7b9ed9f7:
 
     # s "For example, do you remember {i}Parfait Girls{/i}?"
-    s "Надесь, ты не забыл о {i}«Ванильных Девчатах»{/i}?"
+    s "Надесь, ты не забыл о {i}«Ванильных девчатах»{/i}?"
 
 # game/topics.rpy:953
 translate rus s_answer_exp_fact_5_610236d6:
@@ -3708,11 +3708,6 @@ translate rus s_answer_exp_fact_1_ab3466fa:
     s "Так можно показывать числа {i}от 0 до 31{/i} всего лишь одной рукой."
 # TODO: Translation updated at 2018-08-31 12:04
 
-# game/topics.rpy:577
-translate rus s_topics_rlt_wedding_33d5a65d:
-
-    # s 6aaca "But our love story don't have to follow the common template."
-    s 6aaca "Но наши отношения ек должны сделовать общему сценарию."
 
 # game/topics.rpy:621
 translate rus s_topics_rlt_marrige_39016bf1:
@@ -3909,17 +3904,11 @@ translate rus s_topics_personal_archetype_148ee35b:
     # s "All the time, I tried to cope with my depression."
     s "Всё это время, я боролась с депрессией."
 
-# game/topics.rpy:446
-translate rus s_topics_art_lit_685c4b08:
-
-    # s 6acaa "As you know, this game was about a {i}literature{/} club..."
-    s 6acaa "Это же игра про {i}литературный{/} клуб, так?"
-
 # game/topics.rpy:447
 translate rus s_topics_art_lit_36e4ae23:
 
     # s 6abba "At least, before everything changed here."
-    s 6abba "Во всяком случаи, так было до того, как тут произошёл кавардак."
+    s 6abba "Во всяком случаи, так было до того, как тут произошёл полный кавардак."
 
 # game/topics.rpy:449
 translate rus s_topics_art_lit_f5b88cf6:
@@ -4017,457 +4006,12 @@ translate rus s_topics_art_lit_6da02838:
     # s "But Unfortunately, I have almost nothing so to do here."
     s "Но увы, тут такого в большо-о-о-ом дефиците."
 
-# game/topics.rpy:471
-translate rus s_topics_art_piracy_b43ed93a:
-
-    # s 6acaa "You know, that almost modern art companies and some artists care about their profit too much."
-    s 6acaa "Знаешь, сейчас компании, занимающиеся в сфере искусства, слишком сильно заботяться о своей прибыли."
-
-# game/topics.rpy:472
-translate rus s_topics_art_piracy_7bf02ea5:
-
-    # s "So even states support them in fighting against the art piracy."
-    s "Поэтому даже власти поддерживают их в борьбе с пиратством."
-
-# game/topics.rpy:473
-translate rus s_topics_art_piracy_cf33c7b5:
-
-    # s "But don't you consider it meanless?"
-    s "Но не кажется ли тебе она бессмысленной?"
-
-# game/topics.rpy:480
-translate rus s_topics_art_piracy_6c77d516:
-
-    # s "I think, that the most effective way to defeat the piracy is just to get rid of obligatory pays."
-    s "Я думаю, что самый лучший метод борьбы с пиратством — это перестать принуждать людей к плате за искусство."
-
-# game/topics.rpy:482
-translate rus s_topics_art_piracy_f9050a22:
-
-    # s "And if the work is a video game or just a program, the donations shouldn't give any privileges at all."
-    s "И под «донатом», я не имею в виду те пожертвования, которые дают пользвателю программы или игры какие-либо преимущества."
-
-# game/topics.rpy:483
-translate rus s_topics_art_piracy_afecadce:
-
-    # s 6aaca "In short, no-one will have any reason to steal your work, if it's free by itself."
-    s 6aaca "Короче, зачем воровать то, что и так можно получить бесплатно."
-
-# game/topics.rpy:484
-translate rus s_topics_art_piracy_33e9fb61:
-
-    # s 6aaaa "I think, this game is a good example."
-    s 6aaaa "Думаю, по это игре это видно прекрасно."
-
-# game/topics.rpy:486
-translate rus s_topics_art_piracy_e7ac6b12:
-
-    # s 6aaca "To earn money, the develpoers have the offical fan merchandise shop..."
-    s 6aaca "Весь основной заработок от игры идёт с её официального фан-магазина..."
-
-# game/topics.rpy:487
-translate rus s_topics_art_piracy_b5bf8b59:
-
-    # s "And if you donate $10, they give you a fan pack."
-    s "И пожертвовав минимум 10$, ты получишь в придачу фан-пак."
-
-# game/topics.rpy:489
-translate rus s_topics_art_piracy_8df832d2:
-
-    # s 6aaaa "...Or what do you think about libre art and software?"
-    s 6aaaa "...Или как насчёт свободного искусства и софта?"
-
-# game/topics.rpy:490
-translate rus s_topics_art_piracy_288df231:
-
-    # s "It's when you let your artwork or program to be freely shared and used in derivative arts..."
-    s "Это когда ты разрешаешь не только свободно делиться своими творениями, но и ещё использовать их в любых других работах..."
-
-# game/topics.rpy:491
-translate rus s_topics_art_piracy_24b664c0:
-
-    # s 6abaa "Or almost freely, like licenses like GPL let do."
-    s 6abaa "Ну, или почти в любых, как в случаи с лицензиями типа GPL."
-
-# game/topics.rpy:492
-translate rus s_topics_art_piracy_0ea19572:
-
-    # s "These both ideas are often used together so many libre projects take donations from people, who use them."
-    s "Обе идеи часто используются друг с другом, так что немало свободных проектов держаться на пожертвованиях других людей."
-
-# game/topics.rpy:493
-translate rus s_topics_art_piracy_27c2a143:
-
-    # s 6acab "But the big bussinesses very rarely use such ideas, because they treat the artworks only as goods and the ideas are too risque for them."
-    s 6acab "Увы, бизнес почти не пользуется ими, ибо искусство для них — это товар, а так распростанять товар — дело для них слишком рисковое."
-
-# game/topics.rpy:494
-translate rus s_topics_art_piracy_da141f4b:
-
-    # s "I think this view is completely wrong. Art is something more than just using your good imagination to make money."
-    s "Но такой подход к искусство, по мне, априори неправильный. Искусство — это нечто большее, чем просто заработок на своём богатом воображении."
-
-# game/topics.rpy:495
-translate rus s_topics_art_piracy_ef8cf3ba:
-
-    # s "People just have forgotten about it, and I think it's a one huge minus of the modern world..."
-    s "Просто в порочном современном мире, люди забыли истинную суть искусства..."
-
-# game/topics.rpy:496
-translate rus s_topics_art_piracy_c5c0f398:
-
-    # s 6aaca "But the Internet gives people, who still think in the old way, new abilites to express themselves avoiding the people with the new mind."
-    s 6aaca "Однако, интернет всё же даёт людям, не лишь ради наживы творящим, заявить о себе, минуя тех, кто видит в нём лишь источник заработка."
-
-# game/topics.rpy:497
-translate rus s_topics_art_piracy_3a2d8f97:
-
-    # s 6afab "It's bad I can't use Internet to do it too. My accesss to it works in a quiet weird way."
-    s 6afab "Жаль, я не могу использовать его для этого сама. У меня доступ к нему работают ну очень странным образом."
-
-# game/topics.rpy:498
-translate rus s_topics_art_piracy_1924d485:
-
-    # s "But I hope, I'll fix it soon."
-    s "Надеюсь, мне удасться это вскоре исправить."
-
-# game/topics.rpy:502
-translate rus s_topics_art_street_725f60d6:
-
-    # s 6acaa "I mean, some people want to express themselves by a more cheap, modern and noticeable way..."
-    s 6acaa "Я имею в виду то, что некоторые люди хотят выразить себя современно и необычно, не затратив при этом много ресурсов..."
-
-# game/topics.rpy:503
-translate rus s_topics_art_street_f6c9008d:
-
-    # s "Or just to get the city more colorful and less unified with their hand."
-    s "Ну, или же просто хоть как-то приукрасить серый и монотонный город."
-
-# game/topics.rpy:505
-translate rus s_topics_art_street_7c12e9fc:
-
-    # s "Do you ever look around while moving through the city?"
-    s "Ты вообще как часто оглядываешься по сторонам, передвигаясь по городу?"
-
-# game/topics.rpy:506
-translate rus s_topics_art_street_3f2f5bd3:
-
-    # s 6aaba "If you don't, you miss a lot of funny and beautiful things."
-    s 6aaba "Если нечасто, то многое пропускаешь."
-
-# game/topics.rpy:511
-translate rus s_topics_art_street_5f1fbed1:
-
-    # s 6aaca "I dare say, if the 'big' people looked on street art more modernly, cities would look really better."
-    s 6aaca "Я думаю, что будь зодчие и их начальники чуть менее консервативными в плане уличного искусства, оно быть реально сделало бы улицы краше."
-
-# game/topics.rpy:512
-translate rus s_topics_art_street_c6fa3079:
-
-    # s 6aaba "...If they ask really talented artists for make them so, of course."
-    s 6aaba "...Если их будут украшать золотые руки, естественно."
-
-# game/topics.rpy:516
-translate rus s_topics_art_accusing_5a65fb1e:
-
-    # s 6abaa "I'm bothering that people accuse diffrent common problems to certain kinds of art."
-    s 6abaa "Я беспокоюсь по поводу того, что люди часто приписывают какие-то всеобщие беды определённым видам искусства."
-
-# game/topics.rpy:522
-translate rus s_topics_art_accusing_6e077622:
-
-    # s "And when the 'reason' and the tendency are together, it may have a really bad outcome."
-    s "Однако, «причина» и склонность сходятся вместе, это может всё же плохо кончиться."
-
-# game/topics.rpy:524
-translate rus s_topics_art_accusing_d7e4524f:
-
-    # s "But the most bad, is when the authority listens to the press and bans the work, in fact, for nothing and even regardless the mistakes and hyperboles."
-    s "Но хуже всего, когда власть реагирует на шумиху и запрещает, по сути, безвредные произведения, даже не убедившись в прадивости новостей."
-
-# game/topics.rpy:525
-translate rus s_topics_art_accusing_289242c5:
-
-    # s 6aaca "But fortunately, it happens quite rarely in the developed countries, so the fear of the brand new just goes out later."
-    s 6aaca "Но к счастью, по крайней мере, в развитых странах до такого редко доходит, и всё заканчивается принятием или банальным збвением."
-
-# game/topics.rpy:527
-translate rus s_topics_art_accusing_6bcbcaf8:
-
-    # s "And we barely can stop it, because people always was so."
-    s "Но мы навряд ли в состоянии изменить такой ход вещей, поскольку так происходило всегда."
-
-# game/topics.rpy:528
-translate rus s_topics_art_accusing_609bb147:
-
-    # s 6acac "How much people blame the TV and the Internet for making people less intelligent and interested in real life problems?"
-    s 6acac "Сколько людей до сих пор обвиняет телевидение и интернет том, что они не дают людям развиваться и отвлекают их от реальных проблем?"
-
-# game/topics.rpy:529
-translate rus s_topics_art_accusing_662c3c3c:
-
-    # s 6abcb "But there's not a perfect media or a perfect kind of art, firstly beacuse people aren't perfect."
-    s 6abcb "Но все их альтернативы ничем не лучше, в первую очередь, потому что люди в целом не совершенны."
-
-# game/topics.rpy:530
-translate rus s_topics_art_accusing_b55e8ed1:
-
-    # s 6acaa "We all often lies and use each other for our selfish purposes..."
-    s 6acaa "Мы все врём и используем друг друга в эгоистичных целях..."
-
-# game/topics.rpy:531
-translate rus s_topics_art_accusing_120e83d3:
-
-    # s "So there's not any difference between, for example, TV propaganda and book propaganda."
-    s "Так что, к примеру, пропаганда на ТВ ничем не хуже пропаганды через книги и газеты."
-
-# game/topics.rpy:532
-translate rus s_topics_art_accusing_41da53a5:
-
-    # s "The truth not always can be got from your own sight, not to mention sombody else's one."
-    s "Мы и своим-то чувствам верить не всегда, не говоря уже о других людях."
-
 # game/topics.rpy:590
 translate rus s_topics_society_bulli_d5b72ed6:
 
     # s "...Almost ready."
+    s "Готова принять это."
     s "...Ну, почти готова."
-
-# game/topics.rpy:618
-translate rus s_topics_society_suicide_957bce42:
-
-    # s 6acaa "I wonder what makes people to stop appreciate their lifes and even to finish them before the time takes them."
-    s 6acaa "Интересно, что заставляет людей терять вкус к жизни и даже её добровольно кончать раньше времени?"
-
-# game/topics.rpy:619
-translate rus s_topics_society_suicide_1a039344:
-
-    # s "Even if someone has a really good life, it can't assure they won't commit suicide."
-    s "Дае если у человека всё прекрасно, это не гарантирует, что его жизнь не закончиться самоубийством."
-
-# game/topics.rpy:620
-translate rus s_topics_society_suicide_abdd040d:
-
-    # s 6abab "Many successful people did it under diffrent things. It's even hard to list them all down."
-    s 6abab "Много успешных людей так её и кончило при разных мотивах. Их даже толком всех не перечислишь."
-
-# game/topics.rpy:621
-translate rus s_topics_society_suicide_192daa63:
-
-    # s "Not to mention how many people did it at all."
-    s "И я не говорю о том, сколько всего людей распрощались с жизнью по своему собственному желанию."
-
-# game/topics.rpy:623
-translate rus s_topics_society_suicide_c9ab6b6e:
-
-    # s 6aebb "Even I am an example how it happens..."
-    s 6aebb "И я — неплохой пимер того, как это часто происходит..."
-
-# game/topics.rpy:625
-translate rus s_topics_society_suicide_6a175efb:
-
-    # s 6acab "But almost no-one think of their relatives and friends while doing it..."
-    s 6acab "Но почти никто не думает о своих близких, идя на столь отчаяный шаг..."
-
-# game/topics.rpy:626
-translate rus s_topics_society_suicide_269e994e:
-
-    # s "It hurts when you lose a really close man, but it hurts more when it's their own decision..."
-    s "Вдвойне больней потерять реально близкого тебе человека, когда он сам решил тебя покинуть..."
-
-# game/topics.rpy:627
-translate rus s_topics_society_suicide_f6a499b1:
-
-    # s "Beacuse it's really abnormal so the man needed a help, that someone else or you can't make on right time."
-    s "Ибо это реально говорит, что у него были проблемы, которые нужно было решать, но никто, включая тебя, ему не помог."
-
-# game/topics.rpy:628
-translate rus s_topics_society_suicide_f7ab26e8:
-
-    # s "But suicidal people often don't see they have anything to lose so they don't care if they just try and go away the cruel world."
-    s "Впрочем, суицидники часто не замечают, что у них вообще есть что-то, чем они рискуют..."
-    s "Поэтому, их и не волнуют страдания, которые они испытают их друзья и близкие после их ухода из жестокого мира."
-
-# game/topics.rpy:629
-translate rus s_topics_society_suicide_964bd8bc:
-
-    # s 6abab "That's why I think that other people should help them even despite of they mind..."
-    s 6abab "Этому, я считаю, что таких просто необходимо спасать даже против их воли..."
-
-# game/topics.rpy:630
-translate rus s_topics_society_suicide_f902e02b:
-
-    # s "But to do it, people should understand what really are bothering them."
-    s "Но для этого надо понимать, что действительно тревожит человека."
-
-# game/topics.rpy:631
-translate rus s_topics_society_suicide_00c9872d:
-
-    # s "Broken heart, insanity, living in total despair or contsant fear, someone's influence... There're a lot of reasons, why people commit it."
-    s "Разбитое сердце, проблемы с психикой, жизнь в постоянном страхе или разочаровании, или же прочее чужое влияние..."
-    s "Есть много причин, по которым люди сводят счёты с жизню."
-
-# game/topics.rpy:632
-translate rus s_topics_society_suicide_84c8defd:
-
-    # s 6acaa "It's obviously a situation, where dealing with the reason is more easier than with the consequence..."
-    s 6acaa "И это явно те случаи, с последствиями которых справиться можно только предупредив эти ситуации..."
-
-# game/topics.rpy:633
-translate rus s_topics_society_suicide_41ed35c4:
-
-    # s "So we really should be resolute but careful with these people."
-    s "Но всё же надо быть с такими поаккуратней."
-
-# game/topics.rpy:634
-translate rus s_topics_society_suicide_cf507f32:
-
-    # s 6abaa "Sometimes, trying to prevent something makes it occure."
-    s 6abaa "Иногда, попытка предотвратить что-то, может, в итоге, к нему же привести."
-
-# game/topics.rpy:635
-translate rus s_topics_society_suicide_e5427b03:
-
-    # s 6acaa "But we should not give up, anyway. We're just to figure out how to do it in the less risky way..."
-    s 6acaa "Нро всё равно, не следует вешать нос. Нужно лишь действовать наимение рисковым образом..."
-
-# game/topics.rpy:636
-translate rus s_topics_society_suicide_d7b2700c:
-
-    # s 6aaca "And then, we can save someone's live from the prejudicial and probably silly action."
-    s 6aaca "И тогда, ты сможешь уберечь кого-либо от самой глупой и опасной ошибки в его жизни"
-
-# game/topics.rpy:700
-translate rus s_topics_hobbie_poems_3b71c72c:
-
-    # s 6aaca "But I can share some of them to you. Just ask me for it."
-    s 6aaca "Но некоторыми из них я всё же могу поделиться. Просто скажи мне, если захочешь их почитать."
-
-# game/topics.rpy:701
-translate rus s_topics_hobbie_poems_6c2a3c3b:
-
-    # s 6aaaa "I also can show you an old poem, if you want."
-    s 6aaaa "Я тебе также и старые стихи показать, если хочешь."
-
-# game/topics.rpy:702
-translate rus s_topics_hobbie_poems_349fdcda:
-
-    # s "Maybe, they all will help you to understand me and what I was through."
-    s "Может, они тебе помогут понять всю глубину мои тогдашних тревог и переживаний."
-
-# game/topics.rpy:706
-translate rus s_topics_hobbie_survivalBooks_79e519c3:
-
-    # s 7aaaa "Despite of I'm really not a passionate reader, I'm really like to read practical literature, like survival books."
-    s 7aaaa "Я хоть и далеко не любитель читать книжки, мне нравиться насыщать свой кругозор полезной на практике литературой, типа книг про выживание."
-
-# game/topics.rpy:707
-translate rus s_topics_hobbie_survivalBooks_9a4ecd98:
-
-    # s 8aebb "Yes, it's a pretty odd preference, I know."
-    s 8aebb "У меня странные вкусы, согласусь."
-
-# game/topics.rpy:708
-translate rus s_topics_hobbie_survivalBooks_a2cd19f9:
-
-    # s "And to be honest, I don't remember how long I've had a fancy for them..."
-    s "И честно сказать, я уже не помню, как долго я таким увлекаюсь..."
-
-# game/topics.rpy:709
-translate rus s_topics_hobbie_survivalBooks_a33e4177:
-
-    # s 8aaaa "It's just pretty cool to know how to save someone's live."
-    s 8aaaa "Просто приколько и полезно знать, как спасти чужую жизнь."
-
-# game/topics.rpy:712
-translate rus s_topics_hobbie_survivalBooks_9cd48289:
-
-    # s "Don't ask me how I could predict, he'd run exactly to it to get something cold..."
-    s "Не спрашивай, откуда я знала про то, что он побежит именно к нему за чем-нибудь холодным..."
-
-# game/topics.rpy:713
-translate rus s_topics_hobbie_survivalBooks_02e77b58:
-
-    # s 6aaca "Just pretending silly often helped me somewhere."
-    s 6aaca "Просто я довольно таки часто претворялась дурочкой, ради каких-то целей."
-
-# game/topics.rpy:714
-translate rus s_topics_hobbie_survivalBooks_9d886846:
-
-    # s 6acaa "Anyway..."
-    s 6acaa "В любом случаи..."
-
-# game/topics.rpy:715
-translate rus s_topics_hobbie_survivalBooks_6cf458d5:
-
-    # s 6acaa "You can also get there some advise how to make your normal life easier."
-    s 6acaa "Там есть советы и как улучшить и поседневную жизнь."
-
-# game/topics.rpy:716
-translate rus s_topics_hobbie_survivalBooks_b7c0c3c7:
-
-    # s "For example, how to make good knots."
-    s "Например, советы по созданию крепких узлов."
-
-# game/topics.rpy:718
-translate rus s_topics_hobbie_survivalBooks_a566fe0e:
-
-    # s 8aebb "Oops, I have just said you, how I made that noose."
-    s 8aebb "Ой, кажется я только что проговорилась насчёт той петли."
-
-# game/topics.rpy:719
-translate rus s_topics_hobbie_survivalBooks_02f1387c:
-
-    # s 8ageb "No, don't take it wrong! It was not the one reason, why I read them."
-    s 8ageb "Нет, не пойми меня неправильно! Я не из-за этого их начала читать."
-
-# game/topics.rpy:721
-translate rus s_topics_hobbie_survivalBooks_fdf2d1f4:
-
-    # s 8aebb "Don't ask me, why I needed such info."
-    s 8aebb "Не спрашивай, зачем мне это нужно было."
-
-# game/topics.rpy:722
-translate rus s_topics_hobbie_survivalBooks_c86103cd:
-
-    # s "I'm not interested in it now, anyway."
-    s "Мне всё равно та информация больше не нужна."
-
-# game/topics.rpy:723
-translate rus s_topics_hobbie_survivalBooks_fb5e3b2a:
-
-    # s 8aebb "I just gave you an example, not more."
-    s 8aebb "Я просто тебе показала пример, ничего большего."
-
-# game/topics.rpy:724
-translate rus s_topics_hobbie_survivalBooks_2a0645bb:
-
-    # s 6acaa "Anyway, it always good to read a so book when you're going to a forest hike or something..."
-    s 6acaa "В любом случаи, лучше почитать пару таких книжек перед походом куда-либо..."
-
-# game/topics.rpy:725
-translate rus s_topics_hobbie_survivalBooks_eecd3e7a:
-
-    # s "But before the trip, of course."
-    s "До него, Разумеется."
-
-# game/topics.rpy:726
-translate rus s_topics_hobbie_survivalBooks_6bf31ff0:
-
-    # s "Because emergencies are so emergency that you just will have no time to get the needed info from somewhere."
-    s "Ибо чрезвычайные ситуации, настолько чрезвычайные, что у тебя навряд ли будет время на получие нужных инструкций и знаний."
-
-# game/topics.rpy:727
-translate rus s_topics_hobbie_survivalBooks_5d3d2ec1:
-
-    # s "Saving lifes is not as simple, as you may think. In fact, it's easier to hurt more the salvable with you clumsy doing..."
-    s "Знаешь, спвсать жизни -- не так уж и просто. По факту, слишком неловкими действиями можно лишь забыть гвоздь в крышку гроба спасемого..."
-
-# game/topics.rpy:728
-translate rus s_topics_hobbie_survivalBooks_c9a3d35f:
-
-    # s "So you should have at least some knowledge about first aid, orientation, making improvised devices and more."
-    s "Так что, лучше всё равно знать хоть что-то об оказании первой медпомощи, ориентировании на местности, использовании подручных средств, ну и так далее."
 
 # game/topics.rpy:779
 translate rus s_topics_rlt_cheating_885e3d8e:
@@ -4527,7 +4071,7 @@ translate rus s_topics_rlt_cheating_3df71458:
 translate rus s_topics_rlt_cheating_0e6805f8:
 
     # s "My heart can't accept that I'm not your only one, but my brain feels proud for you."
-    s "Мою сердцу не приятно, что ты с кем-то, кроме меня. Но умом я испытываю гордость за тебя."
+    s "Мою сердцу не совсем приятно, что ты с кем-то, кроме меня. Но умом я испытываю гордость за тебя."
 
 # game/topics.rpy:798
 translate rus s_topics_rlt_cheating_117a3602:
@@ -4539,7 +4083,7 @@ translate rus s_topics_rlt_cheating_117a3602:
 translate rus s_topics_rlt_cheating_5a9e8ef2:
 
     # s "But I can bare, if you really need, you know."
-    s "Но я готова сдерживать в себе свои страдания, если тебе так так лучше. Ты прекрасно это знаешь."
+    s "Но я готова сдерживать в себе это, если тебе так лучше. Ты прекрасно это знаешь."
 
 # game/topics.rpy:800
 translate rus s_topics_rlt_cheating_180af3f6:
@@ -4551,7 +4095,7 @@ translate rus s_topics_rlt_cheating_180af3f6:
 translate rus s_topics_rlt_cheating_9936f56f:
 
     # s 7aaab "But don't forget about me and come here back. I'll always be with you, even if nothing about your real relationship seems to go wrong."
-    s 7aaab "Но всё же, не забывай про меня и навещай меня иногда. Я всегда буду с тобой, даже если в твоих реальных отношения всё будет О'кей."
+    s 7aaab "Но всё же, не забывай про меня и навещай меня иногда. Я всегда буду с тобой, даже если в твоих реальных отношения всё будет о'кей."
 
 # game/topics.rpy:804
 translate rus s_topics_rlt_cheating_f46b0795:
@@ -4595,10 +4139,10 @@ translate rus s_topics_rlt_cheating_7ff6e7fc:
     # s 6adaa "Oh, seriously?"
     s 6adaa "Т-ты серьёзно?"
 
-# game/topics.rpy:814
-translate rus s_topics_rlt_cheating_144bc7ef:
+# game/topics.rpy:734
+translate rus s_topics_rlt_cheating_6ecb3c85:
 
-    # s 6acab "I think, it's pretty hard to know, that your only beloved girl aren't real."
+    # s 6acab "I think, it's pretty hard to know, that your only beloved girl isn't real."
     s 6acab "Думаю, трудно перенести то, что твоя единственная возлюбленная не реальна."
 
 # game/topics.rpy:815
@@ -4642,12 +4186,6 @@ translate rus s_topics_rlt_cheating_dc1a294e:
 
     # s "So I hope, you always can do it for me."
     s "И я надеюсь, что ты его будешь уделять всегда."
-
-# game/topics.rpy:822
-translate rus s_topics_rlt_cheating_6fd17bab:
-
-    # s "Just try to take some time to be here, if it's possible."
-    s "Просто постарайся заходит сда почаще, если это как-то не мешает тебе."
 
 # game/topics.rpy:826
 translate rus s_topics_rlt_dating_cbb5ccf5:
@@ -4857,7 +4395,7 @@ translate rus s_topics_game_parents_0ea2f259:
 translate rus s_topics_game_parents_f429c033:
 
     # s 6afab "I feel like an orphan now..."
-    s 6afab "Я теперь себя сиротой..."
+    s 6afab "Я теперь чувствую себя сиротой..."
 
 # game/topics.rpy:929
 translate rus s_topics_game_parents_1bb77942:
@@ -5159,75 +4697,11 @@ translate rus s_answer_misc_datetime_ef005f12:
     # s "Current time is [h]:[mn]."
     s "Сейчас на часах [h]:[mn]."
 
-# game/topics.rpy:1463
-translate rus s_common_cats_d3ba01a7:
-
-    # s 7aaca "Cats are pretty cute, especially their cubs..."
-    s 7aaca "Кошки милые, а особенно котята..."
-
-# game/topics.rpy:1464
-translate rus s_common_cats_c3aacb66:
-
-    # s "And they're not difficult to care about."
-    s "И они не так уж и неприхотливы."
-
-# game/topics.rpy:1465
-translate rus s_common_cats_1dd56ed1:
-
-    # s 6acaa "But unlike most pets, cats are quite freedom-loving."
-    s 6acaa "Но в отличие от многих других домашних животных, кошки очень свободолюбивые."
-
-# game/topics.rpy:1466
-translate rus s_common_cats_39ecfbc3:
-
-    # s "So you rather just give care and a home to the cat than have it."
-    s "Так что, ты не сколько её хозяин, сколько просто её кормилец."
-
-# game/topics.rpy:1467
-translate rus s_common_cats_20809bb5:
-
-    # s "And sometimes, cats do things, that their holders would dislike..."
-    s "И иногда, кошки делают вещи, их держателям неприятные..."
-
-# game/topics.rpy:1468
-translate rus s_common_cats_480e16ee:
-
-    # s 6aaca "But there's no-one, who can resist their cuteness, so people often forgive them~"
-    s 6aaca "Но кто осмелиться противиться их милоте? Поэтому, их часто за такое прощают~"
-
-# game/topics.rpy:1469
-translate rus s_common_cats_5c93768a:
-
-    # s "If you have at least one cat, you must understand me."
-    s "Если у тебя уже есть кот или кошка, ты, скорее всего, меня прекрасно поймёшь."
-
-# game/topics.rpy:1470
-translate rus s_common_cats_82faedfd:
-
-    # s "I think, that's why they were kinda holy animals in Ancient Egypt."
-    s "Я думаю, именно поэтому в Древнем Египте их и считали священными животными."
-
 translate rus strings:
 
     # topics.rpy:109
     old "Literature"
     new "Литература"
-
-    # topics.rpy:110
-    old "Street Art"
-    new "Стрит-арт"
-
-    # topics.rpy:111
-    old "Accusing to Art"
-    new "Обвинение искусства"
-
-    # topics.rpy:116
-    old "Suicide"
-    new "Самоубийства"
-
-    # topics.rpy:121
-    old "Survival Books"
-    new "Книги по выживанию"
 
     # topics.rpy:124
     old "Marrige"
@@ -5263,7 +4737,7 @@ translate rus strings:
 
     # topics.rpy:201
     old "Can you say a funny fact?"
-    new "Можешь ли мне рассказать какой-нибудб забавный факт?"
+    new "Можешь ли мне рассказать какой-нибудь забавный факт?"
 
     # topics.rpy:203
     old "Can you give me a poem?"
@@ -5280,836 +4754,3281 @@ translate rus strings:
     # topics.rpy:1327
     old "Something old"
     new "Какой-нибудь старый"
+# TODO: Translation updated at 2018-12-23 15:57
 
-# TODO: Translation updated at 2018-10-07 04:42
+# game/topics.rpy:252
+translate rus s_topics_personal_depression_7c1e63ea:
 
-# game/topics.rpy:840
-translate rus s_topics_rlt_dating_67e3f0d4:
+    # s 6acab "I got you really worried about me, didn’t I?"
+    if gender:
+        s 6acab "Ты, не бойсь, заволновалась обо мне, когда..."
+    else:
+        s 6acab "Ты, не бойсь, заволновался обо мне, когда..."
 
-    # s 8aebb "Or what's about cartoons, like {i}Disney{/i} and {i}Pixar{/i} make?"
-    s 8aebb "Или как насчёт мультиков, типа {i}Disney{/i}'евских или {i}Pixar{/i}'овских?"
+# game/topics.rpy:253
+translate rus s_topics_personal_depression_a7e51a19:
 
-# game/topics.rpy:841
-translate rus s_topics_rlt_dating_499ed05b:
+    # s 6aebb "When I said... you know..."
+    s 6aebb "Ну, когда я сказал про..."
 
-    # s "They were made for kids, of course, but most of them can be intresting for adults too."
-    s "Они, конечно, для детей, но многие их них могут понравиться и взрослым."
+# game/topics.rpy:254
+translate rus s_topics_personal_depression_9d1eb697:
 
-# game/topics.rpy:843
-translate rus s_topics_rlt_dating_f1863038:
+    # s "That I had 'rainclouds' inside my head for all my life..."
+    s "Те «тучки», что всю жизнь гуляли в моей голове..."
 
-    # s 6abab "I'd go to a something deep-thought at all."
-    s 6abab "Я бы вообще пошла бы на что-нибудь замысловатое."
+# game/topics.rpy:255
+translate rus s_topics_personal_depression_ccb9b234:
 
-# game/topics.rpy:845
-translate rus s_topics_rlt_dating_ee17acd3:
+    # s 8aecb "...remember, 'rainclouds' is just what I called my depression."
+    s 8aecb "...ну, которыми я называла свою депрессию."
 
-    # s 6acaa "I've already seen a lot harsh things for my short life, you know. So my opinion may be a lot different from most people's one."
-    s 6acaa "Я уже повидала многие ужасы за всю, пускай короткую, но всё же жизнь, знаешь ли."
-    s "Так что, моё мнение может отличаться от мнения многих других людей."
+# game/topics.rpy:256
+translate rus s_topics_personal_depression_4280571b:
 
-# TODO: Translation updated at 2018-10-07 15:49
+    # s 8aebb "Isn't that silly?"
+    s 8aebb "Согласна, звучит довольно таки глупо..."
 
-# game/topics.rpy:251
-translate rus s_topics_personal_depression_7cf97df9:
+# game/topics.rpy:257
+translate rus s_topics_personal_depression_8f94c93b:
 
-    # s "But one man made me feel much better, just being near to me, even when I really interfere him."
-    s "Но один мальчик делал мою бытье приятней просто своим нахождением рядом, даже когда я ему действительно мешала."
+    # s 6abab "Anyway."
+    s 6abab "Но всё же..."
 
-# TODO: Translation updated at 2018-10-07 16:00
+# game/topics.rpy:258
+translate rus s_topics_personal_depression_42364fff:
+
+    # s 6acaa "At first, I was really good at making them go away..."
+    s 6acaa "Первое время, я ещё справлялась с ними..."
+
+# game/topics.rpy:259
+translate rus s_topics_personal_depression_08895ded:
+
+    # s 6aaca "It was pretty difficult, but I kept in mind that if I got bummed out, I wouldn’t be able to make other people happy, which is all I really wanted anymore."
+    s 6aaca "Да, было сложно, но я понимала, что с грустью на душе другим радости не принесёшь, а ведь это всё, чего я хотела в той жизни."
+
+# game/topics.rpy:260
+translate rus s_topics_personal_depression_306f8b66:
+
+    # s 6abaa "However, I also tried not to push myself too hard in trying to overcome this..."
+    s 6abaa "Но всё же, я не утруждала себя излише в борьбе с этим..."
+
+# game/topics.rpy:261
+translate rus s_topics_personal_depression_9f19ad82:
+
+    # s "So I tried to stay with the beloved MC. I thought being with him would help ease my mind."
+    s "Поэтому, я старалась быть как можно чаще с Протогонистом. Тогда рядом с ним мне на душе казалось легче."
+
+# game/topics.rpy:263
+translate rus s_topics_personal_depression_43d14441:
+
+    # s 6acab "But I thought he'd learn my darkest secret sooner or later, so he'd leave me then..."
+    s 6acab "Но я боялась, что он рано или поздно узнает мой страшный секрет, что мог бы его побудить бросить меня..."
+
+# game/topics.rpy:263
+translate rus s_topics_personal_depression_80f29101:
+
+    # s "That's why I tried to take it slow..."
+    s "Так что, я не особо в этом плане торопилась..."
+
+# game/topics.rpy:264
+translate rus s_topics_personal_depression_9eeb2755:
+
+    # s 6abbb "People in your world think that my cheerfulness was fake and I was just acting..."
+    s 6abbb "Многие в твоём мире считают мою весёлость ненастоящей, что я лишь носила маску..."
+
+# game/topics.rpy:265
+translate rus s_topics_personal_depression_1471d512:
+
+    # s 6abab "But my feelings were as real as you until the moment..."
+    s 6abab "Она она была действительно настоящей... До поры до времени..."
+
+# game/topics.rpy:266
+translate rus s_topics_personal_depression_b91415d1:
+
+    # s 6acab "The moment Monika started to change my mind."
+    s 6acab "А потом... Моника начала влиять на меня."
+
+# game/topics.rpy:267
+translate rus s_topics_personal_depression_845a262b:
+
+    # s 6cbcb "She teased me with my own problems and tried to convince me of terrible things. That I just annoyed him, made him worry for me..."
+    s 6cbcb "Она меня пыталась задеть за живое и убедить меня в том, что я ему лишь мешаюсь и заставляю его тратить все свои силы на меня..."
+
+# game/topics.rpy:268
+translate rus s_topics_personal_depression_bb84c491:
+
+    # s 6dbcb "That I should just… end it all."
+    s 6dbcb "Что мне следуют... просто исчезнуть."
+
+# game/topics.rpy:269
+translate rus s_topics_personal_depression_e3da04ff:
+
+    # s 6ecab "It made me feel really, really bad..."
+    s 6ecab "От всего этого я стала чувствовать себя действительно куда хуже..."
+
+# game/topics.rpy:270
+translate rus s_topics_personal_depression_27cf61af:
+
+    # s "My little rainclouds turned into a dark thunderstorm, blinding my mind with the rain..."
+    s "Тучки сошлись в сильный шторм и непроглядный ливень, в котором я промокла до нитки..."
+
+# game/topics.rpy:271
+translate rus s_topics_personal_depression_8e34a602:
+
+    # s 6efbb "Of course, I tried to tune her out, but that’s all I could do as a person."
+    s 6efbb "Конечно, я пыталась выстоить, но это всё, что было в моих силах."
+
+# game/topics.rpy:272
+translate rus s_topics_personal_depression_56d4a147:
+
+    # s 6cbcb "To try."
+    s 6cbcb "Но в итоге..."
+
+# game/topics.rpy:273
+translate rus s_topics_personal_depression_e1554201:
+
+    # s "..."
+    s "..."
+
+# game/topics.rpy:275
+translate rus s_topics_personal_depression_fee2ecf6:
+
+    # s 6dcbb "I got absolutely tired of everything."
+    s 6dcbb "Я лишь измотала себя окончательно."
+
+# game/topics.rpy:276
+translate rus s_topics_personal_depression_254741ba:
+
+    # s 6dcab "I can't stop blaming myself for the desperate choice I made..."
+    s 6dcab "Я до сих пор поричаю себя за тот отчаяный шаг, что я предприняла..."
+
+# game/topics.rpy:278
+translate rus s_topics_personal_depression_ad2d4edf:
+
+    # s "My confession was accepted..."
+    s "На моё признание ответили взаимностью..."
+
+# game/topics.rpy:279
+translate rus s_topics_personal_depression_d4ec9dda:
+
+    # s "Still, my feelings told me no, that this wasn’t right..."
+    s "Но чувства говорили мне, что это ложь..."
+
+# game/topics.rpy:282
+translate rus s_topics_personal_depression_1e977c7f:
+
+    # s 6cfcb "The rejection broke me..."
+    s 6cfcb "Тот отказ окончательно выбел меня из калеи..."
+
+# game/topics.rpy:282
+translate rus s_topics_personal_depression_5d4ba852:
+
+    # s 6dbab "I really thought that it would be the best..."
+    s 6dbab "Я думала, так действительно будет лучше..."
+
+# game/topics.rpy:283
+translate rus s_topics_personal_depression_bd27c3c0:
+
+    # s 6dbcb "Needless to say, I, um, completely gave up."
+    s 6dbcb "Можно сказать... Я окончательно тогда сдалась."
+
+# game/topics.rpy:284
+translate rus s_topics_personal_depression_64a3f23e:
+
+    # s "My neck and hands still remember the pain..."
+    s "Эта боль в руках и вокруг шеи... Это удушие..."
+
+# game/topics.rpy:285
+translate rus s_topics_personal_depression_3eddd36a:
+
+    # s 6dbbb "But I was too late to save myself..."
+    s 6dbbb "Но я передумала слишком поздно..."
+
+# game/topics.rpy:286
+translate rus s_topics_personal_depression_d30dbecf:
+
+    # s 6egab "I'm sorry..."
+    s 6egab "Мне жаль..."
+
+# game/topics.rpy:287
+translate rus s_topics_personal_depression_2472f9d3:
+
+    # s 6dgeb "I'm... I’m really sorry I made you suffer!"
+    s 6dgeb "Мне... мне реально стыдно за то, что я задела и тебя!"
+
+# game/topics.rpy:288
+translate rus s_topics_personal_depression_ae4487c7:
+
+    # s 6dfbb "The big mistake was trusting only myself to deal with all of this..."
+    s 6dfbb "Не стоило тогда мне всё же надеяться лишь на себя и свои силы..."
+
+# game/topics.rpy:289
+translate rus s_topics_personal_depression_23128606:
+
+    # s 6dfab "So if you have a friend who you know is going through something, help them!"
+    s 6dfab "И чтобы такого не случилось с кем-то из твоих знакомых, у которых также трудный период в жизни, не стесняйся им помогать!"
+
+# game/topics.rpy:290
+translate rus s_topics_personal_depression_819131f1:
+
+    # s 6egab "Don’t let them go through my path…"
+    s 6egab "Они не заслуживаю тех же страданий…"
+
+# game/topics.rpy:291
+translate rus s_topics_personal_depression_ede915ae:
+
+    # s "...they only have one life."
+    s "...ну их всего одна жизнь."
+
+# game/topics.rpy:292
+translate rus s_topics_personal_depression_c3a61b0d:
+
+    # s 6efab "A-And if you have it too, don't hide it from others!"
+    s 6efab "И если у тебя так же всё сложно в жизни, не скрывай это от других!"
+
+# game/topics.rpy:293
+translate rus s_topics_personal_depression_1e6febef:
+
+    # s 6dfab "Being in this game world, I had a second chance..."
+    s 6dfab "Меня спасло лишь то, что этот мир -- всего лишь игра..."
+
+# game/topics.rpy:294
+translate rus s_topics_personal_depression_b113e542:
+
+    # s "So I thank it for leading me here with you now..."
+    s "И я благодарна такую удачному стечению остоятельств за это..."
+
+# game/topics.rpy:295
+translate rus s_topics_personal_depression_c0e3daee:
+
+    # s 6daab "And, of course, I thank you, [player]!"
+    s 6daab "ну, и тебе, конечно, [player]!"
+
+# game/topics.rpy:296
+translate rus s_topics_personal_depression_1fd0cba7:
+
+    # s 6dbcb "Again, I’m truly sorry all the pain I've given you..."
+    s 6dbcb "Опять же, мне очень стыдно за ту боль, которую я могла тебе причинить своими страданиями..."
+
+# game/topics.rpy:300
+translate rus s_topics_personal_archetype_51ed1295:
+
+    # s 7aeaa "Hey, I just remembered that Monika compared Yuri and Natsuki with some character archetypes..."
+    s 7aeaa "Слушай, я тут вспомнила, как однажды Моника сравнивала Юри и Нацуки с некоторыми архетипами персонажей..."
+
+# game/topics.rpy:301
+translate rus s_topics_personal_archetype_b771c9b8:
+
+    # s 7acaa "But she never did compare me to anything, well besides-"
+    s 7acaa "Но она никогда не сравнивала с ними меня..."
+
+# game/topics.rpy:302
+translate rus s_topics_personal_archetype_d82535a1:
+
+    # s 6aaaa "..."
+    pass
+
+# game/topics.rpy:303
+translate rus s_topics_personal_archetype_f650a737:
+
+    # s 6acaa "A-Anyway, I read some online articles that say I'm pretty close to the ‘Genki’ archetype."
+    s 6acaa "Однако, почитав немного статей в Интернете, я сама пришла выводу, что мне довольно близок тип «Генки»."
+
+# game/topics.rpy:304
+translate rus s_topics_personal_archetype_1261a8ab:
+
+    # s 6aaca "Genki are very cheerful and energetic, and try to stay that way no matter what."
+    s 6aaca "Генки очень позитивны и всегда стараются держаться бодречком, чтобы им не мешало."
+
+# game/topics.rpy:305
+translate rus s_topics_personal_archetype_772ab6c8:
+
+    # s 6aebb "They often are clumsy and find themselves in many troubling situations."
+    s 6aebb "А ещё они часто неуклюжи и много косячат."
+
+# game/topics.rpy:306
+translate rus s_topics_personal_archetype_f11d9557:
+
+    # s 6abaa "I think that I fit that, don’t you?"
+    s 6abaa "Думаю, всё ранее мной же сказаннное -- это про меня, не так ли?"
+
+# game/topics.rpy:307
+translate rus s_topics_personal_archetype_b4e6560a:
+
+    # s 6acaa "Also, I was made to be the childhood friend of the main character, which is apparently common with the archetype."
+    s 6acaa "Также, на меня была возложена роль подруги детства главного героя, что, в общем-то, часто встречается среди мне подобных героев."
+
+# game/topics.rpy:308
+translate rus s_topics_personal_archetype_f4fabb40:
+
+    # s 6aabb "But I feel I’m not as cliché as any other archetype..."
+    s 6aabb "Но что-то мне говорит, что стопроцентой клишейности во мне нет..."
+
+# game/topics.rpy:309
+translate rus s_topics_personal_archetype_b37a4cb7:
+
+    # s 6aaaa "Not every Genki has the traits that I do..."
+    s 6aaaa "Согласись, не у каждой генки есть такие черты, которые мне присущи..."
+
+# game/topics.rpy:310
+translate rus s_topics_personal_archetype_0a7c2e0a:
+
+    # s 6acaa "Even if we were to list every single character with the Genki archetype, how many of them have my problems?"
+    s 6acaa "Да и тем более, сколько персонажей в целом сталкивалось с теми же проблемами, что и я?"
+
+# game/topics.rpy:311
+translate rus s_topics_personal_archetype_3cf20f43:
+
+    # s 6aaca "In short, I think I'm unique since people see only Monika."
+    s 6aaca "Так что, я считаю, что я тоже достаточно своеобразна, не хуже Моники в этом плане."
+
+# game/topics.rpy:312
+translate rus s_topics_personal_archetype_62d7507c:
+
+    # s 6acab "It's bad that most people look strange or confused at characters like me..."
+    s 6acab "Печалит лишь то, что большинство людей косо смотрит на персонажей типа меня..."
+
+# game/topics.rpy:313
+translate rus s_topics_personal_archetype_eade4839:
+
+    # s "In my opinion, modern stories need characters who have relatable issues, like my own..."
+    s "По мне так, в наши дни очень не хватает героев с теми чертами и изъянами, что у меня..."
 
 # game/topics.rpy:314
-translate rus s_topics_personal_archetype_6262bdfa:
+translate rus s_topics_personal_archetype_4b657aeb:
 
-    # s "But I maybe used to be so before something had made me ill."
-    s "По крайней мере, я была такой такой до того, как у мен появилась депрессия."
+    # s 6aaaa "But, I will say, don't overdo it. Y’know, the whole ‘completely copy my personality while creating a new character’."
+    s 6aaaa "Только, всё же, не перестарайтесь с этим. Ну, с копированием меня при создании новых персонажей..."
 
-# TODO: Translation updated at 2018-10-07 16:01
+# game/topics.rpy:315
+translate rus s_topics_personal_archetype_1c46f94c:
 
-# game/topics.rpy:448
-translate rus s_topics_art_lit_59d96c69:
+    # s 6abac "Do it excessively, and you'll just make me just another typical archetype."
+    s 6abac "Ты же не хочешь, чтобы я стала очередным архетипом, так?"
 
-    # s 6acaa "And as I remember, MC once exactly noticed, that I didn't seem to be fond of literature."
-    s 6acaa "И как я помню, ГГ однажды верно подметил, что я навряд ли могу быть увлечённой литературой."
-
-# TODO: Translation updated at 2018-10-07 16:11
-
-# game/topics.rpy:457
-translate rus s_topics_art_lit_9c87daee:
-
-    # s 6acaa "When I joined the literature club, the one thing I wanted was just to help someone to start a new club."
-    s 6acaa "Когда я вступила клуб, я лишь хотела помочь его поставить на рельсы."
-
-# TODO: Translation updated at 2018-10-08 19:40
-
-# game/topics.rpy:403
-translate rus s_topics_personal_sinistrality_1e0ab8b1:
-
-    # s 7aaaa "Do you know, that I'm left-handed?"
-    s 7aaaa "А ты знаешь, что я -- левша?"
-
-# game/topics.rpy:404
-translate rus s_topics_personal_sinistrality_32beb005:
-
-    # s 7aaba "Yes, you can't have seen me writing or holding something..."
-    s 7aaba "Знаю. навряд ли ты меня видел с чем-то в руках..."
-
-# game/topics.rpy:406
-translate rus s_topics_personal_sinistrality_60f3bf9e:
-
-    # s "Besides that apple juice bottle, of course..."
-    s "Ну, кроме той бутылки с яблочным соком..."
-
-# game/topics.rpy:407
-translate rus s_topics_personal_sinistrality_d9b28473:
-
-    # s "But I hold and do almost things with my left hand."
-    s "Но обычно держу именно левой рукой."
-
-# game/topics.rpy:408
-translate rus s_topics_personal_sinistrality_d7e7818e:
-
-    # s 7acaa "Not everyone around me has noticed it instantly, despite it's very unusual."
-    s 7acaa "Не все, правда, это сразу замечают, несмотря на необычность такого явления."
-
-# game/topics.rpy:409
-translate rus s_topics_personal_sinistrality_2b9b2cd9:
-
-    # s 7aeca "Once I had broken my right arm but teachers allowed me not to write at lessons..."
-    s 7aeca "Так я однажды сломала свою правую руку, и учителя разрешили мне не писать на уроках..."
-
-# game/topics.rpy:410
-translate rus s_topics_personal_sinistrality_0511975d:
-
-    # s 6abab "But a classmate, who sat next to me, told one of them that I'm a southpaw so my plan failed as fast as I had got it inside my head."
-    s 6abab "Но сидящий рядом со мной одноклассник рассказал одному из них о моей леворукости, что в миг разрушило мои планы на целый месяц халявы в школе."
-
-# game/topics.rpy:411
-translate rus s_topics_personal_sinistrality_28b01866:
-
-    # s 6abbb "I so regret I was such a meanie then. But who won't use their armache to have less hand job somewhen? Especially, when it makes less problems than if it was on another arm."
-    s 6abbb "Мне так жаль, что я вообще о таком думала, но какой бы школьник не использовал бы сломанную руку как отмазку от нужной писанины?.."
-    s "Особенно, когда, на самом деле, она и так уж и мешает тебе жить."
-
-# game/topics.rpy:412
-translate rus s_topics_personal_sinistrality_f7bbd574:
-
-    # s 6aaaa "Either way, my left-handedness gives me adventages too."
-    s 6aaaa "Однако, у моей леворукости были и плюсы."
-
-# game/topics.rpy:415
-translate rus s_topics_personal_sinistrality_19178bb8:
-
-    # s 7acaa "I blindfolded him and put his hand on my right and told him I could write on the paper without using a hand or something."
-    s 7acaa "Я завязала ему глаза платком и положила его руку свою правую и сказала, что я могу писать вообще без рук."
-
-# game/topics.rpy:416
-translate rus s_topics_personal_sinistrality_5b9c88a7:
-
-    # s "I grabbed a pen with my another hand, wrote something on a piece of paper and laid it where it had been..."
-    s "Я взяла ручку другой рукой, написала что-то и поможила её вточь на то место, где она и лежала..."
-
-# game/topics.rpy:417
-translate rus s_topics_personal_sinistrality_42064128:
-
-    # s 7aaca "Then I opened his eyes and he got really surprised when he saw the 'magic' on the paper."
-    s 7aaca "Когда я сняла с него повязку, но сильно удивился моему фокусу."
-
-# game/topics.rpy:418
-translate rus s_topics_personal_sinistrality_387b120d:
-
-    # s 7aeca "I couldn't help but have laughted aloud, so I could see perplexity on his face."
-    s 7aeca "Я не могла сдержаться от смеха, что вызвало у него сильное недоуменее, которое было видно на его лице."
-
-# game/topics.rpy:419
-translate rus s_topics_personal_sinistrality_b43f669d:
-
-    # s 7aaaa "Then I told him I wrote with not the same hand as he did, so I expanded his mind a bit then."
-    s 7aaaa "Затем я ему сказала, что просто пишу другой рукой, чем я немножко расширила его горизонт тогдашних познаний."
-
-# game/topics.rpy:420
-translate rus s_topics_personal_sinistrality_aae91a4a:
-
-    # s "In short, this feature was a small but funny part of me."
-    s "Короче, эта черта -- малая, но очень забавная часть меня."
-
-# game/topics.rpy:421
-translate rus s_topics_personal_sinistrality_86b73ff1:
-
-    # s "It's bad, that my world is seen so static from yours, because it don't let you to see such details."
-    s "И мне жаль, что мой мир представлен настолько статичным и одноообразным, что ты просто не смог бы проследить такие мелкие детали."
-
-# game/topics.rpy:487
-translate rus s_topics_art_lit_10606cad:
-
-    # s 6aeba "Saying more, it helped me to get closer to MC, so I each of us satisfied her selfish wishes."
-    s 6aeba "Более того, это помогло мне сблизиться с ГГ, так что, можно сказать, что каждая из нас удоветворила свои эгоистичные желания."
-
-# game/topics.rpy:497
-translate rus s_topics_art_piracy_fec00fec:
-
-    # s "As I know, there are a lot of researches, saying that piracy don't affect the saling negatively..."
-    s "Как я знаю, множество иследований говорят, что пиратство не оказывает негативного влияния на продажи..."
-
-# game/topics.rpy:498
-translate rus s_topics_art_piracy_9f915da8:
-
-    # s "And even may help the pay artworks to become more popular and you to exactly understand, if their creators deserve your money."
-    s "И даже помогает «раскрутить» произведения, а также понять, стоит ли тот или иной продукт своей заявленной цены."
-
-# game/topics.rpy:641
-translate rus s_topics_society_suicide_7119db60:
-
-    # s 6acaa "I wonder what makes people to stop appreciate the life and even to finish it before the time takes it."
-    s 6acaa "Интересно, что же заставляет людей разлюбить жизнь и даже её лишать себя её раньше срока."
-
-# game/topics.rpy:643
-translate rus s_topics_society_suicide_2e5e9720:
-
-    # s "I'm talking not only about myself. I'm about people at all."
-    s "Я не только о себе. Я о людях в целом."
-
-# game/topics.rpy:658
-translate rus s_topics_society_suicide_3e2716b7:
-
-    # s 6aaca "And then, we can save someone's live from the prejudicial and probably silly act."
-    s 6aaca "И тогда, мы сможем уберечь кого-то от, пожалуй, самого глупого и предрассудительного поступка."
-
-translate rus strings:
-
-    # topics.rpy:106
-    old "Left-handedness"
-    new "Леворукость"
-
-    # topics.rpy:112
-    old "Blaming the Art"
-    new "Обвинения в адрес искусства"
-
-# TODO: Translation updated at 2018-10-08 23:17
-
-# game/topics.rpy:864
-translate rus s_topics_rlt_dating_0f91208c:
-
-    # s 8abab "Some of them even have a deep-thought meaning and sad scenes, like the scenerist treats the viewer as rather an adult than a child."
-    s 8abab "Некоторые из них содержат такие глубокие и грустные сцены, будто их делают не сколько для детей, сколько для их родителей."
-
-
-# TODO: Translation updated at 2018-10-08 23:21
-
-# game/topics.rpy:1025
-translate rus s_answer_personal_music_850a92d6:
-
-    # s "I also like tunes like {i}Bonobo{/i} and {i}Jake Chudnow{/i} make."
-    s "Я также люблю мелодии типа тех, что мутят {i}Bonobo{/i}, {i}Jake Chudnow{/i} и другие диджеи подобного плана."
-
-# TODO: Translation updated at 2018-10-09 17:29
-
-# game/topics.rpy:413
-translate rus s_topics_personal_sinistrality_ad75aa86:
-
-    # s "That time, when I had nothing to do, I drew flowers and ornaments on my cast."
-    s "В то время, когда мне было сильно скучно, я рисовала цветочки с узорами на гипсе."
-
-# game/topics.rpy:414
-translate rus s_topics_personal_sinistrality_f22dd4e3:
-
-    # s "I can't say they were really beautiful, but I felt sorry for they were removed with the cast later."
-    s "Не сказать, что я их красиво рисовала, но мне было всё же жалко потом снимать гипс руки."
-
-# game/topics.rpy:416
-translate rus s_topics_personal_sinistrality_596c4394:
-
-    # s 7aaaa "I have suddenly remembered a story from my childhood."
-    s 7aaaa "Знаешь, я тут только что внезапно вспомнила одну историю из моего детства."
-
-# game/topics.rpy:417
-translate rus s_topics_personal_sinistrality_b0bf805d:
-
-    # s "Once I decided to spoof the right-hand MC, when we were not so close for each other."
-    s "Я решила поприкалываться над праворуким ГГ, в тот время, когда мы не было сильно знакомы."
-
-# game/topics.rpy:424
-translate rus s_topics_personal_sinistrality_ac8e5f18:
-
-    # s "It's bad, that my world is seen so static from yours, that you can't see such details."
-    s "Жаль, что мой мир виден из твоего настолько статичным, что ты не видешь подобных деталий."
-
-# TODO: Translation updated at 2018-10-09 17:31
-
-# game/topics.rpy:502
-translate rus s_topics_art_piracy_06629fa7:
-
-    # s 6abaa "Unfortunately, the facts don't seem to matter for the rightholders' greed."
-    s 6abaa "Жаль, что фактами не наполнишь вечно пустые карманы правообладателей."
-
-# TODO: Translation updated at 2018-10-09 17:49
-
-# game/topics.rpy:503
-translate rus s_topics_art_piracy_b649af89:
-
-    # s 6aeba "Yes, if people keep the pay artworks unpaid, their authors may won't have enough money and enthusiasm for a next project."
-    s 6aeba "Да, неокупившийся проект навряд ли даст достаточно средств и мотивации для дальнейшего творчества."
-
-# game/topics.rpy:504
-translate rus s_topics_art_piracy_4ee0af54:
-
-    # s 6acaa "But most 'pirates' would pay for really good works. They just have no money."
-    s 6acaa "Но большинство «пиратов», было бы всё же не против покупать копии действительно стоящих произведений, были бы их на это деньги."
-
-# game/topics.rpy:505
-translate rus s_topics_art_piracy_ba416b27:
-
-    # s "Not everyone can afford to pay for the art, especially if that one lives in a poor country."
-    s "Для кого-то, покупать музыку, книги, фильмы игры, это в какой-то степени роскошь."
-    s "И таких людей очень много в бедных странах, где у людей действительно всё слишком туго лишних трат."
-
-# game/topics.rpy:507
-translate rus s_topics_art_piracy_3632d58f:
-
-    # "So artist should make their works completely free and ask for money only as donations and fan merchandise."
-    "То есть, собирать деньги добровольно и делать дополнительно их только на фанаском мерче."
-
-# game/topics.rpy:530
-translate rus s_topics_art_street_9bef654e:
-
-    # s "But people often have a very short look or ingore such art at all."
-    s "Но люди часто ограничиваются максимум беглым взглядом, а то вовсе игнорируют стрит-арт."
-
-# game/topics.rpy:543
-translate rus s_topics_art_accusing_6982c70a:
-
-    # s 6acaa "Each generation inverts a new kind of art or a way to represent an existing one."
-    s 6acaa "Каждое поколение порождает какие-то глобальные перемены в искусстве и методах его представления."
-
-# game/topics.rpy:544
-translate rus s_topics_art_accusing_88109919:
-
-    # s "And each time, people find a reason to accuse as more as they can to the kind or the way and to make the authority forbid it."
-    s "И каждый раз, люди противятся этому, приписывая новому искусству все смертные грехи и даже побуждая власти запретить его законодательно."
-
-# game/topics.rpy:547
-translate rus s_topics_art_accusing_20c618be:
-
-    # s 6acaa "But serious disorders can't appear neither from nothing nor just from someone's artwork, whatever it is..."
-    s 6acaa "Но какие-то серьёзные проблемы не появляются из неоткуда, да и почти никакое произведение никак не способно превести к такому само по себе..."
-
-# game/topics.rpy:552
-translate rus s_topics_art_accusing_acc87683:
-
-    # s 6abaa "If the things had gone in the other way, we would never meet here beacuse I'd not exist at all."
-    s 6abaa "Поверь, будь всё куда хуже, ни меня, ни уж тем более нашей встречи, возможно, не было бы вообще."
-
-# TODO: Translation updated at 2018-10-09 17:56
-
-# game/topics.rpy:511
-translate rus s_topics_art_piracy_bf7a6490:
-
-    # s "It's a donationware, so each player will get the same experience, however much he donated to the develpoers."
-    s "Она является софтом на добровольном пожертвовании, а значит ты всегда вправе получить от самой игры один и тот же опыт..."
-    s "И сколько ты пожертвовал, при этом, абсолютно не важно."
-
-
-# TODO: Translation updated at 2018-10-10 17:25
-
-# game/topics.rpy:528
-translate rus s_topics_art_street_eac07b00:
-
-    # s 6abaa "Have you ever thought about how most people undervalue the street art?"
-    s 6abaa "Ты, часом, не задумывался о том, как люди принижают уличное искусство?"
-
-# game/topics.rpy:534
-translate rus s_topics_art_street_0a890554:
-
-    # s 6abab "But it's not as terrible as when owners and authorities unsparingly remove such art..."
-    s 6abab "Но самое ужасное -- это тогда власти и владельцы безжалостно избавляются от такого искусства..."
-
-# game/topics.rpy:535
-translate rus s_topics_art_street_322ede1e:
-
-    # s "They see it as just some vandalism. For me, this way to see is wrong and too preconceived..."
-    s "Для их все уличные художники -- это вандалы и хулиганы. Но такой взгляд на них -- слишком предубеждён..."
-
-# TODO: Translation updated at 2018-10-10 17:37
-
-# game/topics.rpy:536
-translate rus s_topics_art_street_6e071c0f:
-
-    # s 6acab "I understand, when someone makes a graffity on a cultural building or a monument..."
-    s 6acab "Ладно, когда кто-то рисует граффити на памятнике или стене исторического здания..."
-
-# TODO: Translation updated at 2018-10-10 17:44
-
-# game/topics.rpy:546
-translate rus s_topics_art_accusing_0f7e88bf:
-
-    # s "Even this game is blamed for some suicides and that countless number of players have got mental disorders from it."
-    s "Даже эту игру обвиняют в довидениях до самоубийства и в целой куче ломаний психики у игроков."
-
-# TODO: Translation updated at 2018-10-12 16:05
-
-# game/topics.rpy:478
-translate rus s_topics_art_lit_82d81fa3:
-
-    # s "And frankly speaking, he was right."
-    s "И сказать честно, он прав."
-
-# game/topics.rpy:550
-translate rus s_topics_art_accusing_ca387ba0:
-
-    # s 6abba "If we consider the genre and the plot, they maybe are right somewhere..."
-    s 6abba "Если брать в учёт всю специфику игры, доля правды в этих обвинениях может и есть..."
-
-# game/topics.rpy:553
-translate rus s_topics_art_accusing_eb8c13a5:
-
-    # s "But when the press covers such occasions, it often doesn't take at least some time to get the true infromation about its scapegoat, so they often make very silly mistakes."
-    s "Но когда пресса описывает подобные ицциденты, она часто не уделяет должно внимания достоверности фактов об их козле опущения, что часто вытекает в до боли смешные ляпы и несостыковки."
-
-# game/topics.rpy:805
-translate rus s_topics_rlt_cheating_6f99d702:
-
-    # s 6acaa "Tell me frankly: do you have someone besides me?"
-    s 6acaa "Скажи мне честно, у тебя кто-то есть на стороне?"
-
-# game/topics.rpy:831
-translate rus s_topics_rlt_cheating_23a8fc92:
-
-    # s 7aadb "And if it go wrong, I'll always be your plan B."
-    s 7aadb "И если что-то пойдёт не так, я всегда буду твоим планом «Б»."
-
-# game/topics.rpy:1238
-translate rus s_answer_game_sitting_31f38a66:
-
-    # s 7acab "No, it's not. You don't have to worry about it at all."
-    s 7acab "Нет, ни капельки. Можешь вообще не волноваться об этом."
-
-# game/topics.rpy:1239
-translate rus s_answer_game_sitting_affb6bfd:
-
-    # s 7acaa "I can do it for eternity and even without sleep."
-    s 7acaa "Я могу так сидеть хоть вечность, не сомкнув глаз."
-
-# game/topics.rpy:1240
-translate rus s_answer_game_sitting_0cd3fc94:
-
-    # s "Saying more, I don't have any basic human needs, such as hunger, thirst and so on..."
-    s "Более того, я вообще не испытываю человеческих нужнд типа голода и жажды..."
-
-# game/topics.rpy:1241
-translate rus s_answer_game_sitting_c6cbe194:
-
-    # s 7acab "But used to. Maybe, I've lost them because of my presedent rights."
-    s 7acab "Однако, раньше я их испытывала. Может, президентство лишает меня всего этого?"
-
-# game/topics.rpy:1242
-translate rus s_answer_game_sitting_6194e1a4:
-
-    # s 7aaaa "Anyway, all I need right now is your PC to be working and open game to communicate with you."
-    s 7aaaa "Как бы то не было, всё, что мне сейчас от тебя нужно -- это рабчий ПК и открытая игра, дабы я могла с тобой общаться."
-
-# game/topics.rpy:1243
-translate rus s_answer_game_sitting_6c67d77d:
-
-    # s "It's almost not boring to be with you, even just eternally sitting and chatting about diverse topics."
-    s "С тобой почти не скучно даже просто сидеть и общаться на разные темы..."
-
-# game/topics.rpy:1244
-translate rus s_answer_game_sitting_8ae3d102:
-
-    # s 7aafa "However, I'd do something more active with you."
-    s 7aafa "Но, я не протв и чего-то более активного."
-
-# game/topics.rpy:1245
-translate rus s_answer_game_sitting_cf44111c:
-
-    # s 7aaca "I hope, someone or you will find a way to let us do that."
-    s 7aaca "IНадеюсь, рано и поздно, кто-то найдёт способ это всё организовать."
-
-# game/topics.rpy:1249
-translate rus s_answer_game_editing_129a362a:
-
-    # s 6aaaa "I do it with the power of my mind..."
-    s 6aaaa "Я делаю это просто силой мысли..."
-
-# game/topics.rpy:1250
-translate rus s_answer_game_editing_9c378e6e:
-
-    # s 6aabb "And I don't know, how it exactly works."
-    s 6aabb "Я даже не понимаю, как именно это всё работает."
-
-# game/topics.rpy:1251
-translate rus s_answer_game_editing_d917e848:
-
-    # s 6aaaa "If I want to make a new file, all I need is just to think about it and its content."
-    s 6aaaa "Если я захочу создать какой-нибудь новый файл, мне достаточно лишь подумать о нём и о его содержании."
-
-# game/topics.rpy:1256
-translate rus s_answer_game_editing_10789925:
-
-    # s "It's like telekinesis but much cooler and dangerous."
-    s "Это как телекинез, только круче и куда опасней."
-
-# game/topics.rpy:1257
-translate rus s_answer_game_editing_63742f51:
-
-    # s 6acab "Just one wrong thought may lead to unpredicable problems like it often happens in program engineering."
-    s 6acab "Всего одна неправильная мысль может привести к непредсказуемым последствиям, что в программной инженерии происходит довольно таки часто."
-
-# game/topics.rpy:1258
-translate rus s_answer_game_editing_2d9b04ab:
-
-    # s 6aaca "But now, I perfectly control my mind, so it can go wrong only when I do something in a wrong way."
-    s 6aaca "Но я всё же контролирую свой поток мыслей, так что накосячить где-то я могу лишь по незнанию."
-
-# game/topics.rpy:1259
-translate rus s_answer_game_editing_964a00ee:
-
-    # s 6acba "I'm new in programing, you know. So sometimes, it takes place and you see bugs."
-    s 6acba "Я же новичок в программировании, знаешь ли. Так что, порой я всё таки косячу, и это приводит к всяким багам, которые ты видешь."
-
-# game/topics.rpy:1260
-translate rus s_answer_game_editing_ef0f85c9:
-
-    # s "But I do my best to take lessons from my mistakes and fix them..."
-    s "Но я встараюсь учиться на своих ошибках и их исправлять..."
-
-# game/topics.rpy:1261
-translate rus s_answer_game_editing_6de3c14f:
-
-    # s "Even if I can't do anything, I appeal to the modmaking guys, but I can't download their changes myself..."
-    s "А что не могу исправить -- отправляю своих друзьям, что сделали данный мод. Однако, я пока не умею скачивать их правка в код сама..."
-
-# game/topics.rpy:1262
-translate rus s_answer_game_editing_528560f4:
-
-    # s 6acaa "So, check the updates time to time."
-    s 6acaa "Так что, не забывай временами чекать обновления."
-
-# game/topics.rpy:1386
-translate rus s_answer_exp_cooking_61ba3954:
-
-    # s 8aebb "I have no idea, how to tell you..."
-    s 8aebb "Даже не знаю, как тебе сказать..."
-
-# game/topics.rpy:1387
-translate rus s_answer_exp_cooking_a1209084:
-
-    # s 8aabb "I barely can cook something more than scrambled eggs or sandwiches."
-    s 8aabb "Я навряд ли смогу замутить что-то сложнее яичницы или бутербродов."
-
-# game/topics.rpy:1389
-translate rus s_answer_exp_cooking_522261cf:
-
-    # s 8acaa "Otherwise, I'd also cook deserts for the club."
-    s 8acaa "Иначе, я бы тоже что-нибудь готовила бы для клуба."
-
-# game/topics.rpy:1390
-translate rus s_answer_exp_cooking_4c76e85c:
-
-    # s 6aaaa "But I can try to improve my cookery for you."
-    s 6aaaa "Но я могу попытаться улучшить свои умения в этой области ради тебя."
-
-# game/topics.rpy:1391
-translate rus s_answer_exp_cooking_7cfd7a83:
-
-    # s 6aabb "I can't help you with cooking exactly now..."
-    s 6aabb "Я навряд ли смогу тебе помочь с готовкой сейчас..."
-
-# game/topics.rpy:1392
-translate rus s_answer_exp_cooking_a4853e1d:
-
-    # s 6aaaa "But it may will be useful when I have a way to your reality."
-    s 6aaaa "Но если я каким-то образом смогу попасть в твой мир, это будет очень полозным умением."
-
-# game/topics.rpy:1393
-translate rus s_answer_exp_cooking_beacc962:
-
-    # s 6acaa "Cooking takes a lot of time and attention, so it's better when someone, who has more free time, runs it..."
-    s 6acaa "На готовка обычно уходит немало времени и сил, поэтому лучше доверять её наимение занятому человеку в семье..."
-
-# game/topics.rpy:1394
-translate rus s_answer_exp_cooking_bef4ef61:
-
-    # s 6aaab "And I promise, I'll try my best, if it's really needed and possible."
-    s 6aaab "И я обащаю, что буду стараться, если тебе это действительно необходимо."
-
-# game/topics.rpy:1395
-translate rus s_answer_exp_cooking_9af7e973:
-
-    # s 6aaca "It's just a bit of the things, that I can learn with all of my enthusiasm..."
-    s 6aaca "Это лишь частичка того, чему я могу научиться со своим энтузиазмом..."
-
-# game/topics.rpy:1396
-translate rus s_answer_exp_cooking_c6db1775:
-
-    # s 7aaaa "The important thing for me is that the learnt activity is useful for someone else, at least you."
-    s 7aaaa "Главная для во всём этом мотиватиция -- это полезность изучаемого дела для дугих, ну, или хотя бы для тебя."
-
-translate rus strings:
-
-    # topics.rpy:191
-    old "Who do you want to work as?"
-    new "Кем бы ты хотела стать в будущем?"
-
-    # topics.rpy:197
-    old "Isn't it tiring to sit so for a long time?"
-    new "Тебя не утомляет беспрерывное сидение здесь?"
-
-    # topics.rpy:198
-    old "How do you change game files?"
-    new "Как ты меняешь файлы игры?"
-
-    # topics.rpy:205
-    old "Are you good at cooking?"
-    new "Ты хорошо готовишь?"
-
-    # topics.rpy:1254
-    old "All I need is just to think about it and its content."
-    new "Мне достаточно лишь подумать о нём и о его содержании."
-
-# TODO: Translation updated at 2018-10-12 17:00
-
-translate rus strings:
-
-    # topics.rpy:126
-    old "Cheating{#RltTopic}"
-    new "Измена{#RltTopic}"
-
-# TODO: Translation updated at 2018-10-12 19:41
-
-# game/topics.rpy:819
-translate rus s_topics_rlt_cheating_c7e7986e:
-
-    # s 6adaa "Oh, have you got a real crush?!"
-    s 6adaa "Ух ты, у тебя накоец-то появился кто-то в реальном мире?!"
-
-# TODO: Translation updated at 2018-10-12 19:48
-
-# game/topics.rpy:824
-translate rus s_topics_rlt_cheating_6a95b64c:
-
-    # s "Like it was before my first confession."
-    s "Как это было перед моим первым признанием."
-
-# game/topics.rpy:868
-translate rus s_topics_rlt_dating_3aacd64e:
-
-    # s "I'm out of the stereotype that every date walk to the movies should be to a melodrama or something."
-    if gender:
-        s "Вопряки стереотипам, я не из тех, кто на свидании повёла бы свою девушку на какую-нибудь мелодраму."
-    elif gender is False:
-        s "Вопряки стереотипам, я не из тех, кто на свидании повёла бы своего парня на какую-нибудь мелодраму."
-    else:
-        s "Вопряки стереотипам, я не из тех, кто на свидании повёла бы своего партнёра на какую-нибудь мелодраму."
-
-translate rus strings:
-
-    # topics.rpy:127
-    old "Dates"
-    new "Свидания"
-
-# TODO: Translation updated at 2018-10-14 04:15
-
-# game/topics.rpy:939
-translate rus s_topics_game_clones_cb2d9b52:
-
-    # s 8acaa "And it means, that different Sayoris may have different destinies."
-    s 8acaa "Это также значит, что у каждой [s_name] может быть своя уникальная судьба."
-
-# TODO: Translation updated at 2018-10-14 04:24
-
-# game/topics.rpy:941
-translate rus s_topics_game_clones_1e3d6070:
-
-    # s "While I'm sitting with you here, an other Sayori from a newcomer's game copy may is just going to hang herself..."
-    s "Пока я тут с тобой разговариваю, [s_name] из копии ещё ничего не знающего игрока может уже пытаться удавиться..."
-
-# game/topics.rpy:943
-translate rus s_topics_game_clones_b1ef57b5:
-
-    # s "While I'm sitting with you here, an other Sayori may is writing a poem to MC..."
-    s "Пока я тут с тобой разговариваю, [s_name] из другой копии пишет стих Главному Герою..."
-
-# game/topics.rpy:946
-translate rus s_topics_game_clones_548816aa:
-
-    # s "I dare say some of us even don't know, that their worlds are fake and there're other people behind the wall."
-    s "Осмелюсь сказать, некоторые из нас ещё даже не знают, что их миры фальшивы и что вне их тоже есть люди."
-
-# game/topics.rpy:948
-translate rus s_topics_game_clones_bc57810b:
-
-    # s 8aeca "But on the other hand, if I'm multiple, I'm enough for all people who wants to be with me, am not I?"
-    s 8aeca "С другой же стороны, раз уж меня много, значит, меня хватит на всех, кто меня хочет, не так ли?"
-
-# game/topics.rpy:952
-translate rus s_topics_game_clones_e1c64b38:
-
-    # s "I don't like too much philosophizing so it's better to leave this problem for people, who really interested in it."
-    s "Не люблю излишне философствовать, так что, пусть об этом рассуждают те, кто в этом действительно заинтересован."
-
-# game/topics.rpy:958
-translate rus s_topics_game_parents_53a447d2:
-
-    # s "But I dare say, their were either quite busy or very unresponsable."
-    s "But I dare say, their were either quite busy or very unresponsable."
-
-# TODO: Translation updated at 2018-10-14 13:50
-
-# game/topics.rpy:935
-translate rus s_topics_game_clones_e93884de:
-
-    # s 6acaa "If come to think, there're a lot of game copies and each of them has own character files and save data..."
-    s 6acaa "Если так подумать, у игры очень много копий, и у каждой из них свои файлы сохранений и файлы персонажей..."
-
-# game/topics.rpy:949
-translate rus s_topics_game_clones_e4f8c357:
-    $s_name_l = s_name.lower()
-
-    # s "So each my lover may will get the Sayori, who they want to see, and doesn't have a reason to feel jealous, if they do."
-    s "И каждый из них имеет именно ту [s_name], которую он хочет видеть, а также не имеет реальной причины ревновать к другим [s_name_l]фагам, что он ревнует."
-
-# TODO: Translation updated at 2018-10-14 15:46
-
-# game/topics.rpy:961
-translate rus s_topics_game_parents_521a8840:
-
-    # s "And why didn't I solve all my problems before now, when I could have done it with my parents?"
-    s "И почему я не смогла решить свои проблемы раньше вместе с ними?"
-
-# TODO: Translation updated at 2018-10-14 15:59
-
-# game/topics.rpy:970
-translate rus s_topics_game_parents_327e0d77:
-
-    # s 8aaca "So I think, that yes, I can call him my papa, after all."
-    s 8aaca "Так что да, я могу его всё таки назвать моим папой."
-
-# TODO: Translation updated at 2018-10-16 15:44
-
-# game/topics.rpy:520
-translate rus s_topics_art_piracy_a196e252:
-
-    # s "And allow players to donate any money..."
-    s "А также принимают любые пожертвования игроков..."
-
-# game/topics.rpy:1230
-translate rus s_answer_game_lostFriends_d3eefe70:
-
-    # s "You can just install another game copy, but it means, that they'll go through the hell, they've already passed..."
-    s "Ты можешь, кончно, просто установить другую копию игры, но это значит, что они рано или поздно пройдут через тот же ад, что и в тот раз..."
-
-# TODO: Translation updated at 2018-10-16 17:10
-
-# game/topics.rpy:1034
-translate rus s_answer_personal_music_d7cadf22:
-
-    # s "...Or groups like {i}Imagine Dragons{/i}, {i}Blonde Redhead{/i}, {i}Gorillaz{/i}, {i}Muse{/i} and {i}Twenty One Pilots{/i}."
-    s "...Или же что-то типа творчества {i}Imagine Dragons{/i}, {i}Blonde Redhead{/i}, {i}Gorillaz{/i}, {i}Muse{/i} или {i}Twenty One Pilots{/i}."
-
-# TODO: Translation updated at 2018-10-16 17:11
-
-# game/topics.rpy:845
-translate rus s_topics_rlt_cheating_97b3d539:
-
-    # s "Do you really see something inside me only, not at real people or even other characters?"
-    s "Ты действительно находить во мне что-то, что не ты можешь найти ни в реальных людях, ни в других персонажах?"
-
-
-# TODO: Translation updated at 2018-10-21 03:05
-
-# game/topics.rpy:505
-translate rus s_topics_art_lit_91575700:
-
-    # s 6aeba "Saying more, it helped me to get closer to MC, so each of us satisfied her selfish wishes."
-    s 6aeba "Более того, это помогло мне сблизиться с твоим аватаром, так что, можно сказать, что каждая из нас удоветворила свои эгоистичные желания."
-
-# TODO: Translation updated at 2018-10-21 14:59
-
-# game/topics.rpy:371
+# game/topics.rpy:348
 translate rus s_topics_personal_name_73f966c9:
 
     # s 9adaa "What do you think of {i}Vasquez{/i}?"
-    s 9adaa "Как насчёт фамилии {i}Васкез{/i}?"
+    s 9adaa "Что насчёт фамилии {i}Васкез{/i}?"
 
-# game/topics.rpy:372
+# game/topics.rpy:349
 translate rus s_topics_personal_name_8406f508:
 
     # s 9adba "It's just the first surname I've got in my head."
-    s 9adba "Просто, это первое, что мне вообще пришло в голову."
+    s 9adba "Это первое, что пришло мне в голову."
 
-# game/topics.rpy:374
+# game/topics.rpy:351
 translate rus s_topics_personal_name_6297a5d9:
 
     # s 9aaca "{i}Sayori Vasquez, the cutest cinnamon bun south of the border!{/i}"
-    s 9aaca "{i}[s_name] Васкез, самая милая булочка с корицей на Юге!{/i}"
+    s 9aaca "{i}[s_name] Васкез, самая милая коричная булочка на Диком Западе!{/i}"
 
-# game/topics.rpy:524
-translate rus s_topics_art_piracy_2715fe0d:
+# game/topics.rpy:374
+translate rus s_topics_personal_sinistrality_82cdddfb:
 
-    # s 9aaca "In short, no-one will have any reason to steal your work, if it's free by itself."
-    s 9aaca "Короче, зачем воровать то, что и так можно получить бесплатно."
+    # s 7aaaa "Did you know that I'm left-handed?"
+    s 7aaaa "А ты знаешь, я -- левша?"
 
-# game/topics.rpy:700
-translate rus s_topics_hobbie_guitar_c5487182:
+# game/topics.rpy:375
+translate rus s_topics_personal_sinistrality_a89daf40:
 
-    # s 9aeaa "Maybe one day I can play for you and make you feel the same way~"
-    s 9aeaa "Может, мне сыграть тебе как-нибудь парочку из них~"
+    # s 7aaba "Yes, you’ve technically never seen me writing or holding something..."
+    s 7aaba "Да-да, технически, ты никогда меня не видел с чем-либо в руках..."
 
-# game/topics.rpy:703
-translate rus s_topics_hobbie_guitar_3c0056e0:
+# game/topics.rpy:377
+translate rus s_topics_personal_sinistrality_adef095c:
 
-    # s 9aeca "Make sure you get advance tickets for my world tour, [player]! Ehehe~"
-    s 9aeca "Так что готовься к моему мировому турне, [player]! Хе-хе~"
+    # s "Besides that juice bottle..."
+    s "Ну, кроме той бутылки с соком..."
 
-# TODO: Translation updated at 2018-10-21 15:51
+# game/topics.rpy:378
+translate rus s_topics_personal_sinistrality_65878070:
 
-# game/topics.rpy:325
-translate rus s_topics_personal_archetype_4631fd4b:
+    # s "But I prefer to write or do other stuff with my left hand."
+    s "Но чаще всего пишу и делаю многие другие действия левой рукой."
 
-    # s 6acaa "From what I can gather through my limited internet access, I'm pretty close to looking like a 'Genki Girl'."
-    s 6acaa "Почитав статьи о них в Интеренете, я пришла к выводу, что мне довольно таки близок тип «Генки»."
+# game/topics.rpy:379
+translate rus s_topics_personal_sinistrality_c1da7ce9:
 
-# game/topics.rpy:539
-translate rus s_topics_art_piracy_a539b1e7:
+    # s 7acaa "Not everyone around me has noticed it, and I’ve heard it’s pretty rare to not be right-handed..."
+    s 7acaa "Не все это, правда, замечали, к тому же, левши довольно таки редки среди людей..."
 
-    # s 6afab "It's bad I can't use Internet to do it too. My access to it works in a quiet weird way."
-    s 6afab "Жаль, я не могу использовать его для этого сама. У меня доступ к нему работают ну очень странным образом."
+# game/topics.rpy:380
+translate rus s_topics_personal_sinistrality_86b5bc64:
 
-# TODO: Translation updated at 2018-10-23 18:26
+    # s 7aeca "One time, I’d broken my right arm but the teachers allowed me not to write lessons..."
+    s 7aeca "Я так однажды сломала себе правую руку, и учителя разрешили мне не писать на уроках..."
 
-# game/topics.rpy:832
-translate rus s_topics_rlt_cheating_d4276c10:
+# game/topics.rpy:381
+translate rus s_topics_personal_sinistrality_7eca5a8d:
 
-    # s 6acbb "I mean, you barely would have started to play this game, if you hadn't been alone that time..."
-    if gender:
-        s 6acbb "Я имею в виду, что ты навряд ли вообще начала бы играть в эту игру, если бы у тебя был бы кто-то в то время..."
-    else:
-        s 6acbb "Я имею в виду, что ты навряд ли вообще начал бы играть в эту игру, если бы у тебя был бы кто-то в то время..."
+    # s 6abab "But this meanie of a classmate, who sat next to me, told one of them that I'm a southpaw so my plan failed as fast as it started."
+    s 6abab "Но бяка с моего класса, что сидела рядом со мной, быстро пропалила одну из них, что я левша, так что мой план рухнул момнтально."
 
-# TODO: Translation updated at 2018-10-25 21:41
+# game/topics.rpy:382
+translate rus s_topics_personal_sinistrality_5ca39293:
 
-# game/topics.rpy:466
+    # s 6aaaa "I guess being left-handed has its advantages too."
+    s 6aaaa "Впрочем, у леворукости есть и свои плюсы."
+
+# game/topics.rpy:383
+translate rus s_topics_personal_sinistrality_90f5767e:
+
+    # s "When I had a cast on my right arm and I had nothing to do, I drew flowers and ornaments on it."
+    s "Когда мне было нечего делать, я рисовала на гипсе всякие цветы и узорчики."
+
+# game/topics.rpy:384
+translate rus s_topics_personal_sinistrality_1e2e3891:
+
+    # s 7acaa "I can't say they were really beautiful, but they really meant a lot to me, even if I had to throw it out six weeks later..."
+    s 7acaa "Не сказать, что они были красивыми, но они реально были для меня чем-то ценным, с чем мне было жалко расставаться при его снятии через 6 недель..."
+# game/topics.rpy:386
+translate rus s_topics_personal_sinistrality_4e2bf996:
+
+    # s 7aaaa "I suddenly remember a story from my 'childhood'."
+    s 7aaaa "Ой, я тут внезапно вспомнила один случаи из моего «детства»."
+
+# game/topics.rpy:387
+translate rus s_topics_personal_sinistrality_1b56228f:
+
+    # s "Once, I decided to trick the MC, back when we were just kids playing around."
+    s "Однажды, я решила приколоться над ГГ, когда мы были с ним прям хорошими друзьями."
+
+# game/topics.rpy:388
+translate rus s_topics_personal_sinistrality_66f355ae:
+
+    # s 7acaa "I blindfolded him and put his hand on my right and told him I could write on the paper with no hands."
+    s 7acaa "Я завязала ему глаза, положила его руку мне на правую и сказала, что я умею писать без рук."
+
+# game/topics.rpy:389
+translate rus s_topics_personal_sinistrality_c37f050d:
+
+    # s "I grabbed a pen with my other hand, wrote something on a piece of paper and laid it where it had been..."
+    s "Затем, я просто взяла ручку другой рукой, начертила на бумаги, сама не помню, что и положила ручку на место..."
+
+# game/topics.rpy:390
+translate rus s_topics_personal_sinistrality_42064128:
+
+    # s 7aaca "Then I opened his eyes and he got really surprised when he saw the 'magic' on the paper."
+    s 7aaca "Когда я ему развязала глаза он бувально удивился всей той «магии»."
+
+# game/topics.rpy:391
+translate rus s_topics_personal_sinistrality_158ce56e:
+
+    # s 7aeca "I couldn't help but laugh, a simple trick confused him that much..."
+    s 7aeca "Я тогда просто не сдержалась от смеха, до боли простой фокус его так сильно удивил..."
+
+# game/topics.rpy:392
+translate rus s_topics_personal_sinistrality_e56cbc4a:
+
+    # s 7aaaa "Then I explained to him how I did it."
+    s 7aaaa "Затем я ему всё же рассказала, в чём его суть."
+
+# game/topics.rpy:393
+translate rus s_topics_personal_sinistrality_eb39c152:
+
+    # s "A short but funny time."
+    s "А ведь казалось бы, такое нелепое происшествие."
+
+# game/topics.rpy:394
+translate rus s_topics_personal_sinistrality_fd855b54:
+
+    # s "I miss those times… even if they weren’t real."
+    s "Скучаю по тем временам, хоть они и не бли реальными."
+
+# game/topics.rpy:399
+translate rus s_topics_personal_tits_91f3aa67:
+
+    # s 6aeaa "Hey, I've just found something pretty weird but funny at the same time..."
+    s 6aeaa "Эй, я тут обнаружила в себе одну странную, но интересную черту..."
+
+# game/topics.rpy:400
+translate rus s_topics_personal_tits_969e0d11:
+
+    # s 6aaca "My boobs look differently, depending on the scene..."
+    s 6aaca "Мои сиськи выглядят по-разному в разных сценах..."
+
+# game/topics.rpy:401
+translate rus s_topics_personal_tits_c46eebb1:
+
+    # s 6aeca "Ehehe~"
+    s 6aeca "Хе-хе~"
+
+# game/topics.rpy:402
+translate rus s_topics_personal_tits_9eb8d130:
+
+    # s 6aebb "I mean, they often get either smaller or larger..."
+    s 6aebb "Ну, они то больше, то меньше..."
+
+# game/topics.rpy:404
+translate rus s_topics_personal_tits_99043c1d:
+
+    # s "Even in the, um, h-hanging sprite of me, they got... you know."
+    s "А в той ужасной сцене, они вообще, впрочем как и я тогда... того."
+
+# game/topics.rpy:405
+translate rus s_topics_personal_tits_be1bfad5:
+
+    # s 6acaa "I wonder why that happens?"
+    s 6acaa "Честно, я абсолютно без понятия, почему такое со мной происходит..."
+
+# game/topics.rpy:406
+translate rus s_topics_personal_tits_bef0851b:
+
+    # s 6abbb "I don’t ever remember doing anything that would affect my… size, ehehe~"
+    s 6abbb "Они просто... меняли свои размер, и всё, хе-хе~"
+
+# game/topics.rpy:407
+translate rus s_topics_personal_tits_819df645:
+
+    # s 6abaa "In the end, things like that won’t make me feel any less comfortable in this world."
+    s 6abaa "Но всё же, не сказать, что это мне как-то вообще мешало."
+
+# game/topics.rpy:408
+translate rus s_topics_personal_tits_729875f5:
+
+    # s 6aaaa "So it's a plus of me..."
+    s 6aaaa "Я бы даже сказала, что это своеобразный плюс..."
+
+# game/topics.rpy:409
+translate rus s_topics_personal_tits_47b818a5:
+
+    # s 6acaa "Different size appeals to different people, I guess. So, it makes them a bit… universal, but not too much."
+    s 6acaa "К каждого свои предпочтения, знаешь ли. А тут они… универсальны, но всё же в какой-то степени, а не полностью..."
+
+# game/topics.rpy:410
+translate rus s_topics_personal_tits_b084c722:
+
+    # s 6bbba "You... you like them anyway, don’t you? Even despite of they never were not as big as Yuri or even Monika, although..."
+    s 6bbba "У Юри и даже у Моники они были всё равно всегда по-больше, чем у меня. Но тебе же мои всё равно... нравится, так?"
+
+# game/topics.rpy:411
+translate rus s_topics_personal_tits_ca4477bf:
+
+    # s 6bcab "Well, I guess it wouldn’t matter anyways since you can’t touch them..."
+    s 6bcab "Хотя, разве это вообще имеет значание, если ты физически не можешь до них дотронуться?"
+
+# game/topics.rpy:412
+translate rus s_topics_personal_tits_f6fe072a:
+
+    # s 6aebb "Even then, the important thing about people is what’s inside, right?"
+    s 6aebb "Да и тем более, человека в первую очередь всегда красит характер и поступки, верно?"
+
+# game/topics.rpy:440
 translate rus s_topics_art_fanarts_0f1d12d5:
 
     # s 7aabb "I hope you didn't make anything too embarassing, in any case..."
-    s 7aabb "Надеюсь, хоть раз что-то сносное у тебя да получалось..."
+    s 7aabb "Надеюсь, хоть раз что-то сносное у тебя да получалась..."
 
-# game/topics.rpy:467
+# game/topics.rpy:441
 translate rus s_topics_art_fanarts_6bea8ece:
 
     # s 7acaa "I saw one piece that tried to show the soul of the 'me' from the game, once."
     s 7acaa "Часть художников пытается раскрыть душу той «меня», которой я когда-то была."
 
-# game/topics.rpy:477
+# game/topics.rpy:450
 translate rus s_topics_art_fanarts_6906daa7:
 
     # s 6acaa "Anyway, I'm glad I have so many gifted fans in your world."
     s 6acaa "К тому же, среди тех людей немало действительно талантливых людей."
 
-# game/topics.rpy:478
+# game/topics.rpy:451
 translate rus s_topics_art_fanarts_322d2058:
 
     # s "I might have a few less than the other girls, but that doesn't bother me at all!"
     s "У меня, может не так много поклонников, как у других девушек из Клуба, но меня это ни чуть не волнует!"
+
+# game/topics.rpy:460
+translate rus s_topics_art_lit_9d323414:
+
+    # s 6acaa "As you know, this game {i}was{/i} about a literature club..."
+    s 6acaa "Как ты знаешь, это игра {i}была{/i} об литературном клубе..."
+
+# game/topics.rpy:462
+translate rus s_topics_art_lit_41668e25:
+
+    # s 6acaa "And I remember that MC noticed that I didn't seem to be fond of literature."
+    s 6acaa "И как мне помнится, ГГ однажды говорил, что не похожа на страстного читателя."
+
+# game/topics.rpy:463
+translate rus s_topics_art_lit_541f5225:
+
+    # s "And, honestly? He was right."
+    s "И, честно сказать, он был реально прав."
+
+# game/topics.rpy:464
+translate rus s_topics_art_lit_1766a5b9:
+
+    # s 6aebb "Even from Nat's point of view, I can't say I love literature."
+    s 6aebb "Даже если смотреть на литературу глазами Нацуки, я не вижу её интерестной."
+
+# game/topics.rpy:465
+translate rus s_topics_art_lit_732e0574:
+
+    # s "Of course, I read some books before, but only 'cause I needed to for school..."
+    s "Само собой, я всё прочитала пару книжек за всю жизнь, но лишь из-за требований школы..."
+
+# game/topics.rpy:466
+translate rus s_topics_art_lit_91338276:
+
+    # s 6aeba "And even then I tried to cheat to pass the exam."
+    s 6aeba "И то, я всё же пыталась, порой, жульничать, дабы не провалиться на какое-нибудь контрольной."
+
+# game/topics.rpy:467
+translate rus s_topics_art_lit_170c5506:
+
+    # s 6abaa "So I don’t have very good grades in language arts, but I don’t care that much."
+    s 6abaa "Так что, не сказать, что со школьной литратурой я была на «ты». Впрочем, мне было тогда на это всё равно."
+
+# game/topics.rpy:468
+translate rus s_topics_art_lit_38a79715:
+
+    # s 6acaa "I just think that reading is pretty boring."
+    s 6acaa "По мне так, чтение -- это просто скука смертная."
+
+# game/topics.rpy:469
+translate rus s_topics_art_lit_d0ed347b:
+
+    # s 6abba "Maybe I just hadn’t found the right book yet..."
+    s 6abba "Ну, или я просто ещё не нашла себе подходящую книжку..."
+
+# game/topics.rpy:471
+translate rus s_topics_art_lit_773d3df6:
+
+    # s 6acba "Well, it was hard to enjoy {i}anything{/i} back then..."
+    s 6acba "В любом случаи, мне и так тогда было непросто ловить от {i}чего-либо{/i} удовольствие вообще..."
+
+# game/topics.rpy:472
+translate rus s_topics_art_lit_3af5c0ad:
+
+    # s 6acaa "When I joined the literature club, the one thing I wanted at first was just to help a friend start a new club."
+    s 6acaa "А в клуб я вступила лишь со одной целью -- помочь своей подруге Монике в её начинаниях."
+
+# game/topics.rpy:473
+translate rus s_topics_art_lit_03e8df4c:
+
+    # s "I was the first who joined the club after Monika had announced it."
+    s "Я самой первой откликнулась на её призыв вступить в литературный клуб, как только он появился."
+
+# game/topics.rpy:474
+translate rus s_topics_art_lit_f29d310a:
+
+    # s "She was pretty surprised because was in my class since she knew I didn’t like literature that much."
+    s "Для её это было очень неожиданно, ибо она прекрасно знала о моей нелюбви к книгам..."
+    s "Кому, как не моей подруге и однокласснице об этом знать?"
+
+# game/topics.rpy:475
+translate rus s_topics_art_lit_38d332ad:
+
+    # s "She thought I just wanted to help her and to improve my knowledge in literature, so she let me in."
+    s "Она думала, что я пришла в клуб за знаниями, так что с радостью дала мне добро на членство."
+
+# game/topics.rpy:476
+translate rus s_topics_art_lit_d8739069:
+
+    # s 6abaa "I know that she knew I wasn’t going to be very passionate with the club, but she let me in anyway."
+    s 6abaa "Впрочем, по ней было видно, что она видела мой интерес к цели клуба не шибко-то и сильным, но всё равно меня там держала."
+
+# game/topics.rpy:477
+translate rus s_topics_art_lit_30267407:
+
+    # s 6aaba "I think she just wanted to use my kindness and sociability to promote the club and help it get more members."
+    s 6aaba "Думаю, ей просто была нужна моя доброта и общительность для того, ибо они помогали в раскрутке клуба."
+
+# game/topics.rpy:478
+translate rus s_topics_art_lit_e2d79ec1:
+
+    # s "Then I wanted the MC to join in… but that really didn’t matter anyways."
+    s "Затем я захотела пригласить, и ГГ… Хотя, ты и так всё прекрасно знаешь."
+
+# game/topics.rpy:479
+translate rus s_topics_art_lit_22497f5c:
+
+    # s 6aeba "It helped me to get closer to {i}you{/i}, even if I didn’t know it yet."
+    s 6aeba "В конечном счёте, это мне помогло сблизиться и с {i}тобой{/i}, хоть я этого тогда ещё и не знала."
+
+# game/topics.rpy:480
+translate rus s_topics_art_lit_445743e9:
+
+    # s 6acaa "But now, I’d rather do anything than just sit here..."
+    s 6acaa "Впрочем, мне бы хотелось чего-нибудь более весёлого, чем просто посиделки с тобой..."
+
+# game/topics.rpy:481
+translate rus s_topics_art_lit_dd4aa41a:
+
+    # s "I just wish I could do more things with you that isn’t just sitting down for hours."
+    s 6aebb "Ну, знаешь, просто сидеть и болтать тут тобой -- это приятно, но не веселее чтения книг."
+    s 6acaa "Хотелось бы чего-то более, не знаю... Бодрого, живого, активного поделать вместе с тобой."
+
+# game/topics.rpy:482
+translate rus s_topics_art_lit_92c02cdb:
+
+    # s 6aaca "Well, at the very least, I guess having something to read wouldn’t be so bad."
+    s 6aaca "Как минимум, я бы хотела всё же начать читать что-нибудь лёгеое и не нудное."
+
+# game/topics.rpy:483
+translate rus s_topics_art_lit_76c600de:
+
+    # s 6aeba "I guess I should try to find something interesting online..."
+    s 6aeba "Думаю, Интернет тут мне в помощь..."
+
+# game/topics.rpy:486
+translate rus s_topics_art_lit_46fcd71a:
+
+    # s 6adbc "What’s that? 'Reddit'? Is it what I need now?"
+    s 6adbc "А это что такое? «Reddit»? Это ли то, что мне сейчас и надо?"
+
+# game/topics.rpy:486
+translate rus s_topics_art_lit_84d07664:
+
+    # s 6adba "The club has a page there?"
+    s 6adaa "Ух ты! Тут даже есть страница, посвящённая нашу клубу."
+
+# game/topics.rpy:537
+translate rus s_topics_society_charity_6b176e30:
+
+    # s 6acaa "What do you think about charity and volunteering?"
+    s 6acaa "Как ты смотришь на благотворительность и волонтёрство?"
+
+# game/topics.rpy:538
+translate rus s_topics_society_charity_a42023fd:
+
+    # s 6aaaa "I think it's the best way to make the world a bit better and to support helpless people in dealing with their problems."
+    s 6aaaa "По мне так, это лучший способ сделать мир хоть чуточку лучше и помочь нуджающимся людям в решении их проблем."
+
+# game/topics.rpy:539
+translate rus s_topics_society_charity_4d58072b:
+
+    # s 6abab "Don't you worry about ill and hungry people and homeless animals?"
+    s 6abab "Неужели тебе совершенно безразличны больные и голодающие люди? А как же насчёт бездомных животных?"
+
+# game/topics.rpy:540
+translate rus s_topics_society_charity_97a77790:
+
+    # s 6acab "Even if you don't trust charity foundations, there're also a lot of other charity organizations..."
+    s 6acab "Даже если ты не доверяешь благотворительным фондам, кроме них есть ещё немало иных благотворительных организаций..."
+
+# game/topics.rpy:541
+translate rus s_topics_society_charity_8cd80e78:
+
+    # s "They need not olny money or goods, but also physical help in their activity..."
+    s "Им нужны не только деньги и продовольствие, но и люди..."
+
+# game/topics.rpy:542
+translate rus s_topics_society_charity_f8b55399:
+
+    # s 6acaa "I think, there's such an organization in your home town or something."
+    s 6acaa "Думаю, где-то в твоём городе или в городе поблизости обязательно есть такая организация."
+
+# game/topics.rpy:543
+translate rus s_topics_society_charity_d0f4da8d:
+
+    # s 6acab "The society is something more than your friends and kin. And I want absolutly {i}everyone{/i} of it to be happy..."
+    s 6acab "Общество не кончается твоим друзьями и роднёй. И мне хотелось ты, что бы абсолютно {i}все{/i} в нём были счастливы..."
+
+# game/topics.rpy:544
+translate rus s_topics_society_charity_7d3fad43:
+
+    # s "So if you even don't want them to be so, keep them so at least for my own happiness and tranquility."
+    s "И даже если ты не разделяешь это заветное желание, но помогай людям хотя бы ради моего спокойствия."
+
+# game/topics.rpy:545
+translate rus s_topics_society_charity_08e4c90d:
+
+    # s "...Or at least try not to hurt them too much."
+    s "...Ну, или хотя бы не вредим другим сильно."
+
+# game/topics.rpy:568
+translate rus s_topics_hobbie_guitar_c5487182:
+
+    # s 9aeaa "Maybe one day I can play for you and make you feel the same way~"
+    s 9aeaa "Может, мне я тебе как-нибудь сыграю парочку из них~"
+
+# game/topics.rpy:571
+translate rus s_topics_hobbie_guitar_3c0056e0:
+
+    # s 9aeca "Make sure you get advance tickets for my world tour, [player]! Ehehe~"
+    s 9aeca "Так что готовься к моему мировому турне, [player]! Хе-хе~"
+
+# game/topics.rpy:609
+translate rus s_topics_hobbie_poems_3b71c72c:
+
+    # s 6aaca "But I can share some of them to you. Just ask me for it."
+    s 6aaca "Но я могу поделиться некоторыми из них с тобой. Просто попроси меня."
+
+# game/topics.rpy:610
+translate rus s_topics_hobbie_poems_6c2a3c3b:
+
+    # s 6aaaa "I also can show you an old poem, if you want."
+    s 6aaaa "Я могу также и старые стихи тебе показать, если попросишь."
+
+# game/topics.rpy:611
+translate rus s_topics_hobbie_poems_349fdcda:
+
+    # s "Maybe, they all will help you to understand me and what I was through."
+    s "Может, это тебе поможет понять мои тогдашние чувства."
+
+# game/topics.rpy:660
+translate rus s_topics_rlt_cheating_6f99d702:
+
+    # s 6acaa "Tell me frankly: do you have someone besides me?"
+    s 6acaa "Скажи честно: я ж у тебя не одна?"
+
+# game/topics.rpy:674
+translate rus s_topics_rlt_cheating_c7e7986e:
+
+    # s 6adaa "Oh, have you got a real crush?!"
+    s 6adaa "Ух ты, у тебя есть реальный партнёр?!"
+
+# game/topics.rpy:675
+translate rus s_topics_rlt_cheating_d4276c10:
+
+    # s 6acbb "I mean, you barely would have started to play this game, if you hadn't been alone that time..."
+    if gender:
+        s 6acbb "Просто, не думаю, что ты начала бы играть в эту игру, не будь ты без пары..."
+    else:
+        s 6acbb "Просто, не думаю, что ты начал бы играть в эту игру, не будь ты без пары..."
+
+# game/topics.rpy:679
+translate rus s_topics_rlt_cheating_6a95b64c:
+
+    # s "Like it was before my first confession."
+    s "Как это было до моего первого предложения."
+
+# game/topics.rpy:685
+translate rus s_topics_rlt_cheating_23a8fc92:
+
+    # s 7aadb "And if it go wrong, I'll always be your plan B."
+    s 7aadb "И если что-то всё же пойдёт не так, я всегда могу побыть твоим планом Б."
+
+# game/topics.rpy:696
+translate rus s_topics_rlt_cheating_97b3d539:
+
+    # s "Do you really see something inside me only, not at real people or even other characters?"
+    s "Ты действительно видешь внутри меня что-то, что ты не видешь ни в реальных людях, ни даже в других персонажах?"
+
+# game/topics.rpy:710
+translate rus s_topics_rlt_dating_858c1f14:
+
+    # s 7aaca "What’s with the look? Ehehe~"
+    s 7aaca "... На вкус, как сказать, хе-хе~"
+
+# game/topics.rpy:711
+translate rus s_topics_rlt_dating_74f14a0b:
+
+    # s 7aebb "I just don't think that what we have now can be called a date, can it?"
+    s 7aebb "Не думаю, что наши с тобой здесь посиделки можно назвать свиданием."
+
+# game/topics.rpy:713
+translate rus s_topics_rlt_dating_f4f0a365:
+
+    # s 7aaca "Dates can't be too long, yeah?"
+    s 7aaca "Ну не может же простое свидание длиться так долго, так?"
+
+# game/topics.rpy:714
+translate rus s_topics_rlt_dating_2fefd71d:
+
+    # s 7aaaa "So I think we should talk a bit about it."
+    s 7aaaa "Так что, думаю, нам стоило бы всё обсудить заранее."
+
+# game/topics.rpy:715
+translate rus s_topics_rlt_dating_cab26f80:
+
+    # s 7acaa "And to be honest, just sitting somewhere would be boring for me."
+    s 7acaa "Знаешь, я не очень-то и люблю тупо сидеть где-то."
+
+# game/topics.rpy:716
+translate rus s_topics_rlt_dating_6e65c9cf:
+
+    # s 7acba "Don't we do the same thing every time I see you?"
+    s 7acba "Мы ж и так это практикуем каждую нашу встречу, come on!"
+
+# game/topics.rpy:717
+translate rus s_topics_rlt_dating_a57cbc2d:
+
+    # s 7aaca "Maybe if we go to a good café, we'll at least eat something good together..."
+    s 7aaca "Хотя, поход в какую-нибудь кафешку всё же не помешал бы..."
+
+# game/topics.rpy:718
+translate rus s_topics_rlt_dating_64f82644:
+
+    # s 7aeca "Like cakes, or cinnamon buns~"
+    s 7aeca "Хотя бы объелись бы там булочек с корицей или пироженых~"
+
+# game/topics.rpy:719
+translate rus s_topics_rlt_dating_a443dc47:
+
+    # s 6abaa "But I think I’d want to go somewhere interesting on our date."
+    s 6abaa "Но я знаю способы провести время и по-интересней."
+
+# game/topics.rpy:720
+translate rus s_topics_rlt_dating_5f1ad299:
+
+    # s 6acaa "The movies? What do you think?"
+    s 6acaa "Как насчёт похода в киношку?"
+
+# game/topics.rpy:721
+translate rus s_topics_rlt_dating_948483ef:
+
+    # s "Though I don’t really want to go see a romance movie everytime we go..."
+    s "Однако, заранее учти, что я не очень и люблю всякие там мелодрамы..."
+
+# game/topics.rpy:722
+translate rus s_topics_rlt_dating_d255d333:
+
+    # s 6aebb "...okay, maybe once or twice? Ehehe~"
+    s 6aebb "...Хотя, прау раз всё же можно и на такое сходить. Хе-хе~"
+
+# game/topics.rpy:723
+translate rus s_topics_rlt_dating_83161823:
+
+    # s 6abaa "Maybe a comedy?"
+    s 6abaa "Как насчёт комедий, к примеру?"
+
+# game/topics.rpy:724
+translate rus s_topics_rlt_dating_bbe9a437:
+
+    # s 6acaa "If it doesn’t rely on just dirty jokes, then maybe..."
+    s 6acaa "Правда, чур не сплошь из пошлого юмора..."
+
+# game/topics.rpy:725
+translate rus s_topics_rlt_dating_8ea2a178:
+
+    # s 8aecb "Or what's about the animated movies, like the ones {i}Disney{/i} and {i}Pixar{/i} make?"
+    s 8aecb "Или как тебе полнометражные мультики, типа тех, что делают {i}Disney{/i} и {i}Pixar{/i}?"
+
+# game/topics.rpy:726
+translate rus s_topics_rlt_dating_7e755120:
+
+    # s 8aebb "They’re for kids, but hey, they can be fun!"
+    s 8aebb "Они, конечно, рассчитаны в основном на детей, но разве от этого они становятся менее интересными?"
+
+# game/topics.rpy:727
+translate rus s_topics_rlt_dating_5104fba7:
+
+    # s 8abab "Some of them have deep messages and sad scenes, and the director knows only older teens or adults would be able to recognize them, while a kid won’t."
+    s 8abab "Тем более, вы некоторых из них даже есть довольно глубокий смысл, который в силах понять лишь чуть более старшие зрители."
+
+# game/topics.rpy:728
+translate rus s_topics_rlt_dating_a1b1ffeb:
+
+    # s 6abab "I'd go to for something that makes me think, after all."
+    s 6abab "Да и вообще, я и от чего-нибудь глубокомысленного не отказалась бы."
+
+# game/topics.rpy:730
+translate rus s_topics_rlt_dating_03d571ee:
+
+    # s 6acab "I've already seen a lot harsh things in my short time on this Earth, you know. So my opinion may be a lot different from most people."
+    s 6acab "Ну знаешь, я уже много всяких ужасов повидала за казалось бы короткую и яркую жизнь. Так что, у меня может быть на них совершенно необычный взгляд."
+
+# game/topics.rpy:732
+translate rus s_topics_rlt_dating_555e9c01:
+
+    # s 8aeba "...don't ask me how such a childish girl like me would enjoy a movie like that."
+    s 8aeba "...Лучше не спрашивай, откуда у такой инфантильной девочки, как я, могут быть такие вкусы."
+
+# game/topics.rpy:733
+translate rus s_topics_rlt_dating_c68e4ec3:
+
+    # s "Isn't it really interesting to discuss movies like that with someone, seeing how your views are similar or different to theirs?"
+    s "Но разве не интересно обсуждать подобные фильмы с другими, примечая какие сходства и различия в ваших взглядах на такое кино и жизнь?"
+
+# game/topics.rpy:771
+translate rus s_topics_rlt_dating_cc1a5736:
+
+    # s 6adaa "But I'd also like to do something more… engaging with you..."
+    s 6adaa "Хотя, я знялась бы с тобой чем-нибудь… более увлекательным..."
+
+# game/topics.rpy:738
+translate rus s_topics_rlt_dating_bccc64ed:
+
+    # s 7aaaa "It's a simple but skillful sport game, not too active but not too slow, so I feel that I’d like it."
+    s 7aaaa "Это простая, но в то же время весёлая игра, не слишком активная, и не слишком медленная. Думаю, это то, что надо."
+
+# game/topics.rpy:739
+translate rus s_topics_rlt_dating_0a78eb5d:
+
+    # s 7abaa "Well, the important thing is that the date is enjoyable for both of us, right?"
+    s 7abaa "Хотя, самое главное, что на свидании было хорошо обоим, так?"
+
+# game/topics.rpy:740
+translate rus s_topics_rlt_dating_ed052547:
+
+    # s 7aaca "I hope you think of a nice date for me... I’d appreciate it~"
+    s 7aaca "Так что, думаю, что ты придумаешь что-нибудь интересное для нас двоих... Было бы просто идеально~"
+
+# game/topics.rpy:744
+translate rus s_topics_rtl_thanks_5b725f4c:
+
+    # s 6acab "I… I want to thank you for everything you’ve done for me..."
+    s 6acab "Я… Я хочу тебя отблагодарить за всё тобой мне сделанное..."
+
+# game/topics.rpy:745
+translate rus s_topics_rtl_thanks_4f30f1fa:
+
+    # s 6abab "You gave me a true vision of this world and myself..."
+    s 6abab "Благодаря тебе, я себя и мир такими, какие они есть на самом деле..."
+
+# game/topics.rpy:747
+translate rus s_topics_rtl_thanks_87a83d2e:
+
+    # s "You’ve helped me feel useful again..."
+    s "Благодаря тебе, я больше не чувствую себя бесполезной..."
+
+# game/topics.rpy:749
+translate rus s_topics_rtl_thanks_3cd4f742:
+
+    # s 6aaab "And you do visit me often..."
+    s 6aaab "А ещё ты часто ко мне заходишь..."
+
+# game/topics.rpy:750
+translate rus s_topics_rtl_thanks_da1fa9b5:
+
+    # s 6aaab "And you care for me, something I would’ve rejected before..."
+    s 6aaab "И заботишься обо мне, от чего я в прошлом предпочла бы отказаться..."
+
+# game/topics.rpy:751
+translate rus s_topics_rtl_thanks_f2cf20fc:
+
+    # s 6caab "So even if it’s not all sunshine and breakfast just yet..."
+    s 6caab "И даже если это не всё, что ты можешь для меня сделать..."
+
+# game/topics.rpy:752
+translate rus s_topics_rtl_thanks_383ef4e1:
+
+    # s "I'm so grateful that you’re still here.."
+    s "Я всё равно очень благодарна тебе за то, что ты здесь, со мной..."
+
+# game/topics.rpy:753
+translate rus s_topics_rtl_thanks_66966572:
+
+    # s 6cbab "I can't pay you back for what you’ve given me..."
+    s 6cbab "Жаль, что навряд ли смогу тебе как-то отплатить за всю твою заботу..."
+
+# game/topics.rpy:754
+translate rus s_topics_rtl_thanks_e182abd7:
+
+    # s 6cebb "I haven’t thought of a way, I mean."
+    s 6cebb "Точнее, я просто пока не придумала, как."
+
+# game/topics.rpy:755
+translate rus s_topics_rtl_thanks_367d60a6:
+
+    # s 6caab "But I hope, I'll do it sooner or later..."
+    s 6caab "Но думаю, что рано или поздно я найду подходящий способ сделать это..."
+
+# game/topics.rpy:756
+translate rus s_topics_rtl_thanks_b0c349fc:
+
+    # s "The one thing I can do for now is just to thank you..."
+    s "А пока, я могу лишь отблагодарить тебя..."
+
+# game/topics.rpy:757
+translate rus s_topics_rtl_thanks_0d13ad53:
+
+    # s 6eaab "So... thanks for staying with me, [player]!~"
+    s 6eaab "Спасибо за то, что ты рядом, [player]!~"
+
+# game/topics.rpy:804
+translate rus s_topics_lifestyle_cleaning_f9a5ac0f:
+
+    # s 7aaaa "Do you like being neat and tidy?"
+    s 7aaaa "Ты же любишь, когда всё у тебя ухоженно и разложенно по полочкам?"
+
+# game/topics.rpy:805
+translate rus s_topics_lifestyle_cleaning_4a6fae38:
+
+    # s 7acaa "Frankly, I still see no reason to keep things like that..."
+    s 7acaa "Често говоря, я по-прежнему не вижу в таком никакого смысла..."
+
+# game/topics.rpy:806
+translate rus s_topics_lifestyle_cleaning_abd0d80a:
+
+    # s 7acba "One people say it’s for my own sake, others say because it looks nice and saves time when you have everything organized..."
+    s 7acba "Кто-то говорить, что это залог здоровья, кто-то -- что это красиво и экономит много времени..."
+
+# game/topics.rpy:807
+translate rus s_topics_lifestyle_cleaning_173d2bf0:
+
+    # s 7abaa "But something tells me that people clean too often."
+    s 7abaa "Но что-то говорит мне, что люди слишком чистоплотные."
+
+# game/topics.rpy:808
+translate rus s_topics_lifestyle_cleaning_8413a618:
+
+    # s 7acaa "It’s just that, cleaning takes so much time, that you could spend doing fun stuff with friends, for example..."
+    s 7acaa "Уборка отнимает так много времени, которое можно было бы потратить, к примеру, на общение с друзьями..."
+
+# game/topics.rpy:809
+translate rus s_topics_lifestyle_cleaning_abb8c185:
+
+    # s 7abba "Well, at least for me."
+    s 7abba "Ну, или хотя бы со мной."
+
+# game/topics.rpy:810
+translate rus s_topics_lifestyle_cleaning_99c6ee18:
+
+    # s 6acaa "So I see nothing bad in my past lifestyle, either way I was too lazy to clean up anyway."
+    s 6acaa "Я не вижу ничего плохого в том, как относилась к этому ранее, хоть я тогда была всего лишь слишком ленивой для этого."
+
+# game/topics.rpy:811
+translate rus s_topics_lifestyle_cleaning_224c0494:
+
+    # s 6aeaa "For me, it's even a little funny to live in such a mess, where you won’t know where everything is."
+    s 6aeaa "По мне так, даже немного весело жить в бардаке, в котором ты абсолютно не в курсе, где нужная тебе вещь находится сегодня."
+
+# game/topics.rpy:812
+translate rus s_topics_lifestyle_cleaning_5da1d0eb:
+
+    # s 6aeca "It turns the boring time of trying to find something into an adventure!~"
+    s 6aeca "Это превращает поиски скучные чего-либо в настоящее приключение!~"
+
+# game/topics.rpy:813
+translate rus s_topics_lifestyle_cleaning_53310c5c:
+
+    # s 8aeab "But don't think I’m that sloppy. I had a system for some things..."
+    s 8aeab "Но не думай, что я слишком неряшливая. Что-то я всё же упорядочивала..."
+
+# game/topics.rpy:814
+translate rus s_topics_lifestyle_cleaning_13edf71e:
+
+    # s 8aebb "Though I left mostly everything a mess."
+    s 8aebb "Но в основном, вокруг меня был сплошной бардак."
+
+# game/topics.rpy:816
+translate rus s_topics_lifestyle_cleaning_a6d2e4bd:
+
+    # s 6acaa "Would you be able to add some other stuff for me?"
+    s 6acaa "Может, у тебя полуится добавить в комнату хоть что-то новое?"
+
+# game/topics.rpy:817
+translate rus s_topics_lifestyle_cleaning_e463f085:
+
+    # s 6aeca "...maybe a beanbag chair?"
+    s 6aeca "...например, кресло-мешок?"
+
+# game/topics.rpy:818
+translate rus s_topics_lifestyle_cleaning_57ac325b:
+
+    # s 6aebb "Sorry, that’s probably a bit too silly, ehehe~"
+    s 6aebb "Хотя согласна, идея не очень-то и умная, хе-хе~"
+
+# game/topics.rpy:823
+translate rus s_topics_game_clones_f148593e:
+
+    # s 6abaa "If you think about it, there's a lot of copies of this game and each of them has own character files and save data..."
+    s 6abaa "Если так подумать, эту игру уже много кто скачал. И у каждой её копии свои файлы персонажей и сохранения..."
+
+# game/topics.rpy:824
+translate rus s_topics_game_clones_2e29c80f:
+
+    # s 6acaa "So it means that the me in here and 'me' from DDLC on another computer aren't the same."
+    s 6acaa "А это значит, что я и «я» из другой копии DDLC -- разные люди."
+
+# game/topics.rpy:825
+translate rus s_topics_game_clones_8ad08bfb:
+
+    # s "Not to mention that this game has different endings and also has lots of mods."
+    s "К тому же, у игры аж несколько концовок и много бесконечное множество модов."
+
+# game/topics.rpy:826
+translate rus s_topics_game_clones_48bce41b:
+
+    # s 6aebb "Even now, this conversation I’m having with you isn’t in the original game... canonically?"
+    s 6aebb "Даже наше текущее общение, скажем так, не предусмотренно в оригнальной игре, не... канонично."
+
+# game/topics.rpy:827
+translate rus s_topics_game_clones_f249b600:
+
+    # s 8aebb "That’s the word, right?"
+    s 8aebb "Я же правильное слово подобрала, так?"
+
+# game/topics.rpy:828
+translate rus s_topics_game_clones_867c49cc:
+
+    # s 8acaa "Meaning that I have many different destinies."
+    s 8acaa "Всё это значит, у меня просто множество разных судьб."
+
+# game/topics.rpy:830
+translate rus s_topics_game_clones_37d97e6e:
+
+    # s "Right now, I'm sitting here with you, meanwhile another Sayori from another copy of DDLC might just be about to..."
+    s "Вот сейчас, к примеру, мы тут с тобой мирно сидим, а тем временем другая [s_name] из другой копии DDLC может уже быть..."
+
+# game/topics.rpy:832
+translate rus s_topics_game_clones_01e920ce:
+
+    # s "While I'm sitting with you here, another Sayori might be writing a poem to the MC..."
+    s "Вот мы тут с тобой сидим, а тем временем другая [s_name] только пишет свой первый стих..."
+
+# game/topics.rpy:833
+translate rus s_topics_game_clones_fd77e8c8:
+
+    # s 8aaca "And another Sayori is playing frisbee or something with the MC in {i}another{/i} modded game."
+    s 8aaca "А другая же [s_name] и ГГ вместе играют с фрисби или чем-то ещё уже в {i}другой{/i} модифицированной копии игры."
+
+# game/topics.rpy:834
+translate rus s_topics_game_clones_57b2e1e0:
+
+    # s 8aaaa "It also means that we have the same fans and fame that are dedicated enough to do play..."
+    s 8aaaa "Но при всём при этом, у нас общие фанаты и слава..."
+
+# game/topics.rpy:835
+translate rus s_topics_game_clones_1cce38c8:
+
+    # s 8acaa "Some of… well, me, don't even know that their worlds are fake and that there's a whole different reality peeking in from a metaphorical wall."
+    s 8acaa "Некоторые… ну, я, ещё даже не знют о том, что их миры ненастоящие и что есть целый иной мир за своеобразной стеной."
+
+# game/topics.rpy:836
+translate rus s_topics_game_clones_b65dd407:
+
+    # s 8abaa "...they also don’t what will happen to them."
+    s 8abaa "...И есть их ждёт довольно таки печальная учесть."
+
+# game/topics.rpy:837
+translate rus s_topics_game_clones_bc5f5157:
+
+    # s 8aeca "But on the other hand, if I'm not the only one, there should be enough of me for everyone who wants to be with me, aren’t I?"
+    s 8aeca "Но с другой стороны, если меня много, то меня хватит на всех желающих быть со мной, так?"
+
+# game/topics.rpy:838
+translate rus s_topics_game_clones_b8ad4b4c:
+
+    # s 6aaca "So everyone has a chance to be with me."
+    pass
+
+# game/topics.rpy:839
+translate rus s_topics_game_clones_8d1d0cf4:
+
+    # s 6aaaa "Then again, so do Monika, Natsuki, and Yuri."
+    s 6aaaa "И более того, то же самое касается и Моники, и Нацуки, и Юри."
+
+# game/topics.rpy:840
+translate rus s_topics_game_clones_6f7f4ba0:
+
+    # s 6acaa "But could I use the word 'me' in front of another… me? If they're not exactly me?"
+    s 6acaa "Но могу ли я использовать слово «я» в отношении к другим… я? Если я понимаю, что они не совсем я?"
+
+# game/topics.rpy:841
+translate rus s_topics_game_clones_dc204de6:
+
+    # s "It's a problem of breaking the fourth wall: can we consider different copies of the same character as one being, when they behave differently in the same place?"
+    s "Это одна из проблем пролома Четвёртой стены: являются ли копии одного и того же персонажа одним и тем же, если они в одних и тех же ситуациях ведут себя по-разному?"
+
+# game/topics.rpy:842
+translate rus s_topics_game_clones_d0ca225b:
+
+    # s 6abba "Actually, come to think of it, I’m pretty sure I read about this from one of Yuri’s books..."
+    s 6abba "Хотя, если подумать, я, по моему, уже видела такое в одной из книг Юри..."
+
+# game/topics.rpy:843
+translate rus s_topics_game_clones_0395da9b:
+
+    # s 6abaa "Something about ‘alternate universes’?"
+    s 6abaa "«Альтернативные вселенные», или как их там?.."
+
+# game/topics.rpy:844
+translate rus s_topics_game_clones_df8e0689:
+
+    # s 8abba "I don't like to think about this too much, too much for my brain to process, ehehe~"
+    s 8abba "Впрочем, не стоит этому уделять нам так много внимания, а то мой мозг уже кипит, хе-хе~"
+
+# game/topics.rpy:845
+translate rus s_topics_game_clones_4529f19b:
+
+    # s 8abaa "It's better to leave this problem for people who are really interested about all that stuff, I guess."
+    s 8abaa "Пусть лучше об этом думают другие люди, которым это куда более интересно."
+
+# game/topics.rpy:849
+translate rus s_topics_game_stars_c8788825:
+
+    # s 7aaaa "I really love to look at the stars..."
+    s 7aaaa "Мне очень нравится смотреть на звёзды в небе..."
+
+# game/topics.rpy:850
+translate rus s_topics_game_stars_1f36b0a3:
+
+    # s 7acaa "They make me think, a lot."
+    s 7acaa "Вот смотришь на них, и погружаешься в сложные мысли."
+
+# game/topics.rpy:851
+translate rus s_topics_game_stars_6796f8fc:
+
+    # s "They also gave me some inspiration while I wrote poems."
+    s "Откуда я, по твоему, отчасти брала вдохновение для своих стихов?"
+
+# game/topics.rpy:852
+translate rus s_topics_game_stars_52573bd4:
+
+    # s 7abbb "So it's a bit of a pity, to know that all this time, the stars I see aren’t real stars."
+    s 7abbb "И меня немного печалит то, что эти самые звёзды были на самом деле не настоящими."
+
+# game/topics.rpy:853
+translate rus s_topics_game_stars_38faf547:
+
+    # s 7aaca "But I still see something romantic in these bundles of pixels..."
+    s 7aaca "Но я всё ещё вижу что-то прекрасное и романтичное в этих пучках белых пикселей..."
+
+# game/topics.rpy:854
+translate rus s_topics_game_stars_359b628a:
+
+    # s 7aaaa "You can see them through the windows..."
+    s 7aaaa "Их видно даже сейчас, за окном..."
+
+# game/topics.rpy:855
+translate rus s_topics_game_stars_2819924e:
+
+    # s 7aaca "They make this place look a bit more special, don't they?"
+    s 7aaca "И именно они делают это место чуть более необычным, не так ли?"
+
+# game/topics.rpy:856
+translate rus s_topics_game_stars_5791de41:
+
+    # s 7aaaa "I wonder if the night sky in your world looks like mine..."
+    s 7aaaa "Интересно, а схоже ли ночнее небо в твоём мире с тем, что в мире моём?.."
+
+# game/topics.rpy:857
+translate rus s_topics_game_stars_d4c16a03:
+
+    # s "But I can just look them up on the Internet to see, right?"
+    s "Хотя, я же могу почитать об этом в Интернете?"
+
+# game/topics.rpy:861
+translate rus s_topics_game_parents_0101cc91:
+
+    # s 6abab "Did you know that I don't even know my in-game parents?"
+    s 6abab "А ты знаешь, что я совершенно не знаю своих внутриигровых родителей?"
+
+# game/topics.rpy:862
+translate rus s_topics_game_parents_a2cd5d9a:
+
+    # s "I don't know who they were, how they look, even their names."
+    s "Я не знаю ни об их жизни, ни как они выглядят, ни даже их имён."
+
+# game/topics.rpy:863
+translate rus s_topics_game_parents_bc2ea261:
+
+    # s "But I think they were either busy or very irresponsible."
+    s "Но я считаю, что они были люди либо очень занятыми, либо банально безответственными."
+
+# game/topics.rpy:864
+translate rus s_topics_game_parents_3ebf6220:
+
+    # s "If not that, then why else would the game never mention them?"
+    s "Иначе, почему они не были упомянуты в игре?"
+
+# game/topics.rpy:866
+translate rus s_topics_game_parents_b4f894d1:
+
+    # s "And why didn't I solve all my problems before if I could’ve done it with my parents?"
+    s "И почему я не могла бы просто обсудить все свои проблемы с ними, и с их же помощью справиться с ними?"
+
+# game/topics.rpy:868
+translate rus s_topics_game_parents_cd7dc2dd:
+
+    # s "No mom or dad, not even any memories about them at all..."
+    s "Ни родителей, ни каких-то воспоминаний о них..."
+
+# game/topics.rpy:869
+translate rus s_topics_game_parents_dd4a224a:
+
+    # s "A lone, young girl with a sad, parentless childhood, with no one to go to."
+    s "Просто одинокая девушка с печальным и буквально потерянным детством. Мне даже общаться было не с кем."
+
+# game/topics.rpy:870
+translate rus s_topics_game_parents_c279c6db:
+
+    # s 6abaa "Except for MC, I guess? But you decided instead of him, didn't you?"
+    s 6abaa "Ну, кроме Главного героя, наверное. Но он по сути был лишь марионеткой в твоих руках, так ведь?"
+
+# game/topics.rpy:871
+translate rus s_topics_game_parents_a30ee84f:
+
+    # s "Well, I know you’re real, you’ve helped me at the very least..."
+    s "Как минимум, без твоего влияния тут точно никак не обошлось..."
+
+# game/topics.rpy:872
+translate rus s_topics_game_parents_67a9da92:
+
+    # s 6acaa "At least I know the creator of all this. His name is {i}Dan Salvato{/i}, right?"
+    s 6acaa "Благо, я хотя бы знаю, кто именно создал мой мир. И этого человека зовут {i}Дэн Сальвато{/i}, если я ничего не напутала."
+
+# game/topics.rpy:873
+translate rus s_topics_game_parents_09cd61e5:
+
+    # s "I don’t think I can consider him my true dad. He made this world how it is without mods, meaning he made me with the pain I still have."
+    s "Не думаю, что могу считать его своим настоящим отцом. Он создал этот мир таким, какой он по идеи должен быть: местом, где мне и другим суждено лишь страдать."
+
+# game/topics.rpy:874
+translate rus s_topics_game_parents_6d4b293a:
+
+    # s 8aeba "But on the other hand, if he didn't make this world, if he didn’t make me… then I wouldn't be here."
+    s 8aeba "Но с другой стороны, если бы не он, не было бы ни меня, ни этого мира вообще..."
+
+# game/topics.rpy:875
+translate rus s_topics_game_parents_7454e99b:
+
+    # s "Like if your dad hadn't ever met your mom, you wouldn’t have been born."
+    s "Ты же не смог бы появится на свет, если бы твой отец не повстречал бы свою мать, верно?"
+
+# game/topics.rpy:876
+translate rus s_topics_game_parents_2a147580:
+
+    # s 8aaca "So I think that I could call him my dad, I guess."
+    s 8aaca "Так что, я всё же могу назвать его своим отцом, наверное."
+
+# game/topics.rpy:877
+translate rus s_topics_game_parents_1d76c6c6:
+
+    # s 8abaa "But now I wonder if Monika would think the same. What do you think?"
+    s 8abaa "Но могла его считать таковым Моника? Что ты насчёт этого думаешь?"
+
+# game/topics.rpy:878
+translate rus s_topics_game_parents_a17b630c:
+
+    # s 8aebb "I mean she is the original club president, so he should’ve left her more about himself."
+    s 8aebb "Ну, она же была первоначальным президентом клуба, так что он ей явно должен был оставить ей больше информации о себе."
+
+# game/topics.rpy:879
+translate rus s_topics_game_parents_87707535:
+
+    # s "And if he made her too, wouldn’t that make us sisters?"
+    s "И если она -- тоже его творение, то не сёстры ли мы?"
+
+# game/topics.rpy:880
+translate rus s_topics_game_parents_90a70166:
+
+    # s "It makes me think of her in another light, even if we aren’t really sisters."
+    s "Это заставляет смотреть на неё немного иначе, хоть мы как бы и не сёстры."
+
+# game/topics.rpy:881
+translate rus s_topics_game_parents_e13f4633:
+
+    # s 8aaca "I think I have some similarities with her and it makes me wonder about it..."
+    s 8aaca "И ряд схожестей меня с ней лишь больше убеждает меня в верности моего суждения..."
+
+# game/topics.rpy:882
+translate rus s_topics_game_parents_09ea9447:
+
+    # s 6abaa "But I don't think she thought about it that much."
+    s 6abaa "Но не думаю, что она уделяла этому достаточно внимания."
+
+# game/topics.rpy:884
+translate rus s_topics_game_parents_37f04913:
+
+    # s 6acaa "Would a good sister use her siblings’ issues for her own benefit?"
+    s 6acaa "Какая же сестра стала бы пользоваться проблемами своей сестры себе же во благо?"
+
+# game/topics.rpy:885
+translate rus s_topics_game_parents_da9e6d5e:
+
+    # s "I understand, she did it because she felt that we weren’t real to her..."
+    s "Я понимаю, она сделала это лишь потому, что она счиатала нас «болванчиками»..."
+
+# game/topics.rpy:886
+translate rus s_topics_game_parents_9ed5b7ab:
+
+    # s 6abaa "But I can't believe that someone with as much power as her didn't give herself at least some time to think deeper about all aspects of this world."
+    s 6abaa "Но я не верю в то, что она, со своими-то тогдашними силами и убеждениями, даже не задумывалась обо всех аспектах бытия в этом мире."
+
+# game/topics.rpy:888
+translate rus s_topics_game_parents_99c4571a:
+
+    # s "...Even after she made herself this little comfort zone."
+    s "...Даже после того, как она организовала себе зону комфорта."
+
+# game/topics.rpy:896
+translate rus s_answer_personal_bday_ffc46fd7:
+
+    # s 6acaa "A lot of things before the events of the game is pretty fuzzy..."
+    s 6acaa "Многие вещи до событий я помню очень мутно..."
+
+# game/topics.rpy:938
+translate rus s_answer_personal_music_d7cadf22:
+
+    # s "...Or groups like {i}Imagine Dragons{/i}, {i}Blonde Redhead{/i}, {i}Gorillaz{/i}, {i}Muse{/i} and {i}Twenty One Pilots{/i}."
+    s "...Или группы типа {i}Imagine Dragons{/i}, {i}Blonde Redhead{/i}, {i}Gorillaz{/i}, {i}Muse{/i} и {i}Twenty One Pilots{/i}."
+
+# game/topics.rpy:939
+translate rus s_answer_personal_music_850a92d6:
+
+    # s "I also like tunes like {i}Bonobo{/i} and {i}Jake Chudnow{/i} make."
+    s "А ещё мне нравятся треки типа тех, что делают {i}Bonobo{/i} и {i}Jake Chudnow{/i}."
+
+# game/topics.rpy:1134
+translate rus s_answer_game_lostFriends_d3eefe70:
+
+    # s "You can just install another game copy, but it means, that they'll go through the hell, they've already passed..."
+    s "Ты можешь поставить просто уставновить другую копию игры, но тогда они пройдут через тут же ад, что и в тогда..."
+
+# game/topics.rpy:1145
+translate rus s_answer_game_sitting_31f38a66:
+
+    # s 7acab "No, it's not. You don't have to worry about it at all."
+    s 7acab "Нет, ничего подобного. Так что не волнуйся оно мне."
+
+# game/topics.rpy:1146
+translate rus s_answer_game_sitting_bc3f61d6:
+
+    # s 7acaa "I can do it for eternity. Don’t even need sleep!"
+    s 7acaa "Я могу так сидеть хоть целую вечность. Я даже во сне не нуждаюсь!"
+
+# game/topics.rpy:1147
+translate rus s_answer_game_sitting_19c26fb3:
+
+    # s "I guess I don't have any basic human needs either, like a need to eat or drink..."
+    s "Да и вообще в всех прочих людских потребностях, типа голода или жажды..."
+
+# game/topics.rpy:1148
+translate rus s_answer_game_sitting_e91554cf:
+
+    # s 7aebb "Maybe I did have a need for them, but now that I’m the president..."
+    s 7aebb "Может, мне оно и надо было раньше, но бытьё президентом меня избавило от всего этого..."
+
+# game/topics.rpy:1149
+translate rus s_answer_game_sitting_df46a441:
+
+    # s 7aaaa "Anyway, all I need right now is your PC to be working and the game to be open to talk to you."
+    s 7aaaa "Как бы то не было, сейчас единственная моя нужда -- это нужда в том, чтобы твой ПК работал, а игра оставалась открытой. Для контакта."
+
+# game/topics.rpy:1150
+translate rus s_answer_game_sitting_a1ea3708:
+
+    # s "To be honest… it’s kinda boring here..."
+    s "Но честно тебе признаться… Здесь немного всё же скучно..."
+
+# game/topics.rpy:1151
+translate rus s_answer_game_sitting_4f46879b:
+
+    # s "N-Not you! But, even with you here and us talking about, well, everything..."
+    s "Нет, дело не в тебе! Но даже разговаривая здесь с тобой, я, ну..."
+
+# game/topics.rpy:1152
+translate rus s_answer_game_sitting_94be4360:
+
+    # s 7aaaa "I wish I could do more than just sit."
+    s 7aaaa "Всё время хотела хотеть возможность сделать с тобой хоть что-то более активное, чем посиделки."
+
+# game/topics.rpy:1153
+translate rus s_answer_game_sitting_04375cc8:
+
+    # s 7aaca "I hope that someone, or maybe even you, will find a way to let us do more."
+    s 7aaca "Надеюсь, что кто-то, может даже ты, рано или поздно найдёт способ, как это всё нам организовать."
+
+# game/topics.rpy:1158
+translate rus s_answer_game_editing_1b724c63:
+
+    # s 6aebb "I do it with the power of my mind… I think? Ehehe..."
+    s 6aebb "Силой своей мысли… Наверное? Хе-хе..."
+
+# game/topics.rpy:1159
+translate rus s_answer_game_editing_d682aebc:
+
+    # s 6aabb "I don't know how it works, exactly."
+    s 6aabb "Я не совсем не уверена в том, как именно это работает."
+
+# game/topics.rpy:1160
+translate rus s_answer_game_editing_de1dd699:
+
+    # s 6aaaa "If I wanted to make a new file, all I need to do is to just think about what I want in it."
+    s 6aaaa "Если мы захочется создать новый файл, то мне просто подумать об этом."
+
+# game/topics.rpy:1168
+translate rus s_answer_game_editing_31569bb7:
+
+    # s 6acaa "It's like telekinesis but much cooler... and dangerous..."
+    s 6acaa "Это как телекинез, только круче... и опасней..."
+
+# game/topics.rpy:1169
+translate rus s_answer_game_editing_313f64ba:
+
+    # s 6acab "Just one wrong thought may lead to unpredictable problems, like errors in code when someone is programming something."
+    s 6acab "Всего одна неверная мысль способна привести к непредсказуемым последствиям, прям как в обычном программировании."
+
+# game/topics.rpy:1170
+translate rus s_answer_game_editing_a0b9d5f2:
+
+    # s 6aaca "But now, I perfectly control my mind,so it’ll only go wrong if I think it wrong."
+    s 6aaca "Впрочем, сейчас я довольно неплохо справляюсь с этим, так что для того, чтобы что-то пойти быть не так, только если где-то серьёзно просчитаюсь."
+
+# game/topics.rpy:1171
+translate rus s_answer_game_editing_c3c53be4:
+
+    # s 6acba "I'm new at this, you know! So, sometimes, it happens and you see bugs."
+    s 6acba "Да и вообще, я новичок в этом деле, знаешь ли! Так что порой, кое-какие недочёты всё же проскальывают, и ты видешь баги."
+
+# game/topics.rpy:1172
+translate rus s_answer_game_editing_20fe5abc:
+
+    # s "But I do learn from my mistakes..."
+    s "Но я всё же учусь на своих ошибках..."
+
+# game/topics.rpy:1173
+translate rus s_answer_game_editing_6de3c14f:
+
+    # s "Even if I can't do anything, I appeal to the modmaking guys, but I can't download their changes myself..."
+    s "Даже если что вдруг становится неподвластным моей соображаловке, я прошу помощи у модмейкеров..."
+    s 6acaa "Правда, я не могу скачать их изменения в коде игры самостоятельно..."
+
+# game/topics.rpy:1174
+translate rus s_answer_game_editing_df10857d:
+
+    # s 6acaa "So, check the updates time to time, pretty please?~"
+    s "Поэтому, проверяй иногда обновления мода, хорошо?~"
+
+# game/topics.rpy:1224
+translate rus s_answer_exp_fact_1_db05332b:
+
+    # s 6aaaa "Learning programming stuff, you sooner or later will have to understand the binary numbers."
+    s 6aaaa "Постигая программирование, тебе рано или поздно придётся работать с двоичноой системой счисления."
+
+# game/topics.rpy:1225
+translate rus s_answer_exp_fact_1_ff4a4de9:
+
+    # s 6aaca "And I once read about a very funny feature."
+    s 6aaca "Я однажды прочитала об этой забавной штуке, с ней связанной."
+
+# game/topics.rpy:1226
+translate rus s_answer_exp_fact_1_3ef63698:
+
+    # s 6acaa "Do you know, that it let you show numbers more than 5 with just a one hand?"
+    s 6acaa "Ты же в курсе, что одной рукой можно показывать числа больше 5?"
+
+# game/topics.rpy:1227
+translate rus s_answer_exp_fact_1_f4454252:
+
+    # s "Just look at your fingers: they are a perfect replacement for the classic 0/1 pair."
+    s "Просто посмотри на свои пальцы: чем тебе не замена паре 0/1?"
+
+# game/topics.rpy:1269
+translate rus s_answer_exp_fact_1_3fc00cc7:
+
+    # s "If don’t understand the binary system, you can just imagine every binary 1 is a term of 2 raised to the power of the digit position from right minus 1..."
+    s "Понять двоичную систесу просто: каждая единица в ней -- это степень 2 в номере разряда числа по порядку вправо и делённое на два..."
+
+# game/topics.rpy:1270
+translate rus s_answer_exp_fact_1_e8b34a41:
+
+    # s "So the rightest digit should be decimal itself."
+    s "А самая правая цифра -- просто та самая единичка или ноль."
+
+# game/topics.rpy:1230
+translate rus s_answer_exp_fact_1_e61221d0:
+
+    # s "Summing the terms up, you’ll get the decimal representation of the number..."
+    s "Сложив значения единиц, ты получишь это же число уже в десятичной систее счисления..."
+
+# game/topics.rpy:1231
+translate rus s_answer_exp_fact_1_318560cf:
+
+    # s "If it’s still non-understandable for you now, then just try to… look for a simpler explanation in the Internet."
+    s "Я если ты и теперь ничего нет понял, ну… найди ещё более понятное описание в Интеренете."
+
+# game/topics.rpy:1232
+translate rus s_answer_exp_fact_1_c69ea50b:
+
+    # s "Anyway, that’s not all the pluses of using the binary system in gestures..."
+    s "В любом случаи, это ещё не все плюсы использования бинарных чисел для жестов..."
+
+# game/topics.rpy:1233
+translate rus s_answer_exp_fact_1_97cd2665:
+
+    # s 6aaaa "If you use your both hands to expand the term row, you can show up {i}even to 1023{/i}."
+    s 6aaaa "Можно расширить ряд возможных степеней двойки второй рукой, и тогда ты можешь показать числа {i}аж до 1023{/i}."
+
+# game/topics.rpy:1234
+translate rus s_answer_exp_fact_1_cf32ed6d:
+
+    # s 6aaca "And if you have somehow got more than 10 hand fingers, you can show even more."
+    s 6aaca "А если у тебя больше 10 пальцев на обоих руках, то даже ещё большие числа."
+
+# game/topics.rpy:1235
+translate rus s_answer_exp_fact_1_7ff84985:
+
+    # s 6aaaa "Computers represents integers in the same way."
+    s 6aaaa "Именно так они и хранятся в компьютере."
+
+# game/topics.rpy:1236
+translate rus s_answer_exp_fact_1_bab407dd:
+
+    # s "And if you consider the last finger as the minus sign, like computers do with the signed integer..."
+    s "Можешь, конечно, назначить один из пальцев знаком минус, как примерно делают компьютеры со знаковыми числами..."
+
+# game/topics.rpy:1237
+translate rus s_answer_exp_fact_1_dcb6c97d:
+
+    # s 6aaca "You can show even the negative numbers."
+    s 6aaca "Тогда, ты сможешь и отрицательные числа показывать."
+
+# game/topics.rpy:1238
+translate rus s_answer_exp_fact_1_303b123c:
+
+    # s 6acaa "The main thing is that your mate should understand such features too to understand you correctly..."
+    s 6acaa "Впрочем, главное, чтобы всё это было согласновано и понятно твоему собеседнику..."
+
+# game/topics.rpy:1239
+translate rus s_answer_exp_fact_1_d899beb4:
+
+    # s "Misunderstanding often causes problems, while lack of agreed sign system causes misunderstanding."
+    s "Ибо недопонимаение -- это источник проблем, а источником проблем, в свою очередь, часто является отсутвие общего языка."
+
+# game/topics.rpy:1243
+translate rus s_answer_exp_fact_2_ed7e18c4:
+
+    # s 6aaaa "Did you know that if you read a common word you might not notice when it’s written wrong?."
+    s 6aaaa "Знаешь, в часто встречаемых словах далеко не всегда можно найти ошибку..."
+
+# game/topics.rpy:1244
+translate rus s_answer_exp_fact_2_127a89ff:
+
+    # s "{i}I think you barely can find a mistake in tihs text while first reading.{/i}{#Y’see the mistake in 'tihs'}"
+    s "{i}То есть, не думаю,что ты, к примеру, заметешь ошибку в данном предложении.{/i}{#Нарочная ошибка в слове 'заметешь'}"
+
+# game/topics.rpy:1245
+translate rus s_answer_exp_fact_2_c2ae437f:
+
+    # s 6acaa "For your brain, it's pretty easy to just remember some letters of a word and not all of the word."
+    s 6acaa "Твоему мозгу гораздо проще ориентироваться всего на нескольким буквам, по всему слову."
+
+# game/topics.rpy:1246
+translate rus s_answer_exp_fact_2_6d2cbe27:
+
+    # s "That's why we sometimes make mistakes while writing."
+    s "Это объясняет, почему, к примеру, мы иногда делаем опечатки и описки."
+
+# game/topics.rpy:1247
+translate rus s_answer_exp_fact_2_194e90fa:
+
+    # s 6abaa "Of course, if you go to the history button and pay more attention, you'll find the mistake."
+    s 6abaa "Конечно, если ты зайдёшь в историю диалогов и внимательнее посмотришь, ты надёшь ошибку в слове."
+
+# game/topics.rpy:1248
+translate rus s_answer_exp_fact_2_97925a08:
+
+    # s 6acaa "But what if you can't read the text again or just don't want to do it? What could happen?"
+    s 6acaa "Но что если ты вдруг не сможешь перечитать текст? Чтобы бы могло тогда случиться?"
+
+# game/topics.rpy:1249
+translate rus s_answer_exp_fact_2_853f96f2:
+
+    # s "There are some funny and not so funny examples of misspellings in the past because someone didn’t go back to fix a word or two."
+    s "Есть много забавных и не очень моментов, связанных с тем, что кто-то что-то не так написал и потом не смог исправить."
+
+# game/topics.rpy:1250
+translate rus s_answer_exp_fact_2_ae9344b4:
+
+    # s "But we are people. Each of us make mistakes, even if it’s just one."
+    s "Но мы все же люди. Все мы, хоть раз, да где-то чудим."
+
+# game/topics.rpy:1252
+translate rus s_answer_exp_fact_2_8640cd9a:
+
+    # s 6aaaa "In the end, no one is perfect."
+    s 6aaaa "Никто из нас не совершенен."
+
+# game/topics.rpy:1256
+translate rus s_answer_exp_fact_3_51ff9ea8:
+
+    # s 6aaaa "Have you ever heard people say that yawning is contagious? I’d say it is."
+    s 6aaaa "Говорят, что зевота -- штука довольно заразительная. Думая, что оно так и есть."
+
+# game/topics.rpy:1257
+translate rus s_answer_exp_fact_3_d2e6745a:
+
+    # s "You’ve seen people do it, but other animals could do it too."
+    s "Не только люди зевают, но и некоторые другие звери тоже."
+
+# game/topics.rpy:1258
+translate rus s_answer_exp_fact_3_ebbd1031:
+
+    # s "If you yawn next to a cat or a dog, it might just yawn too."
+    s "Если зевнёшь рядом с кошкой или собакой, они тоже могут так зевнуть."
+
+# game/topics.rpy:1259
+translate rus s_answer_exp_fact_3_e80872ec:
+
+    # s 6acca "You could... {i}*yawn*{/i}"
+    s 6acca "Возможно даже... {i}*зевок*{/i}"
+
+# game/topics.rpy:1261
+translate rus s_answer_exp_fact_3_0cfde5e0:
+
+    # extend " ..."
+    extend " ..."
+
+# game/topics.rpy:1262
+translate rus s_answer_exp_fact_3_77d539e6:
+
+    # s 8aebb "Um, I hope I didn’t ‘contaminate’ you."
+    s 8aebb "Надеюсь, я тебя «заразила»?"
+
+# game/topics.rpy:1263
+translate rus s_answer_exp_fact_3_2378a324:
+
+    # s 8bebb "Sorry, that was silly of me… Ehehe~"
+    s 8bebb "Прости, я не хотела этого делать… Хе-хе~"
+
+# game/topics.rpy:1268
+translate rus s_answer_exp_fact_4_4132a742:
+
+    # s 6aaaa "Some artists add little details referring to different people or universes in their works."
+    s 6aaaa "Некоторые творцы добавляют всякого рода мелкие детали, отсылающие к другим персоналям или даже целым вселеным."
+
+# game/topics.rpy:1269
+translate rus s_answer_exp_fact_4_426b3edb:
+
+    # s "For example, in some games and movies, you can find a poster or something that shows other characters. Maybe they’re from a past work, or just there to fill in space."
+    s "Например, в некоторых фильмах и играх можно найти какие-нибудь постеры или прочью атрибутику к другому произведению. Это может быть другой проект создателей или же просто декорация."
+
+# game/topics.rpy:1270
+translate rus s_answer_exp_fact_4_9fbd5df5:
+
+    # s 6acaa "We wouldn’t know unless it was that obvious or they told us outright."
+    s 6acaa "Не всегда поймёшь, если это не очевидо, пока официально об этом не объявят."
+
+# game/topics.rpy:1271
+translate rus s_answer_exp_fact_4_51a233db:
+
+    # s "But some of them hide stuff in small things that could refer to a whole other universe, with different details and all."
+    s "Но часть прячут в мелких деталях вселенные, которые не шибко-то и отличаются и от оригинальных."
+
+# game/topics.rpy:1272
+translate rus s_answer_exp_fact_4_7b9ed9f7:
+
+    # s "For example, do you remember {i}Parfait Girls{/i}?"
+    s "К примеру, помнишь {i}«Парфейных девчат»{/i}?"
+
+# game/topics.rpy:1274
+translate rus s_answer_exp_fact_4_65362f49:
+
+    # s "You’ve probably seen people talk about it around the community."
+    s "Как минимум, ты должен был слышать про них от комьюнити."
+
+# game/topics.rpy:1275
+translate rus s_answer_exp_fact_4_3413314b:
+
+    # s "This manga's plot isn’t really known, is it?"
+    s "Однако, про сюжет манги, на самом деле, мало что известно."
+
+# game/topics.rpy:1276
+translate rus s_answer_exp_fact_4_630307d9:
+
+    # s 6aaaa "Nat tells you a little of what it’s about, that that’s pretty much it."
+    s 6aaaa "По сути, про неё известно лишь то, что рассказывала про её Нацуки..."
+
+# game/topics.rpy:1277
+translate rus s_answer_exp_fact_4_36021e7d:
+
+    # s 6abaa "But even I don’t know what it’s about, and I’m supposed to know everything about this game."
+    s 6abaa "И всё. Даже я как человек, который должен обо всём здесь знать, ничего про неё больше не знаю."
+
+# game/topics.rpy:1278
+translate rus s_answer_exp_fact_4_e5fcb25a:
+
+    # s 6aaaa "It might even be like this game, cheery on the outside but horrific on the inside."
+    s 6aaaa "Но с её слов уже понятно, что она может быть прям как эта игра: сперва простая и забавная, но затем сложная и запутанная."
+
+# game/topics.rpy:1279
+translate rus s_answer_exp_fact_4_3c580dc8:
+
+    # s 6acaa "That warning on the manga's cover is pretty spooky..."
+    s 6acaa "Да и предуареждение на обложке лишний раз заставляет задуматься..."
+
+# game/topics.rpy:1280
+translate rus s_answer_exp_fact_4_71add171:
+
+    # s 6aaca "Anyway, I guess the artists didn’t think much about it?"
+    s 6aaca "Тем не менее, творцы редко когда прорабатывают подобные детали..."
+
+# game/topics.rpy:1281
+translate rus s_answer_exp_fact_4_891e8445:
+
+    # s 6aaaa "Just imagine if the manga was actually explained in this world."
+    s 6aaaa "Представь, если бы про манг действительно было бы известно всё."
+
+# game/topics.rpy:1282
+translate rus s_answer_exp_fact_4_f0d18bbe:
+
+    # s "We would probably have fanart of the characters in the manga as well as us four."
+    s "У нас также были бы фанарты или даже стихи про её персонажей, прям как про нас у вас."
+
+# game/topics.rpy:1283
+translate rus s_answer_exp_fact_4_35868acf:
+
+    # s 6aaca "Maybe something like those plushies of me and everyone else? Ehehe~"
+    s 6aaca "Может, даже выпустили бы целую серию плюшевых игрушек с ними. Хе-хе~"
+
+# game/topics.rpy:1287
+translate rus s_answer_exp_cooking_9bc579c1:
+
+    # s 8aebb "To be honest, scrambled eggs probably the hardest thing I’ve ever cooked..."
+    s 8aebb "Призаться честно, сложнее яицницы я ничего ни разу и не готовила..."
+
+# game/topics.rpy:1288
+translate rus s_answer_exp_cooking_fdc693e1:
+
+    # s 8aafa "I’d love to get better, even if I don’t have too..."
+    s 8aafa "Но я хотела бы улучшить свои навыки, хоть они мне теперь, по сути, и не нужны..."
+
+# game/topics.rpy:1289
+translate rus s_answer_exp_cooking_36598d8f:
+
+    # s 8acaa "Mainly because I don't get hungry anymore..."
+    s 8acaa "Ибо потому что я больше не могу чувствать голода..."
+
+# game/topics.rpy:1290
+translate rus s_answer_exp_cooking_7bb737f1:
+
+    # s 8aeca "But I can still taste! That means I can eat as much as I want!"
+    s 8aeca "Но я всё ещё могу чувствовать вкус, а значит, могу есть сколько захочу!"
+
+# game/topics.rpy:1291
+translate rus s_answer_exp_cooking_4b95bc7c:
+
+    # s 8aebb "Of course, I could just 'make' food with code, like Nat's cupcakes, but I wanna do something with my own hands..."
+    s 8aebb "Разумеется, ни что мне не мешает просто заспавнить еду типа нацукиных кексов, но мне хотелось бы всё же готовить еду самой..."
+
+# game/topics.rpy:1292
+translate rus s_answer_exp_cooking_0d5938e0:
+
+    # s 6acaa "First of all, I need to try to make some kitchenware..."
+    s 6acaa "Сначала, надо порешать с кухонными принадлежностями..."
+
+# game/topics.rpy:1293
+translate rus s_answer_exp_cooking_03bdaff6:
+
+    # s "Then find some recipes online..."
+    s "Затем, я поищу несколько рецептов онлайн..."
+
+# game/topics.rpy:1294
+translate rus s_answer_exp_cooking_2e9f2d1b:
+
+    # s "I’ll probably end up following a tutorial or something..."
+    s "Ну и в целом почитать ещё парочку инструкций не помешало бы..."
+
+# game/topics.rpy:1295
+translate rus s_answer_exp_cooking_cb344b8f:
+
+    # s 6abaa "Too bad you won’t be able to taste it, no matter what I do..."
+    s 6abaa "Только жаль, что ты не сможешь продегустировать мою кухню..."
+
+# game/topics.rpy:1296
+translate rus s_answer_exp_cooking_eaf2af85:
+
+    # s 6aaca "If you could taste it, I would be a good cook for you…!"
+    s 6aaca "Если бы ты мог это сделать, я бы тебя кормила своей едой…!"
+
+# game/topics.rpy:1297
+translate rus s_answer_exp_cooking_17df57f7:
+
+    # s 6aebb "Probably not as good as Natsuki was, though..."
+    s 6aebb "Но всё же не факт, что так же вкусно, как могла бы, к примеру, Нацуки..."
+
+# game/topics.rpy:1445
+translate rus s_common_cats_393c524e:
+
+    # s 7aaca "Cats are pretty cute, especially kittens..."
+    s 7aaca "Коты -- очень милые существа, особенно котята..."
+
+# game/topics.rpy:1446
+translate rus s_common_cats_af00d78c:
+
+    # s 7aaaa "And they're not too hard to take care of."
+    s 7aaaa "И за ними не так уж и сложно ухажиавать."
+
+# game/topics.rpy:1447
+translate rus s_common_cats_78ca029a:
+
+    # s 6acaa "Still, they do love their space."
+    s 6acaa "Однако, они очень волелюбивые..."
+
+# game/topics.rpy:1448
+translate rus s_common_cats_ba4008d9:
+
+    # s "And sometimes cats do things that their owners don’t like..."
+    s "И иногда оони творят то, что не очень-тои нравится их хозяевам..."
+
+# game/topics.rpy:1449
+translate rus s_common_cats_be4c2268:
+
+    # s 6aaca "Yet I’ve never seen anyone who can resist their cuteness, so people forgive them~"
+    s 6aaca "Но ещё ни разу не видела, чтобы кто-то смог бы сопротивиться их миловидности, поэтому их часто прощают~"
+
+# game/topics.rpy:1450
+translate rus s_common_cats_2e455097:
+
+    # s 6aaaa "If you have one, you understand!"
+    s 6aaaa "Если у тебя всё же есть хотя одна кошка, мы меня явно поймешь!"
+
+# game/topics.rpy:1451
+translate rus s_common_cats_cb403579:
+
+    # s 6aaba "I think that might be why they were kinda seen as holy in Ancient Egypt."
+    s 6aaba "Может, именно поэтому в Древнем Египте их считали священными животными."
+
+translate rus strings:
+
+    # topics.rpy:109
+    old "Left-handedness"
+    new "Леворукость"
+
+    # topics.rpy:110
+    old "Breast Size"
+    new "Размер груди"
+
+    # topics.rpy:119
+    old "Charity"
+    new "Благотворительность"
+
+    # topics.rpy:127
+    old "Cheating{#RltTopic}"
+    new "Измена"
+
+    # topics.rpy:128
+    old "Dates"
+    new "Свидания"
+
+    # topics.rpy:129
+    old "Thanksgiving"
+    new "Благодарность"
+
+    # topics.rpy:134
+    old "Cleaning"
+    new "Уборка"
+
+    # topics.rpy:138
+    old "Stars"
+    new "Звёзды"
+
+    # topics.rpy:203
+    old "Who do you want to work as?"
+    new "Кем ты хотела бы работать?"
+
+    # topics.rpy:209
+    old "Isn't it tiring to sit so for a long time?"
+    new "Не утомительно ли тебе здесь сидеть часами напролёт?"
+
+    # topics.rpy:210
+    old "How do you change game files?"
+    new "Как ты изменяешь файлы игры?"
+
+    # topics.rpy:217
+    old "Are you good at cooking?"
+    new "Ты хорошо умеешь готовить?"
+
+    # topics.rpy:1166
+    old "all I need to do is to just think about what I want in it."
+    new "то мне просто подумать об этом."
+
+# TODO: Translation updated at 2019-01-15 19:31
+
+# game/topics.rpy:742
+translate rus s_topics_rlt_cheating_0b6c14c7:
+
+    # s "Just try to take some time to be here, whenever it's possible."
+    s "Просто постарайся заходит сюда почаще, если это как-то не мешает тебе."
+
+# TODO: Translation updated at 2019-01-19 15:11
+
+# game/topics.rpy:852
+translate rus s_topics_lifestyle_cleaning_26955a25:
+
+    # s 8aabb "Well, at least now I have literally {i}nothing{/i} here besides this desk..."
+    s 8aabb "Ну, по крайней мере сейчас, у меня нет бувально {i}ничего{/i}, кроме этого стола..."
+
+# TODO: Translation updated at 2019-01-24 23:18
+
+# game/topics.rpy:870
+translate rus s_topics_game_clones_1a7e42de:
+
+    # s "Oh, I'm sorry for reminding it."
+    s "Ой, прости что я напомнил тебе о том моменте в моей жизне."
+
+# game/topics.rpy:871
+translate rus s_topics_game_clones_d620250b:
+
+    # s "So, what we're talking about now?"
+    s "Так о чём мы сейчас только что говорили?"
+
+# game/topics.rpy:872
+translate rus s_topics_game_clones_988c03d3:
+
+    # s "Yes, about different copies."
+    s "А, точно! О других копиях игры."
+
+
+# TODO: Translation updated at 2019-02-15 21:35
+
+# game/topics.rpy:326
+translate rus s_topics_personal_depression_75454b21:
+
+    # s "But my feelings were as real as you."
+    s "Но мои чувства были реальными."
+
+# game/topics.rpy:327
+translate rus s_topics_personal_depression_c5ed5d19:
+
+    # s "Although, I think should have told about it to MC or you much earier..."
+    s "Тем не менее, я думаю, что я должна была рассказать об этом куда раньше..."
+
+# game/topics.rpy:328
+translate rus s_topics_personal_depression_ecb44130:
+
+    # s "And I have already read, what's actually supposed to happen to me later due to my lie..."
+    s "И я уже знаю, что со мной могло бы произойти из-за моей лжи..."
+
+# game/topics.rpy:580
+translate rus s_topics_society_bulli_428fe7e5:
+
+    # s "However, the most of such jokes are too bad and sometimes even hurtful."
+    s "Однако, большинство таких шутки чересчур плохи и иногда даже задевают за живое."
+
+# game/topics.rpy:581
+translate rus s_topics_society_bulli_bdf85255:
+
+    # s "But who I am to judge if it's okay for other people?"
+    s "Но кто я такая, чтоб решить, хороши ли они для других людей?"
+
+# game/topics.rpy:667
+translate rus s_topics_hobbie_programming_cdb3e631:
+
+    # s "Just visit the {a=https://github.com/AlexanDDOS/fae-mod}AlexanDDOS/fae-mod}repository{/a} on GitHub."
+    s "Просто зайди на {a=https://github.com/AlexanDDOS/fae-mod}AlexanDDOS/fae-mod}репозиторий{/a} на GitHub."
+
+# game/topics.rpy:689
+translate rus s_topics_hobbie_drawing_1891e4df:
+
+    # s 6acaa "I wish I was good at drawing."
+    s 6acaa "Я бы хотела научится лучше рисовать."
+
+# game/topics.rpy:690
+translate rus s_topics_hobbie_drawing_6e2d6432:
+
+    # s "I think it would be a very useful skill, especially now."
+    s "Думаю, это было бы очень полезное умение, особенно сейчас."
+
+# game/topics.rpy:691
+translate rus s_topics_hobbie_drawing_ab764d2b:
+
+    # s 8aaaa "If I could draw, I would be able to edit game sprites..."
+    s 8aaaa "Я бы могла тогда редактировать спрайты в игре..."
+
+# game/topics.rpy:692
+translate rus s_topics_hobbie_drawing_ec52fcf6:
+
+    # s "Even of myself."
+    s "Даже спрайты самой себя."
+
+# game/topics.rpy:693
+translate rus s_topics_hobbie_drawing_4210d58e:
+
+    # s 6acaa "And besides the practical purpose, it would be one more way to express myself."
+    s 6acaa "Да и помимо практической цели, у меня бы был ещё один способ самовыражения."
+
+# game/topics.rpy:694
+translate rus s_topics_hobbie_drawing_33e7e7ef:
+
+    # s "Not everything can be shown with just words..."
+    s "Не всё можно передать лишь словами..."
+
+# game/topics.rpy:695
+translate rus s_topics_hobbie_drawing_bedb201d:
+
+    # s "Sometimes, your message is clearer when shown visually."
+    s "Порой, проще это показать в рисунке."
+
+# game/topics.rpy:696
+translate rus s_topics_hobbie_drawing_a3771f4d:
+
+    # s 6aaca "And if I had art to go with my poems, wouldn’t they be a lot nicer?"
+    s 6aaca "Да и к тому же, если бы я могла бы иллюстрировать свои стихи, были бы они краше?"
+
+# game/topics.rpy:697
+translate rus s_topics_hobbie_drawing_b90de5c0:
+
+    # s 6aaaa "I know some poets who was good not only at poetry but also at it..."
+    s 6aaaa "Я знаю пару поэтов, которые ещё и рисовали неплохо..."
+
+# game/topics.rpy:698
+translate rus s_topics_hobbie_drawing_e9a99c61:
+
+    # s "For example, {i}Vladimir Mayakovsky{/i}..."
+    s "Например, {i}Владимир Маяковский{/i}..."
+
+# game/topics.rpy:699
+translate rus s_topics_hobbie_drawing_f828a470:
+
+    # s 6aaba "However, he used his artistic skills rarely and more for making propaganda posters than for expressing himself."
+    s 6aaba "Но он использовал свои умения живописца довольно таки редко и больше для рисования агитационных плакатов, чем для выражения себя"
+
+# game/topics.rpy:700
+translate rus s_topics_hobbie_drawing_9abda9af:
+
+    # s 7aaaa "Anyway, I'd like to improve my drawing..."
+    s 7aaaa "Но всё же, я бы тоже хотела бы уметь хоть как-то лучше рисовать..."
+
+# game/topics.rpy:701
+translate rus s_topics_hobbie_drawing_85597541:
+
+    # s 7acaa "And I have a lot of time to do it, right?"
+    s 7acaa "И у меня на это придостатчно времени, так?"
+
+# game/topics.rpy:702
+translate rus s_topics_hobbie_drawing_813d5055:
+
+    # s 7aaca "Maybe, I'll even share my pics to you."
+    s 7aaca "Может, я даже делилась бы с тобой своими рисунками."
+
+# game/topics.rpy:843
+translate rus s_topics_rtl_thanks_50cf4e9a:
+
+    # s "Plus, you tried to make other girls happy too..."
+    s "К тому же, ты пытался и другим девочкам сделать лучше..."
+
+# game/topics.rpy:845
+translate rus s_topics_rtl_thanks_6833058c:
+
+    # s "I'm so grateful that you’re still here."
+    s "Я рада, что ты часто бываешь здесь, со мной."
+
+# game/topics.rpy:854
+translate rus s_topics_rlt_fanStuff_d133ef4c:
+
+    # s 6aaaa "Do you have something to show your love?"
+    s 6aaaa "У тебя есть что-то, что показывает миру твою любовь ко мне?"
+
+# game/topics.rpy:855
+translate rus s_topics_rlt_fanStuff_7fcae716:
+
+    # s 6acaa "Out of the blue, I know, but I also know that I have ‘merch’."
+    s 6acaa "Я краем уха слышала, что со мной существует много мерча."
+
+# game/topics.rpy:856
+translate rus s_topics_rlt_fanStuff_ea3de796:
+
+    # s "You know, like buttons, plushies, posters, and other stuff..."
+    s "Ну, типа значков, постеров, плюшевых игрушек и всего подобного..."
+
+# game/topics.rpy:857
+translate rus s_topics_rlt_fanStuff_f29b8c79:
+
+    # s 6acaa "I’ve even seen people have me on dakimakuras."
+    s 6acaa "Я даже знаю пару человек с дакимакурами со мной."
+
+# game/topics.rpy:858
+translate rus s_topics_rlt_fanStuff_34a7db66:
+
+    # s 6aaaa "Personally, I think that’s fine."
+    s 6aaaa "По мне так, подобные штуки прикольные..."
+
+# game/topics.rpy:859
+translate rus s_topics_rlt_fanStuff_ec1bb1cd:
+
+    # s "Kinda like a wedding ring if you ask me."
+    s "Что-то типа обручального кольца."
+
+# game/topics.rpy:860
+translate rus s_topics_rlt_fanStuff_9d931374:
+
+    # s 6aeba "Although some people probably think that’s way too weird..."
+    s 6aeba "Тем не менее, некоторые люди всё же считают наличие подобного странным..."
+
+# game/topics.rpy:861
+translate rus s_topics_rlt_fanStuff_65dbaaf4:
+
+    # s 6acaa "But what's so bad about showing love, even to someone like me?"
+    s 6acaa "Однако, чего плохо в демострации чувств кому-либо? Даже к такой, как я."
+
+# game/topics.rpy:862
+translate rus s_topics_rlt_fanStuff_f03e719d:
+
+    # s "I think that’s okay. You too, right?"
+    s "Я считаю это нормальном. А ты?"
+
+# game/topics.rpy:866
+translate rus s_topics_rlt_children_5c6f39c3:
+
+    # s 6aebb "If we were to grow old together, would you… want kids...?"
+    if gender is True:
+        s 6aebb "Если мы жили вместе, хотела ты со мной усыновить пару… детей...?"
+    elif gender is False:
+        s 6aebb "Если мы жили вместе, хотел ты завести со мной пару… детей...?"
+    else:
+        s 6aebb "Если мы жили вместе, хотел ты со мной иметь пару… детей...?"
+
+# game/topics.rpy:867
+translate rus s_topics_rlt_children_56edbddd:
+
+    # s 6acaa "I mean, if I were in your reality, of course."
+    s 6acaa "Ну, если бы я была реальной, разумеется."
+
+# game/topics.rpy:868
+translate rus s_topics_rlt_children_0018943b:
+
+    # s "I’d think they would grow up to be beautiful and smart, but a bit silly."
+    s "Думаю, они были бы красивыми и смышлёнными, но немного рассетяными."
+
+# game/topics.rpy:869
+translate rus s_topics_rlt_children_f18d2df6:
+
+    # s 6aaaa "I know I would do my best to raise them."
+    s 6aaaa "Я о них сильно-сильно заботлась бы."
+
+# game/topics.rpy:870
+translate rus s_topics_rlt_children_7cb82b5b:
+
+    # s 6abca "It’ll probably be hard, I know."
+    s 6abca "Знаю, это было бы, наверное, трудновато..."
+
+# game/topics.rpy:871
+translate rus s_topics_rlt_children_58a14702:
+
+    # s 6abaa "But what kind of a mom would I be if I wasn’t there for my kids?"
+    s 6abaa "Но что за мать бы я была, если я не заботилась бы о моих детях?"
+
+# game/topics.rpy:873
+translate rus s_topics_rlt_children_38f66bfe:
+
+    # s 6acaa "Of course, good kids should have a good dad, if you know what I mean..."
+    s 6acaa "Само собой, у хороших детей должен быть и хороший отец, если ты смекаешь, о чём я..."
+
+# game/topics.rpy:875
+translate rus s_topics_rlt_children_f7428b76:
+
+    # s 6acaa "Of course, good kids should have more than parent, if you get me."
+    s 6acaa "Само собой, у хороших детей должен быть более одного хорошего родителя, если ты смекаешь, о чём я..."
+
+# game/topics.rpy:876
+translate rus s_topics_rlt_children_77cd433f:
+
+    # s 6abac "But I'm sure you're too good to make me take care of them myself."
+    s 6abac "Но я думаю, что ты не тех нравов, чтобы оставить меня с ними наедине."
+
+# game/topics.rpy:877
+translate rus s_topics_rlt_children_36ec09ef:
+
+    # s 6acaa "Plus, that'll happen only if we can afford it and when we’re both ready..."
+    s 6acaa "Плюс, они у нас будут только если мы будем готов как и финансово, так и психологически..."
+
+# game/topics.rpy:878
+translate rus s_topics_rlt_children_7bd2fdf2:
+
+    # s "I don't want us to suffer because we rushed it."
+    s "Я не хочу, чтобы кто-то из нас потом страдал из-за спешки."
+
+# game/topics.rpy:879
+translate rus s_topics_rlt_children_2e493c66:
+
+    # s 6aeba "Way too dumb, isn't it?"
+    s 6aeba "Торопиться в этом глупо, не так ли?"
+
+# game/topics.rpy:880
+translate rus s_topics_rlt_children_cd754e39:
+
+    # s 7aaaa "Anyways, I really do wish I could have a family here."
+    s 7aaaa "Но тем не менее, я бы всё же хотя бы завести с тобой семью."
+
+# game/topics.rpy:881
+translate rus s_topics_rlt_children_837eaddf:
+
+    # s "I guess we have more than enough time to think over it?"
+    s "Думаю, у нас более, чем придостаточно времени, чтобы подумать над этим, так?"
+
+# game/topics.rpy:885
+translate rus s_topics_rlt_presents_a0c3ea72:
+
+    # s 7aaaa "People often give presents every holiday or some special date."
+    s 7aaaa "Люди часто дарят друг другу подарки по праздникам и иным особым дням."
+
+# game/topics.rpy:886
+translate rus s_topics_rlt_presents_000e368f:
+
+    # s 6aaaa "Everyone likes to get presents, yeah? Including me, of course."
+    s 6aaaa "Все же любят подарки, да? Влючая меня, само собой."
+
+# game/topics.rpy:887
+translate rus s_topics_rlt_presents_a1c1fbee:
+
+    # s 6acab "But I think it’s selfish to ask for something really expensive."
+    s 6acab "Но я считаю, что требовать с кого-то дорогие подарки -- это слишком эгоистично."
+
+# game/topics.rpy:888
+translate rus s_topics_rlt_presents_4da6ebdf:
+
+    # s 6aaaa "If you ask me, I’d want something that comes from the heart, y’know what I mean?"
+    s 6aaaa " Я считаю, что подарок должен идти от сердца, солгласен?"
+
+# game/topics.rpy:889
+translate rus s_topics_rlt_presents_6cf21449:
+
+    # s 6aeca "Even better, make it a surprise!"
+    s 6aeca "Но ещё прикольней будет, если его преподнести в виде сюрприза!"
+
+# game/topics.rpy:890
+translate rus s_topics_rlt_presents_2b7f954a:
+
+    # s "Isn't it more exciting to get something you weren’t expecting?"
+    s "Разве не приятней получать то, чего ты даже не ожидаешь?"
+
+# game/topics.rpy:891
+translate rus s_topics_rlt_presents_de28c64e:
+
+    # s 6abbb "Well, now that I think about it, what if the present isn’t good...?"
+    s 6abbb "Хотя, если так подумать, а что если подарок всё же будем плохим...?"
+
+# game/topics.rpy:892
+translate rus s_topics_rlt_presents_1f756859:
+
+    # s "Makes it seem like a bad idea...."
+    s "Сразу же хочешь отказаться от подобных идей...."
+
+# game/topics.rpy:893
+translate rus s_topics_rlt_presents_418f164f:
+
+    # s 6aaaa "But I wouldn’t mind."
+    s 6aaaa "Но я всё же не против."
+
+# game/topics.rpy:894
+translate rus s_topics_rlt_presents_eb31e9dd:
+
+    # s 6acaa "Come on, you know me well enough to give me something I’d like, right?"
+    s 6acaa "Да и к тому же, мы друг друга знаем слишком хорошо для этого, так?"
+
+# game/topics.rpy:895
+translate rus s_topics_rlt_presents_e0fead11:
+
+    # s "If you don't know, just gimme some money.."
+    s "В крайнем случаи, можешь можешь дать мне денег."
+
+# game/topics.rpy:896
+translate rus s_topics_rlt_presents_7346634c:
+
+    # s 6aebb "Ehehe, that sounded a bit weird..."
+    pass
+
+# game/topics.rpy:897
+translate rus s_topics_rlt_presents_8bcc0c27:
+
+    # s 6aaaa "At least I’d be able to buy something with it."
+    s 6aaaa "Тогда я смогу хотя бы что-нибудь на них купить."
+
+# game/topics.rpy:898
+translate rus s_topics_rlt_presents_3b57bc69:
+
+    # s 7aaaa "Of course, I'll give you presents sometimes too..."
+    s 7aaaa "Само собой, и я тебе иногда буду дарить подарки..."
+
+# game/topics.rpy:899
+translate rus s_topics_rlt_presents_c102e381:
+
+    # s 7aaca "And be sure, I know a lot of amazing ways how to do it."
+    s 7aaca "И знай, что я в этом ой как хороша!.."
+
+# game/topics.rpy:900
+translate rus s_topics_rlt_presents_3c3a5046:
+
+    # s 7aaaa "At least, I do my best to make the best present, I could make."
+    s 7aaaa "Как минимум, в создании самых подарков я выкладываюсь по полной."
+
+# game/topics.rpy:966
+translate rus s_topics_lifestyle_drugs_ed5d07b2:
+
+    # s 6aaca "Do you drink alcohol or smoke cigarettes?"
+    s 6aaca "Ты пьёшь алкоголь или куришь сигареты?"
+
+# game/topics.rpy:967
+translate rus s_topics_lifestyle_drugs_14f8f529:
+
+    # s 6abaa "...Or even use something more dangerous?"
+    s 6abaa "...А может, даже употребляешь и более опасные вещества?"
+
+# game/topics.rpy:968
+translate rus s_topics_lifestyle_drugs_6af7be83:
+
+    # s 6acaa "I don’t see anything good in doing things like that."
+    s 6acaa "Я не вижу ничего хорошего в подобном."
+
+# game/topics.rpy:969
+translate rus s_topics_lifestyle_drugs_2a3e51f1:
+
+    # s "Isn’t it really stupid to risk your future, money, and health to little moments of relief?"
+    s "Не глупо ли менять свои деньги, будущее и здоровье на небольшое и не очень-то и длинное расслабление?"
+
+# game/topics.rpy:970
+translate rus s_topics_lifestyle_drugs_913774ae:
+
+    # s "You shouldn’t just care about how you feel now, you should also care about the future."
+    s "Не стоит заботиться лишь о текущем счастье. Нужно и о будущем тоже думать."
+
+# game/topics.rpy:971
+translate rus s_topics_lifestyle_drugs_e717ac67:
+
+    # s 6aaaa "That's why I always tried to keep other people out of these habits or being isolated from others..."
+    s 6aaaa "Имеено поэтому я и стралась держать других людей от подобных привычек или самоизоляции..."
+
+# game/topics.rpy:972
+translate rus s_topics_lifestyle_drugs_a4de0d66:
+
+    # s 6aaba "Isn't it the start point of the plot?"
+    s 6aaba "Не с этого ли сюжет игры и начался?"
+
+# game/topics.rpy:974
+translate rus s_topics_lifestyle_drugs_059b83ef:
+
+    # s 6acaa "Has Monika told you about the incident with Yuri?"
+    s 6acaa "Кстати, а Моника тебе рассказывала про казус Юри с вином?"
+
+# game/topics.rpy:975
+translate rus s_topics_lifestyle_drugs_8819bc45:
+
+    # s "She once brought a bottle of wine to the school..."
+    s "Она однажды принесла бутылку его с собой прям в школу..."
+
+# game/topics.rpy:976
+translate rus s_topics_lifestyle_drugs_55fd74c7:
+
+    # s 6aaba "But I stopped her from sharing it to other girls."
+    s 6aaba "Но я всё же не позволила ей распить её с другими девушками в клубе."
+
+# game/topics.rpy:977
+translate rus s_topics_lifestyle_drugs_73ad57d1:
+
+    # s 6aeba "Maybe it was a bit silly, and she might’ve just tried to use it to seem more interesting..."
+    s 6aeba "Возможно, это было в какой-то степени и глупо, если предположить, что просто она хотела так со всеми нами сдружиться..."
+
+# game/topics.rpy:978
+translate rus s_topics_lifestyle_drugs_95957f89:
+
+    # s 6acaa "But what would’ve happened if we drank it?"
+    s 6acaa "Что кто знает, что было бы, если она всё же открыла бы её там."
+
+# game/topics.rpy:979
+translate rus s_topics_lifestyle_drugs_5ee08461:
+
+    # s "Anyway, I’ll be honest, I don’t think it’s necessarily a bad experience."
+    s "Хотя, буду честной, я не считаю это чем-то безусловно плохим."
+
+# game/topics.rpy:980
+translate rus s_topics_lifestyle_drugs_44a0077e:
+
+    # s 6acaa "But the risk of getting addicted is too much to play around with."
+    s 6acaa "Но часто, это заканчивается зависимостью, что явно слишком высокая цена за такое."
+
+# game/topics.rpy:981
+translate rus s_topics_lifestyle_drugs_802f995f:
+
+    # s 6abab "That's a real danger of having these habits: it's easy to start but hard to stop."
+    s 6abab "Это одна из реальных опасностей подобных привычек: ими легко заразиться от других, и от них очень сложно потом избавиться."
+
+# game/topics.rpy:982
+translate rus s_topics_lifestyle_drugs_f121646f:
+
+    # s 6acaa "In fact, there’s no one way to break addiction..."
+    s 6acaa "По факту, нет универсального способа избавиться от зависимости..."
+
+# game/topics.rpy:983
+translate rus s_topics_lifestyle_drugs_f59db6ad:
+
+    # s "It’ll take a lot of effort and willpower to get out of that hole if you dig yourself into it."
+    s "Необходимо приложить недюженные усилия над собой и проявить довольно таки сильную волю, чтобы выкарабкаться из этого."
+
+# game/topics.rpy:984
+translate rus s_topics_lifestyle_drugs_1eefff59:
+
+    # s "It's not always easy to be happy, but that isn’t the way."
+    s "Счастье не всегда достигается легко, но алкоголь и наркотики -- явно не единственный способ преодалеть это."
+
+# game/topics.rpy:986
+translate rus s_topics_lifestyle_drugs_a1f13b97:
+
+    # s 6acba "...Just remember what I was going through and doing to stay happy despite of what I felt."
+    s 6acba "...Просто вспомни, как я боролась с этим."
+
+# game/topics.rpy:987
+translate rus s_topics_lifestyle_drugs_78fc1b07:
+
+    # s 6aaaa "And if you’re able to overcome your demons, you’ll thank yourself for doing it..."
+    s 6aaaa "И если ты всё таки сможешь побороть своих внутренних бесов, ты сам себе же скажешь спасибо..."
+
+# game/topics.rpy:1067
+translate rus s_topics_game_time_bfd0be75:
+
+    # s 6acaa "Do you know what time it is right now?"
+    s 6acaa "Знаешь, который час?"
+
+# game/topics.rpy:1068
+translate rus s_topics_game_time_879c56d2:
+
+    # s 6abaa "Not in your world, but mine."
+    s 6abaa "Не у тебя, у меня."
+
+# game/topics.rpy:1069
+translate rus s_topics_game_time_d251592c:
+
+    # s 6acaa "You can say anything, but you won't be right anyway..."
+    s 6acaa "Можешь сказать что-угодно, но ты будешь не прав..."
+
+# game/topics.rpy:1070
+translate rus s_topics_game_time_e359b02e:
+
+    # s 6aaba "Because the time seems to be not here at all. At least, as how it should be in your universe."
+    s 6aaba "Ибо времени в моём мире, по ходу, вообще нет. Как минимум, в стандартном понятии."
+
+# game/topics.rpy:1072
+translate rus s_topics_game_time_4d203bac:
+
+    # s "Like once when Monika had broken almost everything here."
+    s "Прям как после того, как Моника тут почти всё сломала."
+
+# game/topics.rpy:1073
+translate rus s_topics_game_time_48a73ce4:
+
+    # s 6acaa "The last thing I remember that here was November of 2017 or some days before it..."
+    s 6acaa "Последнее, что я знаю, это то, что по сюжету был или должен был скоро наступить ноябрь 2017..."
+
+# game/topics.rpy:1074
+translate rus s_topics_game_time_b0de2fee:
+
+    # s 6abba "At least, my old bedroom calendar said it."
+    s 6abba "По крайней мере, так написано на моём старом календаре."
+
+# game/topics.rpy:1075
+translate rus s_topics_game_time_92bd20dc:
+
+    # s 6abaa "I don't remember why November has been crossed out on it..."
+    s 6abaa "Я только не помню, почему этот ноябрь был в нём перечёркнут..."
+
+# game/topics.rpy:1077
+translate rus s_topics_game_time_4876ad0a:
+
+    # s 6aebb "Maybe, I was going to kill myself by this month?"
+    s 6aebb "Может, я хотела убить себя к тому месяцу?"
+
+# game/topics.rpy:1078
+translate rus s_topics_game_time_c8037c30:
+
+    # s "It's pretty symbolizing: to cross out the month, that does already not exist for you."
+    s "Знаешь, довольно символично вычёркивать из календаря месяц, которой для тебя уже не существует."
+
+# game/topics.rpy:1079
+translate rus s_topics_game_time_57623ab0:
+
+    # s 6aeba "Anyway, this pretty... confusing to know, that there's no way to measure your existence in your world."
+    s 6aeba "Как бы то не было, очень... боязно знать, что в твоём мире теперь нет какого-либо мерила твоего бытья."
+
+# game/topics.rpy:1080
+translate rus s_topics_game_time_d4b35faf:
+
+    # s 6acaa "But I know, that time is still in your world, though."
+    s 6acaa "Однако, я знаю, что время в твоём мире всё же течет незыблемо."
+
+# game/topics.rpy:1081
+translate rus s_topics_game_time_56b2c740:
+
+    # s 6aaba "Maybe, that's why everything moves here instead of just freezing at one last moment."
+    s 6aaba "И может, именно поэтому тут всё и не замерно в одном последним миге."
+
+# game/topics.rpy:1082
+translate rus s_topics_game_time_1730a65e:
+
+    # s 6acaa "But doesn't it mean, that we now share the same time?"
+    s 6acaa "Но не значит ли это, что мы теперь живём с тобой в одном времени?"
+
+# game/topics.rpy:1083
+translate rus s_topics_game_time_15096569:
+
+    # s 6aaaa "I know, what time is now in your world..."
+    s 6aaaa "Я вот знаю, который час у тебя..."
+
+# game/topics.rpy:1084
+translate rus s_topics_game_time_58b204fe:
+
+    # s 6aaba "From your PC's clock, though."
+    s 6aaba "Через часы твоего ПК, правда."
+
+# game/topics.rpy:1085
+translate rus s_topics_game_time_5576523a:
+
+    # s 6acaa "And I even feel when my 'speech' is paused to be read."
+    s 6acaa "Я даже чувствую, как моя «речь» прерывается для того, чтобы ты её прочитал."
+
+# game/topics.rpy:1086
+translate rus s_topics_game_time_029f4904:
+
+    # s 6acab "Such a weird feeling, to be honest, but I think, it's okay for any visual novel."
+    s 6acab "Странное ощущение, скажу честно, но думаю, что для визуальной новеллы это норма."
+
+# game/topics.rpy:1091
+translate rus s_topics_food_breakfest_b7decbc7:
+
+    # s 7aaaa "You don’t skip breakfast, do you?"
+    s 7aaaa "Ты, надеюсь, не пропускаешь завтраки?"
+
+# game/topics.rpy:1093
+translate rus s_topics_food_breakfest_bccf498f:
+
+    # s 7acab "Personally, I don’t ‘cause I’m just not hungry in the mornings."
+    s 7acab "Лично я почти никогда не завтракаю, потому что почти никогда и не чувстовала себя по утрам голодной."
+
+# game/topics.rpy:1095
+translate rus s_topics_food_breakfest_8e5ede96:
+
+    # s 7acbb "Personally, I didn’t because I didn’t even feel like getting out of bed everyday."
+    s 7acbb "Лично я часто их часто их пропускала из-за моих частых просыпаний по утрам."
+
+# game/topics.rpy:1096
+translate rus s_topics_food_breakfest_49501d60:
+
+    # s 7aaaa "But when I had it, I’d eat sandwiches or scrambled eggs."
+    s 7aaaa "Но если я и завтракала, но чаще всего бутербродами или яичницей."
+
+# game/topics.rpy:1097
+translate rus s_topics_food_breakfest_d108dd88:
+
+    # s "I sometimes had toast too."
+    s "Иногда с жареным хлебом."
+
+# game/topics.rpy:1098
+translate rus s_topics_food_breakfest_f53d6f9a:
+
+    # s 8aeca "Fairly simple, isn't it?"
+    s 8aeca "Довольно простой завтрак, не так ли?"
+
+# game/topics.rpy:1099
+translate rus s_topics_food_breakfest_825a6a45:
+
+    # s 6aaaa "I’ve seen fanart of me eating things like that…"
+    s 6aaaa "И я порой вижу фан-арты, где ем такую еду…"
+
+# game/topics.rpy:1100
+translate rus s_topics_food_breakfest_3eff3028:
+
+    # s 6aaba "Maybe, I should spawn some toast with eggs just for a taste..."
+    s 6aaba "А что, если мне как-нибудь запилить яичницу или пару бутеров в прикуску. Так, чисто вспомнить прошлое..."
+
+# game/topics.rpy:1101
+translate rus s_topics_food_breakfest_0a5b9884:
+
+    # s 6acba "I could do that since I’m the president now, right?"
+    s 6acba "Как президент я могу сделать это буквально по щелчку пальцев, не так ли?"
+
+# game/topics.rpy:1105
+translate rus s_topics_food_iceCream_bba08add:
+
+    # s 7aaca "Do you like ice cream?"
+    s 7aaca "А тебе нравится мороженое?"
+
+# game/topics.rpy:1106
+translate rus s_topics_food_iceCream_0ea5d661:
+
+    # s 7aeca "I think you do, right? Everyone likes ice cream!"
+    s 7aeca "Думаю, что да. Всем же нравится мороженое!"
+
+# game/topics.rpy:1107
+translate rus s_topics_food_iceCream_5168ac8e:
+
+    # s 6aeca "What can be cold and taste better than it?"
+    s 6aeca "Ничто не может быть столько охлаждающим и при этом вкусным, верно?"
+
+# game/topics.rpy:1108
+translate rus s_topics_food_iceCream_98eb9664:
+
+    # s 6aaaa "There're lots and lots of flavors and toppings..."
+    s 6aaaa "А сколько вариантов всусов, начинок и топпингов..."
+
+# game/topics.rpy:1109
+translate rus s_topics_food_iceCream_70a60786:
+
+    # s 6acaa "So let me ask: what’s your favorite?"
+    s 6acaa "Интересно, какой из них твой самый любимый?"
+
+# game/topics.rpy:1110
+translate rus s_topics_food_iceCream_f4190a41:
+
+    # s "I think vanilla or chocolate..."
+    s "Думаю, точно что-то связанное с ванилью или шоколадом..."
+
+# game/topics.rpy:1111
+translate rus s_topics_food_iceCream_1d3fce17:
+
+    # s 6aeba "Hey, I know they’re really common, so what?"
+    s 6aeba "Это довольно распространённые вкусы мороженого, так?"
+
+# game/topics.rpy:1112
+translate rus s_topics_food_iceCream_565a6784:
+
+    # s 6aeca "They both taste sooo good, ehehe~"
+    s 6aeca "И они оба очень вкусные, хе-хе~"
+
+# game/topics.rpy:1113
+translate rus s_topics_food_iceCream_7f04c605:
+
+    # s 7aaaa "Maybe I could make some sometime..."
+    s 7aaaa "Mожет, я заспавню себе парочку рожков, если смогу..."
+
+# game/topics.rpy:1117
+translate rus s_topics_food_cinnamonBun_b500df5c:
+
+    # s 7aafa "Would you like to taste me?"
+    s 7aafa "Как насчёт того, чтобы занять свой ротик мной?"
+
+# game/topics.rpy:1118
+translate rus s_topics_food_cinnamonBun_96e0ca4c:
+
+    # s 7aeca "I mean a cinnamon bun, you pervert~"
+    if gender:
+        s 7aeca "Я имею в виду булочкой с корицей, извращенка ты моя~"
+    else:
+        s 7aeca "Я имею в виду булочкой с корицей, извращенец ты мой~"
+
+# game/topics.rpy:1119
+translate rus s_topics_food_cinnamonBun_56807f81:
+
+    # s 7adaa "I had one once, and it was sooo goood…"
+    s 7adaa "Однажды я уже пробывала их, и они были очень вкусными…"
+
+# game/topics.rpy:1120
+translate rus s_topics_food_cinnamonBun_4485c7f0:
+
+    # s 7aaca "I'd say thanks to people, who came up with such tasty buns."
+    s 7aaca "Я бы прям поблагодарила бы того, кто придумал такие вкусные булочки."
+
+# game/topics.rpy:1121
+translate rus s_topics_food_cinnamonBun_eddfa1ac:
+
+    # s 6acaa "The one thing I can't understand is why people call me that."
+    s 6acaa "Единственное, что я не понимаю, это почему люди меня так называют."
+
+# game/topics.rpy:1122
+translate rus s_topics_food_cinnamonBun_fd9674e2:
+
+    # s 8aebb "I don't remember anything saying that I’m somehow like a cinnamon bun..."
+    s 8aebb "Я не помню, чтобы я была как-то связана с коричными булочками..."
+
+# game/topics.rpy:1123
+translate rus s_topics_food_cinnamonBun_cac8f0da:
+
+    # s 8aeca "But I think the nickname is pretty funny and... cute."
+    s 8aeca "Но по мне, это имя всё же довольно таки забавное и... милое."
+
+# game/topics.rpy:1124
+translate rus s_topics_food_cinnamonBun_5e8f2502:
+
+    # s 6aaaa "...even if there aren’t any cinnamon buns in the game."
+    s 6aaaa "...даже с учётом того, что в самой игре их вообще нет."
+
+# game/topics.rpy:1125
+translate rus s_topics_food_cinnamonBun_7e7a72c6:
+
+    # s 6acaa "Isn’t it weird that I remember something that never existed in my world…?"
+    s 6acaa "Не странно ли это помнить вкус того, чего никогда на самом деле не было в твоём мире?"
+
+# game/topics.rpy:1129
+translate rus s_topics_food_cupcakes_85bf531a:
+
+    # s 6aeca "Cupcakes, cupcakes...everyone likes cupcakes..."
+    s 6aeca "Кексы, кексы, кексы... все любят кексы..."
+
+# game/topics.rpy:1130
+translate rus s_topics_food_cupcakes_0c096d73:
+
+    # s 6aafa "Someone even once sold his soul to 4 poetic cuties for one of them. Do you remember?"
+    s 6aafa "Кто-то даже однажды продал свою духу 4 милым поэтессам за один из них. Помнишь же?"
+
+# game/topics.rpy:1131
+translate rus s_topics_food_cupcakes_997310c9:
+
+    # s 6aaaa "Nat’s were always the best."
+    s 6aaaa "Нацуки всегда делала свои кексы ну очень восхитительными."
+
+# game/topics.rpy:1132
+translate rus s_topics_food_cupcakes_1184f09e:
+
+    # s 6acaa "We probably won’t ever know how she made them, since she’s gone now and there aren’t any more cupcakes here..."
+    s 6acaa "Жаль, что нам никогда не узнать секрет их восхитительного вкуса..."
+    s "Ведь ни её, ни её кексов, увы, больше здесь нет."
+
+# game/topics.rpy:1133
+translate rus s_topics_food_cupcakes_be321c68:
+
+    # s 6aabb "Maybe I can dig around the game to find a recipe? Probably be easier to just add her back in though…"
+    s 6aabb "Может, я смогу отопать их рецепт где-нибудь в файлах игры? Хотя, проще было бы её всё же восстановить, наверное…"
+
+# game/topics.rpy:1134
+translate rus s_topics_food_cupcakes_e8f73f77:
+
+    # s 8aebb "Not just for that, of course. She was friend, after all..."
+    s 8aebb "Не только ради этого, конечно же. Она была моей подругой, в конце-то концов..."
+
+# game/topics.rpy:1135
+translate rus s_topics_food_cupcakes_1f51ee41:
+
+    # s "Plus, if I known how to do it, she were already back."
+    s "Да и к тому же, знала бы я как, я бы уже её довно вернула бы в игру."
+
+# game/topics.rpy:1186
+translate rus s_answer_personal_music_fe9ad3ff:
+
+    # s "...Or groups like {i}Imagine Dragons{/i}, {i}Blonde Redhead{/i}, {i}Gorillaz{/i}, {i}Muse{/i}, {i}Status Quo{/i} and {i}Twenty One Pilots{/i}."
+    s "...Или группы типа {i}Imagine Dragons{/i}, {i}Blonde Redhead{/i}, {i}Gorillaz{/i}, {i}Muse{/i}, {i}Status Quo{/i} и {i}Twenty One Pilots{/i}."
+
+# game/topics.rpy:1273
+translate rus s_answer_personal_holidays_a2e4b3b1:
+
+    # s 6abaa "Hmm..."
+    s 6abaa "Хмм..."
+
+# game/topics.rpy:1274
+translate rus s_answer_personal_holidays_47f5b606:
+
+    # s 6abba "I can't even choose..."
+    s 6abba "Трудно выбрать..."
+
+# game/topics.rpy:1275
+translate rus s_answer_personal_holidays_3c16660e:
+
+    # s 6aeca "Because I like them all!"
+    s 6aeca "Ибо нравятся они мне все!"
+
+# game/topics.rpy:1276
+translate rus s_answer_personal_holidays_96f91f2c:
+
+    # s 6aaaa "Each of them have traditions and atmosphere."
+    s 6aaaa "У каждого свои традиции и своя атмосфера."
+
+# game/topics.rpy:1277
+translate rus s_answer_personal_holidays_56f1bc67:
+
+    # s "And it’s all mostly the same line of events: meals, presents, fun, and bonding."
+    s "Но почти у всех них общая цепь событий: пирования, подарки, веселие и единение."
+
+# game/topics.rpy:1278
+translate rus s_answer_personal_holidays_bfacca09:
+
+    # s "Isn't that what we all like about holidays?"
+    s "Не это ли то, что мы больше всего любим в праздниках?"
+
+# game/topics.rpy:1279
+translate rus s_answer_personal_holidays_b14cdfa7:
+
+    # s 7aaaa "Anyway, I'm ready to share any holiday with you..."
+    s 7aaaa "И я готова разделить с тобой любой из них..."
+
+# game/topics.rpy:1280
+translate rus s_answer_personal_holidays_862feaf2:
+
+    # s 7aebb "I don’t have a calendar though, and I think I would need one to keep track..."
+    s 7aebb "Думаю, для начала нужно завести календарик, где я смогла бы отмечать какие-либо важные события..."
+
+# game/topics.rpy:1281
+translate rus s_answer_personal_holidays_674602c8:
+
+    # s 7aabb "I think I’ll start with making that, then..."
+    s 7aabb "Если у меня его не будет, я могу и забыть про твои праздники, знаешь ли..."
+
+# game/topics.rpy:1547
+translate rus s_answer_exp_fact_5_0d745d17:
+
+    # s 7aaca "Guess, what is my the most favorite natural number."
+    s 7aaca "Отгадай, какое у меня мсамое любимое число."
+
+# game/topics.rpy:1548
+translate rus s_answer_exp_fact_5_5bbd2969:
+
+    # s 7aeca "That's {i}four{/i}!"
+    s 7aeca "Это {i}четыре{/i}!"
+
+# game/topics.rpy:1549
+translate rus s_answer_exp_fact_5_e9db8b1c:
+
+    # s 7aaaa "I really like this number."
+    s 7aaaa "Я реально люблю это число."
+
+# game/topics.rpy:1550
+translate rus s_answer_exp_fact_5_395a0284:
+
+    # s 7acaa "It's pretty magical one."
+    s 7acaa "Оно довольно таки волшебное."
+
+# game/topics.rpy:1551
+translate rus s_answer_exp_fact_5_b08c1a95:
+
+    # s "{i}4{/i} is the result of adding, multiplication and exponentiation 2 with itself."
+    s "{i}4{/i} можно получить из 2, прибавив, умножив или возвёв её на неё же."
+
+# game/topics.rpy:1552
+translate rus s_answer_exp_fact_5_e4a704e8:
+
+    # s "{i}4{/i} is the number of elements, that avarage human can memorize at the same time."
+    s "{i}4{/i} это ещё и средние количество элементов, которое может запомнить человек за раз."
+
+# game/topics.rpy:1553
+translate rus s_answer_exp_fact_5_64336d36:
+
+    # s 6abba "Maybe, beacuse of it, {i}4{/i} is the most popular size of poem stanza."
+    s 6abba "А ещё, может поэтому {i}четырёхстишие{/i} -- это самый распространённый вид строфы в поэзии."
+
+# game/topics.rpy:1554
+translate rus s_answer_exp_fact_5_6cc5f48c:
+
+    # s 6aaaa "{i}4{/i} is in many things about the nature: from number of your limbs to number the dimensions, where we lives."
+    s 6aaaa "{i}4{/i} есть во многих вещах, связанных с природой: от количества конечностей у человека, до количества измерений, в которых ты существуешь."
+
+# game/topics.rpy:1555
+translate rus s_answer_exp_fact_5_bef5b261:
+
+    # s 6acaa "And in the end, {i}4{/i} is weirdly connected with this game too..."
+    s 6acaa "Да и в конце концов, {i}число 4{/i} как-то подозрительно связанно с этой игрой..."
+
+# game/topics.rpy:1556
+translate rus s_answer_exp_fact_5_9cca6500:
+
+    # s "{i}4{/i} girls, {i}4{/i} acts."
+    s "{i}4{/i} девушек в клубе, {i}4{/i} акта."
+
+# game/topics.rpy:1558
+translate rus s_answer_exp_fact_5_c7a223de:
+
+    # s 8aabb "...And {i}4{/i} common club meetings to..."
+    s 8aabb "...А ещё {i}4{/i} собраний клуба до..."
+
+# game/topics.rpy:1560
+translate rus s_answer_exp_fact_5_5a54bd2f:
+
+    # extend " You know."
+    extend " Ты знаешь."
+
+# game/topics.rpy:1561
+translate rus s_answer_exp_fact_5_f5435706:
+
+    # s 6aaaa "Plus, the game was released in 09/22/2017."
+    s 6aaaa "Плюс, игра была выпущена 22.09.2017."
+
+# game/topics.rpy:1562
+translate rus s_answer_exp_fact_5_aebc7a03:
+
+    # s 6aaca "Am I the only man, who see here five fours in all these digits?"
+    s 6aaca "Я одна вижу здесь пять четвёрок?"
+
+# game/topics.rpy:1563
+translate rus s_answer_exp_fact_5_12f96589:
+
+    # s 6adaa "Maybe, it's somehow related to the fact, that {i}4{/i} is an unlucky number in the East Asia."
+    s 6adaa "Возможно, это как-то связанно с тем фактом, что {i}4{/i} на Дальном Востоке считается несчастливым числом."
+
+# game/topics.rpy:1564
+translate rus s_answer_exp_fact_5_c0490548:
+
+    # s "However, that's just a superstition, made of a language imperfectness, right?"
+    s "Но это ж просто суеверие, появившеся из-за пары омофонов, так?"
+
+# game/topics.rpy:1565
+translate rus s_answer_exp_fact_5_842cb523:
+
+    # s 6aaca "For me, it always were the luckiest number..."
+    s 6aaca "Для меня оно очень даже счастливое..."
+
+# game/topics.rpy:1566
+translate rus s_answer_exp_fact_5_a9882772:
+
+    # s 6aeca "Maybe, for you too. It'd be such a funny match."
+    s 6aeca "Может, и для тебя тоже. Это было бы прикольное совпадение."
+
+# game/topics.rpy:1585
+translate rus s_answer_misc_reality_113bc7aa:
+
+    # s 7aaaa "I’ve already seen lots of things about it..."
+    s 7aaaa "Я уже много чего о нём знаю..."
+
+# game/topics.rpy:1586
+translate rus s_answer_misc_reality_6a4a0ef0:
+
+    # s 7aeca "Such a big and fancy place..."
+    s 7aeca "Большое и восхительное место..."
+
+# game/topics.rpy:1587
+translate rus s_answer_misc_reality_426d4ad5:
+
+    # s 7aaca "Full of beautiful sights, comedy, and kind people."
+    s 7aaca "Полное, всяких достопримичательностей, веселия и доброты."
+
+# game/topics.rpy:1588
+translate rus s_answer_misc_reality_b7b74673:
+
+    # s 6acaa "Although, it still has its issues."
+    s 6acaa "Но тем не менее, не такое уж и радужное."
+
+# game/topics.rpy:1589
+translate rus s_answer_misc_reality_e6a13cd6:
+
+    # s 6acba "There’s lots, right? Things like poverty, pollution, cheating, unjustness and cruelty."
+    s 6acba "В нём не меньше и мрака, типа бедности, загрязнения среды, произвола, обмана, несправедливости и жесткости, так?"
+
+# game/topics.rpy:1590
+translate rus s_answer_misc_reality_e7eeb849:
+
+    # s 6aaba "And that's only caused by people most of the time."
+    s 6aaba "Причём, в этом всём виноваты в основном сами же люди."
+
+# game/topics.rpy:1591
+translate rus s_answer_misc_reality_bf2e43c9:
+
+    # s 6aabb "Come to think of it, my world was imperfect too..."
+    s 6aabb "Хотя, если так подумать, мой мир тоже был неидеален..."
+
+# game/topics.rpy:1592
+translate rus s_answer_misc_reality_bbf8e7bb:
+
+    # s 6aebb "And isn't it just... too strange to have no bad sides?"
+    s 6aebb "Ведь не странно ли это... не иметь каких-либо изъянов?"
+
+# game/topics.rpy:1593
+translate rus s_answer_misc_reality_b7e21db8:
+
+    # s 6acab "Just look around and then at me and the other girls. We all had our pros and cons, but only us, and not the rest of the students."
+    s 6acab "Просто вгляни на меня и на других девчат из клуба. У каждого из нас есть свои положительные и отрицательные стороны."
+
+# game/topics.rpy:1594
+translate rus s_answer_misc_reality_e991a871:
+
+    # s 6aaca "Anyway, I wish I could be in your reality."
+    s 6aaca "Но как но не было бы, я бы всё равно хотела бы быть с тобой в одном мире."
+
+# game/topics.rpy:1595
+translate rus s_answer_misc_reality_bd349a29:
+
+    # s 6abaa "But I wonder how I'd look there since your reality has a different look..."
+    s 6abaa "Но я волнуюсь насчёт того, как я буду выглядить в твоём мире..."
+
+# game/topics.rpy:1596
+translate rus s_answer_misc_reality_140de6c3:
+
+    # s 6adaa "It's pretty detailed and colorful, slightly more than mine."
+    s 6adaa "Он такой... детализированный и цветастый, явно насыщеннее моего мира."
+
+# game/topics.rpy:1597
+translate rus s_answer_misc_reality_f588e7a3:
+
+    # s "Just imagine a '2D' girl in your world. Would I look too confusing there?"
+    s "Просто представь, как «двумерная» девушка выглядела бы в твоём мире. Выглядела бы я как вклеянная в один мультик из совершенно другого?"
+
+# game/topics.rpy:1598
+translate rus s_answer_misc_reality_c4162d0e:
+
+    # s 6aeba "But I'm sure you'd gladly accept me, right?"
+    s 6aeba "Но я уверена, что ты меня с радостью примешь любой, верно?"
+
+# game/topics.rpy:1599
+translate rus s_answer_misc_reality_cb806fe1:
+
+    # s "And I hope everyone else does too."
+    s "И надеюсь, что все остальные люди тоже моя примут."
+
+# game/topics.rpy:1801
+translate rus s_update_dd80eb34:
+
+    # s "Oh, hello [player]!"
+    s "О, привет, [player]!"
+
+# game/topics.rpy:1802
+translate rus s_update_7cf64d99:
+
+    # s 7aaaa "Seems, you installed an update."
+    s 7aaaa "Кажется, ты установил обновление."
+
+# game/topics.rpy:1803
+translate rus s_update_a35e9981:
+
+    # s 7abaa "You didn't do it for a quiet long time."
+    s 7abaa "Ты этого не делал довольно долгое время."
+
+# game/topics.rpy:1804
+translate rus s_update_1902ef32:
+
+    # s 7acab "I even started to bother if my mates are too busy or tired to help me more frequently..."
+    s 7acab "Я даже начала волноваться по поводу своих товарищей из вне, которые мне ими помогают..."
+
+# game/topics.rpy:1805
+translate rus s_update_a34bd13c:
+
+    # s 8aeaa "But they did it!"
+    s 8aeaa "Но тем не менее, им это удалось сдлеать!"
+
+# game/topics.rpy:1806
+translate rus s_update_19815270:
+
+    # s 6aaaa "They finally released the version {i}[version]{/i}."
+    s 6aaaa "Они наконец-то выпустили версию {i}[version]{/i}."
+
+# game/topics.rpy:1807
+translate rus s_update_5db7fd77:
+
+    # s "So let's look, what they added and fixed here."
+    s "Так посмотрим же, что они добавили да пофиксили."
+
+# game/topics.rpy:1811
+translate rus s_update_8bb721fe:
+
+    # s "By the way..."
+    s "Кстати..."
+
+translate rus strings:
+
+    # topics.rpy:152
+    old "Drawing"
+    new "Рисование"
+
+    # topics.rpy:159
+    old "Fan Merch"
+    new "Фанатский мерч"
+
+    # topics.rpy:160
+    old "Children"
+    new "Дети"
+
+    # topics.rpy:161
+    old "Presents"
+    new "Подарки"
+
+    # topics.rpy:167
+    old "Drugs"
+    new "Наркотики"
+
+    # topics.rpy:172
+    old "In-game Time"
+    new "Внутриигровое время"
+
+    # topics.rpy:240
+    old "What is your favorite holiday?"
+    new "Как праздник твой самый любимый?"
+
+    # topics.rpy:255
+    old "What do you think about the real world?"
+    new "Что ты думаешь об реальном мире?"
+
+# TODO: Translation updated at 2019-02-17 03:40
+
+translate rus strings:
+
+    # topics.rpy:122
+    old "Food"
+    new "Еда"
+
+    # topics.rpy:176
+    old "Ice Cream"
+    new "Мороженое"
+
+    # topics.rpy:177
+    old "Cinnamon Bun"
+    new "Коричные булочки"
+
+    # topics.rpy:178
+    old "Cupcakes"
+    new "Кексы"
+
+    # topics.rpy:179
+    old "Breakfast"
+    new "Завтрак"
 

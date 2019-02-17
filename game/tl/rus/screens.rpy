@@ -184,7 +184,7 @@ translate rus strings:
 
     # screens.rpy:1471
     old "Are you sure you want to quit without saying goodbye?"
-    new "Ты действительно хочешь выйти, не попрощавшись?"
+    new "Ты действительно хочешь выйти, не попрощавшесь?"
 
 # TODO: Translation updated at 2018-08-14 20:08
 

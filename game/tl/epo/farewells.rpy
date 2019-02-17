@@ -152,3 +152,17 @@ translate epo s_farewell_7_37bc89e5:
     # s "See you later, [player]!"
     s "Ĝis la revido, [player]!"
 
+# TODO: Translation updated at 2019-02-08 12:40
+
+# game/farewells.rpy:74
+translate epo s_farewell_8_bebd2f9c:
+
+    # s "Ciao, [player]!"
+    s "Ĝis poste, [player]!"
+
+# game/farewells.rpy:75
+translate epo s_farewell_8_df9529ea:
+
+    # s "I'll wait for you."
+    s "Mi vin atendos."
+
