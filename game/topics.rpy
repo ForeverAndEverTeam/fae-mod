@@ -92,7 +92,7 @@ init -5 python:
             return self.labels.get(label)
         
         def update_seen(self):
-            self.seen_len = len([x.seen for x in self.topics])
+            self.seen_len = len(filter(lambda x: x.seen, self.topics))
             self.seen = self.seen_len > 0
             self.all_seen = self.seen_len >= len(self.topics)
             
