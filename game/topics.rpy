@@ -841,6 +841,9 @@ label s_topics_rlt_dating:
     s 7aaca "I hope you think of a nice date for me... I’d appreciate it~"
     return 'h'
 
+label s_topics_rlt_thanks:
+    jump s_topics_rtl_thanks # I'm too lazy to translate the below topic again due to a mere typo
+
 label s_topics_rtl_thanks:
     s 6acab "I… I want to thank you for everything you’ve done for me..."
     s 6abab "You gave me a true vision of this world and myself..."
