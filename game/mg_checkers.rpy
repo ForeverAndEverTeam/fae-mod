@@ -1,4 +1,5 @@
-#Checkers/Draughts (Russian variant)
+﻿#Checkers/Draughts (Russian variant)
+default persistent.checkers_winfactor = 30
 
 init 10 python:
     
@@ -20,7 +21,7 @@ init 10 python:
         self.playerTurn = True # player plays as black while Sayori plays as white
         
         self.state = 0 #0 = game not over, 1 = black wins, -1 = white wins, -2 = restart, 2 = draw game
-        self.left_pieces = [12, 12]
+        self.left_pieces = [12, 12] #0 - player's, 1 - Sayori's
         self.selected = None
         self.possible_turns = []
         self.multiturn = False
@@ -186,6 +187,13 @@ init 10 python:
         
         return turns
     
+    def checkers_wf(alter):
+        persistent.checkers_winfactor += alter
+        if persistent.checkers_winfactor < 0:
+            persistent.checkers_winfactor = 0
+        elif persistent.checkers_winfactor > 59:
+            persistent.checkers_winfactor = 59
+    
     def checkers_check_state(board = None, left_pieces = None, unblocked = None):
         board = board or checkers.field
         left_pieces = left_pieces or checkers.left_pieces
@@ -204,12 +212,14 @@ init 10 python:
         
         if not checkers.asked_for_a_draw and (len(men[0]) == 0 or len(men[1]) == 0):
             return 3
-        elif unb_lens[0] == 0:
-            if unb_lens[1] == 0:
+        elif unb_lens[1] == 0:
+            if unb_lens[0] == 0:
                 return 2
             else:
+                checkers_wf(-1)
                 return -1
-        elif unb_lens[1] == 0:
+        elif unb_lens[0] == 0:
+            checkers_wf(1)
             return 1
         
         return 0
@@ -241,11 +251,15 @@ init 10 python:
                     if any(type(x) == tuple for x in turns):
                         add.append(i)
                 unblocked[(n & 2) >> 1].append(i)
+            else:
+                board[i] = 0
         
         if type(add) == bool:
             return []
         return add
         
+    def checkers_get_depth():
+        return 1 + persistent.checkers_winfactor // 15
     
     def checkers_select(n, board = None, selected = None):
         board = board or checkers.field
@@ -315,17 +329,17 @@ init 10 python:
     def checkers_ai_turn():
         a, bt = checkers_best_turn(False)
         
-        #print(a)
-        #print("bt:", bt)
+        ##print(a)
+        ##print("bt:", bt)
+        
+        
+        ##print(a)
         
         bt = renpy.random.choice(bt)
-        
         checkers_check_board(party = False)
-        
-        #print(a)
-        
         checkers_do(bt)
-        print("bt:", bt)
+        checkers_check_board(party = False)
+        #print (bt)
         
         for atake in checkers.atakes:
             if len(checkers_gen_turns(atake, False)):
@@ -335,7 +349,7 @@ init 10 python:
         checkers.playerTurn = True
         del checkers.selectable[:]
         checkers.selectable = checkers_check_board(checkers.selectable, True)
-        print(checkers.selectable)
+        ##print(checkers.selectable)
         
         checkers.atakes = []
         
@@ -344,16 +358,20 @@ init 10 python:
             renpy.call("mg_checkers_s_comment", checkers.state)
 
     
-    def checkers_best_turn(party, depth = 1, eval = 0, last_turn = None, alpha = float("-inf"), beta = float("inf")):
+    def checkers_best_turn(party, depth = None, eval = 0, last_turn = None, alpha = float("-inf"), beta = float("inf")):
+        if depth is None:
+            depth = checkers_get_depth()
+        #print(depth)
+        
         if depth == 0 or checkers_check_state():
-            #print("End")
+            ##print("End")
             if not last_turn:
                 raise ValueError("last last_turn can't be None")
             return eval, [last_turn]
             
         
         turns = []
-        bt = [last_turn]
+        bt = []
         
         
         del checkers.selectable[:]
@@ -361,7 +379,7 @@ init 10 python:
         
         
         
-        #print(checkers.selectable)
+        ##print(checkers.selectable)
         
         slt = checkers.unblocked[party]
         if len(checkers.selectable):
@@ -376,19 +394,18 @@ init 10 python:
                 break
             
             checkers_do(turn)
-            #print("Did: ", turn)
+            print(depth, turn)
             
             res = checkers_best_turn(not party, depth - 1, -(eval + checkers_eval_turn(turn)), turn, -beta, -alpha)
             total_eval, nt = -res[0], res[1]
             
             if total_eval > alpha:
-                alpha = total_eval
-                bt = nt
-            elif total_eval == alpha:
-                bt += nt
+                bt = [turn]
+            else:
+                bt.append(turn)
             
             checkers_undo(turn)
-            #print("Undid: ", turn)
+            print(-depth, turn)
         
         
         return alpha, bt
@@ -438,16 +455,16 @@ init 10 python:
         else:
             takes = list(takes)
         
-        print("king", king)
+        #print("king", king)
         pos_turns = checkers_gen_turns(f, first, party = party, king = king)
-        print("turns", pos_turns)
+        #print("turns", pos_turns)
         
         ntk = False
         ld = depth
         
         
         if len(pos_turns) == 0:
-            print("No turns")
+            #print("No turns")
             return [], False, ld
         else:
             for turn in pos_turns:
@@ -473,14 +490,14 @@ init 10 python:
                         
                         turns, ntk, ld = checkers_ai_test_turn(turn[0], False, party, turns, nt, cleaned, real_f = real_f, king = (checkers_n_to_xy(turn[0])[1] == 7 * party) or (n & 4) >> 2, depth = depth + 1)
                         ntk = ntk or not (depth < ld, len(nt) > 0)
-                        print("ntk", ntk)
+                        #print("ntk", ntk)
                         
                         if not ntk:
                             turns.append([real_f, turn[0], n & 4 + king] + nt)
-                            print("New Takes!")
+                            #print("New Takes!")
                             ntk = True
-                        else:
-                            print("len", len(nt))
+                        #else:
+                            #print("len", len(nt))
                         
                         for atake in atakes:
                             nt.append((atake, checkers.field[atake]))
@@ -498,14 +515,14 @@ init 10 python:
         
         eval += checkers_pos_eval(turn[1])
         
-        #print(eval)
+        ##print(eval)
         return eval
     
     def checkers_do(turn, board = None, left_pieces = None):
         board = board or checkers.field
         left_pieces = left_pieces or checkers.left_pieces
         
-        print(turn)
+        #print(turn)
         
         board[turn[0]], board[turn[1]] = board[turn[1]], board[turn[0]]
         for take in turn[3:]:
@@ -530,8 +547,8 @@ init 10 python:
             board[take[0]] = take[1]
             left_pieces[party] += 1
         
-        if turn[2] & 4:
-             board[turn[1]] ^= 4
+        if turn[2] & 1 == 1 and turn[2] & 4 == 0:
+             board[turn[0]] -= 4
     
         
     
@@ -716,7 +733,7 @@ label mg_checkers_s_comment(id = 0): #Sayori's comment; -1/1 = Sayori's victory/
         hide screen mg_checkers_scr
     
     
-    if id == 1:
+    if id == -1:
         $randId = renpy.random.randint(0, 2)
         if randId == 0:
             s 6aaca "Okay, I win this game."
@@ -727,7 +744,7 @@ label mg_checkers_s_comment(id = 0): #Sayori's comment; -1/1 = Sayori's victory/
         else:
             s 6acaa "Don't worry!"
             s "Maybe you'll win next time."
-    elif id == -1:
+    elif id == 1:
         $randId = renpy.random.randint(0, 1)
         if randId == 0:
             s 6aaca "Okay, you win!"
