@@ -127,7 +127,7 @@ init -5 python:
         TopicCategory('s_topics_rlt',_("Relationship")), #4
         TopicCategory('s_topics_lifestyle',_("Lifestyle")), #5
         TopicCategory('s_topics_game',_("Game Universe")), #6
-        TopicCategory('s_topics_game',_("Food")) #7
+        TopicCategory('s_topics_food',_("Food")) #7
     )
     
     topic_cats[0].new_topic(_("Depression"), 'depression')
