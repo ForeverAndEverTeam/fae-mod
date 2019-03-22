@@ -92,7 +92,8 @@ init -5 python:
             return self.labels.get(label)
         
         def update_seen(self):
-            self.seen_len = len(filter(lambda x: x.seen, self.topics))
+            self.seen_list = list(filter(lambda x: x.seen, self.topics))
+            self.seen_len = len(self.seen_list)
             self.seen = self.seen_len > 0
             self.all_seen = self.seen_len >= len(self.topics)
             
@@ -127,7 +128,8 @@ init -5 python:
         TopicCategory('s_topics_rlt',_("Relationship")), #4
         TopicCategory('s_topics_lifestyle',_("Lifestyle")), #5
         TopicCategory('s_topics_game',_("Game Universe")), #6
-        TopicCategory('s_topics_food',_("Food")) #7
+        TopicCategory('s_topics_food',_("Food")), #7
+        TopicCategory('s_topics_misc', _("Misc")) #8
     )
     
     topic_cats[0].new_topic(_("Depression"), 'depression')
@@ -138,6 +140,7 @@ init -5 python:
     topic_cats[0].new_topic(_("Quitting the Game"), "quittingTheGame")
     topic_cats[0].new_topic(_("Left-handedness"), "sinistrality")
     topic_cats[0].new_topic(_("Breast Size"), "tits")
+    topic_cats[0].new_topic(_("Intellengence"), 'intellegence')
     
     topic_cats[1].new_topic(_("Videogames"), 'games')
     topic_cats[1].new_topic(_("Fanarts"), 'fanarts')
@@ -172,11 +175,14 @@ init -5 python:
     topic_cats[6].new_topic(_("Parents"), 'parents')
     topic_cats[6].new_topic(_("Stars"), 'stars')
     topic_cats[6].new_topic(_("In-game Time"), 'time')
+    topic_cats[6].new_topic(_("Other Worlds"), 'worlds')
     
     topic_cats[7].new_topic(_("Ice Cream"), 'iceCream')
     topic_cats[7].new_topic(_("Cinnamon Bun"), 'cinnamonBun')
     topic_cats[7].new_topic(_("Cupcakes"), 'cupcakes')
     topic_cats[7].new_topic(_("Breakfast"), 'breakfest') #Save this typo here and below not to make me edit the mod translations
+    
+    topic_cats[8].new_topic(_("Flowers"), 'flowers')
     
     for i in topic_cats:
         i.update_seen()
@@ -248,6 +254,7 @@ init -5 python:
     question_cats[0].new_topic(_("What pet would you like to have?"), 'pets', related = topic_cats[0].topics[1])
     topic_cats[5].topics[2].related = [question_cats[0].topics[-1]]
     question_cats[0].new_topic(_("What is your favorite holiday?"), 'holidays')
+    question_cats[0].new_topic(_("What do you think about lesbian pairings?"), 'pairings')
     
     question_cats[1].new_topic(_("Do you regret you have lost your friends?"), 'lostFriends')
     question_cats[1].new_topic(_("What do you think of one of the other club members?"), 'opinion')
@@ -263,7 +270,6 @@ init -5 python:
     
     question_cats[3].new_topic(_("Can you give me a poem?"), 'poem')
     question_cats[3].new_topic(_("What do you think about the real world?"), 'reality')
-    #question_cats[3].new_topic(_("What time and date is it?"), 'datetime')
         
     
     moods = (
@@ -462,6 +468,24 @@ label s_topics_personal_tits:
     s 6bcab "Well, I guess it wouldn’t matter anyways since you can’t touch them..."
     s 6aebb "Even then, the important thing about people is what’s inside, right?"
     return
+
+label s_topics_personal_intellegence:
+    s 6acaa "I often hear many other people saying that I was an ‘airhead’..."
+    s 6abba "They often make jokes about it and even think that really is the real me."
+    s 6acaa "But I can't understand why they think so."
+    s "Maybe because I was always thinking… and wasn’t as smart as Monika and Yuri..."
+    s 6abaa "But I always was pretty clever and good at strategies!"
+    s 6acaa "I think people just have different expectations when considering if someone is intelligent..."
+    s 6abaa "Exaclty, if someone is {i}not stupid{/i}."
+    s 6acaa "I mean people's thoughts about you are obviously very subjective and depend on the situation you or they are in."
+    s 6aaaa "So don’t take comments like those too seriously."
+    s 7aaca "People aren’t perfect, and that’s okay!"
+    s 7aaaa "So don't worry if someone judges you for a silly thing you did or a mistake. Just try to make yourself better for next time..."
+    s "And if you really can't do do any better, then it means that just you’ve reached your own limit."
+    s 7aaac "But it dosen't mean, you should stop trying to break it, though..."
+    s 7aaca "Because they can be false."
+    return 'h'
+
 
 ## Art
 label s_topics_art_games:
@@ -1099,6 +1123,26 @@ label s_topics_game_time:
     s 6acab "Such a weird feeling, to be honest, but I think, it's okay for any visual novel."
     return
 
+label s_topics_game_worlds:
+    s 6acaa "Sometimes, I wonder why I am here..."
+    s "Would I be a different person if I lived in another place?"
+    s "I mean, if not in your world, what other place could there be? Another game?"
+    s "But there're a lot of kind of different games and plenty of them are pretty violent."
+    s 6abaa "I just can't imagine living in a game full of blood and struggle..."
+    s "You know: shooters, fights, war and so on..."
+    s 6abab "I just couldn't take all the violence I'd see."
+    if persistent.last_playthrought > 0:
+        s "Especially now, when I’ve seen Death with my own sight."
+        s 6abbb "I’d rather be dead than be the one doing the killing."
+        s "I'd pray for a revive ability..."
+    s 6acab "Such aggressive worlds aren’t that appealing to me."
+    s 6aaaa "But I'd glad to be in an innocent simulator, strategy or puzzle game..."
+    s 6abaa "Or at least almost innocent..."
+    s 6aaaa "Even if I wasn’t an important character, maybe a helper or even a simple settler..."
+    s 6aaca "...but I'd do my best for you, of course!"
+    return
+
+
 ## Food
 label s_topics_food_breakfest:
     s 7aaaa "You don’t skip breakfast, do you?"
@@ -1147,6 +1191,24 @@ label s_topics_food_cupcakes:
     s 8aebb "Not just for that, of course. She was friend, after all..."
     s "Plus, if I known how to do it, she were already back."
     return 'h'
+
+##Misc
+label s_topics_misc_flowers:
+    s 7aaaa "What do you think about flowers?"
+    s 7aeca "It's one of many beautiful things nature can create."
+    s 7aeca "They are so colorful, have wonderful shapes, some even smell sweet..."
+    s 7aaaa "I remember when I used to walk in the flower meadows outside of the city."
+    s 6acaa "But... I think it's too selfish to pluck a flower... even if it were to be a gift."
+    s "Flowers are living beings too, and plucking them out of the ground does kill them."
+    s 6aaaa "So I prefer just to look at them, and then leave them be."
+    if persistent.last_playthrought > 0:
+        s 6aeba "Although, I did do this in one of my poems..."
+        s 6aaaa "But just for the analogy."
+    s 9acaa "At least you can plant a flower in pot."
+    s 6abba "You do need to take care of it though..."
+    s 7aaaa "But if you know someone with a lot of time and great responsibility, it will be a good gift for them."
+    return 'h'
+
 
 
 #Answers
@@ -1299,6 +1361,21 @@ label s_answer_personal_pets:
     s 7aaaa "Definitely, a cat."
     call s_common_cats
     return 'h'
+
+label s_answer_personal_pairings: #What do you think about lesbian pairings?
+    s 8aebb "I think, they're quite... weird."
+    s 8acaa "Not because of their sexuality..."
+    s 6acaa "I know in my heart who I love..."
+    s 6acba "...but some fans ‘ship’ me with my friends..."
+    s "Fanart, fan comics, fan fiction... even some lewd ones."
+    s 6acaa "Frankly, I just see all of them as friends… and I definitely don’t swing that way, I think."
+    s "But shipping is usually the most innocent of the many extreme things that fans do."
+    s 6acba "Some people may judge, of course, and I understand them..."
+    s 6abba "That's not only untraditional, but also out of the game’s canon..."
+    s 6aaaa "But most fans are tolerant to it."
+    s 6acaa "And it's just fans being fans, unrelated to my real love..."
+    s 6aaca "You know who I’m talking about, right?"
+    return
 
 ##Game University
 label s_answer_game_opinion: #Opinion about an other club member
