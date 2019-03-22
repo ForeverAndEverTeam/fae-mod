@@ -216,10 +216,8 @@ init 10 python:
             if unb_lens[0] == 0:
                 return 2
             else:
-                checkers_wf(-1)
                 return -1
         elif unb_lens[0] == 0:
-            checkers_wf(1)
             return 1
         
         return 0
@@ -327,6 +325,7 @@ init 10 python:
                 checkers.selected = checkers_select(n)
     
     def checkers_ai_turn():
+        f = checkers_copy_board()
         a, bt = checkers_best_turn(False)
         
         ##print(a)
@@ -335,6 +334,7 @@ init 10 python:
         
         ##print(a)
         
+        checkers.field = f
         bt = renpy.random.choice(bt)
         checkers_check_board(party = False)
         checkers_do(bt)
@@ -438,6 +438,10 @@ init 10 python:
                         eval += 20
         
         return eval
+    
+    import copy
+    def checkers_copy_board(board = None):
+        return copy.copy(board or checkers.field)
     
     def checkers_ai_test_turn(f, party, first = True, turns = None, takes = None, cleaned = False, real_f = None, king = None, depth = 0):
         if real_f is None:
@@ -786,8 +790,8 @@ label mg_checkers_s_comment(id = 0): #Sayori's comment; -1/1 = Sayori's victory/
             s "I think you should take a draw, shouldn't you?"
             
             "Yes":
-                $checkers.state = -2
-                call mg_checkers_s_comment(-2)
+                $checkers.state = 2
+                call mg_checkers_s_comment(2)
             "No":
                 $checkers.state = 0
                 $checkers.asked_for_a_draw = True
@@ -795,8 +799,10 @@ label mg_checkers_s_comment(id = 0): #Sayori's comment; -1/1 = Sayori's victory/
     
     python:
         if id < 0:
+            checkers_wf(id)
             checkers.score[0] += 2
         elif id == 1:
+            checkers_wf(1)
             checkers.score[1] += 2
         else:
             checkers.score[0] += 1
