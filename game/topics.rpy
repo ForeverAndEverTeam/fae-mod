@@ -473,7 +473,7 @@ label s_topics_personal_intellegence:
     s 6acaa "I often hear many other people saying that I was an ‘airhead’..."
     s 6abba "They often make jokes about it and even think that really is the real me."
     s 6acaa "But I can't understand why they think so."
-    s "Maybe because I was always thinking… and wasn’t as smart as Monika and Yuri..."
+    s "Maybe because I was always thinking… and wasn’t as broad-minded as Monika and Yuri..."
     s 6abaa "But I always was pretty clever and good at strategies!"
     s 6acaa "I think people just have different expectations when considering if someone is intelligent..."
     s 6abaa "Exaclty, if someone is {i}not stupid{/i}."
@@ -483,7 +483,7 @@ label s_topics_personal_intellegence:
     s 7aaaa "So don't worry if someone judges you for a silly thing you did or a mistake. Just try to make yourself better for next time..."
     s "And if you really can't do do any better, then it means that just you’ve reached your own limit."
     s 7aaac "But it dosen't mean, you should stop trying to break it, though..."
-    s 7aaca "Because they can be false."
+    s 7aaca "Because it can be false."
     return 'h'
 
 
@@ -1127,7 +1127,7 @@ label s_topics_game_worlds:
     s 6acaa "Sometimes, I wonder why I am here..."
     s "Would I be a different person if I lived in another place?"
     s "I mean, if not in your world, what other place could there be? Another game?"
-    s "But there're a lot of kind of different games and plenty of them are pretty violent."
+    s "But there're a lot of different games and plenty of them are pretty violent."
     s 6abaa "I just can't imagine living in a game full of blood and struggle..."
     s "You know: shooters, fights, war and so on..."
     s 6abab "I just couldn't take all the violence I'd see."
