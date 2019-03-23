@@ -60,51 +60,51 @@ translate rus strings:
 
     # 00action_file.rpy:47
     old "{#month}January"
-    new "Января"
+    new "Январь"
 
     # 00action_file.rpy:47
     old "{#month}February"
-    new "Февраля"
+    new "Февраль"
 
     # 00action_file.rpy:47
     old "{#month}March"
-    new "Марта"
+    new "Март"
 
     # 00action_file.rpy:47
     old "{#month}April"
-    new "Апреля"
+    new "Апрель"
 
     # 00action_file.rpy:47
     old "{#month}May"
-    new "Мая"
+    new "Май"
 
     # 00action_file.rpy:47
     old "{#month}June"
-    new "Июня"
+    new "Июнь"
 
     # 00action_file.rpy:47
     old "{#month}July"
-    new "Июля"
+    new "Июль"
 
     # 00action_file.rpy:47
     old "{#month}August"
-    new "Августа"
+    new "Август"
 
     # 00action_file.rpy:47
     old "{#month}September"
-    new "Сентября"
+    new "Сентябрь"
 
     # 00action_file.rpy:47
     old "{#month}October"
-    new "Октября"
+    new "Октябрь"
 
     # 00action_file.rpy:47
     old "{#month}November"
-    new "Ноября"
+    new "Ноябрь"
 
     # 00action_file.rpy:47
     old "{#month}December"
-    new "Декабря"
+    new "Декабрь"
 
     # 00action_file.rpy:63
     old "{#month_short}Jan"

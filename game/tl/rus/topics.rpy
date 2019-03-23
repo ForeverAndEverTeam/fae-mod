@@ -8032,3 +8032,343 @@ translate rus strings:
     old "Breakfast"
     new "Завтрак"
 
+# TODO: Translation updated at 2019-03-22 20:46
+
+# game/topics.rpy:473
+translate rus s_topics_personal_intellegence_13485ecd:
+
+    # s 6acaa "I often hear many other people saying that I was an ‘airhead’..."
+    s 6acaa "Я слышала, что многие люди называют меня дурочкой..."
+
+# game/topics.rpy:474
+translate rus s_topics_personal_intellegence_c1515fd3:
+
+    # s 6abba "They often make jokes about it and even think that really is the real me."
+    s 6abba "Шутят про этом и даже всерьёз придерживаются такого обо мне мнения."
+
+# game/topics.rpy:475
+translate rus s_topics_personal_intellegence_f3328f6b:
+
+    # s 6acaa "But I can't understand why they think so."
+    s 6acaa "Но мне по-прежнему не понятно, почему."
+
+# game/topics.rpy:476
+translate rus s_topics_personal_intellegence_e498f9c1:
+
+    # s "Maybe because I was always thinking… and wasn’t as broad-minded as Monika and Yuri..."
+    s "Наверное, я просто слишком часто витала в облаках и... не владела такими широкими и глубокими знаниями, как у Юри с Моникой..."
+
+# game/topics.rpy:477
+translate rus s_topics_personal_intellegence_bb8b12be:
+
+    # s 6abaa "But I always was pretty clever and good at strategies!"
+    s 6abaa "Но я всегда была довольно смекалистой и хорошо продумываала всё наперёд!"
+
+# game/topics.rpy:478
+translate rus s_topics_personal_intellegence_a1781ef5:
+
+    # s 6acaa "I think people just have different expectations when considering if someone is intelligent..."
+    s 6acaa "Просто, у людей разное представления об умном человеке..."
+
+# game/topics.rpy:479
+translate rus s_topics_personal_intellegence_3f14bf78:
+
+    # s 6abaa "Exaclty, if someone is {i}not stupid{/i}."
+    s 6abaa "Точнее, о {i}не глупом{/i} человеке."
+
+# game/topics.rpy:480
+translate rus s_topics_personal_intellegence_40254c67:
+
+    # s 6acaa "I mean people's thoughts about you are obviously very subjective and depend on the situation you or they are in."
+    s 6acaa "Я имею в виду то, что их мнение явно необъективно и сильно зависит от происходящей во время разговора ситуации."
+
+# game/topics.rpy:481
+translate rus s_topics_personal_intellegence_b6a1b3bc:
+
+    # s 6aaaa "So don’t take comments like those too seriously."
+    s 6aaaa "Так что не относись слишком серьёзно к подобным порицаниям."
+
+# game/topics.rpy:482
+translate rus s_topics_personal_intellegence_5e4825c4:
+
+    # s 7aaca "People aren’t perfect, and that’s okay!"
+    s 7aaca "Люди не идеальны, и это нормально!"
+
+# game/topics.rpy:483
+translate rus s_topics_personal_intellegence_b890dcf1:
+
+    # s 7aaaa "So don't worry if someone judges you for a silly thing you did or a mistake. Just try to make yourself better for next time..."
+    s 7aaaa "Поэтому не стоит волноваться из-за своих глупостей и их осуждения. Просто пытайся быть впредь сообразителей и лучше..."
+
+# game/topics.rpy:484
+translate rus s_topics_personal_intellegence_ccf19d3a:
+
+    # s "And if you really can't do do any better, then it means that just you’ve reached your own limit."
+    s "А если не получается, значит тобой просто достигнут порог твоих возможностей."
+
+# game/topics.rpy:485
+translate rus s_topics_personal_intellegence_57fe5110:
+
+    # s 7aaac "But it dosen't mean, you should stop trying to break it, though..."
+    s 7aaac "Тем не менее, всё же стоит его попытаться как-то превозмочь..."
+
+# game/topics.rpy:486
+translate rus s_topics_personal_intellegence_d723e985:
+
+    # s 7aaca "Because it can be false."
+    s 7acaa "Вдруг он ложный?"
+
+# game/topics.rpy:1127
+translate rus s_topics_game_worlds_102e30cf:
+
+    # s 6acaa "Sometimes, I wonder why I am here..."
+    s 6acaa "Иногда, я задеюсь вопросом, почему я появилась на свет именно здесь..."
+
+# game/topics.rpy:1128
+translate rus s_topics_game_worlds_2a37a0c5:
+
+    # s "Would I be a different person if I lived in another place?"
+    s "Измненилось ли что-либо во мне, родись я в другом мире?"
+
+# game/topics.rpy:1129
+translate rus s_topics_game_worlds_f8525f6f:
+
+    # s "I mean, if not in your world, what other place could there be? Another game?"
+    s "Я к тому, что если не в твоём мире, то в каком? В мир другой игры?"
+
+# game/topics.rpy:1130
+translate rus s_topics_game_worlds_f03e3a59:
+
+    # s "But there're a lot of different games and plenty of them are pretty violent."
+    s "Но игр существует много, и немало из них довольно кровавые."
+
+# game/topics.rpy:1131
+translate rus s_topics_game_worlds_271ac03c:
+
+    # s 6abaa "I just can't imagine living in a game full of blood and struggle..."
+    s 6abaa "Я просто не представляю жизнь в игре, где кто-то бесперестанно с кем-то воюет..."
+
+# game/topics.rpy:1132
+translate rus s_topics_game_worlds_dda57500:
+
+    # s "You know: shooters, fights, war and so on..."
+    s "Ну, типа стрелялок, драчек, войнушек и всего подобного..."
+
+# game/topics.rpy:1133
+translate rus s_topics_game_worlds_e6904cd1:
+
+    # s 6abab "I just couldn't take all the violence I'd see."
+    s 6abab "Я бы буквально сошла с ума от всего видимого мною насилия."
+
+# game/topics.rpy:1135
+translate rus s_topics_game_worlds_e60f6ec0:
+
+    # s "Especially now, when I’ve seen Death with my own sight."
+    s "Тем более, теперь, после того, как я своими шлазами увидела смерть."
+
+# game/topics.rpy:1136
+translate rus s_topics_game_worlds_da32ef15:
+
+    # s 6abbb "I’d rather be dead than be the one doing the killing."
+    s 6abbb "К тому же, меня там убили бы быстрей, чем я вынужденно сама убила бы кого-либо."
+
+# game/topics.rpy:1137
+translate rus s_topics_game_worlds_8a873741:
+
+    # s "I'd pray for a revive ability..."
+    s "Оставалось бы лишь уповать на то, что второй шанс мог бы мне доставаться и там..."
+
+# game/topics.rpy:1138
+translate rus s_topics_game_worlds_e7b7c715:
+
+    # s 6acab "Such aggressive worlds aren’t that appealing to me."
+    s 6acab "Столько агрессивные миры -- просто явно неподходящее место для меня."
+
+# game/topics.rpy:1139
+translate rus s_topics_game_worlds_1872940f:
+
+    # s 6aaaa "But I'd glad to be in an innocent simulator, strategy or puzzle game..."
+    s 6aaaa "Мне по душе был бы какой-нибудь невинный симулятор, головоломка или стратегия..."
+
+# game/topics.rpy:1140
+translate rus s_topics_game_worlds_49490730:
+
+    # s 6abaa "Or at least almost innocent..."
+    s 6abaa "Ну, или хотя бы почти невинный..."
+
+# game/topics.rpy:1141
+translate rus s_topics_game_worlds_56567a96:
+
+    # s 6aaaa "Even if I wasn’t an important character, maybe a helper or even a simple settler..."
+    s 6aaaa "Даже если я не была бы там каким-то ключевым персонажем, типа помощника или даже просто жителя..."
+
+# game/topics.rpy:1142
+translate rus s_topics_game_worlds_bb8df691:
+
+    # s 6aaca "...but I'd do my best for you, of course!"
+    s 6aaca "...но я бы с удовольствием старась бы помочь твоей миссии в том мире!"
+
+# game/topics.rpy:1197
+translate rus s_topics_misc_flowers_91b6a4e5:
+
+    # s 7aaaa "What do you think about flowers?"
+    if gender:
+        s 7aaaa "Ты когда-либо обращала особое внимание на цветы?"
+    else:
+        s 7aaaa "Ты когда-либо обращал особое внимание на цветы?"
+
+# game/topics.rpy:1198
+translate rus s_topics_misc_flowers_b953118e:
+
+    # s 7aeca "It's one of many beautiful things nature can create."
+    s 7aeca "А ведь это одна из красивейших вещей, что могла создать природа."
+
+# game/topics.rpy:1199
+translate rus s_topics_misc_flowers_f467bc51:
+
+    # s 7aeca "They are so colorful, have wonderful shapes, some even smell sweet..."
+    s 7aeca "У них такие удивительные формы, они такие вкусно пахнущие и... цветастые."
+
+# game/topics.rpy:1200
+translate rus s_topics_misc_flowers_254816f5:
+
+    # s 7aaaa "I remember when I used to walk in the flower meadows outside of the city."
+    s 7aaaa "Я даже припоминаю, как раньше часто гуляла в цветочных лугах, когда была за городом."
+
+# game/topics.rpy:1201
+translate rus s_topics_misc_flowers_e9cc2091:
+
+    # s 6acaa "But... I think it's too selfish to pluck a flower... even if it were to be a gift."
+    s 6acaa "Однако... Я считаю, что срывать их -- это эгоизм... Даже для того, чтобы их кому-то подарить."
+
+# game/topics.rpy:1202
+translate rus s_topics_misc_flowers_03c095a3:
+
+    # s "Flowers are living beings too, and plucking them out of the ground does kill them."
+    s "Цветы -- тоже живые существа, и, срывая их, ты их убиваешь."
+
+# game/topics.rpy:1203
+translate rus s_topics_misc_flowers_c573fd44:
+
+    # s 6aaaa "So I prefer just to look at them, and then leave them be."
+    s 6aaaa "Поэтому мне больше нравится просто смотреть, маскимум трогать, но не больше."
+
+# game/topics.rpy:1205
+translate rus s_topics_misc_flowers_2035fe7d:
+
+    # s 6aeba "Although, I did do this in one of my poems..."
+    s 6aeba "Хоть я это всё же и сделала в одном из своих стихом..."
+
+# game/topics.rpy:1206
+translate rus s_topics_misc_flowers_8b35bd7b:
+
+    # s 6aaaa "But just for the analogy."
+    s 6aaaa "Но это было так, для аналогии."
+
+# game/topics.rpy:1207
+translate rus s_topics_misc_flowers_bd86aff0:
+
+    # s 9acaa "At least you can plant a flower in pot."
+    s 9acaa "Как вариант, можно посадить цветок в горшочек."
+
+# game/topics.rpy:1208
+translate rus s_topics_misc_flowers_280a2dcd:
+
+    # s 6abba "You do need to take care of it though..."
+    s 6abba "Однако, за ним будет нужен уход..."
+
+# game/topics.rpy:1209
+translate rus s_topics_misc_flowers_dfdd7371:
+
+    # s 7aaaa "But if you know someone with a lot of time and great responsibility, it will be a good gift for them."
+    s 7aaaa "Но если ты знаешь кого-то достаточно ответственного и не шибко занятого, для него это будет просто прекрасным подарком."
+
+# game/topics.rpy:1366
+translate rus s_answer_personal_pairings_e68b844d:
+
+    # s 8aebb "I think, they're quite... weird."
+    s 8aebb "Я считаю их довольно... странными."
+
+# game/topics.rpy:1367
+translate rus s_answer_personal_pairings_1b9dd152:
+
+    # s 8acaa "Not because of their sexuality..."
+    s 8acaa "Дело не в «не той ориентации»..."
+
+# game/topics.rpy:1368
+translate rus s_answer_personal_pairings_7e7695a1:
+
+    # s 6acaa "I know in my heart who I love..."
+    s 6acaa "Просто, у меня и так уже есть любимый человек..."
+
+# game/topics.rpy:1369
+translate rus s_answer_personal_pairings_f7bd0528:
+
+    # s 6acba "...but some fans ‘ship’ me with my friends..."
+    s 6acba "...а тут, некоторые фанаты «шипирят» меня с моими друзьями..."
+
+# game/topics.rpy:1370
+translate rus s_answer_personal_pairings_3dead3e7:
+
+    # s "Fanart, fan comics, fan fiction... even some lewd ones."
+    s "Фанфики, фан-арты, фан-комиксы... а некоторые из их даже с пошлинкой."
+
+# game/topics.rpy:1371
+translate rus s_answer_personal_pairings_221178a3:
+
+    # s 6acaa "Frankly, I just see all of them as friends… and I definitely don’t swing that way, I think."
+    s 6acaa "Если честно, я никогда не считала своих подружек больше… чем просто подружками."
+
+# game/topics.rpy:1372
+translate rus s_answer_personal_pairings_758127df:
+
+    # s "But shipping is usually the most innocent of the many extreme things that fans do."
+    s "Однако, все эти пейринги -- это лишь самое безобидное из тех извращений, которые фанаты обычно творят над нами."
+
+# game/topics.rpy:1373
+translate rus s_answer_personal_pairings_a761623e:
+
+    # s 6acba "Some people may judge, of course, and I understand them..."
+    s 6acba "Само собой, не все они по нраву, и я понимаю, почему..."
+
+# game/topics.rpy:1374
+translate rus s_answer_personal_pairings_456d67ca:
+
+    # s 6abba "That's not only untraditional, but also out of the game’s canon..."
+    s 6abba "Это не только нетрадционно, так ещё и вне канона..."
+
+# game/topics.rpy:1375
+translate rus s_answer_personal_pairings_977d3c46:
+
+    # s 6aaaa "But most fans are tolerant to it."
+    s 6aaaa "Но большинство фанатов всё же относятся к этому терпимо."
+
+# game/topics.rpy:1376
+translate rus s_answer_personal_pairings_30a33e2d:
+
+    # s 6acaa "And it's just fans being fans, unrelated to my real love..."
+    s 6acaa "А вообще, фанаты довольно часто пренебрегают тем, кого на самом деле персонаж любит..."
+
+# game/topics.rpy:1377
+translate rus s_answer_personal_pairings_8781a4fe:
+
+    # s 6aaca "You know who I’m talking about, right?"
+    s 6aaca "Ты понимаешь, о ком я говорю, верно?"
+
+translate rus strings:
+
+    # topics.rpy:143
+    old "Intellengence"
+    new "Умность"
+
+    # topics.rpy:178
+    old "Other Worlds"
+    new "Другие миры"
+
+    # topics.rpy:185
+    old "Flowers"
+    new "Цветы"
+
+    # topics.rpy:257
+    old "What do you think about lesbian pairings?"
+    new "Как ты относишься к лесби-пейрингам?"

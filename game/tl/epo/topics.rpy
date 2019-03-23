@@ -7484,3 +7484,341 @@ translate epo strings:
     old "Breakfast"
     new "Matenmanĝo"
 
+# TODO: Translation updated at 2019-03-23 16:20
+
+# game/topics.rpy:473
+translate epo s_topics_personal_intellegence_13485ecd:
+
+    # s 6acaa "I often hear many other people saying that I was an ‘airhead’..."
+    s 6acaa "Mi jam scias, ke oni ofte nomas min stulta..."
+
+# game/topics.rpy:474
+translate epo s_topics_personal_intellegence_c1515fd3:
+
+    # s 6abba "They often make jokes about it and even think that really is the real me."
+    s 6abba "Oni ofte ŝercas pri ĉi tio kaj eĉ pensas, ke mi vere estis tia."
+
+# game/topics.rpy:475
+translate epo s_topics_personal_intellegence_f3328f6b:
+
+    # s 6acaa "But I can't understand why they think so."
+    s 6acaa "Sed mi ne komprenas, kial mi rigardiĝas tiel."
+
+# game/topics.rpy:476
+translate epo s_topics_personal_intellegence_e498f9c1:
+
+    # s "Maybe because I was always thinking… and wasn’t as broad-minded as Monika and Yuri..."
+    s "Eble, ĉar mi ofte perdiĝis je deduktoj… kaj sciis ne tiom, kiom sciis Juri aŭ Monika..."
+
+# game/topics.rpy:477
+translate epo s_topics_personal_intellegence_bb8b12be:
+
+    # s 6abaa "But I always was pretty clever and good at strategies!"
+    s 6abaa "Sed mi ĉiam estis komprenema je novaj scioj kaj havis bonan strategian pensmanieron!"
+
+# game/topics.rpy:478
+translate epo s_topics_personal_intellegence_a1781ef5:
+
+    # s 6acaa "I think people just have different expectations when considering if someone is intelligent..."
+    s 6acaa "Mi pensas, ke homoj diverse prezentas, kia homo estas saĝa..."
+
+# game/topics.rpy:479
+translate epo s_topics_personal_intellegence_3f14bf78:
+
+    # s 6abaa "Exaclty, if someone is {i}not stupid{/i}."
+    s 6abaa "Pli ĝuste, kia homo estas {i}ne stulta{/i}."
+
+# game/topics.rpy:480
+translate epo s_topics_personal_intellegence_40254c67:
+
+    # s 6acaa "I mean people's thoughts about you are obviously very subjective and depend on the situation you or they are in."
+    s 6acaa "Mi paloras, ke oni juĝas vin evidante tre subjektive kaj depende de la situacio, en kiu vi aŭ oni estas."
+
+# game/topics.rpy:481
+translate epo s_topics_personal_intellegence_b6a1b3bc:
+
+    # s 6aaaa "So don’t take comments like those too seriously."
+    s 6aaaa "Do ne rigardu tiajn juĝojn tro serioze."
+
+# game/topics.rpy:482
+translate epo s_topics_personal_intellegence_5e4825c4:
+
+    # s 7aaca "People aren’t perfect, and that’s okay!"
+    s 7aaca "Neniu perfektas, kaj ĝi estas norme!"
+
+# game/topics.rpy:483
+translate epo s_topics_personal_intellegence_b890dcf1:
+
+    # s 7aaaa "So don't worry if someone judges you for a silly thing you did or a mistake. Just try to make yourself better for next time..."
+    s 7aaaa "Do ne zorgu pri viaj eraroj kaj malsaĝaĵoj tro multe. Simple penu pliboniĝi por la sekva fojo..."
+
+# game/topics.rpy:484
+translate epo s_topics_personal_intellegence_ccf19d3a:
+
+    # s "And if you really can't do do any better, then it means that just you’ve reached your own limit."
+    s "Kaj se vi ne povas pliboniĝi plu, do vi simple atingis vian limon."
+
+# game/topics.rpy:485
+translate epo s_topics_personal_intellegence_57fe5110:
+
+    # s 7aaac "But it dosen't mean, you should stop trying to break it, though..."
+    s 7aaac "Kvankam, tio ne estas, ke vi ne penu superi ĝin..."
+
+# game/topics.rpy:486
+translate epo s_topics_personal_intellegence_d723e985:
+
+    # s 7aaca "Because it can be false."
+    s 7aaca "Ĉar ĝi eblas esti ne vera."
+
+# game/topics.rpy:1127
+translate epo s_topics_game_worlds_102e30cf:
+
+    # s 6acaa "Sometimes, I wonder why I am here..."
+    s 6acaa "Iutempe, mi pensas pri kial mi estiĝis ĉi-monde..."
+
+# game/topics.rpy:1128
+translate epo s_topics_game_worlds_2a37a0c5:
+
+    # s "Would I be a different person if I lived in another place?"
+    s "Ĉu mi estus sama persono, se mi loĝus alimonde?"
+
+# game/topics.rpy:1129
+translate epo s_topics_game_worlds_f8525f6f:
+
+    # s "I mean, if not in your world, what other place could there be? Another game?"
+    s "Pli ĝuste, se ne en via mondo, do en kiu mondo mi loĝus? Ĉu de alia videoludo?"
+
+# game/topics.rpy:1130
+translate epo s_topics_game_worlds_f03e3a59:
+
+    # s "But there're a lot of different games and plenty of them are pretty violent."
+    s "Sed estas multe videoludoj, kaj l' plejo de ili estas tre violentaj."
+
+# game/topics.rpy:1131
+translate epo s_topics_game_worlds_271ac03c:
+
+    # s 6abaa "I just can't imagine living in a game full of blood and struggle..."
+    s 6abaa "Mi simple ne povas prezenti min en ludo, plena de perforto kaj sango..."
+
+# game/topics.rpy:1132
+translate epo s_topics_game_worlds_dda57500:
+
+    # s "You know: shooters, fights, war and so on..."
+    s "Vi scias: pafludoj, batalludoj, muilitludoj kaj tiel plu..."
+
+# game/topics.rpy:1133
+translate epo s_topics_game_worlds_e6904cd1:
+
+    # s 6abab "I just couldn't take all the violence I'd see."
+    s 6abab "Ne apenaŭ povus elteni ĉiom de la perforto, kiun vi vidus."
+
+# game/topics.rpy:1135
+translate epo s_topics_game_worlds_e60f6ec0:
+
+    # s "Especially now, when I’ve seen Death with my own sight."
+    s "Specife nun, post ke mi vidis mem la morton."
+
+# game/topics.rpy:1136
+translate epo s_topics_game_worlds_da32ef15:
+
+    # s 6abbb "I’d rather be dead than be the one doing the killing."
+    s 6abbb "Mi pli eble estus mortigita ol mortiginta."
+
+# game/topics.rpy:1137
+translate epo s_topics_game_worlds_8a873741:
+
+    # s "I'd pray for a revive ability..."
+    s "Kaj preĝus por esti revivonta..."
+
+# game/topics.rpy:1138
+translate epo s_topics_game_worlds_e7b7c715:
+
+    # s 6acab "Such aggressive worlds aren’t that appealing to me."
+    s 6acab "Tiel agresaj mondoj certe ne estas por mi."
+
+# game/topics.rpy:1139
+translate epo s_topics_game_worlds_1872940f:
+
+    # s 6aaaa "But I'd glad to be in an innocent simulator, strategy or puzzle game..."
+    s 6aaaa "Sed mi ĝoje estus en senperforta simulila, strategia aŭ enigma ludo..."
+
+# game/topics.rpy:1140
+translate epo s_topics_game_worlds_49490730:
+
+    # s 6abaa "Or at least almost innocent..."
+    s 6abaa "Almenaŭ, preskaŭ senperforta..."
+
+# game/topics.rpy:1141
+translate epo s_topics_game_worlds_56567a96:
+
+    # s 6aaaa "Even if I wasn’t an important character, maybe a helper or even a simple settler..."
+    s 6aaaa "Eĉ ne kiel grava rolulo, eble kiel helpisto aŭ eĉ simpla loĝanto..."
+
+# game/topics.rpy:1142
+translate epo s_topics_game_worlds_bb8df691:
+
+    # s 6aaca "...but I'd do my best for you, of course!"
+    s 6aaca "...sed mi ajne penos helpi al vi multe, kompreneble!"
+
+# game/topics.rpy:1197
+translate epo s_topics_misc_flowers_91b6a4e5:
+
+    # s 7aaaa "What do you think about flowers?"
+    s 7aaaa "Kion vi pensas pri floroj?"
+
+# game/topics.rpy:1198
+translate epo s_topics_misc_flowers_b953118e:
+
+    # s 7aeca "It's one of many beautiful things nature can create."
+    s 7aeca "Ili estas unu el la plej belaj aferoj, kiujn la naturo kreis."
+
+# game/topics.rpy:1199
+translate epo s_topics_misc_flowers_f467bc51:
+
+    # s 7aeca "They are so colorful, have wonderful shapes, some even smell sweet..."
+    s 7aeca "Ili estas tiel kolorplenaj, tiel belformaj, kaj tiel dolĉodoraj..."
+
+# game/topics.rpy:1200
+translate epo s_topics_misc_flowers_254816f5:
+
+    # s 7aaaa "I remember when I used to walk in the flower meadows outside of the city."
+    s 7aaaa "Mi memoras, ke mi antaŭe ŝatis promeni inter florkampoj, kiam mi estis ekster la urbo."
+
+# game/topics.rpy:1201
+translate epo s_topics_misc_flowers_e9cc2091:
+
+    # s 6acaa "But... I think it's too selfish to pluck a flower... even if it were to be a gift."
+    s 6acaa "Tamen... plaki florojn estas tro egoiste por mi... eĉ por donaci ilin al iu alia."
+
+# game/topics.rpy:1202
+translate epo s_topics_misc_flowers_03c095a3:
+
+    # s "Flowers are living beings too, and plucking them out of the ground does kill them."
+    s "Ankaŭ floroj estas vivuloj, kaj plakante ilin, vi ilin fakte mortigas."
+
+# game/topics.rpy:1203
+translate epo s_topics_misc_flowers_c573fd44:
+
+    # s 6aaaa "So I prefer just to look at them, and then leave them be."
+    s 6aaaa "Do mi pli preferas nur rigardi ilin, lasante ilin esti plu."
+
+# game/topics.rpy:1205
+translate epo s_topics_misc_flowers_2035fe7d:
+
+    # s 6aeba "Although, I did do this in one of my poems..."
+    s 6aeba "Tamen, mi plakis unu en unu mia versaĵo..."
+
+# game/topics.rpy:1206
+translate epo s_topics_misc_flowers_8b35bd7b:
+
+    # s 6aaaa "But just for the analogy."
+    s 6aaaa "Sed tio estis nur analogio."
+
+# game/topics.rpy:1207
+translate epo s_topics_misc_flowers_bd86aff0:
+
+    # s 9acaa "At least you can plant a flower in pot."
+    s 9acaa "Almenaŭ, vi povas doni floron en poto."
+
+# game/topics.rpy:1208
+translate epo s_topics_misc_flowers_280a2dcd:
+
+    # s 6abba "You do need to take care of it though..."
+    s 6abba "Sed ĝi bezonas zorgon pri ĝi, kvamkam..."
+
+# game/topics.rpy:1209
+translate epo s_topics_misc_flowers_dfdd7371:
+
+    # s 7aaaa "But if you know someone with a lot of time and great responsibility, it will be a good gift for them."
+    s 7aaaa "Sed se vi scias iun sufiĉe neokupata kaj respondema, ĝi estos bona donoco por tiu homo."
+
+# game/topics.rpy:1366
+translate epo s_answer_personal_pairings_e68b844d:
+
+    # s 8aebb "I think, they're quite... weird."
+    s 8aebb "Laŭ mi, ili estas tre... strangaj."
+
+# game/topics.rpy:1367
+translate epo s_answer_personal_pairings_1b9dd152:
+
+    # s 8acaa "Not because of their sexuality..."
+    s 8acaa "Ne pro ilia samseksemuleco..."
+
+# game/topics.rpy:1368
+translate epo s_answer_personal_pairings_7e7695a1:
+
+    # s 6acaa "I know in my heart who I love..."
+    s 6acaa "La fanoj jam scias, kiun mi amas..."
+
+# game/topics.rpy:1369
+translate epo s_answer_personal_pairings_f7bd0528:
+
+    # s 6acba "...but some fans ‘ship’ me with my friends..."
+    s 6acba "...sed iom de ili parigas min kun miaj amikinoj..."
+
+# game/topics.rpy:1370
+translate epo s_answer_personal_pairings_3dead3e7:
+
+    # s "Fanart, fan comics, fan fiction... even some lewd ones."
+    s "Fanpentaĵoj, fankomiksoj, fanbeletro... eĉ pornografio pri tiaj paroj."
+
+# game/topics.rpy:1371
+translate epo s_answer_personal_pairings_221178a3:
+
+    # s 6acaa "Frankly, I just see all of them as friends… and I definitely don’t swing that way, I think."
+    s 6acaa "Sed vere, miaj amikinoj neniam estis pli ol amikinoj... kaj neniam estos, mi pensas."
+
+# game/topics.rpy:1372
+translate epo s_answer_personal_pairings_758127df:
+
+    # s "But shipping is usually the most innocent of the many extreme things that fans do."
+    s "Sed parigado ofte estas la plej deca ago el la ekstremaĵoj, kiujn fanoj faras."
+
+# game/topics.rpy:1373
+translate epo s_answer_personal_pairings_a761623e:
+
+    # s 6acba "Some people may judge, of course, and I understand them..."
+    s 6acba "Iuj homoj juĝas ĝin, kompreneble almenaŭ por mi..."
+
+# game/topics.rpy:1374
+translate epo s_answer_personal_pairings_456d67ca:
+
+    # s 6abba "That's not only untraditional, but also out of the game’s canon..."
+    s 6abba "Ĝi estas ne nur maltradicie, sed ankaŭ nekanone..."
+
+# game/topics.rpy:1375
+translate epo s_answer_personal_pairings_977d3c46:
+
+    # s 6aaaa "But most fans are tolerant to it."
+    s 6aaaa "Sed la plejo de fanoj, kvamkam, toleras ĉi tion."
+
+# game/topics.rpy:1376
+translate epo s_answer_personal_pairings_30a33e2d:
+
+    # s 6acaa "And it's just fans being fans, unrelated to my real love..."
+    s 6acaa "Kaj fanoj estas nur fanoj, kiuj ne konsideru miajn ampreferojn..."
+
+# game/topics.rpy:1377
+translate epo s_answer_personal_pairings_8781a4fe:
+
+    # s 6aaca "You know who I’m talking about, right?"
+    s 6aaca "Kaj vi scias mian kurantan ampreferon, ĉu?"
+
+translate epo strings:
+
+    # topics.rpy:143
+    old "Intellengence"
+    new "Saĝeco"
+
+    # topics.rpy:178
+    old "Other Worlds"
+    new "Aliaj Mondoj"
+
+    # topics.rpy:185
+    old "Flowers"
+    new "Floroj"
+
+    # topics.rpy:257
+    old "What do you think about lesbian pairings?"
+    new "Kion vi pensas pri gejinaj paroj fare de fanoj?"
+
