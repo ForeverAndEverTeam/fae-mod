@@ -1895,9 +1895,3 @@ label s_update(version): #Called instead of a greeting at the first launch after
     s 8aeaa "But they did it!"
     s 6aaaa "They finally released the version {i}[version]{/i}."
     s "So let's look, what they added and fixed here."
-    pause 1
-    $val_date = datetime.date(get_now().date().year, 2, 14)
-    if get_now().date() >= val_date:
-        s "By the way..."
-        call s_val_present(True)
-
