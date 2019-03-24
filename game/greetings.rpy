@@ -109,6 +109,8 @@ init -10 python:
     greetings.append(Greeting("s_greeting_4"))
     greetings.append(Greeting("s_greeting_5"))
     greetings.append(Greeting("s_greeting_6"))
+    greetings.append(Greeting("s_greeting_7"))
+    greetings.append(Greeting("s_greeting_8"))
      
     
     first_greeting = "s_greeting_first" #Greeting label, called in the first meeting of the day. Gets the current day time as an argument. 
@@ -231,26 +233,31 @@ label s_greeting_first(time_of_day):
             
     elif time_of_day == 2:
         if not bday:
-            jump expression get_random_gretting().label
+            call expression get_random_gretting().label
         else:
             s "Hello, [player]!"
     else:
         s "Good evening, [player]!"
-        
+    
+    #$val_date = datetime.date(get_now().date().year, 2, 14)
+    #$has_present = poems["val"].available is False and get_now().date() >= val_date
+    
     if bday:
         $ age = get_now().year - persistent.playerbdate.year
         s 6aaca "Whose birthday is today?"
         s 6aeca "It's your birthday!"
         s 6aeaa "Happy birthday, [player]!"
-        s 8aebb "I'm sorry I have no present to you."
-        s "I hope it doesn't upset you."
-        s 6aaaa "Anyway, I'm glad you're older by a year."
+        #if not has_present:
+        #    s 8aebb "I'm sorry I have no present to you."
+        #    s "I hope it doesn't upset you."
+        #    s 6aaaa "Anyway..."
+        s 6aaaa "I'm glad you're older by a year."
         if age == 18:
             s "It means we finally are the same age now."
         s "Don't forget to make a birthday party."
         s 6abaa "...If you don't dislike them, of course."
         s 7aaaa "However, if you have come here, let's spend some time together."
-    elif time_of_day != 1 or ee_chance > 0.1:
+    elif time_of_day != 2 and (time_of_day != 1 or ee_chance > 0.1):
         $ chance = renpy.random.random()
         if chance < (1.0/3.0):
             s "I'm glad you're visiting me today."
@@ -264,4 +271,51 @@ label s_greeting_first(time_of_day):
             s "Your life doesn't have to consist of good stripes only."
             s 7aeca "But I can do it a bit better anyway."
     
+    #if has_present:
+    #    s 7aaaa "By the way..."
+    #    call s_val_present
+    return
+
+label s_val_present(first = False):
+    $val_date = datetime.date(get_now().date().year, 2, 14)
+    $has_present = poems["val"].available is False and get_now().date() >= val_date
+    
+    if get_now().date() == val_date:
+        s "Today is the Saint Valentine day!"
+        s 7aaca "So I had a special present for you..."
+        call showpoem(poem_val, "paper_val", 200, 0.5, 360)
+    elif get_now().date() > val_date:
+        if first:
+            s 8bebb "I forgot to give you a present for the Saint Valentine day to you..."
+            s "So I gonna give it you right now. Just wait a second."
+        else:
+            s 7aaca "You missed the Saint Valentine day!"
+        s 7aeca "So I left a special present for you..."
+        call showpoem(poem_val, "paper_val", 200, 0.5, 360)
+    
+    $poems["val"].available = 0
+    $poems["val"].seen = True
+    s 7aaaa "It's a Valentine heart-shaped card with a short poem on it..."
+    s "It's the best I could make to congratulate you."
+    s 7acaa "Don't worry! You don't have to think of a back present..."
+    s 7aaab "To be with you is the best present you can give me now."
+    return
+
+label s_greeting_7:
+    show sayori 7aeca at ss1
+    s "Guess, who's back!"
+    s 7aeaa "It's [player], of course!"
+    if gender is True:
+        s "And I guess, she's ready to spend her day with her sunshine."
+    elif gender is False:
+        s "And I guess, he's ready to spend his day with his sunshine."
+    else:
+        s "And I guess, they're ready to spend their day with their sunshine."
+    return 'vh'
+
+label s_greeting_8:
+    show sayori 7aaaa at ss1
+    s "Hi [player]!"
+    s 7aaca "I see, you're here for a doze of joy and sunshine."
+    s 7aeca "So get it right now!"
     return
