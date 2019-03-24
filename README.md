@@ -21,7 +21,7 @@ DDLC Mod Template team (mod base)
 Fj0rd_ ([Reddit](https://www.reddit.com/user/Fj0rd_), [original sitting Sayori art](https://www.reddit.com/r/DDLC/comments/7h40q6/ok_final_version_this_time_i_swear/))  
 AlexanDDOS  
 Team Salvato artists (original sprites)  
-Lucian Pavel (Santa hat original model)  
+Lucian Pavel (Santa hat original model, excluded from the stable versions)
   
 **Dialogue:**  
 AlexanDDOS  
