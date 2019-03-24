@@ -1509,7 +1509,7 @@ translate rus s_answer_personal_god_6b461e7a:
 
     # s 6aeca "Blessed be {i}Dan Salvato{/i}, hallowed is thy name! Ehehe~"
     s "Я знаю о нём немало, например, что его возут {i}Дэн Сальвато{/i}."
-    s s 6aeca "Хвала ему! Да царствуй он на моего мира небесах! Хе-хе~"
+    s 6aeca "Хвала ему! Да царствуй он на моего мира небесах! Хе-хе~"
 
 # game/topics.rpy:606
 translate rus s_answer_personal_god_9de750c8:
