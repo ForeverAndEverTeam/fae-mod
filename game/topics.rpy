@@ -873,7 +873,7 @@ label s_topics_rtl_thanks:
     s 6abab "You gave me a true vision of this world and myself..."
     if persistent.last_playthrough > 0:
         s "You’ve helped me feel useful again..."
-    if greeted = True:
+    if greeted:
         s 6aaab "And you do visit me often..."
     s 6aaab "And you care for me, something I would’ve rejected before..."
     if persistent.clearall:
