@@ -91,7 +91,7 @@ def autoscan(append = True, music_dir = MUSIC_CUSTOM_PREFIX):
     return new
 
 def print_list(filelist = "list.txt"):
-    with file.open(config.basedir + '/' + filelist, 'w') as f:
+    with file.open(config.basedir.replace('\\\\', '/') + '/' + filelist, 'w') as f:
         f.write(music_comment + '\n\n')
         for i in music_list:
             f.write("    ".join(i))
