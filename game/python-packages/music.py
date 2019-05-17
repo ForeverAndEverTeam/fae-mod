@@ -69,8 +69,13 @@ def read_list(filelist = "list.txt"):
 
 def autoscan(append = True, music_dir = MUSIC_CUSTOM_PREFIX):
     new = 0
-    
-    l = os.listdir(config.basedir + '/game/' + music_dir)
+    music_scan = config.basedir + '/game/' + music_dir
+    if not os.path.isdir(music_scan):
+        os.makedirs(music_scan)
+    try:
+        l = os.listdir(music_scan)
+    except FSError:
+        l = []
     l = filter(lambda x: x.rsplit('.', 1)[1] in compatible_formats, l)
     
     for i in l:
@@ -91,7 +96,7 @@ def autoscan(append = True, music_dir = MUSIC_CUSTOM_PREFIX):
     return new
 
 def print_list(filelist = "list.txt"):
-    with file.open(config.basedir.replace('\\\\', '/') + '/' + filelist, 'w') as f:
+    with file.open(config.basedir + '/' + filelist, 'w') as f:
         f.write(music_comment + '\n\n')
         for i in music_list:
             f.write("    ".join(i))
