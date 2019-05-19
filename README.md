@@ -13,7 +13,8 @@ This mod is available in multiple languages. Now you can select either English o
 ## Credits  
 **Programming:**  
 AlexanDDOS (This repository's author, [Reddit](https://www.reddit.com/user/AlexanDDOS), [VK](https://vk.com/alexanddos), [FB](https://www.facebook.com/alexanDDOS))  
-[vignedev](https://github.com/vignedev)  
+[vignedev](https://github.com/vignedev) 
+[saiv46](https://github.com/Saiv46)
 Dan Salvato (original scripts)  
 DDLC Mod Template team (mod base)  
   
