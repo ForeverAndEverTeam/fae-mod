@@ -1,4 +1,4 @@
-*Team Salvato's IP Guidelines for Doki Doki Literature Club are reproduced here as accessed on 11/2/17 for reference by anyone using the DDLC Mod Template as basis for a DDLC fan game or mod. For questions or an up-to-date copy of the latest terms, please visit [Team Salvato's website](http://teamsalvato.com/ip-guidelines/).*
+*Team Salvato's IP Guidelines for Doki Doki Literature Club are reproduced here for reference by anyone as basis for a DDLC fan game or mod. For questions or an up-to-date copy of the latest terms, please visit [Team Salvato's website](http://teamsalvato.com/ip-guidelines/).*
 
 ## IP Guidelines
 
@@ -8,17 +8,19 @@ This page details guidelines for fan content related to Doki Doki Literature Clu
 
 These guidelines do not grant a copyright license to any DDLC-related fan content. Despite these guidelines, Team Salvato reserves the right to issue a formal takedown request for any content that infringes copyright. This includes content that uses official DDLC assets, as well as content that includes any Intellectual Properties (IPs) that belong to Team Salvato. Moreover, this page is subject to revision at any time without notice.
 
+This page was last updated: **March 11th, 2018**
+
 ### Fan Work
 
-“Fan Work” refers to any content that includes IPs that belong to Team Salvato. The content in question includes, but is not limited to, art, music, animation, writing, videos, websites, apps, and games. The guidelines pertain to any fan work that takes place in the DDLC universe or includes characters, setting, or storyline from DDLC.
-
-Fan work may freely be produced and shared online. Fan work may NOT be sold online or otherwise distributed for profit.
+"Fan Work" refers to any content that includes IPs that belong to Team Salvato. The content in question includes, but is not limited to, art, music, animation, writing, videos, websites, apps, and games. The guidelines pertain to any fan work that takes place in the DDLC universe or includes characters, setting, or storyline from DDLC.
 
 There are no restrictions on how artists choose to depict the characters, setting, or events of DDLC in their fan work. We value artistic freedom and will not target fan work solely because we disagree with the content, or because it conflicts with official depictions.
 
-Physical versions of fan work may be sold locally, in limited production, by independent artists (eg. at conventions).
+Physical versions of fan work may be sold locally, in limited production, by independent artists (eg. at conventions). Independent artists may also sell their fan work online if they run their own online store and manufacture/ship their own merchandise. Artists may not sell DDLC fan work by uploading the art to mass production websites that sell the art for you (eg. Redbubble).
 
-Businesses or companies interested in producing DDLC fan work for sale by any means other than locally in limited production should contact us for licensing or permission.
+Fan work must be somehow related to the DDLC universe – you may not use Team Salvato IPs for projects that are not considered DDLC derivatives (eg. using a DDLC character to represent a website or product that isn’t itself a DDLC derivative).
+
+Businesses or companies interested in producing DDLC fan work for sale by any means other than described above should contact us for licensing or permission.
 
 ### Fan Work That Includes Official DDLC Assets
 
@@ -30,13 +32,23 @@ Any fan work that includes official DDLC assets may NOT be sold under any circum
 
 Direct upload or hosting of DDLC assets is forbidden, except when to be used as part of fan work. No profit may be made from these uploads.
 
+Fan work that includes official DDLC assets may not be used to create new video games. The exception is mods that must be patched into the official DDLC game. See the "Mods" section for more details.
+
 ### Fan Games
 
-“Fan Games” refer to any fan work that is a game. This also includes new games that contain no official DDLC assets, as well as mods of the official DDLC game.
+"Fan Games" refer to any fan work that is a game. This also includes new games that contain no official DDLC assets, as well as mods of the official DDLC game.
 
-You may NOT create, copy, or distribute any fan game that is designed to be played in lieu of the official DDLC game. Any fan games, including mods, that “replace” DDLC, or imply that it should be played before the original, are forbidden. This includes mods that add new content to the DDLC base game, including, but not limited to, new art, new scenes, new visual effects, or voice acting. Fan games may ONLY be created with the assumption that the player has already completed the original DDLC game, and is looking for fan content.
+You are NOT allowed to redistribute DDLC or fan games on any app store including Steam, the Google Play Store, the Apple App Store, the Windows Store, GameJolt, itch.io, or any others. You may not port DDLC or any fan game to these platforms.
 
-A common example is fan games that let players spend more time with the club members, possibly including new story arcs, or to satisfy the players’ desire for additional dialogue, or for a more “normal” game. These games are usually considered okay, because the only players interested in them would be those who have completed DDLC and are looking for new content. Any fan games or mods that suggest new players should play it instead of DDLC are not allowed.
+You may NOT create, copy, or distribute any fan game that is designed to be played in lieu of the official DDLC game. Any fan games, including mods, that "replace" DDLC, or imply that it should be played before the original, are forbidden. This includes mods that add new content to the DDLC base game, including, but not limited to, new art, new scenes, new visual effects, or voice acting. Fan games may ONLY be created with the assumption that the player has already completed the original DDLC game, and is looking for fan content.
+
+A common example is fan games that let players spend more time with the club members, possibly including new story arcs, or to satisfy the players’ desire for additional dialogue, or for a more "normal" game. These games are usually considered okay, because the only players interested in them would be those who have completed DDLC and are looking for new content. Any fan games or mods that suggest new players should play it instead of DDLC are not allowed.
+
+Fan games should not confuse the player in any way that it might be related to official DDLC content. The game should also not be mistaken for DDLC itself. This includes how the game is displayed both before and after downloading (eg. a title or download page too similar to DDLC may confuse players).
+
+Official DDLC assets may not be used in standalone games – they may only be used in mods that must be patched into the official DDLC game. See the "Mods" section for more details.
+
+Fan games must be free and may not be sold. Donation links are allowed on the website that hosts the game. However, fan games may not include any payment or donation link in the game itself, or encourage the player to donate from within the game.
 
 Fan games must state upon first run that it is a fan game unaffiliated with the official Doki Doki Literature Club. They must advise that the original game should be completed before playing, as well as provide a link to the official website where it can be downloaded (http://ddlc.moe).
 
