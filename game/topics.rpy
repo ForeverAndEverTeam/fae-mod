@@ -10,7 +10,7 @@ init -5 python:
     class Topic:
         def __init__(self, label, available = 0, show_prompt = True, name = None, id = None, related = None, poem = None):
             self.label = label
-            self.available = available #Number of topics from the same category to open this one. False = unavailable
+            self.available = available #Number of seen topics to open this one. False = unavailable
             self.show_prompt = show_prompt
             self.name = name or label
             self.id = id or label
@@ -104,8 +104,9 @@ init -5 python:
                 topic(*args, **kwargs)
             elif topic is None:
                 def cond(x):
-                    return x.seen and not (x.available is False or x.available > self.seen_len)
-                renpy.random.choice(filter(lambda x: not x.seen, self.topics))()
+                    sl = len(persistent.seen_topics)
+                    return not (x.seen or x.available is False or x.available > sl)
+                renpy.random.choice(filter(cond(x), self.topics))()
             else:
                 self.topics[topic](*args, **kwargs)
             self.update_seen()
@@ -115,7 +116,8 @@ init -5 python:
     
     derp_known = True
     try:
-        depr_known = persistent.depr_known or persistent.last_playthrough > 0 or persistent.clear[8] #If player must already know, that Sayori used to be depressed
+        p = persistent
+        depr_known = p.depr_known or p.last_playthrough > 0 or p.clear[8] #If player must already know, that Sayori used to be depressed
     except:
         pass
             
@@ -804,7 +806,7 @@ label s_topics_rlt_cheating:
                     s "Like it was before my first confession."
                     if persistent.clearall:
                         s "...Or like it was after you had spent your time with each of us."
-                    s "But I can bare, if you really need, you know."
+                    s "But I can bear, if you really need, you know."
                     s 6aaab "Anyway, just take care about your real lover as much as about me."
                     s 7aaab "But don't forget about me and come here back. I'll always be with you, even if nothing about your real relationship seems to go wrong."
                     s 7aadb "And if it go wrong, I'll always be your plan B."
@@ -1263,7 +1265,7 @@ label s_answer_personal_music:
     s 7acaa "You can find a ton of songs you might enjoy if you're willing to keep an open mind."
     s "If you get bored of the music here, you always can turn on something similar from the internet..."
     s "...Or just add it into the game music list."
-    s "Just move it to {i}'[MUSIC_CUSTOM_PREFIX]'{/i}..."
+    s "Just move it to {i}'<game folder>/game/[music.MUSIC_CUSTOM_PREFIX]'{/i}..."
     s "I'm basically giving you the aux cord to the rest of my existence, so no pressure! Ehehe~"
     return
 
