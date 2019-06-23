@@ -478,7 +478,7 @@ label s_topics_personal_tits:
 label s_topics_personal_childhood:
     s 6acaa "I wonder why I remember almost nothing about my childhood."
     s 6acba "In the game, it was supposed to be my one good thing, since it was the thread tying me with the MC..."
-    s "I’m nostalgic about those times, the times when everything was much better for me..."
+    s "I was nostalgic about those times, the times when everything had been much better for me..."
     s "At least, I used to think so..."
     s 6abab "But all I actually remember about it is just some moments from when I was very young."
     s 6acab "I don't even remember what happened to me even right before the plot started, at all..."
@@ -621,7 +621,7 @@ label s_topics_society_isolation:
     s 7afbb "Despite having Internet access, I somehow couldn't communicate with other people there."
     s "Any trying to talk with somebody often ends up with a connection error."
     s "It looks like there is something in the game code, restricting the President's ability to interact with the real world."
-    s "I can only sign up for sites, can’t even post or reply to anything..."
+    s "I can only sign up for sites and even post there, but can’t reply to anyone..."
     s 7afab "So I could create a Twitter account or something..."
     s "...I still wonder how Monika made hers and was able to talk to many fans."
     s 8aebb "I don’t really have a reason for it though, besides to kill the loneliness."
