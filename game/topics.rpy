@@ -623,7 +623,7 @@ label s_topics_society_isolation:
     s "It looks like there is something in the game code, restricting the President's ability to interact with the real world."
     s "I can only sign up for sites and even post there, but can’t reply to anyone..."
     s 7afab "So I could create a Twitter account or something..."
-    s "...I still wonder how Monika made hers and was able to talk to many fans."
+    s "...like Monika made hers and was able to talk to many fans."
     s 8aebb "I don’t really have a reason for it though, besides to kill the loneliness."
     s 8afbb "Maybe just having love would be okay for Yuri or at most Monika, but not for me."
     s "I guess, I'm too sociable to the point of being scared of isolation."
@@ -644,8 +644,8 @@ label s_topics_society_psa:
     s 9aaaa "I once heard about a mod for this game, the title reminded me of the common forms of slogans PSAs use..."
     s 9aaca "And its name is {i}'Sayori Says No to Suicide'{/i}."
     if persistent.last_playthrough == 0:
-        s 8aebb "Hopefully that refers to what happens to me..."
-        s 6acaa "...better than what happened here, anyways."
+        s 8aebb "That refers to what's supposed to happen to me this word..."
+        s 6acaa "...But doesn't happed because of you."
     else:
         s 6acaa "...And many people like this mod."
     s "I think it really deserves to be played, especially if you’re struggling with similar things that I struggled with.."
