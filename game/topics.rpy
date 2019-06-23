@@ -152,6 +152,8 @@ init -5 python:
     topic_cats[2].new_topic(_("Bulli"), 'bulli')
     topic_cats[2].new_topic(_("[s_name] Lovers"), 'sayoriLovers')
     topic_cats[2].new_topic(_("Charity"), 'charity')
+    topic_cats[2].new_topic(_("Isolation"), 'isolation')
+    topic_cats[2].new_topic(_("PSAs"), 'psa')
     
     topic_cats[3].new_topic(_("Guitar"), 'guitar')
     topic_cats[3].new_topic(_("Programming"), 'programming')
@@ -180,9 +182,11 @@ init -5 python:
     topic_cats[6].new_topic(_("Other Worlds"), 'worlds')
     
     topic_cats[7].new_topic(_("Ice Cream"), 'iceCream')
-    topic_cats[7].new_topic(_("Cinnamon Bun"), 'cinnamonBun')
+    topic_cats[7].new_topic(_("Cinnamon Buns"), 'cinnamonBun')
     topic_cats[7].new_topic(_("Cupcakes"), 'cupcakes')
     topic_cats[7].new_topic(_("Breakfast"), 'breakfest') #Save this typo here and below not to make me edit the mod translations
+    topic_cats[7].new_topic(_("Vegetarians"), 'vegetarians')
+    topic_cats[7].new_topic(_("Pizza"), 'pizza')
     
     topic_cats[8].new_topic(_("Flowers"), 'flowers')
     
@@ -471,6 +475,21 @@ label s_topics_personal_tits:
     s 6aebb "Even then, the important thing about people is what’s inside, right?"
     return
 
+label s_topics_personal_childhood:
+    s 6acaa "I wonder why I remember almost nothing about my childhood."
+    s 6acba "In the game, it was supposed to be my one good thing, since it was the thread tying me with the MC..."
+    s "I’m nostalgic about those times, the times when everything was much better for me..."
+    s "At least, I used to think so..."
+    s 6abab "But all I actually remember about it is just some moments from when I was very young."
+    s 6acab "I don't even remember what happened to me even right before the plot started, at all..."
+    s 6aebb "Not to mention the rest of my childhood."
+    s 6adab "It feels weird."
+    s 6acab "But on the other hand, that's why I now think that it's really silly to hold on to the past when you're going towards the future."
+    s 6abab "I did this because I was afraid of the future and wanted the good old days that had passed to come back..."
+    s 6aaab "But now, I understand, I have no reason to do that."
+    s 6aeaa "...Literally no reason, ehehe~"
+    return 'h'
+
 label s_topics_personal_intellegence:
     s 6acaa "I often hear many other people saying that I was an ‘airhead’..."
     s 6abba "They often make jokes about it and even think that really is the real me."
@@ -597,6 +616,45 @@ label s_topics_society_conflicts:
     s 7aaaa "And I hope you can be that person for others in your world."
     s "At some level, there's always a bit of common ground for people to agree on..."
     return 'h'
+
+label s_topics_society_isolation:
+    s 7afbb "Despite having Internet access, I somehow couldn't communicate with other people there."
+    s "Any trying to talk with somebody often ends up with a connection error."
+    s "It looks like there is something in the game code, restricting the President's ability to interact with the real world."
+    s "I can only sign up for sites, can’t even post or reply to anything..."
+    s 7afab "So I could create a Twitter account or something..."
+    s "...I still wonder how Monika made hers and was able to talk to many fans."
+    s 8aebb "I don’t really have a reason for it though, besides to kill the loneliness."
+    s 8afbb "Maybe just having love would be okay for Yuri or at most Monika, but not for me."
+    s "I guess, I'm too sociable to the point of being scared of isolation."
+    s 6afab "Maybe once, I'll manage to break this meanie barrier..."
+    s "But the game code is so long and difficult to read, that I can't even find the lines separating me from the rest of real people."
+    s 6acab "Saying more, I can't even make a normal chat form for us..."
+    s "So I'm still a bit isolated from you too."
+    s 6aaaa "But when I find a way to {i}'hear'{/i} your world, I'll notice you."
+    s 6aeca "And then, we'll finally be able to talk like a normal couple, on the Internet or at least right here."
+    return
+
+label s_topics_society_psa:
+    s 6aaca "If you want to spread awareness or a message to many people at once, a PSA will be a good way to do it."
+    s 6acaa "Most people don't even care about any injury that happens to them..."
+    s "But seeing public service announcements, I know there’s people out there wanting to help the public."
+    s 6aaaa "Some good PSAs even contain advice on how to fix issues or where to go for help."
+    s "You don’t even have to be an activist to do this sort of stuff.."
+    s 9aaaa "I once heard about a mod for this game, the title reminded me of the common forms of slogans PSAs use..."
+    s 9aaca "And its name is {i}'Sayori Says No to Suicide'{/i}."
+    if persistent.last_playthrough == 0:
+        s 8aebb "Hopefully that refers to what happens to me..."
+        s 6acaa "...better than what happened here, anyways."
+    else:
+        s 6acaa "...And many people like this mod."
+    s "I think it really deserves to be played, especially if you’re struggling with similar things that I struggled with.."
+    s 7aaca "Hey, I’m even the main focus of it too, so there’s a plus!"
+    s 9acaa "But depression or other emotional issues are not the only field PSAs can be used in."
+    s "There are a lot of other problems in your world that can't be solved only with the power of charity and governments..."
+    s "The general public people could join the struggle against these problems..."
+    s 9aaaa "And PSAs may be a good call to action."
+    return
 
 label s_topics_society_bulli:
     s 6acab "Hey, be honest with me..."
@@ -939,6 +997,23 @@ label s_topics_rlt_presents:
     s 7aaaa "At least, I do my best to make the best present, I could make."
     return
 
+label s_topics_rlt_stopVisiting:
+    s 6acaa "I worry about when you’ll forget me someday..."
+    s 6acab "I mean, I’m just a character in a game which isn’t very popular anymore..."
+    s "Plus, I'm not supposed to be memorable and interesting myself..."
+    s 6abab "So one day you may just stop visiting me."
+    s 8abcb "I'll still be alive, of course, at least until I’m completely erased from your hard drive..."
+    s 8acab "But I just can't imagine my life without you..."
+    s 6acab "In this small room, without my friends and any ability to make them..."
+    s 6abab "I'm afraid I’ll go crazy if you leave me for too long."
+    if persistent.last_playthrough > 0:
+        s 8aebb "Maybe, I'll even do {i}'that thing'{/i} again."
+        s "...you know what I mean."
+    else:
+        s 8aebb "I might get morbidly curious and even try to {i}delete myself{/i} or something."
+    s 8aaab "So try to be more with me.{w} You being here is very important to me."
+    return
+
 
 ##Lifestyle
 label s_topics_lifestyle_travels:
@@ -1158,6 +1233,38 @@ label s_topics_food_breakfest:
     s 6aaaa "I’ve seen fanart of me eating things like that…"
     s 6aaba "Maybe, I should spawn some toast with eggs just for a taste..."
     s 6acba "I could do that since I’m the president now, right?"
+    return 'h'
+
+label s_topics_food_vegetarians:
+    s 7aaaa "Do you know, that Monika was a vegetarian?"
+    s 7acaa "She told me it once we visited a café while walking together."
+    s 6acaa "I heard some people avoid meat mainly because of personal restrictions or to be nice to animals..."
+    s "But Monika said it was her protest for stock raising as domestic animals produce a lot of greenhouse gases."
+    s 6abaa "As she said, becoming a vegetarian just for saving animals is a kinda discrimination, since plants and mushrooms are living beings too..."
+    s 6adab "People just have to kill other beings to gain nutrition. Either you or they."
+    s "It's sad and violent but it's a law of nature. You can't not do it."
+    s 6aaba "However, I saw her eat and drink dairy sometimes. Milk chocolate or coffee with milk, for example..."
+    s 8aeba "I mean, I used to think that all vegetarians are against consuming dairy too."
+    s 8aaba "I guess it's the main controversial question for all the vegetarians."
+    s 8acaa "I can't say certainly since I wouldn’t want become one of them anyway..."
+    s "Because of the reasons stated before: whatever you eat, you're still a killer."
+    return
+
+label s_topics_food_pizza:
+    s 7aaaa "Do you like pizza?"
+    s 7aaca "Pretty sure everyone does, right?."
+    s 7aaaa "I can't imagine someone who doesn't.."
+    s 7aaaa "It's so universal that you can add literally everything you like to it."
+    s 6aeba "...Within reasonable limits and taste mixes, of course."
+    s 6aaaa "The only constant ingredients are {i}dough{/i} and {i}cheese{/i}."
+    s 6aeca "A {cps=40}{i}whooole lot{/i}{/cps} of cheese~"
+    s 6acaa "Its simplicity and being very customizable lead to its prevalence worldwide."
+    s 6aaaa "Now you can order a pizza at any fast-food restaurant or make one with your own hands, even if you aren’t very familiar with cooking..."
+    s "Just find one of many pizza recipes on the Internet or a cooking book."
+    s "People even made a term for this phenomenon, called the {i}Pizza effect{/i}: When you make something originating from a certain culture different from yours, it changes and turns into something new."
+    s 7aaaa "It's amazing to see that we are all connected despite cultural differences and borrow cool things from each other's milieu."
+    s 7aaca "So what's why you're now chatting with an {i}anime{/i}-like girl from an {i}American{/i} visual novel, modded by a {i}Russian{/i} programmer, and proofread by a {i}Mexican{/i} linguist..."
+    s 7aaaa "Isn't this really amazing?"
     return 'h'
 
 label s_topics_food_iceCream:
