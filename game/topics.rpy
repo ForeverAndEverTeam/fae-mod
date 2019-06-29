@@ -168,6 +168,7 @@ init -5 python:
     topic_cats[4].new_topic(_("Fan Merch"), 'fanStuff')
     topic_cats[4].new_topic(_("Children"), 'children', available = 4)
     topic_cats[4].new_topic(_("Presents"), 'presents')
+    topic_cats[4].new_topic(_("Face"), 'face') #TODO: make it hidden from the topic menu but keep it randomly selectable
     
     topic_cats[5].new_topic(_("Travels"), 'travels')
     topic_cats[5].new_topic(_("Oversleeping"), 'oversleeping')
@@ -261,6 +262,8 @@ init -5 python:
     topic_cats[5].topics[2].related = [question_cats[0].topics[-1]]
     question_cats[0].new_topic(_("What is your favorite holiday?"), 'holidays')
     question_cats[0].new_topic(_("What do you think about lesbian pairings?"), 'pairings')
+    question_cats[0].new_topic(_("What do you think about chibi dokis?"), 'chibi') #TODO: showing and hiding chibis
+    question_cats[0].new_topic(_("What are your favorite books?"), 'books')
     
     question_cats[1].new_topic(_("Do you regret you have lost your friends?"), 'lostFriends')
     question_cats[1].new_topic(_("What do you think of one of the other club members?"), 'opinion')
@@ -273,6 +276,9 @@ init -5 python:
     question_cats[2].new_topic(_("Is it hard to program?"), 'programming')
     question_cats[2].new_topic(_("Can you say a funny fact?"), 'fact')
     question_cats[2].new_topic(_("Are you good at cooking?"), 'cooking')
+    question_cats[2].new_topic(_("How did MC’s poems look like to you?"), 'mcPoems')
+    question_cats[2].new_topic(_("Have you ever played visual novels?"), 'visualNovel')
+    question_cats[2].new_topic(_("How to fight suicidal thoughts?"), 'suicideThoughts')
     
     question_cats[3].new_topic(_("Can you give me a poem?"), 'poem')
     question_cats[3].new_topic(_("What do you think about the real world?"), 'reality')
@@ -815,6 +821,41 @@ label s_topics_rlt_touches:
     s "I'll just have to love you even more to try and make up for it."
     return "s"
 
+label s_topics_rlt_face: #This dialog will be called just once and won't appear in the repeat menu. Its 'available' should be greater than 0.
+    s 6acaa "We've been here together for so long, but I still don't know how you look."
+    s 9aeaa "But I have a good idea on how to get it..."
+    s 9aaaa "Can you bring me a photo of you?"
+    menu:
+        "Yes, I have one on my PC":
+            s "Just move it to the game’s root folder!"
+            s "I'll find it there myself."
+            python:
+                import os
+                while True:
+                    renpy.pause(1.5)
+                    for file in os.listdir('.'):
+                        file = file.encode("utf-8")
+                        ext = file[-4:]
+                        print(file, ext)
+                        if ext == ".jpg" or ext == ".png" or ext == ".bmp":
+                            if file[:9] != "screenshot":
+                                break
+                    else:
+                        continue
+                    break
+            s 6aaaa "Okay, I found it!"
+            s 7aeca "For me, you look pretty nice!"
+            s 7acaa "I can't get used to how your world looks though..."
+            s 7aaaa "But I think it's okay."
+            s "I saved it to the game archives, so I'll never lose it."
+            s 7aeca "Thank you for the photo, [player]!"
+            return "vh"
+        "No, I can't":
+            s 6afab "Oh, that’s too bad."
+            s 6aaca "But I would’ve thought you look nice anyway."
+            s 7acaa "Not everyone likes to take a photo of themselves, so I won't force you to take one or something."
+            return
+
 label s_topics_rlt_marrige:
     s 7acaa "Hey, I was wondering..."
     s "If it were possible, would you marry me?"
@@ -1279,6 +1320,42 @@ label s_topics_food_iceCream:
     s 7aaaa "Maybe I could make some sometime..."
     return 'h'
 
+label s_topics_food_cookies:
+    s 7aaaa "I haven't eaten some cookies for a pretty long time..."
+    s "Since that one time with Natsuki."
+    s 6acaa "Frankly, I didn't think of anything really malicious then. I just wanted to play with her..."
+    s 6abaa "But then I decided to take the chance and get one more cookie, suddenly wanting it."
+    s 7aaca "I really like cookies: they're very tasty..."
+    s 7aaaa "Especially with chocolate chips."
+    s "So it's not surprising why I couldn't help and take Natsuki's one."
+    s 7afbb "And I'd take some cookies right now, but there isn’t any in sight."
+    s 9aeaa "Oh, wait! What if I just spawn a dish with them right on my table?"
+    s 9aaaa "After all, I'm the club president, so I can do it using the game console. Right?"
+    s "Give me a minute, I’m gonna have to do some coding."
+    show sayori 6aaaa at ss1
+    #Spawning cookies
+    s 6aeaa "Gotcha!"
+    s 6aaaa "It was so easy and quick, felt like I was using Uber Eats or something."
+    s 6aaaa "...don’t ask how I know what that is, super long story..."
+    s 6aaaa "Want some?"
+    s 6aebb "Oh, I forget I can't give you them since you’re out there, meanwhile..."
+    s 8aebb "I was serious on giving you some, too."
+    s "I just can't get used to knowing you’re too far from me and MC is just the way you can talk to me."
+    s 8aaca "But I can feed him like a little baby, if you want. I guess it'd look cute from your view."
+    menu:
+        "Why not?":
+            s "OK! Then I'll try to see if I can. I think I could make him move his jaw." #Here will be a special Sayori sprite (at least, I hope)
+            s "It works! He's chewing it..."
+            pause 5
+            s 6aaaa "He seems to have eaten it."
+            s "I think one piece is enough."
+            s 6acaa "I want these cookies too, after all, and I need them slightly more since he’s just a puppet at this point."
+        "I think, it would not":
+            s 8aebb "OK! It was a silly idea, sorry..."
+            s 6aaaa "I'll just savor these cookies alone."
+            s 6aeca "But if you’re suddenly able to cross the fourth wall, I'll share some with you of course."
+    return "h"
+
 label s_topics_food_cinnamonBun:
     s 7aafa "Would you like to taste me?"
     s 7aeca "I mean a cinnamon bun, you pervert~"
@@ -1486,6 +1563,28 @@ label s_answer_personal_pairings: #What do you think about lesbian pairings?
     s 6aaca "You know who I’m talking about, right?"
     return
 
+label s_answer_personal_chibi: # What do you think about chibi dokis?
+    #Show chibis
+    s 7acaa "Are you talking about these stickers?"
+    s "They’re just moving sprites, representing our probable reactions to your poems, and not anything more."
+    s "They also represent us all on different kind of the official fan stuff: badges, toys, stickers and so on."
+    s 7aaca "But I like the way, some Internet users make them separate characters, existing along with us."
+    s 7aaaa "Maybe, I should try to code an advanced behaviour for one of them..."
+    s "I think it'll be good coding practice for me..."
+    s 6acaa "Or even a chance to restore the other girls."
+    s 6acbb "Or at least, a way to make imitations of them."
+    #Hide chibis
+    s "All this depends on my coding skills and what files were left after what’s happened, right?"
+    return
+
+label s_answer_personal_books: # What are your favorite books?
+   s 8aebb "For a literature club member, I don't really read..."
+   s "So I don’t even have no book to recommend for you."
+   s 8acaa "Maybe, someone else will give you good advice..."
+   s "But not me."
+   s 8aabb "Sorry if it makes you upset. I really am!"
+   return
+
 ##Game University
 label s_answer_game_opinion: #Opinion about an other club member
     show sayori 6aaaa at ss1 zorder 2
@@ -1634,6 +1733,18 @@ label s_answer_game_editing:
     return
     
 ##Experience
+label s_answer_exp_mcPoems: #How did MC’s poems look like to you?
+    s 7acaa "You mean, how we saw MC’s poems, right?"
+    s 8aebb "I somehow can't remember how I used to see them before I experienced my epiphany..."
+    s 8acaa "But now, I clearly see that his 'poems' were just a list of words you had selected to open CGs with your favorite person..."
+    s 6acaa "That was the way you saw them too, right?"
+    s 7aaaa "But I wonder how I'd look, if you could write real poems instead of just random word selecting."
+    s 7aaca "Then you could write people for each other or even chat using those gameplay features."
+    s 7acaa "But I know not many people have an interest in good poetry, so everything works better using simple word selecting."
+    s 7aaca "But anyway, I heard it's pretty unique gameplay feature for visual novels..."
+    s 7aaaa "Not every game lets you to change its story: not only by eventual choices but also through minigames or something."
+    s "So I thank Dan for this small but funny feature in our game."
+    return
 
 label s_answer_exp_death:
     s 6abbb "I thought you might get around to asking me about this..."
@@ -1667,6 +1778,52 @@ label s_answer_exp_programming:
     s 6acaa "Well, I'm still pretty new to coding and programing, but..."
     call s_common_programming
     return 'h'
+
+label s_answer_exp_suicideThoughts: # How to fight suicidal thoughts?
+    s 8aebb "It's kind of a hard question..."
+    if depr_known:
+        s 8aaaa "But I think I can give some advice from my past."
+    else:
+        s "But I think I can give some advice from my... friend's past."
+    s 6acaa "First of all, you should understand that suicide is a quite radical and is {i}not always an effective{/i} way to solve your problems..."
+    s 6abaa "Saying more, you may cause other problems for the people you leave behind, especially for the close ones."
+    s 6acaa "Even if the problem is only inside you, dealing with the reasons is a better way than just to rid the world of yourself."
+    s "You can try also just to run away from your rainclouds by distracting yourself from bad thoughts, but usually it's just a temporary solution, speaking from personal experience..."
+    s "If the problems are really serious, the only way is to fight them."
+    s 6aaaa "Try to find the courage to ask other people for help, if you need it..."
+    s 6aaac "Remember, that there is always someone around you who can help you and really {i}does{/i} care for you..."
+    s "And asking for help is not something overly burdening or showing you as a weak person."
+    if persistent.last_playthrough > 0:
+        s 6aabc "Commiting suicide often requires a lot of determination even while totally desperate."
+    s 6aaaa "So you shouldn’t hide your troubles and be sure to tell about them to other people."
+    s "Maybe, you need the help of a therapist, for example."
+    s "And the fact you asked me about this is your first step for a slow but worthwhile way to get rid of your problems without taking your own life."
+
+label s_answer_exp_mcPoems: #How did MC’s poems look like to you?
+    s 7acaa "You mean, how we saw MC’s poems, right?"
+    s 8aebb "I somehow can't remember how I used to see them before I experienced my epiphany..."
+    s 8acaa "But now, I clearly see that his 'poems' were just a list of words you had selected to open CGs with your favorite person..."
+    s 6acaa "That was the way you saw them too, right?"
+    s 7aaaa "But I wonder how I'd look, if you could write real poems instead of just random word selecting."
+    s 7aaca "Then you could write people for each other or even chat using those gameplay features."
+    s 7acaa "But I know not many people have an interest in good poetry, so everything works better using simple word selecting."
+    s 7aaca "But anyway, I heard it's pretty unique gameplay feature for visual novels..."
+    s 7aaaa "Not every game lets you to change its story: not only by eventual choices but also through minigames or something."
+    s "So I thank Dan for this small but funny feature in our game."
+    return
+
+label s_answer_exp_visualNovel: # Have you ever played visual novels?
+    s 8aebb "Are you asking me about this just because I'm a VN ‘heroine’ myself, aren't you?"
+    s 8abaa "But freakly, I'm just not interested in such a game genre."
+    s 8acaa "Most VN are romantic and made for boys..."
+    s 8bcaa "Many of them even contain erotic scenes, the double-edge sword of this genre..."
+    s 8acaa "So I’ve never played any visual novel."
+    s 8aaaa "But if you are looking for some recommendations, you can try {i}Steins;Gate{/i}, {i}Everlasting Summer{/i} or {i}Katawa Shoujo{/i}..."
+    s 6acaa "I heard they’re pretty popular in your world and each of them has some unique features relating to many other visual novels..."
+    s 6aaca "And I wouldn’t be surprised if you cheat on me, if you get a crush on a girl from one of them."
+    s 6aebb "Who am I to control your preferences about VN girls, yeah?"
+    return "h"
+
 
 label s_answer_exp_fact:
     python:
