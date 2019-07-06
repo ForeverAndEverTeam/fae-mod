@@ -1,6 +1,19 @@
 default persistent.seen_topics = {}
 default persistent.seen_lens = {}
 
+#Topic-specified images
+image s_sticker down:
+    "gui/poemgame/s_sticker_2.png"
+
+image n_sticker down:
+    "gui/poemgame/n_sticker_2.png"
+
+image y_sticker down:
+    "gui/poemgame/y_sticker_2.png"
+
+image m_sticker down:
+    "gui/poemgame/m_sticker_2.png"
+
 init -5 python:
     if persistent.seen_topics is None:
         persistent.seen_topics = {}
@@ -262,13 +275,13 @@ init -5 python:
     topic_cats[5].topics[2].related = [question_cats[0].topics[-1]]
     question_cats[0].new_topic(_("What is your favorite holiday?"), 'holidays')
     question_cats[0].new_topic(_("What do you think about lesbian pairings?"), 'pairings')
-    question_cats[0].new_topic(_("What do you think about chibi dokis?"), 'chibi') #TODO: showing and hiding chibis
     question_cats[0].new_topic(_("What are your favorite books?"), 'books')
     
     question_cats[1].new_topic(_("Do you regret you have lost your friends?"), 'lostFriends')
     question_cats[1].new_topic(_("What do you think of one of the other club members?"), 'opinion')
     question_cats[1].new_topic(_("Isn't it tiring to sit so for a long time?"), 'sitting')
     question_cats[1].new_topic(_("How do you change game files?"), 'editing')
+    question_cats[1].new_topic(_("What do you think about chibi dokis?"), 'chibi')
     
     question_cats[2].new_topic(_("How does it feel to be dead?"), 'death')
     if persistent.last_playthrough == 0:
@@ -1563,20 +1576,6 @@ label s_answer_personal_pairings: #What do you think about lesbian pairings?
     s 6aaca "You know who I’m talking about, right?"
     return
 
-label s_answer_personal_chibi: # What do you think about chibi dokis?
-    #Show chibis
-    s 7acaa "Are you talking about these stickers?"
-    s "They’re just moving sprites, representing our probable reactions to your poems, and not anything more."
-    s "They also represent us all on different kind of the official fan stuff: badges, toys, stickers and so on."
-    s 7aaca "But I like the way, some Internet users make them separate characters, existing along with us."
-    s 7aaaa "Maybe, I should try to code an advanced behaviour for one of them..."
-    s "I think it'll be good coding practice for me..."
-    s 6acaa "Or even a chance to restore the other girls."
-    s 6acbb "Or at least, a way to make imitations of them."
-    #Hide chibis
-    s "All this depends on my coding skills and what files were left after what’s happened, right?"
-    return
-
 label s_answer_personal_books: # What are your favorite books?
    s 8aebb "For a literature club member, I don't really read..."
    s "So I don’t even have no book to recommend for you."
@@ -1699,6 +1698,38 @@ label s_answer_game_lostFriends:
     s "But it's the only way to save them now. At least, as long as I can't do anything on my side."
     return
 
+label s_answer_game_chibi: # What do you think about chibi dokis?
+    #Show chibis
+    show n_sticker zorder 30 at chibi(580)
+    pause 0.1
+    show y_sticker zorder 31 at chibi(680)
+    pause 0.1
+    show m_sticker zorder 32 at chibi(880)
+    pause 0.1
+    show s_sticker zorder 33 at chibi(780)
+    s 7acaa "Are you talking about these stickers?"
+    s "They’re just moving sprites, representing our probable reactions to your poems, and not anything more."
+    s "They also represent us all on different kind of the official fan stuff: badges, toys, stickers and so on."
+    s 7aaca "But I like the way, some Internet users make them separate characters, existing along with us."
+    s 7aaaa "Maybe, I should try to code an advanced behaviour for one of them..."
+    s "I think it'll be good coding practice for me..."
+    s 6acaa "Or even a chance to restore the other girls."
+    s 6acbb "Or at least, a way to make imitations of them."
+    #Hide chibis
+    s "All this depends on my coding skills and what files were left after what’s happened, right?"
+    window hide
+    show n_sticker down zorder 30 at chibi_hide(580)
+    show y_sticker down zorder 31 at chibi_hide(680)
+    show m_sticker down zorder 32 at chibi_hide(880)
+    show s_sticker down zorder 33 at chibi_hide(780)
+    pause 1
+    hide n_sticker
+    hide y_sticker
+    hide m_sticker
+    hide s_sticker
+    window auto
+    return
+
 label s_answer_game_sitting:
     s 7acab "No, it's not. You don't have to worry about it at all."
     s 7acaa "I can do it for eternity. Don’t even need sleep!"
@@ -1733,18 +1764,6 @@ label s_answer_game_editing:
     return
     
 ##Experience
-label s_answer_exp_mcPoems: #How did MC’s poems look like to you?
-    s 7acaa "You mean, how we saw MC’s poems, right?"
-    s 8aebb "I somehow can't remember how I used to see them before I experienced my epiphany..."
-    s 8acaa "But now, I clearly see that his 'poems' were just a list of words you had selected to open CGs with your favorite person..."
-    s 6acaa "That was the way you saw them too, right?"
-    s 7aaaa "But I wonder how I'd look, if you could write real poems instead of just random word selecting."
-    s 7aaca "Then you could write people for each other or even chat using those gameplay features."
-    s 7acaa "But I know not many people have an interest in good poetry, so everything works better using simple word selecting."
-    s 7aaca "But anyway, I heard it's pretty unique gameplay feature for visual novels..."
-    s 7aaaa "Not every game lets you to change its story: not only by eventual choices but also through minigames or something."
-    s "So I thank Dan for this small but funny feature in our game."
-    return
 
 label s_answer_exp_death:
     s 6abbb "I thought you might get around to asking me about this..."
