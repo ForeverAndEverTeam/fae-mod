@@ -2,17 +2,15 @@ default persistent.seen_topics = {}
 default persistent.seen_lens = {}
 
 #Topic-specified images
-image s_sticker down:
-    "gui/poemgame/s_sticker_2.png"
+image s_sticker down = "gui/poemgame/s_sticker_2.png"
+image n_sticker down = "gui/poemgame/n_sticker_2.png"
+image y_sticker down = "gui/poemgame/y_sticker_2.png"
+image m_sticker down = "gui/poemgame/m_sticker_2.png"
 
-image n_sticker down:
-    "gui/poemgame/n_sticker_2.png"
-
-image y_sticker down:
-    "gui/poemgame/y_sticker_2.png"
-
-image m_sticker down:
-    "gui/poemgame/m_sticker_2.png"
+image cookies = "mod_assets/images/stuff/cookies.png"
+image cookies_d = "mod_assets/images/stuff/cookies_d.png"
+image sayori cookie = "mod_assets/images/s_new/body/withcookie.png"
+image sayori cookie_biten = "mod_assets/images/s_new/body/withcookie_biten.png"
 
 init -5 python:
     if persistent.seen_topics is None:
@@ -201,6 +199,7 @@ init -5 python:
     topic_cats[7].new_topic(_("Breakfast"), 'breakfest') #Save this typo here and below not to make me edit the mod translations
     topic_cats[7].new_topic(_("Vegetarians"), 'vegetarians')
     topic_cats[7].new_topic(_("Pizza"), 'pizza')
+    topic_cats[7].new_topic(_("Pizza"), 'cookies')
     
     topic_cats[8].new_topic(_("Flowers"), 'flowers')
     
@@ -1347,6 +1346,10 @@ label s_topics_food_cookies:
     s "Give me a minute, I’m gonna have to do some coding."
     show sayori 6aaaa at ss1
     #Spawning cookies
+    show cookies zorder 5:
+        anchor (0.5, 1.0)
+        ypos 700
+        xpos 870
     s 6aeaa "Gotcha!"
     s 6aaaa "It was so easy and quick, felt like I was using Uber Eats or something."
     s 6aaaa "...don’t ask how I know what that is, super long story..."
@@ -1357,11 +1360,13 @@ label s_topics_food_cookies:
     s 8aaca "But I can feed him like a little baby, if you want. I guess it'd look cute from your view."
     menu:
         "Why not?":
-            s "OK! Then I'll try to see if I can. I think I could make him move his jaw." #Here will be a special Sayori sprite (at least, I hope)
+            show sayori cookie at ss1
+            s "OK! Then I'll try to see if I can. I think I could make him move his jaw."
+            show sayori cookie_biten at ss1
             s "It works! He's chewing it..."
             pause 5
-            s 6aaaa "He seems to have eaten it."
-            s "I think one piece is enough."
+            s "He seems to have eaten it."
+            s 6aaaa "I think one piece is enough."
             s 6acaa "I want these cookies too, after all, and I need them slightly more since he’s just a puppet at this point."
         "I think, it would not":
             s 8aebb "OK! It was a silly idea, sorry..."
