@@ -94,8 +94,8 @@ init -5 python:
             self.topics.append(topic)
             self.labels[topic.label] = n
         
-        def new_topic(self, name, label_suffix, available = 0, id = None, related = None, poem = None):
-            topic = Topic(self.prefix + '_' + label_suffix, available, name = name, id = id, related = related, poem = poem)
+        def new_topic(self, name, label_suffix, available = 0, id = None, related = None, show_prompt = True, poem = None):
+            topic = Topic(self.prefix + '_' + label_suffix, available, show_prompt, name = name, id = id, related = related, poem = poem)
             self.append(topic)
             return topic
         
@@ -179,7 +179,7 @@ init -5 python:
     topic_cats[4].new_topic(_("Fan Merch"), 'fanStuff')
     topic_cats[4].new_topic(_("Children"), 'children', available = 4)
     topic_cats[4].new_topic(_("Presents"), 'presents')
-    topic_cats[4].new_topic(_("Face"), 'face') #TODO: make it hidden from the topic menu but keep it randomly selectable
+    topic_cats[4].new_topic(_("Face"), 'face', show_prompt = False)
     
     topic_cats[5].new_topic(_("Travels"), 'travels')
     topic_cats[5].new_topic(_("Oversleeping"), 'oversleeping')

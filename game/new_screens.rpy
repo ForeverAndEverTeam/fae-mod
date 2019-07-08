@@ -145,7 +145,8 @@ screen topic_ui(ss, cat = 0): #0 = questions, 1 = repeat, 2= feelings, 3 = poetr
             elif cat == 1:
                 $topic_list = subscreen.topics if config.developer else subscreen.seen_list
                 for i in topic_list[7 * page: 7 * page + 7]:
-                    textbutton i.name xpadding 10 text_italic not i.seen action [Function(subscreen, i)]
+                    if i.show_prompt:
+                        textbutton i.name xpadding 10 text_italic not i.seen action [Function(subscreen, i)]
             elif cat == 3:
                 $lc = cur_lang().code or 'eng'
                 $topic_list = subscreen.topics if config.developer else subscreen.seen_list
@@ -275,13 +276,15 @@ screen customize_ui():
         yalign 0.95
 
 screen feat_ui():
+    default selectable = persistent.playthrough > 5 and justIsSitting
     style_prefix "choice"
-    
+    if selectable:
+        pass#use sayori_touchable
     vbox:
         align (0.01, 0.99)
         spacing 5
         
-        if persistent.playthrough > 5 and justIsSitting:
+        if selectable:
             textbutton _("Talk (T)") xpadding 0 xsize 200 keysym 't' action Jump("s_talkmenu")
             textbutton _("Music (M)") xpadding 0 xsize 200 keysym 'm' action Jump("s_musicmenu")
             textbutton _("Play (P)") xpadding 0 xsize 200 keysym 'p' action Jump("s_gamemenu")
