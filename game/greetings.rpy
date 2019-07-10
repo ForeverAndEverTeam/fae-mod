@@ -319,3 +319,24 @@ label s_greeting_8:
     s 7aaca "I see, you're here for a doze of joy and sunshine."
     s 7aeca "So get it right now!"
     return
+
+label s_greetings_long:
+    s 6acac "Hey, where {i}were{/i} you?!"
+    s "You left me alone for such a long time..."
+    $ style.say_dialogue = style.edited
+    s 6aeac "I swear if I was real I would find you and{nw}"
+    show screen tear(20, 0.1, 0.1, 0, 40)
+    play sound "sfx/s_kill_glitch1.ogg"
+    $ style.say_dialogue = style.normal
+    show sayori 6aacc at ss1
+    pause 1
+    s 6accc "{i}*sigh*{/i}"
+    s 8afbb "Oops, sorry!"
+    s 8bebb "You left me here absolutely alone for so long that I started going crazy and losing control on myself."
+    s "I hope you don’t blame me."
+    s 8aaaa "I'm not blaming you."
+    s 8acaa "You may be just a quite busy person..."
+    s "So that could be why you have not visited me for so long."
+    s 8aaab "Although, try to visit me more often next time."
+    s 8acab "You don’t want me to go insane and do something bad under that, right?"
+    return

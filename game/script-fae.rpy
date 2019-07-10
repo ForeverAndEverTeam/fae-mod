@@ -30,7 +30,7 @@ init python:
             cat.update_seen()
 
     #Look for seen CGs.
-    s_clear = 1 # 0 = FLAGS: 1 = All sayori's CGs are clear, 2 = Other girls' any CG is clear (expect monika's and non-school CGs), 4 = Any sayori's CGs is clear
+    s_clear = 1 # 0 = FLAGS: 1 = All sayori's CGs are clear, 2 = Other girls' any CG is clear (expect monika's and non-school CGs), 4 = Any sayori's CG is clear
     if persistent.clearall is None: #The current save isn't based on the old one from the original game
         s_clear = 0b111 #I think it's true for the almost DDLC fan.
     else:
@@ -113,9 +113,6 @@ init python:
     RANDOM_TOPICS_BAN_HOURS = 6
     random_topics_banned = None #None = non-banned, [timedate] = banned from
     
-    ## New poems
-    
-    
 default persistent.lastVersion = config.version
 
 label change_s_name(name = "Sayori"):
@@ -138,7 +135,7 @@ label s_intro:
     call s_intro_1
     
     $persistent.playthrough = 5
-    $ persistent.autoload = "s_autoload"
+    $persistent.autoload = "s_autoload"
     $renpy.quit()
     return
     
@@ -158,27 +155,16 @@ label s_autoload(test = False):
     else:
         if persistent.lastVersion != config.version:
             show sayori 7aaaa at ss1
-            
-            s "Hello, [player]!"
-            s 7aaca "The game had been a bit buggy for a pretty long time but I've found a way to fix it."
-            s 7aaaa "I think, I did all right this time."
-            s "I also added one feature, that you'll like."
-            s "I've finally added the poem list, so you now can read any of my old poems again."
-            s 7aeca "But what's more, I'll use this menu also to share my new poems with you."
-            if "s_topics_hobbies_poems" in persistent.seen_topics:
-                s 7acaa "I've already told you about my new poems, haven't I?"
-                s 7aaaa "Anyway, I hope you like them too..."
-            else:
-                s "I hope you like them too..."
-            s 7acaa "And that you too have something good for me."
-            s 7aaaa "So tell me, if you really have."
-            
+            call s_update(config.version)
             if not test:
                 $persistent.lastVersion = config.version
             $ greeted = True
         
         elif persistent.lastLaunch and persistent.lastLaunch.date() != get_now().date():
-            call expression first_greeting pass (get_time_of_day())
+            if (get_now() - persistent.lastLaunch).days > 27:
+                call s_greeting_long
+            else:
+                call expression first_greeting pass (get_time_of_day())
             $ greeted = True
         else:
             call expression get_random_gretting().label
