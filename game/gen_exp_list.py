@@ -1,12 +1,18 @@
-import re
+import re, os, sys
 
-file_list = (
-    'greetings.rpy',
-    'farewells.rpy',
-    'topics.rpy',
-    'intro.rpy',
-    'script-fae.rpy',
-    'poems.rpy'
+#Change the working directory to the script location
+new_dir = re.split('[/\\\\]', sys.argv[0])
+new_dir = "/".join(new_dir[:-1])
+os.chdir(new_dir)
+
+file_templates = (
+    'greetings\.rpy',
+    'farewells\.rpy',
+    'topics\.rpy',
+    'intro\.rpy',
+    'script-fae\.rpy',
+    'poems\.rpy',
+    "mg_.*\.rpy"
 )
 extra_exp = ( #Add expressions from the Python scripts here
     '7aeaa',
@@ -23,14 +29,23 @@ extra_exp = ( #Add expressions from the Python scripts here
 )
 exp = set()
 
+file_re = []
+for t in file_templates:
+    file_re.append(re.compile(t))
+
 for i in extra_exp:
     exp.add(i)
     #print(i + ' from extra_exp')
 
-for file in file_list:
+for fn in os.listdir():
+    for t in file_re:
+        if t.fullmatch(fn):
+            break
+    else:
+        continue
     try:
-        file, fn = open(file, 'r', encoding = 'utf-8'), file
-        
+        print("Opening %s..." % fn)
+        file = open(fn, 'r', encoding = 'utf-8')
         for line in file.readlines():
             res = re.search('sayori\s\d+\w\w\w\w', line)
             res = res or re.search('s\s\d+\w\w\w\w', line)
@@ -38,10 +53,9 @@ for file in file_list:
                 e = res.group().split(' ')[-1]
                 exp.add(e)
                 #print('%s from %s' % (e, fn))
-        
         file.close()
     except IOError:
-        print("File not found: " + file)
+        print("File not found: " + fn)
 
 exp = sorted(exp)
 with open('exp.txt', 'w') as output:
