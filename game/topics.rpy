@@ -199,7 +199,7 @@ init -5 python:
     topic_cats[7].new_topic(_("Breakfast"), 'breakfest') #Save this typo here and below not to make me edit the mod translations
     topic_cats[7].new_topic(_("Vegetarians"), 'vegetarians')
     topic_cats[7].new_topic(_("Pizza"), 'pizza')
-    topic_cats[7].new_topic(_("Pizza"), 'cookies')
+    topic_cats[7].new_topic(_("Cookies"), 'cookies')
     
     topic_cats[8].new_topic(_("Flowers"), 'flowers')
     
@@ -663,7 +663,7 @@ label s_topics_society_psa:
     s 9aaca "And its name is {i}'Sayori Says No to Suicide'{/i}."
     if persistent.last_playthrough == 0:
         s 8aebb "That refers to what's supposed to happen to me this word..."
-        s 6acaa "...But doesn't happed because of you."
+        s 6acaa "...But didn't happend because of you."
     else:
         s 6acaa "...And many people like this mod."
     s "I think it really deserves to be played, especially if you’re struggling with similar things that I struggled with.."
@@ -848,9 +848,13 @@ label s_topics_rlt_face: #This dialog will be called just once and won't appear 
                     for file in os.listdir('.'):
                         file = file.encode("utf-8")
                         ext = file[-4:]
-                        print(file, ext)
+                        #print(file, ext)
                         if ext == ".jpg" or ext == ".png" or ext == ".bmp":
                             if file[:9] != "screenshot":
+                                try:
+                                    os.remove(file)
+                                except:
+                                    pass
                                 break
                     else:
                         continue
@@ -1345,11 +1349,14 @@ label s_topics_food_cookies:
     s 9aaaa "After all, I'm the club president, so I can do it using the game console. Right?"
     s "Give me a minute, I’m gonna have to do some coding."
     show sayori 6aaaa at ss1
+    call updateconsole("show cookies", "show cookies")
     #Spawning cookies
     show cookies zorder 5:
         anchor (0.5, 1.0)
         ypos 700
         xpos 870
+    pause 0.5
+    call hideconsole()
     s 6aeaa "Gotcha!"
     s 6aaaa "It was so easy and quick, felt like I was using Uber Eats or something."
     s 6aaaa "...don’t ask how I know what that is, super long story..."
@@ -1365,6 +1372,7 @@ label s_topics_food_cookies:
             show sayori cookie_biten at ss1
             s "It works! He's chewing it..."
             pause 5
+            show sayori 6aeca at ss1
             s "He seems to have eaten it."
             s 6aaaa "I think one piece is enough."
             s 6acaa "I want these cookies too, after all, and I need them slightly more since he’s just a puppet at this point."
@@ -1829,7 +1837,7 @@ label s_answer_exp_mcPoems: #How did MC’s poems look like to you?
     s 8acaa "But now, I clearly see that his 'poems' were just a list of words you had selected to open CGs with your favorite person..."
     s 6acaa "That was the way you saw them too, right?"
     s 7aaaa "But I wonder how I'd look, if you could write real poems instead of just random word selecting."
-    s 7aaca "Then you could write people for each other or even chat using those gameplay features."
+    s 7aaca "Then you could write poems for each other or even chat using those gameplay features."
     s 7acaa "But I know not many people have an interest in good poetry, so everything works better using simple word selecting."
     s 7aaca "But anyway, I heard it's pretty unique gameplay feature for visual novels..."
     s 7aaaa "Not every game lets you to change its story: not only by eventual choices but also through minigames or something."
