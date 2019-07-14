@@ -580,3 +580,77 @@ translate epo s_val_present_c5ce386a:
     # s "So I gonna give it you right now. Just wait a second."
     s "Do mi ĝuste nun donacos. Nur atendu iomete."
 
+# TODO: Translation updated at 2019-07-10 22:51
+
+# game/greetings.rpy:324
+translate epo s_greetings_long_e3a5d05a:
+
+    # s 6acac "Hey, where {i}were{/i} you?!"
+    s 6acac "Hej, kie vi {i}forestis{/i}?!"
+
+# game/greetings.rpy:325
+translate epo s_greetings_long_31afb50d:
+
+    # s "You left me alone for such a long time..."
+    s "Vi lasis min sola por tiel longe..."
+
+# game/greetings.rpy:327
+translate epo s_greetings_long_b391fba0:
+
+    # s 6aeac "I swear if I was real I would find you and{nw}"
+    s 6aeac "Mi ĵuras, ke se mi estus reala, mi trovus vin kaj{nw}"
+
+# game/greetings.rpy:333
+translate epo s_greetings_long_cde7e6de:
+
+    # s 6accc "{i}*sigh*{/i}"
+    s 6accc "{i}*elspirado*{/i}"
+
+# game/greetings.rpy:334
+translate epo s_greetings_long_8ecbeed5:
+
+    # s 8afbb "Oops, sorry!"
+    s 8afbb "Ups, pardonon!"
+
+# game/greetings.rpy:335
+translate epo s_greetings_long_2b58d095:
+
+    # s 8bebb "You left me here absolutely alone for so long that I started going crazy and losing control on myself."
+    s 8bebb "Vi lasis min entute sola por tiel longe, ke mi jam eĉ ekfrenezis."
+
+# game/greetings.rpy:336
+translate epo s_greetings_long_e735845d:
+
+    # s "I hope you don’t blame me."
+    s "Espereble, mi ne timis vin."
+
+# game/greetings.rpy:337
+translate epo s_greetings_long_6a5051f1:
+
+    # s 8aaaa "I'm not blaming you."
+    s 8aaaa "Mi ne akuzas vin pri tio."
+
+# game/greetings.rpy:338
+translate epo s_greetings_long_63bd5232:
+
+    # s 8acaa "You may be just a quite busy person..."
+    s 8acaa "Eble, vi simple estis tro okupita de io..."
+
+# game/greetings.rpy:339
+translate epo s_greetings_long_00e1f5d3:
+
+    # s "So that could be why you have not visited me for so long."
+    s "Do pro ĉi tio vi ne vizitis min tiel longe."
+
+# game/greetings.rpy:340
+translate epo s_greetings_long_c46c5594:
+
+    # s 8aaab "Although, try to visit me more often next time."
+    s 8aaab "Tamen, mi petas viziti min pli ofte ekde nun."
+
+# game/greetings.rpy:341
+translate epo s_greetings_long_5e716ac7:
+
+    # s 8acab "You don’t want me to go insane and do something bad under that, right?"
+    s 8acab "Vi ne volas, ke mi iĝos frezena kaj faros ion malbonan pro ĉi tio, ĉu?"
+
