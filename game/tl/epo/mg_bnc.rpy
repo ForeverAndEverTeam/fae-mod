@@ -70,7 +70,7 @@ translate epo mg_bnc_s_comment_bbc8f865:
 translate epo mg_bnc_s_comment_20dca1e6:
 
     # s "I'm really annoyed right now..."
-    s "Vi min vere eltedis..."
+    s "Vi min vere elĝenis..."
 
 # game/mg_bnc.rpy:150
 translate epo mg_bnc_s_comment_291bff7b:
@@ -124,7 +124,7 @@ translate epo strings:
 
     # mg_bnc.rpy:100
     old "I'm getting annoyed, [player]."
-    new "Tio ektedas min, [player]."
+    new "Tio ekĝenas min, [player]."
 
     # mg_bnc.rpy:102
     old "Further error will cost you a try."
