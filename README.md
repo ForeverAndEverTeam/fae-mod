@@ -16,19 +16,20 @@ AlexanDDOS (This repository's author, [Reddit](https://www.reddit.com/user/Alexa
 [vignedev](https://github.com/vignedev)  
 [saiv46](https://github.com/Saiv46)  
 Dan Salvato (original scripts)  
-DDLC Mod Template team (mod base)  
+DDLC Mod Template team ([mod base](https://github.com/Monika-After-Story/DDLCModTemplate))  
   
 **Arts:**  
 Fj0rd_ ([Reddit](https://www.reddit.com/user/Fj0rd_), [original sitting Sayori art](https://www.reddit.com/r/DDLC/comments/7h40q6/ok_final_version_this_time_i_swear/))  
 AlexanDDOS  
 Team Salvato artists (original sprites)  
-Lucian Pavel (Santa hat original model, excluded from the stable versions)
+Lucian Pavel (Santa hat original model, excluded from the stable versions)  
   
 **Dialogue:**  
 AlexanDDOS  
   
 **Translations:**  
 AlexanDDOS (Russian & Esperanto)  
+[Vova Petelin](https://vk.com/toxin_666) (Russian)  
   
 **SFX:**  
 Pipe98x (drawing cross)  
@@ -37,12 +38,12 @@ sirrealist2 (drawing circle/line)
 **Testers:**  
 AlexanDDOS  
 Leon9023 ([Reddit](https://www.reddit.com/user/leon9023), [VK](https://vk.com/leon9023))  
-Evgeny Zotov ([VK](https://vk.com/everlastingtolovesayori)) 
+[Evgeny Zotov](https://vk.com/everlastingtolovesayori)
 
 **Proofreaders**:  
-tberriman ([Reddit](https://www.reddit.com/user/tberriman))  
+[tberriman](https://www.reddit.com/user/tberriman)  
 [vermicellibug](https://github.com/vermicellibug)  
-[Chroma](https://www.reddit.com/user/Nekochroma)
+[Chroma](https://www.reddit.com/user/Nekochroma)  
   
 **Special Thanks**:  
 Dan Salvato  

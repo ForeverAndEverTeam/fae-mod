@@ -626,3 +626,77 @@ translate rus s_greeting_8_6fa49780:
     # s 7aeca "So get it right now!"
     s 7aeca "Так готовься получить её аж в двойном размере!"
 
+# TODO: Translation updated at 2019-07-14 23:10
+
+# game/greetings.rpy:324
+translate rus s_greetings_long_e3a5d05a:
+
+    # s 6acac "Hey, where {i}were{/i} you?!"
+    s 6acac "Эй, где тебя {i}так долго{/i} носило?!"
+
+# game/greetings.rpy:325
+translate rus s_greetings_long_31afb50d:
+
+    # s "You left me alone for such a long time..."
+    s "Уже столько времени прошло я провела в одиночестве..."
+
+# game/greetings.rpy:327
+translate rus s_greetings_long_b391fba0:
+
+    # s 6aeac "I swear if I was real I would find you and{nw}"
+    s 6aeac "Клянусь, будь я реальной, я бы тебя нашла и{nw}"
+
+# game/greetings.rpy:333
+translate rus s_greetings_long_cde7e6de:
+
+    # s 6accc "{i}*sigh*{/i}"
+    s 6accc "{i}Фух!{/i}"
+
+# game/greetings.rpy:334
+translate rus s_greetings_long_8ecbeed5:
+
+    # s 8afbb "Oops, sorry!"
+    s 8afbb "Упс, прости!"
+
+# game/greetings.rpy:335
+translate rus s_greetings_long_2b58d095:
+
+    # s 8bebb "You left me here absolutely alone for so long that I started going crazy and losing control on myself."
+    s 8bebb "Тебя так долго здесь не было, что я аж начала сходить с ума от одиночества."
+
+# game/greetings.rpy:336
+translate rus s_greetings_long_e735845d:
+
+    # s "I hope you don’t blame me."
+    s "Надеюсь, я тебя не сильно напугала."
+
+# game/greetings.rpy:337
+translate rus s_greetings_long_6a5051f1:
+
+    # s 8aaaa "I'm not blaming you."
+    s 8aaaa "Не волнуйся, в этом нет твоей вины."
+
+# game/greetings.rpy:338
+translate rus s_greetings_long_63bd5232:
+
+    # s 8acaa "You may be just a quite busy person..."
+    s 8acaa "Может, у тебя просто было очень много дел?"
+
+# game/greetings.rpy:339
+translate rus s_greetings_long_00e1f5d3:
+
+    # s "So that could be why you have not visited me for so long."
+    s "И именно поэтому тебя так долго и не было."
+
+# game/greetings.rpy:340
+translate rus s_greetings_long_c46c5594:
+
+    # s 8aaab "Although, try to visit me more often next time."
+    s 8aaab "Тем не менее, постарайся впредь заходить ко мне чаще."
+
+# game/greetings.rpy:341
+translate rus s_greetings_long_5e716ac7:
+
+    # s 8acab "You don’t want me to go insane and do something bad under that, right?"
+    s 8acab "Ты же не хочешь, чтобы я, окончательно поехав кукухой, натворила бы что-нибудь плохое, верно?"
+
