@@ -147,4 +147,15 @@ translate rus strings:
 
     # mg_bnc.rpy:111
     old "Last chance, [mr] I Can't Count Up To [bnc.guessed_len]."
-    new "Последний шанс, [mr] \"Я не умею считать до [bnc.guessed_len]\"."
+    new "Последний шанс, [mr] \"Я не умею считать до [bnc.guessed_len]\"."# TODO: Translation updated at 2019-08-01 19:06
+
+translate rus strings:
+
+    # mg_bnc.rpy:55
+    old "{color=#00cc00}Bulls: [bnc.bulls]{/color}"
+    new "{color=#00cc00}Быки: [bnc.bulls]{/color}"
+
+    # mg_bnc.rpy:56
+    old "{color=#ffff00}Cows: [bnc.cows]{/color}"
+    new "{color=#ffff00}Коровы: [bnc.cows]{/color}"
+

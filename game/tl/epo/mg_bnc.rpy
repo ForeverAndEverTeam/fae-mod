@@ -88,7 +88,7 @@ translate epo strings:
 
     # mg_bnc.rpy:45
     old "Bows & Cows"
-    new "Bovoj & Bovinoj"
+    new "Virbovoj & Bovinoj"
 
     # mg_bnc.rpy:53
     old "Tries left: [bnc.lifes]"
@@ -145,4 +145,16 @@ translate epo strings:
     # mg_bnc.rpy:111
     old "Last chance, [mr] I Can't Count Up To [bnc.guessed_len]."
     new "Lasta provo, [mr] Mi Ne Scias Nombron [bnc.guessed_len]."
+
+# TODO: Translation updated at 2019-08-01 19:06
+
+translate epo strings:
+
+    # mg_bnc.rpy:55
+    old "{color=#00cc00}Bulls: [bnc.bulls]{/color}"
+    new "{color=#00cc00}Virbovoj: [bnc.bulls]{/color}"
+
+    # mg_bnc.rpy:56
+    old "{color=#ffff00}Cows: [bnc.cows]{/color}"
+    new "{color=#ffff00}Bovinoj: [bnc.cows]{/color}"
 

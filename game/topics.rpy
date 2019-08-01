@@ -1380,6 +1380,7 @@ label s_topics_food_cookies:
             s 8aebb "OK! It was a silly idea, sorry..."
             s 6aaaa "I'll just savor these cookies alone."
             s 6aeca "But if you’re suddenly able to cross the fourth wall, I'll share some with you of course."
+    hide cookies
     return "h"
 
 label s_topics_food_cinnamonBun:
