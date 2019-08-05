@@ -1,4 +1,17 @@
-import zipfile, re, os
+import zipfile, re, os, sys
+
+archive_name = "test"
+
+#Change the working directory to the script location
+new_dir = re.split('[/\\\\]', sys.argv[0])
+new_dir = "/".join(new_dir[:-1])
+os.chdir(new_dir)
+
+def read_info(f, pattern)
+    return re.search(pattern, f.read()).groups()
+
+with open("./options.rpy", "r") as f:
+    archive_name = read_info(f, "define config.version = \"(.+)\"")[0] #Name the archive with the version's name
 
 pack_krom = ( #Filename patterns, skipped by the script
     '.*\.rpa$',
@@ -9,14 +22,15 @@ pack_krom = ( #Filename patterns, skipped by the script
     './saves',
     './calendar\..*',
     './mod_assets/images/calendar',
-    './test.zip',
+    './' + archive_name + '.zip',
     './mod_assets/images/santa_hat',
     '.*santa_hat.*',
     '.*beret.*',
     '.*info.txt$',
     '.*singleton.py$',
     './pack.py',
-    './to_proofread.txt'
+    './to_proofread.txt',
+    './zz_developer\..*'
 )
 pack_external = (
     "LICENSE",
@@ -27,7 +41,7 @@ pack_external = (
 
 pack_krom = tuple(re.compile(x) for x in pack_krom)
 
-arc = zipfile.ZipFile("test.zip", "w", zipfile.ZIP_DEFLATED)
+arc = zipfile.ZipFile(archive_name + ".zip", "w", zipfile.ZIP_DEFLATED)
 
 def wrong_name(fn):
     return any(x.match(fn) for x in pack_krom)
