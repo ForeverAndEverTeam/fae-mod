@@ -25,6 +25,7 @@ init 10 python:
         self.selected = None
         self.possible_turns = []
         self.multiturn = False
+        self.with_ai = kwargs.get('ai') if 'ai' in kwargs else True
         
         checkers.selectable = []
         checkers.unblocked = ([], [])
@@ -216,9 +217,9 @@ init 10 python:
             if unb_lens[0] == 0:
                 return 2
             else:
-                return -1
+                return 1
         elif unb_lens[0] == 0:
-            return 1
+            return -1
         
         return 0
     
@@ -590,7 +591,11 @@ init 10 python:
         left_pieces[party] -= 1
         board[n] = i
     
-    
+    def checkers_debug_setState():
+        new_state = renpy.invoke_in_new_context(renpy.input, "Input the state ID", allow = "0123456789-")
+        new_state = int(new_state)
+        checkers.state = new_state 
+        renpy.call("mg_checkers_s_comment", new_state)
     
     
 image checkers_selected:
@@ -724,7 +729,9 @@ screen mg_checkers_scr():
         
         textbutton _("Restart (R)") xpadding 0 xsize 200 keysym 'r' action [SetField(checkers, 'state', -2), Function(renpy.call, "mg_checkers_s_comment", -2)]
         textbutton _("Quit (Q)") xpadding 0 xsize 200 keysym 'q' action Jump("mg_checkers_quit")
-    
+        if config.developer:
+            textbutton _("Restart without AI (Shift+R)") xpadding 0 xsize 200 keysym 'shift_R' action Function(checkers, True, ai = False)
+            textbutton _("Finish with state") xpadding 0 xsize 200 action Function(checkers_debug_setState)
 
 label mg_checkers:
     $justIsSitting = False
@@ -813,9 +820,10 @@ label mg_checkers_s_comment(id = 0): #Sayori's comment; -1/1 = Sayori's victory/
 
 label mg_checkers_s_turn:
     python:
-        randTime = renpy.random.triangular(0.25, 2)
-        renpy.pause(randTime)
-        checkers_ai_turn()
+        if checkers.with_ai:
+            randTime = renpy.random.triangular(0.25, 2)
+            renpy.pause(randTime)
+            checkers_ai_turn()
     pause 0.25
     return
     
