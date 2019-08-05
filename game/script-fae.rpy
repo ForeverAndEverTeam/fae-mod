@@ -175,9 +175,11 @@ label s_loop:
     hide screen topic_ui
     show screen feat_ui()
     
+    if not justIsSitting:
+        $show_s_mood(at = ss1i)
+    else:
+        $show_s_mood()
     $justIsSitting = True
-    
-    $show_s_mood()
     
     python:
         config.skipping = False

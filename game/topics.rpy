@@ -1,5 +1,6 @@
 default persistent.seen_topics = {}
 default persistent.seen_lens = {}
+default persistent.hasPlayerPhoto = False
 
 #Topic-specified images
 image s_sticker down = "gui/poemgame/s_sticker_2.png"
@@ -49,16 +50,15 @@ init -5 python:
         def __call__(self, *args, **kwargs):
             global justIsSitting
             
-            self.seen = True
-            
             config.allow_skipping = True
             config.skip_indicator = True
             justIsSitting = False
             
+            renpy.call_in_new_context("s_topic", self.label, *args, **kwargs)
+            self.seen = True
             for i in self.related:
                 i.seen = True
-            renpy.call("s_topic", self.label, *args, **kwargs)
-            
+            renpy.return_statement()
             
         
     class TopicCategory:
@@ -179,7 +179,7 @@ init -5 python:
     topic_cats[4].new_topic(_("Fan Merch"), 'fanStuff')
     topic_cats[4].new_topic(_("Children"), 'children', available = 4)
     topic_cats[4].new_topic(_("Presents"), 'presents')
-    topic_cats[4].new_topic(_("Face"), 'face', show_prompt = False)
+    topic_cats[4].new_topic(_("Face"), 'face', show_prompt = not (persistent.hasPlayerPhoto is True))
     
     topic_cats[5].new_topic(_("Travels"), 'travels')
     topic_cats[5].new_topic(_("Oversleeping"), 'oversleeping')
@@ -834,9 +834,12 @@ label s_topics_rlt_touches:
     return "s"
 
 label s_topics_rlt_face: #This dialog will be called just once and won't appear in the repeat menu. Its 'available' should be greater than 0.
-    s 6acaa "We've been here together for so long, but I still don't know how you look."
-    s 9aeaa "But I have a good idea on how to get it..."
-    s 9aaaa "Can you bring me a photo of you?"
+    if topic_cats[4][8].seen:
+        s 7aeaa "Have you already got a photo of yourself?"
+    else:
+        s 6acaa "We've been here together for so long, but I still don't know how you look."
+        s 9aeaa "But I have a good idea on how to get it..."
+        s 9aaaa "Can you bring me a photo of you?"
     menu:
         "Yes, I have one on my PC":
             s "Just move it to the game’s root folder!"
@@ -853,6 +856,8 @@ label s_topics_rlt_face: #This dialog will be called just once and won't appear 
                             if file[:9] != "screenshot":
                                 try:
                                     os.remove(file)
+                                    persistent.hasPlayerPhoto = True
+                                    topic_cats[4][8].show_prompt = False
                                 except:
                                     pass
                                 break
@@ -870,6 +875,9 @@ label s_topics_rlt_face: #This dialog will be called just once and won't appear 
             s 6afab "Oh, that’s too bad."
             s 6aaca "But I would’ve thought you look nice anyway."
             s 7acaa "Not everyone likes to take a photo of themselves, so I won't force you to take one or something."
+            $ this_topic_name = topic_cats[4].name + " → " + topic_cats[4][8].name
+            s 7aada "But if someday get one, you can submit it through the {i}\"[this_topic_name!t]\"{/i} dialog."
+            s 7aaca "I look forward to getting a photo of my honey [player]."
             return
 
 label s_topics_rlt_marrige:
