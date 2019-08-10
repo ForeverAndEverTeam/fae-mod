@@ -3,15 +3,22 @@ default persistent.checkers_winfactor = 30
 
 init 10 python:
     
-    def checkers_start_pos():
-        f = [0] * 32
-        for i in range(12):
-            f[i] = 3
-            f[31 - i] = 1
-        return f
+    def checkers_start_pos(debug = 0):
+        if debug == 0:
+            f = [0] * 32
+            for i in range(12):
+                f[i] = 3
+                f[31 - i] = 1
+            return f
+        elif debug == 1:
+            f = [0] * 32
+            for i in range(12):
+                f[i] = 3
+            f[13] = 1
+            return f
 
     def checkers_prep(self, restart = False, *args, **kwargs):
-        self.field = checkers_start_pos()
+        self.field = checkers_start_pos(kwargs.get("scheme") or 0)
         ## Each integer in self.field storages the below flags (0/1):
         ## 1 = free/occupied
         ## 2 = white/black
@@ -217,9 +224,9 @@ init 10 python:
             if unb_lens[0] == 0:
                 return 2
             else:
-                return 1
+                return -1
         elif unb_lens[0] == 0:
-            return -1
+            return 1
         
         return 0
     
@@ -592,10 +599,15 @@ init 10 python:
         board[n] = i
     
     def checkers_debug_setState():
-        new_state = renpy.invoke_in_new_context(renpy.input, "Input the state ID", allow = "0123456789-")
+        new_state = renpy.invoke_in_new_context(renpy.input, _("Input the state ID"), allow = "0123456789-")
         new_state = int(new_state)
         checkers.state = new_state 
         renpy.call("mg_checkers_s_comment", new_state)
+    
+    def checkers_debug_restartScheme():
+        scheme = renpy.invoke_in_new_context(renpy.input, _("Input the scheme ID"), allow = "0123456789-")
+        scheme = int(scheme)
+        checkers(True, scheme = scheme)
     
     
 image checkers_selected:
@@ -731,7 +743,8 @@ screen mg_checkers_scr():
         textbutton _("Quit (Q)") xpadding 0 xsize 200 keysym 'q' action Jump("mg_checkers_quit")
         if config.developer:
             textbutton _("Restart without AI (Shift+R)") xpadding 0 xsize 200 keysym 'shift_R' action Function(checkers, True, ai = False)
-            textbutton _("Finish with state") xpadding 0 xsize 200 action Function(checkers_debug_setState)
+            textbutton _("Restart with a debug scheme (Alt+R)") xpadding 0 xsize 200 keysym 'alt_R' action Function(checkers_debug_restartScheme)
+            textbutton _("Set state") xpadding 0 xsize 200 action Function(checkers_debug_setState)
 
 label mg_checkers:
     $justIsSitting = False
@@ -820,7 +833,7 @@ label mg_checkers_s_comment(id = 0): #Sayori's comment; -1/1 = Sayori's victory/
 
 label mg_checkers_s_turn:
     python:
-        if checkers.with_ai:
+        if checkers.with_ai and len(checkers.unblocked[1]):
             randTime = renpy.random.triangular(0.25, 2)
             renpy.pause(randTime)
             checkers_ai_turn()
