@@ -43,7 +43,7 @@ Leon9023 ([Reddit](https://www.reddit.com/user/leon9023), [VK](https://vk.com/le
 **Proofreaders**:  
 [tberriman](https://www.reddit.com/user/tberriman)  
 [vermicellibug](https://github.com/vermicellibug)  
-[Chroma](https://www.reddit.com/user/Nekochroma)  
+[Atlas](https://www.reddit.com/user/Nekochroma)  
   
 **Special Thanks**:  
 Dan Salvato  
