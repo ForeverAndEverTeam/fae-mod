@@ -165,6 +165,7 @@ init -5 python:
     topic_cats[2].new_topic(_("Charity"), 'charity')
     topic_cats[2].new_topic(_("Isolation"), 'isolation')
     topic_cats[2].new_topic(_("PSAs"), 'psa')
+    topic_cats[2].new_topic(_("Self-Harm"), 'selfHarm')
     
     topic_cats[3].new_topic(_("Guitar"), 'guitar')
     topic_cats[3].new_topic(_("Programming"), 'programming')
@@ -202,6 +203,7 @@ init -5 python:
     topic_cats[7].new_topic(_("Cookies"), 'cookies')
     
     topic_cats[8].new_topic(_("Flowers"), 'flowers')
+    topic_cats[8].new_topic(_("Technologies"), 'technologies')
     
     for i in topic_cats:
         i.update_seen()
@@ -634,6 +636,25 @@ label s_topics_society_conflicts:
     s 7aaaa "And I hope you can be that person for others in your world."
     s "At some level, there's always a bit of common ground for people to agree on..."
     return 'h'
+
+label s_topics_society_selfHarm:
+    s 6acab "Why do people self harm?"
+    s 6abab "Some just really want attention, while other just find it funny or something..."
+    if persistent.last_playthrough > 2:
+        s 6aabb "I think, you remember Yuri and her being fond on knives."
+    s 6aebb "But shouldn’t it be painful instead?"
+    if depr_known:
+        s "To be honest, I was so close to trying it..."
+        s 6acac "But I'm quite sensitive, so one little cut was enough to change my mind."
+    else:
+        s 6acaa "Personally, I think this bad habit is very nasty and dangerous..."
+        s 6acac "And even if it really brings pleasure to you, it’s still not ok and certainly not healthy."
+    s 6abac "Plus, all these scars aren’t very pleasing to look at.. especially fresh ones."
+    s 6abab "It's really disheartening to see someone's body covered with them."
+    s 6acab "And people usually start to do it because of {i}very negative issues or circumstances{/i}, which makes it worse when you see someone trying to cover up obvious suffering."
+    s 6aaab "So if you suspect anyone of harming themselves purposefully, reach out to them."
+    s "Try to at least make an effort to talk to them, and take it from there."
+    return
 
 label s_topics_society_isolation:
     s 7afbb "Despite having Internet access, I somehow couldn't communicate with other people there."
@@ -1273,7 +1294,7 @@ label s_topics_game_worlds:
     s 6abaa "I just can't imagine living in a game full of blood and struggle..."
     s "You know: shooters, fights, war and so on..."
     s 6abab "I just couldn't take all the violence I'd see."
-    if persistent.last_playthrought > 0:
+    if persistent.last_playthrough > 0:
         s "Especially now, when I’ve seen Death with my own sight."
         s 6abbb "I’d rather be dead than be the one doing the killing."
         s "I'd pray for a revive ability..."
@@ -1422,7 +1443,7 @@ label s_topics_misc_flowers:
     s 6acaa "But... I think it's too selfish to pluck a flower... even if it were to be a gift."
     s "Flowers are living beings too, and plucking them out of the ground does kill them."
     s 6aaaa "So I prefer just to look at them, and then leave them be."
-    if persistent.last_playthrought > 0:
+    if persistent.last_playthrough > 0:
         s 6aeba "Although, I did do this in one of my poems..."
         s 6aaaa "But just for the analogy."
     s 9acaa "At least you can plant a flower in pot."
@@ -1430,6 +1451,19 @@ label s_topics_misc_flowers:
     s 7aaaa "But if you know someone with a lot of time and great responsibility, it will be a good gift for them."
     return 'h'
 
+label s_topics_misc_technologies:
+    s 6acaa "I often wonder if I could somehow, someday, be able to visit you in your reality..."
+    s 6aaaa "It seems as if that time is coming in faster and faster..."
+    s "I mean, VR, AR, virtual assistants, smart houses..."
+    s "All these technologies let people to be more efficient by using computers, almost merging the two together."
+    s 6aeca "Just imagine me helping you with your daily routine or living in your house, staying in this little virtual room..."
+    s 6adaa "Or maybe even a hologram in your reality, or who knows..."
+    s 6aada "You know I’d probably want to do that if it ever becomes possible, right?"
+    s 6acaa "Frankly, even right now I can be a sort of virtual assistant..."
+    s 6aebb "But I need to improve at interacting first, I guess you could say."
+    s "I’d have to adjust to new circumstances..." 
+    s 6aeca "But if you really need to, I can try to help in my own way, however I can from this empty little room."
+    return
 
 
 #Answers
