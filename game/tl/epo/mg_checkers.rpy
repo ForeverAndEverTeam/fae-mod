@@ -182,3 +182,27 @@ translate epo strings:
     old "Quit (Q)"
     new "Ĉesi (Q)"
 
+# TODO: Translation updated at 2019-08-18 19:32
+
+translate epo strings:
+
+    # mg_checkers.rpy:602
+    old "Input the state ID"
+    new "Input the state ID"
+
+    # mg_checkers.rpy:608
+    old "Input the scheme ID"
+    new "Input the scheme ID"
+
+    # mg_checkers.rpy:745
+    old "Restart without AI (Shift+R)"
+    new "Restart without AI (Shift+R)"
+
+    # mg_checkers.rpy:746
+    old "Restart with a debug scheme (Alt+R)"
+    new "Restart with a debug scheme (Alt+R)"
+
+    # mg_checkers.rpy:747
+    old "Set state"
+    new "Set state"
+

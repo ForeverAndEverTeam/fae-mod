@@ -8942,3 +8942,177 @@ translate epo s_answer_exp_mcPoems_998215d0:
     # s 7aaca "Then you could write poems for each other or even chat using those gameplay features."
     s 7aaca "Do ni povus interŝanĝi niajn versaĵojn aŭ eĉ interparoli per ĉi tiu meĥanismo."
 
+# TODO: Translation updated at 2019-08-18 19:32
+
+# game/topics.rpy:641
+translate epo s_topics_society_selfHarm_3616f4ac:
+
+    # s 6acab "Why do people self harm?"
+    s 6acab "Kial oni lezas sin?"
+
+# game/topics.rpy:642
+translate epo s_topics_society_selfHarm_248cab82:
+
+    # s 6abab "Some just really want attention, while other just find it funny or something..."
+    s 6abab "Unuj nur volegas atenton de aliuloj, dum aliaj konsideras ĝin gajiga aŭ simile..."
+
+# game/topics.rpy:644
+translate epo s_topics_society_selfHarm_b16f043f:
+
+    # s 6aabb "I think, you remember Yuri and her being fond on knives."
+    s 6aabb "Espereble, vi memoras pri Juri kaj ŝia hobio je tranĉiloj."
+
+# game/topics.rpy:645
+translate epo s_topics_society_selfHarm_9e1d2e0e:
+
+    # s 6aebb "But shouldn’t it be painful instead?"
+    s 6aebb "Sed ĉu ĝi ne sentiĝu dolore?"
+
+# game/topics.rpy:647
+translate epo s_topics_society_selfHarm_d241b366:
+
+    # s "To be honest, I was so close to trying it..."
+    s "Honeste, ankaŭ mi unue preskaŭ eklezi min..."
+
+# game/topics.rpy:648
+translate epo s_topics_society_selfHarm_7d48e53a:
+
+    # s 6acac "But I'm quite sensitive, so one little cut was enough to change my mind."
+    s 6acac "Sed mia korpo estas tre sentiva, do unu entranĉo sufiĉis por rifuzi."
+
+# game/topics.rpy:650
+translate epo s_topics_society_selfHarm_a4bda8c3:
+
+    # s 6acaa "Personally, I think this bad habit is very nasty and dangerous..."
+    s 6acaa "Persone, mi konsideras ĝin malbona kaj danĝera kutimo..."
+
+# game/topics.rpy:651
+translate epo s_topics_society_selfHarm_9e25572b:
+
+    # s 6acac "And even if it really brings pleasure to you, it’s still not ok and certainly not healthy."
+    s 6acac "Eĉ se ĝi ĝuegigas vin, ĝi estas ne bona kaj norma."
+
+# game/topics.rpy:652
+translate epo s_topics_society_selfHarm_1b53b52b:
+
+    # s 6abac "Plus, all these scars aren’t very pleasing to look at.. especially fresh ones."
+    s 6abac "Eĉ pli, proaj vundoj aspektas tre malbele... specife se ili freŝas."
+
+# game/topics.rpy:653
+translate epo s_topics_society_selfHarm_39fa5812:
+
+    # s 6abab "It's really disheartening to see someone's body covered with them."
+    s 6abab "Estas tre ŝoke vidi ies korpon, kovrita per ili."
+
+# game/topics.rpy:654
+translate epo s_topics_society_selfHarm_c868e115:
+
+    # s 6acab "And people usually start to do it because of {i}very negative issues or circumstances{/i}, which makes it worse when you see someone trying to cover up obvious suffering."
+    s 6acab "Kaj oni ekfaris tion ofte pro {i}egaj problemoj1{/i}, do pli ŝoke estas vidi iun, kiu penas tiel distriĝi de evidantaj suferoj."
+
+# game/topics.rpy:655
+translate epo s_topics_society_selfHarm_9d90371c:
+
+    # s 6aaab "So if you suspect anyone of harming themselves purposefully, reach out to them."
+    s 6aaab "Kaj se vi suspektas iun pri kuncela sinlezado, penu rizignigi ilin de ĉi tio."
+
+# game/topics.rpy:656
+translate epo s_topics_society_selfHarm_fa82abbe:
+
+    # s "Try to at least make an effort to talk to them, and take it from there."
+    s "Almenaŭ, penu paroli kun ili pri ĝi."
+
+# game/topics.rpy:859
+translate epo s_topics_rlt_face_0d3735a3:
+
+    # s 7aeaa "Have you already got a photo of yourself?"
+    s 7aeaa "Ĉu vi jam trovis foton de vi?"
+
+# game/topics.rpy:900
+translate epo s_topics_rlt_face_145d9df4:
+
+    # s 7aada "But if someday get one, you can submit it through the {i}\"[this_topic_name!t]\"{/i} dialog."
+    s 7aada "Sed se vi iam trovos unu, vi povos doni ĝin al mi en parolo {i}\"[this_topic_name!t]\"{/i}."
+
+# game/topics.rpy:901
+translate epo s_topics_rlt_face_379aa352:
+
+    # s 7aaca "I look forward to getting a photo of my honey [player]."
+    s 7aaca "Mi atendas foton de vi, mia kara [player]."
+
+# game/topics.rpy:1455
+translate epo s_topics_misc_technologies_7da20145:
+
+    # s 6acaa "I often wonder if I could somehow, someday, be able to visit you in your reality..."
+    s 6acaa "Mi ofte revas pri ke iam mi povos viziti vian mondon..."
+
+# game/topics.rpy:1456
+translate epo s_topics_misc_technologies_088c0140:
+
+    # s 6aaaa "It seems as if that time is coming in faster and faster..."
+    s 6aaaa "Kaj ŝajnas, la 'iam' iĝas pli kaj pli proksima..."
+
+# game/topics.rpy:1457
+translate epo s_topics_misc_technologies_66c49baf:
+
+    # s "I mean, VR, AR, virtual assistants, smart houses..."
+    s "VR, AR, virtualaj asistantoj, saĝaj domsistemoj..."
+
+# game/topics.rpy:1458
+translate epo s_topics_misc_technologies_0201b412:
+
+    # s "All these technologies let people to be more efficient by using computers, almost merging the two together."
+    s "Per ĉi tiu teknologioj, komputiloj pli efektive helpos homojn fari iliajn aferojn, preskaŭ unuigante ambaŭ mondojn kune."
+
+# game/topics.rpy:1459
+translate epo s_topics_misc_technologies_136b3dfe:
+
+    # s 6aeca "Just imagine me helping you with your daily routine or living in your house, staying in this little virtual room..."
+    s 6aeca "Nur imagu, ke mi helpus vin fari vian rutinon aŭ domlaboron, restante en ĉi tiu virtuala ĉambreto..."
+
+# game/topics.rpy:1460
+translate epo s_topics_misc_technologies_dcc377ff:
+
+    # s 6adaa "Or maybe even a hologram in your reality, or who knows..."
+    s 6adaa "Aŭ eble eĉ kiam hologramo en via mondo..."
+
+# game/topics.rpy:1461
+translate epo s_topics_misc_technologies_95282b69:
+
+    # s 6aada "You know I’d probably want to do that if it ever becomes possible, right?"
+    s 6aada "Vi scias, ke mi vole farus ĉi tion, se vi ĝi eblus, ĉu?"
+
+# game/topics.rpy:1462
+translate epo s_topics_misc_technologies_f382dab3:
+
+    # s 6acaa "Frankly, even right now I can be a sort of virtual assistant..."
+    s 6acaa "Sincerdire, eĉ nun mi eblas funkcii kiel virtuala asistanto..."
+
+# game/topics.rpy:1463
+translate epo s_topics_misc_technologies_902a8f55:
+
+    # s 6aebb "But I need to improve at interacting first, I guess you could say."
+    s 6aebb "Sed do mi unue plibonigu nian interagadon, vi eble diros."
+
+# game/topics.rpy:1464
+translate epo s_topics_misc_technologies_2fb6a3d6:
+
+    # s "I’d have to adjust to new circumstances..."
+    s "Kaj mi kutimiĝu al mia nova laboro..."
+
+# game/topics.rpy:1465
+translate epo s_topics_misc_technologies_415dfaf2:
+
+    # s 6aeca "But if you really need to, I can try to help in my own way, however I can from this empty little room."
+    s 6aeca "Sed se vi vere volas, mi penos realigi ĉi tion, helponte vin tiel, kiel mi povos en ĉi-ĉambreto."
+
+translate epo strings:
+
+    # topics.rpy:168
+    old "Self-Harm"
+    new "Sinlezado"
+
+    # topics.rpy:206
+    old "Technologies"
+    new "Teknologioj"
+

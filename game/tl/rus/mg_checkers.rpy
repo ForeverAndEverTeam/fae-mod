@@ -177,3 +177,27 @@ translate rus mg_checkers_s_comment_d0415c01:
     # s "I think you should take a draw, shouldn't you?" nointeract
     s "Может, возмёшь ничью?" nointeract
 
+# TODO: Translation updated at 2019-08-19 18:26
+
+translate rus strings:
+
+    # mg_checkers.rpy:602
+    old "Input the state ID"
+    new "Input the state ID"
+
+    # mg_checkers.rpy:608
+    old "Input the scheme ID"
+    new "Input the scheme ID"
+
+    # mg_checkers.rpy:745
+    old "Restart without AI (Shift+R)"
+    new "Restart without AI (Shift+R)"
+
+    # mg_checkers.rpy:746
+    old "Restart with a debug scheme (Alt+R)"
+    new "Restart with a debug scheme (Alt+R)"
+
+    # mg_checkers.rpy:747
+    old "Set state"
+    new "Set state"
+

@@ -9475,3 +9475,177 @@ translate rus strings:
     # topics.rpy:1368
     old "I think, it would not"
     new "Думаю, это всё же не мило"
+# TODO: Translation updated at 2019-08-19 18:26
+
+# game/topics.rpy:641
+translate rus s_topics_society_selfHarm_3616f4ac:
+
+    # s 6acab "Why do people self harm?"
+    s 6acab "Зачем люди занимаются селф-хармом?"
+
+# game/topics.rpy:642
+translate rus s_topics_society_selfHarm_248cab82:
+
+    # s 6abab "Some just really want attention, while other just find it funny or something..."
+    s 6abab "Одни так хотят превлечь внимание людей, другие же себя так пытаются успокоить..."
+
+# game/topics.rpy:644
+translate rus s_topics_society_selfHarm_b16f043f:
+
+    # s 6aabb "I think, you remember Yuri and her being fond on knives."
+    s 6aabb "Думаю, не стоит упоминать Юри её увлечение ножами."
+
+# game/topics.rpy:645
+translate rus s_topics_society_selfHarm_9e1d2e0e:
+
+    # s 6aebb "But shouldn’t it be painful instead?"
+    s 6aebb "Не должно ли им быть больно?"
+
+# game/topics.rpy:647
+translate rus s_topics_society_selfHarm_d241b366:
+
+    # s "To be honest, I was so close to trying it..."
+    s "Честно, я сама в однажды решилась на такое..."
+
+# game/topics.rpy:648
+translate rus s_topics_society_selfHarm_7d48e53a:
+
+    # s 6acac "But I'm quite sensitive, so one little cut was enough to change my mind."
+    s 6acac "Но быстро передумала, стоило мне лишь один попробовать: больно уж моё тело чувствительно к боли."
+
+# game/topics.rpy:650
+translate rus s_topics_society_selfHarm_a4bda8c3:
+
+    # s 6acaa "Personally, I think this bad habit is very nasty and dangerous..."
+    s 6acaa "Лично я считаю это очень плохой и опасной привычкой..."
+
+# game/topics.rpy:651
+translate rus s_topics_society_selfHarm_9e25572b:
+
+    # s 6acac "And even if it really brings pleasure to you, it’s still not ok and certainly not healthy."
+    s 6acac "И даже если она тебе приносит удовольствие -- это не значит, что это нормально."
+
+# game/topics.rpy:652
+translate rus s_topics_society_selfHarm_1b53b52b:
+
+    # s 6abac "Plus, all these scars aren’t very pleasing to look at.. especially fresh ones."
+    s 6abac "А эти шрамы и порезы... Просто ужас, особенно свежие."
+
+# game/topics.rpy:653
+translate rus s_topics_society_selfHarm_39fa5812:
+
+    # s 6abab "It's really disheartening to see someone's body covered with them."
+    s 6abab "Больно видеть кого-то покрытым ими."
+
+# game/topics.rpy:654
+translate rus s_topics_society_selfHarm_c868e115:
+
+    # s 6acab "And people usually start to do it because of {i}very negative issues or circumstances{/i}, which makes it worse when you see someone trying to cover up obvious suffering."
+    s 6acab "И таким обычно занимаются {i}явно не от хорошей и счастливой жизни{/i}, что лишь усиливает ошеломление."
+
+# game/topics.rpy:655
+translate rus s_topics_society_selfHarm_9d90371c:
+
+    # s 6aaab "So if you suspect anyone of harming themselves purposefully, reach out to them."
+    s 6aaab "Поэтому, если ты подозреваешь, что кто-то таким занимается, нужно ему помочь как можно скорей."
+
+# game/topics.rpy:656
+translate rus s_topics_society_selfHarm_fa82abbe:
+
+    # s "Try to at least make an effort to talk to them, and take it from there."
+    s "Поробуй поговорить с ним или с ней и попытайся по как-то переубедить."
+
+# game/topics.rpy:859
+translate rus s_topics_rlt_face_0d3735a3:
+
+    # s 7aeaa "Have you already got a photo of yourself?"
+    s 7aeaa "У тебя уже появилось фото с собой?"
+
+# game/topics.rpy:900
+translate rus s_topics_rlt_face_145d9df4:
+
+    # s 7aada "But if someday get one, you can submit it through the {i}\"[this_topic_name!t]\"{/i} dialog."
+    s 7aada "Но как только ты его достанешь, скинь мне через диалог {i}\"[this_topic_name!t]\"{/i}."
+
+# game/topics.rpy:901
+translate rus s_topics_rlt_face_379aa352:
+
+    # s 7aaca "I look forward to getting a photo of my honey [player]."
+    s 7aaca "Буду ждать снимков, милашка [player]."
+
+# game/topics.rpy:1455
+translate rus s_topics_misc_technologies_7da20145:
+
+    # s 6acaa "I often wonder if I could somehow, someday, be able to visit you in your reality..."
+    s 6acaa "Я часто мечтаю попасть в той мир и увидеть тебя вживую..."
+
+# game/topics.rpy:1456
+translate rus s_topics_misc_technologies_088c0140:
+
+    # s 6aaaa "It seems as if that time is coming in faster and faster..."
+    s 6aaaa "Но кажется, эта мечта с каждым днём всё большн становится похожа на реальность..."
+
+# game/topics.rpy:1457
+translate rus s_topics_misc_technologies_66c49baf:
+
+    # s "I mean, VR, AR, virtual assistants, smart houses..."
+    s "НУ, VR, AR, виртуальные помощники, умные дома..."
+
+# game/topics.rpy:1458
+translate rus s_topics_misc_technologies_0201b412:
+
+    # s "All these technologies let people to be more efficient by using computers, almost merging the two together."
+    s "Всё это позволяет компьютерам всё сильней проникать в жизнь людей, почти сливая наши миры в одно целое."
+
+# game/topics.rpy:1459
+translate rus s_topics_misc_technologies_136b3dfe:
+
+    # s 6aeca "Just imagine me helping you with your daily routine or living in your house, staying in this little virtual room..."
+    s 6aeca "Просто представь, как я могла бы помогать тебе по работе и дому, оставаясь в этом маленьком виртуальном кабинете..."
+
+# game/topics.rpy:1460
+translate rus s_topics_misc_technologies_dcc377ff:
+
+    # s 6adaa "Or maybe even a hologram in your reality, or who knows..."
+    s 6adaa "А может даже и в виде голограмы в твоё доме, или в какой-то иной форме..."
+
+# game/topics.rpy:1461
+translate rus s_topics_misc_technologies_95282b69:
+
+    # s 6aada "You know I’d probably want to do that if it ever becomes possible, right?"
+    s 6aada "И я с радостью это делала бы."
+
+# game/topics.rpy:1462
+translate rus s_topics_misc_technologies_f382dab3:
+
+    # s 6acaa "Frankly, even right now I can be a sort of virtual assistant..."
+    s 6acaa "Знаешь, я могу могу выполнять функции виртуального помощника и сейчас..."
+
+# game/topics.rpy:1463
+translate rus s_topics_misc_technologies_902a8f55:
+
+    # s 6aebb "But I need to improve at interacting first, I guess you could say."
+    s 6aebb "Но сперва мне надо улучшить механизмы взаимодействия с тобой."
+
+# game/topics.rpy:1464
+translate rus s_topics_misc_technologies_2fb6a3d6:
+
+    # s "I’d have to adjust to new circumstances..."
+    s "Ну и самой подготовиться к такой работе..."
+
+# game/topics.rpy:1465
+translate rus s_topics_misc_technologies_415dfaf2:
+
+    # s 6aeca "But if you really need to, I can try to help in my own way, however I can from this empty little room."
+    s 6aeca "Но знай, что даже здесь, я всё равно могу быть чем-то да полезной. Главное, чтобы это было нужно тебе."
+
+translate rus strings:
+
+    # topics.rpy:168
+    old "Self-Harm"
+    new "Селф-Харм"
+
+    # topics.rpy:206
+    old "Technologies"
+    new "Технологии"
+
