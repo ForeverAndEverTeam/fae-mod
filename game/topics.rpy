@@ -154,6 +154,7 @@ init -5 python:
     topic_cats[0].new_topic(_("Left-handedness"), "sinistrality")
     topic_cats[0].new_topic(_("Breast Size"), "tits")
     topic_cats[0].new_topic(_("Intellengence"), 'intellegence')
+    topic_cats[0].new_topic(_("Voice"), 'voice')
     
     topic_cats[1].new_topic(_("Videogames"), 'games')
     topic_cats[1].new_topic(_("Fanarts"), 'fanarts')
@@ -193,6 +194,7 @@ init -5 python:
     topic_cats[6].new_topic(_("Stars"), 'stars')
     topic_cats[6].new_topic(_("In-game Time"), 'time')
     topic_cats[6].new_topic(_("Other Worlds"), 'worlds')
+    topic_cats[6].new_topic(_("Questions"), 'questions')
     
     topic_cats[7].new_topic(_("Ice Cream"), 'iceCream')
     topic_cats[7].new_topic(_("Cinnamon Buns"), 'cinnamonBun')
@@ -525,6 +527,32 @@ label s_topics_personal_intellegence:
     s "And if you really can't do do any better, then it means that just you’ve reached your own limit."
     s 7aaac "But it dosen't mean, you should stop trying to break it, though..."
     s 7aaca "Because it can be false."
+    return 'h'
+
+label s_topics_personal_voice:
+    if persistent.clear:
+        s 6acaa "I wonder how Monika could make you hear her real voice when she sang her song..."
+        s "For the rest of us, we don’t really have a voice, just talking through the text box."
+        s 6abaa "But Monika had some voice files, so she could properly talk and even sing to you."
+        s 6abba "Although, we are in a game, so it’s probably just the voice of an actress..."
+        s 7aaca "Anyway, her voice is pleasant and melodic, as a musician should have..."
+    else:
+        s 6acaa "Did you know that Monika had a real voice in this game?"
+        s "For the rest of us, we don’t really have a voice, just talking through the text box."
+        s 6abaa "But I've found some sound files with a female voice, referring to Monika..."
+        s 9aebb "At least, the file names suggest so."
+        s 7aaca "Anyway, this voice is a bit high and melodic, like a musician should have..."
+    s 7aaaa "But I’d say the tone of that voice seems to not fit her. I'd even say it fits {i}me{/i} more than her..."
+    s 6acaa "The voice doesn’t sound as mature as you would think she’d sound like, it sounds more like the voice I’d have."
+    s 6aebb "But I guess canon is canon, right?"
+    s 6adab "But what if I never have a voice?"
+    s "Will I be {i}mute{/i}, if I suddenly appear in your world?"
+    s 6aaba "But as long as I'm a computer program, I can make my own real voice, right?"
+    s "I just need a text-to-speech synthesizer or something..."
+    s 6aaca "There’s bound to be a good one for me..."
+    s 6aaaa "I once saw something about TTS in the Ren'Py documentation, so it shouldn't be too hard to integrate it there, I guess."
+    s 9aebb "I hope a voice from there isn’t too robotic. You wouldn’t want me to {font=mod_assets/fonts/Fantasque/FantasqueSansMono-Regular.ttf}{cps=30}T4LK L1KE 4 R0B0T{/cps}{/font}?"
+    s 9acaa "{font=mod_assets/fonts/Fantasque/FantasqueSansMono-Regular.ttf}{cps=30}1 4M 4 HUM4N BE1N6 4FTER 4LL{/cps}{/font}"
     return 'h'
 
 
@@ -1305,6 +1333,18 @@ label s_topics_game_worlds:
     s 6aaca "...but I'd do my best for you, of course!"
     return
 
+label s_topics_game_questions:
+    s 7aaaa "I know you may have a lot of questions for me. It's an important part of getting acquainted with anybody..."
+    s "So I added a section to {i} the 'Talk' menu{/i} with more questions to ask."
+    s 7acba "I would’ve added a text field for this instead, but I'm quite clumsy at dealing with the text input..."
+    s 7aaaa "So I did a short list with some questions."
+    s 6acaa "Of course, there’s so many questions you could ask me, so I often check various AMAs to understand what you’d ask..."
+    s 6aaca "And sometimes I find some really interesting questions."
+    s 6aaaa "For example, one modder made a few AMAs about each of us and then compiled them into a separate mod, called {i}Doki Doki Interview Club{/i}."
+    s "The result was really funny, even if there were some mistakes about me..."
+    s 6aeca "Still, they were pretty good at portraying my character, I guess."
+    s 6acaa "I think I should check this one again. Maybe I might find some new entries for the question menu?"
+    return
 
 ## Food
 label s_topics_food_breakfest:
