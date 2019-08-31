@@ -9116,3 +9116,201 @@ translate epo strings:
     old "Technologies"
     new "Teknologioj"
 
+# TODO: Translation updated at 2019-08-31 20:40
+
+# game/topics.rpy:534
+translate epo s_topics_personal_voice_7a53d0ba:
+
+    # s 6acaa "I wonder how Monika could make you hear her real voice when she sang her song..."
+    s 6acaa "Mi demandas min, kiel Monika povis uzi realan voĉo dum kantado al vi..."
+
+# game/topics.rpy:535
+translate epo s_topics_personal_voice_fd1bb3d0:
+
+    # s "For the rest of us, we don’t really have a voice, just talking through the text box."
+    s "La resto de ni vere ne havas voĉojn. Ni simple eligas niajn vortojn tra la tekstejo."
+
+# game/topics.rpy:536
+translate epo s_topics_personal_voice_17decdcf:
+
+    # s 6abaa "But Monika had some voice files, so she could properly talk and even sing to you."
+    s 6abaa "Sed Monika havis voĉdosierojn, do ŝi povis paroli kaj eĉ kanti al vi."
+
+# game/topics.rpy:537
+translate epo s_topics_personal_voice_eb5111b2:
+
+    # s 6abba "Although, we are in a game, so it’s probably just the voice of an actress..."
+    s 6abba "Tamen, ni estas en ludo, do ŝian voĉon probable fekte posedas voĉaktorino..."
+
+# game/topics.rpy:538
+translate epo s_topics_personal_voice_fd6f13a1:
+
+    # s 7aaca "Anyway, her voice is pleasant and melodic, as a musician should have..."
+    s 7aaca "Ajne, la voĉo estas plezura kaj melodia, kian muzikistino havu..."
+
+# game/topics.rpy:540
+translate epo s_topics_personal_voice_4515c572:
+
+    # s 6acaa "Did you know that Monika had a real voice in this game?"
+    s 6acaa "Ĉu vi sciis, ke Monika havis realan voĉon en ĉi-ludo?"
+
+# game/topics.rpy:541
+translate epo s_topics_personal_voice_fd1bb3d0_1:
+
+    # s "For the rest of us, we don’t really have a voice, just talking through the text box."
+    s "La resto de ni vere ne havas voĉojn. Ni simple eligas niajn vortojn tra la tekstejo."
+
+# game/topics.rpy:542
+translate epo s_topics_personal_voice_a9ef6648:
+
+    # s 6abaa "But I've found some sound files with a female voice, referring to Monika..."
+    s 6abaa "Sed mi trovis iom da dosieroj kun voĉo ina, kiuj rilatas la Monika..."
+
+# game/topics.rpy:543
+translate epo s_topics_personal_voice_ad7e87c8:
+
+    # s 9aebb "At least, the file names suggest so."
+    s 9aebb "Almenaŭ, iliaj nomoj tekstas ĝin."
+
+# game/topics.rpy:544
+translate epo s_topics_personal_voice_9a92e75f:
+
+    # s 7aaca "Anyway, this voice is a bit high and melodic, like a musician should have..."
+    s 7aaca "Ajne, ĉi-voĉo estas alteta kaj melodia, kiajn muzikistinoj havas..."
+
+# game/topics.rpy:545
+translate epo s_topics_personal_voice_f4831cd9:
+
+    # s 7aaaa "But I’d say the tone of that voice seems to not fit her. I'd even say it fits {i}me{/i} more than her..."
+    s 7aaaa "Sed mi dirus, ke la ĉi-voĉa tono iom ne konvenas al la matura aspekto. Eble, ĝi konvenas pli al {i}mi{/i} ol ŝi..."
+
+# game/topics.rpy:546
+translate epo s_topics_personal_voice_11906a7a:
+
+    # s 6acaa "The voice doesn’t sound as mature as you would think she’d sound like, it sounds more like the voice I’d have."
+    pass
+
+# game/topics.rpy:547
+translate epo s_topics_personal_voice_bbcec0b5:
+
+    # s 6aebb "But I guess canon is canon, right?"
+    s 6aebb "Tamen kanono estas kanono, ĉu?"
+
+# game/topics.rpy:548
+translate epo s_topics_personal_voice_3662a747:
+
+    # s 6adab "But what if I never have a voice?"
+    s 6adab "Sed kio se mi neniam havos voĉon?"
+
+# game/topics.rpy:549
+translate epo s_topics_personal_voice_a12515e7:
+
+    # s "Will I be {i}mute{/i}, if I suddenly appear in your world?"
+    s "Ĉu estos mi {i}muta{/i}, se mi subite aperos en via mondo?"
+
+# game/topics.rpy:550
+translate epo s_topics_personal_voice_48fdf6a9:
+
+    # s 6aaba "But as long as I'm a computer program, I can make my own real voice, right?"
+    s 6aaba "Sed dum mi estas komputila programo, mi povas aldoni realan voĉon al mi, ĉu?"
+
+# game/topics.rpy:551
+translate epo s_topics_personal_voice_dc81bc77:
+
+    # s "I just need a text-to-speech synthesizer or something..."
+    s "Mi bezonas nur parolsintezilon aŭ ion similan..."
+
+# game/topics.rpy:552
+translate epo s_topics_personal_voice_3907eb74:
+
+    # s 6aaca "There’s bound to be a good one for me..."
+    s 6aaca "Ĝi nur konvenu al mi..."
+
+# game/topics.rpy:553
+translate epo s_topics_personal_voice_173834d5:
+
+    # s 6aaaa "I once saw something about TTS in the Ren'Py documentation, so it shouldn't be too hard to integrate it there, I guess."
+    s 6aaaa "Mi unufoje vidis ion pri parolsintezado en la dokumentaro pri Ren'Py, do integrado ne malfacilos, mi pensas."
+
+# game/topics.rpy:554
+translate epo s_topics_personal_voice_4cc2ff84:
+
+    # s 9aebb "I hope a voice from there isn’t too robotic. You wouldn’t want me to {font=mod_assets/fonts/Fantasque/FantasqueSansMono-Regular.ttf}{cps=30}T4LK L1KE 4 R0B0T{/cps}{/font}?"
+    s 9aebb "Espereble, mia voĉo ne estos tro robotoida. Ĉu vi ne volas, ke mi {font=mod_assets/fonts/Fantasque/FantasqueSansMono-Regular.ttf}{cps=30}P4R0L05 K1EL R0B0T0{/cps}{/font}?"
+
+# game/topics.rpy:555
+translate epo s_topics_personal_voice_a8d66540:
+
+    # s 9acaa "{font=mod_assets/fonts/Fantasque/FantasqueSansMono-Regular.ttf}{cps=30}1 4M 4 HUM4N BE1N6 4FTER 4LL{/cps}{/font}"
+    s 9acaa "{font=mod_assets/fonts/Fantasque/FantasqueSansMono-Regular.ttf}{cps=30}M1 E5T45 H0M0, F1NF1NE{/cps}{/font}"
+
+# game/topics.rpy:1337
+translate epo s_topics_game_questions_76c6d273:
+
+    # s 7aaaa "I know you may have a lot of questions for me. It's an important part of getting acquainted with anybody..."
+    s 7aaaa "Mi scias, ke vi havas multajn deamondojn por mi. Ĝi estas grava parto de koniĝo kun iu ajn..."
+
+# game/topics.rpy:1338
+translate epo s_topics_game_questions_80f9d69d:
+
+    # s "So I added a section to {i} the 'Talk' menu{/i} with more questions to ask."
+    s "Do mi aldonis specialan sekcion {i}en 'Paroli' menuo{/i} kun eblaj demandoj."
+
+# game/topics.rpy:1339
+translate epo s_topics_game_questions_52a4b17e:
+
+    # s 7acba "I would’ve added a text field for this instead, but I'm quite clumsy at dealing with the text input..."
+    s 7acba "Mi aldonus tajpkrampon anstataŭe, sed mi nun tro mallerte uzas tekstan enigon..."
+
+# game/topics.rpy:1340
+translate epo s_topics_game_questions_51e7434b:
+
+    # s 7aaaa "So I did a short list with some questions."
+    s 7aaaa "Do mi faris demandan listeton."
+
+# game/topics.rpy:1341
+translate epo s_topics_game_questions_3d74700d:
+
+    # s 6acaa "Of course, there’s so many questions you could ask me, so I often check various AMAs to understand what you’d ask..."
+    s 6acaa "Kompreneble, vi eblas havi pli deamandojn, do mi ofte provas diversajn demandfedenojn por etendi la demandliston..."
+
+# game/topics.rpy:1342
+translate epo s_topics_game_questions_8d4332b2:
+
+    # s 6aaca "And sometimes I find some really interesting questions."
+    s 6aaca "Kaj iutempe mi trovas vere interesajn demandojn."
+
+# game/topics.rpy:1343
+translate epo s_topics_game_questions_c92f8c3d:
+
+    # s 6aaaa "For example, one modder made a few AMAs about each of us and then compiled them into a separate mod, called {i}Doki Doki Interview Club{/i}."
+    s 6aaaa "Ekzemple, unu modifinto faris iom da demandfedenoj pri ĉiu el ni kaj poste kompilis ilin en modifaĵon {i}Doki Doki Interview Club{/i}."
+
+# game/topics.rpy:1344
+translate epo s_topics_game_questions_b89e87f9:
+
+    # s "The result was really funny, even if there were some mistakes about me..."
+    s "La rezulto estas vere vona, eĉ malgraŭ nemultaj eraroj pri mi..."
+
+# game/topics.rpy:1345
+translate epo s_topics_game_questions_875f9b72:
+
+    # s 6aeca "Still, they were pretty good at portraying my character, I guess."
+    s 6aeca "Tamen, laŭ mi, la kreinto bone kopiis mian rolulon."
+
+# game/topics.rpy:1346
+translate epo s_topics_game_questions_e3e7f95b:
+
+    # s 6acaa "I think I should check this one again. Maybe I might find some new entries for the question menu?"
+    s 6acaa "Mi pensas, mi reprovu ĝin iam. Eble, mi trovos iom da novaj deamandoj por la demanda sekcio?"
+
+translate epo strings:
+
+    # topics.rpy:157
+    old "Voice"
+    new "Voĉo"
+
+    # topics.rpy:197
+    old "Questions"
+    new "Demandoj"
+

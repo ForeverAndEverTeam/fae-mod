@@ -9649,3 +9649,203 @@ translate rus strings:
     old "Technologies"
     new "Технологии"
 
+# TODO: Translation updated at 2019-08-31 12:42
+
+# game/topics.rpy:534
+translate rus s_topics_personal_voice_7a53d0ba:
+
+    # s 6acaa "I wonder how Monika could make you hear her real voice when she sang her song..."
+    s 6acaa "Интересно, я как же Моника могла сделать свой голос реальным, когда пела тебе песенку?.."
+
+# game/topics.rpy:535
+translate rus s_topics_personal_voice_fd1bb3d0:
+
+    # s "For the rest of us, we don’t really have a voice, just talking through the text box."
+    s "А ведь мы все изначально говорили лишь через текстовый экран."
+
+# game/topics.rpy:536
+translate rus s_topics_personal_voice_17decdcf:
+
+    # s 6abaa "But Monika had some voice files, so she could properly talk and even sing to you."
+    s 6abaa "В прочем, в отличие от нас, у Моники всё же были свои голосвые файлы..."
+    s "Так что она всё же умела говорить по-настоящему и даже петь."
+
+# game/topics.rpy:537
+translate rus s_topics_personal_voice_eb5111b2:
+
+    # s 6abba "Although, we are in a game, so it’s probably just the voice of an actress..."
+    s 6abba "Но, раз уж мы в игре, этот голос на деле явно принадлежит какой-нибудь актриссе..."
+
+# game/topics.rpy:538
+translate rus s_topics_personal_voice_fd6f13a1:
+
+    # s 7aaca "Anyway, her voice is pleasant and melodic, as a musician should have..."
+    s 7aaca "Тем не менее, он довольно приятный и мелодичный, как у настоящей музыкантки..."
+
+# game/topics.rpy:540
+translate rus s_topics_personal_voice_4515c572:
+
+    # s 6acaa "Did you know that Monika had a real voice in this game?"
+    s 6acaa "А ты в курсе, у Моники в этой игре был реальный голос?"
+
+# game/topics.rpy:541
+translate rus s_topics_personal_voice_fd1bb3d0_1:
+
+    # s "For the rest of us, we don’t really have a voice, just talking through the text box."
+    s "А ведь мы все изначально говорили лишь через текстовый экран."
+
+# game/topics.rpy:542
+translate rus s_topics_personal_voice_a9ef6648:
+
+    # s 6abaa "But I've found some sound files with a female voice, referring to Monika..."
+    s 6abaa "Но я нашла пару звуковых файлов с женским голосом, которые относятся к Монике..."
+
+# game/topics.rpy:543
+translate rus s_topics_personal_voice_ad7e87c8:
+
+    # s 9aebb "At least, the file names suggest so."
+    s 9aebb "Ну, так, по крайней мере, гласит их название."
+
+# game/topics.rpy:544
+translate rus s_topics_personal_voice_9a92e75f:
+
+    # s 7aaca "Anyway, this voice is a bit high and melodic, like a musician should have..."
+    s 7aaca "В любом случаи, у неё довольно мелодичный голос, как у какой-нибудь музыкантки..."
+
+# game/topics.rpy:545
+translate rus s_topics_personal_voice_f4831cd9:
+
+    # s 7aaaa "But I’d say the tone of that voice seems to not fit her. I'd even say it fits {i}me{/i} more than her..."
+    s 7aaaa "Правда, не сказать, что ей такой тембер голоса подходит. Наверное, он бы даже больше подошёл бы {i}мне{/i}..."
+
+# game/topics.rpy:546
+translate rus s_topics_personal_voice_11906a7a:
+
+    # s 6acaa "The voice doesn’t sound as mature as you would think she’d sound like, it sounds more like the voice I’d have."
+    s 6acaa "У неё голос не такой зрелый, как мого бы показаться исходя их её внешности..."
+    s "Он быольше пожох на то, как бы говорила я."
+
+# game/topics.rpy:547
+translate rus s_topics_personal_voice_bbcec0b5:
+
+    # s 6aebb "But I guess canon is canon, right?"
+    s 6aebb "Но канон есть канон, верно?"
+
+# game/topics.rpy:548
+translate rus s_topics_personal_voice_3662a747:
+
+    # s 6adab "But what if I never have a voice?"
+    s 6adab "Но что если у меня никогда не было и не будет своего настоящего голоса?"
+
+# game/topics.rpy:549
+translate rus s_topics_personal_voice_a12515e7:
+
+    # s "Will I be {i}mute{/i}, if I suddenly appear in your world?"
+    s "Неужели я буду {i}немой{/i}, если вдруг я появлюсь в твоём мире?"
+
+# game/topics.rpy:550
+translate rus s_topics_personal_voice_48fdf6a9:
+
+    # s 6aaba "But as long as I'm a computer program, I can make my own real voice, right?"
+    s 6aaba "Однако, пока я язвляюсь всего лишь компьютерной программой, у меня есть шанс это исправить, верно?"
+
+# game/topics.rpy:551
+translate rus s_topics_personal_voice_dc81bc77:
+
+    # s "I just need a text-to-speech synthesizer or something..."
+    s "Достаточно просто раздобыть преобразователь текста в речь..."
+
+# game/topics.rpy:552
+translate rus s_topics_personal_voice_3907eb74:
+
+    # s 6aaca "There’s bound to be a good one for me..."
+    s 6aaca "Главное, чтобы он мне подходил..."
+
+# game/topics.rpy:553
+translate rus s_topics_personal_voice_173834d5:
+
+    # s 6aaaa "I once saw something about TTS in the Ren'Py documentation, so it shouldn't be too hard to integrate it there, I guess."
+    s 6aaaa "Я однажды видела что-то про такую технологию в документации к Ren'Py, так что проблем с интеграции, я думаю, быть не должно."
+
+# game/topics.rpy:554
+translate rus s_topics_personal_voice_4cc2ff84:
+
+    # s 9aebb "I hope a voice from there isn’t too robotic. You wouldn’t want me to {font=mod_assets/fonts/Fantasque/FantasqueSansMono-Regular.ttf}{cps=30}T4LK L1KE 4 R0B0T{/cps}{/font}?"
+    s 9aebb "Надеюсь, мой голос не будет слишком «металлическим». Ты же не хочешь, {font=mod_assets/fonts/Fantasque/FantasqueSansMono-Regular.ttf}{cps=30}4Т06Ы Я Р43ГО84РИ84ЛА К4К Р060Т{/cps}{/font}?"
+
+# game/topics.rpy:555
+translate rus s_topics_personal_voice_a8d66540:
+
+    # s 9acaa "{font=mod_assets/fonts/Fantasque/FantasqueSansMono-Regular.ttf}{cps=30}1 4M 4 HUM4N BE1N6 4FTER 4LL{/cps}{/font}"
+    s 9acaa "{font=mod_assets/fonts/Fantasque/FantasqueSansMono-Regular.ttf}{cps=30}Я ЖЕ 4ЕЛ08ЕК, В К0НЦЕ К0НЦ08{/cps}{/font}"
+
+# game/topics.rpy:1337
+translate rus s_topics_game_questions_76c6d273:
+
+    # s 7aaaa "I know you may have a lot of questions for me. It's an important part of getting acquainted with anybody..."
+    s 7aaaa "Я знаю, ко мне у тебя много вопросов, ведь это важная часть знакомства с кем-либо..."
+
+# game/topics.rpy:1338
+translate rus s_topics_game_questions_80f9d69d:
+
+    # s "So I added a section to {i} the 'Talk' menu{/i} with more questions to ask."
+    s "Поэтому я и добавила секцию {i}в меню разговоров{/i} со всеми возможными вопросами."
+
+# game/topics.rpy:1339
+translate rus s_topics_game_questions_52a4b17e:
+
+    # s 7acba "I would’ve added a text field for this instead, but I'm quite clumsy at dealing with the text input..."
+    s 7acba "Я бы, может, и добавила бы для этого текстовое поле, но у меня пока не очень хорошо ладится с текстовым вводом..."
+
+# game/topics.rpy:1340
+translate rus s_topics_game_questions_51e7434b:
+
+    # s 7aaaa "So I did a short list with some questions."
+    s 7aaaa "Так что я просто сделала список вопросов."
+
+# game/topics.rpy:1341
+translate rus s_topics_game_questions_3d74700d:
+
+    # s 6acaa "Of course, there’s so many questions you could ask me, so I often check various AMAs to understand what you’d ask..."
+    s 6acaa "И для пополнения этого банка я часто проверяю всяческие AMA..."
+
+# game/topics.rpy:1342
+translate rus s_topics_game_questions_8d4332b2:
+
+    # s 6aaca "And sometimes I find some really interesting questions."
+    s 6aaca "И иногда там встречаются очень интересные вопросы."
+
+# game/topics.rpy:1343
+translate rus s_topics_game_questions_c92f8c3d:
+
+    # s 6aaaa "For example, one modder made a few AMAs about each of us and then compiled them into a separate mod, called {i}Doki Doki Interview Club{/i}."
+    s 6aaaa "К примеру, один моддер организовал сразу несколько AMA по каждой из нас и объеденил все ответы в моде под названием {i}Doki Doki Interview Club{/i}."
+
+# game/topics.rpy:1344
+translate rus s_topics_game_questions_b89e87f9:
+
+    # s "The result was really funny, even if there were some mistakes about me..."
+    s "Получилось неплохо, хоть и с некотрыми ошибками насчёт фактов обо мне..."
+
+# game/topics.rpy:1345
+translate rus s_topics_game_questions_875f9b72:
+
+    # s 6aeca "Still, they were pretty good at portraying my character, I guess."
+    s 6aeca "Однако, по мне так автор всё же неплохо передал мой образ."
+
+# game/topics.rpy:1346
+translate rus s_topics_game_questions_e3e7f95b:
+
+    # s 6acaa "I think I should check this one again. Maybe I might find some new entries for the question menu?"
+    s 6acaa "Думаю, мне надо пересмотреть прохождения этого мода. Может, откапаю там пару интересных вопросов?"
+
+translate rus strings:
+
+    # topics.rpy:157
+    old "Voice"
+    new "Голос"
+
+    # topics.rpy:197
+    old "Questions"
+    new "Вопросы"
+
