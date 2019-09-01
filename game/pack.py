@@ -7,11 +7,12 @@ new_dir = re.split('[/\\\\]', sys.argv[0])
 new_dir = "/".join(new_dir[:-1])
 os.chdir(new_dir)
 
-def read_info(f, pattern)
+def read_info(f, pattern):
     return re.search(pattern, f.read()).groups()
 
 with open("./options.rpy", "r") as f:
     archive_name = read_info(f, "define config.version = \"(.+)\"")[0] #Name the archive with the version's name
+    print("The release will be packed into %s.zip" % archive_name)
 
 pack_krom = ( #Filename patterns, skipped by the script
     '.*\.rpa$',
@@ -42,6 +43,7 @@ pack_external = (
 pack_krom = tuple(re.compile(x) for x in pack_krom)
 
 arc = zipfile.ZipFile(archive_name + ".zip", "w", zipfile.ZIP_DEFLATED)
+print("Archive openned!")
 
 def wrong_name(fn):
     return any(x.match(fn) for x in pack_krom)
@@ -66,5 +68,7 @@ print('Packing the root folder...')
 for f in pack_external:
     arc.write("../" + f, f)
     print(f)
-
+print("Closing the archive...")
 arc.close()
+
+print("Release sucessfully packed!")
