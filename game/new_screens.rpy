@@ -140,30 +140,30 @@ screen topic_ui(ss, cat = 0): #0 = questions, 1 = repeat, 2= feelings, 3 = poetr
             textbutton _("Back") action [Hide("topic_ui"), Jump("s_talkmenu")]
         else:
             if cat == 0:
-                for i in subscreen[7 * page: 7 * page + 7]:
+                for i in (subscreen[7 * page: 7 * page + 7] if len(subscreen.topics) > 8 else subscreen.topics):
                     textbutton i.name xpadding 10 action [Function(subscreen, i)] text_italic not i.seen
             elif cat == 1:
                 $topic_list = subscreen.topics if config.developer else subscreen.seen_list
-                for i in topic_list[7 * page: 7 * page + 7]:
+                for i in (topic_list[7 * page: 7 * page + 7] if len(topic_list) > 8 else topic_list):
                     if i.show_prompt:
                         textbutton i.name xpadding 10 text_italic not i.seen action [Function(subscreen, i)]
             elif cat == 3:
                 $lc = cur_lang().code or 'eng'
                 $topic_list = subscreen.topics if config.developer else subscreen.seen_list
-                for i in topic_list[7 * page: 7 * page + 7]:
+                for i in (topic_list[7 * page: 7 * page + 7] if len(topic_list) > 8 else topic_list):
                     textbutton (i.poem.title.get(lc) or i.poem.title['eng']) text_italic not i.seen xpadding 10 action [Function(subscreen, i)]
             
         hbox:
             spacing 324
             
             if type(subscreen) != int:
-                $list_len = len(subscreen.topics) if cat == 0 or config.developer else subscreen.seen_len
+                $list_len = len(filter(lambda x: x.show_prompt, subscreen.topics)) if cat == 0 or config.developer else subscreen.seen_len
                 #label str(list_len)
                 if page > 0:
                     textbutton ("<") xpadding 0 xsize 48 keysym 'K_LEFT' action SetScreenVariable("page", page-1) #Previous Page
                 else:
                     null width 48
-                if page < list_len // 7:
+                if list_len > 8 and page < list_len // 7:
                     textbutton (">") xpadding 0 xsize 48 keysym 'K_RIGHT' action SetScreenVariable("page", page+1) #Next Page
         if type(subscreen) != int and cat < 3:
             textbutton _("Back") action [SetScreenVariable("subscreen", cat), SetScreenVariable("page", 0)]
