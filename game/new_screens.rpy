@@ -141,17 +141,17 @@ screen topic_ui(ss, cat = 0): #0 = questions, 1 = repeat, 2= feelings, 3 = poetr
         else:
             if cat == 0:
                 for i in (subscreen[7 * page: 7 * page + 7] if len(subscreen.topics) > 8 else subscreen.topics):
-                    textbutton i.name xpadding 10 action [Function(subscreen, i)] text_italic not i.seen
+                    textbutton i.name xpadding 10 action [Function(subscreen, i), Return()] text_italic not i.seen
             elif cat == 1:
                 $topic_list = subscreen.topics if config.developer else subscreen.seen_list
                 for i in (topic_list[7 * page: 7 * page + 7] if len(topic_list) > 8 else topic_list):
                     if i.show_prompt:
-                        textbutton i.name xpadding 10 text_italic not i.seen action [Function(subscreen, i)]
+                        textbutton i.name xpadding 10 text_italic not i.seen action [Function(subscreen, i), Return()]
             elif cat == 3:
                 $lc = cur_lang().code or 'eng'
                 $topic_list = subscreen.topics if config.developer else subscreen.seen_list
                 for i in (topic_list[7 * page: 7 * page + 7] if len(topic_list) > 8 else topic_list):
-                    textbutton (i.poem.title.get(lc) or i.poem.title['eng']) text_italic not i.seen xpadding 10 action [Function(subscreen, i)]
+                    textbutton (i.poem.title.get(lc) or i.poem.title['eng']) text_italic not i.seen xpadding 10 action [Function(subscreen, i), Return()]
             
         hbox:
             spacing 324

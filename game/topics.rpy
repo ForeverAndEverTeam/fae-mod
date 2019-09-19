@@ -58,7 +58,7 @@ init -5 python:
             self.seen = True
             for i in self.related:
                 i.seen = True
-            renpy.return_statement()
+            #renpy.return_statement()
             
         
     class TopicCategory:
@@ -110,14 +110,16 @@ init -5 python:
             
             return self.seen, self.all_seen
         
-        def __call__(self, topic = None, *args, **kwargs):
+        def __call__(self, topic = "random", *args, **kwargs):
             if type(topic) == Topic:
                 topic(*args, **kwargs)
-            elif topic is None:
+            elif topic == "random_all":
+                renpy.random.choice(self.topics)()
+            elif topic == "random":
                 def cond(x):
                     sl = len(persistent.seen_topics)
                     return not (x.seen or x.available is False or x.available > sl)
-                renpy.random.choice(filter(cond(x), self.topics))()
+                renpy.random.choice(filter(cond, self.topics))()
             else:
                 self.topics[topic](*args, **kwargs)
             self.update_seen()
@@ -240,15 +242,12 @@ init -5 python:
         global RANDOM_TOPICS_LIMIT
         
         if random_topics_banned:
-            return None
+            return None #Stop performing
         
-        topics = []
-        for i in topic_cats:
-            for j in i:
-                if not (skip_seen and j.seen):
-                    topics.append(j)
-        if len(topics) > 0:
-            renpy.random.choice(topics)()
+        tc = filter(lambda x: not x.all_seen, topic_cats)
+        if len(tc):
+            renpy.random.choice(tc)()
+        
         try:
             random_topics_said += 1
         except:
