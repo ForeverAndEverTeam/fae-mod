@@ -86,7 +86,7 @@ translate es s_intro_1_bb67b8f9:
 translate es s_intro_1_d03d3452:
 
     # s "But it almost feels like he isn't really here, like there's someone else inside him."
-    s "Pero es como si no estuviera aquí, como si hubiera alguien dentro de él."
+    s Pero es como si no estuviera aquí, como si hubiera alguien dentro de él."
 
 # game/intro.rpy:51
 translate es s_intro_1_f035af53:
