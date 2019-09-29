@@ -1,22 +1,22 @@
 
 translate es strings:
 
-    # langs.rpy:18
+# langs.rpy:14
     old "English"
     new "Inglés"
 
-    # langs.rpy:19
+    # langs.rpy:15
     old "Russian"
     new "Ruso"
 
-# TODO: Translation updated at 2018-08-31 12:04
-
-translate es strings:
-
-    # langs.rpy:20
+    # langs.rpy:16
     old "Esperanto"
     new "Esperanto"
 
-(For Spanish)
-	old "Spanish"
-	new "Español"
+    # langs.rpy:17
+    old "Spanish"
+    new "Español"
+
+    # langs.rpy:18
+    old "Toki Pona"
+    new "Toki Pona"
