@@ -155,24 +155,42 @@ translate es s_greeting_3_rus_ece49d6d:
     s 6aeca "Я рада, что ты здесь.{#And this one too}"
 
 # game/greetings.rpy:178
-translate eto s_greeting_3_es_a3831bf2:
+translate eto s_greeting_3_epo_a3831bf2:
 
 
     # s "Saluton, mia karulo!{#Don't translate this string from Esperanto!}"
     s "Saluton, mia karulo!{#Don't translate this string from Esperanto!}"
 
 # game/greetings.rpy:179
-translate eto s_greeting_3_es_53ab129e:
+translate eto s_greeting_3_epo_53ab129e:
 
     # s 6aeca "Kia ĝojo revidi vin!{#And this one too}"
     s 6aeca "Kia ĝojo revidi vin!{#And this one too}"
 
-(Lines for spanish:)
+
+# game/greetings.rpy:187
+translate es s_greeting_4_es_20ee8230:
+
     # s "¡Hola Cariño!{#Don't translate this string from Spanish!}"
     s "¡Hola Cariño!{#Don't translate this string from Spanish!}"
 
+# game/greetings.rpy:188
+translate es s_greeting_4_es_53f23577:
+
     # s 6aeca "¡Qué alegría verte de nuevo!{#And this one too}"
     s 6aeca "¡Qué alegría verte de nuevo!{#And this one too}"
+
+# game/greetings.rpy:191
+translate es s_greeting_4_tok_2a895147:
+
+    # s "sina pona o toki!{#Don't translate this string from Toki Pona!}"
+    s "sina pona o toki!{#Don't translate this string from Toki Pona!}"
+
+# game/greetings.rpy:192
+translate es s_greeting_4_tok_fc8235f0:
+
+    # s 6aeca "sina lon ni la mi pilin pona!{#And this one too}"
+    s 6aeca "sina lon ni la mi pilin pona!{#And this one too}"
 
 # game/greetings.rpy:184
 translate es s_greeting_4_a82bd671:
