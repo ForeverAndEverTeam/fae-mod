@@ -18,3 +18,15 @@ translate epo strings:
     old "Esperanto"
     new "Esperanto"
 
+# TODO: Translation updated at 2019-09-15 20:40
+
+translate epo strings:
+
+    # langs.rpy:17
+    old "Spanish"
+    new "Hispana"
+
+    # langs.rpy:18
+    old "Toki Pona"
+    new "Tokipono"
+

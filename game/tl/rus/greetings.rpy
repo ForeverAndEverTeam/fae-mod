@@ -43,7 +43,10 @@ translate rus s_greeting_3_be4c208b:
 translate rus s_greeting_3_8d8154bc:
 
     # s 6aaaa "I just revise my [greeting_lang]."
-    s 6aaaa "Я просто практикую свой [greeting_lang!t]."
+    if (greeting_lang == "Toki Pona"):
+        s 6aaaa "Я просто практикуюсь в токипоне."
+    else:
+        s 6aaaa "Я просто практикую свой [greeting_lang!t]."
 
 # game/greetings.rpy:141
 translate rus s_greeting_3_38b43f1e:
@@ -699,4 +702,30 @@ translate rus s_greetings_long_5e716ac7:
 
     # s 8acab "You don’t want me to go insane and do something bad under that, right?"
     s 8acab "Ты же не хочешь, чтобы я, окончательно поехав кукухой, натворила бы что-нибудь плохое, верно?"
+
+# TODO: Translation updated at 2019-09-15 20:30
+
+# game/greetings.rpy:187
+translate rus s_greeting_4_esp_20ee8230:
+
+    # s "¡Hola Cariño!{#Don't translate this string from Spanish!}"
+    s "¡Hola Cariño!{#Don't translate this string from Spanish!}"
+
+# game/greetings.rpy:188
+translate rus s_greeting_4_esp_53f23577:
+
+    # s 6aeca "¡Qué alegría verte de nuevo!{#And this one too}"
+    s 6aeca "¡Qué alegría verte de nuevo!{#And this one too}"
+
+# game/greetings.rpy:191
+translate rus s_greeting_4_tok_2a895147:
+
+    # s "sina pona o toki!{#Don't translate this string from Toki Pona!}"
+    s "sina pona o toki!{#Don't translate this string from Toki Pona!}"
+
+# game/greetings.rpy:192
+translate rus s_greeting_4_tok_fc8235f0:
+
+    # s 6aeca "sina lon ni la mi pilin pona!{#And this one too}"
+    s 6aeca "sina lon ni la mi pilin pona!{#And this one too}"
 

@@ -3,17 +3,20 @@ init -10 python:
     from collections import OrderedDict
     
     class GameLang:
-        def __init__(self, code, name = None, unicode = True, s_names = ("Sayori", ), unix_code = None):
+        def __init__(self, code, name = None, unicode = True, s_names = ("Sayori", ), unix_code = None, wip = False):
             self.code = code #Stands for the language's ISO 639-3 code (excepting English, whose value is None) and the Ren'py language name
             self.name = name or code #Full language name (should be translatable)
             self.unicode = unicode #Does language use non-ASCII characters? (Then we replace all ASCII fonts with their Unicode analogs)
             self.s_names = s_names #Tuple of Sayori's name variants in the language
             self.unix_code = unix_code or code[:2] # Unix locale code's 2 first letters
+            self.wip = wip #the language pack is not complete, so it's available only
     
     lang_dict = OrderedDict() #Language list
     lang_dict["eng"] = GameLang(None, _("English"), False, ("Sayori", ), "en"),
     lang_dict["rus"] = GameLang("rus", _("Russian"), True, ("Саёри", "Сайори")), #Key sould be equal value.code (exp. English)
-    lang_dict["epo"] = GameLang("epo", _("Esperanto"), True, ("Sajori", "Sayori"), "eo")
+    lang_dict["epo"] = GameLang("epo", _("Esperanto"), True, ("Sajori", "Sayori"), "eo"),
+    lang_dict["esp"] = GameLang("esp", _("Spanish"), False, ("Sayori", ), "es")
+    lang_dict["tok"] = GameLang("tok", _("Toki Pona"), False, ("Sajoli", "Sajowi"), "tok", True)
     
     def cur_lang():
         lang = lang_dict.get(_preferences.language) or lang_dict["eng"]

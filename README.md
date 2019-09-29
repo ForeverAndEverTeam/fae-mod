@@ -28,8 +28,9 @@ Lucian Pavel (Santa hat original model, excluded from the stable versions)
 AlexanDDOS  
   
 **Translations:**  
-AlexanDDOS (Russian & Esperanto)  
+AlexanDDOS (Russian, Esperanto & Toki Pona)  
 [Vova Petelin](https://vk.com/toxin_666) (Russian)  
+ElReyZero1201 (Spanish)  
   
 **SFX:**  
 Pipe98x (drawing cross)  

@@ -975,8 +975,9 @@ screen preferences():
                     for i in lang_dict.values():
                         python:
                             if type(i) == tuple:
-                                i = i[0]
-                        textbutton i.name sensitive Language(i.code) action [Language(i.code), Function(renpy.call_in_new_context, "change_s_name", i.s_names[0])]
+                                i = i[0] #Fix for a Ren'Py type bug
+                        if not i.wip or config.developer:
+                            textbutton i.name sensitive Language(i.code) action [Language(i.code), Function(renpy.call_in_new_context, "change_s_name", i.s_names[0])]
                 
                 $ s_names = get_s_names(_preferences.language)
                 if len(s_names) > 1:
