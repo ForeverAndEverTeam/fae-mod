@@ -151,8 +151,8 @@ translate es strings:
 
     # mg_bnc.rpy:55
     old "{color=#00cc00}Bulls: [bnc.bulls]{/color}"
-    new "{color=#00cc00}Virbovoj: [bnc.bulls]{/color}"
+    new "{color=#00cc00}Toros: [bnc.bulls]{/color}"
 
     # mg_bnc.rpy:56
     old "{color=#ffff00}Cows: [bnc.cows]{/color}"
-    new "{color=#ffff00}Bovinoj: [bnc.cows]{/color}"
+    new "{color=#ffff00}Vacas: [bnc.cows]{/color}"
