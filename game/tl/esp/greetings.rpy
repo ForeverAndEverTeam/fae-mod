@@ -214,7 +214,7 @@ translate esp s_greeting_4_cfc9418c:
 translate esp s_greeting_4_baf50106:
 
     # s "At least, if you don't have it, you'll tell me, won't you?"
-    s "Al menos, si no lo tuvieras, me lo dirías ¿Verdad?"
+    s "Al menos, si no lo hubieras hecho, me lo dirías ¿Verdad?"
 
 # game/greetings.rpy:192
 translate esp s_greeting_5_be9c6b66:
