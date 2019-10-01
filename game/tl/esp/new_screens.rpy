@@ -19,7 +19,7 @@ translate esp strings:
 
     # new_screens.rpy:109
     old "I feel..."
-    new "Yo siento..."
+    new "Me siento..."
 
     # new_screens.rpy:110
     old "Say goodbye"
@@ -27,7 +27,7 @@ translate esp strings:
 
     # new_screens.rpy:111
     old "Change information"
-    new "Cambiar Información"
+    new "Cambiar información"
 
     # new_screens.rpy:114
     old "Close"

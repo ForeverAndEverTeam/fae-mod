@@ -3571,7 +3571,7 @@ translate esp strings:
 
     # topics.rpy:163
     old "Bored"
-    new "Aburrida"
+    new "Aburrido"
 
     # topics.rpy:163
     old "Tired"
@@ -3579,11 +3579,11 @@ translate esp strings:
 
     # topics.rpy:163
     old "Angry"
-    new "Enojada"
+    new "Enojado"
 
     # topics.rpy:163
     old "Lonely"
-    new "Solitaria"
+    new "Solitario"
 
     # topics.rpy:739
     old "Natsuki"
@@ -5352,7 +5352,7 @@ translate esp s_topics_game_parents_a2cd5d9a:
 translate esp s_topics_game_parents_bc2ea261:
 
     # s "But I think they were either busy or very irresponsible."
-    s "Yo creo que estaban muy ocupados, o simplemente demasiado irresponsables."
+    s "Yo creo que estaban muy ocupados, o simplemente eran demasiado irresponsables."
 
 # game/topics.rpy:901
 translate esp s_topics_game_parents_3ebf6220:
@@ -5448,7 +5448,7 @@ translate esp s_topics_game_parents_87707535:
 translate esp s_topics_game_parents_90a70166:
 
     # s "It makes me think of her in another light, even if we aren’t really sisters."
-    s "Me hace pensar de ella bajo otra perspectiva, aunque no seamos realmente hermanas."
+    s "Me hace pensar en ella bajo otra perspectiva, aunque no seamos realmente hermanas."
 
 # game/topics.rpy:918
 translate esp s_topics_game_parents_e13f4633:
@@ -5466,7 +5466,7 @@ translate esp s_topics_game_parents_09ea9447:
 translate esp s_topics_game_parents_37f04913:
 
     # s 6acaa "Would a good sister use her siblings’ issues for her own benefit?"
-    s 6acaa "¿Acaso una buena hermana usaría los problemas de sus hermanas para su propio beneficio??"
+    s 6acaa "¿Acaso una buena hermana usaría los problemas de sus hermanas para su propio beneficio?"
 
 # game/topics.rpy:922
 translate esp s_topics_game_parents_da9e6d5e:
