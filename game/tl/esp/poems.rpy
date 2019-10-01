@@ -398,7 +398,7 @@ translate esp s_poems_angel_d9ced629:
 translate esp s_poems_angel_73f51f03:
 
     # s "But she set everything on fire, even despite of she actually never wanted to do it."
-    s "Pero le prednió fuego a todo, incluso a pesar de que nunca quiso hacerlo."
+    s "Pero le prendió fuego a todo, incluso a pesar de que nunca quiso hacerlo."
 
 # game/poems.rpy:910
 translate esp s_poems_angel_4c2fa913:
