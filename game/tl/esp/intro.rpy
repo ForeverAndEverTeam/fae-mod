@@ -536,7 +536,7 @@ translate esp s_intro_1_clear_0992ea31:
 translate esp s_intro_1_clear_46558689:
 
     # s "Monika didn’t really have a choice except to delete all the game scripts to stop me."
-    s "Monika no tuvo más remedio que borrar todos los guiones del jueego para detenerme."
+    s "Monika no tuvo más remedio que borrar todos los guiones del juego para detenerme."
 
 # game/intro.rpy:219
 translate esp s_intro_1_clear_6126be48:
