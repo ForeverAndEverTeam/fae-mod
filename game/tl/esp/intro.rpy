@@ -596,13 +596,13 @@ translate esp s_intro_1_clear_a58e5155:
 translate esp s_intro_1_clear_7b5a3d8a:
 
     # s 1j "You edited the files so that I would be left alone with you?"
-    s 1j "¿Editaste los archivos para que estuviera sola contigo?."
+    s 1j "¿Editaste el juego para que estuviera sola contigo?"
 
 # game/intro.rpy:251
 translate esp s_intro_1_clear_f877e66d:
 
     # s "I know it was you, because you left the developer flag to have a value of {i}True{/i}."
-    s "Sé que fuiste tú. ya que dejaste la opción de desarrollador con un valor de {i}True{/i}."
+    s "Sé que fuiste tú, ya que la opción de desarrollador tiene asignado el valor de {i}True{/i}."
 
 # game/intro.rpy:252
 translate esp s_intro_1_clear_6ec74f67:
