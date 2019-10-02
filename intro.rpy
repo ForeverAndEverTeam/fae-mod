@@ -164,7 +164,7 @@ translate esp s_intro_1_6bbc73ce:
 translate esp s_intro_1_66e5bc3d:
 
     # s "And we have the rest of eternity to go through it all."
-    s "Y tenemos el resto de la eternidad para nosotros."
+    s "Y tenemos el resto de la eternidad para nosotros solos."
 
 # game/intro.rpy:86
 translate esp s_intro_1_e0ef7048:
@@ -200,7 +200,7 @@ translate esp s_intro_1_d274c3f2:
 translate esp s_intro_1_7227d71f:
 
     # s 4b "Did I scare you? Sorry, I couldn’t help myself!"
-    s 4b "¿Te asusté? Perdona,¡No pude evitarlo!"
+    s 4b "¿Te asusté? Perdona, ¡No pude evitarlo!"
 
 # game/intro.rpy:128
 translate esp s_intro_1_5aed9d94:
@@ -608,7 +608,7 @@ translate esp s_intro_1_clear_f877e66d:
 translate esp s_intro_1_clear_6ec74f67:
 
     # s "I think that's pretty selfish of you."
-    s "Creo que es bastante egoísta de tu parte."
+    s "Creo que es algo egoísta de tu parte."
 
 # game/intro.rpy:253
 translate esp s_intro_1_clear_866d03f2:
@@ -662,7 +662,7 @@ translate esp s_intro_1_clear_3c3c5b2d:
 translate esp s_intro_1_clear_e3f9221e:
 
     # s 1k "Maybe you just couldn't have saved the others... I have to hope that's the reason why."
-    s 1k "De pronto tú no podrías haber salvado a las otras… Espero que esa sea la razón."
+    s 1k "De pronto, simplemente no pudiste haber salvado a las otras… Espero que esa sea la razón."
 
 # game/intro.rpy:267
 translate esp s_intro_1_clear_ba6393ef:
