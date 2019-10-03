@@ -542,7 +542,7 @@ Is it not what you want to do with me after all?"""
     
     poem_angel.title['rus'] = "Падший ангел"
     poem_angel.title['epo'] = "Falinta Angelo"
-    poem_angel.little['esp'] = "Ángel Caído"
+    poem_angel.title['esp'] = "Ángel Caído"
     
     poem_angel.text['rus'] = """\
 Прости меня за грех ты мой.
@@ -674,7 +674,7 @@ Like I can be more than just a half-dead leaf."""
     
     poem_leaf.title['rus'] = "Листок"
     poem_leaf.title['epo'] = "Foliaĉo"
-    poem.leaf.title['esp'] ="Una Hoja"
+    poem_leaf.title['esp'] ="Una Hoja"
 
     poem_leaf.text['rus'] = """\
 Я лишь листок, что на ветру,
