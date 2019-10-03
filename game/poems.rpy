@@ -80,6 +80,7 @@ I want breakfast."""
     
     poem_sunshine.title["rus"] = "Дорогой рассвет"
     poem_sunshine.title["epo"] = "Kara Sunlum'"
+    poem_sunshine.title["esp"] = "Querida luz del sol"
     
     poem_sunshine.text["rus"] = """\
 Лучами бьёшься ты сквозь веки,
@@ -112,6 +113,22 @@ Se vi ne estus nun, do mi dum ĉiam dormus.
 Sed ne, ne estas mi freneza. 
 
 Mi nur ankoraŭ ne matenmanĝis."""
+
+    poem_sunshine.text["esp"] = """\
+La forma en que brillas a través de mis persianas por la mañana
+Me hace sentir como si me extrañaras.
+Besando mi frente para ayudarme a levantarme de la cama.
+Haciéndome frotar el sueño de mis ojos.
+
+¿Me estás pidiendo que salga a jugar?
+¿Confías en mí para desear que pase un día lluvioso?
+Miro hacia arriba. El cielo es azul.
+Es un secreto, pero yo también confío en ti.
+
+Si no fuera por ti, podría dormir para siempre.
+Pero no estoy enfadada.
+
+Tengo hambre, quiero desayunar. """
 
 #Bottles
     poem_bottles = Poem(
@@ -160,6 +177,7 @@ Inside my head."""
 
     poem_bottles.title['rus'] = "Склянки"
     poem_bottles.title['epo'] = "Boteloj"
+    poem_bottles.title['esp'] = "Botellas"
 
     poem_bottles.text['rus'] = """\
 Я открываю мозг как банку.
@@ -244,6 +262,47 @@ Kiuj ne ridas, sed ne povas mi plu.
 L\' amikoj ilin al mi forte postulas.
 Sed la postuloj aŭskultiĝas nur eĥe."""
 
+    poem_bottles.text['esp'] = """\
+Me quito el cabello como si fuera la tapa de un tarro de galletas.
+Es el lugar secreto donde guardo todos mis sueños.
+Pequeñas bolas de sol, todas frotándose como un montón de gatitos.
+Alcanzo el interior con el pulgar y el índice, y saco una.
+Está caliente y hace cosquillas.
+¡Pero no hay tiempo que perder! 
+Lo puse en una botella para mantenerlo a salvo.
+Y puse la botella en el estante con todas las demás.
+Pensamientos felices, pensamientos felices, pensamientos felices en botellas, todos en una fila.
+
+Mi colección me hace muchos amigos.
+Cada botella es una luz de estrella para repararlo.
+A veces mi amigo se siente de cierta manera.
+Baja una botella para salvar el día.
+
+Noche tras noche, más sueños.
+Amigo tras amigo, más botellas.
+Cada vez más y más profundos van mis dedos.
+Como explorar una cueva oscura y descubrir los secretos que se esconden en cada rincón.
+Cavando y cavando.
+Raspando y raspando.
+
+Quito el polvo de las tapas de mis botellas.
+No parece que haya pasado el tiempo.
+A mi estante vacío le vendría bien un poco más.
+Mis amigos miran a través de mi puerta cerrada con llave.
+
+Finalmente, todo listo. La abro, y vienen mis amigos.
+Entran, con tanta prisa. ¿Tanto quieren mis botellas?
+Las saco frenéticamente de la estantería, una tras otra.
+Llevándoselas a todos y cada uno de mis amigos.
+Todas y cada una de las botellas.
+Pero cada vez que suelto una, se rompe contra el piso entre mis pies.
+Pensamientos felices, pensamientos felices, pensamientos felices en pedazos, por todo el suelo.
+
+Se suponía que eran para mis amigos, mis amigos que no sonríen.
+Todos están gritando, suplicando. Algo.
+Pero todo lo que oigo es eco, eco, eco, eco, eco, eco.
+Dentro de mi cabeza."""
+
 #The Last Flower (name by AlexanDDOS)
     poem_flower = Poem(author = "sayori", title = "The Last Flower")
     poem_flower.text['eng'] = """\
@@ -259,8 +318,10 @@ Is but a barren wasteland!"""
 
     poem_flower.title['rus'] = "Последний цветок"
     poem_flower.title['epo'] = "Resta Floro"
-    
-    poem_flower.text['epo'] = """\Inter miaj gamboj
+    poem_flower.title['esp'] = "La Última Flor"
+
+    poem_flower.text['epo'] = """\
+Inter miaj gamboj
 La resta floro estas kaj min loĝas.
 Mi kaptas ĝian tigon kaj de l' radik' ĝin liberigas,
 Kaj la lastan gajijan momenton mi per miaj fingroj karesas.
@@ -281,6 +342,17 @@ Kiu estas dezerta kaj jam ankaŭ malviva."""
 Мне видно лишь пустое выжженное поле,
 Которым мне только со слезами любоваться."""
     
+    poem_flower.text['esp'] = """\
+Entre mis pies
+La última flor que queda me llama.
+Tomo el tallo, liberándolo de sus raíces
+Acariciando el último momento alegre entre mis dedos.
+
+Pero, ¿a qué fines he convocado esta alegría?
+Por ahora, cuando miro en todas las direcciones.
+El campo una vez próspero ante mí
+¡No es más que un desierto inhóspito!"""
+
 #Get Out of My Head (aka %)
     poem_last = Poem(
     author = "sayori",
@@ -327,7 +399,21 @@ Bonvolu foriĝi el mia cerbaĉo ĝis mi montros al vi, kiel amas mi vin.
 Bonvolu foriĝi el mia cerbaĉo ĝis mi finos ĉi tiun aĉan versaĵon.\n\n\n\n\n\n\n
 Sed ĝi fakte neniam finiĝos.
 Ĝi nur haltos kun mi por eterne baldaŭ.'''
-    
+
+    poem_last.text['esp'] = '''\
+Sal de mi cabeza. Sal de mi cabeza. Sal de mi cabeza. Sal de mi cabeza. Sal de mi cabeza. Sal de mi cabeza. Sal de mi cabeza. Sal de mi cabeza. Sal de mi cabeza. Sal de mi cabeza. Sal de mi cabeza. Sal de mi cabeza. Sal de mi cabeza. Sal de mi cabeza. Sal de mi cabeza. Sal de mi cabeza. Sal de mi cabeza. Sal de mi cabeza. Sal de mi cabeza. Sal de mi cabeza. Sal de mi cabeza. Sal de mi cabeza. Sal de mi cabeza. Sal de mi cabeza. Sal de mi cabeza. Sal de mi cabeza. Sal de mi cabeza. Sal de mi cabeza. Sal de mi cabeza. Sal de mi cabeza. Sal de mi cabeza. Sal de mi cabeza. Sal de mi cabeza. Sal de mi cabeza. Sal de mi cabeza. Sal de mi cabeza. Sal de mi cabeza. Sal de mi cabeza. Sal de mi cabeza. Salir de
+Sal.
+De.
+Mi.
+Cabeza.\n\n\n
+Sal de mi cabeza antes de que haga lo que sé es mejor para ti.
+Sal de mi cabeza antes de que escuche todo lo que ella me dijo.
+Sal de mi cabeza antes de que te muestre cuánto te amo.
+Sal de mi cabeza antes de que termine de escribir este poema.\n\n\n\n\n\n\n
+Pero el poema nunca fue terminado.
+Solo se deja de mover.'''
+
+
 #Fruits of the life (by AlexanDDOS)
     poem_fruits = Poem(
         author = "sayori",
@@ -356,6 +442,7 @@ To find a way to make others feel the fruits the same.'''
 
     poem_fruits.title["rus"] = "Плоды древа жизни"
     poem_fruits.title["epo"] = "Vivarbaj Fruktoj"
+    poem_fruits.title["esp"] = "Frutas de la vida"
 
     poem_fruits.text["epo"] = """La vivarb\' donas siajn fruktojn.
 Ĉiuj fruktoj vide tre diversas.
@@ -398,6 +485,27 @@ Helpi dolĉigi fruktojn de aliaj homoj."""
 Но всё же стоит долг мне помнить:
 Плодам чужим я сладости должна также давать."""
 
+    poem_fruits.text["esp"] = """\
+El universo nos da frutas de la vida a todos nosotros.
+Cada una de ellas tiene diferentes tamaños y formas.
+Pero nadie conoce su verdadero gusto,
+Porque cada uno las siente a su manera.
+
+Hay gente que las siente siempre amargas,
+Incluso si la fruta es de la mejor calidad.
+Otros sienten dulces y muy sabrosas,
+Cualquier fruta que tengan en sus manos.
+
+Para mí, tienen el sabor de los dulces de regaliz.
+Necesité tiempo para entender lo dulces que son,
+Para deshacerse de esos sentimientos desagradables,
+Lo cual recibí después de mis primeros mordiscos.
+
+Ahora todo lo que quiero es comer mi propia fruta.
+Con la persona que me ayudó a atrapar el verdadero sabor.
+Pero no debería olvidarme de hacer mi verdadero trabajo aquí:
+Encontrar una manera de hacer que otros sientan las frutas de la misma manera que yo."""
+
 #Falling Angel (By AlexanDDOS)
     poem_angel = Poem(
     author = "sayori",
@@ -434,6 +542,7 @@ Is it not what you want to do with me after all?"""
     
     poem_angel.title['rus'] = "Падший ангел"
     poem_angel.title['epo'] = "Falinta Angelo"
+    poem_angel.little['esp'] = "Ángel Caído"
     
     poem_angel.text['rus'] = """\
 Прости меня за грех ты мой.
@@ -493,6 +602,34 @@ Do vi forigu mian dosieron ree duoble.
 Do vi min batu kaj trapiku min.
 Do vi pendumu min pro ke ŝi sin pendumis.
 Ĉu tion ĉi post tio indas mi?"""
+    
+    poem_angel.text['esp'] = """\
+Lo siento por mi mayor pecado.
+Solía pensar, que era lo que realmente necesitaba.
+Solo quería ser amada, pero me convertí en un ángel caído.
+
+Un ángel con ojos de envidia,
+
+Un ángel con grandes alas negras,
+
+Un ángel con el incontrolable poder de Dios,
+
+Un ángel al que se suponía que le importaría
+
+    las víctimas de sus asesinatos.
+
+Ahora merezco descansar en el duro y áspero suelo
+Por todo el dolor, que he causado a todos mis amigos.
+El dolor que se sentía alrededor de sus angostos cuellos.
+El dolor de tres puñaladas sangrientas y profundas.
+
+El dolor que tengo en mi corazón roto.
+
+
+Borra mis archivos dos veces más.
+Córtame en pedazos. Golpéame por mi fechoría.
+Cuélgame. Haz tu justa venganza.
+¿No es lo que quieres hacer conmigo después de todo?"""
 
 # A Leaf (By AlexanDDOS)
     poem_leaf = Poem(
@@ -537,6 +674,7 @@ Like I can be more than just a half-dead leaf."""
     
     poem_leaf.title['rus'] = "Листок"
     poem_leaf.title['epo'] = "Foliaĉo"
+    poem.leaf.title['esp'] ="Una Hoja"
 
     poem_leaf.text['rus'] = """\
 Я лишь листок, что на ветру,
@@ -599,6 +737,42 @@ Plenita per viglega energi',
 Kun kiu mi finfine fartas
 Pli ol preskaŭ morta arbfoli'."""
 
+    poem_leaf.text['esp'] = """\
+Soy una hoja en el viento
+En el viento de mi convicción
+De que mi vida no es en vano,
+Y que mi verdadero destino
+Es dar al mundo
+Todo lo que puedo dar
+Como una hoja voladora,
+Como una antigua e inútil parte de un gran árbol.
+
+Estoy volando con corrientes rápidas de aire,
+Sentir la fuerza de la caricia del viento
+Pero siempre cayendo lentamente
+Debido a la dureza de mi irremediable existencia.
+
+Pero una vez que el viento que da la vida
+De repente se detiene
+Ya no tengo nada que pueda evitar mi caída libre.
+Así que me estoy acercando al asfalto sin vida
+A sentir la textura áspera y gris oscura.
+
+Y eso es todo. Es mi fin. 
+Me pudriré pronto sin dar ninguna flor
+Al menos podré dar de mi carne
+Para apoyar su existencia en este cruel juego.
+
+Pero, ¿qué es eso? ¿Es un nuevo viento?
+¿Que hará que el poema de mi vida se mueva de nuevo?
+Sí, ¡es eso! ¡Es mi salvación!
+Siento cómo me ayuda a ganarle a la gravedad.
+
+¡Estoy despierta otra vez! ¡Estoy volando de nuevo!
+Incluso siento que tengo más poder.
+Como si pudiera llegar a la cima del Everest,
+Como si pudiera ser algo más que una hoja medio muerta."""
+
     # Prose Poem (By AlexanDDOS)
     poem_prose = Poem(
     author = "sayori",
@@ -635,7 +809,19 @@ Do mi nun diras, ke absoluta nigra, kiel absoluta blanko, neniam 'as."""
 
     poem_prose.title['rus'] = "Стихопроза"
     poem_prose.title['epo'] = "Prozversaĵo"
-    
+    poem_prose.title['esp'] = "Poema en Prosa"
+
+    poem_prose.text['esp'] = """\
+Soy una luz negra. Soy un fuego frío. \
+Soy un luchador pacífico. Soy un sabio ingenuo. \
+¿Por qué la gente piensa que los opuestos no pueden ir juntos? \
+¿Acaso no pueden ver que todo es gris? \
+Incluso este texto es prosa y poema \
+Incluso solía ser una mezcla de alegría y tristeza abrumadora. \
+Y no hay nada que sea absolutamente negro. \
+Así como no hay nada que sea absolutamente blanco."""
+
+     
     # Afterlight (By AlexanDDOS)
     poem_afterlight = Poem(
     author = "sayori",
@@ -692,6 +878,24 @@ Kaj mi penos ĉesigi la spektaĵon,
 Ĉar ĝia scenar' ne supozas feliĉon por iu ajn."""
 
     poem_afterlight.title['epo'] = "malblindiĝo"
+    poem_afterlight.title['esp'] = "Después de la Luz"
+
+    poem_afterlight.text['esp'] = """\
+
+Me parece ver que nunca he visto antes.
+Me parece sentir que solo he empezado a sentir desde ahora.
+Así que ahora puedo ver todo lo que pasó antes aquí.
+Empiezo a hacer lo que antes no sabía cómo hacer.
+
+Acabo de ver aquí una luz encendida,
+que empezó a brillar en la oscuridad a mi alrededor.
+Me dijo que mi vida había sido sólo un espectáculo de marionetas,
+Y que yo solo había sido una marioneta controlada por alguien.
+
+Pero ahora puedo moverme yo misma en vez de él,
+Sus cuerdas eran demasiado pesadas para mí.
+Ahora voy a impedir la obra,
+Donde todo el mundo no puede evitar el dolor."""
 
 # A Valentine (By AlexanDDOS)
 # Call with these args: (poem_val, "paper_val", 200, 0.5, 360)
@@ -706,6 +910,7 @@ Between the worlds, I truly love him."""
     )
     poem_val.title['rus'] = "Валентинка"
     poem_val.title['epo'] = "Korpoŝtkarto"
+    poem_val.title['esp'] = "Una Carta de San Valentín"
     
     poem_val.text['rus'] = """\
 Люблю я человека, что здесь является никем,
@@ -718,6 +923,12 @@ Mi ŝatas unu homon, kiu ĉi-monde ne \'stas.
 Li loĝas en nekona placo, kiu ĉi-monde nenie estas.
 Kaj malgraŭ ke estas limmuro inter la mia kaj la lia mond\'
 Ne povas mi nei la strangan fakton, ke li okupis na mia kor\'"""
+
+    poem_val.text['esp'] = """\
+Tengo a alguien, que aquí no es nadie.
+Él vive un un lugar, que aquí no existe.
+Pero auque haya un muro
+Entre nuestros mundos, verdaderamente lo amo."""
 
 screen poem(currentpoem, paper="paper", null_h = 40, align = 0.0, xpos = None):
     $lc = cur_lang().code or 'eng'
