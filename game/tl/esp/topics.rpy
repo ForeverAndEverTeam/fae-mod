@@ -1137,7 +1137,7 @@ translate esp s_topics_hobbie_programming_3b136561:
 translate esp s_topics_hobbie_programming_5ef3dbb3:
 
     # s "If magic made you look through a thousand tiny lines to find a single typo that stops everything from working every five minutes..."
-    s " Pero esta es la magia te hace mirar a través de miles de líneas minúsculas de código para encontrar un solo error tipográfico que impide que todo funcione cada cinco minutos..."
+    s "Pero esta es la magia que te hace mirar a través de miles de líneas minúsculas de código para encontrar un solo error tipográfico que impide que todo funcione cada cinco minutos..."
 
 # game/topics.rpy:512
 translate esp s_topics_hobbie_programming_cc86c368:
@@ -3287,7 +3287,7 @@ translate esp s_common_colors_e9f08a92:
 translate esp s_common_programming_bcd400dc:
 
     # s "A lot of the popular coding programs used now are a lot more beginner friendly than you would expect."
-    s "Muchos de los programas de programación más populares que se usan ahora son mucho más amigables con los principiantes de lo que te esperas."
+    s "Muchos de los lenguajes de programación más populares que se usan ahora son mucho más amigables con los principiantes de lo que te esperas."
 
 # game/topics.rpy:1056
 translate esp s_common_programming_71f773a8:
