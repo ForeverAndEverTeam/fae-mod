@@ -14,7 +14,6 @@ This mod is available in multiple languages. Now you can select either English o
 **Programming:**  
 AlexanDDOS (This repository's author, [Reddit](https://www.reddit.com/user/AlexanDDOS), [VK](https://vk.com/alexanddos), [FB](https://www.facebook.com/alexanDDOS))  
 [vignedev](https://github.com/vignedev)  
-[saiv46](https://github.com/Saiv46)  
 Dan Salvato (original scripts)  
 DDLC Mod Template team ([mod base](https://github.com/Monika-After-Story/DDLCModTemplate))  
   
@@ -28,7 +27,7 @@ Lucian Pavel (Santa hat original model, excluded from the stable versions)
 AlexanDDOS  
   
 **Translations:**  
-AlexanDDOS (Russian, Esperanto & Toki Pona)  
+AlexanDDOS (Russian, Esperanto & Toki Pona (WIP))  
 [Vova Petelin](https://vk.com/toxin_666) (Russian)  
 ElReyZero1201 (Spanish)  
   
