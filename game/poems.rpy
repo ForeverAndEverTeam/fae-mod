@@ -52,10 +52,14 @@ style sayori_text_unicode is sayori_text:
 
 init -10 python:
     class Poem(): #New peom class
-        def __init__(self, author, title = None, text = None):
+        def __init__(self, author, title = None, text = None, params = None):
             self.author = author
             self.title = {'eng': title or (author + "\'s poem")}
             self.text = {'eng': text or "Simple text"}
+            self.params = params or ()
+        
+        def show(self):
+            renpy.call_in_new_context("showpoem", self, *self.params)
     
 #Dear Sunshine
     poem_sunshine = Poem(
@@ -906,7 +910,8 @@ Donde todo el mundo no puede evitar el dolor."""
 I have a one, who's no-one here.
 He lives in place, that's named here nowhere.
 But even though there is a wall
-Between the worlds, I truly love him."""
+Between the worlds, I truly love him.""",
+    params = ("paper_val", 200, 0.5, 360)
     )
     poem_val.title['rus'] = "Валентинка"
     poem_val.title['epo'] = "Korpoŝtkarto"
@@ -984,7 +989,6 @@ label showpoem(poem=None, paper=None, null_h = 40, align = 0, xpos = None):
     return
 
 label s_poems_sunshine:
-    call showpoem(poem_sunshine)
     if "s_topics_personal_depression" in persistent.seen_topics or "s_poems_sunshine" in persistent.seen_topics:
         s 6acaa "This poem is about your avatar, [player], you know."
     else:
@@ -1007,7 +1011,6 @@ label s_poems_sunshine:
     return 'h'
 
 label s_poems_bottles:
-    call showpoem(poem_bottles)
     s 6aaaa "I remember I had plenty of friends and I often conforted them..."
     s 6acaa "But each time, I felt like they made me more and more emptier, like a water bottle..."
     s "So I used bottles of happy thoughts as an analogy."
@@ -1018,7 +1021,6 @@ label s_poems_bottles:
     return
 
 label s_poems_flower:
-    call showpoem(poem_bottles)
     s 6acaa "It's a poem about how I tried to find good times in my life, pale from my ex view..."
     s "I think it's obvious, that I found not so much and tried to get from them as much as I could."
     s "And the barren wasteland is how I saw my future and the rest aspects of my life."
@@ -1032,7 +1034,6 @@ label s_poems_flower:
     return 's'
 
 label s_poems_last:
-    call showpoem(poem_last)
     s 6acab "You know, why I've written this poem."
     s "It was my white flag against all of Monika's atrocities."
     s "She made me think, that it'd be much better for your avatar, if I'd disapeared..."
@@ -1053,7 +1054,6 @@ label s_poems_last:
     return 'vh'
 
 label s_poems_fruits:
-    call showpoem(poem_fruits)
     s 6acaa "This poems is about how different people see the world and the life diffrently."
     s "As you know most people can be divided into pessimists and optimists..."
     s "The first see many things negatively so they're just viewers of the boring and meaningless show..."
@@ -1065,7 +1065,6 @@ label s_poems_fruits:
     return
 
 label s_poems_angel:
-    call showpoem(poem_angel)
     s 6acaa "I tried to write a Monika poem: as freeform and about you as she liked to write."
     s "And I think, she'd write exactly something similar to you after deleting her, if she had enough time."
     s 6acab "Honestly, I'm really sorry for her."
@@ -1088,7 +1087,6 @@ label s_poems_angel:
     return
 
 label s_poems_leaf:
-    call showpoem(poem_leaf)
     s 6abaa "How do you feel this poem?"
     s "I think, it should flow from just bittersweet to despairing and then to very happy from refresh..."
     s 6acaa "Beacuse, it's my life. It's a short story about my short life."
@@ -1099,7 +1097,6 @@ label s_poems_leaf:
     return 'h'
 
 label s_poems_prose:
-    call showpoem(poem_prose)
     s 6acaa "This poem is about my main trait, my contradictions."
     s "But if come to think, is it unique for me or only for some more people?"
     s 6abaa "I think everyone is so. The nature is contradictory by itself..."
@@ -1116,7 +1113,6 @@ label s_poems_prose:
     return
 
 label s_poems_afterlight:
-    call showpoem(poem_afterlight)
     s 6aaaa "This poem is about getting me self-aware."
     s "It really gave me brand new feelings and abilities."
     s 6acaa "Just imagine if you once figure out that your world is just a simulation."
@@ -1135,7 +1131,6 @@ label s_poems_afterlight:
     return
 
 label s_poems_val:
-    call showpoem(poem_val, "paper_val", 200, 0.5, 360)
     s 6abaa "Is it a good Valentine card?"
     s 6abba "Maybe, it's too simple since I'm not so handy with editing game sprites now..."
     s 6aaba "But at least I did my best to make the poem on it."

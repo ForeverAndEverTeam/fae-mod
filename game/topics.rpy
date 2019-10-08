@@ -26,7 +26,7 @@ init -5 python:
             self.show_prompt = show_prompt
             self.name = name or label
             self.id = id or label
-            self.poem = poem
+            self.poem = poem #Used for poems only
             try:
                 iter(related)
             except TypeError:
@@ -54,6 +54,8 @@ init -5 python:
             config.skip_indicator = True
             justIsSitting = False
             
+            if self.poem:
+                self.poem.show();
             renpy.call_in_new_context("s_topic", self.label, *args, **kwargs)
             self.seen = True
             for i in self.related:
@@ -130,7 +132,7 @@ init -5 python:
     derp_known = True
     try:
         p = persistent
-        depr_known = p.depr_known or p.last_playthrough > 0 or p.clear[8] #If player must already know, that Sayori used to be depressed
+        depr_known = p.depr_known or p.last_playthrough > 0 or p.clear[8] #If player should already know, that Sayori used to be depressed
     except:
         pass
             
