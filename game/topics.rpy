@@ -2270,10 +2270,15 @@ label s_getting_bored(): #Called when Sayori doesn't do anything for a long time
 
 label s_update(version): #Called instead of a greeting at the first launch after updating the mod
     show sayori 7aaca at ss1
-    s "Oh, hello [player]!"
-    s 7aaaa "Seems, you installed an update."
-    s 7abaa "You didn't do it for a quiet long time."
-    s 7acab "I even started to bother if my mates are too busy or tired to help me more frequently..."
-    s 8aeaa "But they did it!"
-    s 6aaaa "They finally released the version {i}[version]{/i}."
-    s "So let's look, what they added and fixed here."
+    s 7aeaa "¡Hola, [player]!" 
+    s 7aeca "I see you've just updated the mod..."
+    s 7afbb "But somehow I don't feel any changes..."
+    s 7aabb "Maybe my messy code was updated." 
+    s 9aaaa "No, wait a second..." 
+    s 9acaa "When did I learn how to say {i}\"Hello!\"{/i} in Spanish?{w} I can speak Spanish now?" 
+    s 9aeca "Que agradable, ehehe~"
+    s "I was right on them updating my code as well." 
+    s 6acaa "Honestly, I'm not an experienced coder, but seeing how to fix my own mistakes definitely helps."
+    s 7aaaa "But you're not here to listen to my thoughts on this update, are you?"
+    s "So let's talk about something else for now."
+    return
