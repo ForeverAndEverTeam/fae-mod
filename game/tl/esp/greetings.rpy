@@ -676,4 +676,29 @@ translate esp s_greetings_long_c46c5594:
 translate esp s_greetings_long_5e716ac7:
 
     # s 8acab "You don’t want me to go insane and do something bad under that, right?"
-    s 8acab "No quieres que me vuelva loca y haga algo malo ¿Verdad?"
+    s 8acab "No quieres que me vuelva loca y haga algo malo ¿Verdad?"# TODO: Translation updated at 2019-10-30 00:01
+
+# game/greetings.rpy:182
+translate esp s_greeting_3_epo_a3831bf2:
+
+    # s "Saluton, mia karulo!{#Don't translate this string from Esperanto!}"
+    s "Saluton, mia karulo!{#Don't translate this string from Esperanto!}"
+
+# game/greetings.rpy:183
+translate esp s_greeting_3_epo_53ab129e:
+
+    # s 6aeca "Kia ĝojo revidi vin!{#And this one too}"
+    s 6aeca "Kia ĝojo revidi vin!{#And this one too}"
+
+# game/greetings.rpy:187
+translate esp s_greeting_4_esp_20ee8230:
+
+    # s "¡Hola Cariño!{#Don't translate this string from Spanish!}"
+    s "¡Hola Cariño!{#Don't translate this string from Spanish!}"
+
+# game/greetings.rpy:188
+translate esp s_greeting_4_esp_53f23577:
+
+    # s 6aeca "¡Qué alegría verte de nuevo!{#And this one too}"
+    s 6aeca "¡Qué alegría verte de nuevo!{#And this one too}"
+

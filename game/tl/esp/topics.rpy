@@ -1137,7 +1137,7 @@ translate esp s_topics_hobbie_programming_3b136561:
 translate esp s_topics_hobbie_programming_5ef3dbb3:
 
     # s "If magic made you look through a thousand tiny lines to find a single typo that stops everything from working every five minutes..."
-    s "Pero esta es la magia que te hace mirar a través de miles de líneas minúsculas de código para encontrar un solo error tipográfico que impide que todo funcione cada cinco minutos..."
+    s " Pero esta es la magia te hace mirar a través de miles de líneas minúsculas de código para encontrar un solo error tipográfico que impide que todo funcione cada cinco minutos..."
 
 # game/topics.rpy:512
 translate esp s_topics_hobbie_programming_cc86c368:
@@ -3287,7 +3287,7 @@ translate esp s_common_colors_e9f08a92:
 translate esp s_common_programming_bcd400dc:
 
     # s "A lot of the popular coding programs used now are a lot more beginner friendly than you would expect."
-    s "Muchos de los lenguajes de programación más populares que se usan ahora son mucho más amigables con los principiantes de lo que te esperas."
+    s "Muchos de los programas de programación más populares que se usan ahora son mucho más amigables con los principiantes de lo que te esperas."
 
 # game/topics.rpy:1056
 translate esp s_common_programming_71f773a8:
@@ -9308,4 +9308,72 @@ translate esp strings:
     # topics.rpy:197
     old "Questions"
     new "Preguntas"
+
+# TODO: Translation updated at 2019-10-30 00:01
+
+# game/topics.rpy:2273
+translate esp s_update_a1e856bd:
+
+    # s 7aeaa "¡Hola, [player]!"
+    s 7aeaa "¡Hola, [player]!"
+
+# game/topics.rpy:2274
+translate esp s_update_d4d6cb10:
+
+    # s 7aeca "I see you've just updated the mod..."
+    s 7aeca "I see you've just updated the mod..."
+
+# game/topics.rpy:2275
+translate esp s_update_3fbc9cc5:
+
+    # s 7afbb "But somehow I don't feel any changes..."
+    s 7afbb "But somehow I don't feel any changes..."
+
+# game/topics.rpy:2276
+translate esp s_update_0a98057b:
+
+    # s 7aabb "Maybe my messy code was updated."
+    s 7aabb "Maybe my messy code was updated."
+
+# game/topics.rpy:2277
+translate esp s_update_bbb8bf27:
+
+    # s 9aaaa "No, wait a second..."
+    s 9aaaa "No, wait a second..."
+
+# game/topics.rpy:2278
+translate esp s_update_d3e97bec:
+
+    # s 9acaa "When did I learn how to say {i}\"Hello!\"{/i} in Spanish?{w} I can speak Spanish now?"
+    s 9acaa "When did I learn how to say {i}\"Hello!\"{/i} in Spanish?{w} I can speak Spanish now?"
+
+# game/topics.rpy:2279
+translate esp s_update_3e589e68:
+
+    # s 9aeca "Que agradable, ehehe~"
+    s 9aeca "Que agradable, ehehe~"
+
+# game/topics.rpy:2280
+translate esp s_update_1dd611cb:
+
+    # s "I was right on them updating my code as well."
+    s "I was right on them updating my code as well."
+
+# game/topics.rpy:2281
+translate esp s_update_5ed320c8:
+
+    # s 6acaa "Honestly, I'm not an experienced coder, but seeing how to fix my own mistakes definitely helps."
+    s 6acaa "Honestly, I'm not an experienced coder, but seeing how to fix my own mistakes definitely helps."
+
+# game/topics.rpy:2282
+translate esp s_update_6229fa61:
+
+    # s 7aaaa "But you're not here to listen to my thoughts on this update, are you?"
+    s 7aaaa "But you're not here to listen to my thoughts on this update, are you?"
+
+# game/topics.rpy:2283
+translate esp s_update_393eb02c:
+
+    # s "So let's talk about something else for now."
+    s "So let's talk about something else for now."
 

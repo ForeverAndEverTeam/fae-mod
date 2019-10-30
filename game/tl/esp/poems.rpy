@@ -452,7 +452,7 @@ translate esp s_poems_angel_da213035:
 translate esp s_poems_angel_53f37c6b:
 
     # s 8aabb "Have I already told you there've been a thing, that's made the president to fall in love for the player?"
-    s 8aabb "¿Ya te he dicho que hay algo en el juego que hace que la presidente se enamore del jugador?"
+    s 8aabb "¿Ya te he dicho que hay algo en el juego que hace que la presidenta se enamore del jugador?"
 
 # game/poems.rpy:919
 translate esp s_poems_angel_3b4f48f3:
@@ -719,7 +719,7 @@ translate esp s_poems_val_6fa9072c:
 translate esp s_poems_val_c190dbae:
 
     # s 6aaba "However, I still feel blame for it looks too scanty..."
-    s 6aaba "Sin embargo, todavía siento culpable de que haya quedado muy breve..."
+    s 6aaba "Sin embargo, todavía siento culpable de qye haya quedado muy breve..."
 
 # game/poems.rpy:1029
 translate esp s_poems_val_76feb9cd:

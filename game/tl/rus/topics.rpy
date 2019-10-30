@@ -9849,3 +9849,74 @@ translate rus strings:
     old "Questions"
     new "Вопросы"
 
+# TODO: Translation updated at 2019-10-30 00:00
+
+# game/topics.rpy:2273
+translate rus s_update_a1e856bd:
+
+    # s 7aeaa "¡Hola, [player]!"
+    s 7aeaa "¡Hola, [player]!"
+
+# game/topics.rpy:2274
+translate rus s_update_d4d6cb10:
+
+    # s 7aeca "I see you've just updated the mod..."
+    if gender:
+        s 7aeca "Похоже, ты установила новое обновление..."
+    else:
+        s 7aeca "Похоже, ты установил новое обновление..."
+
+# game/topics.rpy:2275
+translate rus s_update_3fbc9cc5:
+
+    # s 7afbb "But somehow I don't feel any changes..."
+    s 7afbb "Но, я не чувствую каких-то изменений..."
+
+# game/topics.rpy:2276
+translate rus s_update_0a98057b:
+
+    # s 7aabb "Maybe my messy code was updated."
+    s 7aabb "Может, просто пофиксили мой ужасный код."
+
+# game/topics.rpy:2277
+translate rus s_update_bbb8bf27:
+
+    # s 9aaaa "No, wait a second..."
+    s 9aaaa "Хотя, стоп..."
+
+# game/topics.rpy:2278
+translate rus s_update_d3e97bec:
+
+    # s 9acaa "When did I learn how to say {i}\"Hello!\"{/i} in Spanish?{w} I can speak Spanish now?"
+    s 9acaa "Откуда я знаю, как сказать {i}\"Привет!\"{/i} по-испански?{w} Я что, теперь могу говорить на испанском?"
+
+# game/topics.rpy:2279
+translate rus s_update_3e589e68:
+
+    # s 9aeca "Que agradable, ehehe~"
+    s 9aeca "Que agradable, ehehe~"
+
+# game/topics.rpy:2280
+translate rus s_update_1dd611cb:
+
+    # s "I was right on them updating my code as well."
+    s "Хотя, насчёт кода я тоже, похоже, права."
+
+# game/topics.rpy:2281
+translate rus s_update_5ed320c8:
+
+    # s 6acaa "Honestly, I'm not an experienced coder, but seeing how to fix my own mistakes definitely helps."
+    s 6acaa "По правде говоря, я кодер не очень опытный, но всегда учусь по исправлениям моих же ошибок."
+
+# game/topics.rpy:2282
+translate rus s_update_6229fa61:
+
+    # s 7aaaa "But you're not here to listen to my thoughts on this update, are you?"
+    s 7aaaa "Ладно. Ты же здесь не за тем, чтобы слушать мои коментарии к обновлению, верно?"
+
+# game/topics.rpy:2283
+translate rus s_update_393eb02c:
+
+    # s "So let's talk about something else for now."
+    s "Так что давай сменим тему."
+
