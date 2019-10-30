@@ -9375,5 +9375,5 @@ translate esp s_update_6229fa61:
 translate esp s_update_393eb02c:
 
     # s "So let's talk about something else for now."
-    s "ASí que hablemos de otra cosa por ahora."
+    s "Así que hablemos de otra cosa por ahora."
 
