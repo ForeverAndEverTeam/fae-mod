@@ -12,3 +12,12 @@ transform ss2: #Left position
 
 transform ss1i: #Defualt position (instant)
     tinstant(620, 1)
+
+transform chibi(x = 640):
+    yanchor 1.0
+    pos (x, 1.25)
+    easein 0.5 ypos 0.795
+transform chibi_hide(x = 64):
+    yanchor 1.0
+    pos (x, 0.795)
+    easeout 0.5 ypos 1.25
