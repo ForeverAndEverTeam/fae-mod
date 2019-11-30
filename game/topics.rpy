@@ -71,6 +71,7 @@ init -5 python:
             self.seen = False
             self.all_seen = False
             self.seen_len = 0
+            self.seen_list = []
             persistent.seen_lens[prefix] = 0
             self.labels = {}
             
@@ -95,6 +96,7 @@ init -5 python:
             n = len(self.topics)
             self.topics.append(topic)
             self.labels[topic.label] = n
+            self.update_seen()
         
         def new_topic(self, name, label_suffix, available = 0, id = None, related = None, show_prompt = True, poem = None):
             topic = Topic(self.prefix + '_' + label_suffix, available, show_prompt, name = name, id = id, related = related, poem = poem)
