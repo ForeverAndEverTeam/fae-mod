@@ -183,6 +183,14 @@ label s_greeting_3_epo:
     s 6aeca "Kia ĝojo revidi vin!{#And this one too}"
     return
 
+label s_greeting_4_esp:
+    s "¡Hola Cariño!{#Don't translate this string from Spanish!}"
+    s 6aeca "¡Qué alegría verte de nuevo!{#And this one too}"
+
+label s_greeting_4_tok:
+    s "sina pona o toki!{#Don't translate this string from Toki Pona!}"
+    s 6aeca "sina lon ni la mi pilin pona!{#And this one too}"
+
 label s_greeting_4:
     show sayori 7aaaa at ss1 zorder 2
     s "Uh, hi again!"

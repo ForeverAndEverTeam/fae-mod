@@ -1,0 +1,9 @@
+--Legacy specification
+a = <Reserved for null face mask>
+b = Blush
+c = Teary eyes (uses '*c.png' eye sprites instead, if they are present)
+d = Rolling tear
+e = Crying (uses "ec.png" instead, if the current eyes are closed)
+f = Strong blush + crying (uses "fc.png" instead, if the current eyes are closed)
+--New specification
+crumbs = Cookie crumbs around the mouth (expression-independent effect)

@@ -31,7 +31,8 @@ pack_krom = ( #Filename patterns, skipped by the script
     '.*singleton.py$',
     './pack.py',
     './to_proofread.txt',
-    './zz_developer\..*'
+    './zz_developer\..*',
+    './tl/tok/.*'
 )
 pack_external = (
     "LICENSE",

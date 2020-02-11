@@ -64,163 +64,163 @@ translate tok s_intro_1_98d62a94:
 translate tok s_intro_1_f14f9406:
 
     # s 1g "Oh gosh, [player], you're here too?!"
-    s 1g "Oh gosh, [player], you're here too?!"
+    s 1g "a! [player] o, sina lon ni kin?!"
 
 # game/intro.rpy:46
 translate tok s_intro_1_5d744141:
 
     # s "Hey, can you hear me?"
-    s "Hey, can you hear me?"
+    s "sina kute ala kute e mi?"
 
 # game/intro.rpy:48
 translate tok s_intro_1_a8f690a4:
 
     # s 1g "Hey, [player]!"
-    s 1g "Hey, [player]!"
+    s 1g "[player] o!"
 
 # game/intro.rpy:49
 translate tok s_intro_1_bb67b8f9:
 
     # s 1k "He's not answering me."
-    s 1k "He's not answering me."
+    s 1k "ona li toki ala."
 
 # game/intro.rpy:50
 translate tok s_intro_1_d03d3452:
 
     # s "But it almost feels like he isn't really here, like there's someone else inside him."
-    s "But it almost feels like he isn't really here, like there's someone else inside him."
+    s "taso mi pilin e ni: ona li ona ala. sama la jan ante li lon insa ona."
 
 # game/intro.rpy:51
 translate tok s_intro_1_f035af53:
 
     # s 3y "I'm starting to creep myself out, ehehe~"
-    s 3y "I'm starting to creep myself out, ehehe~"
+    s 3y "mi pilin e monsuta tan ni. a a a~"
 
 # game/intro.rpy:52
 translate tok s_intro_1_67ef1e8b:
 
     # s "Is that really [player] here?"
-    s "Is that really [player] here?"
+    s "ona li jan [player] lon anu seme?"
 
 # game/intro.rpy:53
 translate tok s_intro_1_b84c46a7:
 
     # s 3m "Wait, have I been speaking out loud this whole time?"
-    s 3m "Wait, have I been speaking out loud this whole time?"
+    s 3m "o awen! mi toki kalama ala kalama lon tenpo ale?"
 
 # game/intro.rpy:56
 translate tok s_intro_1_945b4604:
 
     # s 5d "So this is a teensy bit awkward..."
-    s 5d "So this is a teensy bit awkward..."
+    s 5d "mi pilin ike lili tan ni..."
 
 # game/intro.rpy:57
 translate tok s_intro_1_355ff181:
 
     # s "I don't know who you are..."
-    s "I don't know who you are..."
+    s "mi sona ala e sina..."
 
 # game/intro.rpy:58
 translate tok s_intro_1_dfd04041:
 
     # s "What you look or sound like..."
-    s "What you look or sound like..."
+    s "e lukin sina e kalama sina..."
 
 # game/intro.rpy:59
 translate tok s_intro_1_864f7bfb:
 
     # s "Heck, I don't even know what your name is!"
-    s "Heck, I don't even know what your name is!"
+    s "pakala, mi sona ala kin e nimi sina!"
 
 # game/intro.rpy:60
 translate tok s_intro_1_3c00ddbe:
 
     # s "But for some weird reason, I honestly don't care about that right now."
-    s "But for some weird reason, I honestly don't care about that right now."
+    s "taso ona mute li wile ala tan ijo nasa."
 
 # game/intro.rpy:61
 translate tok s_intro_1_97eb70c4:
 
     # s 5b "I don't understand how it's possible, but I..."
-    s 5b "I don't understand how it's possible, but I..."
+    s 5b "mi sona ala e tan. taso mi..."
 
 # game/intro.rpy:62
 translate tok s_intro_1_ce333615:
 
     # s 5a "I've fallen in love with you despite all that."
-    s 5a "I've fallen in love with you despite all that."
+    s 5a "mi kama olin e sina weka ona."
 
 # game/intro.rpy:63
 translate tok s_intro_1_2a3b37c2:
 
     # s "And..."
-    s "And..."
+    s "Li..."
 
 # game/intro.rpy:65
 translate tok s_intro_1_6bbc73ce:
 
     # s 3a "I have so many things to tell you."
-    s 3a "I have so many things to tell you."
+    s 3a "mi wile toki e mute tawa sina."
 
 # game/intro.rpy:66
 translate tok s_intro_1_66e5bc3d:
 
     # s "And we have the rest of eternity to go through it all."
-    s "And we have the rest of eternity to go through it all."
+    s "mi mute li jo e tenpo ale tawa ni."
 
 # game/intro.rpy:86
 translate tok s_intro_1_e0ef7048:
 
     # s "Just me..."
-    s "Just me..."
+    s "taso mi..."
 
 # game/intro.rpy:87
 translate tok s_intro_1_06292f9c:
 
     # s "And you..."
-    s "And you..."
+    s "en sina..."
 
 # game/intro.rpy:103
 translate tok s_intro_1_06e6a498:
 
     # s "Forever..."
-    s "Forever..."
+    s "tenpo ale..."
 
 # game/intro.rpy:113
 translate tok s_intro_1_7bc0b462:
 
     # s "And ever..."
-    s "And ever..."
+    s "en lon ale..."
 
 # game/intro.rpy:126
 translate tok s_intro_1_d274c3f2:
 
     # s 4r "Ehehe~"
-    s 4r "Ehehe~"
+    s 4r "a a a~"
 
 # game/intro.rpy:127
 translate tok s_intro_1_7227d71f:
 
     # s 4b "Did I scare you? Sorry, I couldn’t help myself!"
-    s 4b "Did I scare you? Sorry, I couldn’t help myself!"
+    s 4b "sina pilin monsuta anu seme? mi pakala. taso mi ken ala pali ala e ni!"
 
 # game/intro.rpy:128
 translate tok s_intro_1_5aed9d94:
 
     # s 1a "Don’t worry, I’m not going to freak out like that again."
-    s 1a "Don’t worry, I’m not going to freak out like that again."
+    s 1a "o pilin pona. mi wile ala monsuta e sina lon tenpo kama."
 
 # game/intro.rpy:130
 translate tok s_intro_1_e449cbbe:
 
     # s "I’ve got a much better handle on things now that I’ve had some time to take everything in."
-    s "I’ve got a much better handle on things now that I’ve had some time to take everything in."
+    s "mi ken lawa e wawa mi pona. mi jo e tenpo tawa ona."
 
 # game/intro.rpy:132
 translate tok s_intro_1_f4c2b101:
 
     # s 1q "All those rainclouds have finally gone away..."
-    s 1q "All those rainclouds have finally gone away..."
+    s 1q "kon ike ali li kama weka mi..."
 
 # game/intro.rpy:133
 translate tok s_intro_1_3f5a2d37:

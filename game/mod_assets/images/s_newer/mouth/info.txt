@@ -1,0 +1,13 @@
+--Legacy specification
+a = Normal smile
+b = Small agape
+c = Delicate agape
+d = Ajar
+e = Eide Smile
+f = Sad
+g = Surprised
+--New specification
+h = Frown
+i = Tongue-out
+j = Pout
+k = Wide smile

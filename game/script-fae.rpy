@@ -160,7 +160,7 @@ label s_autoload(test = False):
         
         elif persistent.lastLaunch and persistent.lastLaunch.date() != get_now().date():
             if (get_now() - persistent.lastLaunch).days > 27:
-                call s_greeting_long
+                call s_greetings_long
             else:
                 call expression first_greeting pass (get_time_of_day())
             $ greeted = True

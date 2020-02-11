@@ -1,0 +1,11 @@
+usual = Sayori's usual hairstyle + red bow
+no_bow = Sayori's usual hairstyle with no bow
+--Planned hairstyles
+--These assets are absent for now. The below codes are just reserved for possible updates.
+monika = Monika's hairstyle
+longer = Middle-size hairstyle, like in the Purist Mod's good ending
+beret = Sayori's usual hairstyle + cute beret
+xmas = Santa's cap
+halloween = Hairstyle for the halloween suit
+pioneer = Soviet pioneer forage-cap (for 'pioneer' body)
+maid = Housemaid cap

@@ -31,17 +31,31 @@ init -10 python:
     def get_now(): # Short alias to datetime.datetime.now()
         return datetime.datetime.now()
     
+    ## Time of day begining hour constants
+    ## May become usual variables having `time` objects in the future, as the times of day will depend of the certian date
+    TIME_MORNING = 6
+    TIME_DAY = 11
+    TIME_EVENING = 18
+    TIME_NIGHT = 22
     def get_time_of_day(h = None):
         h = get_now().hour if h is None else h
-        if h < 6:
+        if h < TIME_MORNING:
             return 0 # Night
-        elif h < 11:
+        elif h < TIME_DAY:
             return 1 # Morning
-        elif h < 18:
+        elif h < TIME_EVENING:
             return 2 # Day
-        elif h < 22:
+        elif h < TIME_NIGHT:
             return 3 # Evening
         return 0 # Night
+    def get_time_transition_factor():
+        """Return the number 0 to 1 that represent have much of the current time of day's last hour has already past"""
+        ct = get_now()
+        h = ct.hour
+        next_h = (h + 1) % 24
+        if get_time_of_day(next_h) != get_time_of_day(h):
+            return float(ct.minute) / 60 + float(ct.second) / 3600
+        return 0
     
     def is_leap_year(y):
         return calendar.isleap(y)
