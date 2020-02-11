@@ -134,12 +134,8 @@ init -10 python:
     s_last_frames = []
     def make_dyn_s(from_what):
         def dyn_s(st, at):
-            s_last_frames.append(backgrounds.current.apply_current_matrix(from_what))
-            if len(s_last_frames) > 2:
-                s_last_frames.pop(0)
-                gc.collect() #Matrix creates sp much of garbage that its better to collect it manually
-            return s_last_frames[-1], COLOR_STEP
-        return DynamicDisplayable(dyn_s)
+            return backgrounds.current.apply_current_matrix(from_what), 
+        return DynamicDisplayable(dyn_s, COLOR_STEP)
 
 init -8 python: ## new_exp.rpy code must have order -10<x<-8
     custom_current = {}

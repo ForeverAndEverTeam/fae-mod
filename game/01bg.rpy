@@ -213,15 +213,14 @@ init -8 python:
             renpy.show("bg", what = sky, layer = 'bg', zorder = 0)
         draw_sky()
         
-        bg_last_frames=[]
         def dyn_bg(st, at):
             #draw_sky()
-            bg_last_frames.append(self.apply_current_matrix("mod_assets/images/bg/spaceroom.png"))
-            if len(bg_last_frames) > 2:
-                bg_last_frames.pop(0)
-                gc.collect() #Matrix creates sp much of garbage that its better to collect it manually
-            return bg_last_frames[-1], COLOR_STEP
-        renpy.show("bg_room", what = DynamicDisplayable(dyn_bg), layer = 'bg', zorder = 2)
+            frame = self.apply_current_matrix("mod_assets/images/bg/spaceroom.png")
+            if st % COLOR_STEP <= 1/60:
+                renpy.free_memory() #Matrix creates sp much of garbage that its better to collect it manually
+            return frame, COLOR_STEP
+        dd = DynamicDisplayable(dyn_bg)
+        renpy.show("bg_room", what = dd, layer = 'bg', zorder = 2)
         
     def sroom_d(self):
         renpy.scene('bg')
