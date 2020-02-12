@@ -2,7 +2,6 @@ init -10 python:
     bg_day = False #Changed by '01bg.rpy', if the current BG has day/high light
     s_ypos = 0
     COLOR_STEP = 60**2/255 #Time, needed for change a RBG value with get_time_transition_factor by 1
-    import gc
     
     if not persistent.customization:
         persistent.customization = {
@@ -133,9 +132,10 @@ init -10 python:
     
     s_last_frames = []
     def make_dyn_s(from_what):
-        def dyn_s(st, at):
-            return backgrounds.current.apply_current_matrix(from_what), 
-        return DynamicDisplayable(dyn_s, COLOR_STEP)
+        def dyn_s(st, at, *args, **kwargs):
+            frame = backgrounds.current.apply_current_matrix(from_what)
+            return frame, COLOR_STEP
+        return DynamicDisplayable(dyn_s)
 
 init -8 python: ## new_exp.rpy code must have order -10<x<-8
     custom_current = {}
