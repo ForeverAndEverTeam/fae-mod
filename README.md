@@ -21,6 +21,8 @@ DDLC Mod Template team ([mod base](https://github.com/Monika-After-Story/DDLCMod
 Fj0rd_ ([Reddit](https://www.reddit.com/user/Fj0rd_), [original sitting Sayori art](https://www.reddit.com/r/DDLC/comments/7h40q6/ok_final_version_this_time_i_swear/))  
 AlexanDDOS  
 Team Salvato artists (original sprites)  
+[Orcaramelo](https://github.com/Orcaramelo)  
+[Professor-JMO](https://github.com/Professor-JMO)  
 Lucian Pavel (Santa hat original model, excluded from the stable versions)  
   
 **Dialogue:**  
