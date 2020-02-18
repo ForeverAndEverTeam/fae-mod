@@ -580,7 +580,7 @@ label mg_checkers_s_comment(id = 0): #Sayori's comment; -1/1 = Sayori's victory/
         hide screen mg_checkers_scr
     
     
-    if id == 1:
+    if id == -1:
         $randId = renpy.random.randint(0, 2)
         if randId == 0:
             s 6aaca "Okay, I win this game."
@@ -591,7 +591,7 @@ label mg_checkers_s_comment(id = 0): #Sayori's comment; -1/1 = Sayori's victory/
         else:
             s 6acaa "Don't worry!"
             s "Maybe you'll win next time."
-    elif id == -1:
+    elif id == 1:
         $randId = renpy.random.randint(0, 1)
         if randId == 0:
             s 6aaca "Okay, you win!"
