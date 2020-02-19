@@ -64,6 +64,30 @@ init -8 python:
         except TypeError:
             return a*(1-c) + b*c
     
+    sky = Solid("#fff") #Universal sky image
+        
+    def get_sky_color(tod, tr = 0):
+        sky = None
+        if tod == 0:
+            sky = (0x1c, 0x1c, 0x1d)
+        elif tod == 1:
+            sky = (0xff ,0xc6, 0x89)
+        elif tod == 2:
+            sky = (0x93, 0xc6, 0xf6)
+        else:
+            sky = (0xff, 0xa8, 0x98)
+        if tr > 0:
+            next_sky = get_sky_color((tod + 1) % 4, 0)
+            return mix(sky, next_sky, tr)
+        return sky 
+    
+    def draw_sky():
+        tr = get_time_transition_factor()
+        color = get_sky_color(get_time_of_day(), tr)
+        color = "#%02x%02x%02x" % tuple(color)
+        sky.color = Color(color)
+        renpy.show("bg", what = sky, layer = 'bg', zorder = 0)
+    
     class Background:
         defualt_matrix = im.matrix((
     1,0,0,0,0,
@@ -177,6 +201,14 @@ init -8 python:
     
     backgrounds = BGList()
     
+    def sroom_dyn(st, at, *args, **kwargs):
+        bg = kwargs["bg"]
+        draw_sky()
+        frame = bg.apply_current_matrix("mod_assets/images/bg/spaceroom.png")
+        if st % COLOR_STEP <= 1/60:
+            renpy.free_memory() #Matrix creates sp much of garbage that its better to collect it manually
+        return frame, COLOR_STEP
+            
     def sroom_c(self, static = False):
         # if static:
             # renpy.show('monika_room_static', layer = 'bg')
@@ -187,39 +219,7 @@ init -8 python:
             # renpy.show('rm2', layer = 'bg')
             # renpy.show('monika_room', layer = 'bg')
             # renpy.show('monika_room_highlight', layer = 'bg')
-        
-        sky = Solid("#fff")
-        
-        def get_sky_color(tod, tr = 0):
-            sky = None
-            if tod == 0:
-                sky = (0x1c, 0x1c, 0x1d)
-            elif tod == 1:
-                sky = (0xff ,0xc6, 0x89)
-            elif tod == 2:
-                sky = (0x93, 0xc6, 0xf6)
-            else:
-                sky = (0xff, 0xa8, 0x98)
-            if tr > 0:
-                next_sky = get_sky_color((tod + 1) % 4, 0)
-                return mix(sky, next_sky, tr)
-            return sky 
-        
-        def draw_sky():
-            tr = get_time_transition_factor()
-            color = get_sky_color(get_time_of_day(), tr)
-            color = "#%02x%02x%02x" % tuple(color)
-            sky.color = Color(color)
-            renpy.show("bg", what = sky, layer = 'bg', zorder = 0)
-        draw_sky()
-        
-        def dyn_bg(st, at):
-            #draw_sky()
-            frame = self.apply_current_matrix("mod_assets/images/bg/spaceroom.png")
-            if st % COLOR_STEP <= 1/60:
-                renpy.free_memory() #Matrix creates sp much of garbage that its better to collect it manually
-            return frame, COLOR_STEP
-        dd = DynamicDisplayable(dyn_bg)
+        dd = DynamicDisplayable(sroom_dyn, bg = self)
         renpy.show("bg_room", what = dd, layer = 'bg', zorder = 2)
         
     def sroom_d(self):
