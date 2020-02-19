@@ -219,6 +219,7 @@ init -8 python:
             # renpy.show('rm2', layer = 'bg')
             # renpy.show('monika_room', layer = 'bg')
             # renpy.show('monika_room_highlight', layer = 'bg')
+        draw_sky()
         dd = DynamicDisplayable(sroom_dyn, bg = self)
         renpy.show("bg_room", what = dd, layer = 'bg', zorder = 2)
         
