@@ -152,7 +152,7 @@ init 10 python:
             note = str(self.start) #Turn note
             for jump in self.intermediate_jumps:
                 note += sep + str(jump)
-            note += str(self.final)
+            note += sep + str(self.final)
             return note
         
         def extend(self, cur_piece = None):
@@ -195,17 +195,6 @@ init 10 python:
             checkers.board[self.final] = 0
             if self.gets_king:
                 checkers.board[self.start] &= 11
-        
-        def get_cost(self): #Get the turn's cost (positional evaluation + taken pieces' cost)
-            cost = checkers_pos_eval(self.final, checkers_cell(self.start))
-            if self.gets_king:
-                cost += 15
-            for p in self.taken_pieces:
-                if (p & 4):
-                    cost += 25 #king cost
-                else:
-                    cost += 15 #men cost
-            return cost
             
     
     #Return all the possiable turns for a certian piece
@@ -378,7 +367,7 @@ init 10 python:
             if not last_move:
                 raise ValueError("last_move can't be None")
             else:
-                alpha += last_move.get_cost()
+                alpha = checkers_eval(last_move.performer)
             return alpha, ()
         
         moves = []
@@ -408,9 +397,16 @@ init 10 python:
         return alpha, best_moves
             
     
-    def checkers_pos_eval(n):
-        x = checkers.board[n] #Piece info, n - piece position
-        return 5
+    def checkers_eval(party):
+        eval = 0
+        for cell in checkers.board:
+            if cell & 1 != 0:
+                piece_party = (cell & 2) >> 1
+                m = 1 if piece_party == party else -1
+                if cell & 4:
+                    m *= 3
+                eval += m
+        return eval
     
     import copy
     def checkers_copy_board(board = None):
