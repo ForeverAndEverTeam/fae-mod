@@ -131,11 +131,11 @@ init -10 python:
         return im.Composite((1280, 720), *sprites)
     
     s_last_frames = []
+    def dyn_s(st, at, *args, **kwargs):
+        frame = backgrounds.current.apply_current_matrix(args[0])
+        return frame, COLOR_STEP
     def make_dyn_s(from_what):
-        def dyn_s(st, at, *args, **kwargs):
-            frame = backgrounds.current.apply_current_matrix(from_what)
-            return frame, COLOR_STEP
-        return DynamicDisplayable(dyn_s)
+        return DynamicDisplayable(dyn_s, from_what)
 
 init -8 python: ## new_exp.rpy code must have order -10<x<-8
     custom_current = {}
