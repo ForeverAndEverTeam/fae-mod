@@ -232,6 +232,8 @@ init -8 python:
     0.075,0.4,0,0,0,
     0.075,0,0.55,0,0,
     0,0,0,1,0))
-    backgrounds['spaceroom'].matrices[1] = im.matrix.tint(1, 0xc6/255, 0x89/255)
-    backgrounds['spaceroom'].matrices[3] = im.matrix.tint(1, 0xa8/255, 0x98/255)
+    backgrounds['spaceroom'].matrices[1] = mix(backgrounds['spaceroom'].matrices[1],
+        im.matrix.tint(1, 0.7, 0), 0.3)
+    backgrounds['spaceroom'].matrices[3] = mix(backgrounds['spaceroom'].matrices[1],
+        im.matrix.tint(1, 0xc8/255, 0x98/255), 0.4)
     backgrounds.current_id = "spaceroom"
