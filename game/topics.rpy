@@ -896,33 +896,39 @@ label s_topics_rlt_face: #This dialog will be called just once and won't appear 
         "Yes, I have one on my PC":
             s "Just move it to the game’s root folder!"
             s "I'll find it there myself."
-            python:
-                import os
-                while True:
-                    renpy.pause(1.5)
-                    for file in os.listdir('.'):
+            $start_time = get_now()
+            $import os
+            while not (persistent.hasPlayerPhoto or (get_now() - start_time).seconds > 60):
+                pause 3.0
+                python:
+                    for file in os.listdir(config.basedir):
                         file = file.encode("utf-8")
                         ext = file[-4:]
-                        #print(file, ext)
-                        if ext == ".jpg" or ext == ".png" or ext == ".bmp":
-                            if file[:9] != "screenshot":
-                                try:
-                                    os.remove(file)
-                                    persistent.hasPlayerPhoto = True
-                                    topic_cats[4][8].show_prompt = False
-                                except:
-                                    pass
-                                break
-                    else:
-                        continue
-                    break
-            s 6aaaa "Okay, I found it!"
-            s 7aeca "For me, you look pretty nice!"
-            s 7acaa "I can't get used to how your world looks though..."
-            s 7aaaa "But I think it's okay."
-            s "I saved it to the game archives, so I'll never lose it."
-            s 7aeca "Thank you for the photo, [player]!"
-            return "vh"
+                        ext5 = file[-5:]
+                    if ext == ".jpg" or ext == ".png" or ext == ".bmp" or ext5 == ".jpeg" or ext5 == ".tiff":
+                        if file[:9] != "screenshot":
+                            try:
+                                os.remove(file)
+                            except:
+                                pass
+                            persistent.hasPlayerPhoto = True
+                            topic_cats[4][8].show_prompt = False
+            if persistent.hasPlayerPhoto:
+                s 6aaaa "Okay, I found it!"
+                s 7aeca "For me, you look pretty nice!"
+                s 7acaa "I can't get used to how your world looks though..."
+                s 7aaaa "But I think it's okay."
+                s "I saved it to the game archives, so I'll never lose it."
+                s 7aeca "Thank you for the photo, [player]!"
+                return "vh"
+            else:
+                s 6adab "You can't find it, yeah?"
+                s 6acab "Then I won't bother you."
+                s 7aada "But you can tell me when you find it."
+                $ this_topic_name = topic_cats[4].name + " → " + topic_cats[4][8].name
+                s "Just click on {i}\"[this_topic_name!t]\"{/i} then."
+                s 7aeca "I still wonna see your face with my virual eyes~"
+                return
         "No, I can't":
             s 6afab "Oh, that’s too bad."
             s 6aaca "But I would’ve thought you look nice anyway."
