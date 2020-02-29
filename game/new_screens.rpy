@@ -53,8 +53,8 @@ screen talk_ui():
         textbutton _("Ask a question") keysym '1' action Function(renpy.call, "s_topicmenu", 0, 0)
         textbutton _("Repeat conversation") keysym '2' action Function(renpy.call, "s_topicmenu", 1, 1)
         textbutton _("I feel...") keysym '3' action Function(renpy.call, "s_topicmenu", 2)
+        textbutton _("I want to say...") keysym '4' action Function(renpy.call, "s_saymenu")
         # textbutton _("Ask for...") keysym '4' action Function(renpy.call, "s_topicmenu", 4)
-        textbutton _("Say goodbye") keysym '4' action Jump("s_farewell")
         textbutton _("Change information") keysym '5' action Function(renpy.call, "s_pinfo", True)
         if config.developer:
             textbutton "{i}Clean Sayori's memory{/i}" keysym '0' action [Function(reset_topics), Jump("s_talkmenu")]
@@ -168,6 +168,19 @@ screen topic_ui(ss, cat = 0): #0 = questions, 1 = repeat, 2= feelings, 3 = poetr
         if type(subscreen) != int and cat < 3:
             textbutton _("Back") action [SetScreenVariable("subscreen", cat), SetScreenVariable("page", 0)]
         textbutton _("Close") action [Hide("topic_ui"), Jump("s_loop")]
+
+screen say_ui():
+    default page = p
+    
+    style_prefix "choice"
+    
+    vbox:
+        align (1.0, 0.5)
+        offset (-10, 0)
+        
+        textbutton _("I love you") action [Hide("say_ui"), Jump("s_love_you")]
+        textbutton _("Goodbye") action [Hide("say_ui"), Jump("s_farewell")]
+        textbutton _("Nothing{#Say Entry}") action [Hide("say_ui"), Jump("s_loop")]
 
 screen pinfo_ui(): #Player info screen
     default selected_field = None
@@ -298,7 +311,7 @@ label s_talkmenu:
     $show_s_mood(ss2, True)
     hide screen feat_ui
     hide screen topic_ui
-    call screen talk_ui()
+    call screen talk_ui
     jump s_loop
     
 label s_musicmenu(page = 0):
@@ -312,6 +325,13 @@ label s_topicmenu(subscreen = 0, t = 0):
     hide screen feat_ui
     hide screen talk_ui
     call screen topic_ui(subscreen, t)
+    jump s_loop
+
+label s_saymenu:
+    $show_s_mood(ss2, True)
+    hide screen feat_ui
+    hide screen talk_ui
+    call screen say_ui
     jump s_loop
 
 label s_gamemenu():

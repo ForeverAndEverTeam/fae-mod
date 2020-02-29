@@ -38,7 +38,9 @@
 6afbb
 6afbc
 6bbba
+6bcaa
 6bcab
+6beca
 6caab
 6cbab
 6cbcb
@@ -90,8 +92,14 @@
 7afab
 7afbb
 7affb
+7baaa
 7baba
+7baca
 7bafa
+7baha
+7bdhb
+7bebb
+7beca
 8aaaa
 8aaab
 8aaba

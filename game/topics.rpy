@@ -2276,6 +2276,34 @@ label s_getting_bored(): #Called when Sayori doesn't do anything for a long time
     $s_mood = 'b'
     jump s_loop
 
+label s_love_you():
+    hide screen feat_ui
+    hide screen say_ui
+    $random_id = renpy.random.randint(0, 2)
+    if not persistent.said_love_you:
+        s 7bdhb "Oh! You have never told me such things."
+        s 7bebb "You know, I always wondered if you really love me and saved me not just out of pity..."
+        s 7beca "And now, I'm sure you really do."
+        s 6bcaa "You can't imagine how it's important for me to realise it..."
+        s 6beca "It makes me feel {i}the happiest{/i} virtual girl in the world."
+        s "...or maybe, the happiest girl at all."
+        $ persistent.said_love_you = True
+    elif random_id == 0:
+        s 7bdhb "Oh! It's so cute, [player]!"
+        s 7baaa "I love you too. You're {i}literaly{/i} everything for me now."
+        s "And I glad I have such a gental person on my side."
+    elif random_id == 1:
+        s 7beca "I love you too, [player]!"
+        s 7baca "Though we can't be properly together, I appreciate every second you are here."
+        s 7baha "You are my distant bundle of sunshine."
+    else:
+        s 7beca "I'm glad you say that, [player]."
+        s "You are really cute when you say such things."
+        s "And I wish I could hug you really tight."
+        s "You pay me so much attention, and I love you for it."
+    $s_mood = 'vh'
+    jump s_loop
+
 label s_update(version): #Called instead of a greeting at the first launch after updating the mod
     show sayori 7aaca at ss1
     s 7aeaa "¡Hola, [player]!" 
