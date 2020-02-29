@@ -433,11 +433,11 @@ label mg_reversi_s_comment(id = 0): #Sayori's comment; -1/1 = Sayori's victory/d
     hide screen mg_reversi_scr
     
     if id == -1:
-        $randId = renpy.random.randint(0, 2)
-        if randId == 0:
+        $random_id = renpy.random.randint(0, 2)
+        if random_id == 0:
             s 6aaca "Wow! I win this game."
             s 6acaa "Don't worry. I'll have good luck next time, I hope."
-        elif randId == 1:
+        elif random_id == 1:
             s 6acaa "Uh, the board is full."
             s "And your disks are less than mine."
             s 6aaca "But maybe, you'll got more next time, won't you?"
@@ -446,19 +446,19 @@ label mg_reversi_s_comment(id = 0): #Sayori's comment; -1/1 = Sayori's victory/d
             s "Maybe you'll win next time."
             s "Just be more attentive."
     elif id == 1:
-        $randId = renpy.random.randint(0, 2)
-        if randId == 0:
+        $random_id = renpy.random.randint(0, 2)
+        if random_id == 0:
             s 6aaca "Okay, you win!"
             s 6aeca "Next time I'll be more crafty."
-        elif randId == 1:
+        elif random_id == 1:
             s 8aebb "You seem to be better at this game at me."
             s "Maybe, I should be more predictive and do less silly things next round."
         else:
             s 6aeac "Hey, you took more cells than me!"
             s 8aebb "I think I should be more attentive next time."
     elif id == 2:
-        $randId = renpy.random.randint(0, 1)
-        if randId == 0:
+        $random_id = renpy.random.randint(0, 1)
+        if random_id == 0:
             s 6adha "Uh! We seem to share the board in half..."
             s 6aebb "Unless I've messed with the count."
             s 6aeca "But draw game is also a result, isn't it?"
@@ -466,8 +466,8 @@ label mg_reversi_s_comment(id = 0): #Sayori's comment; -1/1 = Sayori's victory/d
             s 6aeha "Hey, we have the same number of disks, you know?"
             s 7aada "We really seem to have {i}soooooooooo{/i} much in common, don't we?"
     elif id == -2:
-        $randId = renpy.random.randint(0, 1)
-        if randId == 0:
+        $random_id = renpy.random.randint(0, 1)
+        if random_id == 0:
             s 6acab "Are you giving up?"
             s 6aaaa "Then we'll start again, but I'll get a point for this game."
         else:

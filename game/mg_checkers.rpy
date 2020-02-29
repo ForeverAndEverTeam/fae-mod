@@ -577,19 +577,19 @@ label mg_checkers_s_comment(id = 0): #Sayori's comment; -1/1 = Sayori's victory/
     
     
     if id == -1:
-        $randId = renpy.random.randint(0, 2)
-        if randId == 0:
+        $random_id = renpy.random.randint(0, 2)
+        if random_id == 0:
             s 6aaca "Okay, I win this game."
             s "You should have a better strategy next time."
-        elif randId == 1:
+        elif random_id == 1:
             s 6acaa "Uh, you have no more turns."
             s "Just work on your tactics and try again."
         else:
             s 6acaa "Don't worry!"
             s "Maybe you'll win next time."
     elif id == 1:
-        $randId = renpy.random.randint(0, 1)
-        if randId == 0:
+        $random_id = renpy.random.randint(0, 1)
+        if random_id == 0:
             s 6aaca "Okay, you win!"
             s 6aeca "Next time I'll be more crafty."
         else:
@@ -597,12 +597,12 @@ label mg_checkers_s_comment(id = 0): #Sayori's comment; -1/1 = Sayori's victory/
             s 6aaaa "You seem to be more clever than me."
             s "Next time I'll try harder."
     elif id == 2:
-        $randId = renpy.random.randint(0, 2)
-        if randId == 0:
+        $random_id = renpy.random.randint(0, 2)
+        if random_id == 0:
             s 6acaa "This battle ended up without any result..."
             s "Despite the talent of both the commanders."
             s "But the war seems to go on, doesn't it?"
-        elif randId == 1:
+        elif random_id == 1:
             s 6acaa "I'm surprised as much as you are."
             s "So, let's just share the point."
         else:
@@ -610,8 +610,8 @@ label mg_checkers_s_comment(id = 0): #Sayori's comment; -1/1 = Sayori's victory/
             s "Because so much people died but their sacrifice is absolutely vain after all."
             s "But maybe, the next one won't be so."
     elif id == -2:
-        $randId = renpy.random.randint(0, 1)
-        if randId == 0:
+        $random_id = renpy.random.randint(0, 1)
+        if random_id == 0:
             s 6acab "Are you giving up?"
             s 6aaaa "Then we'll start again, but I'll get a point for this game."
         else:
