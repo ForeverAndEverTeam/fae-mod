@@ -48,7 +48,7 @@ screen talk_ui():
     style_prefix "choice"
     
     vbox:
-        align (1.0, 0.5)
+        align (0.1, 0.5)
         offset (-10, 0)
         textbutton _("Ask a question") keysym '1' action Function(renpy.call, "s_topicmenu", 0, 0)
         textbutton _("Repeat conversation") keysym '2' action Function(renpy.call, "s_topicmenu", 1, 1)
@@ -66,7 +66,7 @@ screen music_ui(p = 0):
     style_prefix "choice"
     
     vbox:
-        align (1.0, 0.5)
+        align (0.1, 0.5)
         offset (-10, 0)
         
         $keysym_i = 0
@@ -102,7 +102,7 @@ screen minigame_ui():
     style_prefix "choice"
     
     vbox:
-        align (1.0, 0.5)
+        align (0.1, 0.5)
         offset (-10, 0)
         
         for i in mg_list:
@@ -119,7 +119,7 @@ screen topic_ui(ss, cat = 0): #0 = questions, 1 = repeat, 2= feelings, 3 = poetr
     style_prefix "choice"
     
     vbox:
-        align (1.0, 0.5)
+        align (0.1, 0.5)
         offset (-10, 0)
         
         if subscreen == 0:
@@ -175,7 +175,7 @@ screen say_ui():
     style_prefix "choice"
     
     vbox:
-        align (1.0, 0.5)
+        align (0.1, 0.5)
         offset (-10, 0)
         
         textbutton _("I love you") action [Hide("say_ui"), Jump("s_love_you")]
@@ -187,7 +187,7 @@ screen pinfo_ui(): #Player info screen
     default bdate = [persistent.playerbdate.year, persistent.playerbdate.month, persistent.playerbdate.day]
     
     frame:
-        align (1.0, 0.5)
+        align (0.1, 0.5)
         offset (-10, 0)
         background Frame("gui/button/choice_idle_background.png", 5, 5)
         has vbox
