@@ -114,6 +114,7 @@ init -8 python:
             elif callable(self.constructor):
                 self.shown = True
                 self.static = static
+                s_recompose()
                 return self.constructor(self, static)
             else:
                 self.shown = True
@@ -122,6 +123,7 @@ init -8 python:
                     renpy.call_in_new_context(self.constructor, self, static)
                 else:
                     renpy.call(self.constructor, self, static)
+            s_recompose()
         
         def hide(self, nc = False):
             if not self.constructor:

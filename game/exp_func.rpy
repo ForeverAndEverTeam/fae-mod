@@ -19,20 +19,20 @@ init -10 python:
         3: "mouth", 
         4: "eyes", 
         5: "brows",
-        7: "arms"
+        8: "arms"
     }
     #Key = insert position
     CUSTOM_PATHS = {
         0: "hair_back",
         1: "body",
-        6: "hair",
-        8: "hair_front"
+        7: "hair",
+        9: "hair_front"
     }
     BG_PATHS = {
         6: "table"
     }
     SPR_PATHS = {}
-    for i in range(8):
+    for i in range(10):
         SPR_PATHS[i] = EXP_PATHS.get(i) or CUSTOM_PATHS.get(i) or BG_PATHS.get(i)
         
     
@@ -110,7 +110,7 @@ init -10 python:
         if not (t is None or name is None):
             return CUSTOM_TEMPLATES[t].get(name)
     
-    def sayori_compose(exp_code):
+    def sayori_compose(exp_code, bg_loaded = False):
         sprites = []
         print(exp_code)
         arms = exp_code[:-4]
@@ -119,20 +119,24 @@ init -10 python:
         for pos in SPR_PATHS:
             ek = SPR_PATHS[pos]
             sprites.append((0,0))
-            if pos == 7:
+            if pos == 8: #Arm key
                 sprites.append(exp_codes[0][arms].get_image(custom_current['body']))
             elif pos in EXP_PATHS:
                 sprites.append(exp_codes[exp_i+1][exp[exp_i]].get_image())
                 exp_i+=1
             elif pos in CUSTOM_PATHS:
                 sprites.append(CUSTOM_TEMPLATES[ek][custom_current[ek]].get_image())
+            elif bg_loaded:
+                sprites.append(backgrounds.current.sprites[ek].get_image())
             else:
-                sprites.append(backgrounds.current.sprites[ek])
+                del sprites[-1]
+        print(sprites)
         return im.Composite((1280, 720), *sprites)
     
     s_last_frames = []
-    def dyn_s(st, at, *args, **kwargs):
-        frame = backgrounds.current.apply_current_matrix(args[0])
+    def dyn_s(st, at, exp, *args, **kwargs):
+        spr = composed_sprites[exp]
+        frame = backgrounds.current.apply_current_matrix(spr)
         return frame, COLOR_STEP
     def make_dyn_s(from_what):
         return DynamicDisplayable(dyn_s, from_what)
@@ -160,8 +164,8 @@ init -8 python: ## new_exp.rpy code must have order -10<x<-8
     
     for exp in exps:
         composed_sprites[exp] = sayori_compose(exp)
-        renpy.image("sayori "+ exp, make_dyn_s(composed_sprites[exp]))
+        renpy.image("sayori "+ exp, make_dyn_s(exp))
     
-    def recompose_s():
+    def s_recompose(bg_loaded = True):
         for exp in composed_sprites:
-            composed_sprites[exp] = sayori_compose(exp)
+            composed_sprites[exp] = sayori_compose(exp, bg_loaded)
