@@ -202,7 +202,10 @@ init -8 python:
             return self.bgs[self.current_id]
     
     backgrounds = BGList()
+    #Matrix ID constants
+    ID_NIGHT, ID_MORNING, ID_DAY, ID_EVENING = 0, 1, 2, 3
     
+    #Spaceroom initialization
     def sroom_dyn(st, at, *args, **kwargs):
         bg = kwargs["bg"]
         draw_sky()
@@ -229,13 +232,13 @@ init -8 python:
         renpy.scene('bg')
     
     backgrounds['spaceroom'] = Background("spaceroom", "Spaceroom", sroom_c, sroom_d)
-    backgrounds['spaceroom'].matrices[0] = im.matrix((
+    
+    backgrounds['spaceroom'].matrices[ID_NIGHT] = im.matrix((
     0.3,0.1,0,0,0,
     0.075,0.4,0,0,0,
     0.075,0,0.55,0,0,
     0,0,0,1,0))
-    backgrounds['spaceroom'].matrices[1] = mix(backgrounds['spaceroom'].matrices[1],
-        im.matrix.tint(1, 0.7, 0), 0.3)
-    backgrounds['spaceroom'].matrices[3] = mix(backgrounds['spaceroom'].matrices[1],
-        im.matrix.tint(1, 0xc8/255, 0x98/255), 0.4)
+    day_m = backgrounds['spaceroom'].matrices[ID_DAY]
+    backgrounds['spaceroom'].matrices[ID_MORNING] = mix(day_m, im.matrix.tint(1, 0.7, 0), 0.3)
+    backgrounds['spaceroom'].matrices[ID_EVENING] = mix(day_m, im.matrix.tint(1, 0.784, 0.596), 0.3)
     backgrounds.current_id = "spaceroom"
