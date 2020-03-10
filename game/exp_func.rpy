@@ -1,7 +1,7 @@
 init -10 python:
     bg_day = False #Changed by '01bg.rpy', if the current BG has day/high light
     s_ypos = 0
-    COLOR_STEP = 60**2/255 #Time, needed for change a RBG value with get_time_transition_factor by 1
+    COLOR_STEP = (60.0**2)/255.0 #Time, needed for change a RBG value with get_time_transition_factor by 1
     
     if not persistent.customization:
         persistent.customization = {
