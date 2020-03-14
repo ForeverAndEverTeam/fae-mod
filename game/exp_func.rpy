@@ -122,7 +122,10 @@ init -10 python:
             if pos == 8: #Arm key
                 sprites.append(exp_codes[0][arms].get_image(custom_current['body']))
             elif pos in EXP_PATHS:
-                sprites.append(exp_codes[exp_i+1][exp[exp_i]].get_image())
+                eyes_code = exp[2]
+                spr_cat = exp_codes[exp_i+1]
+                spr = spr_cat.get(exp[exp_i]+eyes_code) or spr_cat[exp[exp_i]]
+                sprites.append(spr.get_image())
                 exp_i+=1
             elif pos in CUSTOM_PATHS:
                 sprites.append(CUSTOM_TEMPLATES[ek][custom_current[ek]].get_image())
