@@ -246,6 +246,7 @@ init 10 python:
                 reversi_finish_turn(check_state, True)
             else:
                 reversi.no_moves = True
+                reversi_finish_turn(True, True)
             
     
     def reversi_click(n):
@@ -263,15 +264,12 @@ init 10 python:
         reversi_finish_turn()
 
     
-    def reversi_best_move(party, depth = None, last_move = None, alpha = -64, beta = 64):
-        if depth == 0 or sum(reversi.occupied_cells) >= 64:
-            if not last_move:
-                raise ValueError("last_move can't be None")
-            else:
-                alpha = reversi.occupied_cells[party] - reversi.occupied_cells[0 if party else 1]
+    def reversi_best_move(party, depth = None, alpha = -64, beta = 64):
+        moves = filter(lambda x: x is not None, reversi.selectable)
+        if len(moves) == 0 or depth == 0 or sum(reversi.occupied_cells) >= 64:
+            alpha = reversi.occupied_cells[party] - reversi.occupied_cells[0 if party else 1]
             return alpha, ()
         
-        moves = filter(lambda x: x is not None, reversi.selectable)
         best_moves = []
         for move in moves:
             if alpha >= beta:
