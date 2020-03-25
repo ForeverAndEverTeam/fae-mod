@@ -9,7 +9,7 @@ init -9 python:
     exp_codes[1]['a'] = DummySprite()## Dummy image
     for x in l_range('b','f'):
         exp_codes[1][x] = SpriteInfo('skin', x)
-    for x in l_range('e','f'):
+    for x in 'ef':
         exp_codes[1][x+'c'] = SpriteInfo('skin', x+'c')
     
     #Mouths
@@ -21,6 +21,9 @@ init -9 python:
         exp_codes[3][x] = SpriteInfo('eyes', x)
     exp_codes[3]['cc'] = SpriteInfo('eyes', 'cc')
     exp_codes[3]['ec'] = SpriteInfo('eyes', 'ec')
+    for ch in 'ef':
+        exp_codes[3]['c' + ch] = exp_codes[3]['cc']
+        exp_codes[3]['e' + ch] = exp_codes[3]['ec']
     
     #Eyebrows
     for x in l_range('a','d'):
