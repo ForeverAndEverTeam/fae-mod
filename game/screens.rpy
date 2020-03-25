@@ -990,6 +990,12 @@ screen preferences():
                     style_prefix "check"
                     label _("Background")
                     textbutton _('Static') action [SetField(persistent, "static_bg", not persistent.static_bg), SetDict(globals(), 'update_bg', True), SelectedIf(persistent.static_bg)]
+                vbox:
+                    style_prefix "radio"
+                    label _("Day/Night Cycle")
+                    textbutton _('Smooth{#D/N Cycle}') action [SetField(persistent, "day_night_cycle", 2), SetDict(globals(), 'update_bg', True), SelectedIf(persistent.day_night_cycle == 2)]
+                    textbutton _('On') action [SetField(persistent, "day_night_cycle", 1), SetDict(globals(), 'update_bg', True), SelectedIf(persistent.day_night_cycle == 1)]
+                    textbutton _('Off (Always day)') action [SetField(persistent, "day_night_cycle", 0), SetDict(globals(), 'update_bg', True), SelectedIf(persistent.day_night_cycle == 0)]
                     
 
             null height (4 * gui.pref_spacing)

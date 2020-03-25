@@ -1,9 +1,10 @@
 default persistent.current_bg = 'spaceroom'
 default persistent.static_bg = False
+default persistent.day_night_cycle = 2
 default matrix_mix_times = 0
 
 #Spaceroom displayables
-
+image sroom_night_static = "mod_assets/images/bg/spaceroom_static.png"
 image mask_child:
     "images/cg/monika/child_2.png"
     xtile 2
@@ -19,6 +20,7 @@ image mask_mask_flip:
 image maskb:
     "images/cg/monika/maskb.png"
     xtile 3
+  
 
 image mask_test = AnimatedMask("#ff6000", "mask_mask", "maskb", 0.10, 32)
 image mask_test2 = AnimatedMask("#ffffff", "mask_mask", "maskb", 0.03, 16)
@@ -97,14 +99,14 @@ init -8 python:
     
     def dyn_sky(st, at, *args, **kwargs):
         tr = get_time_transition_factor()
-        color = get_sky_color(get_time_of_day(), tr)
+        color = get_sky_color(get_time_of_day(for_bg = True), tr)
         color = "#%02x%02x%02x" % tuple(color)
         sky.color = Color(color)
         return sky, COLOR_STEP
     
     def dyn_clouds(st, at, *args, **kwargs):
         im = Image("images/cg/monika/mask.png")
-        return backgrounds.current.apply_current_matrix(im), 1/30
+        return backgrounds.current.apply_current_matrix(im), COLOR_STEP
     
     class Background:
         defualt_matrix = im.matrix((
@@ -161,11 +163,11 @@ init -8 python:
         def get_current_matrix(self):
             global matrix_mix_times
             tr = get_time_transition_factor()
-            cm = self.matrices[get_time_of_day()]
+            cm = self.matrices[get_time_of_day(for_bg = True)]
             if tr == 0:
                 return cm
             else:
-                nm = self.matrices[(get_time_of_day() + 1) % 4]
+                nm = self.matrices[(get_time_of_day(for_bg = True) + 1) % 4]
                 matrix_mix_times += 1
                 if matrix_mix_times % 500 == 0:
                     renpy.free_memory() #Memory optimization
@@ -214,7 +216,7 @@ init -8 python:
         def hide_current(self, change = False):
             if not self.current:
                 raise ValueError("None BG is shown")
-            r = self.bgs[self.current].hide()
+            r = self.current.hide()
             if not change:
                 self.current = None
             return r
@@ -234,7 +236,7 @@ init -8 python:
         return frame, COLOR_STEP
     
     def sroom_mix_f (trans, st, at):
-            op, tod, tr = 0.0, get_time_of_day(), get_time_transition_factor()
+            op, tod, tr = 0.0, get_time_of_day(for_bg = True), get_time_transition_factor()
             if tod == 0:
                 op = 1.0
             elif tod < 3:
@@ -245,7 +247,7 @@ init -8 python:
             return COLOR_STEP
 
     def sroom_mix_fday (trans, st, at):
-            op, tod, tr = 0.0, get_time_of_day(), get_time_transition_factor()
+            op, tod, tr = 0.0, get_time_of_day(for_bg = True), get_time_transition_factor()
             if tod == 0:
                 op = 0.0
             elif tod < 3:
@@ -261,6 +263,8 @@ init -8 python:
         if not static:
             renpy.show('dclouds', at_list = [Transform(function = sroom_mix_fday)], layer = 'bg')
             renpy.show('sroom_night_mask', at_list = [Transform(function = sroom_mix_f)], layer = 'bg')
+        else:
+            renpy.show('sroom_night_static', at_list = [Transform(function = sroom_mix_f)], layer = 'bg')
         droom = DynamicDisplayable(sroom_dyn, bg = self)
         renpy.show("bg_room", what = droom, layer = 'bg', zorder = 2)
         
