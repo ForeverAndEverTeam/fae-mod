@@ -1,5 +1,6 @@
 default persistent.current_bg = 'spaceroom'
 default persistent.static_bg = False
+default matrix_mix_times = 0
 
 #Spaceroom displayables
 
@@ -15,7 +16,6 @@ image mask_mask_flip:
     "images/cg/monika/mask.png"
     xtile 3 xzoom -1
 
-
 image maskb:
     "images/cg/monika/maskb.png"
     xtile 3
@@ -24,6 +24,21 @@ image mask_test = AnimatedMask("#ff6000", "mask_mask", "maskb", 0.10, 32)
 image mask_test2 = AnimatedMask("#ffffff", "mask_mask", "maskb", 0.03, 16)
 image mask_test3 = AnimatedMask("#ff6000", "mask_mask_flip", "maskb", 0.10, 32)
 image mask_test4 = AnimatedMask("#ffffff", "mask_mask_flip", "maskb", 0.03, 16)
+
+transform bg_alpha(t = 1.0, x = 0, y = 0):
+    xpos x
+    ypos y
+    alpha t
+    linear COLOR_STEP alpha (t + 1/255)
+
+image dclouds:
+    DynamicDisplayable(dyn_clouds)
+    xtile 3 subpixel True
+    block:
+        xoffset 1280
+        linear 600 xoffset 0
+        repeat
+
 
 image mask_2:
     "images/cg/monika/mask_2.png"
@@ -47,11 +62,10 @@ image monika_room = "mod_assets/images/bg/spaceroom.png"
 #    function monika_alpha
 #
 #
-#image room_glitch = "images/cg/monika/monika_bg_glitch.png"
-#
-#image rm = LiveComposite((1280, 720), (0, 0), "mask_test", (0, 0), "mask_test2", pos = (0,380), zoom = 0.25)
-#image rm2 = LiveComposite((1280, 720), (0, 0), "mask_test3", (0, 0), "mask_test4", pos = (600,380), zoom = 0.25)
-#
+image room_glitch = "images/cg/monika/monika_bg_glitch.png"
+image rm = LiveComposite((1280, 720), (0, 0), "mask_test", (0, 0), "mask_test2", pos = (0,380), zoom = 0.25)
+image rm2 = LiveComposite((1280, 720), (0, 0), "mask_test3", (0, 0), "mask_test4", pos = (600,380), zoom = 0.25)
+image sroom_night_mask = LiveComposite((1280, 720), (0, 0), "mask_2", (0, 0), "mask_3", (0, 0), "rm",  (0, 0), "rm2")
 
 init -8 python:
     def mix(a, b, c):
@@ -87,6 +101,10 @@ init -8 python:
         color = "#%02x%02x%02x" % tuple(color)
         sky.color = Color(color)
         return sky, COLOR_STEP
+    
+    def dyn_clouds(st, at, *args, **kwargs):
+        im = Image("images/cg/monika/mask.png")
+        return backgrounds.current.apply_current_matrix(im), 1/30
     
     class Background:
         defualt_matrix = im.matrix((
@@ -141,12 +159,16 @@ init -8 python:
                     renpy.call(self.destructor)
         
         def get_current_matrix(self):
+            global matrix_mix_times
             tr = get_time_transition_factor()
             cm = self.matrices[get_time_of_day()]
             if tr == 0:
                 return cm
             else:
                 nm = self.matrices[(get_time_of_day() + 1) % 4]
+                matrix_mix_times += 1
+                if matrix_mix_times % 500 == 0:
+                    renpy.free_memory() #Memory optimization
                 return mix(cm, nm, tr)
         
         def apply_current_matrix(self,img,**props):
@@ -209,23 +231,37 @@ init -8 python:
     def sroom_dyn(st, at, *args, **kwargs):
         bg = kwargs["bg"]
         frame = bg.apply_current_matrix("mod_assets/images/bg/spaceroom.png")
-        if st % COLOR_STEP <= 1/60:
-            renpy.free_memory() #Matrix creates sp much of garbage that its better to collect it manually
         return frame, COLOR_STEP
+    
+    def sroom_mix_f (trans, st, at):
+            op, tod, tr = 0.0, get_time_of_day(), get_time_transition_factor()
+            if tod == 0:
+                op = 1.0
+            elif tod < 3:
+                op = 0.0
+            else:
+                op = 4 * max(0, tr - 0.75)
+            trans.alpha = op
+            return COLOR_STEP
+
+    def sroom_mix_fday (trans, st, at):
+            op, tod, tr = 0.0, get_time_of_day(), get_time_transition_factor()
+            if tod == 0:
+                op = 0.0
+            elif tod < 3:
+                op = 1.0
+            else:
+                op = 1.0 - tr
+            trans.alpha = op
+            return COLOR_STEP
             
     def sroom_c(self, static = False):
-        # if static:
-            # renpy.show('monika_room_static', layer = 'bg')
-        # else:
-            # renpy.show('mask_2', layer = 'bg')
-            # renpy.show('mask_3', layer = 'bg')
-            # renpy.show('rm', layer = 'bg')
-            # renpy.show('rm2', layer = 'bg')
-            # renpy.show('monika_room', layer = 'bg')
-            # renpy.show('monika_room_highlight', layer = 'bg')
         dsky = DynamicDisplayable(dyn_sky)
-        droom = DynamicDisplayable(sroom_dyn, bg = self)
         renpy.show("bg", what = dsky, layer = 'bg', zorder = 0)
+        if not static:
+            renpy.show('dclouds', at_list = [Transform(function = sroom_mix_fday)], layer = 'bg')
+            renpy.show('sroom_night_mask', at_list = [Transform(function = sroom_mix_f)], layer = 'bg')
+        droom = DynamicDisplayable(sroom_dyn, bg = self)
         renpy.show("bg_room", what = droom, layer = 'bg', zorder = 2)
         
     def sroom_d(self):
