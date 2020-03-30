@@ -45,9 +45,14 @@ style sayori_text:
     color "#000"
     outlines []
 
-#Unicode Sayori's style
+#Sayori's Unicode style
 style sayori_text_unicode is sayori_text:
     font "mod_assets/fonts/gnyrwn971.ttf"
+    size 26
+
+#Sayori's Chinese style
+style sayori_text_zho is sayori_text:
+    font "mod_assets/fonts/zho/SentyTEA.ttf"
     size 26
 
 init -10 python:
@@ -85,6 +90,7 @@ I want breakfast."""
     poem_sunshine.title["rus"] = "Дорогой рассвет"
     poem_sunshine.title["epo"] = "Kara Sunlum'"
     poem_sunshine.title["esp"] = "Querida luz del sol"
+    poem_sunshine.title["chs"] = "美妙阳光"
     
     poem_sunshine.text["rus"] = """\
 Лучами бьёшься ты сквозь веки,
@@ -134,6 +140,22 @@ Pero no estoy enfadada.
 
 Tengo hambre, quiero desayunar."""
 
+    poem_sunshine.text["chs"] = """\
+清晨你透过梦境照亮我的世界
+似乎在传达对我的思念
+亲吻前额催促我坐起
+帮我的眼睛擦去睡意
+
+是在邀请我出门散心？
+是在鼓励我拭去阴云？
+我抬起头，天空正蓝
+你当做秘密，而我信任你
+
+若不是因为你，我将会长眠
+但，我没疯。
+
+该去准备早餐了"""
+
 #Bottles
     poem_bottles = Poem(
     author = "sayori",
@@ -182,6 +204,7 @@ Inside my head."""
     poem_bottles.title['rus'] = "Склянки"
     poem_bottles.title['epo'] = "Boteloj"
     poem_bottles.title['esp'] = "Botellas"
+    poem_bottles.title['chs'] = "瓶子"
 
     poem_bottles.text['rus'] = """\
 Я открываю мозг как банку.
@@ -307,6 +330,47 @@ Todos están gritando, suplicando. Algo.
 Pero todo lo que oigo es eco, eco, eco, eco, eco, eco.
 Dentro de mi cabeza."""
 
+    poem_bottles.text['chs'] = """\
+我像曲奇罐的盖子一样揭开了我的头
+这是个我存放了一切梦想的地方
+阳光小球，像是群猫咪一般蹭成团
+我伸出手，拇指和食指挑出一颗
+它温暖而又惬意
+但没时间可浪费了！我把它封存在瓶中
+摆满瓶子的架上收藏又多了一个
+快乐的情绪，快乐的情绪，快乐的情绪在瓶中，排排坐
+
+我的收藏带给我朋友
+每瓶的星光都能拯救
+朋友不时会有伤心
+那就用一瓶来挽救
+
+夜复一夜，更多梦
+友去友来，更多瓶
+我的手指越来越深入
+就像探索黑暗的洞穴，寻找角落和裂缝中的秘密
+挖啊挖
+擦啊擦
+
+我吹去瓶盖上的灰
+似乎时间并未流逝
+我那空荡荡的架子本该用到更多
+我的朋友从锁着的门前看了看我
+
+朋友们蜂拥而入，在我准备万全的刹那
+行色匆匆，我的收藏如此令人依赖吗
+
+我狂热地将它们拉下来，一个接一个
+将它们分发给每一个密友，一个不漏
+每个瓶子，一个不漏
+可每当我松手，瓶子就粉碎在我的脚下
+快乐的情绪，快乐的情绪，快乐的情绪在地上，碎开成了花
+
+它们是为我的朋友准备的，为陷入低谷的朋友
+她们全部在嘶吼，在抱怨，在恳求
+但我听到的只有回声回声回声回声
+在脑海响彻"""
+
 #The Last Flower (name by AlexanDDOS)
     poem_flower = Poem(author = "sayori", title = "The Last Flower")
     poem_flower.text['eng'] = """\
@@ -323,6 +387,7 @@ Is but a barren wasteland!"""
     poem_flower.title['rus'] = "Последний цветок"
     poem_flower.title['epo'] = "Resta Floro"
     poem_flower.title['esp'] = "La Última Flor"
+    poem_flower.title['chs'] = "最后的花朵"
 
     poem_flower.text['epo'] = """\
 Inter miaj gamboj
@@ -356,6 +421,17 @@ Pero, ¿a qué fines he convocado esta alegría?
 Por ahora, cuando miro en todas las direcciones.
 El campo una vez próspero ante mí
 ¡No es más que un desierto inhóspito!"""
+
+    poem_flower.text['chs'] = """\
+在我的脚下
+那最后一朵花召唤着我。
+我扭断枝干，解除根的束缚
+享受着这指尖的愉悦。
+
+但是快乐的代价是什么呢？
+我望向四周
+眼前那片曾经繁荣的原野
+已是一片荒原！"""
 
 #Get Out of My Head (aka %)
     poem_last = Poem(
@@ -417,6 +493,21 @@ Sal de mi cabeza antes de que termine de escribir este poema.\n\n\n\n\n\n\n
 Pero el poema nunca fue terminado.
 Solo se deja de mover.'''
 
+    poem_last.text['chs'] = '''\
+滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的
+滚。
+出。
+我。
+的。
+脑。
+子。\n\n\n
+在我做对你最好的事前滚出我的脑子。
+在我听她说任何事之前滚出我的脑子。
+在我表示我多么爱你前滚出我的脑子。
+在我写完这首诗前请你滚出我的脑子。
+但是这首诗永远无法完结。\n\n\n\n\n\n\n
+它只会暂停。'''
+
 
 #Fruits of the life (by AlexanDDOS)
     poem_fruits = Poem(
@@ -447,8 +538,10 @@ To find a way to make others feel the fruits the same.'''
     poem_fruits.title["rus"] = "Плоды древа жизни"
     poem_fruits.title["epo"] = "Vivarbaj Fruktoj"
     poem_fruits.title["esp"] = "Frutas de la vida"
+    poem_fruits.title["chs"] = "生命之果"
 
-    poem_fruits.text["epo"] = """La vivarb\' donas siajn fruktojn.
+    poem_fruits.text["epo"] = """\
+La vivarb\' donas siajn fruktojn.
 Ĉiuj fruktoj vide tre diversas.
 Neniu konas ilian veran guston,
 Sed pri ili oni tre diverse diras.
@@ -510,6 +603,27 @@ Con la persona que me ayudó a atrapar el verdadero sabor.
 Pero no debería olvidarme de hacer mi verdadero trabajo aquí:
 Encontrar una manera de hacer que otros sientan las frutas de la misma manera que yo."""
 
+    poem_fruits.text["chs"] = """\
+宇宙给予人类生命的果实
+它们形形色色
+但没人知道它们究竟是何种味道
+因为大家都以自己的方式去品尝
+
+有人总觉得它们苦涩
+可其中也不乏很棒的果实
+有人却觉得它们十分香甜可口
+可他们可不在乎果实的好坏
+
+对我而言，它们尝起来像甘草糖一样
+在我尝了几口之后
+需要细品其甜
+以此摆脱那些糟糕的感觉
+
+我现在只想要品尝我自己的果实
+同那个，助我捕获果实真实味道的人一起
+但我不应在这玩忽职守
+也应帮助别人品尝到这生命之果"""
+
 #Falling Angel (By AlexanDDOS)
     poem_angel = Poem(
     author = "sayori",
@@ -547,6 +661,7 @@ Is it not what you want to do with me after all?"""
     poem_angel.title['rus'] = "Падший ангел"
     poem_angel.title['epo'] = "Falinta Angelo"
     poem_angel.title['esp'] = "Ángel Caído"
+    poem_angel.title['chs'] = "堕落的天使"
     
     poem_angel.text['rus'] = """\
 Прости меня за грех ты мой.
@@ -635,6 +750,35 @@ Córtame en pedazos. Golpéame por mi fechoría.
 Cuélgame. Haz tu justa venganza.
 ¿No es lo que quieres hacer conmigo después de todo?"""
 
+    poem_angel.text['chs'] = """\
+我为我犯下的滔天大罪道歉。
+我曾以为这就是我想要的
+我只是想要被爱，却适得其反成为堕落了的天使。
+
+绿色双瞳饱含嫉妒的天使
+
+黑色双翅巨大无比的天使
+
+神权在手且不可控的天使
+
+本应要去监视着她的天使
+
+    让她去谋杀受害者。
+
+现在我就应倒在这正燃烧的粗劣地面上
+以曾受过的伤害之名 我让她奉还给我所有的朋友了
+那些环绕在她们纤细颈部的痛楚
+那三刀深入且血腥的穿刺
+
+
+还有我，心又一次碎掉的感觉。
+
+
+再删两次我的文件吧
+杀了我，因为我的罪行再狠揍我一顿。
+吊死我，报仇雪恨吧
+这难道不正如你所愿？"""
+
 # A Leaf (By AlexanDDOS)
     poem_leaf = Poem(
     author = "sayori",
@@ -679,6 +823,7 @@ Like I can be more than just a half-dead leaf."""
     poem_leaf.title['rus'] = "Листок"
     poem_leaf.title['epo'] = "Foliaĉo"
     poem_leaf.title['esp'] ="Una Hoja"
+    poem_leaf.title['chs'] = "一片飞叶"
 
     poem_leaf.text['rus'] = """\
 Я лишь листок, что на ветру,
@@ -777,6 +922,42 @@ Incluso siento que tengo más poder.
 Como si pudiera llegar a la cima del Everest,
 Como si pudiera ser algo más que una hoja medio muerta."""
 
+    poem_leaf.text['chs'] = """\
+我是叶
+飞舞在我信仰的风中
+我的生命并非虚度
+我真正的命运，
+是全力以赴地
+为世界做出自己的贡献，
+作为枯叶
+一棵树的糟粕。
+
+我乘着急骤的气流
+感受着信念之风的力量
+却总是缓慢飘落
+因为我的存在毫无希望可言。
+
+可一旦生命之风
+突然停止吹动
+就没有什么能再阻止我堕落了。
+所以我离那毫无生机的柏油路越来越近
+感受着地面上粗糙的深灰纹理
+
+就是这样了，这就是我的结局
+我将迅速腐化，不再鲜活
+至少我体内的某些力量
+支撑它存于这残酷的游戏。
+
+但那是什么？是一阵从没见过的风吗？
+那会再次书写我的生命之诗吗？
+没错！就是它！我的救赎！
+我感受到，它助我战胜了重力
+
+我飞起来了！又飞起来了！
+我甚至感到比以前更加有力
+好像能到达珠峰顶端似的
+好像我不是一片即将腐化的枯叶似的。"""
+
     # Prose Poem (By AlexanDDOS)
     poem_prose = Poem(
     author = "sayori",
@@ -814,6 +995,7 @@ Do mi nun diras, ke absoluta nigra, kiel absoluta blanko, neniam 'as."""
     poem_prose.title['rus'] = "Стихопроза"
     poem_prose.title['epo'] = "Prozversaĵo"
     poem_prose.title['esp'] = "Poema en Prosa"
+    poem_prose.title['chs'] = "散文诗"
 
     poem_prose.text['esp'] = """\
 Soy una luz negra. Soy un fuego frío. \
@@ -824,6 +1006,16 @@ Incluso este texto es prosa y poema \
 Incluso solía ser una mezcla de alegría y tristeza abrumadora. \
 Y no hay nada que sea absolutamente negro. \
 Así como no hay nada que sea absolutamente blanco."""
+
+    poem_prose.text['chs'] = """\
+我是黑色的光束。我是冰冷的火焰。\
+我是个不杀人的士兵。我是个无知的智者。\
+为何人们总认为，对立面不可并存？\
+难道他们看不到，一切都被灰色取代？\
+即便这段文本也是介于散文和诗的范畴，\
+即便我也曾有悲喜交加之感。\
+这世上哪有什么真正的黑，\
+正如没有绝对的白。"""
 
      
     # Afterlight (By AlexanDDOS)
@@ -901,6 +1093,23 @@ Sus cuerdas eran demasiado pesadas para mí.
 Ahora voy a impedir la obra,
 Donde todo el mundo no puede evitar el dolor."""
 
+    poem_afterlight.title['chs'] = "余晖"
+    poem_afterlight.text['chs'] = """\
+我似乎看见了我原来从未见过的东西
+好像刚刚才有这种感受。
+我能看到这里曾发生的一切
+我开始做我以前不知如何做的事情。
+
+我只看见这儿有一片余晖，
+逐渐驱散我四周的黑暗。
+它说我的人生只是一场木偶戏
+所以我也只是一个受某人操纵的傀儡
+
+但我如今重获自由身，不再被操控
+提线对我而言过于沉重。
+现在我要阻止这场
+为所有人带去苦痛的闹剧。"""
+
 # A Valentine (By AlexanDDOS)
 # Call with these args: (poem_val, "paper_val", 200, 0.5, 360)
     poem_val = Poem(
@@ -916,6 +1125,7 @@ Between the worlds, I truly love him.""",
     poem_val.title['rus'] = "Валентинка"
     poem_val.title['epo'] = "Korpoŝtkarto"
     poem_val.title['esp'] = "Una Carta de San Valentín"
+    poem_val.title['chs'] = "意中人"
     
     poem_val.text['rus'] = """\
 Люблю я человека, что здесь является никем,
@@ -934,6 +1144,12 @@ Tengo a alguien, que aquí no es nadie.
 Él vive un un lugar, que aquí no existe.
 Pero auque haya un muro
 Entre nuestros mundos, verdaderamente lo amo."""
+
+    poem_val.text['chs'] = """\
+我心有所属 但这不是他的归宿
+他居于某处 而那里无名又无路
+即便有屏障之隔 世界之差
+我依旧深爱着他。"""
 
 screen poem(currentpoem, paper="paper", null_h = 40, align = 0.0, xpos = None):
     $lc = cur_lang().code or 'eng'

@@ -9,7 +9,7 @@ init -10 python:
             self.unicode = unicode #Does language use non-ASCII characters? (Then we replace all ASCII fonts with their Unicode analogs)
             self.s_names = s_names #Tuple of Sayori's name variants in the language
             self.unix_code = unix_code or code[:2] # Unix locale code's 2 first letters
-            self.wip = wip #the language pack is not complete, so it's available only
+            self.wip = False if (wip is None) else wip #the language pack is not complete, so it's available only for developers
     
     lang_dict = OrderedDict() #Language list
     lang_dict["eng"] = GameLang(None, _("English"), False, ("Sayori", ), "en"),
@@ -17,6 +17,7 @@ init -10 python:
     lang_dict["epo"] = GameLang("epo", _("Esperanto"), True, ("Sajori", "Sayori"), "eo"),
     lang_dict["esp"] = GameLang("esp", _("Spanish"), False, ("Sayori", ), "es")
     lang_dict["tok"] = GameLang("tok", _("Toki Pona"), False, ("Sajoli", "Sajowi"), "tok", True)
+    lang_dict["zho"] = GameLang("zho", _("Chinese"), True, ("纱世里", ), "zh", True)
     
     def cur_lang():
         lang = lang_dict.get(_preferences.language) or lang_dict["eng"]
@@ -32,13 +33,15 @@ init -10 python:
             lang = lang[0]
         return lang and lang.s_names or get_s_names("eng")
     
-    s_name_list = ["sayori", "sajori", "саёри", "сайори", "саери"] #All known by the mod auther(s) lowercased variants of Sayori's name
+    s_name_list = ["sayori", "sajori", "саёри", "сайори", "саери", "纱世里", "sajoli", "sajowi"] #All known by the mod auther(s) lowercased variants of Sayori's name
     
     def s_text_style(lang = None):
         if not lang:
             lang = cur_lang()
         
-        if lang.unicode:
+        if lang.code == "zho":
+            return "sayori_text_zho"
+        elif lang.unicode:
             return "sayori_text_unicode"
         else:
             return "sayori_text"

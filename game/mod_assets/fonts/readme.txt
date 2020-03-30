@@ -1,7 +1,7 @@
-I'm going to me the mod multi-language, so I decided to replace some fonts with their unicode-compatible analogs:
----- Original font ---- New Font ---- Notes ----
-    Aller_Rg    Lato (Medium)    Standard game font
-    Riffic Free    Comic Relief (Bold)    Name & menu font
-    Halogen    Comic Relief    Name & menu font
-    Verily Serif Mono    GNUTypewriter    Creppy replica font
-    Hashtag    Gunny Rewritten   Sayori's handwritting
+There's a list of original fonts and their analogs for the unicode mode
+--- Original font ------ Unicode Font --------- Chinese Fallback --- Notes ----
+    Aller_Rg             Lato (Medium)          SimHei (wrht.ttf)    Standard game font
+    Riffic Free          Comic Relief (Bold)    SimHei (wrht.ttf)    Name & menu font
+    Halogen              Comic Relief           SimHei (wrht.ttf)    Settings font
+    Verily Serif Mono    GNUTypewriter          Chinese Robot        Creepy/edited line font
+    Hashtag              Gunny Rewritten        SentyTEA             Sayori's handwritting
