@@ -1,6 +1,5 @@
 init -10 python:
     #Greeting class
-    
     class Greeting:
         def __init__(self, label, available = True):
             self.label = label
@@ -118,6 +117,17 @@ init -10 python:
     def get_random_gretting(chance = renpy.random.random(), gl = greetings):
         return gl(chance)
     
+    #Filter out unavailable languages & fix the "OrderedDict of tuples" bug
+    def filter_lang():
+        values = lang_dict.values()
+        r = []
+        for x in values:
+            if type(x) == tuple:
+                x = x[0]
+            if x.wip or config.developer:
+              r.append(x)
+        return r
+    
 #Normal greetings
 label s_greeting_1: #The really first greeting of this mod
     show sayori 6aeaa at ss1 zorder 2
@@ -136,12 +146,10 @@ label s_greeting_3: #Greeting in a random mod langauge expecting the current
     show sayori 6aaaa at ss1 zorder 2
     python:
         greeting_lang = None
+        available_langs = filter_lang()
         while not greeting_lang or greeting_lang.code == _preferences.language:
-            greeting_lang = renpy.random.choice(lang_dict.values())
-            if type(greeting_lang) == tuple:
-                greeting_lang = greeting_lang[0]
-        
-        
+            greeting_lang = renpy.random.choice(available_langs)
+            
         if greeting_lang.code:
             renpy.call('s_greeting_3_' + greeting_lang.code)
         else:
@@ -183,13 +191,19 @@ label s_greeting_3_epo:
     s 6aeca "Kia ĝojo revidi vin!{#And this one too}"
     return
 
-label s_greeting_4_esp:
+label s_greeting_3_esp:
     s "¡Hola Cariño!{#Don't translate this string from Spanish!}"
     s 6aeca "¡Qué alegría verte de nuevo!{#And this one too}"
 
-label s_greeting_4_tok:
-    s "sina pona o toki!{#Don't translate this string from Toki Pona!}"
+label s_greeting_3_tok:
+    s "sina pona o, toki!{#Don't translate this string from Toki Pona!}"
     s 6aeca "sina lon ni la mi pilin pona!{#And this one too}"
+    return
+    
+label s_greeting_3_zho:
+    s "{font=mod_assets/fonts/zho/wrht.ttf}你好，亲爱的！{/font}{#Don't translate this string from Chinese!}"
+    s "{font=mod_assets/fonts/zho/wrht.ttf}好开心能再次见到你。{/font}{#And this one too}"
+    return
 
 label s_greeting_4:
     show sayori 7aaaa at ss1 zorder 2
