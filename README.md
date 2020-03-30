@@ -8,7 +8,7 @@ After the release of [Monika After Story](https://github.com/Monika-After-Story/
 ## Features  
 As of now, I am trying to implement most of the MAS features, including player questions and mini-games. The dialogue was written by me and most of them were reviwed by proofreaders and is based on the original game story as well as Sayori's character and experiences (toning down the worst character traits, although).  
   
-This mod is available in multiple languages. Now you can select either English or Russian or Esperanto as a game language. I'm also planning to allow others to submit translations but as of now, I can't say for sure.
+This mod is available in multiple languages. Now you can select one of few game languages besides English. If you want to add your own language, read [this Wiki aritcle](https://github.com/AlexanDDOS/fae-mod/wiki/Translator-Guidelines).
 
 ## Credits  
 **Programming:**  
