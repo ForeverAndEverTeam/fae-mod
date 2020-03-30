@@ -90,7 +90,7 @@ I want breakfast."""
     poem_sunshine.title["rus"] = "Дорогой рассвет"
     poem_sunshine.title["epo"] = "Kara Sunlum'"
     poem_sunshine.title["esp"] = "Querida luz del sol"
-    poem_sunshine.title["chs"] = "美妙阳光"
+    poem_sunshine.title["zho"] = "美妙阳光"
     
     poem_sunshine.text["rus"] = """\
 Лучами бьёшься ты сквозь веки,
@@ -140,7 +140,7 @@ Pero no estoy enfadada.
 
 Tengo hambre, quiero desayunar."""
 
-    poem_sunshine.text["chs"] = """\
+    poem_sunshine.text["zho"] = """\
 清晨你透过梦境照亮我的世界
 似乎在传达对我的思念
 亲吻前额催促我坐起
@@ -204,7 +204,7 @@ Inside my head."""
     poem_bottles.title['rus'] = "Склянки"
     poem_bottles.title['epo'] = "Boteloj"
     poem_bottles.title['esp'] = "Botellas"
-    poem_bottles.title['chs'] = "瓶子"
+    poem_bottles.title['zho'] = "瓶子"
 
     poem_bottles.text['rus'] = """\
 Я открываю мозг как банку.
@@ -330,7 +330,7 @@ Todos están gritando, suplicando. Algo.
 Pero todo lo que oigo es eco, eco, eco, eco, eco, eco.
 Dentro de mi cabeza."""
 
-    poem_bottles.text['chs'] = """\
+    poem_bottles.text['zho'] = """\
 我像曲奇罐的盖子一样揭开了我的头
 这是个我存放了一切梦想的地方
 阳光小球，像是群猫咪一般蹭成团
@@ -387,7 +387,7 @@ Is but a barren wasteland!"""
     poem_flower.title['rus'] = "Последний цветок"
     poem_flower.title['epo'] = "Resta Floro"
     poem_flower.title['esp'] = "La Última Flor"
-    poem_flower.title['chs'] = "最后的花朵"
+    poem_flower.title['zho'] = "最后的花朵"
 
     poem_flower.text['epo'] = """\
 Inter miaj gamboj
@@ -422,7 +422,7 @@ Por ahora, cuando miro en todas las direcciones.
 El campo una vez próspero ante mí
 ¡No es más que un desierto inhóspito!"""
 
-    poem_flower.text['chs'] = """\
+    poem_flower.text['zho'] = """\
 在我的脚下
 那最后一朵花召唤着我。
 我扭断枝干，解除根的束缚
@@ -493,7 +493,7 @@ Sal de mi cabeza antes de que termine de escribir este poema.\n\n\n\n\n\n\n
 Pero el poema nunca fue terminado.
 Solo se deja de mover.'''
 
-    poem_last.text['chs'] = '''\
+    poem_last.text['zho'] = '''\
 滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的
 滚。
 出。
@@ -538,7 +538,7 @@ To find a way to make others feel the fruits the same.'''
     poem_fruits.title["rus"] = "Плоды древа жизни"
     poem_fruits.title["epo"] = "Vivarbaj Fruktoj"
     poem_fruits.title["esp"] = "Frutas de la vida"
-    poem_fruits.title["chs"] = "生命之果"
+    poem_fruits.title["zho"] = "生命之果"
 
     poem_fruits.text["epo"] = """\
 La vivarb\' donas siajn fruktojn.
@@ -603,7 +603,7 @@ Con la persona que me ayudó a atrapar el verdadero sabor.
 Pero no debería olvidarme de hacer mi verdadero trabajo aquí:
 Encontrar una manera de hacer que otros sientan las frutas de la misma manera que yo."""
 
-    poem_fruits.text["chs"] = """\
+    poem_fruits.text["zho"] = """\
 宇宙给予人类生命的果实
 它们形形色色
 但没人知道它们究竟是何种味道
@@ -661,7 +661,7 @@ Is it not what you want to do with me after all?"""
     poem_angel.title['rus'] = "Падший ангел"
     poem_angel.title['epo'] = "Falinta Angelo"
     poem_angel.title['esp'] = "Ángel Caído"
-    poem_angel.title['chs'] = "堕落的天使"
+    poem_angel.title['zho'] = "堕落的天使"
     
     poem_angel.text['rus'] = """\
 Прости меня за грех ты мой.
@@ -750,7 +750,7 @@ Córtame en pedazos. Golpéame por mi fechoría.
 Cuélgame. Haz tu justa venganza.
 ¿No es lo que quieres hacer conmigo después de todo?"""
 
-    poem_angel.text['chs'] = """\
+    poem_angel.text['zho'] = """\
 我为我犯下的滔天大罪道歉。
 我曾以为这就是我想要的
 我只是想要被爱，却适得其反成为堕落了的天使。
@@ -823,7 +823,7 @@ Like I can be more than just a half-dead leaf."""
     poem_leaf.title['rus'] = "Листок"
     poem_leaf.title['epo'] = "Foliaĉo"
     poem_leaf.title['esp'] ="Una Hoja"
-    poem_leaf.title['chs'] = "一片飞叶"
+    poem_leaf.title['zho'] = "一片飞叶"
 
     poem_leaf.text['rus'] = """\
 Я лишь листок, что на ветру,
@@ -922,7 +922,7 @@ Incluso siento que tengo más poder.
 Como si pudiera llegar a la cima del Everest,
 Como si pudiera ser algo más que una hoja medio muerta."""
 
-    poem_leaf.text['chs'] = """\
+    poem_leaf.text['zho'] = """\
 我是叶
 飞舞在我信仰的风中
 我的生命并非虚度
@@ -995,7 +995,7 @@ Do mi nun diras, ke absoluta nigra, kiel absoluta blanko, neniam 'as."""
     poem_prose.title['rus'] = "Стихопроза"
     poem_prose.title['epo'] = "Prozversaĵo"
     poem_prose.title['esp'] = "Poema en Prosa"
-    poem_prose.title['chs'] = "散文诗"
+    poem_prose.title['zho'] = "散文诗"
 
     poem_prose.text['esp'] = """\
 Soy una luz negra. Soy un fuego frío. \
@@ -1007,7 +1007,7 @@ Incluso solía ser una mezcla de alegría y tristeza abrumadora. \
 Y no hay nada que sea absolutamente negro. \
 Así como no hay nada que sea absolutamente blanco."""
 
-    poem_prose.text['chs'] = """\
+    poem_prose.text['zho'] = """\
 我是黑色的光束。我是冰冷的火焰。\
 我是个不杀人的士兵。我是个无知的智者。\
 为何人们总认为，对立面不可并存？\
@@ -1093,8 +1093,8 @@ Sus cuerdas eran demasiado pesadas para mí.
 Ahora voy a impedir la obra,
 Donde todo el mundo no puede evitar el dolor."""
 
-    poem_afterlight.title['chs'] = "余晖"
-    poem_afterlight.text['chs'] = """\
+    poem_afterlight.title['zho'] = "余晖"
+    poem_afterlight.text['zho'] = """\
 我似乎看见了我原来从未见过的东西
 好像刚刚才有这种感受。
 我能看到这里曾发生的一切
@@ -1125,7 +1125,7 @@ Between the worlds, I truly love him.""",
     poem_val.title['rus'] = "Валентинка"
     poem_val.title['epo'] = "Korpoŝtkarto"
     poem_val.title['esp'] = "Una Carta de San Valentín"
-    poem_val.title['chs'] = "意中人"
+    poem_val.title['zho'] = "意中人"
     
     poem_val.text['rus'] = """\
 Люблю я человека, что здесь является никем,
@@ -1145,7 +1145,7 @@ Tengo a alguien, que aquí no es nadie.
 Pero auque haya un muro
 Entre nuestros mundos, verdaderamente lo amo."""
 
-    poem_val.text['chs'] = """\
+    poem_val.text['zho'] = """\
 我心有所属 但这不是他的归宿
 他居于某处 而那里无名又无路
 即便有屏障之隔 世界之差

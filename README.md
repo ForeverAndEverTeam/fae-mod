@@ -17,30 +17,40 @@ AlexanDDOS (This repository's author, [Reddit](https://www.reddit.com/user/Alexa
 Dan Salvato (original scripts)  
 DDLC Mod Template team ([mod base](https://github.com/Monika-After-Story/DDLCModTemplate))  
   
-**Arts:**  
-Fj0rd_ ([Reddit](https://www.reddit.com/user/Fj0rd_), [original sitting Sayori art](https://www.reddit.com/r/DDLC/comments/7h40q6/ok_final_version_this_time_i_swear/))  
-AlexanDDOS  
-Team Salvato artists (original sprites)  
+**Old Sayori Sprite Artists:**  
+*Excluded since 0.4.0*  
+Fj0rd_ ([Reddit](https://www.reddit.com/user/Fj0rd_), [the original Sayori art](https://www.reddit.com/r/DDLC/comments/7h40q6/ok_final_version_this_time_i_swear/))  
+AlexanDDOS (Sprite compositor & editor)  
+  
+**New Sayori Sprite Artists:** 
 [Orcaramelo](https://github.com/Orcaramelo)  
 [Professor-JMO](https://github.com/Professor-JMO)  
-Lucian Pavel (Santa hat original model, excluded from the stable versions)  
+AlexanDDOS (Sprite compositor)  
   
-**Dialogue:**  
+**Misc Arts & Edits:**  
+AlexanDDOS (Small artilces & sprite edits)  
+Team Salvato artists (original sprites)  
+Lucian Pavel (Santa hat original model, excluded from the stable version)  
+  
+**Dialogs:**  
 AlexanDDOS  
   
 **Translations:**  
 AlexanDDOS (Russian, Esperanto & Toki Pona (WIP))  
 [Vova Petelin](https://vk.com/toxin_666) (Russian)  
 ElReyZero1201 (Spanish)  
+[lvkaibin](https://www.reddit.com/user/lvkaibin) (Chinese)  
   
 **SFX:**  
 Pipe98x (drawing cross)  
 sirrealist2 (drawing circle/line)  
   
-**Testers:**  
+**Testers & Platinum Troubleshooters:**  
 AlexanDDOS  
 Leon9023 ([Reddit](https://www.reddit.com/user/leon9023), [VK](https://vk.com/leon9023))  
-[Evgeny Zotov](https://vk.com/everlastingtolovesayori)
+[Evgeny Zotov](https://vk.com/everlastingtolovesayori)  
+[lvkaibin](https://www.reddit.com/user/lvkaibin)  
+[MarioXenobladefan614](https://www.reddit.com/user/MarioXenobladefan614)  
 
 **Proofreaders**:  
 [tberriman](https://www.reddit.com/user/tberriman)  
@@ -48,10 +58,12 @@ Leon9023 ([Reddit](https://www.reddit.com/user/leon9023), [VK](https://vk.com/le
 [Atlas](https://www.reddit.com/user/Nekochroma)  
   
 **Special Thanks**:  
-Dan Salvato  
-Monika After Story team  
-Ren'Py team  
-Reddit Community  
+[Team Salvato](http://teamsalvato.com)  
+Team Monika  
+The "Just *{doki_name}*" mod syndicate
+The Ren'Py developer team  
+The Reddit DDLC community  
+The Russian DDLC community  
   
 ## License  
 See **"LICENSE"** and **"IPGuidelines.md"**.
