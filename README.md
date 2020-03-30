@@ -22,7 +22,7 @@ DDLC Mod Template team ([mod base](https://github.com/Monika-After-Story/DDLCMod
 Fj0rd_ ([Reddit](https://www.reddit.com/user/Fj0rd_), [the original Sayori art](https://www.reddit.com/r/DDLC/comments/7h40q6/ok_final_version_this_time_i_swear/))  
 AlexanDDOS (Sprite compositor & editor)  
   
-**New Sayori Sprite Artists:** 
+**New Sayori Sprite Artists:**  
 [Orcaramelo](https://github.com/Orcaramelo)  
 [Professor-JMO](https://github.com/Professor-JMO)  
 AlexanDDOS (Sprite compositor)  
