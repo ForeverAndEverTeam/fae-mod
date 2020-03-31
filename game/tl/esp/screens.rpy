@@ -119,7 +119,7 @@ translate esp strings:
 
     # screens.rpy:966
     old "Unseen Text"
-    new "Texto No Visto"
+    new "Texto sin ver"
 
     # screens.rpy:967
     old "After Choices"
@@ -139,7 +139,7 @@ translate esp strings:
 
     # screens.rpy:991
     old "Static"
-    new "Estática"
+    new "Estático"
 
     # screens.rpy:1002
     old "Text Speed"
@@ -196,3 +196,15 @@ translate esp strings:
     # screens.rpy:1547
     old "Skipping"
     new "Omitiendo"
+
+    old "Day/Night Cycle"
+    new "Ciclo Día/Noche"
+
+    old "Smooth"
+    new "Cambio Progresivo"
+
+    old "On"
+    new "Encendido"
+
+    old "Off (Always day)"
+    new "Apagado (Siempre de día)"

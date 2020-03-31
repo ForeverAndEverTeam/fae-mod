@@ -26,7 +26,7 @@ translate esp s_farewell_2_66d308ad:
 translate esp s_farewell_2_0d72d10b:
 
     # s 7aaca "I can always spend time with you."
-    s 7aaca "Siempre podré pasar tiempó contigo."
+    s 7aaca "Siempre podré pasar tiempo contigo."
 
 # game/farewells.rpy:32
 translate esp s_farewell_3_aa6125ff:
@@ -56,7 +56,7 @@ translate esp s_farewell_4_5d8035b0:
 translate esp s_farewell_4_26b90d04:
 
     # s 7aaca "You can take some of mine, if you need it."
-    s 7aaca "Puedes tomar un poco de lo mío si lo necesitas ."
+    s 7aaca "Puedes tomar un poco de las mías si lo necesitas ."
 
 # game/farewells.rpy:45
 translate esp s_farewell_5_a8da6f09:

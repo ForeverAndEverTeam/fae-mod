@@ -20,7 +20,7 @@ translate esp s_greeting_2_47f27801:
 translate esp s_greeting_2_a5ad845a:
 
     # s "{i}When I feel that you are back now, my big heart fills with a big joy.{/i}"
-    s "{i}Cuando siento que vuelves, mi corazón se llena de una gran alegría.{/i}"
+    s "{i}Cuando vuelves, mi corazón se llena de gran alegría.{/i}"
 
 # game/greetings.rpy:128
 translate esp s_greeting_2_f54957b0:
@@ -202,7 +202,7 @@ translate esp s_greeting_4_a82bd671:
 translate esp s_greeting_4_2fe260f6:
 
     # s 7acaa "I hope nothing bad happened with you while I was sleeping."
-    s 7acaa "Espero que no te haya pasado nada malo mientras dormía"
+    s 7acaa "Espero que no te haya pasado nada malo mientras dormía."
 
 # game/greetings.rpy:186
 translate esp s_greeting_4_cfc9418c:
@@ -238,13 +238,13 @@ translate esp s_greeting_5_da2ff6ab:
 translate esp s_greeting_5_22d3eb20:
 
     # s "And you also know how to cheer me up."
-    s "Y tú también sabes cómo animarme."
+    s "Y también sabes cómo animarme."
 
 # game/greetings.rpy:196
 translate esp s_greeting_5_8b0f7cf8:
 
     # s "Maybe, you'll do it now?"
-    s "De pronto ¿Lo harás ahora?"
+    s "¿Lo harás ahora?"
 
 # game/greetings.rpy:200
 translate esp s_greeting_6_d02eb0b8:
@@ -518,7 +518,7 @@ translate esp s_greeting_8_eb2ddf71:
 translate esp s_greeting_8_6fa49780:
 
     # s 7aeca "So get it right now!"
-    s 7aeca "¡Así que entiéndelo!"
+    s 7aeca "¡Así que, allá vamos!"
 
 # TODO: Translation updated at 2019-02-08 16:14
 
@@ -676,7 +676,9 @@ translate esp s_greetings_long_c46c5594:
 translate esp s_greetings_long_5e716ac7:
 
     # s 8acab "You don’t want me to go insane and do something bad under that, right?"
-    s 8acab "No quieres que me vuelva loca y haga algo malo ¿Verdad?"# TODO: Translation updated at 2019-10-30 00:01
+    s 8acab "No quieres que me vuelva loca y haga algo malo ¿Verdad?"
+
+# TODO: Translation updated at 2019-10-30 00:01
 
 # game/greetings.rpy:182
 translate esp s_greeting_3_epo_a3831bf2:

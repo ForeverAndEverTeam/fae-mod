@@ -1,7 +1,7 @@
 
 translate esp strings:
 
-# langs.rpy:14
+    # langs.rpy:14
     old "English"
     new "Inglés"
 
@@ -20,3 +20,7 @@ translate esp strings:
     # langs.rpy:18
     old "Toki Pona"
     new "Toki Pona"
+    
+    
+    old "Chinese"
+    new "Chino"
