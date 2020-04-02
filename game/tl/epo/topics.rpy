@@ -3520,7 +3520,7 @@ translate epo strings:
 
     # topics.rpy:145
     old "When is your birthday?"
-    new "Kiam estas naskiĝtago?"
+    new "Kiam estas via naskiĝtago?"
 
     # topics.rpy:146
     old "What color is your favorite?"
@@ -3604,7 +3604,7 @@ translate epo strings:
 
     # topics.rpy:106
     old "Left-handedness"
-    new "Maldekstramaneco"
+    new "Livmaneco"
 
     # topics.rpy:110
     old "Literature"
@@ -3644,15 +3644,15 @@ translate epo strings:
 
     # topics.rpy:195
     old "Who do you want to work as?"
-    new "Kiel kiu vi volas labori?"
+    new "Kiun laboron vi volas havi?"
 
     # topics.rpy:196
     old "What pet would you like to have?"
-    new "Kia hejmbesto vi ekhavus?"
+    new "Kiun hejmbeston vi ekhavus?"
 
     # topics.rpy:201
     old "Isn't it tiring to sit so for a long time?"
-    new "Ĉu ne tedas vin sidi tiel long ĉi tie?"
+    new "Ĉu ne tedas vin sidi tiel longe ĉi tie?"
 
     # topics.rpy:202
     old "How do you change game files?"
@@ -3704,13 +3704,13 @@ translate epo s_topics_personal_depression_a7e51a19:
 translate epo s_topics_personal_depression_9d1eb697:
 
     # s "That I had 'rainclouds' inside my head for all my life..."
-    s "Diris, ke min tutvive ĉirkaŭis 'finubetoj'..."
+    s "Diris, ke min tutvive ĉirkaŭis 'nubetoj'..."
 
 # game/topics.rpy:256
 translate epo s_topics_personal_depression_ccb9b234:
 
     # s 8aecb "...remember, 'rainclouds' is just what I called my depression."
-    s 8aecb "...La 'finubetoj', kiuj estis mia depresio."
+    s 8aecb "...La 'nubetoj', kiuj estis mia depresio."
 
 # game/topics.rpy:257
 translate epo s_topics_personal_depression_4280571b:
@@ -3800,7 +3800,7 @@ translate epo s_topics_personal_depression_e3da04ff:
 translate epo s_topics_personal_depression_27cf61af:
 
     # s "My little rainclouds turned into a dark thunderstorm, blinding my mind with the rain..."
-    s "La finub{i}et{/i}oj iĝis finub{i}eg{/i}oj, blindigantaj min per kontinua pluvego el ili..."
+    s "La nub{i}et{/i}oj iĝis nub{i}eg{/i}oj, blindigantaj min per kontinua pluvego el ili..."
 
 # game/topics.rpy:272
 translate epo s_topics_personal_depression_8e34a602:
@@ -3860,13 +3860,13 @@ translate epo s_topics_personal_depression_5d4ba852:
 translate epo s_topics_personal_depression_bd27c3c0:
 
     # s 6dbcb "Needless to say, I, um, completely gave up."
-    s 6dbcb "Evidante, ĝuste tiam mi finfine cedis."
+    s 6dbcb "Evidante, mi... finfine cedis."
 
 # game/topics.rpy:285
 translate epo s_topics_personal_depression_64a3f23e:
 
     # s "My neck and hands still remember the pain..."
-    s "La kolo kaj fingroj daŭre memoras tiun doloron..."
+    s "La kolo kaj la fingroj daŭre memoras tiun doloron..."
 
 # game/topics.rpy:286
 translate epo s_topics_personal_depression_3eddd36a:
@@ -3908,19 +3908,19 @@ translate epo s_topics_personal_depression_819131f1:
 translate epo s_topics_personal_depression_ede915ae:
 
     # s "...they only have one life."
-    s "...li preskaŭ donos novan ŝancon."
+    s "...ri preskaŭ ricevos novan ŝancon."
 
 # game/topics.rpy:293
 translate epo s_topics_personal_depression_c3a61b0d:
 
     # s 6efab "A-And if you have it too, don't hide it from others!"
-    s 6efab "K-kaj se vi ekfaros aŭ jam faras la samon, vi ĉesu kaj petu pri helpo!"
+    s 6efab "K-kaj se vi sentas la samon, vi ne kaŝu ĝin kaj petu helpon!"
 
 # game/topics.rpy:294
 translate epo s_topics_personal_depression_1e6febef:
 
     # s 6dfab "Being in this game world, I had a second chance..."
-    s 6dfab "Min savis nur la fakto, ke mi estas en videolud'..."
+    s 6dfab "Min savis nur la fakto, ke mi estas en videoludo..."
 
 # game/topics.rpy:295
 translate epo s_topics_personal_depression_b113e542:
@@ -3986,13 +3986,13 @@ translate epo s_topics_personal_archetype_f11d9557:
 translate epo s_topics_personal_archetype_b4e6560a:
 
     # s 6acaa "Also, I was made to be the childhood friend of the main character, which is apparently common with the archetype."
-    s 6acaa "Ankaŭe, mi estas infaneca amiko de la ĉefrolulo, ankaŭ kio eble estas ofta trajto de la arketipo."
+    s 6acaa "Ankaŭe, mi estas infaneca amiko de la ĉefrolulo, kio eblas esti ofta trajto de la arketipo."
 
 # game/topics.rpy:309
 translate epo s_topics_personal_archetype_f4fabb40:
 
     # s 6aabb "But I feel I’m not as cliché as any other archetype..."
-    s 6aabb "Tamen, mi ne fartas kiel absolute ŝablona rolulino..."
+    s 6aabb "Tamen, mi ne sentas min absolute ŝablona rolulino..."
 
 # game/topics.rpy:310
 translate epo s_topics_personal_archetype_b37a4cb7:
@@ -4004,7 +4004,7 @@ translate epo s_topics_personal_archetype_b37a4cb7:
 translate epo s_topics_personal_archetype_0a7c2e0a:
 
     # s 6acaa "Even if we were to list every single character with the Genki archetype, how many of them have my problems?"
-    s 6acaa "Kaj eĉ rigardante ĉiujn gegenkiulojn, kiom de ili havas miajn problemojn?"
+    s 6acaa "Kaj eĉ rigardante ĉiujn genkiulojn, kiom de ili havas miajn problemojn?"
 
 # game/topics.rpy:312
 translate epo s_topics_personal_archetype_3cf20f43:
@@ -4023,7 +4023,7 @@ translate epo s_topics_personal_archetype_62d7507c:
 translate epo s_topics_personal_archetype_eade4839:
 
     # s "In my opinion, modern stories need characters who have relatable issues, like my own..."
-    s "Laŭ mi, geroluloj kun trajtoj kaj problemoj similaj al la mia mankas al la moderna arto..."
+    s "Laŭ mi, geroluloj kun trajtoj kaj problemoj, similaj al la miaj, mankas al la moderna arto..."
 
 # game/topics.rpy:315
 translate epo s_topics_personal_archetype_4b657aeb:
@@ -4035,7 +4035,7 @@ translate epo s_topics_personal_archetype_4b657aeb:
 translate epo s_topics_personal_archetype_1c46f94c:
 
     # s 6abac "Do it excessively, and you'll just make me just another typical archetype."
-    s 6abac "Tio nur kaŭzos kreadon de nova arketipo. Ĉu vi ne volas ĉi tion, ĉu?"
+    s 6abac "Tio nur kaŭzos kreadon de nova arketipo el mi. Ĉu vi ne volas ĉi tion, ĉu?"
 
 # game/topics.rpy:349
 translate epo s_topics_personal_name_73f966c9:
