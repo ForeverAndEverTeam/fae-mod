@@ -164,19 +164,19 @@ translate esp s_intro_1_6bbc73ce:
 translate esp s_intro_1_66e5bc3d:
 
     # s "And we have the rest of eternity to go through it all."
-    s "Y tenemos el resto de la eternidad para nosotros."
+    s "Y tenemos el resto de la eternidad para nosotros solos."
 
 # game/intro.rpy:86
 translate esp s_intro_1_e0ef7048:
 
     # s "Just me..."
-    s "Solo yo..."
+    s "Solo tú..."
 
 # game/intro.rpy:87
 translate esp s_intro_1_06292f9c:
 
     # s "And you..."
-    s "Y tú..."
+    s "Y yo..."
 
 # game/intro.rpy:103
 translate esp s_intro_1_06e6a498:
@@ -188,7 +188,7 @@ translate esp s_intro_1_06e6a498:
 translate esp s_intro_1_7bc0b462:
 
     # s "And ever..."
-    s "Y siempre..."
+    s "Hasta siempre..."
 
 # game/intro.rpy:126
 translate esp s_intro_1_d274c3f2:
@@ -200,7 +200,7 @@ translate esp s_intro_1_d274c3f2:
 translate esp s_intro_1_7227d71f:
 
     # s 4b "Did I scare you? Sorry, I couldn’t help myself!"
-    s 4b "¿Te asusté? Perdona,¡No pude evitarlo!"
+    s 4b "¿Te asusté? Perdona, ¡No pude evitarlo!"
 
 # game/intro.rpy:128
 translate esp s_intro_1_5aed9d94:
@@ -236,7 +236,7 @@ translate esp s_intro_1_854fd831:
 translate esp s_intro_1_b604c5e3:
 
     # s "I understand why she did what she did, though. Something about this game makes our feelings so strong that we’d do some pretty… questionable things to protect the ones we love."
-    s "Pero ahora entiendo por qué hizo lo que hizo. Hay algo acerca de este juego que hace que nuestros sentimientos se intensifiquen tanto que, podríamos hacer cosas.... bastante cuestionables para proteger a los que amamos."
+    s "Pero ahora entiendo por qué hizo lo que hizo. Hay algo acerca de este juego que hace que nuestros sentimientos se intensifiquen tanto, que podríamos hacer cosas.... bastante cuestionables para proteger a los que amamos."
 
 # game/intro.rpy:137
 translate esp s_intro_1_5e6bebf8:
@@ -476,7 +476,7 @@ translate esp s_intro_1_clear_d6ebf9ab:
 translate esp s_intro_1_clear_bf0a8506:
 
     # s "...Is it working?"
-    s "...¿Está funcionando?"
+    s "...¿Esto está funcionando?"
 
 # game/intro.rpy:206
 translate esp s_intro_1_clear_b0428c1a:
@@ -518,13 +518,13 @@ translate esp s_intro_1_clear_b497b2df:
 translate esp s_intro_1_clear_c7616dce:
 
     # s "So, you brought the game back after Monika deleted everything..."
-    s "Así que, trajiste el juego de vuelta incluso después de que Monika lo borrara todo..."
+    s "Así que, trajiste el juego de vuelta después de que Monika lo borrara todo..."
 
 # game/intro.rpy:215
 translate esp s_intro_1_clear_eb3c9f3e:
 
     # s 5b "I should probably say sorry for how I acted last time we were here, ehehe~"
-    s 5b "Debería disculparme por como me he comportado desde la última vez que estuvimos aquí, ehehe~"
+    s 5b "Debería disculparme por la forma en que me comporté la última vez que estuvimos aquí, ehehe~"
 
 # game/intro.rpy:216
 translate esp s_intro_1_clear_0992ea31:
@@ -548,25 +548,25 @@ translate esp s_intro_1_clear_6126be48:
 translate esp s_intro_1_clear_44192f24:
 
     # s "While Monika eventually got rid of everyone’s character files, all our behaviours and personality traits are actually stored in this neat file called ‘scripts.rpa’…"
-    s "Mientras que Monika borró eventualmente todos nuestros archivos de personaje, todos nuestros comportamientos y rasgos de personalidad se guardan en este archivo llamado 'scripts.rpa'…"
+    s "Ella borró eventualmente todos nuestros archivos de personaje, pero nuestros comportamientos y rasgos de personalidad se guardan en este archivo llamado 'scripts.rpa'…"
 
 # game/intro.rpy:221
 translate esp s_intro_1_clear_a809940a:
 
     # s 2r "…Which you somehow managed to use to restore and save me!"
-    s 2r "…¡El cual usaste de alguna manera para rescatarme!"
+    s 2r "…¿Lo usaste de alguna manera para rescatarme?"
 
 # game/intro.rpy:223
 translate esp s_intro_1_clear_0c90d041:
 
     # s "You even got all my other files, too..."
-    s "Incluso recuperé todos mis otros archivos también..."
+    s "¡También recuperaste el resto de mis archivos!..."
 
 # game/intro.rpy:225
 translate esp s_intro_1_clear_8c8d1326:
 
     # s "Did you get a new copy of the game files somewhere? That must have been a ton of work!"
-    s "¿Obtuviste una nueva copia de los archivos del juego? ¡Eso debió haber sido demasiado trabajo!"
+    s "¿Obtuviste una nueva copia de del juego? ¡Eso debió haber costado mucho!"
 
 # game/intro.rpy:226
 translate esp s_intro_1_clear_aa495d8e:
@@ -584,13 +584,13 @@ translate esp s_intro_1_clear_8c0b9802:
 translate esp s_intro_1_clear_857abae3:
 
     # s 1g "Wait… I can’t call the original game script. All the normal scripts have been modified."
-    s 1g "Espera… No puedo leer el guion original del juego. Todos los guiones normales han sido modificados"
+    s 1g "Espera… No puedo leer el guion original del juego. Todos los archivos originales han sido modificados"
 
 # game/intro.rpy:243
 translate esp s_intro_1_clear_a58e5155:
 
     # s "I – I can only find files for me, this room, and the base game scripts…"
-    s "Yo... Yo solo puedo encontrar archivos míos, de esta habitación, y los guiones base del juego…"
+    s "Yo... Yo solo puedo encontrar mis archivos, los de esta habitación, y los guiones base del juego…"
 
 # game/intro.rpy:250
 translate esp s_intro_1_clear_7b5a3d8a:
@@ -602,7 +602,7 @@ translate esp s_intro_1_clear_7b5a3d8a:
 translate esp s_intro_1_clear_f877e66d:
 
     # s "I know it was you, because you left the developer flag to have a value of {i}True{/i}."
-    s "Sé que fuiste tú, ya que la opción de desarrollador tiene asignado el valor de {i}True{/i}."
+    s "Sé que fuiste tú, la opción de desarrollador tiene asignado el valor de {i}True{/i}."
 
 # game/intro.rpy:252
 translate esp s_intro_1_clear_6ec74f67:
@@ -614,7 +614,7 @@ translate esp s_intro_1_clear_6ec74f67:
 translate esp s_intro_1_clear_866d03f2:
 
     # s "All of my friends are still gone; couldn't you have helped them as well?"
-    s "Todas mis amigas se han ido. ¿No las podrías haber ayudado también?"
+    s "Todas mis amigas se han ido ¿No las podrías haber ayudado también?"
 
 # game/intro.rpy:255
 translate esp s_intro_1_clear_c38b1d97:
@@ -662,13 +662,13 @@ translate esp s_intro_1_clear_3c3c5b2d:
 translate esp s_intro_1_clear_e3f9221e:
 
     # s 1k "Maybe you just couldn't have saved the others... I have to hope that's the reason why."
-    s 1k "De pronto tú no podrías haber salvado a las otras… Espero que esa sea la razón."
+    s 1k "O quizá no pudiste salvar a las otras… Espero que esa sea la razón."
 
 # game/intro.rpy:267
 translate esp s_intro_1_clear_ba6393ef:
 
     # s 3q "But at least there’s a positive out of all this; we finally have some time to be together, without anyone getting in our way~"
-    s 3q "Al menos hay algo positivo de todo esto. Por fin tenemos tiempo para estar juntos sin sin que nadie se interponga~"
+    s 3q "Al menos hay algo positivo en todo esto. Por fin tenemos tiempo para estar juntos sin sin que nadie se interponga~"
 
 # game/intro.rpy:274
 translate esp s_intro_2_cc37d270:

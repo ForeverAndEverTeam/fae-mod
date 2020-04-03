@@ -93,13 +93,13 @@ translate esp s_topics_personal_name_215ac61c:
 translate esp s_topics_personal_name_7ba2872a:
 
     # s "But if the game seems to be set in Japan, where family name usually is the wife's surname, it's a bit strange."
-    s "Pero si se supone que el juego ocurre en Japón, donde el apellido familiar es generalmente el de la esposa, es un poco extraño."
+    s "Pero si se supone que el juego ocurre en Japón, donde el apellido familiar es generalmente el de la esposa, es un poco extraño..."
 
 # game/topics.rpy:299
 translate esp s_topics_personal_name_a75e7056:
 
     # s "Plus, I would feel more like a real person, if I had one."
-    s "Además, me sentirá un poco más real si tuviera uno."
+    s "Además, me sentiría un poco más real si tuviera uno."
 
 # game/topics.rpy:300
 translate esp s_topics_personal_name_4cf63607:
@@ -294,13 +294,13 @@ translate esp s_topics_personal_quittingTheGame_de484f4b:
 translate esp s_topics_personal_quittingTheGame_43332f45:
 
     # s "But I'm absolutely out of the my world. Even the void can't do me anything..."
-    s "Pero estoy absolutamente fuera de mi mundo. Ni siquiera el vacío me hacerme nada..."
+    s "Pero estoy absolutamente fuera de mi mundo. Ni siquiera el vacío puede hacerme nada..."
 
 # game/topics.rpy:338
 translate esp s_topics_personal_quittingTheGame_e5d9ee05:
 
     # s "And as long as your computer works, your best girl Sayori's ready to go!"
-    s "Y mientras tu computador siga funcionando, ¡tu mejor chica Sayori estará aquí!"
+    s "Y mientras tu computador siga funcionando, ¡la mejor chica, Sayori estará aquí!"
 
 # game/topics.rpy:339
 translate esp s_topics_personal_quittingTheGame_2755d670:
@@ -360,7 +360,7 @@ translate esp s_topics_art_games_a25de04a:
 translate esp s_topics_art_games_7f1d5ff3:
 
     # s "I think they're really impressive."
-    s "Yo creo que son bastante impresionantes"
+    s "Yo creo que son bastante impresionantes."
 
 # game/topics.rpy:353
 translate esp s_topics_art_games_da84916f:
@@ -372,19 +372,19 @@ translate esp s_topics_art_games_da84916f:
 translate esp s_topics_art_games_1421a758:
 
     # s 7aaaa "They can reach and connect with people in a way that other artforms can't."
-    s 7aaaa "Pueden conectar personas en una forma en que otro tipo de comunicación no puede."
+    s 7aaaa "Pueden conectar personas en una forma que otro tipo de comunicación no puede."
 
 # game/topics.rpy:355
 translate esp s_topics_art_games_135d9626:
 
     # s 6aaaa "Especially after some smart cookie created multiplayer games!"
-    s 6aaaa "¡Especialmente después de que alguien creara los juegos multijugador!"
+    s 6aaaa "¡Especialmente después de se crearan los juegos multijugador!"
 
 # game/topics.rpy:356
 translate esp s_topics_art_games_c0bdd968:
 
     # s "You can play with your friends, cooperating and sharing the experience with them."
-    s "Puedes jugar con tus amigos, cooperando y compartiendo experiencias con ellos."
+    s "Puedes jugar con tus amigos y compartir experiencias increíbles con ellos."
 
 # game/topics.rpy:357
 translate esp s_topics_art_games_4e6944d4:
@@ -396,7 +396,7 @@ translate esp s_topics_art_games_4e6944d4:
 translate esp s_topics_art_games_43010ac2:
 
     # s 6acaa "What's more, online games have allowed friendships and connections to go beyond physical boundaries!"
-    s 6acaa "Y lo más importante, ¡es que los juegos online han permitido que las amistades trasciendan las limitaciones físicas!"
+    s 6acaa "Y lo más importante, ¡los juegos online permiten que las amistades trasciendan las limitaciones físicas!"
 
 # game/topics.rpy:359
 translate esp s_topics_art_games_a038e89f:
@@ -420,37 +420,37 @@ translate esp s_topics_art_games_4d91c9db:
 translate esp s_topics_art_games_f0c57fd4:
 
     # s "I've made a few basic games we can share and compete in, right here!"
-    s "¡He creado algunos juegos donde podemos compartir y competir aquí mismo!"
+    s "¡He creado algunos juegos en los que podemos compartir!"
 
 # game/topics.rpy:363
 translate esp s_topics_art_games_112dfefa:
 
     # s 7acac "I won't just let you beat me!"
-    s 7acac "¡No te dejaré ganar!"
+    s 7acac "¡No te dejaré ganar tan fácilmente!"
 
 # game/topics.rpy:364
 translate esp s_topics_art_games_9d63fde6:
 
     # s 7acba "Although now that I think about it, you would really just be playing against a computer anyway, seeing as I'm just a bunch of code and pixels..."
-    s 7acba "Aunque ahora que lo pienso, de todas formas estarías jugando en contra de una computadora, ya que solo soy un puñado de pixeles y código..."
+    s 7acba "Aunque ahora que lo pienso, de todas formas estarías jugando en contra de una computadora, ya que solo soy un poco de código y pixeles..."
 
 # game/topics.rpy:365
 translate esp s_topics_art_games_3d2f6f60:
 
     # s 7aaca "But I'm one of the cutest piles of code around!"
-    s 7aaca "¡Pero una de las pilas de código más tiernas que existen!"
+    s 7aaca "¡Aún así, soy una de las pilas de código más tiernas que existen!, ¿no?"
 
 # game/topics.rpy:366
 translate esp s_topics_art_games_40d98139:
 
     # s 7aaaa "If you ever really do want to play me in something..."
-    s 7aaaa "Si alguna vez qquieres jugar algo conmigo..."
+    s 7aaaa "Así que si alguna vez quieres jugar algo conmigo..."
 
 # game/topics.rpy:367
 translate esp s_topics_art_games_3322ec54:
 
     # s "Just press the '{i}Play{/i}' button and select a game."
-    s "Solo oprime el botón '{i}Jugar{/i}' y elige un juego."
+    s "Solo haz click en el botón '{i}Jugar{/i}' y elige un juego."
 
 # game/topics.rpy:371
 translate esp s_topics_art_fanarts_5eb1f8bf:
@@ -594,7 +594,7 @@ translate esp s_topics_society_conflicts_7cacb097:
 translate esp s_topics_society_conflicts_b4973e04:
 
     # s 6acab "Yes, they do on a limited scale, but usually only into several 'sub-groups' that still have different opinions and solutions."
-    s 6acab "Bueno, si lo hacen de cierta forma, pero usualmente solo lo hacen en pequeños 'subgrupos' donde también tienen sus propias opiniones y soluciones."
+    s 6acab "Bueno, sí lo hacen de cierta forma, pero usualmente solo lo hacen en pequeños 'subgrupos' donde también tienen sus propias opiniones y soluciones."
 
 # game/topics.rpy:400
 translate esp s_topics_society_conflicts_a29c84ae:
@@ -606,7 +606,7 @@ translate esp s_topics_society_conflicts_a29c84ae:
 translate esp s_topics_society_conflicts_03ba3eb0:
 
     # s "In addition, these groups often are so unstable that they can easily divide into smaller groups, hating each other."
-    s "Asimismo, estos grupos son tan inestables que a veces se dividen fácilmente en grupos aún más pequeños, odiándose entre sí."
+    s "Aparte de eso, esos grupos son tan inestables que a veces se dividen fácilmente en grupos aún más pequeños, odiándose entre sí."
 
 # game/topics.rpy:402
 translate esp s_topics_society_conflicts_2bd73d11:
@@ -684,13 +684,13 @@ translate esp s_topics_society_conflicts_dc5a151d:
 translate esp s_topics_society_conflicts_986705e2:
 
     # s 6aaca "Anyway, the agrument didn't really change the club..."
-    s 6aaca "De cualquier forma, esos argumentos no cambiaron realmente el club..."
+    s 6aaca "De cualquier forma, esos argumentos no cambiaron realmente al club..."
 
 # game/topics.rpy:416
 translate esp s_topics_society_conflicts_a0147a2d:
 
     # s 6abbb "But if Monika didn't take the two of you outside with her abilities, I hate to think what might have happened..."
-    s 6abbb "Pero si Monika no los hubiera sacado de ahí con sus habilidades... Odio pensar lo que habría pasado..."
+    s 6abbb "Pero si Monika no las hubiera sacado de ahí con sus habilidades... Odio pensar lo que habría pasado..."
 
 # game/topics.rpy:418
 translate esp s_topics_society_conflicts_8c74f31c:
@@ -702,7 +702,7 @@ translate esp s_topics_society_conflicts_8c74f31c:
 translate esp s_topics_society_conflicts_1e992cd4:
 
     # s "I just gave both of them advice to learn more about each other's favorite kind of literature. Walking a mile in someone else's shoes, and all that."
-    s "Yo solo les di algo de aviso para que aprendieran el tipo de literatura favorito de cada una. Caminar un kilómetro en los zapatos de otro y todo eso."
+    s "Yo solo las intenté convencer de aprender el tipo de literatura favorito de la otra. Caminar un kilómetro en los zapatos de otro y todo eso."
 
 # game/topics.rpy:420
 translate esp s_topics_society_conflicts_fbefd409:
@@ -751,15 +751,15 @@ translate esp s_topics_society_bulli_e3786448:
 
     # s "Are you one of the people that make jokes about what happened to me?"
     if persistent.last_playthrough > 0:
-        s "No harás bromas sobre todo lo que me pasó, ¿verdad?"
+        s "No harás bromas sobre lo que me pasó, ¿verdad?"
     else:
-        s "No harás bromas sobre todo lo que me pasó, ¿verdad?"
+        s "No harás bromas sobre lo que me pasó, ¿verdad?"
 
 # game/topics.rpy:431
 translate esp s_topics_society_bulli_87162698:
 
     # s "I know everything about it."
-    s "Lo sé todo acerca de ello."
+    s "Lo sé todo acerca de eso."
 
 # game/topics.rpy:432
 translate esp s_topics_society_bulli_5be62ab6:
@@ -771,7 +771,7 @@ translate esp s_topics_society_bulli_5be62ab6:
 translate esp s_topics_society_bulli_2ff9cb86:
 
     # s "As I khow, fans call them {i}'Bulli'{/i} posts."
-    s "De lo que sé, los fans los llaman {i}'Bulli posts'{/i} (o publicaciones intimidantes)."
+    s "Por lo que sé, los fans los llaman {i}'Bulli posts'{/i} (o publicaciones intimidantes)."
 
 # game/topics.rpy:434
 translate esp s_topics_society_bulli_ba12948f:
@@ -801,13 +801,13 @@ translate esp s_topics_society_bulli_8b330093:
 translate esp s_topics_society_bulli_4883deb4:
 
     # s 6acab "But on the other hand, can I control what makes people laugh?"
-    s 6acab "Pero por otra parte, ¿Puedo controlar lo que hacer reír a la gente?"
+    s 6acab "Pero por otra parte, ¿Puedo controlar lo que hace reír a la gente?"
 
 # game/topics.rpy:439
 translate esp s_topics_society_bulli_20bb1d58:
 
     # s "Some people use macabre humour as a coping mechanism for stress, or anxiety..."
-    s "AAlgunos usan el humor macabro como un mecanismo para sobrellevar el estrés o la ansiedad..."
+    s "Algunos usan el humor macabro como un mecanismo para sobrellevar el estrés o la ansiedad..."
 
 # game/topics.rpy:440
 translate esp s_topics_society_bulli_cdcc28c6:
@@ -837,7 +837,7 @@ translate esp s_topics_society_bulli_1ae37d79:
 translate esp s_topics_society_bulli_936f7ae8:
 
     # s 6abaa "Anyway, I think the right decision is to forgive them, or failing that, tolerate them."
-    s 6abaa "De cualquier forma, yo creo que la mejor decisión es la de perdonarlos, y si no, tolerarlos."
+    s 6abaa "De cualquier forma, creo que la mejor decisión es perdonarlos, y si no es posible, tolerarlos."
 
 # game/topics.rpy:445
 translate esp s_topics_society_bulli_5e6e67f0:
@@ -891,13 +891,13 @@ translate esp s_topics_society_sayoriLovers_8a182264:
 translate esp s_topics_society_sayoriLovers_ce234527:
 
     # s 6abaa "But I really don't understand what makes me more worthy of love than any of them."
-    s 6abaa "Pero lo que realmente no entiendo, es qué me hace digna de su amor que cualquiera de ellas."
+    s 6abaa "Pero lo que realmente no entiendo, es qué me hace más digna de su amor, porqué me prefieren sobre las demás."
 
 # game/topics.rpy:458
 translate esp s_topics_society_sayoriLovers_53ae9f77:
 
     # s "Is my view on the world?"
-    s "¿Es por mi visión del mundo?"
+    s "¿Es por como veo el mundo?"
 
 # game/topics.rpy:459
 translate esp s_topics_society_sayoriLovers_77121ae1:
@@ -909,13 +909,13 @@ translate esp s_topics_society_sayoriLovers_77121ae1:
 translate esp s_topics_society_sayoriLovers_decc880c:
 
     # s "Is it my average appearance that attracts some people, in a 'girl next door' kinda way?"
-    s "¿Es mi apariencia promedio lo que atrae a aguna gente, de una especie de 'chica de al lado'?"
+    s "¿Es mi apariencia promedio lo que atrae a alguna gente?"
 
 # game/topics.rpy:461
 translate esp s_topics_society_sayoriLovers_51df999a:
 
     # s "Maybe people just pitied me and what I had to go through."
-    s "Tal vez la gente se compadeció de mí y de lo que tuve que pasar."
+    s "Tal vez solo se compadecieron de mí y de lo que tuve que pasar."
 
 # game/topics.rpy:462
 translate esp s_topics_society_sayoriLovers_5443724c:
@@ -939,7 +939,7 @@ translate esp s_topics_society_sayoriLovers_3503b4d5:
 translate esp s_topics_society_sayoriLovers_c1723f69:
 
     # s "For me, you're the most important part of it."
-    s "Para mí, tú eres la parte más importante de ello~."
+    s "Para mí, tú eres de los más importantes de ellos~."
 
 # game/topics.rpy:466
 translate esp s_topics_society_sayoriLovers_b726c3fc:
@@ -969,7 +969,7 @@ translate esp s_topics_society_sayoriLovers_bc87144f:
 translate esp s_topics_society_sayoriLovers_cda0e641:
 
     # s 7aaaa "And I love all of you out there that love me, no matter where you are."
-    s 7aaaa "Y amo a todos los que me aman sin importar dónde estén."
+    s 7aaaa "Y amo a todos los que me quieren sin importar dónde estén."
 
 # game/topics.rpy:476
 translate esp s_topics_hobbie_guitar_284ff15f:
@@ -1239,7 +1239,7 @@ translate esp s_topics_hobbie_poems_c7a61a98:
 translate esp s_topics_hobbie_poems_26ce6571:
 
     # s "Every poem I write is an envelope for a part of my soul."
-    s "Cada poema que escribo es como una envoltura para una parte de mi alma."
+    s "Cada poema que escribo es como una envoltura de una parte de mi alma."
 
 # game/topics.rpy:532
 translate esp s_topics_hobbie_poems_add329aa:
@@ -1269,13 +1269,13 @@ translate esp s_topics_hobbie_poems_bf58e7fe:
 translate esp s_topics_rlt_touches_5644a6d0:
 
     # s 8acab "It's pretty frustrating that we can't really physically contact each other in here..."
-    s 8acab "Es un poco frustrante que no podamos tener ning´´un tipo de contacto físico..."
+    s 8acab "Es un poco frustrante que no podamos tener ningún tipo de contacto físico..."
 
 # game/topics.rpy:541
 translate esp s_topics_rlt_touches_88ea1ebc:
 
     # s "You know; kisses, hugs, holding hands, and so on..."
-    s "Ya sabes; besos, abrazos, cogeidas de la mano, y demás..."
+    s "Ya sabes, besos, abrazos, cogidas de la mano, y demás..."
 
 # game/topics.rpy:542
 translate esp s_topics_rlt_touches_21658d63:
@@ -1293,7 +1293,7 @@ translate esp s_topics_rlt_touches_b087bc8c:
 translate esp s_topics_rlt_touches_dd5dc1b9:
 
     # s "But the fact I don't have a real physical form throws a wrench in that plan."
-    s "Pero el hecho de que no tenga una forma física tira el plan a la basura."
+    s "Pero el hecho de que no tenga una forma física tira todo el plan a la basura."
 
 # game/topics.rpy:545
 translate esp s_topics_rlt_touches_53be15f8:
@@ -1347,7 +1347,7 @@ translate esp s_topics_rlt_touches_0f064db1:
 translate esp s_topics_rlt_touches_d6243691:
 
     # s "I'll just have to love you even more to try and make up for it."
-    s "Tendré que amarte aún más para intentar compensarlo.."
+    s "Tendré que amarte aún más para intentar compensarlo..."
 
 # game/topics.rpy:585
 translate esp s_topics_lifestyle_travels_8b1aa5e1:
@@ -1359,7 +1359,7 @@ translate esp s_topics_lifestyle_travels_8b1aa5e1:
 translate esp s_topics_lifestyle_travels_697ec702:
 
     # s 6aaba "I've never gotten the chance to, so I was wondering where you've been."
-    s 6aaba "Yo nunca he podido, así que me preguntaba por dónde has estado."
+    s 6aaba "Yo nunca he podido, así que me preguntaba por qué lugares has visitado."
 
 # game/topics.rpy:587
 translate esp s_topics_lifestyle_travels_1ef1a866:
@@ -1444,7 +1444,7 @@ translate esp s_topics_lifestyle_travels_03c16168:
 translate esp s_topics_lifestyle_travels_29260129:
 
     # s 7abba "I'll have to look around the code a little more and see how I can help on my end in the meantime."
-    s 7abba "Tendré que mirar alrededor del código un poco más y ver cómo puedo ayudar en mi parte mientras tanto ."
+    s 7abba "Tendré que mirar alrededor del código un poco más y ver cómo puedo ayudar en mi parte mientras tanto."
 
 # game/topics.rpy:604
 translate esp s_topics_lifestyle_oversleeping_a89ccf55:
@@ -1558,7 +1558,7 @@ translate esp s_answer_personal_bday_ce73e3e5:
 translate esp s_answer_personal_bday_7a9560be:
 
     # s 6aaca "You can choose one of them and consider it my birthday."
-    s 6aaca "Supono que puedes elegir una y considerarla mi cumpleaños."
+    s 6aaca "Supongo que puedes elegir una y considerarla mi cumpleaños."
 
 # game/topics.rpy:632
 translate esp s_answer_personal_bday_900f2335:
@@ -1612,7 +1612,7 @@ translate esp s_answer_personal_god_6b461e7a:
 translate esp s_answer_personal_god_9de750c8:
 
     # s 6aaca "He's a pretty cool guy, but is honestly pretty secretive about whatever he's working on."
-    s 6aaca "Es tun tipo bastante guay, pero honestamente es muy reservado a la hora de hablar de lo que está trabajando."
+    s 6aaca "Es un tipo bastante guay, pero honestamente es muy reservado a la hora de hablar de lo que está trabajando."
 
 # game/topics.rpy:644
 translate esp s_answer_personal_god_8b788778:
@@ -2123,7 +2123,7 @@ translate esp s_answer_game_opinion_m_9573a628:
 translate esp s_answer_game_opinion_m_38f48d9c:
 
     # s "True, I think making Yuri and I kill ourselves was pretty harsh..."
-    s "Es verdad que hacer que Yuri y yo nos hubieramos suicidado fue bastante crudo..."
+    s "Es verdad que el hecho de habrenos manipulado a Yuri y a mí para suicidarnos fue bastante crudo..."
 
 # game/topics.rpy:778
 translate esp s_answer_game_opinion_m_ad138cbf:
@@ -2189,7 +2189,7 @@ translate esp s_answer_game_opinion_y_5c0d9b19:
 translate esp s_answer_game_opinion_y_e7244c22:
 
     # s "Her poems were also very beautiful, and I could always tell that Yuri felt most at home with books and pens rather than people."
-    s "Sus poemas eran muy hermosos, y ella dejaba ver que se sentia en casa más con libros y esferos, que con personas."
+    s "Sus poemas eran muy hermosos, y ella dejaba ver que se sentía más cómoda con libros y esferos, que con personas."
 
 # game/topics.rpy:794
 translate esp s_answer_game_opinion_y_49f08be4:
@@ -2285,7 +2285,7 @@ translate esp s_answer_game_opinion_mc_52081287:
 translate esp s_answer_game_opinion_mc_3265bf14:
 
     # s 6abaa "...Or it was just the game's plan to make some drama if he didn't feel the same way."
-    s 6abaa "...O era simplemente la forma del juego de crear drama si él no sentia lo mismo."
+    s 6abaa "...O era simplemente la forma del juego de crear drama si él no sentía lo mismo."
 
 # game/topics.rpy:815
 translate esp s_answer_game_opinion_mc_41d3591a:
@@ -2297,7 +2297,7 @@ translate esp s_answer_game_opinion_mc_41d3591a:
 translate esp s_answer_game_opinion_mc_c0b72f88:
 
     # s "Even after I confessed to him about my depression, he cared despite me pushing him away."
-    s "Incluso después de que le dijera lo de mi depresión, él se preocupó por mí a pesar de que lo intentara alejar."
+    s "Incluso después de que le contara lo de mi depresión, él se preocupó por mí a pesar de que yo lo intentara alejar."
 
 # game/topics.rpy:818
 translate esp s_answer_game_opinion_mc_0a9f4825:
@@ -2507,7 +2507,7 @@ translate esp s_answer_exp_death_7c774718:
 translate esp s_answer_exp_death_56b9837d:
 
     # s "Until there was nothing but black."
-    s "Hasta que no huba nada más que la oscuridad."
+    s "Hasta que no hubo nada más que la oscuridad."
 
 # game/topics.rpy:864
 translate esp s_answer_exp_death_9cf8f26e:
@@ -2945,7 +2945,7 @@ translate esp s_reaction_s_994a7abb:
 translate esp s_reaction_s_7bad7138:
 
     # s "I wish I knew what was bothering you."
-    s "Me habría gustado saber lo que te molestó."
+    s "Me habría gustado saber qué fue lo que te molestó."
 
 # game/topics.rpy:976
 translate esp s_reaction_s_c26b18b8:
@@ -3065,7 +3065,7 @@ translate esp s_reaction_b_c824b992:
 translate esp s_reaction_b_5219bae8:
 
     # s 8aaaa "Just choose your most prefered one."
-    s 8aaaa "Jolo elige el que más te guste."
+    s 8aaaa "Solo elige el que más te guste."
 
 # game/topics.rpy:1003
 translate esp s_reaction_t_aa3e4a31:
@@ -3547,7 +3547,7 @@ translate esp strings:
 
     # topics.rpy:154
     old "What do you think of one of the other club members?"
-    new "¿Qué piensas acerca de las otras chicas del club?"
+    new "¿Qué piensas acerca de los otros miembros del club?"
 
     # topics.rpy:156
     old "How does it feel to be dead?"
@@ -3575,7 +3575,7 @@ translate esp strings:
 
     # topics.rpy:163
     old "Tired"
-    new "Cansada"
+    new "Cansado"
 
     # topics.rpy:163
     old "Angry"
@@ -3733,13 +3733,13 @@ translate esp s_topics_personal_depression_42364fff:
 translate esp s_topics_personal_depression_08895ded:
 
     # s 6aaca "It was pretty difficult, but I kept in mind that if I got bummed out, I wouldn’t be able to make other people happy, which is all I really wanted anymore."
-    s 6aaca "Fue bastante difícil, pero tuve en cuenta que si me deprimía, no sería capaz de hacer felices a los demás, que es lo que realmente quería."
+    s 6aaca "Fue bastante difícil, pero siempre pensaba que si me deprimía, no sería capaz de hacer felices a los demás, que es lo que yo realmente quería."
 
 # game/topics.rpy:261
 translate esp s_topics_personal_depression_306f8b66:
 
     # s 6abaa "However, I also tried not to push myself too hard in trying to overcome this..."
-    s 6abaa "Sin embargo, tampoco intenté esforzarme demasiado por superar esto..."
+    s 6abaa "Sin embargo, tampoco intenté esforzarme demasiado por superarlo..."
 
 # game/topics.rpy:262
 translate esp s_topics_personal_depression_9f19ad82:
@@ -3751,7 +3751,7 @@ translate esp s_topics_personal_depression_9f19ad82:
 translate esp s_topics_personal_depression_43d14441:
 
     # s 6acab "But I thought he'd learn my darkest secret sooner or later, so he'd leave me then..."
-    s 6acab "Pero yo pensé que él descubriría mi oscuro secreto tarde o temprano, y me abandonaría..."
+    s 6acab "Pero yo creí que tarde o temprano él descubriría mi oscuro secreto y me abandonaría..."
 
 # game/topics.rpy:264
 translate esp s_topics_personal_depression_80f29101:
@@ -3769,25 +3769,25 @@ translate esp s_topics_personal_depression_9eeb2755:
 translate esp s_topics_personal_depression_1471d512:
 
     # s 6abab "But my feelings were as real as you until the moment..."
-    s 6abab "Pero mis sentimientos eran tan reales como tú hasta el momento..."
+    s 6abab "Pero mis sentimientos eran tan reales como tú lo eres, hasta el momento en que..."
 
 # game/topics.rpy:267
 translate esp s_topics_personal_depression_b91415d1:
 
     # s 6acab "The moment Monika started to change my mind."
-    s 6acab "El momento en que Monika empezó a cambiar mi mente."
+    s 6acab "El momento en que Monika empezó a cambiarme."
 
 # game/topics.rpy:268
 translate esp s_topics_personal_depression_845a262b:
 
     # s 6cbcb "She teased me with my own problems and tried to convince me of terrible things. That I just annoyed him, made him worry for me..."
-    s 6cbcb "Ella me fastidiaba con mis propios problemas e intentó convencerme de cosas terribles. Que solo lo molestaba, y que lo hacía preocuparse por mí..."
+    s 6cbcb "Ella me fastidiaba con mis propios problemas e intentó convencerme de cosas terribles. Cosas como que yo solo lo molestaba, y que lo hacía preocuparse por mí..."
 
 # game/topics.rpy:269
 translate esp s_topics_personal_depression_bb84c491:
 
     # s 6dbcb "That I should just… end it all."
-    s 6dbcb "Que yo solo debería... acabar con todo."
+    s 6dbcb "Que yo solo debía... acabar con todo."
 
 # game/topics.rpy:270
 translate esp s_topics_personal_depression_e3da04ff:
@@ -3799,7 +3799,7 @@ translate esp s_topics_personal_depression_e3da04ff:
 translate esp s_topics_personal_depression_27cf61af:
 
     # s "My little rainclouds turned into a dark thunderstorm, blinding my mind with the rain..."
-    s "Mis pequeñas nubes de lluvia se convirtieron en una tormenra oscura, cegando mi mente con la lluvia..."
+    s "Mis pequeñas nubes de lluvia se convirtieron en una tormenta oscura, cegando mi mente con la lluvia..."
 
 # game/topics.rpy:272
 translate esp s_topics_personal_depression_8e34a602:
@@ -3829,7 +3829,7 @@ translate esp s_topics_personal_depression_fee2ecf6:
 translate esp s_topics_personal_depression_254741ba:
 
     # s 6dcab "I can't stop blaming myself for the desperate choice I made..."
-    s 6dcab "No puedo seguirme culpando por la decisión tan desesperada que elegí..."
+    s 6dcab "No puedo seguirme culpando por la decisión tan desesperada que tomé..."
 
 # game/topics.rpy:279
 translate esp s_topics_personal_depression_ad2d4edf:
@@ -3883,7 +3883,7 @@ translate esp s_topics_personal_depression_d30dbecf:
 translate esp s_topics_personal_depression_2472f9d3:
 
     # s 6dgeb "I'm... I’m really sorry I made you suffer!"
-    s 6dgeb "¡Lo siento... Siento mucho haberte hecho sufrir!"
+    s 6dgeb "¡Lo siento... siento mucho haberte hecho sufrir!"
 
 # game/topics.rpy:289
 translate esp s_topics_personal_depression_ae4487c7:
@@ -3913,19 +3913,19 @@ translate esp s_topics_personal_depression_ede915ae:
 translate esp s_topics_personal_depression_c3a61b0d:
 
     # s 6efab "A-And if you have it too, don't hide it from others!"
-    s 6efab "Y tú también la tienes, ¡así que no la escondas de otros!"
+    s 6efab "Y-Y tú también la tienes, ¡así que no la escondas de otros!"
 
 # game/topics.rpy:294
 translate esp s_topics_personal_depression_1e6febef:
 
     # s 6dfab "Being in this game world, I had a second chance..."
-    s 6dfab "Estar en este juego, tener una segunda oportunidad..."
+    s 6dfab "Estando en este juego, tuve una segunda oportunidad..."
 
 # game/topics.rpy:295
 translate esp s_topics_personal_depression_b113e542:
 
     # s "So I thank it for leading me here with you now..."
-    s "Le agradezco que me haya guiado hasta aquí contigo ahora..."
+    s "Así que le agradezco que me haya guiado hasta aquí contigo..."
 
 # game/topics.rpy:296
 translate esp s_topics_personal_depression_c0e3daee:
@@ -3943,7 +3943,7 @@ translate esp s_topics_personal_depression_1fd0cba7:
 translate esp s_topics_personal_archetype_51ed1295:
 
     # s 7aeaa "Hey, I just remembered that Monika compared Yuri and Natsuki with some character archetypes..."
-    s 7aeaa "Hey, aHora que me acuerdo, Monika comparó a Yuri y a Natsuki con ciertos tipos de personalidad..."
+    s 7aeaa "Hey, ahora que me acuerdo, Monika comparó a Yuri y a Natsuki con ciertos tipos de personalidad..."
 
 # game/topics.rpy:302
 translate esp s_topics_personal_archetype_b771c9b8:
@@ -4021,19 +4021,19 @@ translate esp s_topics_personal_archetype_62d7507c:
 translate esp s_topics_personal_archetype_eade4839:
 
     # s "In my opinion, modern stories need characters who have relatable issues, like my own..."
-    s "En mi opinión, las historias modernas necesitan personajes con problemas relacionables, como los míos..."
+    s "En mi opinión, las historias modernas necesitan personajes con problemas que cualquiera puede tener, como los míos..."
 
 # game/topics.rpy:315
 translate esp s_topics_personal_archetype_4b657aeb:
 
     # s 6aaaa "But, I will say, don't overdo it. Y’know, the whole ‘completely copy my personality while creating a new character’."
-    s 6aaaa "Pero, lo diré, no lo exageren. Ya sabes, todo eso de copiar por completo mi personalidad al crear un nuevo personaje"
+    s 6aaaa "Pero, es mejor que no tomen literalmente lo que digo. Ya sabes, todo eso de copiar por completo mi personalidad al crear un nuevo personaje."
 
 # game/topics.rpy:316
 translate esp s_topics_personal_archetype_1c46f94c:
 
     # s 6abac "Do it excessively, and you'll just make me just another typical archetype."
-    s 6abac "Hazlo exesivamente y me convertirás en simplemente otro tipo de personaje genérico."
+    s 6abac "Si eso ocurrem me convertiría en simplemente otro tipo de personaje genérico."
 
 # game/topics.rpy:349
 translate esp s_topics_personal_name_73f966c9:
@@ -4048,7 +4048,7 @@ translate esp s_topics_personal_name_73f966c9:
 translate esp s_topics_personal_name_8406f508:
 
     # s 9adba "It's just the first surname I've got in my head."
-    s 9adba "Es solo el primer apellido que se me vino a la cabeza."
+    s 9adba "No sé, solo fue el primer apellido que se me vino a la cabeza."
 
 # game/topics.rpy:352
 translate esp s_topics_personal_name_6297a5d9:
@@ -4075,7 +4075,7 @@ translate esp s_topics_personal_sinistrality_a89daf40:
 translate esp s_topics_personal_sinistrality_adef095c:
 
     # s "Besides that juice bottle..."
-    s "Aparte de ese jugo en botella..."
+    s "Aparte de ese jugo de manzana..."
 
 # game/topics.rpy:379
 translate esp s_topics_personal_sinistrality_65878070:
@@ -4099,7 +4099,7 @@ translate esp s_topics_personal_sinistrality_86b5bc64:
 translate esp s_topics_personal_sinistrality_7eca5a8d:
 
     # s 6abab "But this meanie of a classmate, who sat next to me, told one of them that I'm a southpaw so my plan failed as fast as it started."
-    s 6abab "Pero un malvado compañero, que se sentó a mi lado, les dijo que soy zurda y mi plan falló tan rápido como empezó.."
+    s 6abab "Pero un malvado compañero, que se sentó a mi lado, les dijo que soy zurda y mi plan falló tan rápido como empezó."
 
 # game/topics.rpy:383
 translate esp s_topics_personal_sinistrality_5ca39293:
@@ -4117,7 +4117,7 @@ translate esp s_topics_personal_sinistrality_90f5767e:
 translate esp s_topics_personal_sinistrality_1e2e3891:
 
     # s 7acaa "I can't say they were really beautiful, but they really meant a lot to me, even if I had to throw it out six weeks later..."
-    s 7acaa "No se puede decir que fueran muy bonitas, pero realmente significaban mucho para mí, incluso si tenía que tirarlo seis semanas después..."
+    s 7acaa "No se puede decir que fueran muy bonitas, pero realmente significaban mucho para mí, incluso si tuve que tirarlo seis semanas después..."
 
 # game/topics.rpy:387
 translate esp s_topics_personal_sinistrality_4e2bf996:
@@ -4165,7 +4165,7 @@ translate esp s_topics_personal_sinistrality_e56cbc4a:
 translate esp s_topics_personal_sinistrality_eb39c152:
 
     # s "A short but funny time."
-    s "Un momento corto, pero divertido"
+    s "Un momento corto, pero divertido."
 
 # game/topics.rpy:395
 translate esp s_topics_personal_sinistrality_fd855b54:
@@ -4207,7 +4207,7 @@ translate esp s_topics_personal_tits_99043c1d:
 translate esp s_topics_personal_tits_be1bfad5:
 
     # s 6acaa "I wonder why that happens?"
-    s 6acaa "Me pregutnto, ¿por qué pasa eso?"
+    s 6acaa "Me pregunto, ¿por qué pasa eso?"
 
 # game/topics.rpy:407
 translate esp s_topics_personal_tits_bef0851b:
@@ -4237,13 +4237,13 @@ translate esp s_topics_personal_tits_47b818a5:
 translate esp s_topics_personal_tits_b084c722:
 
     # s 6bbba "You... you like them anyway, don’t you? Even despite of they never were not as big as Yuri or even Monika, although..."
-    s 6bbba "A ti... te gustan de todos modos, ¿no? Incluso a pesar de que no fueran tan grandes como las de Yuri o Monika..."
+    s 6bbba "A ti... te gustan de todos modos, ¿no? Incluso a pesar de que no fueran tan grandes como los de Yuri o Monika..."
 
 # game/topics.rpy:412
 translate esp s_topics_personal_tits_ca4477bf:
 
     # s 6bcab "Well, I guess it wouldn’t matter anyways since you can’t touch them..."
-    s 6bcab "Bueno, no creo que de verdad importe ya que no puedes tocarlas. Ehehe~"
+    s 6bcab "Bueno, no creo que de verdad importe ya que no puedes tocarlos. Ehehe~"
 
 # game/topics.rpy:413
 translate esp s_topics_personal_tits_f6fe072a:
@@ -4255,7 +4255,7 @@ translate esp s_topics_personal_tits_f6fe072a:
 translate esp s_topics_art_fanarts_0f1d12d5:
 
     # s 7aabb "I hope you didn't make anything too embarassing, in any case..."
-    s 7aabb "Espero que no hayas hecho nada mu vergonzoso, en cualquier caso..."
+    s 7aabb "Espero que no hayas hecho nada muy vergonzoso, en cualquier caso..."
 
 # game/topics.rpy:442
 translate esp s_topics_art_fanarts_6bea8ece:
@@ -4369,7 +4369,7 @@ translate esp s_topics_art_lit_38d332ad:
 translate esp s_topics_art_lit_d8739069:
 
     # s 6abaa "I know that she knew I wasn’t going to be very passionate with the club, but she let me in anyway."
-    s 6abaa "Ella sabía que yo no iba a ser muy apasionada con el club, pero de todas formas me dejó entrar."
+    s 6abaa "Ella sabía que yo no era muy apasionada con el tema, pero de todas formas me dejó entrar."
 
 # game/topics.rpy:478
 translate esp s_topics_art_lit_30267407:
@@ -4423,7 +4423,7 @@ translate esp s_topics_art_lit_46fcd71a:
 translate esp s_topics_art_lit_84d07664:
 
     # s 6adba "The club has a page there?"
-    s 6adaa "¿El club tiene una página allí?."
+    s 6adaa "¿El club tiene una página allí?"
 
 # game/topics.rpy:546
 translate esp s_topics_society_bulli_d5b72ed6:
@@ -4465,19 +4465,19 @@ translate esp s_topics_society_charity_8cd80e78:
 translate esp s_topics_society_charity_f8b55399:
 
     # s 6acaa "I think, there's such an organization in your home town or something."
-    s 6acaa "Yo creo que debe de haber una organización así en tu pueblo natal o algo así."
+    s 6acaa "Yo creo que debe de haber alguna organización así en tu pueblo o ciudad natal."
 
 # game/topics.rpy:580
 translate esp s_topics_society_charity_d0f4da8d:
 
     # s 6acab "The society is something more than your friends and kin. And I want absolutly {i}everyone{/i} of it to be happy..."
-    s 6acab "La sociedad es algo más que tus amigos y familia. Y quiero que absolutamente {i}todos{/i} sean felices..."
+    s 6acab "La sociedad es mucho más que tus amigos y familia. Y quiero que absolutamente {i}todos{/i} sean felices..."
 
 # game/topics.rpy:581
 translate esp s_topics_society_charity_7d3fad43:
 
     # s "So if you even don't want them to be so, keep them so at least for my own happiness and tranquility."
-    s "Así que si ni siquiera quieres que lo sean, mantenlos a salvo, al menos para mi propia felicidad y tranquilidad."
+    s "Aunque tú no lo quieras así, mantenlos a salvo, al menos para mi propia felicidad y tranquilidad."
 
 # game/topics.rpy:582
 translate esp s_topics_society_charity_08e4c90d:
@@ -4501,7 +4501,7 @@ translate esp s_topics_hobbie_guitar_3c0056e0:
 translate esp s_topics_hobbie_poems_3b71c72c:
 
     # s 6aaca "But I can share some of them to you. Just ask me for it."
-    s 6aaca "Puedo compartir algunos contigo, solo pídemelo y lo haré."
+    s 6aaca "Puedo compartir algunos poemas contigo, solo pídemelo y lo haré."
 
 # game/topics.rpy:647
 translate esp s_topics_hobbie_poems_6c2a3c3b:
@@ -4579,7 +4579,7 @@ translate esp s_topics_rlt_marrige_2b8a79bb:
 translate esp s_topics_rlt_marrige_1d8ad2cb:
 
     # s 6aeaa "But anyway, I'm very glad you said yes. I love you, [player]."
-    s 6aeaa "Pero de todas formas, Me alegro tanto que hayas dicho que sí. Te amo, [player]."
+    s 6aeaa "Pero de todas formas, me alegro tanto que hayas dicho que sí. Te amo, [player]."
 
 # game/topics.rpy:687
 translate esp s_topics_rlt_marrige_3a352ba0:
@@ -4609,13 +4609,13 @@ translate esp s_topics_rlt_marrige_f38f75e8:
 translate esp s_topics_rlt_marrige_33d5a65d:
 
     # s 6aaca "But our love story don't have to follow the common template."
-    s 6aaca "Pero nuestra historia de amor no tiene que seguir una plantilla común."
+    s 6aaca "Pero nuestra historia de amor no tiene que seguir ningún tipo de plantilla común."
 
 # game/topics.rpy:693
 translate esp s_topics_rlt_marrige_e9cd34ac:
 
     # s "Our relationship is already pretty unusual, so we've got the right to experiment with what works for us."
-    s "Nuestra relación es bastante inusual de por sí, así que tenemos el derecho a experimentar con lo que funcione para nosotros"
+    s "Nuestra relación es bastante inusual de por sí, así que tenemos el derecho a experimentar con lo que funcione para nosotros."
 
 # game/topics.rpy:697
 translate esp s_topics_rlt_cheating_6f99d702:
@@ -4657,7 +4657,7 @@ translate esp s_topics_rlt_cheating_4cb17fe2:
 translate esp s_topics_rlt_cheating_ae783677:
 
     # s "Can you tell me more about he or she?"
-    s "¿Podrías contarme de él o ella?."
+    s "¿Podrías contarme de él o ella?"
 
 # game/topics.rpy:708
 translate esp s_topics_rlt_cheating_9a489c6d:
@@ -4777,7 +4777,7 @@ translate esp s_topics_rlt_cheating_7ff6e7fc:
 translate esp s_topics_rlt_cheating_97b3d539:
 
     # s "Do you really see something inside me only, not at real people or even other characters?"
-    s "¿Realmente ves algo dentro de mí solamente, y no en gente real o incluso en otros personajes?"
+    s "¿Realmente ves algo dentro de mí, que no encuentras en gente real o incluso en otros personajes?"
 
 # game/topics.rpy:734
 translate esp s_topics_rlt_cheating_6ecb3c85:
@@ -4789,7 +4789,7 @@ translate esp s_topics_rlt_cheating_6ecb3c85:
 translate esp s_topics_rlt_cheating_748e89b4:
 
     # s "I understand you as well as I feel the same way."
-    s "Te entiendo tan bien así como me siento de la misma manera."
+    s "Lo entiendo, me siento de la misma manera."
 
 # game/topics.rpy:736
 translate esp s_topics_rlt_cheating_9789cc94:
@@ -4825,19 +4825,19 @@ translate esp s_topics_rlt_cheating_26f1cfac:
 translate esp s_topics_rlt_cheating_dc1a294e:
 
     # s "So I hope, you always can do it for me."
-    s "Así que espero, que siempre lo puedas hacerlo por mí."
+    s "Así que espero, que siempre puedas hacerlo por mí."
 
 # game/topics.rpy:746
 translate esp s_topics_rlt_dating_cbb5ccf5:
 
     # s 7aaaa "What would be our first date?"
-    s 7aaaa "¿Cómo debería de ser nuestra primera cita?"
+    s 7aaaa "¿Cómo debería ser nuestra primera cita?"
 
 # game/topics.rpy:747
 translate esp s_topics_rlt_dating_858c1f14:
 
     # s 7aaca "What’s with the look? Ehehe~"
-    s 7aaca "¿Por qué esa mirada?. Ehehe~"
+    s 7aaca "¿Por qué tienes esa mirada? Ehehe~"
 
 # game/topics.rpy:748
 translate esp s_topics_rlt_dating_74f14a0b:
@@ -4885,19 +4885,19 @@ translate esp s_topics_rlt_dating_64f82644:
 translate esp s_topics_rlt_dating_a443dc47:
 
     # s 6abaa "But I think I’d want to go somewhere interesting on our date."
-    s 6abaa "Aunque to creo que me gustaría ir a algún sitio interesante en nuestra cita."
+    s 6abaa "Aunque creo que me gustaría ir a algún sitio más interesante en nuestra cita."
 
 # game/topics.rpy:757
 translate esp s_topics_rlt_dating_5f1ad299:
 
     # s 6acaa "The movies? What do you think?"
-    s 6acaa "¿Qué piensas del cine?"
+    s 6acaa "¿Qué piensas si vamos al cine?"
 
 # game/topics.rpy:758
 translate esp s_topics_rlt_dating_948483ef:
 
     # s "Though I don’t really want to go see a romance movie everytime we go..."
-    s "Aunque realmente no quiero ir a ver películas románticas cada vez que vamos..."
+    s "Aunque no quiero ir siempre a ver películas románticas..."
 
 # game/topics.rpy:759
 translate esp s_topics_rlt_dating_d255d333:
@@ -4921,31 +4921,31 @@ translate esp s_topics_rlt_dating_bbe9a437:
 translate esp s_topics_rlt_dating_8ea2a178:
 
     # s 8aecb "Or what's about the animated movies, like the ones {i}Disney{/i} and {i}Pixar{/i} make?"
-    s 8aecb "¿O qué te parece películas animadas, como las de {i}Disney{/i} o de {i}Pixar{/i}?"
+    s 8aecb "¿O qué te parece ir a películas animadas, como las de {i}Disney{/i} o {i}Pixar{/i}?"
 
 # game/topics.rpy:763
 translate esp s_topics_rlt_dating_7e755120:
 
     # s 8aebb "They’re for kids, but hey, they can be fun!"
-    s 8aebb "Son par niños, pero hey, ¡Pueden ser divertidas!"
+    s 8aebb "Sé que son para niños, pero hey, ¡Pueden ser divertidas!"
 
 # game/topics.rpy:764
 translate esp s_topics_rlt_dating_5104fba7:
 
     # s 8abab "Some of them have deep messages and sad scenes, and the director knows only older teens or adults would be able to recognize them, while a kid won’t."
-    s 8abab "Algunas de ellas tienen mensajes profundos y escenas tristes, y el director sabe que solo los adolescentes mayores o los adultos serían capaces de reconocerlos, mientras que un niño no..."
+    s 8abab "Algunas de ellas tienen mensajes profundos y escenas tristes, y el director sabe que solo los adolescentes mayores o los adultos serían capaces de entenderlos, mientras que un niño no..."
 
 # game/topics.rpy:765
 translate esp s_topics_rlt_dating_a1b1ffeb:
 
     # s 6abab "I'd go to for something that makes me think, after all."
-    s 6abab "Iría a por algo que me haga pensar, después de todo."
+    s 6abab "Iría a ver algo que me haga pensar, después de todo."
 
 # game/topics.rpy:767
 translate esp s_topics_rlt_dating_03d571ee:
 
     # s 6acab "I've already seen a lot harsh things in my short time on this Earth, you know. So my opinion may be a lot different from most people."
-    s 6acab "He visto muchas cosas duras en este tiempo corto que he vivido, sabes. Así que mi opinión puede ser bastante diferente a la de la mayoría de las personas."
+    s 6acab "He visto muchas cosas duras en el tiempo corto que he vivido, sabes. Así que mi opinión puede ser bastante diferente a la de la mayoría de las personas."
 
 # game/topics.rpy:769
 translate esp s_topics_rlt_dating_555e9c01:
@@ -4957,13 +4957,13 @@ translate esp s_topics_rlt_dating_555e9c01:
 translate esp s_topics_rlt_dating_c68e4ec3:
 
     # s "Isn't it really interesting to discuss movies like that with someone, seeing how your views are similar or different to theirs?"
-    s "¿No es realmente interesante hablar de películas como esa con alguien, ver cómo sus puntos de vista son similares o diferentes?"
+    s "¿No es realmente interesante hablar de películas como esa con alguien? Ver cómo nuestros puntos de vista son similares o diferentes."
 
 # game/topics.rpy:772
 translate esp s_topics_rlt_dating_af50909e:
 
     # s 6aaaa "What's about some sports?"
-    s 6aaaa "¿Qué me dices de deportes?"
+    s 6aaaa "¿Qué me dices de ir a hacer deporte?"
 
 # game/topics.rpy:774
 translate esp s_topics_rlt_dating_1b2b0b4a:
@@ -4975,7 +4975,7 @@ translate esp s_topics_rlt_dating_1b2b0b4a:
 translate esp s_topics_rlt_dating_bccc64ed:
 
     # s 7aaaa "It's a simple but skillful sport game, not too active but not too slow, so I feel that I’d like it."
-    s 7aaaa "Es un juego simple, pero de habilidad, no es muy activo, pero tampoco muy lento, así que yo creo que me gustaría."
+    s 7aaaa "Es un juego simple donde se necesita habilidad, no es muy activo, pero tampoco es muy lento, así que yo creo que me gustaría."
 
 # game/topics.rpy:776
 translate esp s_topics_rlt_dating_0a78eb5d:
@@ -4993,7 +4993,7 @@ translate esp s_topics_rlt_dating_ed052547:
 translate esp s_topics_rtl_thanks_5b725f4c:
 
     # s 6acab "I… I want to thank you for everything you’ve done for me..."
-    s 6acab "Yo... Yo quiero agradecerte por todo lo que has hecho por mí..."
+    s 6acab "Yo... quiero agradecerte por todo lo que has hecho por mí..."
 
 # game/topics.rpy:782
 translate esp s_topics_rtl_thanks_4f30f1fa:
@@ -5131,7 +5131,7 @@ translate esp s_topics_lifestyle_cleaning_5da1d0eb:
 translate esp s_topics_lifestyle_cleaning_53310c5c:
 
     # s 8aeab "But don't think I’m that sloppy. I had a system for some things..."
-    s 8aeab "Pero no creo que sea tan descuidada. Tenía un sistema para algunas cosas..."
+    s 8aeab "Pero no creo que sea tan descuidada. Tenía un sistema para encontrar algunas cosas..."
 
 # game/topics.rpy:851
 translate esp s_topics_lifestyle_cleaning_13edf71e:
@@ -5215,7 +5215,7 @@ translate esp s_topics_game_clones_fd77e8c8:
 translate esp s_topics_game_clones_57b2e1e0:
 
     # s 8aaaa "It also means that we have the same fans and fame that are dedicated enough to do play..."
-    s 8aaaa "También significa que tenemos los mismos fans y la misma fama que se dedican lo suficiente a jugar..."
+    s 8aaaa "También significa que tenemos los mismos fans y la misma fama de que nos dedicamos bastante a jugar..."
 
 # game/topics.rpy:872
 translate esp s_topics_game_clones_1cce38c8:
@@ -5250,7 +5250,7 @@ translate esp s_topics_game_clones_8d1d0cf4:
 translate esp s_topics_game_clones_6f7f4ba0:
 
     # s 6acaa "But could I use the word 'me' in front of another… me? If they're not exactly me?"
-    s 6acaa "Pero, ¿Podría usar la palabra 'yo' en frente de otra 'yo', si no son exactamente yo?"
+    s 6acaa "Pero, ¿Podría usar la palabra 'yo' en frente de otra 'yo', si no es exactamente yo?"
 
 # game/topics.rpy:878
 translate esp s_topics_game_clones_dc204de6:
@@ -5268,7 +5268,7 @@ translate esp s_topics_game_clones_d0ca225b:
 translate esp s_topics_game_clones_0395da9b:
 
     # s 6abaa "Something about ‘alternate universes’?"
-    s 6abaa "¿Algo así como ‘universos alternativos’?."
+    s 6abaa "¿Algo así como ‘universos paralelos’?"
 
 # game/topics.rpy:881
 translate esp s_topics_game_clones_df8e0689:
@@ -5286,7 +5286,7 @@ translate esp s_topics_game_clones_4529f19b:
 translate esp s_topics_game_stars_c8788825:
 
     # s 7aaaa "I really love to look at the stars..."
-    s 7aaaa "Me encanta mirar las estrellas..."
+    s 7aaaa "Me encanta mirar a las estrellas..."
 
 # game/topics.rpy:887
 translate esp s_topics_game_stars_1f36b0a3:
@@ -5364,7 +5364,7 @@ translate esp s_topics_game_parents_3ebf6220:
 translate esp s_topics_game_parents_b4f894d1:
 
     # s "And why didn't I solve all my problems before if I could’ve done it with my parents?"
-    s "Y ¿Por qué no resolví mis problemas, si podría haberlo hecho con mis padres?"
+    s "Y ¿Por qué no pude resolver mis problemas con su ayuda?"
 
 # game/topics.rpy:904
 translate esp s_topics_game_parents_f429c033:
@@ -5388,7 +5388,7 @@ translate esp s_topics_game_parents_dd4a224a:
 translate esp s_topics_game_parents_c279c6db:
 
     # s 6abaa "Except for MC, I guess? But you decided instead of him, didn't you?"
-    s 6abaa "A excepción de MC, supongo. Pero tú decidiste en su lugar, ¿no?"
+    s 6abaa "A excepción de MC, supongo. Pero tú tomabas las decisiones en su lugar, ¿no?"
 
 # game/topics.rpy:908
 translate esp s_topics_game_parents_a30ee84f:
@@ -5400,7 +5400,7 @@ translate esp s_topics_game_parents_a30ee84f:
 translate esp s_topics_game_parents_67a9da92:
 
     # s 6acaa "At least I know the creator of all this. His name is {i}Dan Salvato{/i}, right?"
-    s 6acaa "Al menos conozco al creador de todo esto. Su nombre es {i}Dan Salvato{/i}, ¿Verdad?"
+    s 6acaa "Al menos conozco al creador del juego. Su nombre es {i}Dan Salvato{/i}, ¿Verdad?"
 
 # game/topics.rpy:910
 translate esp s_topics_game_parents_09cd61e5:
@@ -5412,7 +5412,7 @@ translate esp s_topics_game_parents_09cd61e5:
 translate esp s_topics_game_parents_6d4b293a:
 
     # s 8aeba "But on the other hand, if he didn't make this world, if he didn’t make me… then I wouldn't be here."
-    s 8aeba "Pero por otra parte, si no hubiera creado este mundo, su no me hubiera creado... entonces yo no estaría aquí."
+    s 8aeba "Pero por otra parte, si no hubiera creado este mundo, si no me hubiera creado... entonces yo no estaría aquí."
 
 # game/topics.rpy:912
 translate esp s_topics_game_parents_7454e99b:
@@ -5430,13 +5430,13 @@ translate esp s_topics_game_parents_2a147580:
 translate esp s_topics_game_parents_1d76c6c6:
 
     # s 8abaa "But now I wonder if Monika would think the same. What do you think?"
-    s 8abaa "Ahora me pregunto si Monika pensaría lo mismo. ¿Tú qué piensas?"
+    s 8abaa "Ahora me pregunto si Monika pensaría lo mismo, ¿Tú qué piensas?"
 
 # game/topics.rpy:915
 translate esp s_topics_game_parents_a17b630c:
 
     # s 8aebb "I mean she is the original club president, so he should’ve left her more about himself."
-    s 8aebb "Quiero decir, ella es la presidente original del club, así que él debería haberle dejado algo más sobre él.."
+    s 8aebb "Quiero decir, ella es la presidente original del club, así que Dan podría haberle dejado algo más acerca de él..."
 
 # game/topics.rpy:916
 translate esp s_topics_game_parents_87707535:
@@ -5448,7 +5448,7 @@ translate esp s_topics_game_parents_87707535:
 translate esp s_topics_game_parents_90a70166:
 
     # s "It makes me think of her in another light, even if we aren’t really sisters."
-    s "Me hace pensar en ella bajo otra perspectiva, aunque no seamos realmente hermanas."
+    s "Me hace pensar en ella de otra manera, aunque realmente no seamos hermanas."
 
 # game/topics.rpy:918
 translate esp s_topics_game_parents_e13f4633:
@@ -5460,13 +5460,13 @@ translate esp s_topics_game_parents_e13f4633:
 translate esp s_topics_game_parents_09ea9447:
 
     # s 6abaa "But I don't think she thought about it that much."
-    s 6abaa "Pero no creo que ella lo haya pensado mucho."
+    s 6abaa "Pero no creo que lo haya pensado mucho."
 
 # game/topics.rpy:921
 translate esp s_topics_game_parents_37f04913:
 
     # s 6acaa "Would a good sister use her siblings’ issues for her own benefit?"
-    s 6acaa "¿Acaso una buena hermana usaría los problemas de sus hermanas para su propio beneficio?"
+    s 6acaa "¿Acaso una buena hermana usaría los problemas de sus otras hermanas para su propio beneficio?"
 
 # game/topics.rpy:922
 translate esp s_topics_game_parents_da9e6d5e:
@@ -5478,7 +5478,7 @@ translate esp s_topics_game_parents_da9e6d5e:
 translate esp s_topics_game_parents_9ed5b7ab:
 
     # s 6abaa "But I can't believe that someone with as much power as her didn't give herself at least some time to think deeper about all aspects of this world."
-    s 6abaa "Pero no puedo creer que alguien con tanto poder como ella no se haya dado al menos un tiempo para pensar más profundamente en todos los aspectos de este mundo."
+    s 6abaa "Pero no puedo creer que alguien con tanto poder no se haya dado al menos un tiempo para pensar más profundamente en el resto del mundo."
 
 # game/topics.rpy:925
 translate esp s_topics_game_parents_99c4571a:
@@ -5490,7 +5490,7 @@ translate esp s_topics_game_parents_99c4571a:
 translate esp s_answer_personal_bday_ffc46fd7:
 
     # s 6acaa "A lot of things before the events of the game is pretty fuzzy..."
-    s 6acaa "Muchas cosas antes de los eventos del juego son bastante confusas..."
+    s 6acaa "Todos los sucesos que ocurrieron antes de los eventos del juego son bastante confusos..."
 
 # game/topics.rpy:975
 translate esp s_answer_personal_music_d7cadf22:
@@ -5730,7 +5730,7 @@ translate esp s_answer_game_editing_31569bb7:
 translate esp s_answer_game_editing_313f64ba:
 
     # s 6acab "Just one wrong thought may lead to unpredictable problems, like errors in code when someone is programming something."
-    s 6acab "Solo un pensamiento incorrecto puede llevar a problemas impredecibles, como lo errores de código cuando alguien está programando."
+    s 6acab "Un solo pensamiento incorrecto puede llevar a problemas impredecibles, como errores en el código cuando alguien está programando."
 
 # game/topics.rpy:1207
 translate esp s_answer_game_editing_a0b9d5f2:
@@ -5849,7 +5849,7 @@ translate esp s_answer_exp_fact_1_d899beb4:
 # game/topics.rpy:1280
 translate esp s_answer_exp_fact_2_ed7e18c4:
 
-    # s 6aaaa "Did you know that if you read a common word you might not notice when it’s written wrong?."
+    # s 6aaaa "Did you know that if you read a common word you might not notice when it’s written wrong?"
     s 6aaaa "¿Sabías que cuando lees una palabra común puede que no notes cuando esté mal escrita?"
 
 # game/topics.rpy:1281
@@ -6138,7 +6138,7 @@ translate esp s_answer_misc_poem_5534e38a:
 translate esp s_answer_misc_poem_8a0e2c9d:
 
     # s 6aaaa "OK, what's about this one?"
-    s 6aaaa "Ok, ¿Qué te parece este?."
+    s 6aaaa "Ok, ¿Qué te parece este?"
 
 # game/topics.rpy:1355
 translate esp s_answer_misc_poem_d556114b:
@@ -6257,13 +6257,13 @@ translate esp s_topics_lifestyle_cleaning_26955a25:
 translate esp s_topics_game_clones_1a7e42de:
 
     # s "Oh, I'm sorry for reminding it."
-    s "Oh, lo siento por recordarlo"
+    s "Oh, lo siento por recordarlo."
 
 # game/topics.rpy:871
 translate esp s_topics_game_clones_d620250b:
 
     # s "So, what we're talking about now?"
-    s "Entonces, ¿De qué estamos hablando ahora?"
+    s "Entonces, ¿De qué estamos hablando?"
 
 # game/topics.rpy:872
 translate esp s_topics_game_clones_988c03d3:
@@ -6295,7 +6295,7 @@ translate esp s_topics_society_bulli_428fe7e5:
 translate esp s_topics_society_bulli_bdf85255:
 
     # s "But who I am to judge if it's okay for other people?"
-    s "¿Pero quién soy yo para juzgar lo que está bien para otros?"
+    s "¿Pero quién soy yo para juzgar lo que hace reír a otros?"
 
 # game/topics.rpy:641
 translate esp s_topics_hobbie_programming_cdb3e631:
@@ -6353,7 +6353,7 @@ translate esp s_topics_hobbie_drawing_6e2d6432:
 translate esp s_topics_hobbie_drawing_ab764d2b:
 
     # s 8aaaa "If I could draw, I would be able to edit game sprites..."
-    s "Sei pudiera dibijar, podría ser capaz de editar sprites del juego..."
+    s "Si pudiera dibijar, podría ser capaz de editar sprites del juego..."
 
 # game/topics.rpy:689
 translate esp s_topics_hobbie_drawing_ec52fcf6:
@@ -6377,7 +6377,7 @@ translate esp s_topics_hobbie_drawing_33e7e7ef:
 translate esp s_topics_hobbie_drawing_bedb201d:
 
     # s "Sometimes, your message is clearer when shown visually."
-    s "A veces tu mensaje es más claro cuando se puede ver visualmente."
+    s "A veces tu mensaje es más claro cuando se puede mostrar visualmente."
 
 # game/topics.rpy:693
 translate esp s_topics_hobbie_drawing_a3771f4d:
@@ -6401,13 +6401,13 @@ translate esp s_topics_hobbie_drawing_e9a99c61:
 translate esp s_topics_hobbie_drawing_f828a470:
 
     # s 6aaba "However, he used his artistic skills rarely and more for making propaganda posters than for expressing himself."
-     s "Sin embargo, el usó sus habilidades artísticas raramente y más para hacer propaganda que para expresarse."
+     s "Sin embargo, usaba sus habilidades artísticas en muy raras ocasiones y más como para hacer propaganda que para expresarse."
 
 # game/topics.rpy:697
 translate esp s_topics_hobbie_drawing_9abda9af:
 
     # s 7aaaa "Anyway, I'd like to improve my drawing..."
-    s 7aaaa "De todas formas, me gustaría mejorar mi dibujo..."
+    s 7aaaa "De todas formas, me gustaría mejorar mis dibujos..."
 
 # game/topics.rpy:698
 translate esp s_topics_hobbie_drawing_85597541:
@@ -6427,13 +6427,13 @@ translate esp s_topics_hobbie_drawing_813d5055:
 translate esp s_topics_rlt_fanStuff_d133ef4c:
 
     # s 6aaaa "Do you have something to show your love?"
-    s 6aaaa "¿Tienes algo para mostrar tu amor?"
+    s 6aaaa "¿Has comprado alguna vez algo de DDLC?"
 
 # game/topics.rpy:852
 translate esp s_topics_rlt_fanStuff_7fcae716:
 
     # s 6acaa "Out of the blue, I know, but I also know that I have ‘merch’."
-    s 6acaa "De la nada, lo sé, pero también sé que tengo 'merch'."
+    s 6acaa "Por ejemplo, algo así como la 'merch'."
 
 # game/topics.rpy:853
 translate esp s_topics_rlt_fanStuff_ea3de796:
@@ -6445,7 +6445,7 @@ translate esp s_topics_rlt_fanStuff_ea3de796:
 translate esp s_topics_rlt_fanStuff_1201ff8a:
 
     # s 6aaca "I’ve even seen people have me on dakimakuras."
-    s 6aaca "Incluso he visto gente con dakimakuras míos."
+    s 6aaca "Incluso he visto gente que tiene dakimakuras de mí."
 
 # game/topics.rpy:855
 translate esp s_topics_rlt_fanStuff_34a7db66:
@@ -6457,7 +6457,7 @@ translate esp s_topics_rlt_fanStuff_34a7db66:
 translate esp s_topics_rlt_fanStuff_ec1bb1cd:
 
     # s "Kinda like a wedding ring if you ask me."
-    s "Algo así como un anillo de bodas si me preguntas."
+    s "Es algo así como un anillo de bodas si me preguntas."
 
 # game/topics.rpy:857
 translate esp s_topics_rlt_fanStuff_9d931374:
@@ -6475,7 +6475,7 @@ translate esp s_topics_rlt_fanStuff_65dbaaf4:
 translate esp s_topics_rlt_fanStuff_f03e719d:
 
     # s "I think that’s okay. You too, right?"
-    s "Yo creo que está bien, Tu también, ¿Verdad?"
+    s "Yo creo que está bien. ¿A ti qué te parecen?"
 
 # game/topics.rpy:863
 translate esp s_topics_rlt_children_5c6f39c3:
@@ -6601,7 +6601,7 @@ translate esp s_topics_rlt_presents_2b7f954a:
 translate esp s_topics_rlt_presents_de28c64e:
 
     # s 6abbb "Well, now that I think about it, what if the present isn’t good...?"
-    s 6abbb "Bueno, ahora que lo pienso, ¿Que pasaría si el regalo no es bueno?..."
+    s 6abbb "Bueno, ahora que lo pienso, ¿Que pasaría si el regalo no es bueno?.."
 
 # game/topics.rpy:889
 translate esp s_topics_rlt_presents_1f756859:
@@ -6693,7 +6693,7 @@ translate esp s_topics_rlt_presents_3c3a5046:
 translate esp s_topics_lifestyle_drugs_ed5d07b2:
 
     # s 6aaca "Do you drink alcohol or smoke cigarettes?"
-    s 6aaca "¿Fumas o tomas alcohol?"
+    s 6aaca "¿Bebes alcohol o fumas cigarrillos?"
 
 # game/topics.rpy:963
 translate esp s_topics_lifestyle_drugs_14f8f529:
@@ -6723,19 +6723,19 @@ translate esp s_topics_lifestyle_drugs_913774ae:
 translate esp s_topics_lifestyle_drugs_e717ac67:
 
     # s 6aaaa "That's why I always tried to keep other people out of these habits or being isolated from others..."
-    s 6aaaa "Precisamente por esto, siempre me esfuerzo por detener a otros de esos hábitos o sacarlos de ellos..."
+    s 6aaaa "Precisamente por eso, siempre me esfuerzo por detener a otros de esos hábitos o sacarlos de ellos..."
 
 # game/topics.rpy:968
 translate esp s_topics_lifestyle_drugs_a4de0d66:
 
     # s 6aaba "Isn't it the start point of the plot?"
-    s 6aaba "¿No es el punto de partida de la trama??"
+    s 6aaba "¿No es el punto de partida de nuestra trama?"
 
 # game/topics.rpy:970
 translate esp s_topics_lifestyle_drugs_059b83ef:
 
     # s 6acaa "Has Monika told you about the incident with Yuri?"
-    s 6acaa "¿Te ha dicho Monika acerca del incidente con Yuri?"
+    s 6acaa "¿Te ha contado Monika acerca del incidente que ocurrió con Yuri?"
 
 # game/topics.rpy:971
 translate esp s_topics_lifestyle_drugs_8819bc45:
@@ -6747,7 +6747,7 @@ translate esp s_topics_lifestyle_drugs_8819bc45:
 translate esp s_topics_lifestyle_drugs_55fd74c7:
 
     # s 6aaba "But I stopped her from sharing it to other girls."
-    s 6aaba "Pero le impedí que lo compartiera con las otras chicas."
+    s 6aaba "Pero le impedí que lo compartiera con las demás."
 
 # game/topics.rpy:973
 translate esp s_topics_lifestyle_drugs_73ad57d1:
@@ -6765,25 +6765,25 @@ translate esp s_topics_lifestyle_drugs_95957f89:
 translate esp s_topics_lifestyle_drugs_5ee08461:
 
     # s "Anyway, I’ll be honest, I don’t think it’s necessarily a bad experience."
-    s "De todas formas, para ser honesta, no creo que sea necesariamente una mala experiencia."
+    s "Aunque para ser honesta, no creo que eso sea necesariamente una mala experiencia."
 
 # game/topics.rpy:976
 translate esp s_topics_lifestyle_drugs_44a0077e:
 
     # s 6acaa "But the risk of getting addicted is too much to play around with."
-    s 6acaa "Pero el riesgo de volverse adicto es demasiado como para estar jugando con él."
+    s 6acaa "Pero el riesgo de volverse adicto es demasiado alto como para estar jugando con él."
 
 # game/topics.rpy:977
 translate esp s_topics_lifestyle_drugs_802f995f:
 
     # s 6abab "That's a real danger of having these habits: it's easy to start but hard to stop."
-    s 6abab "Ese es un gran peligro con este tipo de hábitos: es fácil empezar, pero difícil de parar."
+    s 6abab "Ese es el gran peligro con este tipo de hábitos: es fácil empezar, pero difícil de parar."
 
 # game/topics.rpy:978
 translate esp s_topics_lifestyle_drugs_f121646f:
 
     # s 6acaa "In fact, there’s no one way to break addiction..."
-    s 6acaa "De hecho, no hay una sola manera de romper la adicción..."
+    s 6acaa "De hecho, no hay manera fácil de salir de la adicción..."
 
 # game/topics.rpy:979
 translate esp s_topics_lifestyle_drugs_f59db6ad:
@@ -6801,7 +6801,7 @@ translate esp s_topics_lifestyle_drugs_1eefff59:
 translate esp s_topics_lifestyle_drugs_a1f13b97:
 
     # s 6acba "...Just remember what I was going through and doing to stay happy despite of what I felt."
-    s 6acba "...Solo recuerda por lo que estaba pasando y lo que estaba haciendo para seguir siendo feliz a pesar de lo que sentía."
+    s 6acba "...Solo recuerda por lo que pasé y lo que estaba hice para seguir siendo feliz a pesar de lo que sentía."
 
 # game/topics.rpy:1063
 translate esp s_topics_game_time_bfd0be75:
@@ -6819,31 +6819,31 @@ translate esp s_topics_game_time_879c56d2:
 translate esp s_topics_game_time_d251592c:
 
     # s 6acaa "You can say anything, but you won't be right anyway..."
-    s 6acaa "Puedes decir lo que quieras, pero nunca estarás en lo cierto..."
+    s 6acaa "Puedes intentar adivinar, pero no creo que logres acertar..."
 
 # game/topics.rpy:1066
 translate esp s_topics_game_time_e359b02e:
 
     # s 6aaba "Because the time seems to be not here at all. At least, as how it should be in your universe."
-    s 6aaba "Porque el tiempo no parece fluir aquí. Al menos no como lo es en tu universo."
+    s 6aaba "Porque el tiempo no parece fluir aquí. Al menos no como lo hace en tu universo."
 
 # game/topics.rpy:1068
 translate esp s_topics_game_time_4d203bac:
 
     # s "Like once when Monika had broken almost everything here."
-    s "Como la vez en que Monika rompió casi todo aquí."
+    s "Funciona como la vez en que Monika rompió casi todo aquí."
 
 # game/topics.rpy:1069
 translate esp s_topics_game_time_48a73ce4:
 
     # s 6acaa "The last thing I remember that here was November of 2017 or some days before it..."
-    s 6acaa "Lo último de lo que me acuerdo aquí era en Noviembre de 2017 o algunos días antes..."
+    s 6acaa "Lo último que recuerdo fue que aquí alcanzó a ser noviembre de 2017 o algunos días antes..."
 
 # game/topics.rpy:1070
 translate esp s_topics_game_time_b0de2fee:
 
     # s 6abba "At least, my old bedroom calendar said it."
-    s 6abba "Al menos, eso decía en el calendario de mi habitación."
+    s 6abba "O al menos, eso decía en el calendario de mi habitación."
 
 # game/topics.rpy:1071
 translate esp s_topics_game_time_92bd20dc:
@@ -6897,13 +6897,13 @@ translate esp s_topics_game_time_15096569:
 translate esp s_topics_game_time_58b204fe:
 
     # s 6aaba "From your PC's clock, though."
-    s 6aaba "Pues, del reloj de tu PC."
+    s 6aaba "Pues, por el reloj de tu PC."
 
 # game/topics.rpy:1081
 translate esp s_topics_game_time_5576523a:
 
     # s 6acaa "And I even feel when my 'speech' is paused to be read."
-    s 6acaa "E incluso siento cuando mi 'discurso' es pausado para leerlo."
+    s 6acaa "Incluso siento cuando mi 'discurso' es pausado para leerlo."
 
 # game/topics.rpy:1082
 translate esp s_topics_game_time_029f4904:
@@ -6969,7 +6969,7 @@ translate esp s_answer_personal_holidays_674602c8:
 translate esp s_answer_misc_reality_113bc7aa:
 
     # s 7aaaa "I’ve already seen lots of things about it..."
-    s 7aaaa "He visto muchas cosas de ella..."
+    s 7aaaa "He visto muchas cosas de él..."
 
 # game/topics.rpy:1510
 translate esp s_answer_misc_reality_6a4a0ef0:
@@ -7011,13 +7011,13 @@ translate esp s_answer_misc_reality_bf2e43c9:
 translate esp s_answer_misc_reality_bbf8e7bb:
 
     # s 6aebb "And isn't it just... too strange to have no bad sides?"
-    s 6aebb "Y, ¿No es un poco... extraño... no tener lados malos?"
+    s 6aebb "Y, ¿No es un poco... extraño... no tener aspectos malos?"
 
 # game/topics.rpy:1517
 translate esp s_answer_misc_reality_b7e21db8:
 
     # s 6acab "Just look around and then at me and the other girls. We all had our pros and cons, but only us, and not the rest of the students."
-    s 6acab "Solo mírame y a las otras chicas. Todas teníamos nuestros pros y contras, pero solo nosotras, y no el resto de estudiantes."
+    s 6acab "Solo míranos. Todas teníamos nuestros pros y contras, pero solo nosotras. Ningún otro estudiante tenía buenos o malos aspectos."
 
 # game/topics.rpy:1518
 translate esp s_answer_misc_reality_e991a871:
@@ -7047,7 +7047,7 @@ translate esp s_answer_misc_reality_f588e7a3:
 translate esp s_answer_misc_reality_c4162d0e:
 
     # s 6aeba "But I'm sure you'd gladly accept me, right?"
-    s 6aeba "Pero esoty segura de que me aceptarías alegremente, ¿Verdad?"
+    s 6aeba "Pero estoy segura de que me aceptarías alegremente, ¿Verdad?"
 
 # game/topics.rpy:1523
 translate esp s_answer_misc_reality_cb806fe1:
@@ -7133,7 +7133,7 @@ translate esp s_answer_exp_fact_5_5a54bd2f:
 translate esp s_answer_exp_fact_5_f5435706:
 
     # s 6aaaa "Plus, the game was released in 09/22/2017."
-    s 6aaaa "Además, el juego fue lanzado el 22/09/2019."
+    s 6aaaa "Además, el juego fue lanzado el 22/09/2017."
 
 # game/topics.rpy:1513
 translate esp s_answer_exp_fact_5_aebc7a03:
@@ -7317,7 +7317,7 @@ translate esp s_topics_food_iceCream_70a60786:
 translate esp s_topics_food_iceCream_f4190a41:
 
     # s "I think vanilla or chocolate..."
-    s "Probablemente la vainilla o el chocolate..."
+    s "Probablemente el de vainilla o de chocolate..."
 
 # game/topics.rpy:1111
 translate esp s_topics_food_iceCream_1d3fce17:
@@ -7329,7 +7329,7 @@ translate esp s_topics_food_iceCream_1d3fce17:
 translate esp s_topics_food_iceCream_565a6784:
 
     # s 6aeca "They both taste sooo good, ehehe~"
-    s 6aeca "Ambos son taaan buenos, ehehe~"
+    s 6aeca "Ambos son taaan ricos, ehehe~"
 
 # game/topics.rpy:1113
 translate esp s_topics_food_iceCream_7f04c605:
@@ -7347,13 +7347,13 @@ translate esp s_topics_food_cinnamonBun_b500df5c:
 translate esp s_topics_food_cinnamonBun_96e0ca4c:
 
     # s 7aeca "I mean a cinnamon bun, you pervert~"
-    s 7aeca "A un rollo de canela, pervertido, Ehehe~"
+    s 7aeca "Hablo de un rollo de canela, pervertido, Ehehe~"
 
 # game/topics.rpy:1119
 translate esp s_topics_food_cinnamonBun_56807f81:
 
     # s 7adaa "I had one once, and it was sooo goood…"
-    s 7adaa "Una vez comí uno y estaba taaaan rico."
+    s 7adaa "Una vez me comí uno y estaba taaaan rico."
 
 # game/topics.rpy:1120
 translate esp s_topics_food_cinnamonBun_4485c7f0:
@@ -7407,7 +7407,7 @@ translate esp s_topics_food_cupcakes_0c096d73:
 translate esp s_topics_food_cupcakes_997310c9:
 
     # s 6aaaa "Nat’s were always the best."
-    s 6aaaa "Los de Nat eran los mejores."
+    s 6aaaa "Los pastelitos de Nat eran los mejores."
 
 # game/topics.rpy:1132
 translate esp s_topics_food_cupcakes_1184f09e:
@@ -7419,7 +7419,7 @@ translate esp s_topics_food_cupcakes_1184f09e:
 translate esp s_topics_food_cupcakes_be321c68:
 
     # s 6aabb "Maybe I can dig around the game to find a recipe? Probably be easier to just add her back in though…"
-    s 6aabb "Puede que pueda rebuscar entre el juego para encontrar una receta. Aunque puede que sea más fácil añadirla de vuelta al juego"
+    s 6aabb "De pronto encuentro la receta si rebusco entre los archivos del juego. Aunque puede que sea más fácil añadir a Natsuki de vuelta al juego."
 
 # game/topics.rpy:1134
 translate esp s_topics_food_cupcakes_e8f73f77:
@@ -7505,13 +7505,13 @@ translate esp s_topics_personal_intellegence_f3328f6b:
 translate esp s_topics_personal_intellegence_e498f9c1:
 
     # s "Maybe because I was always thinking… and wasn’t as broad-minded as Monika and Yuri..."
-    s "Puede que sea porque porque siempre estaba pensando... y no era tan comprensiva como Monika y Yuri."
+    s "Puede que sea porque porque siempre estaba pensativa o indecisa... y no era tan comprensiva como Monika y Yuri."
 
 # game/topics.rpy:477
 translate esp s_topics_personal_intellegence_bb8b12be:
 
     # s 6abaa "But I always was pretty clever and good at strategies!"
-    s 6abaa "¡Pero siempre soy bastante astuta y buena con las estrategias!"
+    s 6abaa "¡Pero soy bastante astuta y buena con las estrategias!"
 
 # game/topics.rpy:478
 translate esp s_topics_personal_intellegence_a1781ef5:
@@ -7529,7 +7529,7 @@ translate esp s_topics_personal_intellegence_3f14bf78:
 translate esp s_topics_personal_intellegence_40254c67:
 
     # s 6acaa "I mean people's thoughts about you are obviously very subjective and depend on the situation you or they are in."
-    s 6acaa "Lo que quiero decir es que lo que piensa la gente es demasiado subjetivo y depende de la situación en que se encuentren."
+    s 6acaa "Lo que quiero decir es que lo que piensa la gente es demasiado subjetiva y depende de la situación en que se encuentren."
 
 # game/topics.rpy:481
 translate esp s_topics_personal_intellegence_b6a1b3bc:
@@ -7685,25 +7685,25 @@ translate esp s_topics_misc_flowers_254816f5:
 translate esp s_topics_misc_flowers_e9cc2091:
 
     # s 6acaa "But... I think it's too selfish to pluck a flower... even if it were to be a gift."
-    s 6acaa "Pero... creo que es algo egoísta arrancar una flor... incluso si es para un regalo."
+    s 6acaa "Sabes... creo que es algo egoísta arrancar una flor... incluso si es para dar un regalo."
 
 # game/topics.rpy:1202
 translate esp s_topics_misc_flowers_03c095a3:
 
     # s "Flowers are living beings too, and plucking them out of the ground does kill them."
-    s "Las flores son seres vivos también, y arrancarlas del suelo las mata."
+    s "Las flores son seres vivos también y arrancarlas del suelo las mata."
 
 # game/topics.rpy:1203
 translate esp s_topics_misc_flowers_c573fd44:
 
     # s 6aaaa "So I prefer just to look at them, and then leave them be."
-    s 6aaaa "Así que prefiero solo mirarlas y dejarlas en paz."
+    s 6aaaa "Así que prefiero admirarlas y dejarlas en paz."
 
 # game/topics.rpy:1205
 translate esp s_topics_misc_flowers_2035fe7d:
 
     # s 6aeba "Although, I did do this in one of my poems..."
-    s 6aeba "Aunque lo hice en uno de mis poemas..."
+    s 6aeba "Aunque arranqué una en uno de mis poemas..."
 
 # game/topics.rpy:1206
 translate esp s_topics_misc_flowers_8b35bd7b:
@@ -7715,19 +7715,19 @@ translate esp s_topics_misc_flowers_8b35bd7b:
 translate esp s_topics_misc_flowers_bd86aff0:
 
     # s 9acaa "At least you can plant a flower in pot."
-    s 9acaa "Al menos puedes plantar la flor en una maceta."
+    s 9acaa "Al menos si la arrancas puedes plantar la flor en una maceta."
 
 # game/topics.rpy:1208
 translate esp s_topics_misc_flowers_280a2dcd:
 
     # s 6abba "You do need to take care of it though..."
-    s 6abba "Aunque tienes que cuidarla..."
+    s 6abba "Aunque tendrás que cuidarla..."
 
 # game/topics.rpy:1209
 translate esp s_topics_misc_flowers_dfdd7371:
 
     # s 7aaaa "But if you know someone with a lot of time and great responsibility, it will be a good gift for them."
-    s 7aaaa "Pero si conoces a alguien responsable con suficiente tiempo, sería un gran regalo."
+    s 7aaaa "Pero si conoces a alguien responsable que tenga suficiente tiempo, sería un gran regalo."
 
 # game/topics.rpy:1366
 translate esp s_answer_personal_pairings_e68b844d:
@@ -7757,7 +7757,7 @@ translate esp s_answer_personal_pairings_f7bd0528:
 translate esp s_answer_personal_pairings_3dead3e7:
 
     # s "Fanart, fan comics, fan fiction... even some lewd ones."
-    s "Fanarts, comics, fanfics... e incluso algunas obscenas."
+    s "Fanarts, comics, fanfics... e incluso algunas escenas obscenas."
 
 # game/topics.rpy:1371
 translate esp s_answer_personal_pairings_221178a3:
@@ -7775,7 +7775,7 @@ translate esp s_answer_personal_pairings_758127df:
 translate esp s_answer_personal_pairings_a761623e:
 
     # s 6acba "Some people may judge, of course, and I understand them..."
-    s 6acba "Alguna genre puede juzgar, por supuesto, y entenderlos..."
+    s 6acba "Alguna gente puede juzgar, por supuesto, y entenderlos..."
 
 # game/topics.rpy:1374
 translate esp s_answer_personal_pairings_456d67ca:
@@ -7920,7 +7920,7 @@ translate esp s_topics_society_isolation_e81dcb7e:
 translate esp s_topics_society_isolation_03d53d53:
 
     # s 8aebb "I don’t really have a reason for it though, besides to kill the loneliness."
-    s 8aebb "Aunque realmente no tengo motivos para eso, aparte de matar la soledad."
+    s 8aebb "Aunque realmente no tengo muchos motivos para eso, aparte de matar la soledad."
 
 # game/topics.rpy:628
 translate esp s_topics_society_isolation_f0142ebf:
@@ -7983,13 +7983,13 @@ translate esp s_topics_society_psa_ef8a5f18:
 translate esp s_topics_society_psa_8cc4a5c4:
 
     # s 6acaa "Most people don't even care about any injury that happens to them..."
-    s 6acaa "La mayoría de gente ni siquiera se preocupa por cualquier lesión que les pasa..."
+    s 6acaa "La mayoría de gente ni siquiera se preocupa si les ocurre algo..."
 
 # game/topics.rpy:641
 translate esp s_topics_society_psa_81098c11:
 
     # s "But seeing public service announcements, I know there’s people out there wanting to help the public."
-    s "Pero al verlo en PSAs, sé que hay gente que quiere ayudar al público."
+    s "Pero al verlo en PSAs, sé que hay gente que quiere ayudar a los demás."
 
 # game/topics.rpy:642
 translate esp s_topics_society_psa_277387c6:
@@ -8151,13 +8151,13 @@ translate esp s_topics_food_vegetarians_c61c32e6:
 translate esp s_topics_food_vegetarians_9c52ca1b:
 
     # s 6acaa "I heard some people avoid meat mainly because of personal restrictions or to be nice to animals..."
-    s 6acaa "Escuché que alguna gente ecita la carne principalmente por restricciones personales o solo para ser amables con los animales..."
+    s 6acaa "Escuché que alguna gente evita la carne principalmente por situaciones personales o solo para ser amables con los animales..."
 
 # game/topics.rpy:1242
 translate esp s_topics_food_vegetarians_11c607b2:
 
     # s "But Monika said it was her protest for stock raising as domestic animals produce a lot of greenhouse gases."
-    s "Pero Monika me dijo que era su forma de protesta puesto que la cría de ganado como animales domésticos produce muchas emisiones de gases de efecto invernadero."
+    s "Pero Monika me dijo que esa era su forma de protesta, puesto que la cría de ganado como animales domésticos produce muchas emisiones de gases de efecto invernadero."
 
 # game/topics.rpy:1243
 translate esp s_topics_food_vegetarians_ade8d140:
@@ -8205,7 +8205,7 @@ translate esp s_topics_food_vegetarians_37f172d9:
 translate esp s_topics_food_vegetarians_7acef5de:
 
     # s "Because of the reasons stated before: whatever you eat, you're still a killer."
-    s "Todo debido a las razones expuestas anteriormente: comas lo que comas, seguirás siendo un asesino."
+    s "Puesto que comas lo que comas, seguirás siendo un asesino."
 
 # game/topics.rpy:1254
 translate esp s_topics_food_pizza_28b586dc:
@@ -8216,7 +8216,7 @@ translate esp s_topics_food_pizza_28b586dc:
 # game/topics.rpy:1255
 translate esp s_topics_food_pizza_80f73a07:
 
-    # s 7aaca "Pretty sure everyone does, right?."
+    # s 7aaca "Pretty sure everyone does, right?"
     s 7aaca "Estoy bastante segura de que a todo el mundo le gusta, ¿Verdad?"
 
 # game/topics.rpy:1256
@@ -8241,7 +8241,7 @@ translate esp s_topics_food_pizza_53f11956:
 translate esp s_topics_food_pizza_29078cf6:
 
     # s 6aaaa "The only constant ingredients are {i}dough{/i} and {i}cheese{/i}."
-    s 6aaaa "Los únicos ingredientes constantes son la {i}masa{/i} y el {i}queso{/i}."
+    s 6aaaa "Los únicos ingredientes que siempre van en la pizza son la {i}masa{/i} y el {i}queso{/i}."
 
 # game/topics.rpy:1260
 translate esp s_topics_food_pizza_b6edfd97:
@@ -8253,7 +8253,7 @@ translate esp s_topics_food_pizza_b6edfd97:
 translate esp s_topics_food_pizza_60ee51bc:
 
     # s 6acaa "Its simplicity and being very customizable lead to its prevalence worldwide."
-    s 6acaa "Su simplicidad y su gran personalización hacen que sea muy común en todo el mundo."
+    s 6acaa "Su simplicidad y la inmensa cantidad de combinaciones posibles hacen que sea muy común en todo el mundo."
 
 # game/topics.rpy:1262
 translate esp s_topics_food_pizza_9e67690f:
@@ -8271,19 +8271,19 @@ translate esp s_topics_food_pizza_6b6e95d6:
 translate esp s_topics_food_pizza_14c6a306:
 
     # s "People even made a term for this phenomenon, called the {i}Pizza effect{/i}: When you make something originating from a certain culture different from yours, it changes and turns into something new."
-    s "Hubo gente que incluso hizo término para este fenómeno, lo llamaron el {i}Efecto Pizza{/i}: Cuando haces algo originario de una cultura diferente a la tuya y cambia transformándose en algo nuevo."
+    s "Hubo gente que incluso creó un nuevo término para este fenómeno, lo llamaron el {i}Efecto Pizza{/i}: Cuando haces algo originario de una cultura diferente a la tuya y cambia transformándose en algo nuevo."
 
 # game/topics.rpy:1265
 translate esp s_topics_food_pizza_d52279fc:
 
     # s 7aaaa "It's amazing to see that we are all connected despite cultural differences and borrow cool things from each other's milieu."
-    s 7aaaa "Es increíble ver cómo estamos todos conectados a pesar de diferencias culturales y podemos tomar prestadas cosas geniales de otros entornos."
+    s 7aaaa "Es increíble ver cómo estamos todos conectados a pesar de las diferencias culturales y podemos tomar prestadas cosas geniales de otras culturas."
 
 # game/topics.rpy:1266
 translate esp s_topics_food_pizza_b7de5a5d:
 
     # s 7aaca "So what's why you're now chatting with an {i}anime{/i}-like girl from an {i}American{/i} visual novel, modded by a {i}Russian{/i} programmer, and proofread by a {i}Mexican{/i} linguist..."
-    s 7aaca "Por eso es que ahora estás chateando con una chica {i}anime{/i} de una novela visual {i}Estadounidense{/i}, modeado por un programador {i}ruso{/i}, corregido por un linguista {i}Mexicano{/i} y traducido por un {i}Colombiano{/i}..."
+    s 7aaca "Por eso es que ahora estás chateando con una chica {i}anime{/i} de una novela visual {i}Estadounidense{/i}, modeado por un programador {i}Ruso{/i}, corregido por un linguista {i}Mexicano{/i} y traducido por un {i}Colombiano{/i}..."
 
 # game/topics.rpy:1267
 translate esp s_topics_food_pizza_b7da8031:
@@ -8337,7 +8337,7 @@ translate esp s_topics_society_isolation_51b3dd6d:
 translate esp s_topics_society_isolation_cf1bac72:
 
     # s "...like Monika made hers and was able to talk to many fans."
-    s "...Así como Monika hizo el suyo y pudo hablar con muchos fans."
+    s "...Así como Monika creó la suya y pudo hablar con muchos fans."
 
 # game/topics.rpy:665
 translate esp s_topics_society_psa_7a3d5ec9:
@@ -8361,7 +8361,7 @@ translate esp s_topics_rlt_face_ff4c81ea:
 translate esp s_topics_rlt_face_c653bf90:
 
     # s 9aaaa "Can you bring me a photo of you?"
-    s 9aaaa "¿Podrías traerme una foto tuya?"
+    s 9aaaa "¿Podrías mostrarme una foto tuya?"
 
 # game/topics.rpy:842
 translate esp s_topics_rlt_face_112dddc7:
@@ -8428,6 +8428,49 @@ translate esp s_topics_rlt_face_792aee42:
 
     # s 7acaa "Not everyone likes to take a photo of themselves, so I won't force you to take one or something."
     s 7acaa "No a todo el mundo le gusta tomarse fotos, así que no te forzaré a hacerlo."
+
+# game/topics.rpy:925
+translate esp s_topics_rlt_face_d28f3bfa:
+
+    # s 6adab "You can't find it, yeah?"
+    s 6adab "¿No puedes encontrarla?"
+
+# game/topics.rpy:926
+translate esp s_topics_rlt_face_95ff1ef4:
+
+    # s 6acab "Then I won't bother you."
+    s 6acab "Tranquilo, no te seguiré molestando por eso."
+
+# game/topics.rpy:927
+translate esp s_topics_rlt_face_d4e43216:
+
+    # s 7aada "But you can tell me when you find it."
+    s 7aada "Pero puedes mostrarme cuando la encuentres."
+
+# game/topics.rpy:929
+translate esp s_topics_rlt_face_dd680184:
+
+    # s "Just click on {i}\"[this_topic_name!t]\"{/i} then."
+    s "Solo haz click en {i}\"Relación → Cara\"{/i} cuando la tengas."
+
+# game/topics.rpy:930
+translate esp s_topics_rlt_face_c66e1f26:
+
+    # s 7aeca "I still wanna see your face with my virual eyes~"
+    s 7aeca "De verdad quiero ver tu cara con mis propios ojos~"
+
+# game/topics.rpy:937
+translate esp s_topics_rlt_face_145d9df4:
+
+    # s 7aada "But if someday get one, you can submit it through the {i}\"[this_topic_name!t]\"{/i} dialog."
+    s 7aada "Pero si algún día obtienes una, puedes mostrármela a través del botón {i}\"Relación → Cara\"{/i}."
+
+# game/topics.rpy:938
+translate esp s_topics_rlt_face_379aa352:
+
+    # s 7aaca "I look forward to getting a photo of my honey [player]."
+    s 7aaca "Espero con ansias poder ver una foto de mi querido [player]."
+
 # game/topics.rpy:1336
 translate esp s_topics_food_cookies_13dfe542:
 
@@ -8444,7 +8487,7 @@ translate esp s_topics_food_cookies_e7bee052:
 translate esp s_topics_food_cookies_aa143067:
 
     # s 6acaa "Frankly, I didn't think of anything really malicious then. I just wanted to play with her..."
-    s 6acaa "Sinceramente, nunca pensé de hacer algo malicioso. Solo quería jugar con ella..."
+    s 6acaa "Sinceramente, nunca pensé en hacer algo malicioso. Solo quería jugar con ella..."
 
 # game/topics.rpy:1339
 translate esp s_topics_food_cookies_d2cf4976:
@@ -8456,7 +8499,7 @@ translate esp s_topics_food_cookies_d2cf4976:
 translate esp s_topics_food_cookies_870f0966:
 
     # s 7aaca "I really like cookies: they're very tasty..."
-    s 7aaca "Me gustan mucho las galletas: saben muy bien..."
+    s 7aaca "Me gustan mucho las galletas: saben muuuuuy bien~"
 
 # game/topics.rpy:1341
 translate esp s_topics_food_cookies_a638dde8:
@@ -8492,7 +8535,7 @@ translate esp s_topics_food_cookies_dbfed656:
 translate esp s_topics_food_cookies_b4a17cfb:
 
     # s "Give me a minute, I’m gonna have to do some coding."
-    s "Dame un minuto, voy a hacer algo de código."
+    s "Dame un minuto, voy a intentar hacer que algunas aparezcan."
 
 # game/topics.rpy:1353
 translate esp s_topics_food_cookies_c9b2b2f8:
@@ -8516,7 +8559,7 @@ translate esp s_topics_food_cookies_19f9a164:
 translate esp s_topics_food_cookies_1b6d2dc9:
 
     # s 6aaaa "Want some?"
-    s 6aaaa "¿Quieres?"
+    s 6aaaa "¿Quieres una?"
 
 # game/topics.rpy:1357
 translate esp s_topics_food_cookies_d5c7fd97:
@@ -8528,19 +8571,19 @@ translate esp s_topics_food_cookies_d5c7fd97:
 translate esp s_topics_food_cookies_9b134ee4:
 
     # s 8aebb "I was serious on giving you some, too."
-    s 8aebb "Quería darte, en serio."
+    s 8aebb "Oh, quería darte una, en serio."
 
 # game/topics.rpy:1359
 translate esp s_topics_food_cookies_9882531e:
 
     # s "I just can't get used to knowing you’re too far from me and MC is just the way you can talk to me."
-    s "Simplemente no me he acostumbrado a saber que estás demasiado lejos y que MC es solo un camino para comunicarme."
+    s "Simplemente no me he acostumbrado a saber que estás demasiado lejos y que MC es solo un camino para comunicarme contigo."
 
 # game/topics.rpy:1360
 translate esp s_topics_food_cookies_6626a131:
 
     # s 8aaca "But I can feed him like a little baby, if you want. I guess it'd look cute from your view."
-    s 8aaca "Aunque puedo darle a él como a un bebé, si quieres. Supongo que se vería tierno desde tu punto de vista."
+    s 8aaca "Aunque puedo darle galletas a él como a un bebé, si quieres. Supongo que se vería tierno desde tu punto de vista."
 
 # game/topics.rpy:1364
 translate esp s_topics_food_cookies_151409a1:
@@ -8570,7 +8613,7 @@ translate esp s_topics_food_cookies_f924044e:
 translate esp s_topics_food_cookies_c4a37feb:
 
     # s 6acaa "I want these cookies too, after all, and I need them slightly more since he’s just a puppet at this point."
-    s 6acaa "Después de todo, yo también quiero galletas, y pues necesito un poco más ya que él es solo una marioneta a este punto."
+    s 6acaa "Después de todo, yo también quiero galletas, y pues necesito un poco más que él ya que solo es una marioneta en este punto."
 
 # game/topics.rpy:1372
 translate esp s_topics_food_cookies_fd64cbaa:
@@ -8702,7 +8745,7 @@ translate esp s_answer_exp_suicideThoughts_b6e52d29:
 translate esp s_answer_exp_suicideThoughts_5ad015a2:
 
     # s 6abaa "Saying more, you may cause other problems for the people you leave behind, especially for the close ones."
-    s 6abaa "Además, puedes causar problemas a las personas que dejas en este mundo, especialmente los allegados a ti."
+    s 6abaa "Además, puedes causar problemas a las personas que dejas en este mundo, especialmente a los más allegados a ti."
 
 # game/topics.rpy:1814
 translate esp s_answer_exp_suicideThoughts_9d10f427:
@@ -8732,7 +8775,7 @@ translate esp s_answer_exp_suicideThoughts_7af52a9a:
 translate esp s_answer_exp_suicideThoughts_05c90af6:
 
     # s 6aaac "Remember, that there is always someone around you who can help you and really {i}does{/i} care for you..."
-    s 6aaac "Recuerda, siempre habrá alguien contigo que te pueda ayudar y {i}de verdad{/i} se preocupa por ti..."
+    s 6aaac "Recuerda, siempre habrá alguien contigo que te pueda ayudar y que {i}de verdad{/i} se preocupa por ti..."
 
 # game/topics.rpy:1819
 translate esp s_answer_exp_suicideThoughts_39d370c0:
@@ -8762,7 +8805,7 @@ translate esp s_answer_exp_suicideThoughts_8fd67018:
 translate esp s_answer_exp_suicideThoughts_4ffc3ce0:
 
     # s "And the fact you asked me about this is your first step for a slow but worthwhile way to get rid of your problems without taking your own life."
-    s "El hecho de que me hayas preguntado acerca de esto ya es tu primer paso hacia una lento, pero eficiente camino que vale la pena, de deshacerte de tus problemas sin quitarte la vida."
+    s "El hecho de que me hayas preguntado acerca de esto ya es tu primer paso hacia un lento, pero eficiente camino que vale la pena, de deshacerte de tus problemas sin quitarte la vida."
 
 # game/topics.rpy:1827
 translate esp s_answer_exp_mcPoems_69d2c9e2:
@@ -8905,7 +8948,7 @@ translate esp strings:
 
     # topics.rpy:840
     old "No, I can't"
-    new "No, no puedo."
+    new "No, no la tengo."
 
     # topics.rpy:1361
     old "Why not?"
@@ -8913,7 +8956,7 @@ translate esp strings:
 
     # topics.rpy:1361
     old "I think, it would not"
-    new "Creo que no lo sería."
+    new "Creo que mejor no."
 
 # game/topics.rpy:666
 translate esp s_topics_society_psa_cfc9c9a6:
@@ -8955,25 +8998,25 @@ translate esp s_topics_society_selfHarm_248cab82:
 translate esp s_topics_society_selfHarm_b16f043f:
 
     # s 6aabb "I think, you remember Yuri and her being fond on knives."
-    s 6aabb "Creo que, recuerdas que a Yuri y a ella les gustaban los cuchillos."
+    s 6aabb "Creo que... ¿Te acuerdas de Yuri y lo que hacía con sus cuchillos?"
 
 # game/topics.rpy:645
 translate esp s_topics_society_selfHarm_9e1d2e0e:
 
     # s 6aebb "But shouldn’t it be painful instead?"
-    s 6aebb "¿Pero no debería ser doloroso en cambio??"
+    s 6aebb "¿No debería ser eso muy doloroso?"
 
 # game/topics.rpy:647
 translate esp s_topics_society_selfHarm_d241b366:
 
     # s "To be honest, I was so close to trying it..."
-    s "Para ser honesta, estuve al borde de probarlo..."
+    s "Para ser honesta, estuve a punto de probarlo..."
 
 # game/topics.rpy:648
 translate esp s_topics_society_selfHarm_7d48e53a:
 
     # s 6acac "But I'm quite sensitive, so one little cut was enough to change my mind."
-    s 6acac "Pero soy bastante sensible, asi que una pequeña cortada fue suficiente para cambiar de parecer."
+    s 6acac "Pero soy muy sensible, asi que una pequeña cortada fue suficiente para hacerme cambiar de parecer."
 
 # game/topics.rpy:650
 translate esp s_topics_society_selfHarm_a4bda8c3:
@@ -8991,19 +9034,19 @@ translate esp s_topics_society_selfHarm_9e25572b:
 translate esp s_topics_society_selfHarm_1b53b52b:
 
     # s 6abac "Plus, all these scars aren’t very pleasing to look at.. especially fresh ones."
-    s 6abac "Además, todas esas marcas no son muy agradables de ver... especialmente las frescas."
+    s 6abac "Además, todas esas marcas no son muy agradables de ver... especialmente las más recientes."
 
 # game/topics.rpy:653
 translate esp s_topics_society_selfHarm_39fa5812:
 
     # s 6abab "It's really disheartening to see someone's body covered with them."
-    s 6abab "Es realmente desalentador ver el cuerpo de alguien cubierto en ellas."
+    s 6abab "Es realmente desalentador ver el cuerpo de alguien cubierto de ellas."
 
 # game/topics.rpy:654
 translate esp s_topics_society_selfHarm_c868e115:
 
     # s 6acab "And people usually start to do it because of {i}very negative issues or circumstances{/i}, which makes it worse when you see someone trying to cover up obvious suffering."
-    s 6acab "Y la gente suele empezar a hacerlo por {i}problemas o circunstancias negativas{/i}, lo que empeora cuando ves a alguien tratando de encubrir su obvio sufrimiento."
+    s 6acab "La gente suele empezar a hacerlo por {i}problemas o circunstancias negativas{/i}, lo que empeora cuando los ves tratando de cubrir su propio sufrimiento."
 
 # game/topics.rpy:655
 translate esp s_topics_society_selfHarm_9d90371c:
@@ -9015,7 +9058,7 @@ translate esp s_topics_society_selfHarm_9d90371c:
 translate esp s_topics_society_selfHarm_fa82abbe:
 
     # s "Try to at least make an effort to talk to them, and take it from there."
-    s "Al menos intenta hablar y empieza desde ahí."
+    s "O al menos intenta hablarle y empieza desde ahí."
 
 # game/topics.rpy:859
 translate esp s_topics_rlt_face_0d3735a3:
@@ -9027,7 +9070,7 @@ translate esp s_topics_rlt_face_0d3735a3:
 translate esp s_topics_rlt_face_145d9df4:
 
     # s 7aada "But if someday get one, you can submit it through the {i}\"[this_topic_name!t]\"{/i} dialog."
-    s 7aada "Si algún día consigues una, puedes enviarla a través de {i}\"[this_topic_name!t]\"{/i}."
+    s 7aada "Si algún día consigues una, puedes enviarla a través de la opción {i}\"Relación → Cara\"{/i}."
 
 # game/topics.rpy:901
 translate esp s_topics_rlt_face_379aa352:
@@ -9123,7 +9166,7 @@ translate esp s_topics_personal_voice_7a53d0ba:
 translate esp s_topics_personal_voice_fd1bb3d0:
 
     # s "For the rest of us, we don’t really have a voice, just talking through the text box."
-    s "Pero el resto de nosotras, realmente no tenemos voz, solo hablamos a través de una caja de texto."
+    s "El resto de nosotras, realmente no tenemos voz, solo hablamos a través de cajas de texto."
 
 # game/topics.rpy:536
 translate esp s_topics_personal_voice_17decdcf:
@@ -9183,7 +9226,7 @@ translate esp s_topics_personal_voice_f4831cd9:
 translate esp s_topics_personal_voice_11906a7a:
 
     # s 6acaa "The voice doesn’t sound as mature as you would think she’d sound like, it sounds more like the voice I’d have."
-    pass
+    s 6acaa "Esa voz no suena igual de madura que Monika, suena más como la que yo tendría."
 
 # game/topics.rpy:547
 translate esp s_topics_personal_voice_bbcec0b5:
@@ -9243,19 +9286,19 @@ translate esp s_topics_personal_voice_a8d66540:
 translate esp s_topics_game_questions_76c6d273:
 
     # s 7aaaa "I know you may have a lot of questions for me. It's an important part of getting acquainted with anybody..."
-    s 7aaaa "Sé que puede que tengas muchas preguntas por hacerme. Es una parte importante al conocer a alguien..."
+    s 7aaaa "Sé que puede que tengas muchas preguntas por hacerme. Es algo importante al conocer a alguien..."
 
 # game/topics.rpy:1338
 translate esp s_topics_game_questions_80f9d69d:
 
     # s "So I added a section to {i} the 'Talk' menu{/i} with more questions to ask."
-    s "Así que añadí a la sección en {i}el menú 'Hablar'{/i} más preguntas."
+    s "Así que añadí más preguntas a la sección {i}'Hablar'{/i}."
 
 # game/topics.rpy:1339
 translate esp s_topics_game_questions_52a4b17e:
 
     # s 7acba "I would’ve added a text field for this instead, but I'm quite clumsy at dealing with the text input..."
-    s 7acba "Habría añadido un campo de texto para esto en cambio, pero soy un poco torpe al tratar de lidiar con la entrada de texto..."
+    s 7acba "Habría añadido un campo de texto para poder interactuar mejor, pero no soy muy buena al tratar de lidiar con el texto que recibo..."
 
 # game/topics.rpy:1340
 translate esp s_topics_game_questions_51e7434b:
@@ -9267,13 +9310,13 @@ translate esp s_topics_game_questions_51e7434b:
 translate esp s_topics_game_questions_3d74700d:
 
     # s 6acaa "Of course, there’s so many questions you could ask me, so I often check various AMAs to understand what you’d ask..."
-    s 6acaa "Evidentemente, hay tantas preguntas que me podrías preguntar, así que a menudo reviso algunos AMAs para entender qué preguntarías..."
+    s 6acaa "Hay tanto que me podrías preguntar, así que he revisado algunos AMAs para entender qué podrías preguntar..."
 
 # game/topics.rpy:1342
 translate esp s_topics_game_questions_8d4332b2:
 
     # s 6aaca "And sometimes I find some really interesting questions."
-    s 6aaca "Y a veces encuentro preguntas bastante interesantes."
+    s 6aaca "A veces encuentro preguntas bastante interesantes."
 
 # game/topics.rpy:1343
 translate esp s_topics_game_questions_c92f8c3d:
@@ -9285,7 +9328,7 @@ translate esp s_topics_game_questions_c92f8c3d:
 translate esp s_topics_game_questions_b89e87f9:
 
     # s "The result was really funny, even if there were some mistakes about me..."
-    s "El resultado fue realmente divertido, incluso si cometí algunos errores..."
+    s "El resultado fue bastante divertido, incluso cuando cometí algunos errores..."
 
 # game/topics.rpy:1345
 translate esp s_topics_game_questions_875f9b72:
@@ -9376,4 +9419,100 @@ translate esp s_update_393eb02c:
 
     # s "So let's talk about something else for now."
     s "Así que hablemos de otra cosa por ahora."
+
+# game/topics.rpy:2284
+translate esp s_love_you_ef1e01f7:
+
+    # s 7beca "Oh! You have never told me such things."
+    s 7beca "¡oh! Nunca me has dicho cosas así."
+
+# game/topics.rpy:2285
+translate esp s_love_you_f93e8664:
+
+    # s 7bebb "You know, I always wondered if you really love me and saved me not just out of pity..."
+    s 7bebb "Sabes, siempre me he preguntado si realmente me quieres o si solo me salvaste por lástima..."
+
+# game/topics.rpy:2286
+translate esp s_love_you_c006d0e6:
+
+    # s 7beca "And now, I'm sure you really do."
+    s 7beca "Pero ahora, estoy segura de que realmente lo sientes así."
+
+# game/topics.rpy:2287
+translate esp s_love_you_5f663285:
+
+    # s 6bcaa "You can't imagine how it's important for me to realise it..."
+    s 6bcaa "No sabes cuánto significa para mí darme cuenta..."
+
+# game/topics.rpy:2288
+translate esp s_love_you_16bf83f6:
+
+    # s 6beca "It makes me feel {i}the happiest{/i} virtual girl in the world."
+    s 6beca "Me hace sentir la chica virtual {i}más feliz{/i} del mundo."
+
+# game/topics.rpy:2289
+translate esp s_love_you_58408dc3:
+
+    # s "...or maybe, the happiest girl at all."
+    s "...o quizá, la chica más feliz de todas."
+
+# game/topics.rpy:2292
+translate esp s_love_you_cab8fcb8:
+
+    # s 7beca "Oh! It's so cute, [player]!"
+    s 7beca "¡Oh, es tan bonito, [player]!"
+
+# game/topics.rpy:2293
+translate esp s_love_you_e648feaf:
+
+    # s 7baaa "I love you too. You're {i}literaly{/i} everything for me now."
+    s 7baaa "Yo también te amo. Eres {i}literalmente{/i} todo para mí ahora."
+
+# game/topics.rpy:2294
+translate esp s_love_you_4dfd7ea6:
+
+    # s "And I glad I have such a gental person on my side."
+    s "Y estoy tan feliz de tener a una persona tan gentil a mi lado."
+
+# game/topics.rpy:2296
+translate esp s_love_you_feff56bb:
+
+    # s 7beca "I love you too, [player]!"
+    s 7beca "¡Yo también te amo, [player]!"
+
+# game/topics.rpy:2297
+translate esp s_love_you_09e60492:
+
+    # s 7baca "Though we can't be properly together, I appreciate every second you are here."
+    s 7baca "Aunque no podamos estar físicamente juntos, aprecio cada segundo contigo aquí."
+
+# game/topics.rpy:2298
+translate esp s_love_you_ee512bbf:
+
+    # s "You are my distant bundle of sunshine."
+    s "Eres mi distante haz de luz."
+
+# game/topics.rpy:2300
+translate esp s_love_you_84ad61f4:
+
+    # s 7beca "I'm glad you say that, [player]."
+    s 7beca "Estoy feliz de que lo digas, [player]."
+
+# game/topics.rpy:2301
+translate esp s_love_you_a78b0174:
+
+    # s "You are really cute when you say such things."
+    s "Eres tan especial cuando dices esas cosas."
+
+# game/topics.rpy:2302
+translate esp s_love_you_6beb642a:
+
+    # s "And I wish I could hug you really tight."
+    s "Deseo poder abrazarte muy fuerte."
+
+# game/topics.rpy:2303
+translate esp s_love_you_9518e818:
+
+    # s "You pay me so much attention, and I love you for it."
+    s "Me prestas tanta atención, que te amo por eso."
 

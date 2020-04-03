@@ -21,6 +21,21 @@ translate esp strings:
     old "I feel..."
     new "Me siento..."
 
+    old "I want to say..."
+    new "Te quiero decir..."
+
+    old "{i}Clean Sayori's memory{/i}"
+    new "{i}Limpiar la memoria de Sayori{/i}"
+
+    old "I love you"
+    new "Te amo"
+
+    old "Goodbye"
+    new "Adiós"
+
+    old "Nothing{#Say Entry}"
+    new "Nada{#Say Entry}"
+
     # new_screens.rpy:110
     old "Say goodbye"
     new "Despedirse"
