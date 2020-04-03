@@ -7011,13 +7011,13 @@ translate esp s_answer_misc_reality_bf2e43c9:
 translate esp s_answer_misc_reality_bbf8e7bb:
 
     # s 6aebb "And isn't it just... too strange to have no bad sides?"
-    s 6aebb "Y, ¿No es un poco... extraño... no tener lados malos?"
+    s 6aebb "Y, ¿No es un poco... extraño... no tener aspectos malos?"
 
 # game/topics.rpy:1517
 translate esp s_answer_misc_reality_b7e21db8:
 
     # s 6acab "Just look around and then at me and the other girls. We all had our pros and cons, but only us, and not the rest of the students."
-    s 6acab "Solo mírame y a las otras chicas. Todas teníamos nuestros pros y contras, pero solo nosotras, y no el resto de estudiantes."
+    s 6acab "Solo míranos. Todas teníamos nuestros pros y contras, pero solo nosotras. Ningún otro estudiante tenía buenos o malos aspectos."
 
 # game/topics.rpy:1518
 translate esp s_answer_misc_reality_e991a871:
