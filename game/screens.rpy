@@ -1,4 +1,4 @@
-﻿
+
 ## Initialization
 ################################################################################
 
@@ -1102,11 +1102,14 @@ style radio_vbox:
 
 style radio_button:
     properties gui.button_properties("radio_button")
+    yminimum style.radio_button.yminimum
+    ymaximum style.radio_button.yminimum*3
     foreground "gui/button/check_[prefix_]foreground.png"
 
 style radio_button_text:
     properties gui.button_text_properties("radio_button")
     font "mod_assets/fonts/comicRelief/ComicRelief.ttf" #"gui/font/Halogen.ttf"
+    yoffset -7
     outlines []
 
 style check_vbox:
@@ -1114,11 +1117,14 @@ style check_vbox:
 
 style check_button:
     properties gui.button_properties("check_button")
+    yminimum style.radio_button.yminimum
+    ymaximum style.radio_button.yminimum*3
     foreground "gui/button/check_[prefix_]foreground.png"
 
 style check_button_text:
     properties gui.button_text_properties("check_button")
     font "mod_assets/fonts/comicRelief/ComicRelief.ttf" #"gui/font/Halogen.ttf"
+    yoffset -7
     outlines []
 
 style slider_slider:
