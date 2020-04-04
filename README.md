@@ -11,11 +11,15 @@ As of now, I am trying to implement most of the MAS features, including player q
 This mod is available in multiple languages. Now you can select one of few game languages besides English. If you want to add your own language, read [this Wiki aritcle](https://github.com/AlexanDDOS/fae-mod/wiki/Translator-Guidelines).
 
 ## Credits  
+**Project Lead:**  
+Alexander Osipov (aka AlexanDDOS, [GitHub](https://github.com/AlexanDDOS), [Reddit](https://www.reddit.com/user/AlexanDDOS), [VK](https://vk.com/alexanddos), [FB](https://www.facebook.com/alexanDDOS))  
+  
 **Programming:**  
-AlexanDDOS (This repository's author, [Reddit](https://www.reddit.com/user/AlexanDDOS), [VK](https://vk.com/alexanddos), [FB](https://www.facebook.com/alexanDDOS))  
+AlexanDDOS  
 [vignedev](https://github.com/vignedev)  
 Dan Salvato (original scripts)  
 DDLC Mod Template team ([mod base](https://github.com/Monika-After-Story/DDLCModTemplate))  
+[ElReyZero1201](https://github.com/ElReyZero1201) (small fixes)
   
 **Old Sayori Sprite Artists:**  
 *Excluded since 0.4.0*  
@@ -32,14 +36,21 @@ AlexanDDOS (Small artilces & sprite edits)
 Team Salvato artists (original sprites)  
 Lucian Pavel (Santa hat original model, excluded from the stable version)  
   
-**Dialogs:**  
+**Writers (without proofreading and translation):**  
 AlexanDDOS  
+*Read [this](https://github.com/AlexanDDOS/fae-mod/wiki/Writer-Guidelines) if you want to see you here*  
+
+**Proofreaders:**  
+[tberriman](https://www.reddit.com/user/tberriman)  
+[vermicellibug](https://github.com/vermicellibug)  
+[Atlas](https://www.reddit.com/user/Nekochroma)  
   
-**Translations:**  
+**Translators:**  
 AlexanDDOS (Russian, Esperanto & Toki Pona (WIP))  
 [Vova Petelin](https://vk.com/toxin_666) (Russian)  
 ElReyZero1201 (Spanish)  
 [lvkaibin](https://www.reddit.com/user/lvkaibin) (Chinese)  
+*Read [this](https://github.com/AlexanDDOS/fae-mod/wiki/Translator-Guidelines) if you want to see you here*  
   
 **SFX:**  
 Pipe98x (drawing cross)  
@@ -49,21 +60,23 @@ sirrealist2 (drawing circle/line)
 AlexanDDOS  
 Leon9023 ([Reddit](https://www.reddit.com/user/leon9023), [VK](https://vk.com/leon9023))  
 [Evgeny Zotov](https://vk.com/everlastingtolovesayori)  
-[lvkaibin](https://www.reddit.com/user/lvkaibin)  
+lvkaibin  
 [MarioXenobladefan614](https://www.reddit.com/user/MarioXenobladefan614)  
-
-**Proofreaders**:  
-[tberriman](https://www.reddit.com/user/tberriman)  
-[vermicellibug](https://github.com/vermicellibug)  
-[Atlas](https://www.reddit.com/user/Nekochroma)  
+*Report bugs on [Issues](https://github.com/AlexanDDOS/fae-mod/issues) or your feedback if you want to see you here*  
+  
+**Sponsors:**  
+*Comming soon*  
   
 **Special Thanks**:  
-[Team Salvato](http://teamsalvato.com)  
+[Team Salvato](http://teamsalvato.com) and  
 Team Monika  
-The "Just *{doki_name}*" mod syndicate
+The "Just Natsuki" team  
+Independent supporters of "Just *{doki_name}*" mod  
 The Ren'Py developer team  
 The Reddit DDLC community  
 The Russian DDLC community  
   
-## License  
-See **"LICENSE"** and **"IPGuidelines.md"**.
+## License & Copyright  
+See "[LICENSE](https://raw.githubusercontent.com/AlexanDDOS/fae-mod/master/LICENSE)" for license information  
+Made in accordance with Team Salvato's [IP Guidelines](http://teamsalvato.com/ip-guidelines/)   
+*Copyright (c) 2018-2020 Alexander Osipov and the other creators*
