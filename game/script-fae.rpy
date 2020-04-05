@@ -6,6 +6,13 @@ default persistent.first_launch = get_now()
 default persistent.s_name = cur_lang().s_names[0]
 default persistent.talk_delay = 20
 
+init -11 python:
+    if persistent.lastVersion != config.version:
+        #Early-execution code of the update
+        customize = persistent.customization
+        if customize and customize['body'] == "school":
+            persistent.customization['body'] = "uniform"
+
 init python:
     update_bg = False
     from_menu = False
