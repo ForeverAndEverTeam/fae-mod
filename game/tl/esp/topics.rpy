@@ -6493,7 +6493,7 @@ translate esp s_topics_rlt_children_56edbddd:
 translate esp s_topics_rlt_children_0018943b:
 
     # s "I’d think they would grow up to be beautiful and smart, but a bit silly."
-    s "Yo creo que crecerían hermosos e inteligentes, pero un poco tontitos~"
+    s "Yo creo que serían hermosos e inteligentes, aunque puede sean un poco juguetones~"
 
 # game/topics.rpy:866
 translate esp s_topics_rlt_children_f18d2df6:
@@ -6529,25 +6529,25 @@ translate esp s_topics_rlt_children_f7428b76:
 translate esp s_topics_rlt_children_77cd433f:
 
     # s 6abac "But I'm sure you're too good to make me take care of them myself."
-    s 6abac "Pero sé que eres demasiado amable como para dejarme cuidarlos por mí misma."
+    s 6abac "Pero sé que eres demasiado amable como para dejarme cuidarlos sola."
 
 # game/topics.rpy:874
 translate esp s_topics_rlt_children_36ec09ef:
 
     # s 6acaa "Plus, that'll happen only if we can afford it and when we’re both ready..."
-    s 6acaa "Además, solo pasaría si pudieramos estar bien económicamente y cuando estemos listos..."
+    s 6acaa "Además, eso solo pasaría si pudieramos estar bien económicamente y cuando estemos listos..."
 
 # game/topics.rpy:875
 translate esp s_topics_rlt_children_7bd2fdf2:
 
     # s "I don't want us to suffer because we rushed it."
-    s "No quiero hacernos sufrir solo porque no apresuramos."
+    s "No quiero que suframos solo porque nos apresuramos en tenerlos."
 
 # game/topics.rpy:876
 translate esp s_topics_rlt_children_2e493c66:
 
     # s 6aeba "Way too dumb, isn't it?"
-    s 6aeba "Algo muy tonto, ¿No crees?"
+    s 6aeba "Es algo muy tonto, ¿No crees?"
 
 # game/topics.rpy:877
 translate esp s_topics_rlt_children_cd754e39:
@@ -6571,25 +6571,25 @@ translate esp s_topics_rlt_presents_a0c3ea72:
 translate esp s_topics_rlt_presents_000e368f:
 
     # s 6aaaa "Everyone likes to get presents, yeah? Including me, of course."
-    s 6aaaa "A todo el mundo le gusta recibir regalos, ¿No? Incluyéndome por supuesto."
+    s 6aaaa "A todo el mundo le gusta recibir regalos, ¿Verdad? Me incluyo por supuesto."
 
 # game/topics.rpy:884
 translate esp s_topics_rlt_presents_a1c1fbee:
 
     # s 6acab "But I think it’s selfish to ask for something really expensive."
-    s 6acab "Aunque creo que es algo egoísta pedir algo muy caro."
+    s 6acab "Pero creo que es algo egoísta pedir algo caro."
 
 # game/topics.rpy:885
 translate esp s_topics_rlt_presents_4da6ebdf:
 
     # s 6aaaa "If you ask me, I’d want something that comes from the heart, y’know what I mean?"
-    s 6aaaa "Si me preguntas, a mi me gustaría algo que viene del corazón, ¿Me comprendes?"
+    s 6aaaa "Si me preguntas, a mi me gustaría recibir algo que viene del corazón, ¿Me comprendes?"
 
 # game/topics.rpy:886
 translate esp s_topics_rlt_presents_6cf21449:
 
     # s 6aeca "Even better, make it a surprise!"
-    s 6aeca "Aún mejor, ¡Házlo una sorpresa!"
+    s 6aeca "O aún mejor, ¡Haz que sea una sorpresa!"
 
 # game/topics.rpy:887
 translate esp s_topics_rlt_presents_2b7f954a:
@@ -6601,25 +6601,25 @@ translate esp s_topics_rlt_presents_2b7f954a:
 translate esp s_topics_rlt_presents_de28c64e:
 
     # s 6abbb "Well, now that I think about it, what if the present isn’t good...?"
-    s 6abbb "Bueno, ahora que lo pienso, ¿Que pasaría si el regalo no es bueno?.."
+    s 6abbb "Bueno, ahora que lo pienso, ¿Que pasaría si no es un buen regalo o no le gusta..?"
 
 # game/topics.rpy:889
 translate esp s_topics_rlt_presents_1f756859:
 
     # s "Makes it seem like a bad idea...."
-    s "Lo hace parecer como una mala idea...."
+    s "Eso hace que parezca una mala idea...."
 
 # game/topics.rpy:890
 translate esp s_topics_rlt_presents_418f164f:
 
     # s 6aaaa "But I wouldn’t mind."
-    s 6aaaa "Pero no me importaría."
+    s 6aaaa "Aunque no me importaría."
 
 # game/topics.rpy:891
 translate esp s_topics_rlt_presents_eb31e9dd:
 
     # s 6acaa "Come on, you know me well enough to give me something I’d like, right?"
-    s 6acaa "Vamos, me conoces lo suficiente como para darme algo que me gustaría, ¿verdad?"
+    s 6acaa "Vamos, me conoces lo suficiente como para saber qué podría gustarme, ¿verdad?"
 
 # game/topics.rpy:892
 translate esp s_topics_rlt_presents_e0fead11:
@@ -6631,13 +6631,13 @@ translate esp s_topics_rlt_presents_e0fead11:
 translate esp s_topics_rlt_presents_7346634c:
 
     # s 6aebb "Ehehe, that sounded a bit weird..."
-    pass
+    s 6aebb "Ehehe, eso sonó muy bien."
 
 # game/topics.rpy:894
 translate esp s_topics_rlt_presents_8bcc0c27:
 
     # s 6aaaa "At least I’d be able to buy something with it."
-    s 6aaaa "Al menos podría comprar algo interesante con eso."
+    s 6aaaa "Al menos podría comprar algo interesante con dinero."
 
 # game/topics.rpy:1081
 translate esp s_answer_personal_music_fe9ad3ff:
@@ -6687,13 +6687,13 @@ translate esp s_topics_rlt_presents_c102e381:
 translate esp s_topics_rlt_presents_3c3a5046:
 
     # s 7aaaa "At least, I do my best to make the best present, I could make."
-    s 7aaaa "Al menos puedo dar lo mejor de mí para hacer el mejor regalo."
+    s 7aaaa "Al menos sé que daré lo mejor de mí para darte el mejor regalo."
 
 # game/topics.rpy:962
 translate esp s_topics_lifestyle_drugs_ed5d07b2:
 
     # s 6aaca "Do you drink alcohol or smoke cigarettes?"
-    s 6aaca "¿Bebes alcohol o fumas cigarrillos?"
+    s 6aaca "Dime... ¿Bebes alcohol o fumas cigarrillos?"
 
 # game/topics.rpy:963
 translate esp s_topics_lifestyle_drugs_14f8f529:
