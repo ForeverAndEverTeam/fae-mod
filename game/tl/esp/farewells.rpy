@@ -20,7 +20,7 @@ translate esp s_farewell_2_9a1aefa3:
 translate esp s_farewell_2_66d308ad:
 
     # s "Come back when you feel alone."
-    s "Vuelve cuando te sientas solo."
+    s "Vuelve cuando te sientas solo o aburrido."
 
 # game/farewells.rpy:27
 translate esp s_farewell_2_0d72d10b:

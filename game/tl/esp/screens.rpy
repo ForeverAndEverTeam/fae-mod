@@ -103,11 +103,11 @@ translate esp strings:
 
     # screens.rpy:958
     old "Rollback Side"
-    new "Lado Posterior"
+    new "Click Para Retroceder (Lado de la pantalla)"
 
     # screens.rpy:959
     old "Disable"
-    new "Deshabilitar"
+    new "Deshabilitado"
 
     # screens.rpy:960
     old "Left"
