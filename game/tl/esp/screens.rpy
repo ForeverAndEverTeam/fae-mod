@@ -91,7 +91,7 @@ translate esp strings:
 
     # screens.rpy:952
     old "Display"
-    new "Pantalla"
+    new "Pantalla No Completa"
 
     # screens.rpy:953
     old "Window"
