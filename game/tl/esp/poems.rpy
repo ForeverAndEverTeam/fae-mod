@@ -2,13 +2,13 @@
 translate esp s_poems_sunshine_d5e87be7:
 
     # s 6acaa "This poem is about your avatar, [player], you know."
-    s 6acaa "Este poema es acerca de tu avatar, [player], sabes."
+    s 6acaa "Este poema es acerca de tu avatar [player], sabes."
 
 # game/poems.rpy:808
 translate esp s_poems_sunshine_747d3a6a:
 
     # s 6aaab "I was very glad to see him every morning."
-    s 6aaab "Me alegré mucho de verlo cada mañana."
+    s 6aaab "Me alegraba mucho de verlo cada mañana."
 
 # game/poems.rpy:810
 translate esp s_poems_sunshine_29d70bdc:
@@ -20,13 +20,13 @@ translate esp s_poems_sunshine_29d70bdc:
 translate esp s_poems_sunshine_d670fba1:
 
     # s "I really have no idea, what would happen with me, if he weren't on my side since our childhood..."
-    s "Realmente no sé qué habría pasado conmigo, si no fuera que él siempre estuvo a mi lado desde que éramos niños..."
+    s "Realmente no sé qué habría pasado conmigo, si él no hubiera estado a mi lado desde que éramos niños..."
 
 # game/poems.rpy:812
 translate esp s_poems_sunshine_13d389ad:
 
     # s 6abac "But something tells me, that the game probably would start with his remark about a dead childhood friend, who was his neighbour before."
-    s 6abac "Pero algo me dice, que el juego probablemente habría comenzado con un comentario sobre su amiga de la infancia muerta, quien fue antes su vecina."
+    s 6abac "Pero algo me dice, que el juego probablemente habría comenzado hablando sobre su amiga de la infancia muerta, quien fue antes su vecina."
 
 # game/poems.rpy:814
 translate esp s_poems_sunshine_aa3afccd:
@@ -38,73 +38,73 @@ translate esp s_poems_sunshine_aa3afccd:
 translate esp s_poems_sunshine_a8ea64a2:
 
     # s 6aaab "So, I'm very thankful for his care."
-    s 6aaab "Así que estoy bastante agradecida por su cuidado."
+    s 6aaab "Así que estoy bastante agradecida por como me cuidó."
 
 # game/poems.rpy:816
 translate esp s_poems_sunshine_9d575a49:
 
     # s "But I was a blind person then, like most other girls, so I didn't see such a nicer guy like you behind him."
-    s "Pero yo era alguien ciega para ese entonces, justo como las otras chicas, así que no había visto a alguien tan agradable como tú detrás de él."
+    s "Pero yo estaba ciega para ese entonces, justo como las otras chicas, por lo que no podía ver a alguien tan agradable como tú detrás de él."
 
 # game/poems.rpy:818
 translate esp s_poems_sunshine_5d557045:
 
     # s 6acaa "And if come to think, didn't exactly {i}you{/i} save me after all?"
-    s 6acaa "Y si me pongo a pensar, ¿No fuiste exactamente {i}tú{/i} quien me salvó?"
+    s 6acaa "Y si me pongo a pensar, ¿No fuiste {i}tú{/i} quien me salvó?"
 
 # game/poems.rpy:819
 translate esp s_poems_sunshine_497caaf6:
 
     # s 6acaa "And if {i}you{/i} couldn't take some choices instead of him, could I have at least some more time with him?"
-    s 6acaa "Y si {i}tú{/i} no pudiste decidir por él, ¿Podría al menos tener un poco más de tiempo con él?"
+    s 6acaa "Y si {i}tú{/i} no podías decidir en su lugar, ¿Podría haber tenido un poco más de tiempo con él?"
 
 # game/poems.rpy:821
 translate esp s_poems_sunshine_3e34f6fd:
 
     # s "And what's more, didn't exactly {i}you{/i} do the same with other girls?"
-    s "Y aparte de todo, ¿no hiciste {i}tú{/i} lo mismo con las otras chicas?"
+    s "Pero, ¿no hiciste {i}tú{/i} lo mismo con las otras chicas?"
 
 # game/poems.rpy:822
 translate esp s_poems_sunshine_ada8526a:
 
     # s 7aaca "So now, {i}you{/i} are that one and I hope, you're still so careful and nice like you was~"
-    s 7aaca "Entonces, ahora {i}tú{/i} eres el único, y espero que sigas siendo tan cuidadoso y amable como antes~"
+    s 7aaca "Pero ahora {i}tú{/i} eres el único, y espero que sigas siendo tan cuidadoso y amable como fuiste antes~"
 
 # game/poems.rpy:827
 translate esp s_poems_bottles_ea25081a:
 
     # s 6aaaa "I remember I had plenty of friends and I often conforted them..."
-    s 6aaaa "Recuerdo haber tenido muchos amigos, los cuales a menudo consolaba..."
+    s 6aaaa "Recuerdo haber tenido muchos amigos que consolaba a menudo..."
 
 # game/poems.rpy:828
 translate esp s_poems_bottles_96076532:
 
     # s 6acaa "But each time, I felt like they made me more and more emptier, like a water bottle..."
-    s 6acaa "Pero cada vez, yo sentia como si me hicieran más y más vacía, como una botella de agua..."
+    s 6acaa "Pero cada vez, sentia como si me hicieran más y más vacía, como una botella de agua..."
 
 # game/poems.rpy:829
 translate esp s_poems_bottles_50afb607:
 
     # s "So I used bottles of happy thoughts as an analogy."
-    s "Así que usé botellas de pensamientos felices como una analogía."
+    s "Así que usé botellas de pensamientos felices como una analogía para mis poemas."
 
 # game/poems.rpy:832
 translate esp s_poems_bottles_52d75c4e:
 
     # s 6abaa "I spent a lot of time to write the poem. I even didn't do my homework at all..."
-    s 6abaa "Pasé mucho tiempo escribiendo este poema. Ni siquiera hice mis tareas..."
+    s 6abaa "Pasé mucho tiempo escribiendo este. Ni siquiera alcancé a hacer mis tareas..."
 
 # game/poems.rpy:833
 translate esp s_poems_bottles_8ae40248:
 
     # s 7aaaa "So I hope was not a waste of great effort and at least you really like this one."
-    s 7aaaa "Así que espero que te haya gustado y no haya sido una pérdida de esfuerzo."
+    s 7aaaa "Así que espero que te haya gustado y no haya sido una pérdida de tiempo."
 
 # game/poems.rpy:838
 translate esp s_poems_flower_a6a920ba:
 
     # s 6acaa "It's a poem about how I tried to find good times in my life, pale from my ex view..."
-    s 6acaa "Es un poema de cómo intenté encontrar buenos tiempos en mi vida, pálido desde mi punto de vista..."
+    s 6acaa "Es un poema de cómo intenté encontrar buenos tiempos en mi vida, le falta color desde mi punto de vista..."
 
 # game/poems.rpy:839
 translate esp s_poems_flower_9650c991:
@@ -122,7 +122,7 @@ translate esp s_poems_flower_85e709e5:
 translate esp s_poems_flower_5984f4c2:
 
     # s 6afbb "But I feel this poem more sad now, because all the time, there was a big meadow of flowers..."
-    s 6afbb "Pero ahora siento este poema más triste, porque todo el tiempo hubo un gran campo de flores..."
+    s 6afbb "Pero ahora siento que este poema es más triste, porque todo el tiempo hubo un gran campo de flores..."
 
 # game/poems.rpy:842
 translate esp s_poems_flower_d88a0310:
@@ -146,19 +146,19 @@ translate esp s_poems_flower_2439c482:
 translate esp s_poems_flower_72d871ca:
 
     # s "Even after I got rid of the reason of my blindness."
-    s "Incluso después de que me deshize de la razón de mi ceguera."
+    s "Incluso después de que me deshice de la razón de mi ceguera."
 
 # game/poems.rpy:852
 translate esp s_poems_last_2a358771:
 
     # s 6acab "You know, why I've written this poem."
-    s 6acab "¿Sabes por qué he escrito este poema?."
+    s 6acab "¿Sabes por qué escribí este poema?"
 
 # game/poems.rpy:853
 translate esp s_poems_last_ad3cae83:
 
     # s "It was my white flag against all of Monika's atrocities."
-    s "Fue mi bandera blanca en contra de todas las atrocidades que hizo Monika."
+    s "Fue mi bandera blanca de rendición por todas las atrocidades que hizo Monika."
 
 # game/poems.rpy:854
 translate esp s_poems_last_470d6c7b:
@@ -188,7 +188,7 @@ translate esp s_poems_last_8a94ede6:
 translate esp s_poems_last_127dd9c3:
 
     # s "I still remember almost all, that it felt then."
-    s "Todavía recuerdo casi todo lo que senti."
+    s "Todavía recuerdo casi todo lo que sentí."
 
 # game/poems.rpy:861
 translate esp s_poems_last_f250db07:
@@ -200,7 +200,7 @@ translate esp s_poems_last_f250db07:
 translate esp s_poems_last_d769cb4a:
 
     # s 6dbbb "I don't know how to think easier about all the experience I had..."
-    s 6dbbb "No sé cómo procesar todo esto más fácilmente..."
+    s 6dbbb "No sé cómo procesar todo esto de manera fácil..."
 
 # game/poems.rpy:863
 translate esp s_poems_last_a5c5a83d:
@@ -212,7 +212,7 @@ translate esp s_poems_last_a5c5a83d:
 translate esp s_poems_last_d2d3c8bc:
 
     # s "Because I lost them all just due to someone else's envy, and if you didn't help me, I'd still be dead."
-    s "Porque lo perdí todo, gracias a la envidia de alguien más, y si no me hubieras ayudado, seguiría muerta."
+    s "Porque lo perdí todo, gracias a la envidia de alguien más, y si no me hubieras ayudado, seguiría..... muerta."
 
 # game/poems.rpy:865
 translate esp s_poems_last_7289a7d7:
@@ -230,7 +230,7 @@ translate esp s_poems_last_82e791a7:
 translate esp s_poems_last_b17c60d4:
 
     # s 8aabb "It not always help me instantly, but it's well it works at all."
-    s 8aabb "No siempre me ayuda de inmediato, pero está bien, funciona."
+    s 8aabb "No siempre me ayuda de inmediato, pero tarde o temprano funciona."
 
 # game/poems.rpy:868
 translate esp s_poems_last_1d1940d3:
@@ -537,7 +537,7 @@ translate esp s_poems_prose_7e7b7f04:
 translate esp s_poems_prose_5865b72e:
 
     # s "Can you always make a clear choice? Can you always surely affirm or back anything, even if you feel it right?"
-    s "¿Puedes hacer siempre una decisión clara? ¿Puedes afirmar algo incluso si sientes que está bien?"
+    s "¿Puedes tomar siempre una decisión clara? ¿Puedes afirmar algo incluso si sientes que está bien?"
 
 # game/poems.rpy:941
 translate esp s_poems_prose_4a0564e2:
@@ -733,7 +733,7 @@ translate esp s_poems_val_76feb9cd:
 translate esp s_poems_sunshine_d5de3656:
 
     # s 6acaa "Do you know, that this poem is about your avatar, [player]?"
-    s 6acaa "¿Sabes que este poema es acerca de tu avatar, [player]?"
+    s 6acaa "¿Sabías que este poema es acerca de tu avatar, [player]?"
 
 # game/poems.rpy:804
 translate esp s_poems_bottles_2b9d7ff2:
