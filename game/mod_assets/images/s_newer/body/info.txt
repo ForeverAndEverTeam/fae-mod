@@ -1,4 +1,4 @@
-nude = Base body with no clothes (That's not what you think, pervert)
+base = Base body with no clothes or other atributes
 uniform = School uniform from the original game
 --Planned bodies
 --These assets are absent for now. The below codes are just reserved for possible updates.
