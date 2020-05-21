@@ -8,5 +8,6 @@ f = Sad eyes
 g = crazy eyes
 --New specification
 h = wide eyes
+i = smug eyes
 cc = c eyes for c face mask
 ec = e eyes for c face mask

@@ -17,7 +17,7 @@ init -9 python:
         exp_codes[2][x] = SpriteInfo('mouth', x)
     
     #Eyes
-    for x in l_range('a','h'):
+    for x in l_range('a','i'):
         exp_codes[3][x] = SpriteInfo('eyes', x)
     exp_codes[3]['cc'] = SpriteInfo('eyes', 'cc')
     exp_codes[3]['ec'] = SpriteInfo('eyes', 'ec')
@@ -26,7 +26,7 @@ init -9 python:
         exp_codes[3]['e' + ch] = exp_codes[3]['ec']
     
     #Eyebrows
-    for x in l_range('a','d'):
+    for x in l_range('a','e'):
         exp_codes[4][x] = SpriteInfo('brows', x)
     
     #Hair styles
