@@ -27,20 +27,18 @@ image mask_test2 = AnimatedMask("#ffffff", "mask_mask", "maskb", 0.03, 16)
 image mask_test3 = AnimatedMask("#ff6000", "mask_mask_flip", "maskb", 0.10, 32)
 image mask_test4 = AnimatedMask("#ffffff", "mask_mask_flip", "maskb", 0.03, 16)
 
-transform bg_alpha(t = 1.0, x = 0, y = 0):
-    xpos x
-    ypos y
-    alpha t
-    linear COLOR_STEP alpha (t + 1/255)
+transform dclouds_tr:
+    xtile 3 subpixel True
+    pos (600, 380)
+    block:
+        xoffset 1280
+        linear 240 xoffset (1280/240)
+        repeat
+
+image dclouds_im = "images/cg/monika/mask.png"
 
 image dclouds:
     DynamicDisplayable(dyn_clouds)
-    xtile 3 subpixel True
-    block:
-        xoffset 1280
-        linear 600 xoffset 0
-        repeat
-
 
 image mask_2:
     "images/cg/monika/mask_2.png"
@@ -105,8 +103,8 @@ init -8 python:
         return sky, COLOR_STEP
     
     def dyn_clouds(st, at, *args, **kwargs):
-        im = Image("images/cg/monika/mask.png")
-        return backgrounds.current.apply_current_matrix(im), COLOR_STEP
+        d = renpy.displayable("dclouds_im")
+        return backgrounds.current.apply_current_matrix(d), COLOR_STEP
     
     class Background:
         defualt_matrix = im.matrix((
@@ -261,10 +259,11 @@ init -8 python:
         dsky = DynamicDisplayable(dyn_sky)
         renpy.show("bg", what = dsky, layer = 'bg', zorder = 0)
         if not static:
-            renpy.show('dclouds', at_list = [Transform(function = sroom_mix_fday)], layer = 'bg')
-            renpy.show('sroom_night_mask', at_list = [Transform(function = sroom_mix_f)], layer = 'bg')
+            renpy.show('dclouds', layer = 'bg', zorder = 1) #Needed for somehow
+            renpy.show('dclouds', at_list = [Transform(function = sroom_mix_fday), dclouds_tr], layer = 'bg')
+            renpy.show('sroom_night_mask', at_list = [Transform(function = sroom_mix_f)], layer = 'bg', zorder = 1)
         else:
-            renpy.show('sroom_night_static', at_list = [Transform(function = sroom_mix_f)], layer = 'bg')
+            renpy.show('sroom_night_static', at_list = [Transform(function = sroom_mix_f)], layer = 'bg',  zorder = 1)
         droom = DynamicDisplayable(sroom_dyn, bg = self)
         renpy.show("bg_room", what = droom, layer = 'bg', zorder = 2)
         
