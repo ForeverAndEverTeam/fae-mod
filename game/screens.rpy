@@ -990,12 +990,18 @@ screen preferences():
                     style_prefix "check"
                     label _("Background")
                     textbutton _('Static') action [SetField(persistent, "static_bg", not persistent.static_bg), SetDict(globals(), 'update_bg', True), SelectedIf(persistent.static_bg)]
+                python:
+                    def dn_cycle_switch(state):
+                        persistent.day_night_cycle = state
+                        update_bg = True
                 vbox:
                     style_prefix "radio"
                     label _("Day/Night Cycle")
-                    textbutton _('Smooth{#D/N Cycle}') action [SetField(persistent, "day_night_cycle", 2), SetDict(globals(), 'update_bg', True), SelectedIf(persistent.day_night_cycle == 2)]
-                    textbutton _('On') action [SetField(persistent, "day_night_cycle", 1), SetDict(globals(), 'update_bg', True), SelectedIf(persistent.day_night_cycle == 1)]
-                    textbutton _('Off (Always day)') action [SetField(persistent, "day_night_cycle", 0), SetDict(globals(), 'update_bg', True), SelectedIf(persistent.day_night_cycle == 0)]
+                    textbutton _('Smooth{#D/N Cycle}'):
+                        action [Confirm(_("Smooth D/N cycle is imperfect and may take a lot of resources.\nAre you sure you want to turn it on?"),
+                        Function(dn_cycle_switch, 2), NullAction()), SelectedIf(persistent.day_night_cycle == 2)]
+                    textbutton _('On') action [Function(dn_cycle_switch, 1), SelectedIf(persistent.day_night_cycle == 1)]
+                    textbutton _('Off (Always day)') action [Function(dn_cycle_switch, 0), SelectedIf(persistent.day_night_cycle == 0)]
                     
 
             null height (4 * gui.pref_spacing)

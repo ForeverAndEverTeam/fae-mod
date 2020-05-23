@@ -1,6 +1,6 @@
 default persistent.current_bg = 'spaceroom'
 default persistent.static_bg = False
-default persistent.day_night_cycle = 2
+default persistent.day_night_cycle = 1
 default matrix_mix_times = 0
 
 #Spaceroom displayables
