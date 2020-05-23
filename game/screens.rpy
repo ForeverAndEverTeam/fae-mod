@@ -996,6 +996,8 @@ screen preferences():
                         update_bg = True
                 vbox:
                     style_prefix "radio"
+                    xsize 360
+
                     label _("Day/Night Cycle")
                     textbutton _('Smooth{#D/N Cycle}'):
                         action [Confirm(_("Smooth D/N cycle is imperfect and may take a lot of resources.\nAre you sure you want to turn it on?"),
