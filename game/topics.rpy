@@ -2308,17 +2308,30 @@ label s_love_you():
     $s_mood = 'vh'
     jump s_loop
 
-label s_update(version): #Called instead of a greeting at the first launch after updating the mod
-    show sayori 7aaca at ss1
-    s 7aeaa "¡Hola, [player]!" 
-    s 7aeca "I see you've just updated the mod..."
-    s 7afbb "But somehow I don't feel any changes..."
-    s 7aabb "Maybe my messy code was updated." 
-    s 9aaaa "No, wait a second..." 
-    s 9acaa "When did I learn how to say {i}\"Hello!\"{/i} in Spanish?{w} I can speak Spanish now?" 
-    s 9aeca "Que agradable, ehehe~"
-    s "I was right on them updating my code as well." 
-    s 6acaa "Honestly, I'm not an experienced coder, but seeing how to fix my own mistakes definitely helps."
-    s 7aaaa "But you're not here to listen to my thoughts on this update, are you?"
-    s "So let's talk about something else for now."
-    return
+label s_update(version = config.version): #Called instead of a greeting at the first launch after updating the mod
+    s 7aaaa "Hello, [player]! Did you notice anything new about me?"
+    menu:
+        "You have new sprites":
+            s 7aeca "Nice! It means my friends' efforts haven't gone unnoticed!"
+            s 7aeha "I hope you like my new look."
+            s "I always want to look better for you, after all."
+        "I see nothing new":
+            s 6acac "So you're saying you haven't noticed my new sprites?"
+            s "My new friends put so much effort into it, after all..."
+            s 8aeba "Well... I think you have to be joking or something..."
+            s 8aebb "I didn't want to disappoint you."
+            s "At least you aren't the only one of my fans, I hope..."
+    s 7aaaa "But my new apperance is not the only feature I brought for you!"
+    s "I think we're in need of some new games, so I added one called {i}Reversi{/i}!"
+    s 7aeba "...Or {i}Othello{/i}, I don't know which variant is better."
+    s 7aeaa "And I learnt some new languages, too!"
+    s 7aaaa "But the most drastic change, of course after my appearance, is the Day/Night cycle."
+    s 6aaaa "Yes, I've finally implemented this feature, and even synchronized it with your PC's time!"
+    s 6acaa "So, when you have day, I have day. When you have night, I have night. And {i}soooo{/i} on."
+    s 8aabb "Honestly, I got inspiration from other mods to make this feature, but I tried to improve it the best I could."
+    s 8acaa "My one friend even made it more similar to your world..."
+    s 8aebb "But I decided to turn this improvement off, as to not overload your computer."
+    s 7aaca "You always can turn it on in the game settings, though, if you think it can handle it!"
+    s 7aaaa "Well! Now that everything is explained, we can go back to our usual routine."
+    s 7aaca "I hope you will enjoy this update!"
+    return 'h'
