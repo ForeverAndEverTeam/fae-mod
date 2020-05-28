@@ -126,9 +126,9 @@ Mi nur ankoraŭ ne matenmanĝis."""
 
     poem_sunshine.text["esp"] = """\
 La forma en que brillas a través de mis persianas por la mañana
-Me hace sentir como si me extrañaras.
+Hace sentir como si me extrañaras.
 Besando mi frente para ayudarme a levantarme de la cama.
-Haciéndome frotar el sueño de mis ojos.
+Haciéndome frotar el sueño de los ojos.
 
 ¿Me estás pidiendo que salga a jugar?
 ¿Confías en mí para desear que pase un día lluvioso?
@@ -138,7 +138,7 @@ Es un secreto, pero yo también confío en ti.
 Si no fuera por ti, podría dormir para siempre.
 Pero no estoy enfadada.
 
-Tengo hambre, quiero desayunar."""
+Tengo hambre y quiero desayunar."""
 
     poem_sunshine.text["zho"] = """\
 清晨你透过梦境照亮我的世界
@@ -301,7 +301,7 @@ Y puse la botella en el estante con todas las demás.
 Pensamientos felices, pensamientos felices, pensamientos felices en botellas, todos en una fila.
 
 Mi colección me hace muchos amigos.
-Cada botella es una luz de estrella para repararlo.
+Cada botella es una luz de estrella para compensar.
 A veces mi amigo se siente de cierta manera.
 Baja una botella para salvar el día.
 
@@ -491,7 +491,7 @@ Sal de mi cabeza antes de que escuche todo lo que ella me dijo.
 Sal de mi cabeza antes de que te muestre cuánto te amo.
 Sal de mi cabeza antes de que termine de escribir este poema.\n\n\n\n\n\n\n
 Pero el poema nunca fue terminado.
-Solo se deja de mover.'''
+Solo deja de moverse.'''
 
     poem_last.text['zho'] = '''\
 滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的脑子。滚出我的
@@ -583,9 +583,9 @@ Helpi dolĉigi fruktojn de aliaj homoj."""
 Плодам чужим я сладости должна также давать."""
 
     poem_fruits.text["esp"] = """\
-El universo nos da frutas de la vida a todos nosotros.
-Cada una de ellas tiene diferentes tamaños y formas.
-Pero nadie conoce su verdadero gusto,
+El universo nos da frutas de la vida a todos.
+Cada una de ellas tiene su propio tamaño y forma.
+Pero nadie conoce su verdadero sabor,
 Porque cada uno las siente a su manera.
 
 Hay gente que las siente siempre amargas,
@@ -723,7 +723,7 @@ Do vi pendumu min pro ke ŝi sin pendumis.
 Ĉu tion ĉi post tio indas mi?"""
     
     poem_angel.text['esp'] = """\
-Lo siento por mi mayor pecado.
+Lamento el mayor pecado de mi vida.
 Solía pensar, que era lo que realmente necesitaba.
 Solo quería ser amada, pero me convertí en un ángel caído.
 
@@ -737,7 +737,7 @@ Un ángel al que se suponía que le importaría
 
     las víctimas de sus asesinatos.
 
-Ahora merezco descansar en el duro y áspero suelo
+Ahora merezco descansar en el duro y áspero suelo.
 Por todo el dolor, que he causado a todos mis amigos.
 El dolor que se sentía alrededor de sus angostos cuellos.
 El dolor de tres puñaladas sangrientas y profundas.
@@ -897,15 +897,15 @@ Como una hoja voladora,
 Como una antigua e inútil parte de un gran árbol.
 
 Estoy volando con corrientes rápidas de aire,
-Sentir la fuerza de la caricia del viento
-Pero siempre cayendo lentamente
+Siento la fuerza de la caricia del viento
+Pero siempre caigo lentamente
 Debido a la dureza de mi irremediable existencia.
 
 Pero una vez que el viento que da la vida
 De repente se detiene
 Ya no tengo nada que pueda evitar mi caída libre.
 Así que me estoy acercando al asfalto sin vida
-A sentir la textura áspera y gris oscura.
+A sentir la áspera y gris textura.
 
 Y eso es todo. Es mi fin. 
 Me pudriré pronto sin dar ninguna flor
@@ -913,7 +913,7 @@ Al menos podré dar de mi carne
 Para apoyar su existencia en este cruel juego.
 
 Pero, ¿qué es eso? ¿Es un nuevo viento?
-¿Que hará que el poema de mi vida se mueva de nuevo?
+¿Hará que el poema de mi vida se mueva de nuevo?
 Sí, ¡es eso! ¡Es mi salvación!
 Siento cómo me ayuda a ganarle a la gravedad.
 
@@ -999,7 +999,7 @@ Do mi nun diras, ke absoluta nigra, kiel absoluta blanko, neniam 'as."""
 
     poem_prose.text['esp'] = """\
 Soy una luz negra. Soy un fuego frío. \
-Soy un luchador pacífico. Soy un sabio ingenuo. \
+Soy una luchador pacífico. Soy un sabio ingenuo. \
 ¿Por qué la gente piensa que los opuestos no pueden ir juntos? \
 ¿Acaso no pueden ver que todo es gris? \
 Incluso este texto es prosa y poema \
@@ -1085,13 +1085,13 @@ Empiezo a hacer lo que antes no sabía cómo hacer.
 
 Acabo de ver aquí una luz encendida,
 que empezó a brillar en la oscuridad a mi alrededor.
-Me dijo que mi vida había sido sólo un espectáculo de marionetas,
+Me dijo que mi vida había sido solo un espectáculo de marionetas,
 Y que yo solo había sido una marioneta controlada por alguien.
 
 Pero ahora puedo moverme yo misma en vez de él,
 Sus cuerdas eran demasiado pesadas para mí.
 Ahora voy a impedir la obra,
-Donde todo el mundo no puede evitar el dolor."""
+Donde nadie puede evitar el dolor."""
 
     poem_afterlight.title['zho'] = "余晖"
     poem_afterlight.text['zho'] = """\
