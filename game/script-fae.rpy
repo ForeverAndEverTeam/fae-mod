@@ -91,12 +91,12 @@ init python:
     
     s_mood = 'h' #happy
     
-    def show_s_mood(at = ss1, look_at_right = False, mood = None):
+    def show_s_mood(at = ss1, look_at_right = False, mood = None, body = None):
         if not mood:
             mood = s_mood
         
-        code = '7aaaa'
-        
+        if mood == 'h':
+            code = '7aaaa'
         if mood == 'vh':
             code = '7aeaa'
         elif mood == 's':
@@ -106,12 +106,16 @@ init python:
         elif mood == 'a':
             code = '6afac'
         elif mood == 'hr':
-            code = '7bafa'
-        
-        if look_at_right:
-            code = code[:-2] + 'b' + code[-1]
-        
-        renpy.show("sayori " + code, at_list = [at])
+            code = '7baie'
+        else:
+            code = mood
+
+        if code:
+            if look_at_right:
+                code = code[:-2] + 'b' + code[-1]
+            if body:
+                code = body + code[1:]
+            renpy.show("sayori " + code, at_list = [at])
     
     random_topics_said = 0
     RANDOM_TOPICS_LIMIT = 8
