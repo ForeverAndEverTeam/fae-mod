@@ -1571,7 +1571,7 @@ label s_answer_personal_music:
     s 7acaa "You can find a ton of songs you might enjoy if you're willing to keep an open mind."
     s "If you get bored of the music here, you always can turn on something similar from the internet..."
     s "...Or just add it into the game music list."
-    s "Just move it to {i}'<game folder>/game/[music.MUSIC_CUSTOM_PREFIX]'{/i}..."
+    s "Just move it to {i}'[config.basedir][path_sep]game[path_sep][music.MUSIC_CUSTOM_PREFIX]'{/i}..."
     s "I'm basically giving you the aux cord to the rest of my existence, so no pressure! Ehehe~"
     return
 

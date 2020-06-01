@@ -12,6 +12,9 @@ init -11 python:
         customize = persistent.customization
         if customize and customize['body'] == "school":
             persistent.customization['body'] = "uniform"
+    path_sep = '/'
+    if config.basedir.find('\\') > -1:
+        path_sep = '\\'
 
 init python:
     update_bg = False
