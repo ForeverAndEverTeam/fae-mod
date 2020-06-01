@@ -158,11 +158,11 @@ init -8 python: ## new_exp.rpy code must have order -10<x<-8
     
     def load_all_exps():
         exps = []
-        for body in bodies:
-            for s in exp_codes[0]:
-                for m in exp_codes[1]:
-                    for e in exp_codes[2]:
-                        for b in exp_codes[3]:
+        for body in exp_codes[0]:
+            for s in exp_codes[1]:
+                for m in exp_codes[2]:
+                    for e in exp_codes[3]:
+                        for b in exp_codes[4]:
                             exps.append(body+s+m+e+b)
         return exps
     
@@ -193,8 +193,10 @@ init -8 python: ## new_exp.rpy code must have order -10<x<-8
             composed_sprites[exp] = sayori_compose(exp, bg_loaded)
 
     exps = []
+    exps_optimized = False
     try:
         exps = load_exps_from_file()
+        exps_optimized = True
     except:
         print "WARNING: Error while loading 'exp.txt'. The game will define EVERY possible expression for safe loading."
         exps = load_all_exps()
