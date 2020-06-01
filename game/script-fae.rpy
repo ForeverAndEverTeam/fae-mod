@@ -92,12 +92,13 @@ init python:
     s_mood = 'h' #happy
     
     def show_s_mood(at = ss1, look_at_right = False, mood = None, body = None):
+        code = None
         if not mood:
             mood = s_mood
         
         if mood == 'h':
             code = '7aaaa'
-        if mood == 'vh':
+        elif mood == 'vh':
             code = '7aeaa'
         elif mood == 's':
             code = '7afbb'
