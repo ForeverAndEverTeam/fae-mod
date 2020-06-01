@@ -112,7 +112,7 @@ init -10 python:
     
     def sayori_compose(exp_code, bg_loaded = False):
         sprites = []
-        print(exp_code)
+        # print exp_code
         arms = exp_code[:-4]
         exp = exp_code[-4:]
         exp_i = 0
@@ -139,7 +139,7 @@ init -10 python:
                 sprites.append(backgrounds.current.sprites[ek].get_image())
             else:
                 del sprites[-1]
-        print(sprites)
+        # print sprites
         return im.Composite((1280, 720), *sprites)
     
     s_last_frames = []
@@ -155,26 +155,47 @@ init -8 python: ## new_exp.rpy code must have order -10<x<-8
     composed_sprites = {}
     for k in CUSTOM_TEMPLATES:
         custom_current[k] = persistent.customization.get(k) or "usual"
-    exps = []
-    try:
-        f = renpy.file('exp.txt')
-        for line in f.readlines():
-            limit = re.search('\s', line)
-            limit = limit and limit.start() or len(line)
-            exps.append(line[:limit])
-        f.close()
-    except:
+    
+    def load_all_exps():
+        exps = []
         for body in bodies:
             for s in exp_codes[0]:
                 for m in exp_codes[1]:
                     for e in exp_codes[2]:
                         for b in exp_codes[3]:
                             exps.append(body+s+m+e+b)
+        return exps
     
-    for exp in exps:
-        composed_sprites[exp] = sayori_compose(exp)
-        renpy.image("sayori "+ exp, make_dyn_s(exp))
+    def load_exps_from_lines(lines):
+        exps = []
+        for line in lines:
+            limit = re.search('\s', line)
+            limit = limit and limit.start() or len(line)
+            exps.append(line[:limit])
+        return exps
     
-    def s_recompose(bg_loaded = True):
+    def load_exps_from_file(file = 'exp.txt', close = False):
+        if type(file) == str:
+            file = renpy.file(file)
+            close = True
+        exps = load_exps_from_lines(file.readlines())
+        if close:
+            file.close()
+        return exps
+    
+    def compile_exps(exps):
+        for exp in exps:
+            composed_sprites[exp] = sayori_compose(exp)
+            renpy.image("sayori "+ exp, make_dyn_s(exp))
+    
+    def recompose_exps(bg_loaded = True):
         for exp in composed_sprites:
             composed_sprites[exp] = sayori_compose(exp, bg_loaded)
+
+    exps = []
+    try:
+        exps = load_exps_from_file()
+    except:
+        print "WARNING: Error while loading 'exp.txt'. The game will define EVERY possible expression for safe loading."
+        exps = load_all_exps()
+    compile_exps(exps)
