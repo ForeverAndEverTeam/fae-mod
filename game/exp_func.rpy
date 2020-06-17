@@ -67,11 +67,12 @@ init -10 python:
     
     #Sprite Info Classes
     class SpriteInfo:
-        def __init__(self, part, file, has_dark_version = False, body_depended = False, name = None):
+        def __init__(self, part, file, has_dark_version = False, body_depended = False, name = None, allowed = "*****"):
             self.part = part
             self.file = file
             self.body_depended = body_depended
             self.name = name
+            self.allowed_temp = allowed #Template for expression codes where the sprite can be used
         
         def get_path(self, dark = False, body = None):
             return get_asset_path(self.part, self.file, body, dark)
@@ -82,6 +83,65 @@ init -10 python:
             if darkened:
                 path = self.get_path(True, body)
             return path
+        
+        def allowed(self, code):
+            #Template syntax:
+            #* - any char
+            #! - except the next char
+            #{} - char group (any of these chars)
+            t = self.allowed_temp
+            tl, cl = len(t), len(code)
+            if cl > 5:
+                ph = '*'
+                if t[0] != "*":
+                    ph = "0"
+                nl = 0
+                while code[nl].isdigit():
+                    nl += 1
+                for i in range(nl-1):
+                    code = ph + code
+                tl = len(t)
+            elif tl > 5:
+                nl = 0
+                while t[nl].isdigit():
+                    nl += 1
+                for i in range(nl):
+                    code = '0' + code
+                cl = len(code)
+            code = code.ljust(tl)
+            not_next = False
+            in_group = False
+            group_ok = False
+            d = 0
+            for i in range(tl):
+                if in_group:
+                    if (t[i] == code[i-d]):
+                        group_ok = True
+                    if (t[i] == '}'):
+                        in_group = False
+                        if not_next:
+                            if group_ok:
+                                return False
+                        elif not group_ok:
+                            return False
+                        not_next = False
+                    d += 1
+                elif not_next:
+                    if t[i] == code[i-d]:
+                        return False
+                    elif t[i] == '{':
+                        in_group = True
+                    else:
+                        not_next = False
+                elif t[i] == '{':
+                    in_group = True
+                    d += 1
+                elif t[i] == '!':
+                    not_next = True
+                    d += 1
+                elif not (t[i] == '*' or t[i] == code[i-d]):
+                    return False
+            return True
     
     class DummySprite(SpriteInfo):
         def __init__(self):
@@ -89,6 +149,7 @@ init -10 python:
             self.file = None
             self.body_depended = False
             self.name = None
+            self.allowed_temp = "*****"
         
         def get_path(self, *args):
             return ""
@@ -156,14 +217,32 @@ init -8 python: ## new_exp.rpy code must have order -10<x<-8
     for k in CUSTOM_TEMPLATES:
         custom_current[k] = persistent.customization.get(k) or "usual"
     
-    def load_all_exps():
+    def exp_allowed(code):
+        if not exp_codes[0][code[:-4]].allowed(code):
+            return False
+        for i in range(1, 5):
+            if not exp_codes[i][code[-5+i]].allowed(code):
+                return False
+        return True
+    
+    def load_all_exps(ignore_allowed = False):
         exps = []
-        for body in exp_codes[0]:
-            for s in exp_codes[1]:
-                for m in exp_codes[2]:
-                    for e in exp_codes[3]:
-                        for b in exp_codes[4]:
-                            exps.append(body+s+m+e+b)
+        #Use recursion to defind all the possible expressions
+        def rec_add_exp(code, depth = 1):
+            if depth >= 5:
+                if ignore_allowed or exp_allowed(code):
+                    exps.append(code)
+                    return code
+                return None
+            for c in exp_codes[depth]:
+                if len(c) == 1:
+                    rec_add_exp(code + c, depth + 1)
+                else:
+                    return None
+        #Expression loading for each arms
+        for arms in exp_codes[0]:
+            if arms.isdigit(): #To exclude special expressions if they accidentally are in the generic arm list
+                rec_add_exp(arms)
         return exps
     
     def load_exps_from_lines(lines):
@@ -198,6 +277,6 @@ init -8 python: ## new_exp.rpy code must have order -10<x<-8
         exps = load_exps_from_file()
         exps_optimized = True
     except:
-        print "WARNING: Error while loading 'exp.txt'. The game will define EVERY possible expression for safe loading."
+        print "WARNING: Error while loading 'exp.txt'. The game will define EVERY possible expression for safe loading in cost of VERY LONG load time."
         exps = load_all_exps()
     compile_exps(exps)
