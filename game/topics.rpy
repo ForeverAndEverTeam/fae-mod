@@ -339,7 +339,7 @@ label s_topics_personal_depression:
     s 8aebb "Isn't that silly?"
     s 6abab "Anyways."
     s 6acaa "At first, I was really good at keeping them away..."
-    s (EXP NEEDED) "Or maybe, I was just really good at ignoring them."
+    s 7aebb "Or maybe, I was just really good at ignoring them."
     s 6aaca "It was pretty difficult, but I used to think that if I got bummed out, I wouldn’t be able to make other people happy, which was all I really wanted at that time. Even if I now know that your own happiness should always come first, it hadn't occurred to me earlier on."
     s 6abaa "However, I also tried not to push myself too hard in trying to overcome this..."
     s "I tried to stay with the MC, because I thought being with him would help ease my mind, or make the thoughts go away."
