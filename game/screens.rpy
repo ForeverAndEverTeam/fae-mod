@@ -383,7 +383,9 @@ screen quick_menu():
             style_prefix "quick"
 
             xalign 0.5
-            yalign 0.995
+            yanchor 1.0
+            ypos gui.textbox_yalign
+            yoffset 9
 
             #textbutton _("Back") action Rollback()
             textbutton _("History") action ShowMenu('history')
