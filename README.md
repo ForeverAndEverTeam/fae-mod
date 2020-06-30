@@ -38,6 +38,8 @@ Lucian Pavel (Santa hat original model, excluded from the stable version)
   
 **Writers (without proofreading and translation):**  
 AlexanDDOS  
+Orcaramelo  
+Venus  
 *Read [this](https://github.com/AlexanDDOS/fae-mod/wiki/Writer-Guidelines) if you want to see you here*  
 
 **Proofreaders:**  
@@ -49,7 +51,7 @@ AlexanDDOS
 AlexanDDOS (Russian, Esperanto & Toki Pona (WIP))  
 [Vova Petelin](https://vk.com/toxin_666) (Russian)  
 ElReyZero1201 (Spanish)  
-[lvkaibin](https://www.reddit.com/user/lvkaibin) (Chinese)  
+[littlebin](https://www.reddit.com/user/lvkaibin) (Chinese)  
 *Read [this](https://github.com/AlexanDDOS/fae-mod/wiki/Translator-Guidelines) if you want to see you here*  
   
 **SFX:**  
@@ -60,7 +62,7 @@ sirrealist2 (drawing circle/line)
 AlexanDDOS  
 Leon9023 ([Reddit](https://www.reddit.com/user/leon9023), [VK](https://vk.com/leon9023))  
 [Evgeny Zotov](https://vk.com/everlastingtolovesayori)  
-lvkaibin  
+littlebin  
 [MarioXenobladefan614](https://www.reddit.com/user/MarioXenobladefan614)  
 *Report bugs on [Issues](https://github.com/AlexanDDOS/fae-mod/issues) or your feedback if you want to see you here*  
   
