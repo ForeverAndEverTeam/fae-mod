@@ -14,3 +14,15 @@ translate epo strings:
     old "Red Beret"
     new "Red Beret"
 
+# TODO: Translation updated at 2020-06-22 13:19
+
+translate epo strings:
+
+    # new_exp.rpy:53
+    old "Usual hairstyle"
+    new "Usual hairstyle"
+
+    # new_exp.rpy:55
+    old "School uniform"
+    new "School uniform"
+

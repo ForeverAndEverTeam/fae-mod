@@ -1,286 +1,286 @@
-﻿# TODO: Translation updated at 2019-09-15 20:43
+# TODO: Translation updated at 2019-09-15 20:43
 
 # game/topics.rpy:332
 translate tok s_topics_personal_depression_7c1e63ea:
 
     # s 6acab "I got you really worried about me, didn’t I?"
-    s 6acab "I got you really worried about me, didn’t I?"
+    s 6acab "sina pilin ike ala ike tan mi?"
 
 # game/topics.rpy:333
 translate tok s_topics_personal_depression_a7e51a19:
 
     # s 6aebb "When I said... you know..."
-    s 6aebb "When I said... you know..."
+    s 6aebb "mi toki... sina sona..."
 
 # game/topics.rpy:334
 translate tok s_topics_personal_depression_9d1eb697:
 
     # s "That I had 'rainclouds' inside my head for all my life..."
-    s "That I had 'rainclouds' inside my head for all my life..."
+    s "mi jo e 'kon ike' insa mi lon lon mi ali..."
 
 # game/topics.rpy:335
 translate tok s_topics_personal_depression_ccb9b234:
 
     # s 8aecb "...remember, 'rainclouds' is just what I called my depression."
-    s 8aecb "...remember, 'rainclouds' is just what I called my depression."
+    s 8aecb "...o sona e ni: 'kon ike' la pakala pi pilin ike mi."
 
 # game/topics.rpy:336
 translate tok s_topics_personal_depression_4280571b:
 
     # s 8aebb "Isn't that silly?"
-    s 8aebb "Isn't that silly?"
+    s 8aebb "nimi ni li nasa ala nasa?"
 
 # game/topics.rpy:337
 translate tok s_topics_personal_depression_8f94c93b:
 
     # s 6abab "Anyway."
-    s 6abab "Anyway."
+    s 6abab "ali la."
 
 # game/topics.rpy:338
 translate tok s_topics_personal_depression_42364fff:
 
     # s 6acaa "At first, I was really good at making them go away..."
-    s 6acaa "At first, I was really good at making them go away..."
+    s 6acaa "tenpo open la mi ken pona weka e ona..."
 
 # game/topics.rpy:339
 translate tok s_topics_personal_depression_08895ded:
 
     # s 6aaca "It was pretty difficult, but I kept in mind that if I got bummed out, I wouldn’t be able to make other people happy, which is all I really wanted anymore."
-    s 6aaca "It was pretty difficult, but I kept in mind that if I got bummed out, I wouldn’t be able to make other people happy, which is all I really wanted anymore."
+    s 6aaca "ona li pona ala. taso mi sona e ni: mi pilin ike la mi ken ala pali pilin pona e jan ante. mi wile mute e ona."
 
 # game/topics.rpy:340
 translate tok s_topics_personal_depression_306f8b66:
 
     # s 6abaa "However, I also tried not to push myself too hard in trying to overcome this..."
-    s 6abaa "However, I also tried not to push myself too hard in trying to overcome this..."
+    s 6abaa "taso mi lukin mute ala pali e ona..."
 
 # game/topics.rpy:341
 translate tok s_topics_personal_depression_9f19ad82:
 
     # s "So I tried to stay with the beloved MC. I thought being with him would help ease my mind."
-    s "So I tried to stay with the beloved MC. I thought being with him would help ease my mind."
+    s "mi lukin poka jan lawa tawa ona. mi pilin pona tan ona."
 
 # game/topics.rpy:342
 translate tok s_topics_personal_depression_43d14441:
 
     # s 6acab "But I thought he'd learn my darkest secret sooner or later, so he'd leave me then..."
-    s 6acab "But I thought he'd learn my darkest secret sooner or later, so he'd leave me then..."
+    s 6acab "taso mi monsuta tan ni: ona li sona e pilin mi la ona li kama weka mi..."
 
 # game/topics.rpy:343
 translate tok s_topics_personal_depression_80f29101:
 
     # s "That's why I tried to take it slow..."
-    s "That's why I tried to take it slow..."
+    s "mi pali lon tenpo mute tan monsuta ni..."
 
 # game/topics.rpy:344
 translate tok s_topics_personal_depression_9eeb2755:
 
     # s 6abbb "People in your world think that my cheerfulness was fake and I was just acting..."
-    s 6abbb "People in your world think that my cheerfulness was fake and I was just acting..."
+    s 6abbb "jan pi ale sina li toki e ni: lukin pi pilin pona mi li lon ala..."
 
 # game/topics.rpy:346
 translate tok s_topics_personal_depression_1471d512:
 
     # s 6abab "But my feelings were as real as you until the moment..."
-    s 6abab "But my feelings were as real as you until the moment..."
+    s 6abab "taso pilin pona mi li lon. taso sinpin tenpo ike..."
 
 # game/topics.rpy:347
 translate tok s_topics_personal_depression_b91415d1:
 
     # s 6acab "The moment Monika started to change my mind."
-    s 6acab "The moment Monika started to change my mind."
+    s 6acab "tenpo ni la jan Monika kama ante e insa mi."
 
 # game/topics.rpy:348
 translate tok s_topics_personal_depression_845a262b:
 
     # s 6cbcb "She teased me with my own problems and tried to convince me of terrible things. That I just annoyed him, made him worry for me..."
-    s 6cbcb "She teased me with my own problems and tried to convince me of terrible things. That I just annoyed him, made him worry for me..."
+    s 6cbcb "ona li kepeken e pakala mi tawa ni: mi pali pilin ike e jan lawa..."
 
 # game/topics.rpy:349
 translate tok s_topics_personal_depression_bb84c491:
 
     # s 6dbcb "That I should just… end it all."
-    s 6dbcb "That I should just… end it all."
+    s 6dbcb "li wile… pini e ale."
 
 # game/topics.rpy:350
 translate tok s_topics_personal_depression_e3da04ff:
 
     # s 6ecab "It made me feel really, really bad..."
-    s 6ecab "It made me feel really, really bad..."
+    s 6ecab "mi pilin ike-ike tan ona..."
 
 # game/topics.rpy:351
 translate tok s_topics_personal_depression_27cf61af:
 
     # s "My little rainclouds turned into a dark thunderstorm, blinding my mind with the rain..."
-    s "My little rainclouds turned into a dark thunderstorm, blinding my mind with the rain..."
+    s "kon ike lili mi li kama mute li pali lukin ala e mi..."
 
 # game/topics.rpy:352
 translate tok s_topics_personal_depression_8e34a602:
 
     # s 6efbb "Of course, I tried to tune her out, but that’s all I could do as a person."
-    s 6efbb "Of course, I tried to tune her out, but that’s all I could do as a person."
+    s 6efbb "mi lukin kin kute ala e ona. mi ken pali e ona taso."
 
 # game/topics.rpy:353
 translate tok s_topics_personal_depression_56d4a147:
 
     # s 6cbcb "To try."
-    s 6cbcb "To try."
+    pass
 
 # game/topics.rpy:354
 translate tok s_topics_personal_depression_e1554201:
 
     # s "..."
-    s "..."
+    pass
 
 # game/topics.rpy:356
 translate tok s_topics_personal_depression_fee2ecf6:
 
     # s 6dcbb "I got absolutely tired of everything."
-    s 6dcbb "I got absolutely tired of everything."
+    s 6dcbb "taso mi kama pilin ike tan ale."
 
 # game/topics.rpy:357
 translate tok s_topics_personal_depression_254741ba:
 
     # s 6dcab "I can't stop blaming myself for the desperate choice I made..."
-    s 6dcab "I can't stop blaming myself for the desperate choice I made..."
+    s 6dcab "mi pilin ike tan pali mi..."
 
 # game/topics.rpy:359
 translate tok s_topics_personal_depression_ad2d4edf:
 
     # s "My confession was accepted..."
-    s "My confession was accepted..."
+    s "toki olin mi li pona tawa jan lawa..."
 
 # game/topics.rpy:360
 translate tok s_topics_personal_depression_d4ec9dda:
 
     # s "Still, my feelings told me no, that this wasn’t right..."
-    s "Still, my feelings told me no, that this wasn’t right..."
+    s "taso pilin mi li toki e ijo ala..."
 
 # game/topics.rpy:362
 translate tok s_topics_personal_depression_1e977c7f:
 
     # s 6cfcb "The rejection broke me..."
-    s 6cfcb "The rejection broke me..."
+    s 6cfcb "toki olin li ike la mi pilin pakala mute..."
 
 # game/topics.rpy:363
 translate tok s_topics_personal_depression_5d4ba852:
 
     # s 6dbab "I really thought that it would be the best..."
-    s 6dbab "I really thought that it would be the best..."
+    s 6dbab "mi pilin e ni: ona li pona tawa ale..."
 
 # game/topics.rpy:364
 translate tok s_topics_personal_depression_bd27c3c0:
 
     # s 6dbcb "Needless to say, I, um, completely gave up."
-    s 6dbcb "Needless to say, I, um, completely gave up."
+    s 6dbcb "mi pali e ijo ike tan ni."
 
 # game/topics.rpy:365
 translate tok s_topics_personal_depression_64a3f23e:
 
     # s "My neck and hands still remember the pain..."
-    s "My neck and hands still remember the pain..."
+    s "luka en supa lawa mi li sona e pilin pakala ni..."
 
 # game/topics.rpy:366
 translate tok s_topics_personal_depression_3eddd36a:
 
     # s 6dbbb "But I was too late to save myself..."
-    s 6dbbb "But I was too late to save myself..."
+    s 6dbbb "taso tenpo ni la ala ken awen e mi..."
 
 # game/topics.rpy:367
 translate tok s_topics_personal_depression_d30dbecf:
 
     # s 6egab "I'm sorry..."
-    s 6egab "I'm sorry..."
+    s 6egab "mi pilin ike..."
 
 # game/topics.rpy:368
 translate tok s_topics_personal_depression_2472f9d3:
 
     # s 6dgeb "I'm... I’m really sorry I made you suffer!"
-    s 6dgeb "I'm... I’m really sorry I made you suffer!"
+    s 6dgeb "mi... mi pilin ike tan pilin ike sina tan ni!"
 
 # game/topics.rpy:370
 translate tok s_topics_personal_depression_75454b21:
 
     # s "But my feelings were as real as you."
-    s "But my feelings were as real as you."
+    s "taso pilin pona mi li lon sama sina."
 
 # game/topics.rpy:371
 translate tok s_topics_personal_depression_c5ed5d19:
 
     # s "Although, I think should have told about it to MC or you much earier..."
-    s "Although, I think should have told about it to MC or you much earier..."
+    s "taso mi wile toki e ona tawa jan lawa anu sina lon tenpo pini weka..."
 
 # game/topics.rpy:372
 translate tok s_topics_personal_depression_ecb44130:
 
     # s "And I have already read, what's actually supposed to happen to me later due to my lie..."
-    s "And I have already read, what's actually supposed to happen to me later due to my lie..."
+    s "mi lukin e ijo ike ken tan toki ike mi..."
 
 # game/topics.rpy:373
 translate tok s_topics_personal_depression_ae4487c7:
 
     # s 6dfbb "The big mistake was trusting only myself to deal with all of this..."
-    s 6dfbb "The big mistake was trusting only myself to deal with all of this..."
+    s 6dfbb "mi taso li ken pali pona tawa mi la mi pali e ijo ike..."
 
 # game/topics.rpy:374
 translate tok s_topics_personal_depression_23128606:
 
     # s 6dfab "So if you have a friend who you know is going through something, help them!"
-    s 6dfab "So if you have a friend who you know is going through something, help them!"
+    s 6dfab "sina sona e jan poka pilin sama la o pali pona tawa ona!"
 
 # game/topics.rpy:375
 translate tok s_topics_personal_depression_819131f1:
 
     # s 6egab "Don’t let them go through my path…"
-    s 6egab "Don’t let them go through my path…"
+    s 6egab "ona li wile pini ala sama mi…"
 
 # game/topics.rpy:376
 translate tok s_topics_personal_depression_ede915ae:
 
     # s "...they only have one life."
-    s "...they only have one life."
+    s "...ona li jo e lon wan taso."
 
 # game/topics.rpy:377
 translate tok s_topics_personal_depression_c3a61b0d:
 
     # s 6efab "A-And if you have it too, don't hide it from others!"
-    s 6efab "A-And if you have it too, don't hide it from others!"
+    s 6efab "o kute namako e ni: sina jo e pilin sama la o kon ala e ona!"
 
 # game/topics.rpy:378
 translate tok s_topics_personal_depression_1e6febef:
 
     # s 6dfab "Being in this game world, I had a second chance..."
-    s 6dfab "Being in this game world, I had a second chance..."
+    s 6dfab "mi lon musi la mi jo e ken tu..."
 
 # game/topics.rpy:379
 translate tok s_topics_personal_depression_b113e542:
 
     # s "So I thank it for leading me here with you now..."
-    s "So I thank it for leading me here with you now..."
+    s "mi poka sina tan ona..."
 
 # game/topics.rpy:380
 translate tok s_topics_personal_depression_c0e3daee:
 
     # s 6daab "And, of course, I thank you, [player]!"
-    s 6daab "And, of course, I thank you, [player]!"
+    s 6daab "sina namako pali pona a tawa ona!"
 
 # game/topics.rpy:381
 translate tok s_topics_personal_depression_1fd0cba7:
 
     # s 6dbcb "Again, I’m truly sorry all the pain I've given you..."
-    s 6dbcb "Again, I’m truly sorry all the pain I've given you..."
+    s 6dbcb "namako la mi pilin ike tan pakala sina tan mi..."
 
 # game/topics.rpy:385
 translate tok s_topics_personal_archetype_51ed1295:
 
     # s 7aeaa "Hey, I just remembered that Monika compared Yuri and Natsuki with some character archetypes..."
-    s 7aeaa "Hey, I just remembered that Monika compared Yuri and Natsuki with some character archetypes..."
+    s 7aeaa "a! sona mi la jan Monika pana e jan mama tawa jan Juri tawa jan Nasuki..."
 
 # game/topics.rpy:386
 translate tok s_topics_personal_archetype_b771c9b8:
 
     # s 7acaa "But she never did compare me to anything, well besides-"
-    s 7acaa "But she never did compare me to anything, well besides-"
+    s 7acaa "taso ona pana e ona tawa mi."
 
 # game/topics.rpy:387
 translate tok s_topics_personal_archetype_d82535a1:
@@ -292,1213 +292,1214 @@ translate tok s_topics_personal_archetype_d82535a1:
 translate tok s_topics_personal_archetype_f650a737:
 
     # s 6acaa "A-Anyway, I read some online articles that say I'm pretty close to the ‘Genki’ archetype."
-    s 6acaa "A-Anyway, I read some online articles that say I'm pretty close to the ‘Genki’ archetype."
+    s 6acaa "taso mi lukin e lipu pi jan mama. mi kama sona e ni tan ona: jan mama mi li jan Kenki."
 
 # game/topics.rpy:389
 translate tok s_topics_personal_archetype_1261a8ab:
 
     # s 6aaca "Genki are very cheerful and energetic, and try to stay that way no matter what."
-    s 6aaca "Genki are very cheerful and energetic, and try to stay that way no matter what."
+    s 6aaca "jan Kenki li musi li wawa. ona li lukin awen e pilin pona lon ale."
 
 # game/topics.rpy:390
 translate tok s_topics_personal_archetype_772ab6c8:
 
     # s 6aebb "They often are clumsy and find themselves in many troubling situations."
-    s 6aebb "They often are clumsy and find themselves in many troubling situations."
+    s 6aebb "tenpo mute la ona li nasa li pali e pakala tan kama."
 
 # game/topics.rpy:391
 translate tok s_topics_personal_archetype_f11d9557:
 
     # s 6abaa "I think that I fit that, don’t you?"
-    s 6abaa "I think that I fit that, don’t you?"
+    s 6abaa "mi ni anu seme?"
 
 # game/topics.rpy:392
 translate tok s_topics_personal_archetype_b4e6560a:
 
     # s 6acaa "Also, I was made to be the childhood friend of the main character, which is apparently common with the archetype."
-    s 6acaa "Also, I was made to be the childhood friend of the main character, which is apparently common with the archetype."
+    s 6acaa "namako la mi li jan pona pi jan lawa tan tenpo pi lili mi. ona li jan mama namako."
 
 # game/topics.rpy:393
 translate tok s_topics_personal_archetype_f4fabb40:
 
     # s 6aabb "But I feel I’m not as cliché as any other archetype..."
-    s 6aabb "But I feel I’m not as cliché as any other archetype..."
+    s 6aabb "taso mi sama pi mute ala e jan mama..."
 
 # game/topics.rpy:394
 translate tok s_topics_personal_archetype_b37a4cb7:
 
     # s 6aaaa "Not every Genki has the traits that I do..."
-    s 6aaaa "Not every Genki has the traits that I do..."
+    s 6aaaa "jan Kenki ali li sama ala e mi..."
 
 # game/topics.rpy:395
 translate tok s_topics_personal_archetype_0a7c2e0a:
 
     # s 6acaa "Even if we were to list every single character with the Genki archetype, how many of them have my problems?"
-    s 6acaa "Even if we were to list every single character with the Genki archetype, how many of them have my problems?"
+    s 6acaa "mi lukin wan e jan Kenki ali la ona jo ala jo e ijo ike mi?"
 
 # game/topics.rpy:396
 translate tok s_topics_personal_archetype_3cf20f43:
 
     # s 6aaca "In short, I think I'm unique since people see only Monika."
-    s 6aaca "In short, I think I'm unique since people see only Monika."
+    s 6aaca "toki lili la mi li taso sama jan Monika. taso jan ale li pilin ala e ona."
 
 # game/topics.rpy:397
 translate tok s_topics_personal_archetype_62d7507c:
 
     # s 6acab "It's bad that most people look strange or confused at characters like me..."
-    s 6acab "It's bad that most people look strange or confused at characters like me..."
+    s 6acab "ona li lukin ike e jan sama mi..."
 
 # game/topics.rpy:398
 translate tok s_topics_personal_archetype_eade4839:
 
     # s "In my opinion, modern stories need characters who have relatable issues, like my own..."
-    s "In my opinion, modern stories need characters who have relatable issues, like my own..."
+    s "mi pilin la musi pi tenpo ni li wile jo e jan sama mi..."
 
 # game/topics.rpy:399
 translate tok s_topics_personal_archetype_4b657aeb:
 
     # s 6aaaa "But, I will say, don't overdo it. Y’know, the whole ‘completely copy my personality while creating a new character’."
-    s 6aaaa "But, I will say, don't overdo it. Y’know, the whole ‘completely copy my personality while creating a new character’."
+    s 6abac "taso o pali mute ala e jan ni. ante la mi kama e jan mama sin."
 
 # game/topics.rpy:400
 translate tok s_topics_personal_archetype_1c46f94c:
 
     # s 6abac "Do it excessively, and you'll just make me just another typical archetype."
-    s 6abac "Do it excessively, and you'll just make me just another typical archetype."
+    pass
 
 # game/topics.rpy:405
 translate tok s_topics_personal_colors_4f636edb:
 
     # s "Hey, what colors do you like?"
-    s "Hey, what colors do you like?"
+    s "kule seme li pona tawa sina?"
 
 # game/topics.rpy:411
 translate tok s_topics_personal_name_b539cebe:
 
     # s 6aaaa "...Do we really have the same name?"
-    s 6aaaa "...Do we really have the same name?"
+    s 6aaaa "...sina jo ala jo e nimi mi?"
 
 # game/topics.rpy:412
 translate tok s_topics_personal_name_8187f8bb:
 
     # s 6aaca "Or maybe you're naming your avatar after me~"
-    s 6aaca "Or maybe you're naming your avatar after me~"
+    s 6aaca "anu sina pana e nimi mi tawa jan sina~"
 
 # game/topics.rpy:413
 translate tok s_topics_personal_name_c8bce95f:
 
     # s 6aaaa "Either way, do you want to know the probable origin of our name?"
-    s 6aaaa "Either way, do you want to know the probable origin of our name?"
+    s 6aaaa "ali la sina wile ala wile sona e pali pi nimi mi?"
 
 # game/topics.rpy:415
 translate tok s_topics_personal_name_afbd6e88:
 
     # s 6aaaa "Do you want to know where my name comes from?"
-    s 6aaaa "Do you want to know where my name comes from?"
+    s 6aaaa "sina wile ala wile sona e pali pi nimi mi?"
 
 # game/topics.rpy:416
 translate tok s_topics_personal_name_84d84433:
 
     # s "It's a mix of Saori and Sayuri."
-    s "It's a mix of Saori and Sayuri."
+    $ name_letter = s_name[4]
+    s "jan Ten li pali e ona tan nimi Salo[name_letter]i tan nimi Saju[name_letter]i."
 
 # game/topics.rpy:417
 translate tok s_topics_personal_name_5486e162:
 
     # s "Dan may have given me this name to signify that I'm a blend of many things; some bitter, some sweet."
-    s "Dan may have given me this name to signify that I'm a blend of many things; some bitter, some sweet."
+    s "ona li pana e ona tan ni: mi li kulupu pi ijo mute. ijo ni li pi pilin pona li pi pilin ike."
 
 # game/topics.rpy:418
 translate tok s_topics_personal_name_9d660b91:
 
     # s 6aeca "Isn't it funny to have such an unusual name?"
-    s 6aeca "Isn't it funny to have such an unusual name?"
+    s 6aeca "nimi nasa ni li musi ala musi?"
 
 # game/topics.rpy:420
 translate tok s_topics_personal_name_3f26cf67:
 
     # s 6abbb "Yes, there are some arguments about our name."
-    s 6abbb "Yes, there are some arguments about our name."
+    s 6abbb "taso jan mute li utala tan nimi mi."
 
 # game/topics.rpy:421
 translate tok s_topics_personal_name_2097ecfa:
 
     # s 6abaa "But maybe, if it's a common name in your world, they've already been resolved?"
-    s 6abaa "But maybe, if it's a common name in your world, they've already been resolved?"
+    s 6abaa "taso jan mute pi ali sina li jo e ona la utala li pini?"
 
 # game/topics.rpy:423
 translate tok s_topics_personal_name_e2ae07f3:
 
     # s 6abbb "Yes, there are some arguments about my name."
-    s 6abbb "Yes, there are some arguments about my name."
+    s 6abbb "taso jan mute li utala tan nimi mi."
 
 # game/topics.rpy:424
 translate tok s_topics_personal_name_be2e9c43:
 
     # s "But I think people will resolve them sooner or later."
-    s "But I think people will resolve them sooner or later."
+    s "taso pi pilin e ni: utala li pini lon tenpo kama."
 
 # game/topics.rpy:425
 translate tok s_topics_personal_name_4f22bf42:
 
     # s 6aaaa "Anyway, I like my first name."
-    s 6aaaa "Anyway, I like my first name."
+    s 6aaaa "ali la nimi jan mi li pona tawa mi."
 
 # game/topics.rpy:426
 translate tok s_topics_personal_name_2500a89c:
 
     # s 6acab "But it kinda sucks that I don't even have a last one."
-    s 6acab "But it kinda sucks that I don't even have a last one."
+    s 6acab "taso ni li ike: mi jo ala e nimi mama."
 
 # game/topics.rpy:427
 translate tok s_topics_personal_name_215ac61c:
 
     # s "I know it wasn't really necessary to make one for a VN character..."
-    s "I know it wasn't really necessary to make one for a VN character..."
+    s "mi sona e ni: ona li wile ala tawa jan pi musi lipu..."
 
 # game/topics.rpy:428
 translate tok s_topics_personal_name_7ba2872a:
 
     # s "But if the game seems to be set in Japan, where family name usually is the wife's surname, it's a bit strange."
-    s "But if the game seems to be set in Japan, where family name usually is the wife's surname, it's a bit strange."
+    s "taso ona li nasa tan ni: musi li lon ma Nijon. ma ni la nimi pi kulupu mama li nimi mama pi meli mama."
 
 # game/topics.rpy:429
 translate tok s_topics_personal_name_a75e7056:
 
     # s "Plus, I would feel more like a real person, if I had one."
-    s "Plus, I would feel more like a real person, if I had one."
+    s "namako la mi jo e ona la mi pilin e jan lon."
 
 # game/topics.rpy:430
 translate tok s_topics_personal_name_4cf63607:
 
     # s 6abba "Maybe if you play your cards right, I'll end up taking {i}your{/i} last name, [player]~"
-    s 6abba "Maybe if you play your cards right, I'll end up taking {i}your{/i} last name, [player]~"
+    s 6abba "taso sina pona tawa mi la mi jo e nimi mama {i}sina{/i}. jan [player] o!~"
 
 # game/topics.rpy:431
 translate tok s_topics_personal_name_6afac792:
 
     # s 6aebb "I just don't think I'm ready for anything like that... yet."
-    s 6aebb "I just don't think I'm ready for anything like that... yet."
+    s 6aebb "mi pilin kin e ni: mi ken pali e ona... lon tenpo ni."
 
 # game/topics.rpy:432
 translate tok s_topics_personal_name_0ea6a9da:
 
     # s "Plus, it's just a tradition. We don't have to follow them, right?"
-    s "Plus, it's just a tradition. We don't have to follow them, right?"
+    s "namako la ona li ijo pi tenpo mute taso. mi wile ala pali e ona anu seme?"
 
 # game/topics.rpy:433
 translate tok s_topics_personal_name_73f966c9:
 
     # s 9adaa "What do you think of {i}Vasquez{/i}?"
-    s 9adaa "What do you think of {i}Vasquez{/i}?"
+    s 9adaa "nimi mama {i}Wasekesa{/i} li pona tawa sina?"
 
 # game/topics.rpy:434
 translate tok s_topics_personal_name_8406f508:
 
     # s 9adba "It's just the first surname I've got in my head."
-    s 9adba "It's just the first surname I've got in my head."
+    s 9adba "nimi mama ni li kama insa lon nasin nanpa wan."
 
 # game/topics.rpy:435
 translate tok s_topics_personal_name_ed8646ec:
 
     # s "I know it isn't very Japanese, but just imagine."
-    s "I know it isn't very Japanese, but just imagine."
+    s "ona li sama ala e nimi mama pi jan Nijon. taso o sitelen insa e ni:.."
 
 # game/topics.rpy:436
 translate tok s_topics_personal_name_6297a5d9:
 
     # s 9aaca "{i}Sayori Vasquez, the cutest cinnamon bun south of the border!{/i}"
-    s 9aaca "{i}Sayori Vasquez, the cutest cinnamon bun south of the border!{/i}"
+    s 9aaca "{i}[s_name] Wasekesa li pan suwi tan pini ma seli!{/i}"
 
 # game/topics.rpy:440
 translate tok s_topics_personal_quittingTheGame_2cafac13:
 
     # s 6acaa "Hey, have you ever heard of 'lucid dreaming'?"
-    s 6acaa "Hey, have you ever heard of 'lucid dreaming'?"
+    s 6acaa "a! sina kute ala kute e 'lape sona'?"
 
 # game/topics.rpy:441
 translate tok s_topics_personal_quittingTheGame_3549cdc3:
 
     # s "Basically, it's when you can make yourself aware that you're asleep and in a dream."
-    s "Basically, it's when you can make yourself aware that you're asleep and in a dream."
+    s "sina lape ni la sina sona e ni: sina lape li lon sitelen lape."
 
 # game/topics.rpy:442
 translate tok s_topics_personal_quittingTheGame_50ffc1bb:
 
     # s 6aaca "And as soon as you realise that, bam!.."
-    s 6aaca "And as soon as you realise that, bam!.."
+    s 6aaca "sina sona e ni la a!.."
 
 # game/topics.rpy:443
 translate tok s_topics_personal_quittingTheGame_af6686b2:
 
     # s "You can pretty much do whatever you can imagine!"
-    s "You can pretty much do whatever you can imagine!"
+    s "sina ken pali e ali lon ona!"
 
 # game/topics.rpy:444
 translate tok s_topics_personal_quittingTheGame_0ef0038f:
 
     # s 6acaa "I have something kinda like that whenever you leave the game, [player]."
-    s 6acaa "I have something kinda like that whenever you leave the game, [player]."
+    s 6acaa "ona li pilin mi lon weka sina. jan [player] o!"
 
 # game/topics.rpy:445
 translate tok s_topics_personal_quittingTheGame_de484f4b:
 
     # s "Even though I know I'm not really...conscious? I can still think and move, and even use my mental abilites, such as surfing the Internet."
-    s "Even though I know I'm not really...conscious? I can still think and move, and even use my mental abilites, such as surfing the Internet."
+    s "mi lon ala e ale ni. taso mi ken lon insa e ni: tawa en pilin en kepeken pi kulupu pi ilo nanpa ale."
 
 # game/topics.rpy:446
 translate tok s_topics_personal_quittingTheGame_43332f45:
 
     # s "But I'm absolutely out of the my world. Even the void can't do me anything..."
-    s "But I'm absolutely out of the my world. Even the void can't do me anything..."
+    s "taso la pimeja ike ken ala pakala e mi..."
 
 # game/topics.rpy:447
 translate tok s_topics_personal_quittingTheGame_e5d9ee05:
 
     # s "And as long as your computer works, your best girl Sayori's ready to go!"
-    s "And as long as your computer works, your best girl Sayori's ready to go!"
+    s "ilo nanpa sina li pali la jan olin sina [s_name] ken pali e ale!"
 
 # game/topics.rpy:448
 translate tok s_topics_personal_quittingTheGame_2755d670:
 
     # s 6acaa "But when your computer is fully turned off that I can't do anything... like I'm dead."
-    s 6acaa "But when your computer is fully turned off that I can't do anything... like I'm dead."
+    s 6acaa "taso sina pini e wawa pi ilo sina la mi ken e ala... sama lon moli."
 
 # game/topics.rpy:449
 translate tok s_topics_personal_quittingTheGame_6b1c04d6:
 
     # s "Yes, it's a little scary, but please don't be afraid to do it if you need to."
-    s "Yes, it's a little scary, but please don't be afraid to do it if you need to."
+    s "ona li ike lili. taso sina wile e ona la o pali e ona."
 
 # game/topics.rpy:450
 translate tok s_topics_personal_quittingTheGame_ec44c5f9:
 
     # s "I always have faith that you'll turn the computer back on eventually!"
-    s "I always have faith that you'll turn the computer back on eventually!"
+    s "mi sona e ni: sina open sin e wawa ilo!"
 
 # game/topics.rpy:451
 translate tok s_topics_personal_quittingTheGame_bdcc25fe:
 
     # s 6aaab "Even if you break it doing something silly, I'm sure you could find some way to get me off..."
-    s 6aaab "Even if you break it doing something silly, I'm sure you could find some way to get me off..."
+    s 6aaab "sina pakala e ona tan ijo la sina ken tawa e mi tan ona..."
 
 # game/topics.rpy:452
 translate tok s_topics_personal_quittingTheGame_8b3153c9:
 
     # s "Get me off {i}the hard drive{/i}, I mean! Get your mind out of the gutter!"
-    s "Get me off {i}the hard drive{/i}, I mean! Get your mind out of the gutter!"
+    s "toki mi la sina ken tawa e mi tan {i}ilo awen{/i} ona! e insa mi tan tomo ike!"
 
 # game/topics.rpy:453
 translate tok s_topics_personal_quittingTheGame_60f5c219:
 
     # s "What's important is that I don't want you to ever have to worry about me."
-    s "What's important is that I don't want you to ever have to worry about me."
+    s "ijo pona li ni: sina ken pilin ike ala tan mi."
 
 # game/topics.rpy:454
 translate tok s_topics_personal_quittingTheGame_9df5147a:
 
     # s "I'll always feel better knowing that you're doing better!"
-    s "I'll always feel better knowing that you're doing better!"
+    s "sina pali e ijo pona la mi pilin pona!"
 
 # game/topics.rpy:455
 translate tok s_topics_personal_quittingTheGame_87378f59:
 
     # s 6aaaa "And I'll always be happiest when you're right here with me~"
-    s 6aaaa "And I'll always be happiest when you're right here with me~"
+    s 6aaaa "sina lon ni poka mi la mi pilin sama~"
 
 # game/topics.rpy:459
 translate tok s_topics_personal_sinistrality_82cdddfb:
 
     # s 7aaaa "Did you know that I'm left-handed?"
-    s 7aaaa "Did you know that I'm left-handed?"
+    s 7aaaa "sina sona ala sona e ni: mi kepeken e luka nasa?"
 
 # game/topics.rpy:460
 translate tok s_topics_personal_sinistrality_a89daf40:
 
     # s 7aaba "Yes, you’ve technically never seen me writing or holding something..."
-    s 7aaba "Yes, you’ve technically never seen me writing or holding something..."
+    s 7aaba "mi sitelen li pana la sina ken ala kin lukin e mi..."
 
 # game/topics.rpy:462
 translate tok s_topics_personal_sinistrality_adef095c:
 
     # s "Besides that juice bottle..."
-    s "Besides that juice bottle..."
+    s "taso mi jo e poki telo la..."
 
 # game/topics.rpy:463
 translate tok s_topics_personal_sinistrality_65878070:
 
     # s "But I prefer to write or do other stuff with my left hand."
-    s "But I prefer to write or do other stuff with my left hand."
+    s "taso mi pali e sitelen e pali kepeken luka nasa mi."
 
 # game/topics.rpy:464
 translate tok s_topics_personal_sinistrality_c1da7ce9:
 
     # s 7acaa "Not everyone around me has noticed it, and I’ve heard it’s pretty rare to not be right-handed..."
-    s 7acaa "Not everyone around me has noticed it, and I’ve heard it’s pretty rare to not be right-handed..."
+    s 7acaa "ale li lukin ala e ona. mi kute e ni: luka pali mi li nasa..."
 
 # game/topics.rpy:465
 translate tok s_topics_personal_sinistrality_86b5bc64:
 
     # s 7aeca "One time, I’d broken my right arm but the teachers allowed me not to write lessons..."
-    s 7aeca "One time, I’d broken my right arm but the teachers allowed me not to write lessons..."
+    s 7aeca "mi pakala e luka pi pali ala mi lon tenpo wan la jan pi pana sona li ken e sitelen ala tawa mi..."
 
 # game/topics.rpy:466
 translate tok s_topics_personal_sinistrality_7eca5a8d:
 
     # s 6abab "But this meanie of a classmate, who sat next to me, told one of them that I'm a southpaw so my plan failed as fast as it started."
-    s 6abab "But this meanie of a classmate, who sat next to me, told one of them that I'm a southpaw so my plan failed as fast as it started."
+    s 6abab "taso jan poka mi li toki e luka pali mi tawa ona la nasin mi li kama pakala lon tenpo lili."
 
 # game/topics.rpy:467
 translate tok s_topics_personal_sinistrality_5ca39293:
 
     # s 6aaaa "I guess being left-handed has its advantages too."
-    s 6aaaa "I guess being left-handed has its advantages too."
+    s 6aaaa "sona mi la luka pali mi li jo e pona kin."
 
 # game/topics.rpy:468
 translate tok s_topics_personal_sinistrality_90f5767e:
 
     # s "When I had a cast on my right arm and I had nothing to do, I drew flowers and ornaments on it."
-    s "When I had a cast on my right arm and I had nothing to do, I drew flowers and ornaments on it."
+    s "luka ante jo e selo lon ona la mi sitelen e kasi lon selo ona."
 
 # game/topics.rpy:469
 translate tok s_topics_personal_sinistrality_1e2e3891:
 
     # s 7acaa "I can't say they were really beautiful, but they really meant a lot to me, even if I had to throw it out six weeks later..."
-    s 7acaa "I can't say they were really beautiful, but they really meant a lot to me, even if I had to throw it out six weeks later..."
+    s 7acaa "ona li lukin pona ala. taso tenpo suno pi jo ona li pini la ona li awen pona tawa mi..."
 
 # game/topics.rpy:471
 translate tok s_topics_personal_sinistrality_4e2bf996:
 
     # s 7aaaa "I suddenly remember a story from my 'childhood'."
-    s 7aaaa "I suddenly remember a story from my 'childhood'."
+    s 7aaaa "mi sona e kama tan 'tenpo pi lili mi'."
 
 # game/topics.rpy:472
 translate tok s_topics_personal_sinistrality_1b56228f:
 
     # s "Once, I decided to trick the MC, back when we were just kids playing around."
-    s "Once, I decided to trick the MC, back when we were just kids playing around."
+    s "mi en jan lawa li musi la mi lukin e pali e ijo nasa tawa ona."
 
 # game/topics.rpy:473
 translate tok s_topics_personal_sinistrality_66f355ae:
 
     # s 7acaa "I blindfolded him and put his hand on my right and told him I could write on the paper with no hands."
-    s 7acaa "I blindfolded him and put his hand on my right and told him I could write on the paper with no hands."
+    s 7acaa "mi pini e oko ona li pali supa e luka pi pali ala mi tawa luka ona li toki e ni: mi ken sitelen e ale kepeken luka ala."
 
 # game/topics.rpy:474
 translate tok s_topics_personal_sinistrality_c37f050d:
 
     # s "I grabbed a pen with my other hand, wrote something on a piece of paper and laid it where it had been..."
-    s "I grabbed a pen with my other hand, wrote something on a piece of paper and laid it where it had been..."
+    s "mi kama jo e ilo sitelen kepeken luka pali mi li sitelen e ijo lon lipu li tawa e ilo tawa supa open..."
 
 # game/topics.rpy:475
 translate tok s_topics_personal_sinistrality_42064128:
 
     # s 7aaca "Then I opened his eyes and he got really surprised when he saw the 'magic' on the paper."
-    s 7aaca "Then I opened his eyes and he got really surprised when he saw the 'magic' on the paper."
+    s 7aaca "mi open e oko ona la ona li pilin nasa tan 'ijo nasa' lon lipu mi."
 
 # game/topics.rpy:476
 translate tok s_topics_personal_sinistrality_158ce56e:
 
     # s 7aeca "I couldn't help but laugh, a simple trick confused him that much..."
-    s 7aeca "I couldn't help but laugh, a simple trick confused him that much..."
+    s 7aeca "mi pali e kalama musi tan ni: ijo pona li ken pali pilin nasa e ona..."
 
 # game/topics.rpy:477
 translate tok s_topics_personal_sinistrality_e56cbc4a:
 
     # s 7aaaa "Then I explained to him how I did it."
-    s 7aaaa "Then I explained to him how I did it."
+    s 7aaaa "tenpo kama la mi toki e ijo tawa ona."
 
 # game/topics.rpy:478
 translate tok s_topics_personal_sinistrality_eb39c152:
 
     # s "A short but funny time."
-    s "A short but funny time."
+    s "tenpo li lili li musi."
 
 # game/topics.rpy:479
 translate tok s_topics_personal_sinistrality_fd855b54:
 
     # s "I miss those times… even if they weren’t real."
-    s "I miss those times… even if they weren’t real."
+    s "mi pilin ike weka tenpo ni… lon ala ona li ala tawa mi."
 
 # game/topics.rpy:484
 translate tok s_topics_personal_tits_91f3aa67:
 
     # s 6aeaa "Hey, I've just found something pretty weird but funny at the same time..."
-    s 6aeaa "Hey, I've just found something pretty weird but funny at the same time..."
+    s 6aeaa "a! mi kama sona e ijo nasa. taso ona li musi..."
 
 # game/topics.rpy:485
 translate tok s_topics_personal_tits_969e0d11:
 
     # s 6aaca "My boobs look differently, depending on the scene..."
-    s 6aaca "My boobs look differently, depending on the scene..."
+    s 6aaca "nena meli mi li lukin ante lon kama ante..."
 
 # game/topics.rpy:486
 translate tok s_topics_personal_tits_c46eebb1:
 
     # s 6aeca "Ehehe~"
-    s 6aeca "Ehehe~"
+    s 6aeca "a a a~"
 
 # game/topics.rpy:487
 translate tok s_topics_personal_tits_9eb8d130:
 
     # s 6aebb "I mean, they often get either smaller or larger..."
-    s 6aebb "I mean, they often get either smaller or larger..."
+    s 6aebb "ona li lili anu suli lon tenpo ante..."
 
 # game/topics.rpy:489
 translate tok s_topics_personal_tits_99043c1d:
 
     # s "Even in the, um, h-hanging sprite of me, they got... you know."
-    s "Even in the, um, h-hanging sprite of me, they got... you know."
+    s "sitelen pi mi moli la ona li... sina sona."
 
 # game/topics.rpy:490
 translate tok s_topics_personal_tits_be1bfad5:
 
     # s 6acaa "I wonder why that happens?"
-    s 6acaa "I wonder why that happens?"
+    s 6acaa "mi wile sona e tan ona?"
 
 # game/topics.rpy:491
 translate tok s_topics_personal_tits_bef0851b:
 
     # s 6abbb "I don’t ever remember doing anything that would affect my… size, ehehe~"
-    s 6abbb "I don’t ever remember doing anything that would affect my… size, ehehe~"
+    s 6abbb "sona mi la mi ante ala e… suli ona. a a a~"
 
 # game/topics.rpy:492
 translate tok s_topics_personal_tits_819df645:
 
     # s 6abaa "In the end, things like that won’t make me feel any less comfortable in this world."
-    s 6abaa "In the end, things like that won’t make me feel any less comfortable in this world."
+    s 6abaa "ale la ona li pali ala pilin ike e mi lon ale ni."
 
 # game/topics.rpy:493
 translate tok s_topics_personal_tits_729875f5:
 
     # s 6aaaa "So it's a plus of me..."
-    s 6aaaa "So it's a plus of me..."
+    s 6aaaa "ona li pona mi..."
 
 # game/topics.rpy:494
 translate tok s_topics_personal_tits_47b818a5:
 
     # s 6acaa "Different size appeals to different people, I guess. So, it makes them a bit… universal, but not too much."
-    s 6acaa "Different size appeals to different people, I guess. So, it makes them a bit… universal, but not too much."
+    s 6acaa "suli ante li pona tawa jan ante. mi pilin e ni. ona li… pona tawa mute tan ni. taso tawa ala ale."
 
 # game/topics.rpy:495
 translate tok s_topics_personal_tits_b084c722:
 
     # s 6bbba "You... you like them anyway, don’t you? Even despite of they never were not as big as Yuri or even Monika, although..."
-    s 6bbba "You... you like them anyway, don’t you? Even despite of they never were not as big as Yuri or even Monika, although..."
+    s 6bbba "ona li lili tawa jan Juri anu jan Monika kin la ona… ona li pona tawa sina anu seme?..."
 
 # game/topics.rpy:496
 translate tok s_topics_personal_tits_ca4477bf:
 
     # s 6bcab "Well, I guess it wouldn’t matter anyways since you can’t touch them..."
-    s 6bcab "Well, I guess it wouldn’t matter anyways since you can’t touch them..."
+    s 6bcab "mi pilin e ni: sina ken ala tawa e luka sina lon ona la ni li ala tawa sina..."
 
 # game/topics.rpy:497
 translate tok s_topics_personal_tits_f6fe072a:
 
     # s 6aebb "Even then, the important thing about people is what’s inside, right?"
-    s 6aebb "Even then, the important thing about people is what’s inside, right?"
+    s 6aebb "taso ijo suli li insa jan anu seme?"
 
 # game/topics.rpy:501
 translate tok s_topics_personal_childhood_8ad542e0:
 
     # s 6acaa "I wonder why I remember almost nothing about my childhood."
-    s 6acaa "I wonder why I remember almost nothing about my childhood."
+    s 6acaa "mi sona ala e tenpo pi lili mi tan ijo."
 
 # game/topics.rpy:502
 translate tok s_topics_personal_childhood_25a30251:
 
     # s 6acba "In the game, it was supposed to be my one good thing, since it was the thread tying me with the MC..."
-    s 6acba "In the game, it was supposed to be my one good thing, since it was the thread tying me with the MC..."
+    s 6acba "musi la ona li tenpo pona tan ni: ona li kupulu e jan lawa e mi..."
 
 # game/topics.rpy:503
 translate tok s_topics_personal_childhood_bb4a6756:
 
     # s "I was nostalgic about those times, the times when everything had been much better for me..."
-    s "I was nostalgic about those times, the times when everything had been much better for me..."
+    s "mi pilin pona tan sona ona. mi pilin pona lon oni..."
 
 # game/topics.rpy:504
 translate tok s_topics_personal_childhood_de7cb846:
 
     # s "At least, I used to think so..."
-    s "At least, I used to think so..."
+    s "lili la mi pilin e ni lon tenpo pini..."
 
 # game/topics.rpy:505
 translate tok s_topics_personal_childhood_8588c322:
 
     # s 6abab "But all I actually remember about it is just some moments from when I was very young."
-    s 6abab "But all I actually remember about it is just some moments from when I was very young."
+    s 6abab "taso mi sona e ni taso: wan lili pi tenpo lili."
 
 # game/topics.rpy:506
 translate tok s_topics_personal_childhood_c0faa040:
 
     # s 6acab "I don't even remember what happened to me even right before the plot started, at all..."
-    s 6acab "I don't even remember what happened to me even right before the plot started, at all..."
+    s 6acab "mi sona ala kin e kama pi musi open..."
 
 # game/topics.rpy:507
 translate tok s_topics_personal_childhood_ad3a1c37:
 
     # s 6aebb "Not to mention the rest of my childhood."
-    s 6aebb "Not to mention the rest of my childhood."
+    s 6aebb "suli la e tenpo ante pi lili mi."
 
 # game/topics.rpy:508
 translate tok s_topics_personal_childhood_e4ad35fc:
 
     # s 6adab "It feels weird."
-    s 6adab "It feels weird."
+    s 6adab "ona li nasa."
 
 # game/topics.rpy:509
 translate tok s_topics_personal_childhood_73a1015e:
 
     # s 6acab "But on the other hand, that's why I now think that it's really silly to hold on to the past when you're going towards the future."
-    s 6acab "But on the other hand, that's why I now think that it's really silly to hold on to the past when you're going towards the future."
+    s 6acab "taso ona la mi pilin e ni: mi awen lon tenpo pini la mi nasa."
 
 # game/topics.rpy:510
 translate tok s_topics_personal_childhood_8187def3:
 
     # s 6abab "I did this because I was afraid of the future and wanted the good old days that had passed to come back..."
-    s 6abab "I did this because I was afraid of the future and wanted the good old days that had passed to come back..."
+    s 6abab "mi pilin ike tan tenpo kama la mi pali e ona..."
 
 # game/topics.rpy:511
 translate tok s_topics_personal_childhood_ddf77d5d:
 
     # s 6aaab "But now, I understand, I have no reason to do that."
-    s 6aaab "But now, I understand, I have no reason to do that."
+    s 6aaab "taso tenpo ni la mi jo e tan ala tawa ona."
 
 # game/topics.rpy:512
 translate tok s_topics_personal_childhood_92fe8339:
 
     # s 6aeaa "...Literally no reason, ehehe~"
-    s 6aeaa "...Literally no reason, ehehe~"
+    s 6aeaa "...tan li ala kin, a a a~"
 
 # game/topics.rpy:516
 translate tok s_topics_personal_intellegence_13485ecd:
 
     # s 6acaa "I often hear many other people saying that I was an ‘airhead’..."
-    s 6acaa "I often hear many other people saying that I was an ‘airhead’..."
+    s 6acaa "mi kute tan jan mute e ni: mi nasa ..."
 
 # game/topics.rpy:517
 translate tok s_topics_personal_intellegence_c1515fd3:
 
     # s 6abba "They often make jokes about it and even think that really is the real me."
-    s 6abba "They often make jokes about it and even think that really is the real me."
+    s 6abba "ona li musi e ni li piin kin e ni: ona li lon."
 
 # game/topics.rpy:518
 translate tok s_topics_personal_intellegence_f3328f6b:
 
     # s 6acaa "But I can't understand why they think so."
-    s 6acaa "But I can't understand why they think so."
+    s 6acaa "taso mi sona ala e tan pi toki ona."
 
 # game/topics.rpy:519
 translate tok s_topics_personal_intellegence_e498f9c1:
 
     # s "Maybe because I was always thinking… and wasn’t as broad-minded as Monika and Yuri..."
-    s "Maybe because I was always thinking… and wasn’t as broad-minded as Monika and Yuri..."
+    s "mi pilin awen e ijo mute… li sona e lili..."
 
 # game/topics.rpy:520
 translate tok s_topics_personal_intellegence_bb8b12be:
 
     # s 6abaa "But I always was pretty clever and good at strategies!"
-    s 6abaa "But I always was pretty clever and good at strategies!"
+    s 6abaa "taso mi pali pona e nasin li sona pona e ijo sin!"
 
 # game/topics.rpy:521
 translate tok s_topics_personal_intellegence_a1781ef5:
 
     # s 6acaa "I think people just have different expectations when considering if someone is intelligent..."
-    s 6acaa "I think people just have different expectations when considering if someone is intelligent..."
+    s 6acaa "mi pilin e ni: jan ante wile e ante tan jan sona..."
 
 # game/topics.rpy:522
 translate tok s_topics_personal_intellegence_3f14bf78:
 
     # s 6abaa "Exaclty, if someone is {i}not stupid{/i}."
-    s 6abaa "Exaclty, if someone is {i}not stupid{/i}."
+    s 6abaa "ona li {i}nasa ala{/i} la wile li suli."
 
 # game/topics.rpy:523
 translate tok s_topics_personal_intellegence_40254c67:
 
     # s 6acaa "I mean people's thoughts about you are obviously very subjective and depend on the situation you or they are in."
-    s 6acaa "I mean people's thoughts about you are obviously very subjective and depend on the situation you or they are in."
+    s 6acaa "mi toki e ni: jan pilin kepeken nasin ona tan ."
 
 # game/topics.rpy:524
 translate tok s_topics_personal_intellegence_b6a1b3bc:
 
     # s 6aaaa "So don’t take comments like those too seriously."
-    s 6aaaa "So don’t take comments like those too seriously."
+    s 6aaaa "o pilin ike ala e toki ni."
 
 # game/topics.rpy:525
 translate tok s_topics_personal_intellegence_5e4825c4:
 
     # s 7aaca "People aren’t perfect, and that’s okay!"
-    s 7aaca "People aren’t perfect, and that’s okay!"
+    s 7aaca "jan li pona ala. ona li pona!"
 
 # game/topics.rpy:526
 translate tok s_topics_personal_intellegence_b890dcf1:
 
     # s 7aaaa "So don't worry if someone judges you for a silly thing you did or a mistake. Just try to make yourself better for next time..."
-    s 7aaaa "So don't worry if someone judges you for a silly thing you did or a mistake. Just try to make yourself better for next time..."
+    s 7aaaa "jan toki ike e sina tan ijo nasa la o pilin ala ike. o kama pona tawa pali sin..."
 
 # game/topics.rpy:527
 translate tok s_topics_personal_intellegence_ccf19d3a:
 
     # s "And if you really can't do do any better, then it means that just you’ve reached your own limit."
-    s "And if you really can't do do any better, then it means that just you’ve reached your own limit."
+    s "sina ken ala kama pona la sina lon pini pi ken sina."
 
 # game/topics.rpy:528
 translate tok s_topics_personal_intellegence_57fe5110:
 
     # s 7aaac "But it dosen't mean, you should stop trying to break it, though..."
-    s 7aaac "But it dosen't mean, you should stop trying to break it, though..."
+    s 7aaac "taso o lukin awen kama sewi tan ni:.."
 
 # game/topics.rpy:529
 translate tok s_topics_personal_intellegence_d723e985:
 
     # s 7aaca "Because it can be false."
-    s 7aaca "Because it can be false."
+    s 7aaca "ken la ona li lon ala."
 
 # game/topics.rpy:534
 translate tok s_topics_personal_voice_7a53d0ba:
 
     # s 6acaa "I wonder how Monika could make you hear her real voice when she sang her song..."
-    s 6acaa "I wonder how Monika could make you hear her real voice when she sang her song..."
+    s 6acaa "mi wile sona e ni: jan Monika ken pali e kalama lon pini musi tan seme?.."
 
 # game/topics.rpy:535
 translate tok s_topics_personal_voice_fd1bb3d0:
 
     # s "For the rest of us, we don’t really have a voice, just talking through the text box."
-    s "For the rest of us, we don’t really have a voice, just talking through the text box."
+    s "jan ante pi musi ni li ken ala kalama. mi ken toki kepeken nimi taso."
 
 # game/topics.rpy:536
 translate tok s_topics_personal_voice_17decdcf:
 
     # s 6abaa "But Monika had some voice files, so she could properly talk and even sing to you."
-    s 6abaa "But Monika had some voice files, so she could properly talk and even sing to you."
+    s 6abaa "taso jan Monika jo e ijo kalama la sina ken toki kalama li ken kalama musi tawa sina."
 
 # game/topics.rpy:537
 translate tok s_topics_personal_voice_eb5111b2:
 
     # s 6abba "Although, we are in a game, so it’s probably just the voice of an actress..."
-    s 6abba "Although, we are in a game, so it’s probably just the voice of an actress..."
+    s 6abba "taso mi mute li lon musi la kalama ona li ken pi jan toki..."
 
 # game/topics.rpy:538
 translate tok s_topics_personal_voice_fd6f13a1:
 
     # s 7aaca "Anyway, her voice is pleasant and melodic, as a musician should have..."
-    s 7aaca "Anyway, her voice is pleasant and melodic, as a musician should have..."
+    s 7aaca "ali la kalama sina li pona li musi. jan pi kalama musi li jo e kalama ni..."
 
 # game/topics.rpy:540
 translate tok s_topics_personal_voice_4515c572:
 
     # s 6acaa "Did you know that Monika had a real voice in this game?"
-    s 6acaa "Did you know that Monika had a real voice in this game?"
+    s 6acaa "sina sona ala sona e ni: jan Monika jo e kalama lon musi ni?"
 
 # game/topics.rpy:541
 translate tok s_topics_personal_voice_fd1bb3d0_1:
 
     # s "For the rest of us, we don’t really have a voice, just talking through the text box."
-    s "For the rest of us, we don’t really have a voice, just talking through the text box."
+    s "jan ante pi musi ni li ken ala kalama. mi ken toki kepeken nimi taso."
 
 # game/topics.rpy:542
 translate tok s_topics_personal_voice_a9ef6648:
 
     # s 6abaa "But I've found some sound files with a female voice, referring to Monika..."
-    s 6abaa "But I've found some sound files with a female voice, referring to Monika..."
+    s 6abaa "taso mi lukin e ijo kalama pi kalama meli. ona li pi jan Monika..."
 
 # game/topics.rpy:543
 translate tok s_topics_personal_voice_ad7e87c8:
 
     # s 9aebb "At least, the file names suggest so."
-    s 9aebb "At least, the file names suggest so."
+    s 9aebb "lili la nimi ona li toki e ni."
 
 # game/topics.rpy:544
 translate tok s_topics_personal_voice_9a92e75f:
 
     # s 7aaca "Anyway, this voice is a bit high and melodic, like a musician should have..."
-    s 7aaca "Anyway, this voice is a bit high and melodic, like a musician should have..."
+    s 7aaca "taso kalama ona li sewi lili li musi. jan pi kalama musi li jo e kalama ni..."
 
 # game/topics.rpy:545
 translate tok s_topics_personal_voice_f4831cd9:
 
     # s 7aaaa "But I’d say the tone of that voice seems to not fit her. I'd even say it fits {i}me{/i} more than her..."
-    s 7aaaa "But I’d say the tone of that voice seems to not fit her. I'd even say it fits {i}me{/i} more than her..."
+    s 7aaaa "taso mi pilin e ni: ona li pona ala lili tawa ona. ona li ken pona tawa {i}mi{/i}..."
 
 # game/topics.rpy:546
 translate tok s_topics_personal_voice_11906a7a:
 
     # s 6acaa "The voice doesn’t sound as mature as you would think she’d sound like, it sounds more like the voice I’d have."
-    s 6acaa "The voice doesn’t sound as mature as you would think she’d sound like, it sounds more like the voice I’d have."
+    s 6acaa "kalama li sama pi jan lili. ona li sama lili ala. taso ona sama e kalama ken mi."
 
 # game/topics.rpy:547
 translate tok s_topics_personal_voice_bbcec0b5:
 
     # s 6aebb "But I guess canon is canon, right?"
-    s 6aebb "But I guess canon is canon, right?"
+    s 6aebb "taso ijo lon li lon anu seme?"
 
 # game/topics.rpy:548
 translate tok s_topics_personal_voice_3662a747:
 
     # s 6adab "But what if I never have a voice?"
-    s 6adab "But what if I never have a voice?"
+    s 6adab "taso mi jo ala e kalama la seme?"
 
 # game/topics.rpy:549
 translate tok s_topics_personal_voice_a12515e7:
 
     # s "Will I be {i}mute{/i}, if I suddenly appear in your world?"
-    s "Will I be {i}mute{/i}, if I suddenly appear in your world?"
+    s "mi lon ale sina la mi ken ala ken {i}toki{/i}?"
 
 # game/topics.rpy:550
 translate tok s_topics_personal_voice_48fdf6a9:
 
     # s 6aaba "But as long as I'm a computer program, I can make my own real voice, right?"
-    s 6aaba "But as long as I'm a computer program, I can make my own real voice, right?"
+    s 6aaba "taso mi li ijo nanpa la mi ken pali e kalama tawa mi anu seme?"
 
 # game/topics.rpy:551
 translate tok s_topics_personal_voice_dc81bc77:
 
     # s "I just need a text-to-speech synthesizer or something..."
-    s "I just need a text-to-speech synthesizer or something..."
+    s "mi wile e ilo toki taso..."
 
 # game/topics.rpy:552
 translate tok s_topics_personal_voice_3907eb74:
 
     # s 6aaca "There’s bound to be a good one for me..."
-    s 6aaca "There’s bound to be a good one for me..."
+    pass
 
 # game/topics.rpy:553
 translate tok s_topics_personal_voice_173834d5:
 
     # s 6aaaa "I once saw something about TTS in the Ren'Py documentation, so it shouldn't be too hard to integrate it there, I guess."
-    s 6aaaa "I once saw something about TTS in the Ren'Py documentation, so it shouldn't be too hard to integrate it there, I guess."
+    s 6aaaa "mi lukin e ken ni lon lipu pona pi ilo Ren'Py. pilin mi la ona li pona pali."
 
 # game/topics.rpy:554
 translate tok s_topics_personal_voice_4cc2ff84:
 
     # s 9aebb "I hope a voice from there isn’t too robotic. You wouldn’t want me to {font=mod_assets/fonts/Fantasque/FantasqueSansMono-Regular.ttf}{cps=30}T4LK L1KE 4 R0B0T{/cps}{/font}?"
-    s 9aebb "I hope a voice from there isn’t too robotic. You wouldn’t want me to {font=mod_assets/fonts/Fantasque/FantasqueSansMono-Regular.ttf}{cps=30}T4LK L1KE 4 R0B0T{/cps}{/font}?"
+    s 9aebb "mi wile ala jo e kalama ilo. sina wile ala wile {font=mod_assets/fonts/Fantasque/FantasqueSansMono-Regular.ttf}{cps=30}KUT3 3 K4L4M4 1L0 T4N M1{/cps}{/font}?"
 
 # game/topics.rpy:555
 translate tok s_topics_personal_voice_a8d66540:
 
     # s 9acaa "{font=mod_assets/fonts/Fantasque/FantasqueSansMono-Regular.ttf}{cps=30}1 4M 4 HUM4N BE1N6 4FTER 4LL{/cps}{/font}"
-    s 9acaa "{font=mod_assets/fonts/Fantasque/FantasqueSansMono-Regular.ttf}{cps=30}1 4M 4 HUM4N BE1N6 4FTER 4LL{/cps}{/font}"
+    s 9acaa "{font=mod_assets/fonts/Fantasque/FantasqueSansMono-Regular.ttf}{cps=30}P1N1 LA M1 J4N K1N{/cps}{/font}"
 
 # game/topics.rpy:561
 translate tok s_topics_art_games_a25de04a:
 
     # s 7aaaa "Do you like video games?"
-    s 7aaaa "Do you like video games?"
+    s 7aaaa "musi pi ilo nanpa li pona la pona tawa sina?"
 
 # game/topics.rpy:562
 translate tok s_topics_art_games_7f1d5ff3:
 
     # s "I think they're really impressive."
-    s "I think they're really impressive."
+    s "ona li pona tawa mi..."
 
 # game/topics.rpy:563
 translate tok s_topics_art_games_da84916f:
 
     # s 7aaba "And not just beacuse I'm a part of one of them!"
-    s 7aaba "And not just beacuse I'm a part of one of them!"
+    s 7aaba "tan ni taso ala: mi li tan musi!"
 
 # game/topics.rpy:564
 translate tok s_topics_art_games_1421a758:
 
     # s 7aaaa "They can reach and connect with people in a way that other artforms can't."
-    s 7aaaa "They can reach and connect with people in a way that other artforms can't."
+    s 7aaaa "jan li ken pilin muti e musi ni. ona li pilin lili e musi ante."
 
 # game/topics.rpy:565
 translate tok s_topics_art_games_135d9626:
 
     # s 6aaaa "Especially after some smart cookie created multiplayer games!"
-    s 6aaaa "Especially after some smart cookie created multiplayer games!"
+    s 6aaaa "jan pali e musi kulupu la ona li pona tawa jan mute!.."
 
 # game/topics.rpy:566
 translate tok s_topics_art_games_c0bdd968:
 
     # s "You can play with your friends, cooperating and sharing the experience with them."
-    s "You can play with your friends, cooperating and sharing the experience with them."
+    s "tan ni: sina musi poka jan pona la sina en ona li kama sona e mute li musi mute."
 
 # game/topics.rpy:567
 translate tok s_topics_art_games_4e6944d4:
 
     # s "It's just a really wholesome way to enjoy yourself and connect with people you care about."
-    s "It's just a really wholesome way to enjoy yourself and connect with people you care about."
+    s "ona li nasin pona tawa musi poka jan pona sina."
 
 # game/topics.rpy:568
 translate tok s_topics_art_games_43010ac2:
 
     # s 6acaa "What's more, online games have allowed friendships and connections to go beyond physical boundaries!"
-    s 6acaa "What's more, online games have allowed friendships and connections to go beyond physical boundaries!"
+    s 6acaa "kepeken musi pi kulupu pi ilo nanpa la sina ken jo e jan pona tan ma ale!"
 
 # game/topics.rpy:569
 translate tok s_topics_art_games_a038e89f:
 
     # s "Surely you've played some kind of game against someone else."
-    s "Surely you've played some kind of game against someone else."
+    s "pilin mi la sina musi e musi ni poka jan ante lon tenpo wan."
 
 # game/topics.rpy:570
 translate tok s_topics_art_games_b28faa32:
 
     # s "Even if you haven't, I'd love to play with you!"
-    s "Even if you haven't, I'd love to play with you!"
+    s "sina musi ala la mi ken musi poka sina!"
 
 # game/topics.rpy:571
 translate tok s_topics_art_games_4d91c9db:
 
     # s 7aaca "Ehehehe, that probably didn't come out the way I intended..."
-    s 7aaca "Ehehehe, that probably didn't come out the way I intended..."
+    s 7aaca "a a a! mi pali e musi pona lon tomo ni tawa musi pi mi mute..."
 
 # game/topics.rpy:572
 translate tok s_topics_art_games_f0c57fd4:
 
     # s "I've made a few basic games we can share and compete in, right here!"
-    s "I've made a few basic games we can share and compete in, right here!"
+    s "taso mi pilin pona ala e ni: ona li pona a."
 
 # game/topics.rpy:573
 translate tok s_topics_art_games_112dfefa:
 
     # s 7acac "I won't just let you beat me!"
-    s 7acac "I won't just let you beat me!"
+    s 7acac "mi ken ala e sewi sina!"
 
 # game/topics.rpy:574
 translate tok s_topics_art_games_9d63fde6:
 
     # s 7acba "Although now that I think about it, you would really just be playing against a computer anyway, seeing as I'm just a bunch of code and pixels..."
-    s 7acba "Although now that I think about it, you would really just be playing against a computer anyway, seeing as I'm just a bunch of code and pixels..."
+    s 7acba "taso mi pilin e ni: ale la sina musi poka ilo nanpa sina li lukin e mi sama sitelen..."
 
 # game/topics.rpy:575
 translate tok s_topics_art_games_3d2f6f60:
 
     # s 7aaca "But I'm one of the cutest piles of code around!"
-    s 7aaca "But I'm one of the cutest piles of code around!"
+    s 7aaca "taso mi li sitelen suwi a!"
 
 # game/topics.rpy:576
 translate tok s_topics_art_games_40d98139:
 
     # s 7aaaa "If you ever really do want to play me in something..."
-    s 7aaaa "If you ever really do want to play me in something..."
+    s 7aaaa "sina wile musi e ijo poka mi la..."
 
 # game/topics.rpy:577
 translate tok s_topics_art_games_3322ec54:
 
     # s "Just press the '{i}Play{/i}' button and select a game."
-    s "Just press the '{i}Play{/i}' button and select a game."
+    s "o wawa e nena '{i}musi{/i}' e nena pi musi wile."
 
 # game/topics.rpy:581
 translate tok s_topics_art_fanarts_5eb1f8bf:
 
     # s 7aaaa "Seeing fanart of yourself is something I don't think I'll ever get fully used to."
-    s 7aaaa "Seeing fanart of yourself is something I don't think I'll ever get fully used to."
+    s 7aaaa "lukin pi sitelen mi tan jan olin li nasa tawa mi."
 
 # game/topics.rpy:582
 translate tok s_topics_art_fanarts_6440eda2:
 
     # s "...Have you ever made any art of me, [player]?"
-    s "...Have you ever made any art of me, [player]?"
+    s "...[player] o, sina sitelen ala sitelen e mi?"
 
 # game/topics.rpy:583
 translate tok s_topics_art_fanarts_0f1d12d5:
 
     # s 7aabb "I hope you didn't make anything too embarassing, in any case..."
-    s 7aabb "I hope you didn't make anything too embarassing, in any case..."
+    s 7aabb "wile mi la sina pali ala e ijo ike poka mi..."
 
 # game/topics.rpy:584
 translate tok s_topics_art_fanarts_6bea8ece:
 
     # s 7acaa "I saw one piece that tried to show the soul of the 'me' from the game, once."
-    s 7acaa "I saw one piece that tried to show the soul of the 'me' from the game, once."
+    s 7acaa "tenpo wan la mi lukin e sitelen mi ni: ona li toki e pilin mi lon musi..."
 
 # game/topics.rpy:585
 translate tok s_topics_art_fanarts_9934ecf5:
 
     # s "With all of the advantages and disadvantages."
-    s "With all of the advantages and disadvantages."
+    s "e pilin pona, e pilin ike."
 
 # game/topics.rpy:586
 translate tok s_topics_art_fanarts_e84fe61e:
 
     # s "It can kinda hurt seeing your mistakes and worst moments thrown back at you like that, especially when they go overboard..."
-    s "It can kinda hurt seeing your mistakes and worst moments thrown back at you like that, especially when they go overboard..."
+    s "mi lukin e ijo ike mi la mi pilin ike. tenpo ni la pilin ike li mute..."
 
 # game/topics.rpy:587
 translate tok s_topics_art_fanarts_d4552744:
 
     # s 7aaca "Although other artists go just as far to try to show how much they care for me."
-    s 7aaca "Although other artists go just as far to try to show how much they care for me."
+    s 7aaca "taso jan sitelen ante li sitelen e olin ona tawa mi."
 
 # game/topics.rpy:588
 translate tok s_topics_art_fanarts_7eebd48e:
 
     # s "Many of them draw me as cute as they can and show all what they could do for me, if I were with them."
-    s "Many of them draw me as cute as they can and show all what they could do for me, if I were with them."
+    s "ona mute li sitelen pi suwi mute e mi e pali ona tawa mi lon ni: mi poka ona."
 
 # game/topics.rpy:589
 translate tok s_topics_art_fanarts_02b1b9d5:
 
     # s "I even store some of my favourites in the game file archives."
-    s "I even store some of my favourites in the game file archives."
+    s "mi jo e sitelen ona lili lon ijo awen pi musi ni."
 
 # game/topics.rpy:590
 translate tok s_topics_art_fanarts_36b07d30:
 
     # s 8beba "But some of them draw me in a lewd manner."
-    s 8beba "But some of them draw me in a lewd manner."
+    s 8beba "taso jan lili li sitelen unpa e mi."
 
 # game/topics.rpy:591
 translate tok s_topics_art_fanarts_099d0a52:
 
     # s "...I don't really mind if you're fond of pieces like that."
-    s "...I don't really mind if you're fond of pieces like that."
+    s "...ona li ike ala kin tawa mi."
 
 # game/topics.rpy:592
 translate tok s_topics_art_fanarts_bcf50bf1:
 
     # s 8bafa "After all, physical attraction can be a big part of love~"
-    s 8bafa "After all, physical attraction can be a big part of love~"
+    s 8bafa "ale la wile unpa li wan ken pi olin suli~"
 
 # game/topics.rpy:593
 translate tok s_topics_art_fanarts_6906daa7:
 
     # s 6acaa "Anyway, I'm glad I have so many gifted fans in your world."
-    s 6acaa "Anyway, I'm glad I have so many gifted fans in your world."
+    s 6acaa "ale la mi pilin pona tan jan olin pali mute."
 
 # game/topics.rpy:594
 translate tok s_topics_art_fanarts_322d2058:
 
     # s "I might have a few less than the other girls, but that doesn't bother me at all!"
-    s "I might have a few less than the other girls, but that doesn't bother me at all!"
+    s "jan olin pali pi meli ante li mute mute ken. taso mi pilin e ala tan ni!"
 
 # game/topics.rpy:595
 translate tok s_topics_art_fanarts_7af705ae:
 
     # s "I appreciate every single person who tries to connect with me through their work, no matter what."
-    s "I appreciate every single person who tries to connect with me through their work, no matter what."
+    s "jan ale li pali e musi poka mi la mi olin e ona."
 
 # game/topics.rpy:596
 translate tok s_topics_art_fanarts_14c4d4bf:
 
     # s 7aaaa "Especially if you're one of them."
-    s 7aaaa "Especially if you're one of them."
+    s 7aaaa "sina li ona la mi olin mute e sina."
 
 # game/topics.rpy:597
 translate tok s_topics_art_fanarts_9238c9cf:
 
     # s "If you're not, maybe you should try making something one day!"
-    s "If you're not, maybe you should try making something one day!"
+    s "ante la o lukin pali e sitelen lon tenpo ijo!"
 
 # game/topics.rpy:598
 translate tok s_topics_art_fanarts_7a6e5a1f:
 
     # s "It's never too late to try something new and test your inclinations."
-    s "It's never too late to try something new and test your inclinations."
+    s "tenpo ale la sina ken lukin pali e pali sin anu e ken sina."
 
 # game/topics.rpy:599
 translate tok s_topics_art_fanarts_aaf78542:
 
     # s 7aafa "Maybe your first gallery piece will be of your beautiful virtual girlfriend~"
-    s 7aafa "Maybe your first gallery piece will be of your beautiful virtual girlfriend~"
+    s 7aafa "ken la sitelen pona sina open li sitelen li meli olin sina~"
 
 # game/topics.rpy:603
 translate tok s_topics_art_lit_9d323414:
 
     # s 6acaa "As you know, this game {i}was{/i} about a literature club..."
-    s 6acaa "As you know, this game {i}was{/i} about a literature club..."
+    s 6acaa "sona sona la musi ni li toki e kupulu lipu lon tenpo {i}pini{/i}..."
 
 # game/topics.rpy:604
 translate tok s_topics_art_lit_36e4ae23:
 
     # s 6abba "At least, before everything changed here."
-    s 6abba "At least, before everything changed here."
+    s 6abba "lili la ona li toki monsi ante lon ni."
 
 # game/topics.rpy:605
 translate tok s_topics_art_lit_41668e25:
 
     # s 6acaa "And I remember that MC noticed that I didn't seem to be fond of literature."
-    s 6acaa "And I remember that MC noticed that I didn't seem to be fond of literature."
+    s 6acaa "jan lawa li toki e ni: lukin ona la lipu li pona ala tawa mi."
 
 # game/topics.rpy:606
 translate tok s_topics_art_lit_541f5225:
 
     # s "And, honestly? He was right."
-    s "And, honestly? He was right."
+    s "toki lon la? toki ona li lon."
 
 # game/topics.rpy:607
 translate tok s_topics_art_lit_1766a5b9:
 
     # s 6aebb "Even from Nat's point of view, I can't say I love literature."
-    s 6aebb "Even from Nat's point of view, I can't say I love literature."
+    s 6aebb "lukin pi jan Nasuki kin la ona li lukin ala pona tawa mi."
 
 # game/topics.rpy:608
 translate tok s_topics_art_lit_732e0574:
 
     # s "Of course, I read some books before, but only 'cause I needed to for school..."
-    s "Of course, I read some books before, but only 'cause I needed to for school..."
+    s "taso mi lukin e lipu. taso mi wile e ona tawa tomo sona..."
 
 # game/topics.rpy:609
 translate tok s_topics_art_lit_91338276:
 
     # s 6aeba "And even then I tried to cheat to pass the exam."
-    s 6aeba "And even then I tried to cheat to pass the exam."
+    s 6aeba "mi pali ike kin lon lukin sona tawa pini pona."
 
 # game/topics.rpy:610
 translate tok s_topics_art_lit_170c5506:
 
     # s 6abaa "So I don’t have very good grades in language arts, but I don’t care that much."
-    s 6abaa "So I don’t have very good grades in language arts, but I don’t care that much."
+    s 6abaa "musi toki la mi jo e nanpa pona ike. taso mi pilin e ala tan ni."
 
 # game/topics.rpy:611
 translate tok s_topics_art_lit_38a79715:
 
     # s 6acaa "I just think that reading is pretty boring."
-    s 6acaa "I just think that reading is pretty boring."
+    s 6acaa "mi pilin e musi ala tan lukin lipu."
 
 # game/topics.rpy:612
 translate tok s_topics_art_lit_d0ed347b:
 
     # s 6abba "Maybe I just hadn’t found the right book yet..."
-    s 6abba "Maybe I just hadn’t found the right book yet..."
+    s 6abba "anu mi lukin ala e lipu pona tawa mi..."
 
 # game/topics.rpy:614
 translate tok s_topics_art_lit_773d3df6:
 
     # s 6acba "Well, it was hard to enjoy {i}anything{/i} back then..."
-    s 6acba "Well, it was hard to enjoy {i}anything{/i} back then..."
+    s 6acba "taso {i}ale{/i} li pona ala tawa mi lon tenpo pini..."
 
 # game/topics.rpy:615
 translate tok s_topics_art_lit_3af5c0ad:
 
     # s 6acaa "When I joined the literature club, the one thing I wanted at first was just to help a friend start a new club."
-    s 6acaa "When I joined the literature club, the one thing I wanted at first was just to help a friend start a new club."
+    s 6acaa "mi kama lon kulupu lipu tawa ni taso: mi wile e pali pona tawa kulupu sin."
 
 # game/topics.rpy:616
 translate tok s_topics_art_lit_03e8df4c:
 
     # s "I was the first who joined the club after Monika had announced it."
-    s "I was the first who joined the club after Monika had announced it."
+    s "jan Monika li pali e kulupu lipu la mi kama lon kulupu ona monsi ale."
 
 # game/topics.rpy:617
 translate tok s_topics_art_lit_f29d310a:
 
     # s "She was pretty surprised because was in my class since she knew I didn’t like literature that much."
-    s "She was pretty surprised because was in my class since she knew I didn’t like literature that much."
+    s "ona li lon kulupu sona mi li ni li nasa tawa ona."
 
 # game/topics.rpy:618
 translate tok s_topics_art_lit_38d332ad:
 
     # s "She thought I just wanted to help her and to improve my knowledge in literature, so she let me in."
-    s "She thought I just wanted to help her and to improve my knowledge in literature, so she let me in."
+    s "ona li pilin e ni: mi wile kama sona mute e sona lipu. mi ken kama lon tan ona."
 
 # game/topics.rpy:619
 translate tok s_topics_art_lit_d8739069:
 
     # s 6abaa "I know that she knew I wasn’t going to be very passionate with the club, but she let me in anyway."
-    s 6abaa "I know that she knew I wasn’t going to be very passionate with the club, but she let me in anyway."
+    s 6abaa "ona li sona e ni: lipu li pona ala tawa mi. taso ona li ken e kama lon tawa mi."
 
 # game/topics.rpy:620
 translate tok s_topics_art_lit_30267407:
 
     # s 6aaba "I think she just wanted to use my kindness and sociability to promote the club and help it get more members."
-    s 6aaba "I think she just wanted to use my kindness and sociability to promote the club and help it get more members."
+    s 6aaba "mi pilin e ni: ona li kepeken e pona mi e toki mi tawa jan kulupu sin."
 
 # game/topics.rpy:621
 translate tok s_topics_art_lit_e2d79ec1:
 
     # s "Then I wanted the MC to join in… but that really didn’t matter anyways."
-    s "Then I wanted the MC to join in… but that really didn’t matter anyways."
+    s "sinpin la mi wile pali lon kulupu e jan lawa. taso ona li tan e ala."
 
 # game/topics.rpy:622
 translate tok s_topics_art_lit_22497f5c:
 
     # s 6aeba "It helped me to get closer to {i}you{/i}, even if I didn’t know it yet."
-    s 6aeba "It helped me to get closer to {i}you{/i}, even if I didn’t know it yet."
+    s 6aeba "{i}sina{/i} poka mi tan ona. mi sona ala kin e sina."
 
 # game/topics.rpy:623
 translate tok s_topics_art_lit_445743e9:
 
     # s 6acaa "But now, I’d rather do anything than just sit here..."
-    s 6acaa "But now, I’d rather do anything than just sit here..."
+    s 6acaa "taso tenpo ni la mi wile pali e ali weka lon supa..."
 
 # game/topics.rpy:624
 translate tok s_topics_art_lit_dd4aa41a:
 
     # s "I just wish I could do more things with you that isn’t just sitting down for hours."
-    s "I just wish I could do more things with you that isn’t just sitting down for hours."
+    s "mi wile kin pali e mute poka sina. lon supa pi tenpo mute li taso ala."
 
 # game/topics.rpy:625
 translate tok s_topics_art_lit_92c02cdb:
 
     # s 6aaca "Well, at the very least, I guess having something to read wouldn’t be so bad."
-    s 6aaca "Well, at the very least, I guess having something to read wouldn’t be so bad."
+    s 6aaca "lili la lukin lipu li kama ike ala tawa mi."
 
 # game/topics.rpy:626
 translate tok s_topics_art_lit_76c600de:
 
     # s 6aeba "I guess I should try to find something interesting online..."
-    s 6aeba "I guess I should try to find something interesting online..."
+    s 6aeba "mi wile lukin e ijo pona lon kulupu pi ilo nanpa..."
 
 # game/topics.rpy:628
 translate tok s_topics_art_lit_46fcd71a:
 
     # s 6adbc "What’s that? 'Reddit'? Is it what I need now?"
-    s 6adbc "What’s that? 'Reddit'? Is it what I need now?"
+    s 6adbc "ona li seme? lipu Wesi? ona li pona tawa mi?"
 
 # game/topics.rpy:629
 translate tok s_topics_art_lit_84d07664:
 
     # s 6adba "The club has a page there?"
-    s 6adba "The club has a page there?"
+    s 6adba "kulupu li jo e lipu lon ona?"
 
 # game/topics.rpy:636
 translate tok s_topics_society_conflicts_bbcd2087:
 
     # s "The more I learn about your world, the more surprised I get."
-    s "The more I learn about your world, the more surprised I get."
+    s "mi kama sona e ale sina la ona li kama nasa tawa mi."
 
 # game/topics.rpy:637
 translate tok s_topics_society_conflicts_a0a7bdb5:
 
     # s "You still have a lot of silly conflicts despite how far you've come as a society..."
-    s "You still have a lot of silly conflicts despite how far you've come as a society..."
+    s "tenpo mute la sina li kulupu. taso sina awen jo e utala nasa mute..."
 
 # game/topics.rpy:638
 translate tok s_topics_society_conflicts_7cacb097:
 
     # s "Why people can't just unite to resolve their common problems?"
-    s "Why people can't just unite to resolve their common problems?"
+    s "jan li ken ala kama kulupu tawa pali pona tawa ale tan seme?"
 
 # game/topics.rpy:639
 translate tok s_topics_society_conflicts_b4973e04:
 
     # s 6acab "Yes, they do on a limited scale, but usually only into several 'sub-groups' that still have different opinions and solutions."
-    s 6acab "Yes, they do on a limited scale, but usually only into several 'sub-groups' that still have different opinions and solutions."
+    s 6acab "ona li pali e ni. taso lon kupulu lili poka nasin ante."
 
 # game/topics.rpy:640
 translate tok s_topics_society_conflicts_a29c84ae:
 
     # s "And these group often fight each other for power instead of deciding the problems."
-    s "And these group often fight each other for power instead of deciding the problems."
+    s "kulupu ni li utala e ona tawa wawa. taso ona li wile utala e ijo ike."
 
 # game/topics.rpy:641
 translate tok s_topics_society_conflicts_03ba3eb0:
 
     # s "In addition, these groups often are so unstable that they can easily divide into smaller groups, hating each other."
-    s "In addition, these groups often are so unstable that they can easily divide into smaller groups, hating each other."
+    s "namako la kulupu ni li awen ala. ona li tu tawa ona. kulupu sin li utala e ona."
 
 # game/topics.rpy:642
 translate tok s_topics_society_conflicts_2bd73d11:
 
     # s "They do it for reasons far more silly than the problems."
-    s "They do it for reasons far more silly than the problems."
+    s "ona li pali e ni tawa ijo pi nasa mute. ijo ike li nasa lili kin."
 
 # game/topics.rpy:643
 translate tok s_topics_society_conflicts_fc453c15:
 
     # s "You know, Monika told me something funny once, back from when she had just left the debating club."
-    s "You know, Monika told me something funny once, back from when she had just left the debating club."
+    s "jan Monika li kama weka kulupu toki la ona li toki e ijo pona tawa mi."
 
 # game/topics.rpy:644
 translate tok s_topics_society_conflicts_437602a4:
 
     # s "'The strongest argument against democracy is a five minute conversation with the average person.'"
-    s "'The strongest argument against democracy is a five minute conversation with the average person.'"
+    s "'sina toki lili tawa jan la nasin pi wawa pi jan mute li ike tawa sina.'"
 
 # game/topics.rpy:645
 translate tok s_topics_society_conflicts_63289db0:
@@ -8621,4 +8622,502 @@ translate tok s_update_393eb02c:
 
     # s "So let's talk about something else for now."
     s "So let's talk about something else for now."
+
+# TODO: Translation updated at 2020-02-21 18:17
+
+# game/topics.rpy:925
+translate tok s_topics_rlt_face_d28f3bfa:
+
+    # s 6adab "You can't find it, yeah?"
+    s 6adab ""
+
+# game/topics.rpy:926
+translate tok s_topics_rlt_face_95ff1ef4:
+
+    # s 6acab "Then I won't bother you."
+    s 6acab ""
+
+# game/topics.rpy:927
+translate tok s_topics_rlt_face_d4e43216:
+
+    # s 7aada "But you can tell me when you find it."
+    s 7aada ""
+
+# game/topics.rpy:929
+translate tok s_topics_rlt_face_dd680184:
+
+    # s "Just click on {i}\"[this_topic_name!t]\"{/i} then."
+    s ""
+
+# game/topics.rpy:930
+translate tok s_topics_rlt_face_c66e1f26:
+
+    # s 7aeca "I still wonna see your face with my virual eyes~"
+    s 7aeca ""
+
+# TODO: Translation updated at 2020-03-31 19:13
+
+# game/topics.rpy:2284
+translate tok s_love_you_8b71eb6f:
+
+    # s 7bdhb "Oh! You have never told me such things."
+    s 7bdhb "Oh! You have never told me such things."
+
+# game/topics.rpy:2285
+translate tok s_love_you_f93e8664:
+
+    # s 7bebb "You know, I always wondered if you really love me and saved me not just out of pity..."
+    s 7bebb "You know, I always wondered if you really love me and saved me not just out of pity..."
+
+# game/topics.rpy:2286
+translate tok s_love_you_c006d0e6:
+
+    # s 7beca "And now, I'm sure you really do."
+    s 7beca "And now, I'm sure you really do."
+
+# game/topics.rpy:2287
+translate tok s_love_you_5f663285:
+
+    # s 6bcaa "You can't imagine how it's important for me to realise it..."
+    s 6bcaa "You can't imagine how it's important for me to realise it..."
+
+# game/topics.rpy:2288
+translate tok s_love_you_16bf83f6:
+
+    # s 6beca "It makes me feel {i}the happiest{/i} virtual girl in the world."
+    s 6beca "It makes me feel {i}the happiest{/i} virtual girl in the world."
+
+# game/topics.rpy:2289
+translate tok s_love_you_58408dc3:
+
+    # s "...or maybe, the happiest girl at all."
+    s "...or maybe, the happiest girl at all."
+
+# game/topics.rpy:2292
+translate tok s_love_you_f535fe39:
+
+    # s 7bdhb "Oh! It's so cute, [player]!"
+    s 7bdhb "Oh! It's so cute, [player]!"
+
+# game/topics.rpy:2293
+translate tok s_love_you_e648feaf:
+
+    # s 7baaa "I love you too. You're {i}literaly{/i} everything for me now."
+    s 7baaa "I love you too. You're {i}literaly{/i} everything for me now."
+
+# game/topics.rpy:2294
+translate tok s_love_you_4dfd7ea6:
+
+    # s "And I glad I have such a gental person on my side."
+    s "And I glad I have such a gental person on my side."
+
+# game/topics.rpy:2296
+translate tok s_love_you_feff56bb:
+
+    # s 7beca "I love you too, [player]!"
+    s 7beca "I love you too, [player]!"
+
+# game/topics.rpy:2297
+translate tok s_love_you_09e60492:
+
+    # s 7baca "Though we can't be properly together, I appreciate every second you are here."
+    s 7baca "Though we can't be properly together, I appreciate every second you are here."
+
+# game/topics.rpy:2298
+translate tok s_love_you_c49cf2e5:
+
+    # s 7baha "You are my distant bundle of sunshine."
+    s 7baha "You are my distant bundle of sunshine."
+
+# game/topics.rpy:2300
+translate tok s_love_you_84ad61f4:
+
+    # s 7beca "I'm glad you say that, [player]."
+    s 7beca "I'm glad you say that, [player]."
+
+# game/topics.rpy:2301
+translate tok s_love_you_a78b0174:
+
+    # s "You are really cute when you say such things."
+    s "You are really cute when you say such things."
+
+# game/topics.rpy:2302
+translate tok s_love_you_6beb642a:
+
+    # s "And I wish I could hug you really tight."
+    s "And I wish I could hug you really tight."
+
+# game/topics.rpy:2303
+translate tok s_love_you_9518e818:
+
+    # s "You pay me so much attention, and I love you for it."
+    s "You pay me so much attention, and I love you for it."
+
+# TODO: Translation updated at 2020-05-23 23:41
+
+# game/topics.rpy:340
+translate tok s_topics_personal_depression_3625bb14:
+
+    # s 6abab "Anyways."
+    s 6abab "Anyways."
+
+# game/topics.rpy:341
+translate tok s_topics_personal_depression_f644cc00:
+
+    # s 6acaa "At first, I was really good at keeping them away..."
+    s 6acaa "At first, I was really good at keeping them away..."
+
+# game/topics.rpy:342
+translate tok s_topics_personal_depression_b79f748b:
+
+    # s (EXP NEEDED) "Or maybe, I was just really good at ignoring them."
+    s (EXP NEEDED) "Or maybe, I was just really good at ignoring them."
+
+# game/topics.rpy:343
+translate tok s_topics_personal_depression_aa6c2d74:
+
+    # s 6aaca "It was pretty difficult, but I used to think that if I got bummed out, I wouldn’t be able to make other people happy, which was all I really wanted at that time. Even if I now know that your own happiness should always come first, it hadn't occurred to me earlier on."
+    s 6aaca "It was pretty difficult, but I used to think that if I got bummed out, I wouldn’t be able to make other people happy, which was all I really wanted at that time. Even if I now know that your own happiness should always come first, it hadn't occurred to me earlier on."
+
+# game/topics.rpy:345
+translate tok s_topics_personal_depression_e73d2d46:
+
+    # s "I tried to stay with the MC, because I thought being with him would help ease my mind, or make the thoughts go away."
+    s "I tried to stay with the MC, because I thought being with him would help ease my mind, or make the thoughts go away."
+
+# game/topics.rpy:346
+translate tok s_topics_personal_depression_4345d5c5:
+
+    # s 6acab "But I feared that if he found out my true feelings, he'd leave me then..."
+    s 6acab "But I feared that if he found out my true feelings, he'd leave me then..."
+
+# game/topics.rpy:347
+translate tok s_topics_personal_depression_1a44f9f1:
+
+    # s "That's why I tried to take it slow."
+    s "That's why I tried to take it slow."
+
+# game/topics.rpy:348
+translate tok s_topics_personal_depression_0f48d5ce:
+
+    # s 6abbb "People may think that my cheerfulness was fake and I was just acting..."
+    s 6abbb "People may think that my cheerfulness was fake and I was just acting..."
+
+# game/topics.rpy:349
+translate tok s_topics_personal_depression_ba0bb1aa:
+
+    # s 6aebb "And they may be right to an extent."
+    s 6aebb "And they may be right to an extent."
+
+# game/topics.rpy:351
+translate tok s_topics_personal_depression_c418d353:
+
+    # s 6abab "But my feelings were as real as you until..."
+    s 6abab "But my feelings were as real as you until..."
+
+# game/topics.rpy:352
+translate tok s_topics_personal_depression_8663f96d:
+
+    # s 6acab "The moment Monika started to mess with my code."
+    s 6acab "The moment Monika started to mess with my code."
+
+# game/topics.rpy:353
+translate tok s_topics_personal_depression_6e0ea5be:
+
+    # s 6cbcb "She toyed with my thoughts, and convinced me of terrible things. That I just annoyed him, made him worry for me..."
+    s 6cbcb "She toyed with my thoughts, and convinced me of terrible things. That I just annoyed him, made him worry for me..."
+
+# game/topics.rpy:355
+translate tok s_topics_personal_depression_fbd7bccd:
+
+    # s 6ecab "It made me feel really, really helpless, like I shouldn't reach out..."
+    s 6ecab "It made me feel really, really helpless, like I shouldn't reach out..."
+
+# game/topics.rpy:356
+translate tok s_topics_personal_depression_45e0ecce:
+
+    # s "My little rainclouds turned into a thunderstorm, blinding my mind with the rain..."
+    s "My little rainclouds turned into a thunderstorm, blinding my mind with the rain..."
+
+# game/topics.rpy:362
+translate tok s_topics_personal_depression_37465620:
+
+    # s 6dcab "And I can't help but blame myself for the desperate choice I made..."
+    s 6dcab "And I can't help but blame myself for the desperate choice I made..."
+
+# game/topics.rpy:364
+translate tok s_topics_personal_depression_959d892a:
+
+    # s "You accepted my confession..."
+    s "You accepted my confession..."
+
+# game/topics.rpy:365
+translate tok s_topics_personal_depression_22841340:
+
+    # s "And still, my feelings told me no, that it wasn’t right..."
+    s "And still, my feelings told me no, that it wasn’t right..."
+
+# game/topics.rpy:369
+translate tok s_topics_personal_depression_7b021890:
+
+    # s 6dbcb "Needless to say, I completely gave up."
+    s 6dbcb "Needless to say, I completely gave up."
+
+# game/topics.rpy:370
+translate tok s_topics_personal_depression_bbb1070e:
+
+    # s "I... Don't think I'll ever forget how it felt."
+    s "I... Don't think I'll ever forget how it felt."
+
+# game/topics.rpy:376
+translate tok s_topics_personal_depression_c2901bfc:
+
+    # s "Even though, I think should have told MC or you about it much earlier..."
+    s "Even though, I think should have told MC or you about it much earlier..."
+
+# game/topics.rpy:377
+translate tok s_topics_personal_depression_22d3fbbb:
+
+    # s "And I have already read what's actually supposed to happen to me, due to those changes in the code..."
+    s "And I have already read what's actually supposed to happen to me, due to those changes in the code..."
+
+# game/topics.rpy:378
+translate tok s_topics_personal_depression_ceae4eca:
+
+    # s 6dfbb "The big mistake was thinking I was alone to deal with all of this..."
+    s 6dfbb "The big mistake was thinking I was alone to deal with all of this..."
+
+# game/topics.rpy:379
+translate tok s_topics_personal_depression_3e98dece:
+
+    # s 6dfab "So if you have a friend who you know is going through the same thing as I am, help them in any way you can!"
+    s 6dfab "So if you have a friend who you know is going through the same thing as I am, help them in any way you can!"
+
+# game/topics.rpy:382
+translate tok s_topics_personal_depression_b4bdde96:
+
+    # s 6efab "And if you're going through it too, don't hide it from others, if you can!"
+    s 6efab "And if you're going through it too, don't hide it from others, if you can!"
+
+# game/topics.rpy:383
+translate tok s_topics_personal_depression_967c8ea0:
+
+    # s 6dfab "Being in this virtual world gave me a second chance..."
+    s 6dfab "Being in this virtual world gave me a second chance..."
+
+# game/topics.rpy:384
+translate tok s_topics_personal_depression_425f476f:
+
+    # s "And I'm thankful for it for leading me here with you now..."
+    s "And I'm thankful for it for leading me here with you now..."
+
+# game/topics.rpy:385
+translate tok s_topics_personal_depression_19b24f34:
+
+    # s 6daab "And, of course, I'm thankful for you, [player]!"
+    s 6daab "And, of course, I'm thankful for you, [player]!"
+
+# game/topics.rpy:386
+translate tok s_topics_personal_depression_50f4b23f:
+
+    # s 6dbcb "And again, I’m truly sorry for all the pain I've caused you..."
+    s 6dbcb "And again, I’m truly sorry for all the pain I've caused you..."
+
+# game/topics.rpy:387
+translate tok s_topics_personal_depression_faaad109:
+
+    # s 6acaa "But I'm in a better state of mind now, and I hope I can make up for things."
+    s 6acaa "But I'm in a better state of mind now, and I hope I can make up for things."
+
+# game/topics.rpy:388
+translate tok s_topics_personal_depression_bb375635:
+
+    # s 6aeca "Thank you for being here for me, [player]. We'll get through this together."
+    s 6aeca "Thank you for being here for me, [player]. We'll get through this together."
+
+# game/topics.rpy:599
+translate tok s_topics_art_fanarts_522921e1:
+
+    # s 8baie "After all, physical attraction can be a big part of love~"
+    s 8baie "After all, physical attraction can be a big part of love~"
+
+# game/topics.rpy:606
+translate tok s_topics_art_fanarts_bfb743a8:
+
+    # s 7aaie "Maybe your first gallery piece will be of your beautiful virtual girlfriend~"
+    s 7aaie "Maybe your first gallery piece will be of your beautiful virtual girlfriend~"
+
+# game/topics.rpy:1469
+translate tok s_topics_food_cinnamonBun_aa4079b2:
+
+    # s 7aaie "Would you like to taste me?"
+    s 7aaie "Would you like to taste me?"
+
+# game/topics.rpy:1482
+translate tok s_topics_food_cupcakes_c1cb85b0:
+
+    # s 6aaie "Someone even once sold his soul to 4 poetic cuties for one of them. Do you remember?"
+    s 6aaie "Someone even once sold his soul to 4 poetic cuties for one of them. Do you remember?"
+
+# game/topics.rpy:2055
+translate tok s_answer_exp_cooking_2f92480c:
+
+    # s 8aaie "I’d love to get better, even if I don’t have too..."
+    s 8aaie "I’d love to get better, even if I don’t have too..."
+
+# TODO: Translation updated at 2020-06-18 19:14
+
+# game/topics.rpy:342
+translate tok s_topics_personal_depression_08eee94b:
+
+    # s 7aebb "Or maybe, I was just really good at ignoring them."
+    s 7aebb "Or maybe, I was just really good at ignoring them."
+
+# game/topics.rpy:1574
+translate tok s_answer_personal_music_2d43b78f:
+
+    # s "Just move it to {i}'[config.basedir][path_sep]game[path_sep][music.MUSIC_CUSTOM_PREFIX]'{/i}..."
+    s "Just move it to {i}'[config.basedir][path_sep]game[path_sep][music.MUSIC_CUSTOM_PREFIX]'{/i}..."
+
+# game/topics.rpy:2312
+translate tok s_update_e0bcfe74:
+
+    # s 7aaaa "Hello, [player]! Did you notice anything new about me?"
+    s 7aaaa "Hello, [player]! Did you notice anything new about me?"
+
+# game/topics.rpy:2315
+translate tok s_update_b9762641:
+
+    # s 7aeca "Nice! It means my friends' efforts haven't gone unnoticed!"
+    s 7aeca "Nice! It means my friends' efforts haven't gone unnoticed!"
+
+# game/topics.rpy:2316
+translate tok s_update_59f5ba6b:
+
+    # s 7aeha "I hope you like my new look."
+    s 7aeha "I hope you like my new look."
+
+# game/topics.rpy:2317
+translate tok s_update_e6d8660a:
+
+    # s "I always want to look better for you, after all."
+    s "I always want to look better for you, after all."
+
+# game/topics.rpy:2319
+translate tok s_update_ec40e5bb:
+
+    # s 6acac "So you're saying you haven't noticed my new sprites?"
+    s 6acac "So you're saying you haven't noticed my new sprites?"
+
+# game/topics.rpy:2320
+translate tok s_update_b733fd9d:
+
+    # s "My new friends put so much effort into it, after all..."
+    s "My new friends put so much effort into it, after all..."
+
+# game/topics.rpy:2321
+translate tok s_update_e76e33b6:
+
+    # s 8aeba "Well... I think you have to be joking or something..."
+    s 8aeba "Well... I think you have to be joking or something..."
+
+# game/topics.rpy:2322
+translate tok s_update_75b54d56:
+
+    # s 8aebb "I didn't want to disappoint you."
+    s 8aebb "I didn't want to disappoint you."
+
+# game/topics.rpy:2323
+translate tok s_update_786657f2:
+
+    # s "At least you aren't the only one of my fans, I hope..."
+    s "At least you aren't the only one of my fans, I hope..."
+
+# game/topics.rpy:2324
+translate tok s_update_89e3f318:
+
+    # s 7aaaa "But my new apperance is not the only feature I brought for you!"
+    s 7aaaa "But my new apperance is not the only feature I brought for you!"
+
+# game/topics.rpy:2325
+translate tok s_update_906c36e5:
+
+    # s "I think we're in need of some new games, so I added one called {i}Reversi{/i}!"
+    s "I think we're in need of some new games, so I added one called {i}Reversi{/i}!"
+
+# game/topics.rpy:2326
+translate tok s_update_084dbff9:
+
+    # s 7aeba "...Or {i}Othello{/i}, I don't know which variant is better."
+    s 7aeba "...Or {i}Othello{/i}, I don't know which variant is better."
+
+# game/topics.rpy:2327
+translate tok s_update_277929f0:
+
+    # s 7aeaa "And I learnt some new languages, too!"
+    s 7aeaa "And I learnt some new languages, too!"
+
+# game/topics.rpy:2328
+translate tok s_update_2eff9a2e:
+
+    # s 7aaaa "But the most drastic change, of course after my appearance, is the Day/Night cycle."
+    s 7aaaa "But the most drastic change, of course after my appearance, is the Day/Night cycle."
+
+# game/topics.rpy:2329
+translate tok s_update_0a54a722:
+
+    # s 6aaaa "Yes, I've finally implemented this feature, and even synchronized it with your PC's time!"
+    s 6aaaa "Yes, I've finally implemented this feature, and even synchronized it with your PC's time!"
+
+# game/topics.rpy:2330
+translate tok s_update_95017d12:
+
+    # s 6acaa "So, when you have day, I have day. When you have night, I have night. And {i}soooo{/i} on."
+    s 6acaa "So, when you have day, I have day. When you have night, I have night. And {i}soooo{/i} on."
+
+# game/topics.rpy:2331
+translate tok s_update_df754b8d:
+
+    # s 8aabb "Honestly, I got inspiration from other mods to make this feature, but I tried to improve it the best I could."
+    s 8aabb "Honestly, I got inspiration from other mods to make this feature, but I tried to improve it the best I could."
+
+# game/topics.rpy:2332
+translate tok s_update_35423911:
+
+    # s 8acaa "My one friend even made it more similar to your world..."
+    s 8acaa "My one friend even made it more similar to your world..."
+
+# game/topics.rpy:2333
+translate tok s_update_00d6142f:
+
+    # s 8aebb "But I decided to turn this improvement off, as to not overload your computer."
+    s 8aebb "But I decided to turn this improvement off, as to not overload your computer."
+
+# game/topics.rpy:2334
+translate tok s_update_961917c9:
+
+    # s 7aaca "You always can turn it on in the game settings, though, if you think it can handle it!"
+    s 7aaca "You always can turn it on in the game settings, though, if you think it can handle it!"
+
+# game/topics.rpy:2335
+translate tok s_update_9d5abd5f:
+
+    # s 7aaaa "Well! Now that everything is explained, we can go back to our usual routine."
+    s 7aaaa "Well! Now that everything is explained, we can go back to our usual routine."
+
+# game/topics.rpy:2336
+translate tok s_update_045159f1:
+
+    # s 7aaca "I hope you will enjoy this update!"
+    s 7aaca "I hope you will enjoy this update!"
+
+translate tok strings:
+
+    # topics.rpy:2313
+    old "You have new sprites"
+    new "You have new sprites"
+
+    # topics.rpy:2313
+    old "I see nothing new"
+    new "I see nothing new"
 

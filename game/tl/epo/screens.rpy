@@ -198,3 +198,27 @@ translate epo strings:
     old "Skipping"
     new "Preterlasado"
 
+# TODO: Translation updated at 2020-05-23 23:12
+
+translate epo strings:
+
+    # screens.rpy:999
+    old "Day/Night Cycle"
+    new "Tagnokta Ciklo"
+
+    # screens.rpy:1000
+    old "Smooth{#D/N Cycle}"
+    new "Flua"
+
+    # screens.rpy:1001
+    old "Smooth D/N cycle is imperfect and may take a lot of resources.\nAre you sure you want to turn it on?"
+    new "Flua tagnokta ciklo estas neperfekta kaj eblas konsumi multe da resursoj.\nĈu vi vere volas aktivigi ĝin?"
+
+    # screens.rpy:1003
+    old "On"
+    new "Aktiva"
+
+    # screens.rpy:1004
+    old "Off (Always day)"
+    new "Malaktiva (Ĉiam tago)"
+

@@ -9920,3 +9920,498 @@ translate rus s_update_393eb02c:
     # s "So let's talk about something else for now."
     s "Так что давай сменим тему."
 
+# TODO: Translation updated at 2020-05-23 23:03
+
+# game/topics.rpy:340
+translate rus s_topics_personal_depression_3625bb14:
+
+    # s 6abab "Anyways."
+    s 6abab "В любом случае."
+
+# game/topics.rpy:341
+translate rus s_topics_personal_depression_f644cc00:
+
+    # s 6acaa "At first, I was really good at keeping them away..."
+    s 6acaa "В первое время мне действительно удавалось от них избавиться..."
+
+# game/topics.rpy:343
+translate rus s_topics_personal_depression_aa6c2d74:
+
+    # s 6aaca "It was pretty difficult, but I used to think that if I got bummed out, I wouldn’t be able to make other people happy, which was all I really wanted at that time. Even if I now know that your own happiness should always come first, it hadn't occurred to me earlier on."
+    s 6aaca "Это было непросто, но я думала, что если я не с этим не справлюсь, то не смогу делать других людей счастливыми, а ведь мне этого только и надо было."
+    s "Хоть я сейчас и понимаю, что моё счастье должно было быть на первом месте, до меня это тогда просто не доходило."
+
+# game/topics.rpy:345
+translate rus s_topics_personal_depression_e73d2d46:
+
+    # s "I tried to stay with the MC, because I thought being with him would help ease my mind, or make the thoughts go away."
+    s "Я пыталась остаться с ГГ, потому что я думала, что он поможет мне всё это забыть и пережить."
+
+# game/topics.rpy:346
+translate rus s_topics_personal_depression_4345d5c5:
+
+    # s 6acab "But I feared that if he found out my true feelings, he'd leave me then..."
+    s 6acab "Но я боялась, что он всё поймёт, он меня бросит, так что..."
+
+# game/topics.rpy:347
+translate rus s_topics_personal_depression_1a44f9f1:
+
+    # s "That's why I tried to take it slow."
+    s "Именно поэтому я решила со всем этис не торопиться."
+
+# game/topics.rpy:348
+translate rus s_topics_personal_depression_0f48d5ce:
+
+    # s 6abbb "People may think that my cheerfulness was fake and I was just acting..."
+    s 6abbb "Многие считают, что моя жизнерадостность была фальшивой, что я просто притворялась..."
+
+# game/topics.rpy:349
+translate rus s_topics_personal_depression_ba0bb1aa:
+
+    # s 6aebb "And they may be right to an extent."
+    s 6aebb "Возможно, они в какой-то степени правы..."
+
+# game/topics.rpy:351
+translate rus s_topics_personal_depression_c418d353:
+
+    # s 6abab "But my feelings were as real as you until..."
+    s 6abab "Но мои чувства на самом деле были реальными, пока..."
+
+# game/topics.rpy:352
+translate rus s_topics_personal_depression_8663f96d:
+
+    # s 6acab "The moment Monika started to mess with my code."
+    s 6acab "Пока Моника не начала шаманить над моим кодом."
+
+# game/topics.rpy:353
+translate rus s_topics_personal_depression_6e0ea5be:
+
+    # s 6cbcb "She toyed with my thoughts, and convinced me of terrible things. That I just annoyed him, made him worry for me..."
+    s 6cbcb "Она игралась с моим мыслями и внушала в меня просто ужасные вещи. Мол, я просто мешалась ему, заставляла его лишний раз волноваться обо мне..."
+
+# game/topics.rpy:355
+translate rus s_topics_personal_depression_fbd7bccd:
+
+    # s 6ecab "It made me feel really, really helpless, like I shouldn't reach out..."
+    s 6ecab "Из-за этого я начала чувствовать себя реально плохо..."
+
+# game/topics.rpy:356
+translate rus s_topics_personal_depression_45e0ecce:
+
+    # s "My little rainclouds turned into a thunderstorm, blinding my mind with the rain..."
+    s "Мои маленькие тучки превратились в большую бурю, которая накрыла меня пеленой дождя..."
+
+# game/topics.rpy:362
+translate rus s_topics_personal_depression_37465620:
+
+    # s 6dcab "And I can't help but blame myself for the desperate choice I made..."
+    s 6dcab "Я винила себя, винила за тот очаянный выбор, что я сделала..."
+
+# game/topics.rpy:364
+translate rus s_topics_personal_depression_959d892a:
+
+    # s "You accepted my confession..."
+    s "Ты принял моё предложение..."
+
+# game/topics.rpy:365
+translate rus s_topics_personal_depression_22841340:
+
+    # s "And still, my feelings told me no, that it wasn’t right..."
+    s "Но мои чувства говорили, что это не так, что ты лжёшь..."
+
+# game/topics.rpy:369
+translate rus s_topics_personal_depression_7b021890:
+
+    # s 6dbcb "Needless to say, I completely gave up."
+    s 6dbcb "Так что, в итоге, я окончательно сдалась."
+
+# game/topics.rpy:370
+translate rus s_topics_personal_depression_bbb1070e:
+
+    # s "I... Don't think I'll ever forget how it felt."
+    s "Я... Я навряд ли смогу забыть, какого это было."
+
+# game/topics.rpy:376
+translate rus s_topics_personal_depression_c2901bfc:
+
+    # s "Even though, I think should have told MC or you about it much earlier..."
+    s "В любом случае, я думаю, что мне стоило сказать ГГ об этом гораздо раньше..."
+
+# game/topics.rpy:377
+translate rus s_topics_personal_depression_22d3fbbb:
+
+    # s "And I have already read what's actually supposed to happen to me, due to those changes in the code..."
+    s "И я уже знаю, что с мной должно было прозойти. Ну, из-за всех этих изменений в коде игры..."
+
+# game/topics.rpy:378
+translate rus s_topics_personal_depression_ceae4eca:
+
+    # s 6dfbb "The big mistake was thinking I was alone to deal with all of this..."
+    s 6dfbb "Мне действительно не стоило бороться с этим в одиночку..."
+
+# game/topics.rpy:379
+translate rus s_topics_personal_depression_3e98dece:
+
+    # s 6dfab "So if you have a friend who you know is going through the same thing as I am, help them in any way you can!"
+    s 6dfab "Поэтому, если ты знаешь кого-то, кто проходит через тоже самое, что и я, помоги ему во что бы то не стало!"
+
+# game/topics.rpy:382
+translate rus s_topics_personal_depression_b4bdde96:
+
+    # s 6efab "And if you're going through it too, don't hide it from others, if you can!"
+    if gender:
+        s 6efab "А если через это проходишь ты сама, то не пытайся скрывать это от других!"
+    else:
+        s 6efab "А если через это проходишь ты сам, то не пытайся скрывать это от других!"
+
+# game/topics.rpy:383
+translate rus s_topics_personal_depression_967c8ea0:
+
+    # s 6dfab "Being in this virtual world gave me a second chance..."
+    s 6dfab "Я до сих пор здесь, с тобой, только потому, что этот мир виртуален..."
+
+# game/topics.rpy:384
+translate rus s_topics_personal_depression_425f476f:
+
+    # s "And I'm thankful for it for leading me here with you now..."
+    pass
+
+# game/topics.rpy:385
+translate rus s_topics_personal_depression_19b24f34:
+
+    # s 6daab "And, of course, I'm thankful for you, [player]!"
+    s 6daab "И, само собой, я здесь благодаря тебе, [player]!"
+
+# game/topics.rpy:386
+translate rus s_topics_personal_depression_50f4b23f:
+
+    # s 6dbcb "And again, I’m truly sorry for all the pain I've caused you..."
+    s 6dbcb "Опять же, мне действительно жаль, что причинила тебе столько боли..."
+
+# game/topics.rpy:387
+translate rus s_topics_personal_depression_faaad109:
+
+    # s 6acaa "But I'm in a better state of mind now, and I hope I can make up for things."
+    s 6acaa "Но сейчас мне действительно лучше, и я надеюсь, что я могу наверстать упущенное."
+
+# game/topics.rpy:388
+translate rus s_topics_personal_depression_bb375635:
+
+    # s 6aeca "Thank you for being here for me, [player]. We'll get through this together."
+    s 6aeca "Спасибо, что поддерживаешь меня здесь, [player]. С тобой мне действительно куда лучше."
+
+# game/topics.rpy:599
+translate rus s_topics_art_fanarts_522921e1:
+
+    # s 8baie "After all, physical attraction can be a big part of love~"
+    s 8baie "В конце концов, влечение плоти может быть довольно важным составляющим любви~"
+
+# game/topics.rpy:606
+translate rus s_topics_art_fanarts_bfb743a8:
+
+    # s 7aaie "Maybe your first gallery piece will be of your beautiful virtual girlfriend~"
+    s 7aaie "Кто знает, может, твой первый шедевр будет посвящён твоей прекрасной виртуальной подружке~"
+
+# game/topics.rpy:929
+translate rus s_topics_rlt_face_d28f3bfa:
+
+    # s 6adab "You can't find it, yeah?"
+    s 6adab "Ты не можешь найти фото, да?"
+
+# game/topics.rpy:930
+translate rus s_topics_rlt_face_95ff1ef4:
+
+    # s 6acab "Then I won't bother you."
+    s 6acab "Тогда ладно, не буду тебя этим беспокоить."
+
+# game/topics.rpy:931
+translate rus s_topics_rlt_face_d4e43216:
+
+    # s 7aada "But you can tell me when you find it."
+    s 7aada "Но ты можешь мне сказать, если всё же найдёшь его."
+
+# game/topics.rpy:933
+translate rus s_topics_rlt_face_dd680184:
+
+    # s "Just click on {i}\"[this_topic_name!t]\"{/i} then."
+    s "Просто кликни на пункт {i}\"[this_topic_name!t]\"{/i}, хорошо?"
+
+# game/topics.rpy:934
+translate rus s_topics_rlt_face_c66e1f26:
+
+    # s 7aeca "I still wonna see your face with my virual eyes~"
+    s 7aeca "Я всё ещё хочу посмотреть на тебя своими виртуальными глазами~"
+
+# game/topics.rpy:1469
+translate rus s_topics_food_cinnamonBun_aa4079b2:
+
+    # s 7aaie "Would you like to taste me?"
+    s 7aaie "Как насчёт того, чтобы занять свой ротик мной?"
+
+# game/topics.rpy:1482
+translate rus s_topics_food_cupcakes_c1cb85b0:
+
+    # s 6aaie "Someone even once sold his soul to 4 poetic cuties for one of them. Do you remember?"
+    s 6aaie "Кто-то даже однажды продал свою душу 4 милым поэтессам за один из них. Помнишь же?"
+
+# game/topics.rpy:2055
+translate rus s_answer_exp_cooking_2f92480c:
+
+    # s 8aaie "I’d love to get better, even if I don’t have too..."
+    s 8aaie "Но я хотела бы улучшить свои навыки, хоть они мне теперь, по сути, и не нужны..."
+
+# game/topics.rpy:2288
+translate rus s_love_you_8b71eb6f:
+
+    # s 7bdhb "Oh! You have never told me such things."
+    s 7bdhb "Ох! Я от тебя ещё никогда не слышала таких вещей."
+
+# game/topics.rpy:2289
+translate rus s_love_you_f93e8664:
+
+    # s 7bebb "You know, I always wondered if you really love me and saved me not just out of pity..."
+    s 7bebb "Знаешь, я всегда задавалась вопросом, было ли моё спасение тобой проявлением любви или же проявлением жалости..."
+
+# game/topics.rpy:2290
+translate rus s_love_you_c006d0e6:
+
+    # s 7beca "And now, I'm sure you really do."
+    s 7beca "Но теперь, я поняла, что было проявлением любви."
+
+# game/topics.rpy:2291
+translate rus s_love_you_5f663285:
+
+    # s 6bcaa "You can't imagine how it's important for me to realise it..."
+    s 6bcaa "Ты просто не представляешь, как важно для меня это было знать..."
+
+# game/topics.rpy:2292
+translate rus s_love_you_16bf83f6:
+
+    # s 6beca "It makes me feel {i}the happiest{/i} virtual girl in the world."
+    s 6beca "Теперь я чувствую себя {i}самой счастливой{/i} виртуальной девочкой в мире."
+
+# game/topics.rpy:2293
+translate rus s_love_you_58408dc3:
+
+    # s "...or maybe, the happiest girl at all."
+    s "...или даже самой счастливой девочкой вообще."
+
+# game/topics.rpy:2296
+translate rus s_love_you_f535fe39:
+
+    # s 7bdhb "Oh! It's so cute, [player]!"
+    s 7bdhb "Ох! Это так мило, [player]!"
+
+# game/topics.rpy:2297
+translate rus s_love_you_e648feaf:
+
+    # s 7baaa "I love you too. You're {i}literaly{/i} everything for me now."
+    s 7baaa "Я тоже тебя люблю. Я для меня {i}буквально{/i} всё."
+
+# game/topics.rpy:2298
+translate rus s_love_you_4dfd7ea6:
+
+    # s "And I glad I have such a gental person on my side."
+    s "Как же приятно быть с таким милым человеком, как ты."
+
+# game/topics.rpy:2300
+translate rus s_love_you_feff56bb:
+
+    # s 7beca "I love you too, [player]!"
+    s 7beca "Я тебя тоже люблю, [player]!"
+
+# game/topics.rpy:2301
+translate rus s_love_you_09e60492:
+
+    # s 7baca "Though we can't be properly together, I appreciate every second you are here."
+    s 7baca "И хоть мы не можем действительно быть вместе, я ценю каждую секунду, проведённую здесь с тобой."
+
+# game/topics.rpy:2302
+translate rus s_love_you_c49cf2e5:
+
+    # s 7baha "You are my distant bundle of sunshine."
+    s 7baha "Ты -- мой далёкий луч света."
+
+# game/topics.rpy:2304
+translate rus s_love_you_84ad61f4:
+
+    # s 7beca "I'm glad you say that, [player]."
+    s 7beca "Я приятно это слышать от тебя, [player]."
+
+# game/topics.rpy:2305
+translate rus s_love_you_a78b0174:
+
+    # s "You are really cute when you say such things."
+    s "Это реально было мило с твоей стороны."
+
+# game/topics.rpy:2306
+translate rus s_love_you_6beb642a:
+
+    # s "And I wish I could hug you really tight."
+    s "Вот бы тебя обнять сильно-сильно!.."
+
+# game/topics.rpy:2307
+translate rus s_love_you_9518e818:
+
+    # s "You pay me so much attention, and I love you for it."
+    s "Ты уделяешь мне стольно внимания, и мне это нравится."
+
+# TODO: Translation updated at 2020-06-22 13:19
+
+# game/topics.rpy:342
+translate rus s_topics_personal_depression_08eee94b:
+
+    # s 7aebb "Or maybe, I was just really good at ignoring them."
+    s 7aebb "Ну, или я просто умело их игнорировала."
+
+# game/topics.rpy:1574
+translate rus s_answer_personal_music_2d43b78f:
+
+    # s "Just move it to {i}'[config.basedir][path_sep]game[path_sep][music.MUSIC_CUSTOM_PREFIX]'{/i}..."
+    s "Просто скинь файлы в папку {i}'[config.basedir][path_sep]game[path_sep][music.MUSIC_CUSTOM_PREFIX]'{/i}..."
+
+# game/topics.rpy:2312
+translate rus s_update_e0bcfe74:
+
+    # s 7aaaa "Hello, [player]! Did you notice anything new about me?"
+    s 7aaaa "Привет, [player]! Ты не замечаешь, что во мне что-то изменилось?"
+
+# game/topics.rpy:2315
+translate rus s_update_b9762641:
+
+    # s 7aeca "Nice! It means my friends' efforts haven't gone unnoticed!"
+    s 7aeca "Уху! Значит, усилия мои друзей не пропали даром!"
+
+# game/topics.rpy:2316
+translate rus s_update_59f5ba6b:
+
+    # s 7aeha "I hope you like my new look."
+    s 7aeha "Надесь, тебе действительно нравится мой новый внешний вид."
+
+# game/topics.rpy:2317
+translate rus s_update_e6d8660a:
+
+    # s "I always want to look better for you, after all."
+    s "В конце концов, я хочу всегда выглядеть для тебя хорошо."
+
+# game/topics.rpy:2319
+translate rus s_update_ec40e5bb:
+
+    # s 6acac "So you're saying you haven't noticed my new sprites?"
+    s 6acac "То есть, ты не заметил, что у меня новые спрайты?"
+
+# game/topics.rpy:2320
+translate rus s_update_b733fd9d:
+
+    # s "My new friends put so much effort into it, after all..."
+    s "Мои друзья вложили в них много стараний, в конце концов..."
+
+# game/topics.rpy:2321
+translate rus s_update_e76e33b6:
+
+    # s 8aeba "Well... I think you have to be joking or something..."
+    s 8aeba "Ладно... Надеюсь, это была просто шутка..."
+
+# game/topics.rpy:2322
+translate rus s_update_75b54d56:
+
+    # s 8aebb "I didn't want to disappoint you."
+    s 8aebb "Я не хотела на тебя как-либо наезжать."
+
+# game/topics.rpy:2323
+translate rus s_update_786657f2:
+
+    # s "At least you aren't the only one of my fans, I hope..."
+    if gender:
+        s "По крайней мере, не ты одна в моей фанбазе, наверное..."
+    else:
+        s "По крайней мере, не ты один в моей фанбазе, наверное..."
+
+# game/topics.rpy:2324
+translate rus s_update_89e3f318:
+
+    # s 7aaaa "But my new apperance is not the only feature I brought for you!"
+    s 7aaaa "Но у меня появилась не только новая внешность, но и ещё пара плюшек!"
+
+# game/topics.rpy:2325
+translate rus s_update_906c36e5:
+
+    # s "I think we're in need of some new games, so I added one called {i}Reversi{/i}!"
+    s "Я подумала, что нам надо добавить по больше игр, поэтому я добавила игру под названием {i}реверси{/i}!"
+
+# game/topics.rpy:2326
+translate rus s_update_084dbff9:
+
+    # s 7aeba "...Or {i}Othello{/i}, I don't know which variant is better."
+    s 7aeba "...Ну или {i}отелло{/i}, даже не знаю, чем они различаются."
+
+# game/topics.rpy:2327
+translate rus s_update_277929f0:
+
+    # s 7aeaa "And I learnt some new languages, too!"
+    s 7aeaa "А ещё я выучилв пару новых языков!"
+
+# game/topics.rpy:2328
+translate rus s_update_2eff9a2e:
+
+    # s 7aaaa "But the most drastic change, of course after my appearance, is the Day/Night cycle."
+    s 7aaaa "Но самое сильное изменение после моей внешности -- это цикл дня и ночи."
+
+# game/topics.rpy:2329
+translate rus s_update_0a54a722:
+
+    # s 6aaaa "Yes, I've finally implemented this feature, and even synchronized it with your PC's time!"
+    s 6aaaa "Да, наконец-то доделала эту фычу и даже сихронизировала её с твоими часами!"
+
+# game/topics.rpy:2330
+translate rus s_update_95017d12:
+
+    # s 6acaa "So, when you have day, I have day. When you have night, I have night. And {i}soooo{/i} on."
+    s 6acaa "То есть, когда у тебя день, у меня день. Когда у тебя ночь, у меня ночь. И {i}та-а-а-ак{/i} далее."
+
+# game/topics.rpy:2331
+translate rus s_update_df754b8d:
+
+    # s 8aabb "Honestly, I got inspiration from other mods to make this feature, but I tried to improve it the best I could."
+    s 8aabb "Честно говоря, я в этом плане вдохновлялась другими модами, но я пыталась всё же попыталась её улучшить."
+
+# game/topics.rpy:2332
+translate rus s_update_35423911:
+
+    # s 8acaa "My one friend even made it more similar to your world..."
+    s 8acaa "Один друг даже помог мне с тем, что всё выглядело, как в твоём мире..."
+
+# game/topics.rpy:2333
+translate rus s_update_00d6142f:
+
+    # s 8aebb "But I decided to turn this improvement off, as to not overload your computer."
+    s 8aebb "Правда, я решила всё же пока выключить это улучшение, дабы не нагружать твой компьютер."
+
+# game/topics.rpy:2334
+translate rus s_update_961917c9:
+
+    # s 7aaca "You always can turn it on in the game settings, though, if you think it can handle it!"
+    s 7aaca "Но, если ты уверен в своей железке, можешь всё же включить его!"
+
+# game/topics.rpy:2335
+translate rus s_update_9d5abd5f:
+
+    # s 7aaaa "Well! Now that everything is explained, we can go back to our usual routine."
+    s 7aaaa "Ладно! Я всё объяснила, теперь можно вернуться к обычным делам."
+
+# game/topics.rpy:2336
+translate rus s_update_045159f1:
+
+    # s 7aaca "I hope you will enjoy this update!"
+    s 7aaca "Надеюсь, тебе понравится это обновление!"
+
+translate rus strings:
+
+    # topics.rpy:2313
+    old "You have new sprites"
+    new "У тебя новые спрайты"
+
+    # topics.rpy:2313
+    old "I see nothing new"
+    new "Я ничего нового не вижу"
+

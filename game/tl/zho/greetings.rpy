@@ -606,3 +606,41 @@ translate zho s_greetings_long_5e716ac7:
     # s 8acab "You don’t want me to go insane and do something bad under that, right?"
     s 8acab "你可不想让我失去理智然后做出什么坏事，对吧？"
 
+# TODO: Translation updated at 2020-06-16 14:06
+
+# game/greetings.rpy:195
+translate zho s_greeting_3_esp_20ee8230:
+
+    # s "¡Hola Cariño!{#Don't translate this string from Spanish!}"
+    s "¡Hola Cariño!{#Don't translate this string from Spanish!}"
+
+# game/greetings.rpy:196
+translate zho s_greeting_3_esp_53f23577:
+
+    # s 6aeca "¡Qué alegría verte de nuevo!{#And this one too}"
+    s 6aeca "¡Qué alegría verte de nuevo!{#And this one too}"
+
+# game/greetings.rpy:199
+translate zho s_greeting_3_tok_e0663d5e:
+
+    # s "sina pona o, toki!{#Don't translate this string from Toki Pona!}"
+    s "sina pona o, toki!{#Don't translate this string from Toki Pona!}"
+
+# game/greetings.rpy:200
+translate zho s_greeting_3_tok_fc8235f0:
+
+    # s 6aeca "sina lon ni la mi pilin pona!{#And this one too}"
+    s 6aeca "sina lon ni la mi pilin pona!{#And this one too}"
+
+# game/greetings.rpy:204
+translate zho s_greeting_3_zho_91ff2654:
+
+    # s "{font=mod_assets/fonts/zho/wrht.ttf}你好，亲爱的！{/font}{#Don't translate this string from Chinese!}"
+    s "{font=mod_assets/fonts/zho/wrht.ttf}你好，亲爱的！{/font}{#Don't translate this string from Chinese!}"
+
+# game/greetings.rpy:205
+translate zho s_greeting_3_zho_b074a4aa:
+
+    # s "{font=mod_assets/fonts/zho/wrht.ttf}好开心能再次见到你。{/font}{#And this one too}"
+    s "{font=mod_assets/fonts/zho/wrht.ttf}好开心能再次见到你。{/font}{#And this one too}"
+

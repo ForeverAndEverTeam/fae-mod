@@ -26,3 +26,11 @@ translate rus strings:
     old "Toki Pona"
     new "Токипона"
 
+# TODO: Translation updated at 2020-05-23 23:03
+
+translate rus strings:
+
+    # langs.rpy:20
+    old "Chinese"
+    new "Китайский"
+

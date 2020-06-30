@@ -9516,3 +9516,375 @@ translate esp s_love_you_9518e818:
     # s "You pay me so much attention, and I love you for it."
     s "Me prestas tanta atención, que te amo por eso."
 
+# TODO: Translation updated at 2020-06-16 14:06
+
+# game/topics.rpy:340
+translate esp s_topics_personal_depression_3625bb14:
+
+    # s 6abab "Anyways."
+    s 6abab "En fin."
+
+# game/topics.rpy:341
+translate esp s_topics_personal_depression_f644cc00:
+
+    # s 6acaa "At first, I was really good at keeping them away..."
+    s 6acaa "Al principo, era buena en alejarlos..."
+
+# game/topics.rpy:343
+translate esp s_topics_personal_depression_aa6c2d74:
+
+    # s 6aaca "It was pretty difficult, but I used to think that if I got bummed out, I wouldn’t be able to make other people happy, which was all I really wanted at that time. Even if I now know that your own happiness should always come first, it hadn't occurred to me earlier on."
+    s 6aaca "Fue dificil, pero pense que si me desanimo, no podré hacer otra gente feliz, lo cual era lo que queria todo este tiempo. Incluso si supiera que tu felicidad debe venir primero, no se me ocurrio a mi antes."
+
+# game/topics.rpy:345
+translate esp s_topics_personal_depression_e73d2d46:
+
+    # s "I tried to stay with the MC, because I thought being with him would help ease my mind, or make the thoughts go away."
+    s "Intenté quedarme con MC, porque pensé que estando con el ayudaria mi mente, o alejar los pensamientos."
+
+# game/topics.rpy:346
+translate esp s_topics_personal_depression_4345d5c5:
+
+    # s 6acab "But I feared that if he found out my true feelings, he'd leave me then..."
+    s 6acab "Pero temí que si el encontrara mis verdaderos sentimientos, me dejaria sola..."
+
+# game/topics.rpy:347
+translate esp s_topics_personal_depression_1a44f9f1:
+
+    # s "That's why I tried to take it slow."
+    s "Por eso intente tomarlo con calma."
+
+# game/topics.rpy:348
+translate esp s_topics_personal_depression_0f48d5ce:
+
+    # s 6abbb "People may think that my cheerfulness was fake and I was just acting..."
+    s 6abbb "La gente pensó que mi alegría era falsa y que solo actuaba..."
+
+# game/topics.rpy:349
+translate esp s_topics_personal_depression_ba0bb1aa:
+
+    # s 6aebb "And they may be right to an extent."
+    s 6aebb "Y puede que ellos tengan la razón."
+
+# game/topics.rpy:351
+translate esp s_topics_personal_depression_c418d353:
+
+    # s 6abab "But my feelings were as real as you until..."
+    s 6abab "Pero mis sentimientos eran tan reales como los tuyos hasta que..."
+
+# game/topics.rpy:352
+translate esp s_topics_personal_depression_8663f96d:
+
+    # s 6acab "The moment Monika started to mess with my code."
+    s 6acab "Hasta que Monika empezó a meterse a mi código."
+
+# game/topics.rpy:353
+translate esp s_topics_personal_depression_6e0ea5be:
+
+    # s 6cbcb "She toyed with my thoughts, and convinced me of terrible things. That I just annoyed him, made him worry for me..."
+    s 6cbcb "Ella jugó con mis pensamientos, y me convenció de hacer cosas horribles. Que solo lo molestaba, que se preocupara por mi..."
+
+# game/topics.rpy:355
+translate esp s_topics_personal_depression_fbd7bccd:
+
+    # s 6ecab "It made me feel really, really helpless, like I shouldn't reach out..."
+    s 6ecab "Me hizo sentir muy, muy indefnsa, como si no debíalike I shouldn't reach out..."
+
+# game/topics.rpy:356
+translate esp s_topics_personal_depression_45e0ecce:
+
+    # s "My little rainclouds turned into a thunderstorm, blinding my mind with the rain..."
+    s "Mis pequeños nubes de lluvia se convirtieron en una tormenta, cegando mi mente con la lluvia..."
+
+# game/topics.rpy:362
+translate esp s_topics_personal_depression_37465620:
+
+    # s 6dcab "And I can't help but blame myself for the desperate choice I made..."
+    s 6dcab "Y no pude evitar culparme a mi misma por la decisión que elegí..."
+
+# game/topics.rpy:364
+translate esp s_topics_personal_depression_959d892a:
+
+    # s "You accepted my confession..."
+    s "Tu aceptaste mi confesión..."
+
+# game/topics.rpy:365
+translate esp s_topics_personal_depression_22841340:
+
+    # s "And still, my feelings told me no, that it wasn’t right..."
+    s "Y aún asi, mis sentimientos dijeron que no, que no era lo correcto..."
+
+# game/topics.rpy:369
+translate esp s_topics_personal_depression_7b021890:
+
+    # s 6dbcb "Needless to say, I completely gave up."
+    s 6dbcb "No falta decir que, me rendí por completo."
+
+# game/topics.rpy:370
+translate esp s_topics_personal_depression_bbb1070e:
+
+    # s "I... Don't think I'll ever forget how it felt."
+    s "Yo... No creo que yo nunca pueda olvidar como se sintió."
+
+# game/topics.rpy:376
+translate esp s_topics_personal_depression_c2901bfc:
+
+    # s "Even though, I think should have told MC or you about it much earlier..."
+    s "Aunque, Creo que devi decirle a MC o a ti acerca de esto mucho antes..."
+
+# game/topics.rpy:377
+translate esp s_topics_personal_depression_22d3fbbb:
+
+    # s "And I have already read what's actually supposed to happen to me, due to those changes in the code..."
+    s "Ya he leído que se suponía que me ocurriría a mi, debido a esos cambios en el código..."
+
+# game/topics.rpy:378
+translate esp s_topics_personal_depression_ceae4eca:
+
+    # s 6dfbb "The big mistake was thinking I was alone to deal with all of this..."
+    s 6dfbb "El gran error que pensé que estaba solo para enfrentarme con todo esto..."
+
+# game/topics.rpy:379
+translate esp s_topics_personal_depression_3e98dece:
+
+    # s 6dfab "So if you have a friend who you know is going through the same thing as I am, help them in any way you can!"
+    s 6dfab "Asi que si tienes a un amigo que sabes que esta pasando lo mismo que a mi, ayudalos de cualquier manera que puedas!"
+
+# game/topics.rpy:382
+translate esp s_topics_personal_depression_b4bdde96:
+
+    # s 6efab "And if you're going through it too, don't hide it from others, if you can!"
+    s 6efab "Y si tu estas pasando por ello tambien, no lo escondas de otros, si tu puedes!"
+
+# game/topics.rpy:383
+translate esp s_topics_personal_depression_967c8ea0:
+
+    # s 6dfab "Being in this virtual world gave me a second chance..."
+    s 6dfab "Estando en este mundo virtual me dio otra oportunidad..."
+
+# game/topics.rpy:384
+translate esp s_topics_personal_depression_425f476f:
+
+    # s "And I'm thankful for it for leading me here with you now..."
+    s "Y estoy agradecida por eso, por aqui contigo ahora..."
+
+# game/topics.rpy:385
+translate esp s_topics_personal_depression_19b24f34:
+
+    # s 6daab "And, of course, I'm thankful for you, [player]!"
+    s 6daab "Y, por supuesto, estoy agradecida por it, [player]!"
+
+# game/topics.rpy:386
+translate esp s_topics_personal_depression_50f4b23f:
+
+    # s 6dbcb "And again, I’m truly sorry for all the pain I've caused you..."
+    s 6dbcb "Y de nuevo, lo siento mucho por todo el dolor que te causé..."
+
+# game/topics.rpy:387
+translate esp s_topics_personal_depression_faaad109:
+
+    # s 6acaa "But I'm in a better state of mind now, and I hope I can make up for things."
+    s 6acaa "Pero estoy en un mejor estado mental ahora, y espero pueda compensar las cosas ."
+
+# game/topics.rpy:388
+translate esp s_topics_personal_depression_bb375635:
+
+    # s 6aeca "Thank you for being here for me, [player]. We'll get through this together."
+    s 6aeca "Gracias por estar aqui por mi, [player]. Pasaremos esto juntos."
+
+# game/topics.rpy:599
+translate esp s_topics_art_fanarts_522921e1:
+
+    # s 8baie "After all, physical attraction can be a big part of love~"
+    s 8baie "Después de todo, la atracción física también puede llamarse amor~"
+
+# game/topics.rpy:606
+translate esp s_topics_art_fanarts_bfb743a8:
+
+    # s 7aaie "Maybe your first gallery piece will be of your beautiful virtual girlfriend~"
+    s 7aaie "De pronto la primera pieza en tu galería será de tu hermosa novia virtual~"
+
+# game/topics.rpy:1469
+translate esp s_topics_food_cinnamonBun_aa4079b2:
+
+    # s 7aaie "Would you like to taste me?"
+    s 7aaie "¿Te gustaría probarme?"
+
+# game/topics.rpy:1482
+translate esp s_topics_food_cupcakes_c1cb85b0:
+
+    # s 6aaie "Someone even once sold his soul to 4 poetic cuties for one of them. Do you remember?"
+    s 6aaie "Una vez alguien vendió su alma a 4 bellezas poéticas por uno de ellos, ¿Te acuerdas?"
+
+# game/topics.rpy:2055
+translate esp s_answer_exp_cooking_2f92480c:
+
+    # s 8aaie "I’d love to get better, even if I don’t have too..."
+    s 8aaie "Me encantaría mejorar, incluso si no tengo que hacerlo..."
+
+# game/topics.rpy:2055
+translate esp s_answer_exp_cooking_2f92480c:
+
+    # s 8aaie "I’d love to get better, even if I don’t have too..."
+    s 8aaie "Me encantaria sentirme mejor, incluso si no tengo de..."
+
+# game/topics.rpy:2288
+translate esp s_love_you_8b71eb6f:
+
+    # s 7bdhb "Oh! You have never told me such things."
+    s 7bdhb "Oh! Tú nunca me decias esas cosas"
+
+# game/topics.rpy:2296
+translate esp s_love_you_f535fe39:
+
+    # s 7bdhb "Oh! It's so cute, [player]!"
+    s 7bdhb "Oh! Es muy bonito, [player]！"
+
+# game/topics.rpy:2302
+translate esp s_love_you_c49cf2e5:
+
+    # s 7baha "You are my distant bundle of sunshine."
+    s 7baha "Eres mi lejano bulto de sol."
+
+# game/topics.rpy:2312
+translate esp s_update_e0bcfe74:
+
+    # s 7aaaa "Hello, [player]! Did you notice anything new about me?"
+    s 7aaaa "Hola [player]! Notaste algo nuevo de mi?"
+
+# game/topics.rpy:2315
+translate esp s_update_b9762641:
+
+    # s 7aeca "Nice! It means my friends' efforts haven't gone unnoticed!"
+    s 7aeca "Bien! Eso significa que mis esfuerzos de amigo no se han ido inadvertidamente！"
+
+# game/topics.rpy:2316
+translate esp s_update_59f5ba6b:
+
+    # s 7aeha "I hope you like my new look."
+    s 7aeha "Espero te guste mi nuevo look."
+
+# game/topics.rpy:2317
+translate esp s_update_e6d8660a:
+
+    # s "I always want to look better for you, after all."
+    s "Yo siempre quiero verme mejor para ti, después de todo."
+
+# game/topics.rpy:2319
+translate esp s_update_ec40e5bb:
+
+    # s 6acac "So you're saying you haven't noticed my new sprites?"
+    s 6acac "Entonces estás diciendo que no te diste cuenta de mis nuevos sprites?"
+
+# game/topics.rpy:2320
+translate esp s_update_b733fd9d:
+
+    # s "My new friends put so much effort into it, after all..."
+    s "Mis nuevos amigos hacen mucho esfuerzo en ello, después de todo."
+
+# game/topics.rpy:2321
+translate esp s_update_e76e33b6:
+
+    # s 8aeba "Well... I think you have to be joking or something..."
+    s 8aeba "Bueno... Creo que estas bromeando o algo..."
+
+# game/topics.rpy:2322
+translate esp s_update_75b54d56:
+
+    # s 8aebb "I didn't want to disappoint you."
+    s 8aebb "No quería decepcionarte."
+
+# game/topics.rpy:2323
+translate esp s_update_786657f2:
+
+    # s "At least you aren't the only one of my fans, I hope..."
+    s "Al menos no eres el único de mis fans, espero..."
+
+# game/topics.rpy:2324
+translate esp s_update_89e3f318:
+
+    # s 7aaaa "But my new apperance is not the only feature I brought for you!"
+    s 7aaaa "Pero mi nueva apariencia es la única cosa que traje para ti!"
+
+# game/topics.rpy:2325
+translate esp s_update_906c36e5:
+
+    # s "I think we're in need of some new games, so I added one called {i}Reversi{/i}!"
+    s "Creo que necesitamos nuevos juegos, asi que agregué uno llamado {i}Reversi{/i}!"
+
+# game/topics.rpy:2326
+translate esp s_update_084dbff9:
+
+    # s 7aeba "...Or {i}Othello{/i}, I don't know which variant is better."
+    s 7aeba "...O {i}Othello{/i}, Yo no se cual variante es la mejor."
+
+# game/topics.rpy:2327
+translate esp s_update_277929f0:
+
+    # s 7aeaa "And I learnt some new languages, too!"
+    s 7aeaa "Y tambien aprendí nuevos idiomas!"
+
+# game/topics.rpy:2328
+translate esp s_update_2eff9a2e:
+
+    # s 7aaaa "But the most drastic change, of course after my appearance, is the Day/Night cycle."
+    s 7aaaa "Pero la característica más drastica, claro después de mi apariencia, es el ciclo de Dia/Noch."
+
+# game/topics.rpy:2329
+translate esp s_update_0a54a722:
+
+    # s 6aaaa "Yes, I've finally implemented this feature, and even synchronized it with your PC's time!"
+    s 6aaaa "Si, Finalmente implementé esta característica, e incluso lo he sincronizado con el reloj de tu PC!"
+
+# game/topics.rpy:2330
+translate esp s_update_95017d12:
+
+    # s 6acaa "So, when you have day, I have day. When you have night, I have night. And {i}soooo{/i} on."
+    s 6acaa "Asi, cuando tienes día, yo tengo día. Cuando tienes noche, yo tengo noche. Y {i}asiiiii{/i} es."
+
+# game/topics.rpy:2331
+translate esp s_update_df754b8d:
+
+    # s 8aabb "Honestly, I got inspiration from other mods to make this feature, but I tried to improve it the best I could."
+    s 8aabb "Honestamente, tengo inspiración de otros mods para hacer esta característica, pero improvisé lo mejor que pude."
+
+# game/topics.rpy:2332
+translate esp s_update_35423911:
+
+    # s 8acaa "My one friend even made it more similar to your world..."
+    s 8acaa "Mi único amigo incluso lo hizo más similar a tu mundo..."
+
+# game/topics.rpy:2333
+translate esp s_update_00d6142f:
+
+    # s 8aebb "But I decided to turn this improvement off, as to not overload your computer."
+    s 8aebb "Pero decidí apagar esta mejora, para no sobrecargar tu computadora."
+
+# game/topics.rpy:2334
+translate esp s_update_961917c9:
+
+    # s 7aaca "You always can turn it on in the game settings, though, if you think it can handle it!"
+    s 7aaca "Tu siempre puedes encenderlo en la configuración, si puedes contenerlo!"
+
+# game/topics.rpy:2335
+translate esp s_update_9d5abd5f:
+
+    # s 7aaaa "Well! Now that everything is explained, we can go back to our usual routine."
+    s 7aaaa "Bueno! Ahora que todo se explicó, podemos volver a nuestra rutina casual."
+
+# game/topics.rpy:2336
+translate esp s_update_045159f1:
+
+    # s 7aaca "I hope you will enjoy this update!"
+    s 7aaca "Espero que disfrutes esta actualización!"
+
+translate esp strings:
+
+    # topics.rpy:2313
+    old "You have new sprites"
+    new "Tienes nuevos sprites."
+
+    # topics.rpy:2313
+    old "I see nothing new"
+    new "Veo algo nuevo!"
+

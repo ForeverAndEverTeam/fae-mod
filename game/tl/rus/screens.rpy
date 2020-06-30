@@ -206,3 +206,27 @@ translate rus strings:
     old "Talk Delay"
     new "Задержка между монологами"
 
+# TODO: Translation updated at 2020-05-23 23:03
+
+translate rus strings:
+
+    # screens.rpy:999
+    old "Day/Night Cycle"
+    new "Цикл дня и ночи"
+
+    # screens.rpy:1000
+    old "Smooth{#D/N Cycle}"
+    new "Плавный"
+
+    # screens.rpy:1001
+    old "Smooth D/N cycle is imperfect and may take a lot of resources.\nAre you sure you want to turn it on?"
+    new "Плавная смена дня и ночи несовершенна и может снизнить производительность.\nВы уверены, что хотите включить её?"
+
+    # screens.rpy:1003
+    old "On"
+    new "Вкл."
+
+    # screens.rpy:1004
+    old "Off (Always day)"
+    new "Выкл. (Всегда день)"
+

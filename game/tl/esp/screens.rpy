@@ -201,10 +201,20 @@ translate esp strings:
     new "Ciclo Día/Noche"
 
     old "Smooth"
-    new "Cambio Progresivo"
+    new "Progresivo"
 
     old "On"
-    new "Encendido"
+    new "Activado"
 
     old "Off (Always day)"
-    new "Apagado (Siempre de día)"
+    new "Apagado (Siempre de día)"# TODO: Translation updated at 2020-05-23 23:30
+
+translate esp strings:
+
+    # screens.rpy:1002
+    old "Smooth{#D/N Cycle}"
+    new "Cambio Progresivo"
+
+    # screens.rpy:1003
+    old "Smooth D/N cycle is imperfect and may take a lot of resources.\nAre you sure you want to turn it on?"
+    new "Ciclo D/N progresivo es imperfecto y puede usar muchos recursos.\¿Estás seguro de que quieres activarlo?"

@@ -1175,3 +1175,35 @@ translate zho strings:
 
     old "Sayori"
     new "纱世里"
+# TODO: Translation updated at 2020-06-16 14:06
+
+translate zho strings:
+
+    # _developer\developer.rpym:49
+    old "Theme Test"
+    new "Theme Test"
+
+    # _developer\developer.rpym:57
+    old "Show Image Load Log"
+    new "Show Image Load Log"
+
+    # _developer\developer.rpym:60
+    old "Hide Image Load Log"
+    new "Hide Image Load Log"
+
+    # 00gltest.rpy:64
+    old "Graphics Acceleration"
+    new "Graphics Acceleration"
+
+    # _errorhandling.rpym:523
+    old "Copy"
+    new "Copy"
+
+    # _errorhandling.rpym:525
+    old "Copies the traceback.txt file to the clipboard."
+    new "Copies the traceback.txt file to the clipboard."
+
+    # _errorhandling.rpym:644
+    old "Copies the errors.txt file to the clipboard."
+    new "Copies the errors.txt file to the clipboard."
+

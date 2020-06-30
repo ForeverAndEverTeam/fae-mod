@@ -198,3 +198,26 @@ translate zho strings:
     old "Skipping"
     new "快进中"
 
+# TODO: Translation updated at 2020-06-16 14:06
+
+translate zho strings:
+
+    # screens.rpy:1001
+    old "Day/Night Cycle"
+    new "日夜循环"
+
+    # screens.rpy:1002
+    old "Smooth{#D/N Cycle}"
+    new "平滑切换{#D/N Cycle}"
+
+    # screens.rpy:1003
+    old "Smooth D/N cycle is imperfect and may take a lot of resources.\nAre you sure you want to turn it on?"
+    new "平滑切换功能并不完善，可能会占用大量系统资源。\n你确定要开启吗？"
+
+    # screens.rpy:1005
+    old "On"
+    new "开启"
+
+    # screens.rpy:1006
+    old "Off (Always day)"
+    new "关闭（永远白天）"

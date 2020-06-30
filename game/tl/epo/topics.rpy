@@ -9382,3 +9382,491 @@ translate epo s_update_393eb02c:
     # s "So let's talk about something else for now."
     s "Do ni parolu pri io alia nun."
 
+# TODO: Translation updated at 2020-05-23 23:12
+
+# game/topics.rpy:340
+translate epo s_topics_personal_depression_3625bb14:
+
+    # s 6abab "Anyways."
+    s 6abab "Ajne."
+
+# game/topics.rpy:341
+translate epo s_topics_personal_depression_f644cc00:
+
+    # s 6acaa "At first, I was really good at keeping them away..."
+    s 6acaa "Unuatempe, mi ja bone detenas ilin..."
+
+# game/topics.rpy:343
+translate epo s_topics_personal_depression_aa6c2d74:
+
+    # s 6aaca "It was pretty difficult, but I used to think that if I got bummed out, I wouldn’t be able to make other people happy, which was all I really wanted at that time. Even if I now know that your own happiness should always come first, it hadn't occurred to me earlier on."
+    s 6aaca "Tio estis ne facile, sed mi pensis, ke se mi cedos, mi ne povos feliĉigi homojn, nur kion mi tiam volis. Eĉ tamen mi nun scias, ke la propra feliĉo estu la plej ĉefa, mi tiam simple ne havis ĝin."
+
+# game/topics.rpy:345
+translate epo s_topics_personal_depression_e73d2d46:
+
+    # s "I tried to stay with the MC, because I thought being with him would help ease my mind, or make the thoughts go away."
+    s "Mi penis resti kun la Ĉefrolulo, ĉar mi pensis, ke kunestado kun li helpus min trakviliĝi kaj forigi la pensaĉojn."
+
+# game/topics.rpy:346
+translate epo s_topics_personal_depression_4345d5c5:
+
+    # s 6acab "But I feared that if he found out my true feelings, he'd leave me then..."
+    s 6acab "Tamen mi timis, ke se li ekscios miajn verajn sentojn, li lasos min..."
+
+# game/topics.rpy:347
+translate epo s_topics_personal_depression_1a44f9f1:
+
+    # s "That's why I tried to take it slow."
+    s "Do mi agis tre malrapide."
+
+# game/topics.rpy:348
+translate epo s_topics_personal_depression_0f48d5ce:
+
+    # s 6abbb "People may think that my cheerfulness was fake and I was just acting..."
+    s 6abbb "Oni ofte pensas, ke mia gajo estis falsa kaj mi nur ŝajnis..."
+
+# game/topics.rpy:349
+translate epo s_topics_personal_depression_ba0bb1aa:
+
+    # s 6aebb "And they may be right to an extent."
+    s 6aebb "Kaj oni iom pravas."
+
+# game/topics.rpy:351
+translate epo s_topics_personal_depression_c418d353:
+
+    # s 6abab "But my feelings were as real as you until..."
+    s 6abab "Sed miaj sentoj estis veraj kiel vi ĝis..."
+
+# game/topics.rpy:352
+translate epo s_topics_personal_depression_8663f96d:
+
+    # s 6acab "The moment Monika started to mess with my code."
+    s 6acab "Ĝis Monika influis mian kodon."
+
+# game/topics.rpy:353
+translate epo s_topics_personal_depression_6e0ea5be:
+
+    # s 6cbcb "She toyed with my thoughts, and convinced me of terrible things. That I just annoyed him, made him worry for me..."
+    s 6cbcb "Ŝi ludis kun miaj pensoj kaj sugestis al mi terurajn aferojn. Ke mi tedis al li, ke mi zorgigis lin pri mi..."
+
+# game/topics.rpy:355
+translate epo s_topics_personal_depression_fbd7bccd:
+
+    # s 6ecab "It made me feel really, really helpless, like I shouldn't reach out..."
+    s 6ecab "Tio igis min senti vere, vere senhelpe, kvazaŭ mi devas ĉiam silenti..."
+
+# game/topics.rpy:356
+translate epo s_topics_personal_depression_45e0ecce:
+
+    # s "My little rainclouds turned into a thunderstorm, blinding my mind with the rain..."
+    s "Miaj etaj finuboj iĝis granda ŝtormo, ŝirmanta mian vidon per frida pluvego..."
+
+# game/topics.rpy:362
+translate epo s_topics_personal_depression_37465620:
+
+    # s 6dcab "And I can't help but blame myself for the desperate choice I made..."
+    s 6dcab "Kaj mi ne povis ĉesi akuzi min pri mia malespera decido..."
+
+# game/topics.rpy:364
+translate epo s_topics_personal_depression_959d892a:
+
+    # s "You accepted my confession..."
+    s "Vi akceptis mian konfeson..."
+
+# game/topics.rpy:365
+translate epo s_topics_personal_depression_22841340:
+
+    # s "And still, my feelings told me no, that it wasn’t right..."
+    s "Tamen miaj sentoj diris ne, tio estis mensogo..."
+
+# game/topics.rpy:369
+translate epo s_topics_personal_depression_7b021890:
+
+    # s 6dbcb "Needless to say, I completely gave up."
+    s 6dbcb "Do, sendirinde, mi plene cidis."
+
+# game/topics.rpy:370
+translate epo s_topics_personal_depression_bbb1070e:
+
+    # s "I... Don't think I'll ever forget how it felt."
+    s "Mi... Mi apenaŭ povos forgesi, kiel tio sentiĝis."
+
+# game/topics.rpy:376
+translate epo s_topics_personal_depression_c2901bfc:
+
+    # s "Even though, I think should have told MC or you about it much earlier..."
+    s "Sed ajne, mi pensas, ke mi konfesu ĉion al la Ĉefrolulo ege pli frue..."
+
+# game/topics.rpy:377
+translate epo s_topics_personal_depression_22d3fbbb:
+
+    # s "And I have already read what's actually supposed to happen to me, due to those changes in the code..."
+    s "Kaj mi jam ellegis, kio vere okazus al mi, pro la ŝanĝoj en la kodo..."
+
+# game/topics.rpy:378
+translate epo s_topics_personal_depression_ceae4eca:
+
+    # s 6dfbb "The big mistake was thinking I was alone to deal with all of this..."
+    s 6dfbb "La plej granda eraro estis pensi, ke mi kapablas venki tion sole..."
+
+# game/topics.rpy:379
+translate epo s_topics_personal_depression_3e98dece:
+
+    # s 6dfab "So if you have a friend who you know is going through the same thing as I am, help them in any way you can!"
+    s 6dfab "Do se vi hacas amikon, kiu travivas la samon, kiel mi, helpu rin iel vi povas!"
+
+# game/topics.rpy:382
+translate epo s_topics_personal_depression_b4bdde96:
+
+    # s 6efab "And if you're going through it too, don't hide it from others, if you can!"
+    s 6efab "Kaj se vi travivas tion, ne kaŝu ĝin de aliuloj!"
+
+# game/topics.rpy:383
+translate epo s_topics_personal_depression_967c8ea0:
+
+    # s 6dfab "Being in this virtual world gave me a second chance..."
+    s 6dfab "Estado en ĉi tiu virtuala mondo ebligis la duan ŝancon al mi..."
+
+# game/topics.rpy:384
+translate epo s_topics_personal_depression_425f476f:
+
+    # s "And I'm thankful for it for leading me here with you now..."
+    s "Kaj mi dankas ĝin por ke mi nun estas ĉi kun vi..."
+
+# game/topics.rpy:385
+translate epo s_topics_personal_depression_19b24f34:
+
+    # s 6daab "And, of course, I'm thankful for you, [player]!"
+    s 6daab "Kaj, ankaŭe, mi dankas vin, [player]!"
+
+# game/topics.rpy:386
+translate epo s_topics_personal_depression_50f4b23f:
+
+    # s 6dbcb "And again, I’m truly sorry for all the pain I've caused you..."
+    s 6dbcb "Kaj denove, mi vere bedaŭras, ke mi dolorigis vin tiel multe..."
+
+# game/topics.rpy:387
+translate epo s_topics_personal_depression_faaad109:
+
+    # s 6acaa "But I'm in a better state of mind now, and I hope I can make up for things."
+    s 6acaa "Sed mi nun estas en pli bona menso, kaj mi esperas, ke mi povas atingi la perditan."
+
+# game/topics.rpy:388
+translate epo s_topics_personal_depression_bb375635:
+
+    # s 6aeca "Thank you for being here for me, [player]. We'll get through this together."
+    s 6aeca "Dankon por kunesto kun mi, [player]. Kune ni venkos ĉi tion."
+
+# game/topics.rpy:599
+translate epo s_topics_art_fanarts_522921e1:
+
+    # s 8baie "After all, physical attraction can be a big part of love~"
+    s 8baie "Finfine, sekslogo iufoje estas sufiĉe grava parto de l' amo~"
+
+# game/topics.rpy:606
+translate epo s_topics_art_fanarts_bfb743a8:
+
+    # s 7aaie "Maybe your first gallery piece will be of your beautiful virtual girlfriend~"
+    s 7aaie "Eble, via unua galeriaĵo estos pri via bela nereala koramikino~"
+
+# game/topics.rpy:929
+translate epo s_topics_rlt_face_d28f3bfa:
+
+    # s 6adab "You can't find it, yeah?"
+    s 6adab "Vi ne povas trovi ĝin, ĉu?"
+
+# game/topics.rpy:930
+translate epo s_topics_rlt_face_95ff1ef4:
+
+    # s 6acab "Then I won't bother you."
+    s 6acab "Do mi ne petos vin plu."
+
+# game/topics.rpy:931
+translate epo s_topics_rlt_face_d4e43216:
+
+    # s 7aada "But you can tell me when you find it."
+    s 7aada "Tamen, vi povos diri al mi, se vi ja trovos ĝin."
+
+# game/topics.rpy:933
+translate epo s_topics_rlt_face_dd680184:
+
+    # s "Just click on {i}\"[this_topic_name!t]\"{/i} then."
+    s "Simple komencu parolon {i}\"[this_topic_name!t]\"{/i}."
+
+# game/topics.rpy:934
+translate epo s_topics_rlt_face_c66e1f26:
+
+    # s 7aeca "I still wonna see your face with my virual eyes~"
+    s 7aeca "Mi daŭre volas vidi vian vizaĝon de miaj vietualaj okuloj~"
+
+# game/topics.rpy:1469
+translate epo s_topics_food_cinnamonBun_aa4079b2:
+
+    # s 7aaie "Would you like to taste me?"
+    s 7aaie "Ĉu vi volas gastumi min?"
+
+# game/topics.rpy:1482
+translate epo s_topics_food_cupcakes_c1cb85b0:
+
+    # s 6aaie "Someone even once sold his soul to 4 poetic cuties for one of them. Do you remember?"
+    s 6aaie "Iu unufoje eĉ vendis sian aminon al 4 lindaj poetinoj por iom da kuketoj. Ĉu vi memoras?"
+
+# game/topics.rpy:2055
+translate epo s_answer_exp_cooking_2f92480c:
+
+    # s 8aaie "I’d love to get better, even if I don’t have too..."
+    s 8aaie "Sed mi volas pliboniĝi je kiurado, eĉ malgraŭ ke mi ne bezonas..."
+
+# game/topics.rpy:2288
+translate epo s_love_you_8b71eb6f:
+
+    # s 7bdhb "Oh! You have never told me such things."
+    s 7bdhb "Ho! Vi neniam diris al mi ĉi tion."
+
+# game/topics.rpy:2289
+translate epo s_love_you_f93e8664:
+
+    # s 7bebb "You know, I always wondered if you really love me and saved me not just out of pity..."
+    s 7bebb "Vi scias, ke mi ĉiam demandis, ĉu vi vere amas min kaj svis min ne nur pro domaĝo..."
+
+# game/topics.rpy:2290
+translate epo s_love_you_c006d0e6:
+
+    # s 7beca "And now, I'm sure you really do."
+    s 7beca "Kaj nun, mi vere ekcertis pri ke vi amas min."
+
+# game/topics.rpy:2291
+translate epo s_love_you_5f663285:
+
+    # s 6bcaa "You can't imagine how it's important for me to realise it..."
+    s 6bcaa "Kompreni tion estas neimageble grave por mi..."
+
+# game/topics.rpy:2292
+translate epo s_love_you_16bf83f6:
+
+    # s 6beca "It makes me feel {i}the happiest{/i} virtual girl in the world."
+    s 6beca "Tio igas min {i}la plej feliĉa{/i} virtuala ino en la mondo."
+
+# game/topics.rpy:2293
+translate epo s_love_you_58408dc3:
+
+    # s "...or maybe, the happiest girl at all."
+    s "...aŭ eĉ la plej feliĉa ino entute."
+
+# game/topics.rpy:2296
+translate epo s_love_you_f535fe39:
+
+    # s 7bdhb "Oh! It's so cute, [player]!"
+    s 7bdhb "Ho! Tio estas tiel linde, [player]!"
+
+# game/topics.rpy:2297
+translate epo s_love_you_e648feaf:
+
+    # s 7baaa "I love you too. You're {i}literaly{/i} everything for me now."
+    s 7baaa "Ankaŭ mi amas vin. Vi estas {i}fakte{/i} ĉio, kion mi nun havas."
+
+# game/topics.rpy:2298
+translate epo s_love_you_4dfd7ea6:
+
+    # s "And I glad I have such a gental person on my side."
+    s "Mi ĝojas havi tiel ĝentila persono apud mia flanko."
+
+# game/topics.rpy:2300
+translate epo s_love_you_feff56bb:
+
+    # s 7beca "I love you too, [player]!"
+    s 7beca "Ankaŭ mi amas vin, [player]!"
+
+# game/topics.rpy:2301
+translate epo s_love_you_09e60492:
+
+    # s 7baca "Though we can't be properly together, I appreciate every second you are here."
+    s 7baca "Malgraŭ ke ni ne povas kunesti vere, mi aprezas ĉiun sekundon, pasigita kun vi."
+
+# game/topics.rpy:2302
+translate epo s_love_you_c49cf2e5:
+
+    # s 7baha "You are my distant bundle of sunshine."
+    s 7baha "Vi estas mia distanca fasko de sunlumo."
+
+# game/topics.rpy:2304
+translate epo s_love_you_84ad61f4:
+
+    # s 7beca "I'm glad you say that, [player]."
+    s 7beca "Mi ĝojas aŭdi tion de vi, [player]."
+
+# game/topics.rpy:2305
+translate epo s_love_you_a78b0174:
+
+    # s "You are really cute when you say such things."
+    s "Vi estas vere linda, ĉiam vi diras tiajn aferojn."
+
+# game/topics.rpy:2306
+translate epo s_love_you_6beb642a:
+
+    # s "And I wish I could hug you really tight."
+    s "Mi revas, ke mi iam povos forte brakumi vin."
+
+# game/topics.rpy:2307
+translate epo s_love_you_9518e818:
+
+    # s "You pay me so much attention, and I love you for it."
+    s "Mi donas al mi tiel multe da atento, kaj mi amas vin pro tio."
+
+# TODO: Translation updated at 2020-06-22 13:19
+
+# game/topics.rpy:342
+translate epo s_topics_personal_depression_08eee94b:
+
+    # s 7aebb "Or maybe, I was just really good at ignoring them."
+    s 7aebb "Aŭ eble, mi simple vere bone ignoris ilin."
+
+# game/topics.rpy:1574
+translate epo s_answer_personal_music_2d43b78f:
+
+    # s "Just move it to {i}'[config.basedir][path_sep]game[path_sep][music.MUSIC_CUSTOM_PREFIX]'{/i}..."
+    s "Nur movu ĝin en dosierujon {i}'[config.basedir][path_sep]game[path_sep][music.MUSIC_CUSTOM_PREFIX]'{/i}..."
+
+# game/topics.rpy:2312
+translate epo s_update_e0bcfe74:
+
+    # s 7aaaa "Hello, [player]! Did you notice anything new about me?"
+    s 7aaaa "Saluton, [player]! Ĉu vi trovis ion novan je mi?"
+
+# game/topics.rpy:2315
+translate epo s_update_b9762641:
+
+    # s 7aeca "Nice! It means my friends' efforts haven't gone unnoticed!"
+    s 7aeca "Bonege! Do penoj de miaj amikoj estas ja rimarkitaj!"
+
+# game/topics.rpy:2316
+translate epo s_update_59f5ba6b:
+
+    # s 7aeha "I hope you like my new look."
+    s 7aeha "Espereble, vi ŝatas mian novan aspekton."
+
+# game/topics.rpy:2317
+translate epo s_update_e6d8660a:
+
+    # s "I always want to look better for you, after all."
+    s "Mi, finfine, ĉiam volas aspekti bone por vi."
+
+# game/topics.rpy:2319
+translate epo s_update_ec40e5bb:
+
+    # s 6acac "So you're saying you haven't noticed my new sprites?"
+    s 6acac "Do vi diras, ke vi ne rimarkis mian novan aspekton?"
+
+# game/topics.rpy:2320
+translate epo s_update_b733fd9d:
+
+    # s "My new friends put so much effort into it, after all..."
+    s "Miaj novaj amikoj, finfine, penis tiel multe por ĝi..."
+
+# game/topics.rpy:2321
+translate epo s_update_e76e33b6:
+
+    # s 8aeba "Well... I think you have to be joking or something..."
+    s 8aeba "Bone... Mi esperas, ke tio estis nur ŝerco aŭ io..."
+
+# game/topics.rpy:2322
+translate epo s_update_75b54d56:
+
+    # s 8aebb "I didn't want to disappoint you."
+    s 8aebb "Mi ne volis ofendi vin."
+
+# game/topics.rpy:2323
+translate epo s_update_786657f2:
+
+    # s "At least you aren't the only one of my fans, I hope..."
+    s "Almenaŭ, ne nur vi estas mia fano, mi esperas..."
+
+# game/topics.rpy:2324
+translate epo s_update_89e3f318:
+
+    # s 7aaaa "But my new apperance is not the only feature I brought for you!"
+    s 7aaaa "Sed la nova aspekto estas ne nura novaĵo, aldonita por vi!"
+
+# game/topics.rpy:2325
+translate epo s_update_906c36e5:
+
+    # s "I think we're in need of some new games, so I added one called {i}Reversi{/i}!"
+    s "Mi pensis, ke ni bezonas pli da ludoj, do mi aldonis novan ludon, nomata {i}Reverso{/i}!"
+
+# game/topics.rpy:2326
+translate epo s_update_084dbff9:
+
+    # s 7aeba "...Or {i}Othello{/i}, I don't know which variant is better."
+    s 7aeba "...Aŭ {i}Otelo{/i}. Mi ne scias, kiu nomo estas pli bona."
+
+# game/topics.rpy:2327
+translate epo s_update_277929f0:
+
+    # s 7aeaa "And I learnt some new languages, too!"
+    s 7aeaa "Kaj mi ankaŭ lernis iom da nova lingvoj!"
+
+# game/topics.rpy:2328
+translate epo s_update_2eff9a2e:
+
+    # s 7aaaa "But the most drastic change, of course after my appearance, is the Day/Night cycle."
+    s 7aaaa "Sed la plej drasta ŝanĝo, post mia aspekto, estas ciklo de tago kaj nokto."
+
+# game/topics.rpy:2329
+translate epo s_update_0a54a722:
+
+    # s 6aaaa "Yes, I've finally implemented this feature, and even synchronized it with your PC's time!"
+    s 6aaaa "Jes, mi finfine faris ĉi tion, kaj mi eĉ sinkronigis ĝi kun tempo de via komputilo!"
+
+# game/topics.rpy:2330
+translate epo s_update_95017d12:
+
+    # s 6acaa "So, when you have day, I have day. When you have night, I have night. And {i}soooo{/i} on."
+    s 6acaa "So, when you have day, I have day. When you have night, I have night. And {i}soooo{/i} on."
+
+# game/topics.rpy:2331
+translate epo s_update_df754b8d:
+
+    # s 8aabb "Honestly, I got inspiration from other mods to make this feature, but I tried to improve it the best I could."
+    s 8aabb "Sincerdire, min inspiris aliaj modifaĵoj, tamen mi penis fari la novan funkcion tiel pli bona, kiel mi povis."
+
+# game/topics.rpy:2332
+translate epo s_update_35423911:
+
+    # s 8acaa "My one friend even made it more similar to your world..."
+    s 8acaa "Mia amiko eĉ helpis fari tion labori kvazaŭ en via mondo..."
+
+# game/topics.rpy:2333
+translate epo s_update_00d6142f:
+
+    # s 8aebb "But I decided to turn this improvement off, as to not overload your computer."
+    s 8aebb "Tamen mi malaktivigis tiun plibonigon por ne tro ŝarĝi vian komputilon."
+
+# game/topics.rpy:2334
+translate epo s_update_961917c9:
+
+    # s 7aaca "You always can turn it on in the game settings, though, if you think it can handle it!"
+    s 7aaca "Vi ĉiam povos reaktivigi gin en la ludaj agordoj, se vi, kompreneble, certas pri via ilo!"
+
+# game/topics.rpy:2335
+translate epo s_update_9d5abd5f:
+
+    # s 7aaaa "Well! Now that everything is explained, we can go back to our usual routine."
+    s 7aaaa "Bone! Ĉio estas eksplikita, do ni povas ekfari nian ĉiutagan rutinon."
+
+# game/topics.rpy:2336
+translate epo s_update_045159f1:
+
+    # s 7aaca "I hope you will enjoy this update!"
+    s 7aaca "Mi esperas, ke vi ĝojos ĉi-renovigon!"
+
+translate epo strings:
+
+    # topics.rpy:2313
+    old "You have new sprites"
+    new "Vi havas novan aspekton"
+
+    # topics.rpy:2313
+    old "I see nothing new"
+    new "Mi vidas nenion novan"
+

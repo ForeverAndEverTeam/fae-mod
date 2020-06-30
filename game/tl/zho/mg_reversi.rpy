@@ -170,3 +170,17 @@ translate zho strings:
     old "Undo (Z)"
     new "撤销操作(Z)"
 
+# TODO: Translation updated at 2020-06-16 14:06
+
+# game/mg_reversi.rpy:460
+translate zho mg_reversi_s_comment_7bf389f7:
+
+    # s 6adha "Uh! We seem to share the board in half..."
+    s 6adha "Uh! We seem to share the board in half..."
+
+# game/mg_reversi.rpy:464
+translate zho mg_reversi_s_comment_3c24509e:
+
+    # s 6aeha "Hey, we have the same number of disks, you know?"
+    s 6aeha "Hey, we have the same number of disks, you know?"
+

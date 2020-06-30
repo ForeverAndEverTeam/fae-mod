@@ -8706,3 +8706,375 @@ translate zho strings:
 
     old "{i}Clean Sayori's memory{/i}"
     new "{i}清除纱世里的记忆{/i}"
+# TODO: Translation updated at 2020-06-16 14:06
+
+# game/topics.rpy:340
+translate zho s_topics_personal_depression_3625bb14:
+
+    # s 6abab "Anyways."
+    s 6abab "总之。"
+
+# game/topics.rpy:341
+translate zho s_topics_personal_depression_f644cc00:
+
+    # s 6acaa "At first, I was really good at keeping them away..."
+    s 6acaa "刚开始我很擅长把它们驱散开……"
+
+# game/topics.rpy:343
+translate zho s_topics_personal_depression_aa6c2d74:
+
+    # s 6aaca "It was pretty difficult, but I used to think that if I got bummed out, I wouldn’t be able to make other people happy, which was all I really wanted at that time. Even if I now know that your own happiness should always come first, it hadn't occurred to me earlier on."
+    s 6aaca "这样做对我很难，但我一直想着，如果我沮丧了就不能让其他人开心起来，我不能让这种事发生。我现在知道你的开心是最重要的，但我那时候还是没想到这点。"
+
+# game/topics.rpy:345
+translate zho s_topics_personal_depression_e73d2d46:
+
+    # s "I tried to stay with the MC, because I thought being with him would help ease my mind, or make the thoughts go away."
+    s "我试着和男主在一起，因为我想着跟他在一起会消除我的那些想法，或者至少驱散掉它们。"
+
+# game/topics.rpy:346
+translate zho s_topics_personal_depression_4345d5c5:
+
+    # s 6acab "But I feared that if he found out my true feelings, he'd leave me then..."
+    s 6acab "但我又害怕他会发现我真实的感受，然后离我而去……"
+
+# game/topics.rpy:347
+translate zho s_topics_personal_depression_1a44f9f1:
+
+    # s "That's why I tried to take it slow."
+    s "所以这就是为什么我要拖着这些事情。"
+
+# game/topics.rpy:348
+translate zho s_topics_personal_depression_0f48d5ce:
+
+    # s 6abbb "People may think that my cheerfulness was fake and I was just acting..."
+    s 6abbb "人们会想我的快乐只是虚假的，而我只是在演戏……"
+
+# game/topics.rpy:349
+translate zho s_topics_personal_depression_ba0bb1aa:
+
+    # s 6aebb "And they may be right to an extent."
+    s 6aebb "而且他们在某种程度上还说对了。"
+
+# game/topics.rpy:351
+translate zho s_topics_personal_depression_c418d353:
+
+    # s 6abab "But my feelings were as real as you until..."
+    s 6abab "但是我的感受和你一样是真实的，直到……"
+
+# game/topics.rpy:352
+translate zho s_topics_personal_depression_8663f96d:
+
+    # s 6acab "The moment Monika started to mess with my code."
+    s 6acab "直到莫妮卡开始扰乱我的代码。"
+
+# game/topics.rpy:353
+translate zho s_topics_personal_depression_6e0ea5be:
+
+    # s 6cbcb "She toyed with my thoughts, and convinced me of terrible things. That I just annoyed him, made him worry for me..."
+    s 6cbcb "她玩弄着我的思想，让我屈服于那些可怕的东西。然后我觉得自己打扰到了他，让他这么担心我……"
+
+# game/topics.rpy:355
+translate zho s_topics_personal_depression_fbd7bccd:
+
+    # s 6ecab "It made me feel really, really helpless, like I shouldn't reach out..."
+    s 6ecab "这让我觉得非常，非常无助，就像是我就不应该伸手求助……"
+
+# game/topics.rpy:356
+translate zho s_topics_personal_depression_45e0ecce:
+
+    # s "My little rainclouds turned into a thunderstorm, blinding my mind with the rain..."
+    s "我脑子里的乌云变成黑暗的暴风雨，淋湿了我的思维……"
+
+# game/topics.rpy:362
+translate zho s_topics_personal_depression_37465620:
+
+    # s 6dcab "And I can't help but blame myself for the desperate choice I made..."
+    s 6dcab "我无法停止责备自己，为了自己做出的绝望选择……"
+
+# game/topics.rpy:364
+translate zho s_topics_personal_depression_959d892a:
+
+    # s "You accepted my confession..."
+    s "即使你接受了我的告白……"
+
+# game/topics.rpy:365
+translate zho s_topics_personal_depression_22841340:
+
+    # s "And still, my feelings told me no, that it wasn’t right..."
+    s "我的感觉仍然告诉我有些事情不对劲……"
+
+# game/topics.rpy:369
+translate zho s_topics_personal_depression_7b021890:
+
+    # s 6dbcb "Needless to say, I completely gave up."
+    s 6dbcb "不用说，我完全放弃了。"
+
+# game/topics.rpy:370
+translate zho s_topics_personal_depression_bbb1070e:
+
+    # s "I... Don't think I'll ever forget how it felt."
+    s "我……我想我不会忘记那种感觉。"
+
+# game/topics.rpy:376
+translate zho s_topics_personal_depression_c2901bfc:
+
+    # s "Even though, I think should have told MC or you about it much earlier..."
+    s "虽然我想，我应该早点把这件事告诉男主或者你……"
+
+# game/topics.rpy:377
+translate zho s_topics_personal_depression_22d3fbbb:
+
+    # s "And I have already read what's actually supposed to happen to me, due to those changes in the code..."
+    s "而且因为那些代码的改变，我早知道接下来我身上会发生什么……"
+
+# game/topics.rpy:378
+translate zho s_topics_personal_depression_ceae4eca:
+
+    # s 6dfbb "The big mistake was thinking I was alone to deal with all of this..."
+    s 6dfbb "最大的错误就是我相信自己可以解决这一切……"
+
+# game/topics.rpy:379
+translate zho s_topics_personal_depression_3e98dece:
+
+    # s 6dfab "So if you have a friend who you know is going through the same thing as I am, help them in any way you can!"
+    s 6dfab "所以如果你有认识的朋友正在遭受像我一样的苦难，无论如何一定要帮帮他们！"
+
+# game/topics.rpy:382
+translate zho s_topics_personal_depression_b4bdde96:
+
+    # s 6efab "And if you're going through it too, don't hide it from others, if you can!"
+    s 6efab "还有，如果你也被抑郁症折磨着，就不要瞒着别人了！"
+
+# game/topics.rpy:383
+translate zho s_topics_personal_depression_967c8ea0:
+
+    # s 6dfab "Being in this virtual world gave me a second chance..."
+    s 6dfab "在这个游戏世界里我有第二次机会……"
+
+# game/topics.rpy:384
+translate zho s_topics_personal_depression_425f476f:
+
+    # s "And I'm thankful for it for leading me here with you now..."
+    s "所以感谢它，现在能让我这样陪着你……"
+
+# game/topics.rpy:385
+translate zho s_topics_personal_depression_19b24f34:
+
+    # s 6daab "And, of course, I'm thankful for you, [player]!"
+    s 6daab "当然，我也要感谢你，[player]！"
+
+# game/topics.rpy:386
+translate zho s_topics_personal_depression_50f4b23f:
+
+    # s 6dbcb "And again, I’m truly sorry for all the pain I've caused you..."
+    s 6dbcb "还有，再次为我给你带来的痛苦抱歉……"
+
+# game/topics.rpy:387
+translate zho s_topics_personal_depression_faaad109:
+
+    # s 6acaa "But I'm in a better state of mind now, and I hope I can make up for things."
+    s 6acaa "但我现在的状态好些了，我也希望我能给你补偿些什么。"
+
+# game/topics.rpy:388
+translate zho s_topics_personal_depression_bb375635:
+
+    # s 6aeca "Thank you for being here for me, [player]. We'll get through this together."
+    s 6aeca "谢谢你在这儿陪着我，[player]。我们会共同渡过难关的。"
+
+# game/topics.rpy:599
+translate zho s_topics_art_fanarts_522921e1:
+
+    # s 8baie "After all, physical attraction can be a big part of love~"
+    s 8baie "毕竟身体上的吸引也是爱情的重要部分~"
+
+# game/topics.rpy:606
+translate zho s_topics_art_fanarts_bfb743a8:
+
+    # s 7aaie "Maybe your first gallery piece will be of your beautiful virtual girlfriend~"
+    s 7aaie "也许你画出的第一个名作就是你的虚拟女友~"
+
+# game/topics.rpy:1469
+translate zho s_topics_food_cinnamonBun_aa4079b2:
+
+    # s 7aaie "Would you like to taste me?"
+    s 7aaie "想尝尝我的味道吗？"
+
+# game/topics.rpy:1482
+translate zho s_topics_food_cupcakes_c1cb85b0:
+
+    # s 6aaie "Someone even once sold his soul to 4 poetic cuties for one of them. Do you remember?"
+    s 6aaie "有人甚至还说过他为了一个人，把灵魂出卖给了四个充满诗意的小可爱。还记得吗？"
+
+# game/topics.rpy:1574
+translate zho s_answer_personal_music_2d43b78f:
+
+    # s "Just move it to {i}'[config.basedir][path_sep]game[path_sep][music.MUSIC_CUSTOM_PREFIX]'{/i}..."
+    s "把音乐文件移到{i}“[config.basedir][path_sep]game[path_sep][music.MUSIC_CUSTOM_PREFIX]”{/i}..."
+
+# game/topics.rpy:2055
+translate zho s_answer_exp_cooking_2f92480c:
+
+    # s 8aaie "I’d love to get better, even if I don’t have too..."
+    s 8aaie "我很乐意练练我的烹饪技能，即使我现在没必要这么做……"
+
+# game/topics.rpy:2288
+translate zho s_love_you_8b71eb6f:
+
+    # s 7bdhb "Oh! You have never told me such things."
+    s 7bdhb "哦！你还从来没跟我说过这种话呢。"
+
+# game/topics.rpy:2296
+translate zho s_love_you_f535fe39:
+
+    # s 7bdhb "Oh! It's so cute, [player]!"
+    s 7bdhb "哦！你真可爱，[player]！"
+
+# game/topics.rpy:2302
+translate zho s_love_you_c49cf2e5:
+
+    # s 7baha "You are my distant bundle of sunshine."
+    s 7baha "你是我天边的一束阳光。"
+
+# game/topics.rpy:2312
+translate zho s_update_e0bcfe74:
+
+    # s 7aaaa "Hello, [player]! Did you notice anything new about me?"
+    s 7aaaa "你好，[player]！ 有注意到关于我的新东西吗？"
+
+# game/topics.rpy:2315
+translate zho s_update_b9762641:
+
+    # s 7aeca "Nice! It means my friends' efforts haven't gone unnoticed!"
+    s 7aeca "太好了！看来我那些伙计们的努力没有白费！"
+
+# game/topics.rpy:2316
+translate zho s_update_59f5ba6b:
+
+    # s 7aeha "I hope you like my new look."
+    s 7aeha "希望你喜欢我的新样子。"
+
+# game/topics.rpy:2317
+translate zho s_update_e6d8660a:
+
+    # s "I always want to look better for you, after all."
+    s "毕竟，我一直都想成为你心里的最美。"
+
+# game/topics.rpy:2319
+translate zho s_update_ec40e5bb:
+
+    # s 6acac "So you're saying you haven't noticed my new sprites?"
+    s 6acac "所以你还没注意到我的新立绘吗？"
+
+# game/topics.rpy:2320
+translate zho s_update_b733fd9d:
+
+    # s "My new friends put so much effort into it, after all..."
+    s "毕竟我那些伙计们真的在立绘上下了很多工夫……"
+
+# game/topics.rpy:2321
+translate zho s_update_e76e33b6:
+
+    # s 8aeba "Well... I think you have to be joking or something..."
+    s 8aeba "嗯……我想你应该是在开玩笑什么的吧……"
+
+# game/topics.rpy:2322
+translate zho s_update_75b54d56:
+
+    # s 8aebb "I didn't want to disappoint you."
+    s 8aebb "我不是想让你反感的。"
+
+# game/topics.rpy:2323
+translate zho s_update_786657f2:
+
+    # s "At least you aren't the only one of my fans, I hope..."
+    s "不过至少我希望你不是我唯一的粉丝……"
+
+# game/topics.rpy:2324
+translate zho s_update_89e3f318:
+
+    # s 7aaaa "But my new apperance is not the only feature I brought for you!"
+    s 7aaaa "但我带给你的不仅仅是新的外貌！"
+
+# game/topics.rpy:2325
+translate zho s_update_906c36e5:
+
+    # s "I think we're in need of some new games, so I added one called {i}Reversi{/i}!"
+    s "我想我们需要些新游戏，所以我在游戏菜单里加了个{i}黑白棋{/i}！"
+
+# game/topics.rpy:2326
+translate zho s_update_084dbff9:
+
+    # s 7aeba "...Or {i}Othello{/i}, I don't know which variant is better."
+    s 7aeba "……或者说{i}奥赛罗棋{/i}, 我不知道哪种叫法更好些。"
+
+# game/topics.rpy:2327
+translate zho s_update_277929f0:
+
+    # s 7aeaa "And I learnt some new languages, too!"
+    s 7aeaa "我还学了些新语言呢！"
+
+# game/topics.rpy:2328
+translate zho s_update_2eff9a2e:
+
+    # s 7aaaa "But the most drastic change, of course after my appearance, is the Day/Night cycle."
+    s 7aaaa "不过新版本最大的改变，当然除了我的外貌以外，就是“日夜循环”功能。"
+
+# game/topics.rpy:2329
+translate zho s_update_0a54a722:
+
+    # s 6aaaa "Yes, I've finally implemented this feature, and even synchronized it with your PC's time!"
+    s 6aaaa "嗯，我终于做好了这个功能，甚至还让它跟你电脑上的时间同步了！"
+
+# game/topics.rpy:2330
+translate zho s_update_95017d12:
+
+    # s 6acaa "So, when you have day, I have day. When you have night, I have night. And {i}soooo{/i} on."
+    s 6acaa "所以，当你这边是白天时，我这里就是白天。你这边是晚上时，我这边就是晚上。还有{i}好多好多{/i}功能呢。"
+
+# game/topics.rpy:2331
+translate zho s_update_df754b8d:
+
+    # s 8aabb "Honestly, I got inspiration from other mods to make this feature, but I tried to improve it the best I could."
+    s 8aabb "说实话，我做的这些功能是从其它mod里得到的灵感，但我做得已经尽力了。"
+
+# game/topics.rpy:2332
+translate zho s_update_35423911:
+
+    # s 8acaa "My one friend even made it more similar to your world..."
+    s 8acaa "我的一个好伙计甚至还把这个日夜循环功能，做得更像你这边的世界……"
+
+# game/topics.rpy:2333
+translate zho s_update_00d6142f:
+
+    # s 8aebb "But I decided to turn this improvement off, as to not overload your computer."
+    s 8aebb "但我还是关掉了那个功能，这样你的电脑就不会卡到炸了。"
+
+# game/topics.rpy:2334
+translate zho s_update_961917c9:
+
+    # s 7aaca "You always can turn it on in the game settings, though, if you think it can handle it!"
+    s 7aaca "当然，你可以打开它，要是你的电脑能受得住的话！"
+
+# game/topics.rpy:2335
+translate zho s_update_9d5abd5f:
+
+    # s 7aaaa "Well! Now that everything is explained, we can go back to our usual routine."
+    s 7aaaa "好了！新功能我都解释完了，我们可以继续走我们的路线啦。"
+
+# game/topics.rpy:2336
+translate zho s_update_045159f1:
+
+    # s 7aaca "I hope you will enjoy this update!"
+    s 7aaca "希望你喜欢这次更新！"
+
+translate zho strings:
+
+    # topics.rpy:2313
+    old "You have new sprites"
+    new "你有新立绘了"
+
+    # topics.rpy:2313
+    old "I see nothing new"
+    new "没注意到"
+

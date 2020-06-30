@@ -30,3 +30,11 @@ translate epo strings:
     old "Toki Pona"
     new "Tokipono"
 
+# TODO: Translation updated at 2020-05-23 23:12
+
+translate epo strings:
+
+    # langs.rpy:20
+    old "Chinese"
+    new "Chinese"
+
