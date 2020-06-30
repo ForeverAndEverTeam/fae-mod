@@ -10,8 +10,7 @@ image m_sticker down = "gui/poemgame/m_sticker_2.png"
 
 image cookies = "mod_assets/images/stuff/cookies.png"
 image cookies_d = "mod_assets/images/stuff/cookies_d.png"
-image sayori cookie = "mod_assets/images/s_new/body/withcookie.png"
-image sayori cookie_biten = "mod_assets/images/s_new/body/withcookie_biten.png"
+image sayori cookie = "mod_assets/images/s_newer/body/withcookie.png"
 
 init -5 python:
     if persistent.seen_topics is None:
@@ -1449,9 +1448,10 @@ label s_topics_food_cookies:
     s 8aaca "But I can feed him like a little baby, if you want. I guess it'd look cute from your view."
     menu:
         "Why not?":
-            show sayori cookie at ss1
+            show sayori cookieaaca at ss1
             s "OK! Then I'll try to see if I can. I think I could make him move his jaw."
-            show sayori cookie_biten at ss1
+            show sayori cookieaeaa
+            #show sayori cookie_biten at ss1
             s "It works! He's chewing it..."
             pause 5
             show sayori 6aeca at ss1

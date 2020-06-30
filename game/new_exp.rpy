@@ -1,10 +1,10 @@
 init -9 python:
     #Arms
     arm_range = [str(x) for x in range(6, 10)]
-    arm_range.append("cookie")
     for x in arm_range:
         exp_codes[0][x] = SpriteInfo('arms', x, body_depended = True)
     exp_codes[0]['9'] = SpriteInfo('arms', '9', body_depended = True, allowed = "**{de}**")
+    exp_codes[0]['cookie'] = SpriteInfo('arms', 'cookie', body_depended = True, allowed = "*a**{ab}")
     
     #Skins
     exp_codes[1]['a'] = DummySprite()## Dummy image

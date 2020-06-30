@@ -42,7 +42,9 @@ extra_exp = ( #Add expressions from the Python scripts here
     '7bafa',
     '6afac',
     '6afbc',
-    '7baba'
+    '7baba',
+    'cookieaaca',
+    'cookieaeaa'
 )
 SPR_TEMP = '\d+\w\w\w\w' #Expression sprite name template
 exp = set() #Name buffer for used expression sprite
