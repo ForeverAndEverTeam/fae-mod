@@ -19,7 +19,7 @@ AlexanDDOS
 [vignedev](https://github.com/vignedev)  
 Dan Salvato (original scripts)  
 DDLC Mod Template team ([mod base](https://github.com/Monika-After-Story/DDLCModTemplate))  
-[ElReyZero1201](https://github.com/ElReyZero1201) (small fixes)
+[ElReyZero](https://github.com/ElReyZero) (small fixes)
   
 **Old Sayori Sprite Artists:**  
 *Excluded since 0.4.0*  
@@ -50,7 +50,7 @@ Venus
 **Translators:**  
 AlexanDDOS (Russian, Esperanto & Toki Pona (WIP))  
 [Vova Petelin](https://vk.com/toxin_666) (Russian)  
-ElReyZero1201 (Spanish)  
+ElReyZero (Spanish)  
 [littlebin](https://www.reddit.com/user/lvkaibin) (Chinese)  
 *Read [this](https://github.com/AlexanDDOS/fae-mod/wiki/Translator-Guidelines) if you want to see you here*  
   
