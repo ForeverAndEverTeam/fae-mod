@@ -18,7 +18,8 @@ pack_krom = ( #Filename patterns, skipped by the script
     '.*\.rpa$',
     '.*\.svg$',
     '.*\.xcf$',
-    '*\.zip$',
+    '.*\.psd$',
+    '.*\.zip$',
     '.*_d\.png$',
     './cache',
     './saves',
@@ -34,7 +35,7 @@ pack_krom = ( #Filename patterns, skipped by the script
     './to_proofread.txt',
     './zz_developer\..*',
     './tl/tok/.*',
-    './s_new'
+    './mod_assets/images/s_new/'
 )
 pack_external = (
     "LICENSE",
