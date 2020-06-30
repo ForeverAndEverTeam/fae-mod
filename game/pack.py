@@ -18,6 +18,7 @@ pack_krom = ( #Filename patterns, skipped by the script
     '.*\.rpa$',
     '.*\.svg$',
     '.*\.xcf$',
+    '*\.zip$',
     '.*_d\.png$',
     './cache',
     './saves',
@@ -32,12 +33,12 @@ pack_krom = ( #Filename patterns, skipped by the script
     './pack.py',
     './to_proofread.txt',
     './zz_developer\..*',
-    './tl/tok/.*'
+    './tl/tok/.*',
+    './s_new'
 )
 pack_external = (
     "LICENSE",
     "README.md",
-    "IPGuidelines.md",
     "icon.ico"
 )
 
