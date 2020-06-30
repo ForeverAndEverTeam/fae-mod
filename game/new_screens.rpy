@@ -57,7 +57,7 @@ screen talk_ui():
         # textbutton _("Ask for...") keysym '4' action Function(renpy.call, "s_topicmenu", 4)
         textbutton _("Change information") keysym '5' action Function(renpy.call, "s_pinfo", True)
         if config.developer:
-            textbutton "{i}Clean Sayori's memory{/i}" keysym '0' action [Function(reset_topics), Jump("s_talkmenu")]
+            textbutton _("{i}Developer Tools{/i}") keysym '0' action Function(renpy.call, "s_devmenu")
         textbutton _("Close") keysym '6' action [Hide("talk_ui"), Jump("s_loop")]
 
 screen music_ui(p = 0):
@@ -306,6 +306,47 @@ screen feat_ui():
             textbutton _("Music (M)") xpadding 0 xsize 200 action NullAction()
             textbutton _("Play (P)") xpadding 0 xsize 200 action NullAction()
 
+screen dev_ui():
+    style_prefix "choice"
+    vbox:
+        align (0.1, 0.5)
+        offset (-10, 0)
+
+        textbutton _("Clean Sayori's memory") keysym '1' action Function(reset_topics)
+        textbutton _("Expression Previewer") keysym '2' action Function(renpy.call, "s_exp_previewer")
+        textbutton _("Close") keysym 'c' action [Hide("dev_ui"), Jump("s_loop")]
+
+screen ep_ui():
+    default cat = -1
+    style_prefix "choice"
+    python:
+        ep_cats = [_("Arms"), _("Skin Effects"), _("Mouths"), _("Eyes"), _("Brows")]
+        def ep_change(i, ch = None):
+            global s_mood
+            if ch:
+                s_mood = s_mood[:i] + ch + s_mood[i+1:]
+            show_s_mood(ss2, False, s_mood)
+        ep_warn = _("You need to remove [config.basedir][path_sep]game[path_sep]exp.txt file and reload the game to load all the possible expressions. Press 'Yes' to reload the game.")
+    vbox:
+        align (0.1, 0.5)
+        offset (-10, 0)
+
+        if cat == -1: #Main page
+            for i in range(len(ep_cats)): #Show categories from ep_cats
+                textbutton ep_cats[i] keysym str(i) action SetScreenVariable("cat", i)
+            if exps_optimized:
+                textbutton _("Load more") action Confirm(ep_warn, Function(renpy.reload_script), NullAction())
+            textbutton _("Close") keysym 'c' action [Hide("ep_ui"), Jump("s_loop")]
+        else:
+            $ep_i = 0
+            for k in exp_codes[cat]:
+                if len(k) == 1: #To exclude specified expressions
+                    textbutton (exp_codes[cat][k].name or "{i}[k]{/i}") action Function(ep_change, cat, k):
+                        if ep_i+1 < 10:
+                            keysym str(ep_i+1)
+                    $ep_i += 1
+            textbutton _("Back") keysym 'c' action SetScreenVariable("cat", -1)
+        textbutton _("Current expression: [s_mood]") action Notify(_("Use this code in your lines"))
 
 label s_talkmenu:
     $show_s_mood(ss2, True)
@@ -315,7 +356,7 @@ label s_talkmenu:
     jump s_loop
     
 label s_musicmenu(page = 0):
-    $show_s_mood(ss2, True)
+    $show_s_mood(ss2, True, 'h')
     hide screen feat_ui
     call screen music_ui(page)
     jump s_loop
@@ -348,7 +389,7 @@ label s_customizationmenu():
     jump s_loop
 
 label s_pinfo(jump_to_s_loop = False):
-    $show_s_mood(ss2, True)
+    $show_s_mood(ss2, True, 'h')
     hide screen feat_ui
     call screen pinfo_ui()
     $ persistent.playername = player
@@ -357,3 +398,17 @@ label s_pinfo(jump_to_s_loop = False):
     if jump_to_s_loop:
         jump s_loop
     return
+
+label s_devmenu:
+    hide screen feat_ui
+    hide screen talk_ui
+    call screen dev_ui
+    $justIsSitting = False
+
+label s_exp_previewer:
+    python:
+        show_s_mood(ss2, False, 'h')
+        s_mood = "7aaaa"
+    hide screen feat_ui
+    hide screen dev_ui
+    call screen ep_ui
