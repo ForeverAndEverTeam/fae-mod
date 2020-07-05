@@ -232,7 +232,8 @@ label s_greeting_6:
 #Special greetings
 
 label s_greeting_first(time_of_day):
-    $ bday = (get_now().month == persistent.playerbdate.month and get_now().day == persistent.playerbdate.day)
+    $ bday = same_day(get_now().date(),persistent.playerbdate)
+    $ bday_feb29 = (same_day(persistent.playerbdate, 2, 29) and same_day(get_now().date(), 3, 1))
     $ ee_chance = renpy.random.random()
     
     show sayori 6aaaa at ss1 zorder 2
@@ -276,9 +277,22 @@ label s_greeting_first(time_of_day):
         s 6aaaa "I'm glad you're older by a year."
         if age == 18:
             s "It means we finally are the same age now."
+            s "I can't age, you know, so let's consider I'm always 18."
         s "Don't forget to make a birthday party."
         s 6abaa "...If you don't dislike them, of course."
         s 7aaaa "However, if you have come here, let's spend some time together."
+    elif bday_feb29:
+        $ age = get_now().year - persistent.playerbdate.year
+        s 6aaca "Whose birthday is today?"
+        s 8aebb "Sorry! I forgot you're one of the ones whose birthday is the 29th february."
+        s "I didn't mean to tease you in any way."
+        s "It should be really sad to have a proper birthday only once on 4 years, is it?"
+        s 8acaa "I always wondered how and when people with such a 'lucky' birth date celebrate their BD."
+        s "Maybe, you should have a birthday party right today{nw}, or yesterday."
+        s "I can't know, you know."
+        s 7aeca "Anyway, better later than never."
+        s 7aaaa "So, Happy Birthday, [player]!"
+        s "Happy [age] years!"
     elif time_of_day != 2 and (time_of_day != 1 or ee_chance > 0.1):
         $ chance = renpy.random.random()
         if chance < (1.0/3.0):

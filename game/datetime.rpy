@@ -67,3 +67,9 @@ init -10 python:
     def get_max_day(m, y):
         r = calendar.monthrange(y, m)[1]
         return r
+    
+    def same_day(date1, date2, day = None):
+        if day is None:
+            return same_day(date1, date2.month, date2.day)
+        else:
+            return date1.month == date2 and date1.day == day
