@@ -232,7 +232,7 @@ label s_greeting_6:
 #Special greetings
 
 label s_greeting_first(time_of_day):
-    $ bday = get_now().date() == persistent.playerbdate
+    $ bday = (get_now().month == persistent.playerbdate.month and get_now().day == persistent.playerbdate.day)
     $ ee_chance = renpy.random.random()
     
     show sayori 6aaaa at ss1 zorder 2
