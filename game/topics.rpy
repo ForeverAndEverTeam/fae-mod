@@ -122,7 +122,9 @@ init -5 python:
                 def cond(x):
                     sl = len(persistent.seen_topics)
                     return not (x.seen or x.available is False or x.available > sl)
-                renpy.random.choice(filter(cond, self.topics))()
+                ct = filter(cond, self.topics)
+                if len(ct) > 0:
+                    renpy.random.choice(ct)()
             else:
                 self.topics[topic](*args, **kwargs)
             self.update_seen()
