@@ -125,6 +125,16 @@ init python:
     RANDOM_TOPICS_LIMIT = 8
     RANDOM_TOPICS_BAN_HOURS = 6
     random_topics_banned = None #None = non-banned, [timedate] = banned from
+
+    def version_numbers(s):
+        vn = [0, 0, 0, 0]
+        ss = s.split('.')
+        for i in range(4):
+            try:
+                vn[i] = iny(ss[i])
+            except:
+                break
+        return tuple(vn)
     
 default persistent.lastVersion = config.version
 
@@ -166,7 +176,7 @@ label s_autoload(test = False):
         call s_intro_2
         $persistent.playthrough = 6
     else:
-        if persistent.lastVersion != config.version:
+        if version_numbers(persistent.lastVersion)[:3] != version_numbers(config.version):
             show sayori 7aaaa at ss1
             call s_update(config.version)
             if not test:
