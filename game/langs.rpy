@@ -17,7 +17,7 @@ init -10 python:
     lang_dict["epo"] = GameLang("epo", _("Esperanto"), True, ("Sajori", "Sayori"), "eo"),
     lang_dict["esp"] = GameLang("esp", _("Spanish"), False, ("Sayori", ), "es")
     lang_dict["tok"] = GameLang("tok", _("Toki Pona"), False, ("Sajoli", "Sajowi"), "tok", True)
-    lang_dict["zho"] = GameLang("zho", _("Chinese"), True, ("纱世里", ), "zh", True)
+    lang_dict["zho"] = GameLang("zho", _("Chinese"), True, ("纱世里", ), "zh")
     
     def cur_lang():
         lang = lang_dict.get(_preferences.language) or lang_dict["eng"]
