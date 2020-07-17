@@ -129,11 +129,11 @@ init python:
     def version_numbers(s):
         vn = [0, 0, 0, 0]
         ss = s.split('.')
-        for i in range(4):
+        for i in range(len(ss)):
             try:
-                vn[i] = iny(ss[i])
+                vn[i] = int(ss[i])
             except:
-                break
+                pass
         return tuple(vn)
     
 default persistent.lastVersion = config.version
@@ -176,7 +176,7 @@ label s_autoload(test = False):
         call s_intro_2
         $persistent.playthrough = 6
     else:
-        if version_numbers(persistent.lastVersion)[:3] != version_numbers(config.version):
+        if version_numbers(persistent.lastVersion)[:3] != version_numbers(config.version)[:3]:
             show sayori 7aaaa at ss1
             call s_update(config.version)
             if not test:
