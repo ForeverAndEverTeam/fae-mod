@@ -27,6 +27,9 @@ translate zho style game_menu_label_text:
 translate zho style edited:
     font "mod_assets/fonts/zho/ChineseRobot.ttf"
 
+translate zho style console_text:
+    font "mod_assets/fonts/zho/ChineseRobot.ttf"
+
 translate zho strings:
 
     # renpy/common/00accessibility.rpy:28
