@@ -256,7 +256,8 @@ init 10 python:
             reversi_finish_turn()
     
     def reversi_ai_turn():
-        moves = reversi_best_move(0, 1)[1]#reversi_get_depth())[1]
+        moves = filter(lambda x: x is not None, reversi.selectable)
+        moves = reversi_best_move(0, 5 if len(moves) < 8 else 3)[1]
         if len(moves):
             move = renpy.random.choice(moves)
             reversi.last_move = move
@@ -264,10 +265,10 @@ init 10 python:
         reversi_finish_turn()
 
     
-    def reversi_best_move(party, depth = None, alpha = -64, beta = 64):
+    def reversi_best_move(party, depth = 5, alpha = -64, beta = 64):
         moves = filter(lambda x: x is not None, reversi.selectable)
         if len(moves) == 0 or depth == 0 or sum(reversi.occupied_cells) >= 64:
-            alpha = reversi.occupied_cells[party] - reversi.occupied_cells[0 if party else 1]
+            alpha = reversi.occupied_cells[party] - reversi.occupied_cells[not party] #Turn evaluation
             return alpha, ()
         
         best_moves = []
@@ -275,22 +276,17 @@ init 10 python:
             if alpha >= beta:
                 break
             move.perform()
-            last_player = reversi.players_turn
             reversi_finish_turn(False)
             total_eval = 0
-            if last_player != reversi.players_turn:
-                recursion_result = reversi_best_move(reversi_cur_party(), depth - 1, -beta, -alpha)
-                total_eval = -recursion_result[0]
-            else:
-                recursion_result = reversi_best_move(reversi_cur_party(), depth, alpha, beta)
-                total_eval = recursion_result[0]
+            recursion_result = reversi_best_move(reversi_cur_party(), depth - 1, -beta, -alpha)
+            total_eval = -recursion_result[0]
+            reversi_finish_turn(False)
+            move.undo()
             if total_eval > alpha:
                 best_moves = [move]
                 alpha = total_eval
             elif total_eval == alpha:
                 best_moves.append(move)
-            move.undo()
-            reversi_finish_turn(False)
         return alpha, best_moves
     
     import copy

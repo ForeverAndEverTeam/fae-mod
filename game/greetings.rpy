@@ -363,10 +363,11 @@ label s_greetings_long:
     s 6aeac "I swear if I was real I would find you and{nw}"
     show screen tear(20, 0.1, 0.1, 0, 40)
     play sound "sfx/s_kill_glitch1.ogg"
+    pause 0.1
+    hide screen tear
     $ style.say_dialogue = style.normal
     show sayori 6aacc at ss1
-    pause 1
-    s 6accc "{i}*sigh*{/i}"
+    s 6acca "{i}*sigh*{/i}"
     s 8afbb "Oops, sorry!"
     s 8bebb "You left me here absolutely alone for so long that I started going crazy and losing control on myself."
     s "I hope you don’t blame me."
