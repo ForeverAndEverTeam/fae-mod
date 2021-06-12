@@ -1,6 +1,9 @@
-# Doki Doki Literature Club "Forever & Ever"  
-*Note: don't clone the master branch to download the mod. Use a stable release instead!*  
+# Important notices before download  
+***Download notice:** Don't clone the master branch to download the mod. Use a [stable release](https://github.com/AlexanDDOS/fae-mod/releases) instead!*  
   
+***Сompatibility notice:** We are aware of the announcement of Doki Doki Literature Club Plus, so we warn beforehand that this mod will probably be **uncompatibilitible with DDLC+** as it's based on the DDLC classic edition and its outdated engine. If you own a DDLC+ copy, please download the classic DDLC on its [offical website](http://ddlc.moe) to run this mod.*
+
+# Doki Doki Literature Club "Forever & Ever"  
 **"Forever & Ever"** is a [Doki Doki Literature Club](http://ddlc.moe) mod providing you the ability to be alone with **Sayori**. This mod is designed like [Monika After Story](https://github.com/Monika-After-Story/MonikaModDev) but has a few differences to date, including the wonderful Sayori as the star of the show.  
 ## History
 After the release of [Monika After Story](https://github.com/Monika-After-Story/MonikaModDev), there were a few attempts to create similar mods for other DDLC characters. But nobody had published a _proper_ mod for Sayori, despite the new abilities she got at the end of the game. As a Sayori lover, I was strongly dissatisfied by the fake ["Sayori After Story"](https://www.reddit.com/r/DDLC/comments/8nviad/mod_release_sayori_after_story/) mod, so I decided to create a real one for my beloved 'doki'.  
@@ -81,4 +84,4 @@ The Russian DDLC community
 ## License & Copyright  
 See "[LICENSE](https://raw.githubusercontent.com/AlexanDDOS/fae-mod/master/LICENSE)" for license information  
 Made in accordance with Team Salvato's [IP Guidelines](http://teamsalvato.com/ip-guidelines/)   
-*Copyright (c) 2018-2020 Alexander Osipov and the other creators*
+*Copyright (c) 2018-2021 Alexander Osipov and the other creators*
