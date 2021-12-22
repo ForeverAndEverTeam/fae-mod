@@ -31,7 +31,7 @@ AlexanDDOS (Sprite compositor & editor)
   
 **New Sayori Sprite Artists:**  
 [Orcaramelo](https://github.com/Orcaramelo)  
-[Professor-JMO](https://github.com/Professor-JMO)  
+[Nemu-sus](https://github.com/Nemu-sus)  
 AlexanDDOS (Sprite compositor)  
   
 **Misc Arts & Edits:**  
