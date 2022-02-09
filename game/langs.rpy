@@ -13,7 +13,7 @@ init -10 python:
     
     lang_dict = OrderedDict() #Language list
     lang_dict["eng"] = GameLang(None, _("English"), False, ("Sayori", ), "en"),
-    lang_dict["rus"] = GameLang("rus", _("Russian"), True, ("Саёри", "Сайори")), #Key sould be equal value.code (exp. English)
+    lang_dict["rus"] = GameLang("rus", _("Russian"), True, ("Сайори", "Саёри")), #Key sould be equal value.code (exp. English)
     lang_dict["epo"] = GameLang("epo", _("Esperanto"), True, ("Sajori", "Sayori"), "eo"),
     lang_dict["esp"] = GameLang("esp", _("Spanish"), False, ("Sayori", ), "es")
     lang_dict["tok"] = GameLang("tok", _("Toki Pona"), False, ("Sajoli", "Sajowi"), "tok", True)
@@ -33,7 +33,7 @@ init -10 python:
             lang = lang[0]
         return lang and lang.s_names or get_s_names("eng")
     
-    s_name_list = ["sayori", "sajori", "саёри", "сайори", "саери", "纱世里", "sajoli", "sajowi"] #All known by the mod auther(s) lowercased variants of Sayori's name
+    s_name_list = ["sayori", "sajori", "сайори", "саёри", "саери", "纱世里", "sajoli", "sajowi"] #All known by the mod auther(s) lowercased variants of Sayori's name
     
     def s_text_style(lang = None):
         if not lang:
