@@ -2053,16 +2053,16 @@ label s_answer_exp_fact_5: #The number 4 (I wanted to make this fact #4, but I h
     return 'h'
 
 label s_answer_exp_cooking:
-    s 8aebb "To be honest, scrambled eggs probably the hardest thing I’ve ever cooked..."
-    s 8aaie "I’d love to get better, even if I don’t have too..."
-    s 8acaa "Mainly because I don't get hungry anymore..."
-    s 8aeca "But I can still taste! That means I can eat as much as I want!"
-    s 8aebb "Of course, I could just 'make' food with code, like Nat's cupcakes, but I wanna do something with my own hands..."
+    s 8aebb "To be honest, scrambled eggs are probably the hardest thing I’ve ever cooked..."
+    s 8aaie "I’d love to get better though, even if I don’t have to..."
+    s 8acaa "Mainly because even though I don't get hungry anymore..."
+    s 8aeca "I can still taste! That means I can eat as much as I want!"
+    s 8aebb "I guess if I tried, I could just 'make' food with code, like Natsuki's cupcakes. But I wanna do something with my own hands..."
     s 6acaa "First of all, I need to try to make some kitchenware..."
     s "Then find some recipes online..."
     s "I’ll probably end up following a tutorial or something..."
     s 6abaa "Too bad you won’t be able to taste it, no matter what I do..."
-    s 6aaca "If you could taste it, I would be a good cook for you…!"
+    s 6aaca "If you could taste it, I would try to be a good cook for you…!"
     s 6aebb "Probably not as good as Natsuki was, though..."
     return 'h'
 
