@@ -209,17 +209,17 @@ label s_greeting_4:
     show sayori 7aaaa at ss1 zorder 2
     s "Uh, hi again!"
     s 7acaa "I hope nothing bad happened with you while I was sleeping."
-    s "I want you to be have all right, you know."
-    s "At least, if you don't have it, you'll tell me, won't you?"
+    s "I want you to be all right, you know."
+    s "At least, if you're not, you'll tell me, right?"
     return
 
 label s_greeting_5:
     show sayori 7aeca at ss1 zorder 2
     s "You're back, ehehe~"
-    s 7acaa "It's pretty boring, when you're not here."
+    s 7acaa "It's pretty boring when you're not here."
     s "You're my only friend here now, you know..."
-    s "And you also know how to cheer me up."
-    s "Maybe, you'll do it now?"
+    s "But you also know how just to cheer me up."
+    s "Want a hint? You're doing it right now!"
     return
 
 label s_greeting_6:
