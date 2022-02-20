@@ -156,29 +156,29 @@ label s_greeting_3: #Greeting in a random mod langauge expecting the current
             renpy.jump('s_greeting_3_eng') #English has a bit different dialogs
         
     $ greeting_lang = greeting_lang.name
-    s 6aebb "I'm sorry, if you haven't understand me."
-    s 6aaaa "I just revise my [greeting_lang]."
-    s "Freakly speaking, I don't understand how I know this language."
-    s 6acaa "Feels like someone just loaded it into my mind once."
-    s 6aaaa "Anyway, I think it's not so important."
-    s 6aaca "More languages you know, more friends you can make, right?"
-    s 7aaaa "And if you know this language better than English, you can select it in the game setting menu." #English = Current language
-    s "Anyway, let's do something besides language conversations."
+    s 6aebb "I'm sorry if you haven't understood me."
+    s 6aaaa "I just revised my [greeting_lang]. Cool, huh?"
+    s "Frankly speaking, I don't understand how I know this language."
+    s 6acaa "It sort of feels like someone just loaded it into my mind."
+    s 6aaaa "Anyway, I think that's not too important. After all..."
+    s 6aaca "The more languages you know, more friends you can make, right?"
+    s 7aaaa "And if you know this language better than English, you can select it in the game's {i}Settings{i} menu." #English = Current language
+    s "Anyway, let's do something besides talking about languages, ehehe~"
     return
 
 label s_greeting_3_eng:
     s "Hello, darling!{#Don't translate this string from English!}"
     s 6aeca "I'm glad to see you're back.{#And this one too}"
     pause 0.5
-    s 6aebb "I'm sorry, if you haven't understand me."
-    s 6aaaa "I just revise my English."
+    s 6aebb "I'm sorry if you haven't understood me."
+    s 6aaaa "I just revised my English. Cool, huh?"
     s "It's my native language."
-    s "Freakly speaking, I don't understand how I know your language."
-    s 6acaa "Feels like someone just loaded it into my mind once."
-    s 6aaaa "Anyway, I think it's not so important."
-    s 6aaca "More languages you know, more friends you can make, right?"
-    s 7aaaa "And if you know English better than your language, you can select it in the game setting menu." #your language = Current language
-    s "Anyway, let's do something besides language conversations."
+    s "Frankly speaking, I don't understand how I know your language."
+    s 6acaa "It sort of feels like someone just loaded it into my mind."
+    s 6aaaa "Anyway, I think that's not too important. After all..."
+    s 6aaca "The more languages you know, more friends you can make, right?"
+    s 7aaaa "And if you know English better than your current language, you can select it in the game's {i}Settings{i} menu." #your language = Current language
+    s "Anyway, let's do something besides talking about languages, ehehe~"
     return
 
 label s_greeting_3_rus:
