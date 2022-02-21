@@ -1264,14 +1264,14 @@ label s_topics_game_clones:
     
 label s_topics_game_stars:
     s 7aaaa "I really love to look at the stars..."
-    s 7acaa "They make me think, a lot."
-    s "They also gave me some inspiration while I wrote poems."
-    s 7abbb "So it's a bit of a pity, to know that all this time, the stars I see aren’t real stars."
-    s 7aaca "But I still see something romantic in these bundles of pixels..."
-    s 7aaaa "You can see them through the windows..."
+    s 7acaa "It's so easy to get lost in your thoughts while stargazing."
+    s "They also gave me some inspiration while I wrote poems!"
+    s 7abbb "... So it's kind of a pity, to realize that the stars I see aren’t actually real stars."
+    s 7aaca "Hmm... But real or not, I still see something romantic in those big ol' bundles of pixels."
+    s 7aaaa "Looking out through the classroom windows at those shining nebulas..."
     s 7aaca "They make this place look a bit more special, don't they?"
     s 7aaaa "I wonder if the night sky in your world looks like mine..."
-    s "But I can just look them up on the Internet to see, right?"
+    s "Oh! Maybe I could look up some pictures of real stars online! Then I can see for myself!"
     return
 
 label s_topics_game_parents:
