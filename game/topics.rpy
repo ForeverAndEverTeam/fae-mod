@@ -1489,6 +1489,19 @@ label s_topics_food_cupcakes:
     s "Plus, if I known how to do it, she were already back."
     return 'h'
 
+    label s_topics_lifestyle_boba:
+    s "Hey, [player]. I was just thinking about how Yuri used to make tea for everybody..."
+    s "It was soooo delicious! She had all sorts of flavors--some even tasted fruity!"
+    s "I really enjoyed it, especially while reading. But there's something similar that I {i}really{/i} like."
+    s "Can you guess? It's still a type of tea--and it's very popular these days."
+    s "... Ding ding! If you guessed boba tea, you're correct!"
+    s "There's such a big variety of flavors to choose from. Some of them are as sweet as desserts!"
+    s "And chewing on the boba pearls makes you feel like you're having a snack and a drink {i}at the same time!{/i}"
+    s "Or, if you're not a fan of boba, some places offer jelly or pudding in the bottom instead."
+    s "Talk about two for the price of one, huh? I'd say that's a great deal!"
+    s "I'd love to get some with you someday, [player]!"
+    return
+
 ##Misc
 label s_topics_misc_flowers:
     s 7aaaa "What do you think about flowers?"
