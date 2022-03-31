@@ -36,7 +36,6 @@ label start:
     # To add a character, use the following example below: 
     #   $ mi_name = "Mike". 
     # Don't forget to add the character to 'definitions.rpy'!
-    $ s_name = "???"
     $ m_name = "Girl 3"
     $ n_name = "Girl 2"
     $ y_name = "Girl 1"
@@ -59,6 +58,10 @@ label start:
     ## The Main Part of the Script
     # This is where your script code is called!
     # 'persistent.playthrough' controls the playthrough number the player is on i.e (Act 1, 2, 3, 4)
+    #jump ch30_autoload
+    if persistent.autoload:
+        jump main_idle
+    jump main_idle
     "testing"
     show hiyori
     "testing"
