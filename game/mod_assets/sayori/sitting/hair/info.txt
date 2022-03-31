@@ -1,0 +1,2 @@
+"b" = bow
+"n" = no bow
