@@ -263,17 +263,6 @@ image warning:
     "white" with Dissolve(0.5, alpha=True)
     0.5
 
-# This init python statement checks if the character files are present in-game
-# and writes them to the characters folder depending on the playthrough.
-init python:
-    if not persistent.do_not_delete:
-        if renpy.android:
-            if not os.access(os.environ['ANDROID_PUBLIC'] + "/characters/", os.F_OK):
-                os.mkdir(os.environ['ANDROID_PUBLIC'] + "/characters")
-        else:
-            if not os.access(config.basedir + "/characters/", os.F_OK):
-                os.mkdir(config.basedir + "/characters")
-        restore_all_characters()
 
 ## These images are the background images shown in-game during the disclaimer.
 image tos = "bg/warning.png"

@@ -296,7 +296,27 @@ screen navigation():
 ## http://www.renpy.org/doc/html/screen_special.html#main-menu
 
 screen main_menu():
-
+    python:
+        # Note: 'event_name': callback
+        callbacks = {
+            'ready': readyCallback,
+            'disconnected': disconnectedCallback,
+            'error': errorCallback,
+            }
+        discord_rpc.initialize('951882871289806899', callbacks=callbacks, log=False)
+        start = time.time()
+        print(start)
+        discord_rpc.update_connection()
+        discord_rpc.run_callbacks()
+        discord_rpc.update_presence(
+            **{
+                'details': 'Main Menu',
+                'start_timestamp': start,
+                'large_image_key': 'logo'
+                }
+                )
+        discord_rpc.update_connection()
+        discord_rpc.run_callbacks()
     # This ensures that any other menu screen is replaced.
     tag menu
 
