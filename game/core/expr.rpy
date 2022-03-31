@@ -216,9 +216,9 @@ init 1 python:
     def _auto_gen(exp_code):
         
 
-        disp = realgen(**_exp_renderer("sayori", exp_code))
+        disp = realgen(**_exp_renderer(exp_code))
 
-        renpy.display.image.images[("sayori" + exp_code)] = disp
+        renpy.display.image.images[("sayori", exp_code)] = disp
 
 
 
