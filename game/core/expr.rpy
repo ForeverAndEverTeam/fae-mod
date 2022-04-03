@@ -82,13 +82,33 @@ init python:
         def __str__(self):
             return self.name
 
+
+    class FAETears():
+        d_tears = "d_tears"
+        happy_d_tears = "happy_d_tears"
+        pooled_tears = "pooled_tears"
+        sad_d_tears = "sad_d_tears"
+
+        def __str__(self):
+            return self.name
+
+    class FAEBlush():
+        blushing = "blushing"
+        default_cheeks = "default_cheeks"
+        b = "b"
+
+        def __str__(self):
+            return self.name
+
     def realgen(
         arms,
         arms2,
         eyes,
         hair,
         eyebrows,
-        mouth
+        mouth,
+        blush=None,
+        tears=None
     ):
         """
         """
@@ -97,15 +117,29 @@ init python:
             (0, 0), "{0}{1}/arms/uniform/back-sleeve.png".format(_SAYORI_IMAGES_PATH, pose),
             (0, 0), "{0}{1}/arms/uniform/unknown.png".format(_SAYORI_IMAGES_PATH, pose),
             (0, 0), "{0}{1}/body/1.png".format(_SAYORI_IMAGES_PATH, pose),
+            ]
+
+        if blush:
+            ad_hoc.extend([
+                (0, 0), "{0}{1}/body/blush/{2}.png".format(_SAYORI_IMAGES_PATH, pose, blush),
+            ])
+        ad_hoc.extend([
             (0, 0), _SAYORI_IMAGES_PATH + "table/desk_sh.png",
             (0, 0), _SAYORI_IMAGES_PATH + "table/desk.png",
             (0, 0), "{0}{1}/arms/uniform/{2}.png".format(_SAYORI_IMAGES_PATH, pose, arms),
             (0, 0), "{0}{1}/arms/uniform/{2}.png".format(_SAYORI_IMAGES_PATH, pose, arms2),
             (0, 0), "{0}{1}/eyes/{2}.png".format(_SAYORI_IMAGES_PATH, pose, eyes),
+            ])
+
+        if tears:
+            ad_hoc.extend([
+                (0, 0), "{0}{1}/eyes/{2}.png".format(_SAYORI_IMAGES_PATH, pose, tears),
+            ])
+        ad_hoc.extend([
             (0, 0), "{0}{1}/hair/{2}.png".format(_SAYORI_IMAGES_PATH, pose, hair),
             (0, 0), "{0}{1}/eyebrows/{2}.png".format(_SAYORI_IMAGES_PATH, pose, eyebrows),
             (0, 0), "{0}{1}/mouth/{2}.png".format(_SAYORI_IMAGES_PATH, pose, mouth),
-        ]
+        ])
        
         return renpy.display.layout.LiveComposite(
             *ad_hoc
@@ -173,7 +207,18 @@ init 1 python:
 
     }
 
+    TEARS_DEF = {
+        "a": FAETears.d_tears,
+        "b": FAETears.happy_d_tears,
+        "c": FAETears.pooled_tears,
+        "d": FAETears.sad_d_tears
+    }
 
+    BLUSH_DEF = {
+        "e": FAEBlush.default_cheeks,
+        "f": FAEBlush.blushing,
+        "g": FAEBlush.b
+    }
 
     def _exp_renderer(exp_code):
         if len(exp_code) < 6:
@@ -198,6 +243,21 @@ init 1 python:
         mouth = exp_code[0]
         exp_code = exp_code[1:]
 
+        tears = None
+        blush = None
+
+
+        while exp_code:
+            exp_part = exp_code[0]
+            exp_code = exp_code[1:]
+
+            #Check if part is a tear
+            if exp_part in TEARS_DEF:
+                tears = exp_part
+
+            #Otherwise it might be a blush
+            elif exp_part in BLUSH_DEF:
+                blush = exp_part
 
         return {
 
@@ -206,7 +266,9 @@ init 1 python:
             "arms2": ARMS2_DEF[arms2],
             "eyes": EYES_DEF[eyes],
             "hair": HAIR_DEF[hair],
-            "mouth": MOUTH_DEF[mouth]
+            "mouth": MOUTH_DEF[mouth],
+            "tears": TEARS_DEF.get(tears),
+            "blush": BLUSH_DEF.get(blush)
         }
 
         
@@ -218,9 +280,12 @@ init 1 python:
 
         disp = realgen(**_exp_renderer(exp_code))
 
+        _existing_attr_list = renpy.display.image.image_attributes["sayori"]
+
         renpy.display.image.images[("sayori", exp_code)] = disp
 
-
+        if exp_code not in _existing_attr_list:
+            _existing_attr_list.append(exp_code)
 
     def _find_target_override(self):
         
