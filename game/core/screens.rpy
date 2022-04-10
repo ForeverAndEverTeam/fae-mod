@@ -244,47 +244,47 @@ screen navigation():
 
         spacing gui.navigation_spacing
 
-        if not persistent.autoload or not main_menu:
+        #if not persistent.autoload or not main_menu:
 
-            if main_menu:
+        if main_menu:
 
-                if persistent.playthrough == 1:
-                    textbutton _("ŔŗñĮ¼»ŧþŀÂŻŕěōì«") action If(persistent.playername, true=Start(), false=Show(screen="name_input", message="Please enter your name", ok_action=Function(FinishEnterName)))
-                else:
-                    textbutton _("New Game") action If(persistent.playername, true=Start(), false=Show(screen="name_input", message="Please enter your name", ok_action=Function(FinishEnterName)))
-
+            if persistent.playthrough == 1:
+                textbutton _("ŔŗñĮ¼»ŧþŀÂŻŕěōì«") action If(persistent.playername, true=Start(), false=Show(screen="name_input", message="Please enter your name", ok_action=Function(FinishEnterName)))
             else:
+                textbutton _("New Game") action If(persistent.playername, true=Start(), false=Show(screen="name_input", message="Please enter your name", ok_action=Function(FinishEnterName)))
 
-                textbutton _("History") action [ShowMenu("history"), SensitiveIf(renpy.get_screen("history") == None)]
-
-                textbutton _("Save Game") action [ShowMenu("save"), SensitiveIf(renpy.get_screen("save") == None)]
-
-            textbutton _("Load Game") action [ShowMenu("load"), SensitiveIf(renpy.get_screen("load") == None)]
-
-
-            if _in_replay:
-
-                textbutton _("End Replay") action EndReplay(confirm=True)
-
-            elif not main_menu:
-                if persistent.playthrough != 3:
-                    textbutton _("Main Menu") action MainMenu()
-                else:
-                    textbutton _("Main Menu") action NullAction()
-
-            textbutton _("Settings") action [ShowMenu("preferences"), SensitiveIf(renpy.get_screen("preferences") == None)]
-
-            #textbutton _("About") action ShowMenu("about")
-
-            if renpy.variant("pc"):
-
-                ## Help isn't necessary or relevant to mobile devices.
-                textbutton _("Help") action [Help("README.html"), Show(screen="dialog", message="The help file has been opened in your browser.", ok_action=Hide("dialog"))]
-
-                ## The quit button is banned on iOS and unnecessary on Android.
-                textbutton _("Quit") action Quit(confirm=not main_menu)
         else:
-            timer 1.75 action Start("autoload_yurikill")
+
+            textbutton _("History") action [ShowMenu("history"), SensitiveIf(renpy.get_screen("history") == None)]
+
+            textbutton _("Save Game") action [ShowMenu("save"), SensitiveIf(renpy.get_screen("save") == None)]
+
+        textbutton _("Load Game") action [ShowMenu("load"), SensitiveIf(renpy.get_screen("load") == None)]
+
+
+        if _in_replay:
+
+            textbutton _("End Replay") action EndReplay(confirm=True)
+
+        elif not main_menu:
+            if persistent.playthrough != 3:
+                textbutton _("Main Menu") action MainMenu()
+            else:
+                textbutton _("Main Menu") action NullAction()
+
+        textbutton _("Settings") action [ShowMenu("preferences"), SensitiveIf(renpy.get_screen("preferences") == None)]
+
+        #textbutton _("About") action ShowMenu("about")
+
+        if renpy.variant("pc"):
+
+            ## Help isn't necessary or relevant to mobile devices.
+            textbutton _("Help") action [Help("README.html"), Show(screen="dialog", message="The help file has been opened in your browser.", ok_action=Hide("dialog"))]
+
+            ## The quit button is banned on iOS and unnecessary on Android.
+            textbutton _("Quit") action Quit(confirm=not main_menu)
+        #else:
+        #    timer 1.75 action Start("autoload_yurikill")
 
 
 
@@ -296,27 +296,7 @@ screen navigation():
 ## http://www.renpy.org/doc/html/screen_special.html#main-menu
 
 screen main_menu():
-    python:
-        # Note: 'event_name': callback
-        callbacks = {
-            'ready': readyCallback,
-            'disconnected': disconnectedCallback,
-            'error': errorCallback,
-            }
-        discord_rpc.initialize('951882871289806899', callbacks=callbacks, log=False)
-        start = time.time()
-        print(start)
-        discord_rpc.update_connection()
-        discord_rpc.run_callbacks()
-        discord_rpc.update_presence(
-            **{
-                'details': 'Main Menu',
-                'start_timestamp': start,
-                'large_image_key': 'logo'
-                }
-                )
-        discord_rpc.update_connection()
-        discord_rpc.run_callbacks()
+
     # This ensures that any other menu screen is replaced.
     tag menu
 
@@ -1430,3 +1410,29 @@ transform bsod_qrcode(x):
 ## This controls the maximum number of NVL-mode entries that can be displayed at
 ## once.
 define config.nvl_list_length = 6
+
+
+
+
+screen upd_scr(ok_action,interr_action,status):
+    modal True
+
+    frame:
+        vbox:
+            xalign 1
+            yalign 1
+
+            if status == 1:
+                label ('A new update is available.')
+            elif status == 2:
+                label ('You\'re up to date')
+            elif status == 3:
+                label ('Looking for new versions...')
+            else:
+                label ('An error occured. Wait a while and try again.')
+            
+            hbox:
+                textbutton _("Install New Update") action [ok_action, SensitiveIf(status == 1)]
+
+                textbutton _('Cancel') action interr_action
+

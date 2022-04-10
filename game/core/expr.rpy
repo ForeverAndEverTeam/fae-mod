@@ -1,5 +1,4 @@
-
-init python:
+init -10 python:
 
     pose = "/sitting/"
 
@@ -43,6 +42,7 @@ init python:
         rrest = "right-table-rest"
         folded = "folded"
         rfpe = "right-finger-pup-ext"
+        dp = "double-point"
     #EYE DEFS
     class FAEEyes():
         normal = "a"
@@ -53,8 +53,8 @@ init python:
         sad = "f"
         crazy = "g"
         wide = "h"
-        smug = "h"
-        unk = "f1"
+        smug = "i"
+        unk = "j"
         
         def __str__(self):
             return self.name
@@ -88,6 +88,7 @@ init python:
         happy_d_tears = "happy_d_tears"
         pooled_tears = "pooled_tears"
         sad_d_tears = "sad_d_tears"
+        none = None
 
         def __str__(self):
             return self.name
@@ -96,6 +97,7 @@ init python:
         blushing = "blushing"
         default_cheeks = "default_cheeks"
         b = "b"
+        none = None
 
         def __str__(self):
             return self.name
@@ -163,15 +165,16 @@ init 1 python:
         "c": FAEArms.cookie,
         "d": FAEArms.cookiebite,
         "e": FAEArms.doublepoint,
-        "f": FAEArms.leftindex,
-        "g": FAEArms.leftrest,
-        "h": FAEArms.lefttouch
+        #"f": FAEArms.leftindex,
+        "f": FAEArms.leftrest,
+        "g": FAEArms.lefttouch
     }
     ARMS2_DEF = {
         "a": FAEArms2.rf,
         "b": FAEArms2.rrest,
         "c": FAEArms2.rfpe,
         "d": FAEArms2.folded,
+        "e": FAEArms2.dp,
     }
     #EYES ONLY
     EYES_DEF = {
@@ -211,13 +214,15 @@ init 1 python:
         "a": FAETears.d_tears,
         "b": FAETears.happy_d_tears,
         "c": FAETears.pooled_tears,
-        "d": FAETears.sad_d_tears
+        "d": FAETears.sad_d_tears,
+        "": FAETears.none
     }
 
     BLUSH_DEF = {
         "e": FAEBlush.default_cheeks,
         "f": FAEBlush.blushing,
-        "g": FAEBlush.b
+        "g": FAEBlush.b,
+        "": FAEBlush.none
     }
 
     def _exp_renderer(exp_code):
@@ -284,8 +289,8 @@ init 1 python:
 
         renpy.display.image.images[("sayori", exp_code)] = disp
 
-        if exp_code not in _existing_attr_list:
-            _existing_attr_list.append(exp_code)
+        #if exp_code not in _existing_attr_list:
+        #    _existing_attr_list.append(exp_code)
 
     def _find_target_override(self):
         
@@ -357,5 +362,3 @@ init 1 python:
         return True
 
     renpy.display.image.ImageReference.find_target = _find_target_override
-
-

@@ -263,6 +263,17 @@ image warning:
     "white" with Dissolve(0.5, alpha=True)
     0.5
 
+# This init python statement checks if the character files are present in-game
+# and writes them to the characters folder depending on the playthrough.
+init python:
+    if not persistent.do_not_delete:
+        if renpy.android:
+            if not os.access(os.environ['ANDROID_PUBLIC'] + "/characters/", os.F_OK):
+                os.mkdir(os.environ['ANDROID_PUBLIC'] + "/characters")
+        else:
+            if not os.access(config.basedir + "/characters/", os.F_OK):
+                os.mkdir(config.basedir + "/characters")
+        restore_all_characters()
 
 ## These images are the background images shown in-game during the disclaimer.
 image tos = "bg/warning.png"
@@ -411,7 +422,7 @@ label splashscreen:
 
     # This if statement checks whether we have a auto-load set to load it than
     # start the game screen as-new.
-    if persistent.autoload:
+    if persistent.autoload and not _restart:
         jump autoload
 
     # This variable sets skipping to False for the splash screen.
@@ -574,10 +585,11 @@ label autoload:
         main_menu = False
         _in_replay = None
 
-        try: renpy.pop_call()
-        except: pass
-
-    jump expression persistent.autoload
+        #try: renpy.pop_call()
+        #except: pass
+    $renpy.pop_call()
+    #jump expression persistent.autoload
+    jump sayo_autoload
 
 # This label sets the main menu music to Doki Doki Literature Club before the
 # menu starts

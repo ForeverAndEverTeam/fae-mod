@@ -79,7 +79,16 @@ style prompt_text is gui_text:
     color gui.text_color
     size gui.interface_text_size
 
+style tc_vbox is choice_vbox:
+    xcenter 960
 
+style tc_button is choice_button
+
+style tc_button_dark is choice_button_dark
+
+style tc_button_text is choice_button_text
+
+style tc_button_text_dark is choice_button_text_dark
 #style bar:
 #    ysize gui.bar_size
 #    left_bar Frame("gui/bar/left.png", gui.bar_borders, tile=gui.bar_tile)
@@ -681,3 +690,16 @@ style nvl_button:
 
 style nvl_button_text:
     properties gui.button_text_properties("nvl_button")
+init python:
+    def getTimeFile(filestring):
+        """
+        Returns the filestring pointing to the right asset for day/night
+        IN:
+            the DAY variant of the image file needed
+        RETURNS:
+            filestring pointing to the right path
+        """
+
+        # Light handling
+        #if not mas_globals.dark_mode:
+        return filestring

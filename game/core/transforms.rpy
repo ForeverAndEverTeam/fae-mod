@@ -3,11 +3,11 @@
 # This file defines the placements and animations in DDLC.
 
 # This transform sizes the character properly at the given X position.
-transform tcommon(x=640, z=0.80):
+transform tcommon(x=640, z=1.00):
     yanchor 1.0 subpixel True
     on show:
         ypos 1.03
-        zoom z*0.95 alpha 0.00
+        zoom z*1.0 alpha 0.00
         xcenter x yoffset -20
         easein .25 yoffset 0 zoom z*1.00 alpha 1.00
     on replace:
@@ -18,7 +18,7 @@ transform tcommon(x=640, z=0.80):
         parallel:
             easein .15 yoffset 0 ypos 1.03
 
-transform tinstant(x=640, z=0.80):
+transform tinstant(x=640, z=1.0):
     xcenter x yoffset 0 zoom z*1.00 alpha 1.00 yanchor 1.0 ypos 1.03
 
 # This transform makes the character zoom in when they talk.
@@ -544,3 +544,74 @@ init python:
 transform malpha(a=1.00):
     i11
     alpha a
+
+init -10 python:
+    def getPropFromStyle(style_name, prop_name):
+        """
+        Retrieves a property from a style
+        Recursively checks parent styles until the property is found.
+        IN:
+            style_name - name of style as string
+            prop_name - property to find as string
+        RETURNS: value of the propery if we can find it, None if not found
+        """
+        style_name = (style_name,)
+        prop_not_found = True
+        while prop_not_found:
+            # pull from styles dict
+            # NOTE: directly accessing to avoid exceptions
+            style_obj = renpy.style.styles.get(style_name, None)
+            if style_obj is None:
+                return None
+
+            # sanity check to ensure properties exists
+            if len(style_obj.properties) > 0:
+
+                # check for the prop we want
+                if prop_name in style_obj.properties[0]:
+                    return style_obj.properties[0][prop_name]
+
+            # otherwise check parent
+            if style_obj.parent is None:
+                return None
+
+            # recurse
+            style_name = style_obj.parent
+
+        # should never be reached
+        return None
+
+
+    def prefixFrame(frm, prefix):
+        """
+        Generates a frame object with the given prefix substitued into the
+        image. This effectively makes a copy of the given Frame object.
+        NOTE: cannot use _duplicate as it does shallow copy for some reason.
+        IN:
+            frm - Frame object
+            prefix - prefix to replace `prefix_`. "_" will be added if not
+                found
+        RETURNS: Frame object, or None if failed to make it
+        """
+        if not prefix.endswith("_"):
+            prefix += "_"
+
+        try:
+            # sve borders
+            frm_borders = {
+                "left": frm.left,
+                "top": frm.top,
+                "right": frm.right,
+                "bottom": frm.bottom,
+            }
+
+            # set image path
+            img_path = renpy.substitute(
+                frm.image.name,
+                scope={"prefix_": prefix}
+            )
+
+            # build frame
+            return Frame(img_path, **frm_borders)
+        except:
+            return None

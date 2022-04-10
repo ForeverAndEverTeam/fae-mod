@@ -59,13 +59,7 @@ label start:
     # This is where your script code is called!
     # 'persistent.playthrough' controls the playthrough number the player is on i.e (Act 1, 2, 3, 4)
     #jump ch30_autoload
-    if persistent.autoload:
-        jump main_idle
-    jump main_idle
-    "testing"
-    show hiyori
-    "testing"
-
+    jump sayo_autoload
 # This label is where the game 'ends' during Act 1.
 label endgame(pause_length=4.0):
     $ quick_menu = False
