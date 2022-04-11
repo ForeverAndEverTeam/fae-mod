@@ -36,46 +36,21 @@ label talk_menu_wip:
     
     if ret is False:
         jump talk_menu_wip
+
 label tme:
     show sayori acbaba at t11
     jump idle_loop
     
 
-init 6 python:
-    class sayo_evlbl(object):
 
-        _def_val = {
-            "evlbl": "",
-            "prp"
-            "lbl": None,
-            "cat": None,
-            "unlck": False,
-            "rnd": False,
-            "pool": False,
-            "condit": None,
-            "act": None,
-            "aff_rng": None,
-        }
+init python:
+    def dlg():
+        renpy.hide_screen('hidden')
+        renpy.jump('talk_menu_wip')
+    
+    def select_music():
+        renpy.hide_screen('hidden')
+        renpy.show_screen('music_menu')
 
-        _nulls = {
-            "pedb": 0,
-            "rls": 0,
-        }
-
-        def __init__(self, evlbl):
-            self._ev = getev(evl)
-        
-        def __repr__(self):
-            return repr(self._ev)
-        def __enter__(self):
-            return self
-        def __attr__(self, name):
-            if self._ev is None:
-                if name in sayo_evlbl._def_val:
-                    return sayo_evlbl._def_val.get(name)
-                if name in sayo_evlbl._nulls:
-                    return {}
-                if callable(ev.__dict__.get(name)):
-                    return blank
-            return attr(ev, name)
-        
+    def mg():
+        renpy.jump('mglist')

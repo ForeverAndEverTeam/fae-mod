@@ -418,3 +418,12 @@ init python:
 
         ## Quick Menu
         gui.quick_button_text_size = 14
+style neat_menu_button is choice_button:
+    xysize (250, None)
+    padding (25, 5, 25, 5)
+    top_padding 10
+    bottom_padding 5
+
+style neat_menu_button_text is choice_button_text:
+    align (0.0, 0.0)
+    text_align 0.0

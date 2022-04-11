@@ -1,6 +1,6 @@
 default persistent._f_db = dict()
 
-default persistent.first_leave_reply = None
+default persistent.flr = None
 
 
 init -2 python in farewells:
@@ -25,7 +25,7 @@ init -2 python in farewells:
 
     def leave_picker():
 
-        if store.persistent.first_leave_reply is None:
+        if store.persistent.flr is None:
             return "First_leave"
 
         kwargs = dict()

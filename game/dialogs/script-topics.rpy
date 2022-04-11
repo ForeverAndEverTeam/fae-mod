@@ -24,3 +24,21 @@ init -2 python in chats:
 
 
 
+init 5 python:
+    
+    Chatreg(
+        Chat(
+            persistent._chat_db,
+            label="testing",
+            unlocked=True,
+            prompt="testing",
+            category=["DEV"]
+        ),
+        chat_group=CHAT_GROUP_NORMAL
+    )
+
+
+label testing:
+    s "This is a test"
+    return
+

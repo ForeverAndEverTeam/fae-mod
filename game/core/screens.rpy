@@ -274,6 +274,8 @@ screen navigation():
 
         textbutton _("Settings") action [ShowMenu("preferences"), SensitiveIf(renpy.get_screen("preferences") == None)]
 
+        textbutton _("QABs") action [ShowMenu("qab"), SensitiveIf(renpy.get_screen("qab") == None)]
+
         #textbutton _("About") action ShowMenu("about")
 
         if renpy.variant("pc"):
@@ -1412,7 +1414,62 @@ transform bsod_qrcode(x):
 define config.nvl_list_length = 6
 
 
+screen qab():
+    tag menu
 
+    use game_menu(("Hotkeys"), scroll="viewport"):
+
+        default tooltip = GetTooltip("")
+
+        # making each indivual list a vbox essentially lets us auto-align
+        vbox:
+            spacing 25
+
+            hbox:
+                style_prefix "check"
+                vbox:
+                    label _("General")
+                    spacing 10
+                    text _("Music")
+                    text _("Play")
+                    text _("Talk")
+                    text _("Bookmark")
+                    text _("Fullscreen")
+                    text _("Screenshot")
+                    text _("Settings")
+
+                vbox:
+                    label _("")
+                    spacing 10
+                    text _("M")
+                    text _("P")
+                    text _("T")
+                    text _("B")
+                    text _("F")
+                    text _("S")
+                    text _("Esc")
+
+            hbox:
+                style_prefix "check"
+                vbox:
+                    label _("Music")
+                    spacing 10
+                    text _("Volume Up")
+                    text _("Volume Down")
+                    text _("Mute")
+
+                vbox:
+                    label _("")
+                    spacing 10
+                    text _("+")
+                    text _("-")
+                    text _("Shift-M")
+
+    # there are lesser used hotkeys in Help that aren't needed here
+    text "Click 'Help' for the complete list.":
+        xalign 1.0 yalign 0.0
+        xoffset -10
+        style "main_menu_version"
 
 screen upd_scr(ok_action,interr_action,status):
     modal True
