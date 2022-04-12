@@ -12,14 +12,14 @@ init -1 python in sounds:
     Bright_Lights = "Bright Lights"
     CB = "a2cb"
     Anji = "Anji"
-    No_sound = "No Music"
+    NO_SOUND = "No Music"
 
     #FILE PATHS
 
     P_Bright_Lights = "mod_assets/bgm/bl.wav"
     P_CB = "mod_assets/bgm/a2cb.wav"
     P_Anji = "mod_assets/bgm/Anji.wav"
-    P_No_sound = None
+    P_NO_SOUND = None
 
     def change_vol(channel="music", inc=True):
         direct = 1
@@ -117,12 +117,125 @@ init -1 python in sounds:
         return (music_list[:LIMIT], music_list[LIMIT:])
 
 
+    def __musicFinder(music_list):
+
+        if not os.access(cmdir, os.F_OK):
+            return
+
+        found_audio = os.listdir(cmdir)
+        found_oggs = [
+            ogg_file
+            for ogg_file in found_audio
+            if (
+                isValidExt(ogg_file)
+                and os.access(cmdir + ogg_file, os.R_OK)
+            )
+        ]
+
+        if len(found_oggs) == 0:
+            return
+        
+        for ogg_file in found_oggs:
+
+            filepath = cmdir + ogg_file
+
+            _sound_file, _ext = _getSoundFile(filepath)
+
+            if _sound_file is not None:
+
+                disp_name = _findName(_sound_file, _ext, ogg_file)
+
+                loop_prefix = _findLoop(_sound_file, _ext)
+
+
+                music_list.append((
+                    scrubText(disp_name),
+                    loop_prefix + sm_reldir + ogg_file
+                ))
+
+                store.persistent.custom_music = True
+    
+    def _getSoundFile(filepath):
+        
+        
+        if filepath.endswith(EXT_MP3):
+            return (_getMP3(filepath), EXT_MP3)
+
+        elif filepath.endswith(EXT_OGG):
+            return (_getOgg(filepath), EXT_OGG)
+
+        elif filepath.endswith(EXT_OPUS):
+            return (_getOpus(filepath), EXT_OPUS)
+
+        # otherwise, failure
+        return (None, None)
+
+
+    def _findName(_sound_file, _ext, _filename):
+
+        if _sound_file.tags is not None:
+            if _ext == EXT_MP3:
+                disp_name = _MP3Name(_sound_file)
+            
+            elif _ext == EXT_OGG:
+                disp_name = _OGGName(_sound_file)
+            
+            elif _ext == EXT_OPUS:
+                disp_name = _OGGName(_sound_file)
+        
+        if not disp_name:
+
+            return _filename[:-(len(_ext))]
+        return disp_name
+
+
+    def _getMP3(_sound_file):
+
+        return _getOgg(_sound_file)
+
+    def _getOgg(_sound_file):
+
+        sound_names = _sound_file.tags.get(MT_TITLE, [])
+        sound_artists = _sound_file.tags.get(MT_ARTIST, [])
+
+        if not sound_names:
+            return None
+        
+        sel_name = sound_names[0]
+
+        if sound_artists:
+            sel_art = sound_artists[0]
+            return sel_art + " - " + sel_name
+        
+        return sel_name
+
+
     def inList(filepath):
 
         for name,fpath in music_options:
             if filepath == fpath:
                 return True
         return False
+    
+
+    def isValidExt(filename):
+
+        for ext in VALID_EXT:
+            if filename.endswith(ext):
+                return True
+        return False
+    
+
+    def scrubText(unclean):
+        
+        bad_text = ("{", "}", "[", "]")
+
+        # NOTE: for bad text, we just replace with empty
+        cleaned_text = unclean
+        for bt_el in bad_text:
+            cleaned_text = cleaned_text.replace(bt_el, "")
+
+        return cleaned_text
 
 
 
@@ -139,12 +252,37 @@ init -1 python in sounds:
     music_options = list()
     music_lists = dict() #Song pages shit
 
+    cmdir = "custom_bgm"
+    sm_reldir = "../" + cmdir + "/"
+
+    # valid extensions for music
+    # NOTE: Renpy also supports WAV, but only uncompressed PCM, so lets not
+    #   assume that the user knows how to change song formats.
+    EXT_OPUS = ".opus"
+    EXT_OGG = ".ogg"
+    EXT_MP3 = ".mp3"
+    VALID_EXT = [
+        EXT_OPUS,
+        EXT_OGG,
+        EXT_MP3
+    ]
+
+    # metadata tags
+    MT_TITLE = "title"
+    MT_ARTIST = "artist"
 
 init 10 python in sounds:
     music_volume = getvol("music")
 
 
 init 10 python:
+    
+    store.sounds.cmdir = (
+        config.basedir + "/" + store.sounds.cmdir + "/"
+    ).replace("\\", "/")
+
+
+
     store.sounds.musicmenu()
 
     if not sounds.inList(persistent.playing_track):
@@ -168,6 +306,9 @@ style neat_menu_return_button is return_button
 style neat_menu_return_button_text is navigation_button_text
 style neat_menu_prev_button is return_button
 style neat_menu_prev_button_text is navigation_button_text
+style m_frame is game_menu_outer_frame:
+    background "mod_assets/m_frame.png"
+
 
 
 
@@ -184,7 +325,7 @@ screen music_menu(m_page, page_no=0, page_extra=False):
     $ import store.sounds as sounds
 
     if sounds.playing_track is None:
-        $ return_value = sounds.No_sound
+        $ return_value = sounds.NO_SOUND
     else:
         $ return_value = sounds.playing_track
     
@@ -195,17 +336,30 @@ screen music_menu(m_page, page_no=0, page_extra=False):
 
     style_prefix "neat_menu"
 
+    frame:
+        style "m_frame"
+
+        hbox:
+
+            frame:
+                style "neat_menu_nav"
+
+            frame:
+                style "neat_menu_content"
+
+                transclude
+
     # this part copied from navigation menu
-    vbox:
-        style_prefix "neat_menu"
+        vbox:
+            style_prefix "neat_menu"
 
-        xpos gui.navigation_xpos
-#        yalign 0.4
-        spacing gui.navigation_spacing
+            xpos gui.navigation_xpos
+    #        yalign 0.4
+            spacing gui.navigation_spacing
 
-        # wonderful loop so we can dynamically add songs
-        for name,sounds in m_page:
-            textbutton _(name) action Return(sounds)
+            # wonderful loop so we can dynamically add songs
+            for name,sounds in m_page:
+                textbutton _(name) action Return(sounds)
 
     vbox:
 
@@ -230,9 +384,9 @@ screen music_menu(m_page, page_no=0, page_extra=False):
                     style "neat_menu_return_button"
                     action Return(page_no + 1)
 
-        textbutton _(sounds.No_sound):
+        textbutton _(sounds.NO_SOUND):
             style "neat_menu_return_button"
-            action Return(sounds.No_sound)
+            action Return(sounds.NO_SOUND)
 
         textbutton _("Return"):
             style "neat_menu_return_button"
@@ -255,7 +409,7 @@ label menu_show:
 
         if m_page is None:
 
-            return sounds.No_sound
+            return sounds.NO_SOUND
         
         $ n_page = (active_page + 1) in sounds.music_lists
 
@@ -291,7 +445,7 @@ init python:
         
 
         if sounds is None:
-            sounds = sounds.P_No_sound
+            sounds = sounds.P_NO_SOUND
             renpy.music.stop(channel="music", fadeout=fadeout)
         else:
             renpy.music.play(
@@ -315,11 +469,11 @@ init python:
         if sounds.enabled and not sounds.menuactive:
 
             sel_track = renpy.call_in_new_context("menu_show")
-            if sel_track == sounds.No_sound:
-                sel_track = sounds.P_No_sound
+            if sel_track == sounds.NO_SOUND:
+                sel_track = sounds.P_NO_SOUND
 
             if sel_track != sounds.playing_track:
-                play_sounds(sel_track, set_per=True)
+                player(sel_track, set_per=True)
         
 label music:
     s "Music! You can add your own too!"

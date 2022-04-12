@@ -18,7 +18,7 @@ init -1 python:
         )
 
         config.underlay.append(
-            renpy.Keymap(music=select_music)
+            renpy.Keymap(music=select_music())
         )
 
         config.underlay.append(

@@ -33,7 +33,7 @@ label sayo_init:
                 ats(greetings.greet_sel())
         
     #show sayori acbaba with moveinleft
-    hide black with Dissolve(2)
+    #hide black with Dissolve(2)
     scene bg spaceroom with Dissolve(2)
     
 
