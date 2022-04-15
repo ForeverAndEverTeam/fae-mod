@@ -36,7 +36,7 @@ screen spinner(key, maxv, minv = 0, step = 1, dict = globals(), xsize = 100, zfi
     python:
         try:
             dict[key] = min(max(dict[key], minv),maxv)
-        except:
+        except KeyError:
             dict[key] = minv
         v = dict[key]
     vbox:
