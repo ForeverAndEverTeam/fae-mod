@@ -1,5 +1,9 @@
+init -10 python:
 
-init python:
+    import store
+    import store.sayo_utilities as sayo_utilities
+
+    sayo_zorder = 3
 
     pose = "/sitting/"
 
@@ -20,6 +24,13 @@ init python:
         def __str__(self):
             return self.name
 
+    class FAEBackarms():
+        unknown = "a"
+        empty = "b"
+
+        def __str__(self):
+            return self.name
+
     #LEFT OR BOTH ARMS ONLY! NO RIGHT ARMS STUFF
     
     class FAEArms():
@@ -27,10 +38,10 @@ init python:
         cookie = "cookie"
         doublepoint = "double-point"
         folded = "folded"
-        rest = "hand-restingtop"
         lefttouch = "left-fingers-touching"
         leftindex = "left-index-point"
         leftrest = "left-table-rest"
+        none = "empty"
 
         def __str__(self):
             return self.name
@@ -39,10 +50,17 @@ init python:
     # RIGHT ARM DEFS
     class FAEArms2():
 
-        rf = "right-fist"
-        rrest = "right-table-rest"
         folded = "folded"
+        rtr = "right-table-rest"
+        rf = "right-fist"
         rfpe = "right-finger-pup-ext"
+        dp = "double-point"
+        hrt = "hand-restingtop"
+        none = "empty"
+
+        def __str__(self):
+            return self.name
+    
     #EYE DEFS
     class FAEEyes():
         normal = "a"
@@ -53,8 +71,8 @@ init python:
         sad = "f"
         crazy = "g"
         wide = "h"
-        smug = "h"
-        unk = "f1"
+        smug = "i"
+        unk = "j"
         
         def __str__(self):
             return self.name
@@ -67,17 +85,23 @@ init python:
             return self.name
     #MOUTH DEFS
     class FAEMouth():
-        normal = "a"
-        smallagape = "b"
-        delicateagape = "c"
-        ajar = "d"
-        eidesmile = "e"
-        sad = "f"
-        surprised = "g"
-        frown = "h"
-        tongue = "i"
-        pout = "j"
-        widesmile = "k"
+        a = "a"
+        b = "b"
+        c = "c"
+        d = "d"
+        e = "e"
+        f = "f"
+        g = "g"
+        h = "h"
+        i = "i"
+        j = "j"
+        k = "k"
+        l = "big_frown"
+        m = "drool"
+        n = "drool_frown"
+        o = "open"
+        p = "pout"
+        
         
         def __str__(self):
             return self.name
@@ -88,6 +112,9 @@ init python:
         happy_d_tears = "happy_d_tears"
         pooled_tears = "pooled_tears"
         sad_d_tears = "sad_d_tears"
+        crumbs = "crumbs"
+        sweat_drop = "sweat-drop"
+        none = None
 
         def __str__(self):
             return self.name
@@ -95,16 +122,19 @@ init python:
     class FAEBlush():
         blushing = "blushing"
         default_cheeks = "default_cheeks"
-        b = "b"
+        red_eyes = "eye-redness"
+        gloomy = "gloomy"
+        none = None
 
         def __str__(self):
             return self.name
 
     def realgen(
+        backarm,
         arms,
         arms2,
-        eyes,
         hair,
+        eyes,
         eyebrows,
         mouth,
         blush=None,
@@ -114,20 +144,25 @@ init python:
         """
         ad_hoc = [
             (1280, 720),
+            (0, 0), "{0}{1}/backarms/{2}.png".format(_SAYORI_IMAGES_PATH, pose, backarm),
             (0, 0), "{0}{1}/arms/uniform/back-sleeve.png".format(_SAYORI_IMAGES_PATH, pose),
-            (0, 0), "{0}{1}/arms/uniform/unknown.png".format(_SAYORI_IMAGES_PATH, pose),
             (0, 0), "{0}{1}/body/1.png".format(_SAYORI_IMAGES_PATH, pose),
             ]
 
-        if blush:
-            ad_hoc.extend([
-                (0, 0), "{0}{1}/body/blush/{2}.png".format(_SAYORI_IMAGES_PATH, pose, blush),
-            ])
         ad_hoc.extend([
             (0, 0), _SAYORI_IMAGES_PATH + "table/desk_sh.png",
             (0, 0), _SAYORI_IMAGES_PATH + "table/desk.png",
             (0, 0), "{0}{1}/arms/uniform/{2}.png".format(_SAYORI_IMAGES_PATH, pose, arms),
             (0, 0), "{0}{1}/arms/uniform/{2}.png".format(_SAYORI_IMAGES_PATH, pose, arms2),
+            (0, 0), "{0}{1}/hair/{2}.png".format(_SAYORI_IMAGES_PATH, pose, hair),
+        ])
+
+        if blush:
+            ad_hoc.extend([
+                (0, 0), "{0}{1}/body/blush/{2}.png".format(_SAYORI_IMAGES_PATH, pose, blush),
+            ])
+        
+        ad_hoc.extend([
             (0, 0), "{0}{1}/eyes/{2}.png".format(_SAYORI_IMAGES_PATH, pose, eyes),
             ])
 
@@ -135,8 +170,9 @@ init python:
             ad_hoc.extend([
                 (0, 0), "{0}{1}/eyes/{2}.png".format(_SAYORI_IMAGES_PATH, pose, tears),
             ])
+        
         ad_hoc.extend([
-            (0, 0), "{0}{1}/hair/{2}.png".format(_SAYORI_IMAGES_PATH, pose, hair),
+              
             (0, 0), "{0}{1}/eyebrows/{2}.png".format(_SAYORI_IMAGES_PATH, pose, eyebrows),
             (0, 0), "{0}{1}/mouth/{2}.png".format(_SAYORI_IMAGES_PATH, pose, mouth),
         ])
@@ -156,6 +192,12 @@ init 1 python:
         "f": FAEEyebrows.furrowed,
         "g": FAEEyebrows.numb
     }
+
+    BACKARM_DEF = {
+        "a": FAEBackarms.unknown,
+        "b": FAEBackarms.empty
+    }
+
     #Arms with BOTH or ONLY LEFT NO RIGHT
     ARMS_DEF = {
         "a": FAEArms.folded,
@@ -163,15 +205,19 @@ init 1 python:
         "c": FAEArms.cookie,
         "d": FAEArms.cookiebite,
         "e": FAEArms.doublepoint,
-        "f": FAEArms.leftindex,
-        "g": FAEArms.leftrest,
-        "h": FAEArms.lefttouch
+        #"f": FAEArms.leftindex,
+        "f": FAEArms.leftrest,
+        "g": FAEArms.lefttouch,
+        "h": FAEArms.none
     }
     ARMS2_DEF = {
-        "a": FAEArms2.rf,
-        "b": FAEArms2.rrest,
-        "c": FAEArms2.rfpe,
-        "d": FAEArms2.folded,
+        "a": FAEArms2.folded,
+        "b": FAEArms2.rtr,
+        "c": FAEArms2.rf,
+        "d": FAEArms2.rfpe,
+        "e": FAEArms2.dp,
+        "f": FAEArms2.hrt,
+        "g": FAEArms2.none
     }
     #EYES ONLY
     EYES_DEF = {
@@ -188,44 +234,58 @@ init 1 python:
     }
     #HAIR
     HAIR_DEF = {
-        "b": FAEHair.bow,
+        "a": FAEHair.bow,
         "n": FAEHair.no_bow
     }
     #MOUTH
     MOUTH_DEF = {
-        "a": FAEMouth.normal,
-        "b": FAEMouth.smallagape,
-        "c": FAEMouth.delicateagape,
-        "d": FAEMouth.ajar,
-        "e": FAEMouth.eidesmile,
-        "f": FAEMouth.sad,
-        "g": FAEMouth.surprised,
-        "h": FAEMouth.frown,
-        "i": FAEMouth.tongue,
-        "j": FAEMouth.pout,
-        "k": FAEMouth.widesmile
-
+        "a": FAEMouth.a,
+        "b": FAEMouth.b,
+        "c": FAEMouth.c,
+        "d": FAEMouth.d,
+        "e": FAEMouth.e,
+        "f": FAEMouth.f,
+        "g": FAEMouth.g,
+        "h": FAEMouth.h,
+        "i": FAEMouth.i,
+        "j": FAEMouth.j,
+        "k": FAEMouth.k,
+        "l": FAEMouth.l,
+        "m": FAEMouth.m,
+        "n": FAEMouth.n,
+        "o": FAEMouth.o,
+        "p": FAEMouth.p
+    }
+    
+    BLUSH_DEF = {
+        "a": FAEBlush.default_cheeks,
+        "b": FAEBlush.blushing,
+        "c": FAEBlush.gloomy,
+        "d": FAEBlush.red_eyes,
+        "": FAEBlush.none
     }
 
     TEARS_DEF = {
-        "a": FAETears.d_tears,
-        "b": FAETears.happy_d_tears,
-        "c": FAETears.pooled_tears,
-        "d": FAETears.sad_d_tears
+        "e": FAETears.d_tears,
+        "f": FAETears.happy_d_tears,
+        "g": FAETears.pooled_tears,
+        "h": FAETears.sad_d_tears,
+        "i": FAETears.crumbs,
+        "j": FAETears.sweat_drop,
+        "": FAETears.none
     }
 
-    BLUSH_DEF = {
-        "e": FAEBlush.default_cheeks,
-        "f": FAEBlush.blushing,
-        "g": FAEBlush.b
-    }
+    
 
     def _exp_renderer(exp_code):
-        if len(exp_code) < 6:
+        if len(exp_code) < 7:
             raise ValueError("Invalid expression code: {0}".format(exp_code))
         
 
         eyebrows = exp_code[0]
+        exp_code = exp_code[1:]
+
+        backarm = exp_code[0]
         exp_code = exp_code[1:]
 
         arms = exp_code[0]
@@ -234,41 +294,45 @@ init 1 python:
         arms2 = exp_code[0]
         exp_code = exp_code[1:]
 
-        eyes = exp_code[0]
+        hair = exp_code[0]
         exp_code = exp_code[1:]
 
-        hair = exp_code[0]
+        eyes = exp_code[0]
         exp_code = exp_code[1:]
 
         mouth = exp_code[0]
         exp_code = exp_code[1:]
 
-        tears = None
         blush = None
+        tears = None
+        
 
 
         while exp_code:
             exp_part = exp_code[0]
             exp_code = exp_code[1:]
 
+            if exp_part in BLUSH_DEF:
+                blush = exp_part
             #Check if part is a tear
             if exp_part in TEARS_DEF:
                 tears = exp_part
 
             #Otherwise it might be a blush
-            elif exp_part in BLUSH_DEF:
-                blush = exp_part
+            
 
         return {
 
             "eyebrows": EYEBROWS_DEF[eyebrows],
+            "backarm": BACKARM_DEF[backarm],
             "arms": ARMS_DEF[arms],
             "arms2": ARMS2_DEF[arms2],
-            "eyes": EYES_DEF[eyes],
             "hair": HAIR_DEF[hair],
+            "eyes": EYES_DEF[eyes],
             "mouth": MOUTH_DEF[mouth],
-            "tears": TEARS_DEF.get(tears),
-            "blush": BLUSH_DEF.get(blush)
+            "blush": BLUSH_DEF.get(blush),
+            "tears": TEARS_DEF.get(tears)
+            
         }
 
         
@@ -284,8 +348,8 @@ init 1 python:
 
         renpy.display.image.images[("sayori", exp_code)] = disp
 
-        if exp_code not in _existing_attr_list:
-            _existing_attr_list.append(exp_code)
+        #if exp_code not in _existing_attr_list:
+        #    _existing_attr_list.append(exp_code)
 
     def _find_target_override(self):
         
@@ -359,3 +423,6 @@ init 1 python:
     renpy.display.image.ImageReference.find_target = _find_target_override
 
 
+image sayori idle:
+
+    "sayori abcbaba"
