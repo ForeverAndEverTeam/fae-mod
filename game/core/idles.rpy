@@ -2,8 +2,8 @@ init python:
     import subprocess
     import os
     import re
-    import store.sounds as sounds
-    import store.sayo_utilities as utilities
+    #import store.sounds as sounds
+    #import store.sayo_utilities as utilities
 
     renpy.music.register_channel(
         "background",

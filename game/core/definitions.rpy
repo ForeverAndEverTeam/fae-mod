@@ -1448,15 +1448,17 @@ default persistent.lets_play = False
 #   default cookies = False
 # To make sure a variable is set to a given condition use 'define' rather than 'default'.
 
+
+###########################
+#PERSISTENT-BASED DEFAULTS#
+###########################
 default persistent.playername = ""
-default player = persistent.playername
 default persistent.playthrough = 0
 default persistent.yuri_kill = 0
 default persistent.seen_eyes = None
 default persistent.seen_sticker = None
 default persistent.ghost_menu = None
 default persistent.seen_ghost_menu = None
-default seen_eyes_this_chapter = False
 default persistent.anticheat = 0
 default persistent.clear = [False, False, False, False, False, False, False, False, False, False]
 default persistent.special_poems = None
@@ -1467,6 +1469,14 @@ default persistent.first_poem = None
 default persistent.seen_colors_poem = None
 default persistent.monika_back = None
 default persistent.intro_stage = None
+default persistent.sayo_intro_seen = False
+default persistent.sayo_first_visit_date = None
+
+#########################
+#NON-PERSISTENT DEFAULTS#
+#########################
+default player = persistent.playername
+default seen_eyes_this_chapter = False
 default in_sayori_kill = None
 default in_yuri_kill = None
 default anticheat = 0
@@ -1476,6 +1486,9 @@ default basedir = config.basedir
 default chapter = 0
 default currentpos = 0
 default faint_effect = None
+
+
+
 
 # Default Name Variables
 # To define a default name make a character name variable like in this example:
