@@ -20,7 +20,7 @@ screen overlay(active=True):
 
 
 
-screen hidden():
+screen hidden(active=True):
 
     tag menu
     use overlay
@@ -30,21 +30,21 @@ screen hidden():
         hotspot (608, 276, 48, 45) action Call("boop")
 
 
-screen hidden_fake():
+screen hidden_fake(active=False):
     style_prefix "tc"
     zorder 50
     vbox:
-        xpos 0.05
+        xpos 0.090
     #        xalign 0.05
         yanchor 1.0
         ypos 715
     #        yalign 0.95
 
-        textbutton _("VGFsaw==") action Function(dlg)
+        textbutton _("VGFsaw==") action [ SensitiveIf(active==True), Function(dlg)]
 
-        textbutton _("TXVzaWM=") action Function(select_music)
+        textbutton _("TXVzaWM=") action [ SensitiveIf(active==True), Function(select_music)]
 
-        textbutton _("UGxheQ==") action Function(mg)
+        textbutton _("UGxheQ==") action [ SensitiveIf(active==True), Function(mg)]
 
 style neat_menu_button is choice_button:
     xysize (250, None)
