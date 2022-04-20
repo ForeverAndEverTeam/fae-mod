@@ -164,6 +164,7 @@ init -10 python:
         
         ad_hoc.extend([
             (0, 0), "{0}{1}/eyes/{2}.png".format(_SAYORI_IMAGES_PATH, pose, eyes),
+            (0, 0), "{0}{1}/mouth/{2}.png".format(_SAYORI_IMAGES_PATH, pose, mouth),
             ])
 
         if tears:
@@ -173,8 +174,8 @@ init -10 python:
         
         ad_hoc.extend([
               
-            (0, 0), "{0}{1}/eyebrows/{2}.png".format(_SAYORI_IMAGES_PATH, pose, eyebrows),
-            (0, 0), "{0}{1}/mouth/{2}.png".format(_SAYORI_IMAGES_PATH, pose, mouth),
+            (0, 0), "{0}{1}/eyebrows/{2}.png".format(_SAYORI_IMAGES_PATH, pose, eyebrows)
+            
         ])
        
         return renpy.display.layout.LiveComposite(
@@ -234,7 +235,7 @@ init 1 python:
     }
     #HAIR
     HAIR_DEF = {
-        "a": FAEHair.bow,
+        "b": FAEHair.bow,
         "n": FAEHair.no_bow
     }
     #MOUTH
@@ -302,7 +303,7 @@ init 1 python:
 
         mouth = exp_code[0]
         exp_code = exp_code[1:]
-
+        
         blush = None
         tears = None
         
@@ -425,4 +426,4 @@ init 1 python:
 
 image sayori idle:
 
-    "sayori abcbaba"
+    "sayori abaabaa"
