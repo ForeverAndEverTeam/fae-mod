@@ -98,6 +98,13 @@ style tc_button is choice_button:
 style tc_button_text is choice_button_text:
     kerning 0.2
 
+style tcs_b_vbox is choice_vbox:
+    xcenter 960
+
+style tcs_b_button is choice_button:
+    background Frame("mod_assets/buttons/[prefix_]bg2.png", Borders(5, 5, 5, 5), tile=False)
+
+style tcs_b_button_text is choice_button_text
 
 #style bar:
 #    ysize gui.bar_size
