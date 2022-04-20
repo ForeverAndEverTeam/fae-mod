@@ -65,11 +65,18 @@ style gui_text:
 
 style button:
     properties gui.button_properties("button")
+    xysize (None, 36)
+    padding (4, 4, 4, 4)
 
 style button_text is gui_text:
     properties gui.button_text_properties("button")
-    yalign 0.5
-
+    font gui.interface_font
+    size gui.interface_text_size
+    idle_color gui.idle_color
+    hover_color gui.hover_color
+    selected_color gui.selected_color
+    insensitive_color gui.insensitive_color
+    align (0.0, 0.5)
 
 style label_text is gui_text:
     color gui.accent_color
@@ -78,6 +85,18 @@ style label_text is gui_text:
 style prompt_text is gui_text:
     color gui.text_color
     size gui.interface_text_size
+
+style tc_vbox is choice_vbox:
+    xcenter 960
+
+style tc_button is choice_button:
+    xysize (215, 35)
+    padding (5, 5, 5, 5)
+    background Frame("mod_assets/buttons/[prefix_]bg2.png", Borders(5, 5, 5, 5), tile=False)
+    #insensitive_color sayo_utilities.button_text_insensitive_color
+
+style tc_button_text is choice_button_text:
+    kerning 0.2
 
 
 #style bar:
@@ -681,3 +700,5 @@ style nvl_button:
 
 style nvl_button_text:
     properties gui.button_text_properties("nvl_button")
+
+
