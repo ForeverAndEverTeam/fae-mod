@@ -11,7 +11,6 @@ init -100 python:
         for archive in ['audio','images','fonts']:
             if archive not in config.archives:
                 renpy.error("DDLC archive files not found in /game folder. Check your installation and try again.")
-
 ## Splash Message
 # This python statement is where the splash messages reside in.
 init python:

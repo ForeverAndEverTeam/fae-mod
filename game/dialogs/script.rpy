@@ -2,7 +2,7 @@
 
 # This is the main script that Ren'Py calls upon to start
 # your mod's story! 
-init python:
+init -999 python:
     import discord_rpc
     import time
 
