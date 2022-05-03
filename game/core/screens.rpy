@@ -15,7 +15,7 @@ default extra_settings = True
 
 # This controls the color of outlines in the game like
 # text, say, navigation, labels and such.
-define -2 text_outline_color = "#3BB7FF"
+define -2 text_outline_color = "#6AB7E7"
 
 
 ################################################################################
