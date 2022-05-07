@@ -11,10 +11,6 @@ init -100 python:
         for archive in ['audio','images','fonts']:
             if archive not in config.archives:
                 renpy.error("DDLC archive files not found in /game folder. Check your installation and try again.")
-
-
-init python:
-    config.rollback_enabled = False
 ## Splash Message
 # This python statement is where the splash messages reside in.
 init python:
@@ -38,7 +34,7 @@ init python:
     ## Syntax to use: recolorize("path/to/your/image", "#color1hex", "#color2hex", contrast value)
     ## Example: recolorize("gui/menu_bg.png", "#00a2ff", "#e6ffff", 1.25)
 
-    def recolorize(path, blackCol="#3BB7FF", whiteCol="#A5DEFF", contr=1.29):
+    def recolorize(path, blackCol="#BDD2FF", whiteCol="#E6EEFF", contr=1.29):
         return im.MatrixColor(im.MatrixColor(im.MatrixColor(path, im.matrix.desaturate() * im.matrix.contrast(contr)), im.matrix.colorize("#00f", "#fff")
             * im.matrix.saturation(120)), im.matrix.desaturate() * im.matrix.colorize(blackCol, whiteCol))
 
@@ -62,8 +58,8 @@ image splash_warning = ParameterizedText(style="splash_text", xalign=0.5, yalign
 
 # This image shows the DDLC logo in the normal DDLC position.
 image menu_logo:
-    #"/mod_assets/DDLCModTemplateLogo.png"
-    im.Composite((512, 512), (0, 0), recolorize("mod_assets/logo_bg.png"), (0, 0), "mod_assets/logo_fg.png")
+    "/mod_assets/DDLCModTemplateLogo.png"
+    #im.Composite((512, 512), (0, 0), recolorize("mod_assets/logo_bg.png"), (0, 0), "mod_assets/logo_fg.png")
     subpixel True
     xcenter 240
     ycenter 120
@@ -74,14 +70,14 @@ image menu_logo:
 image menu_bg:
     topleft
     #"gui/menu_bg.png"
-    recolorize("gui/menu_bg.png", "#12A2F6", "#A5DEFF", 1)
+    recolorize("gui/menu_bg.png", "#BDD2FF", "#E6EEFF", 1)
     menu_bg_move
 
 # This image shows the pause menu polka-dot image.
 image game_menu_bg:
     topleft
     #"gui/menu_bg.png"
-    recolorize("gui/menu_bg.png", "#3BB7FF", "#A5DEFF", 1)
+    recolorize("gui/menu_bg.png", "#BDD2FF", "#E6EEFF", 1)
     menu_bg_loop
 
 # This image transform shows the white fading effect in the main menu.
@@ -168,7 +164,7 @@ image menu_art_s_glitch:
 # This image shows the main menu screen in the main/pause menu.
 image menu_nav:
     #"gui/overlay/main_menu.png"
-    recolorize("gui/overlay/main_menu.png", "#3BB7FF")
+    recolorize("gui/overlay/main_menu.png", "#BCDFFD")
     menu_nav_move
 
 ## Main Menu Effects

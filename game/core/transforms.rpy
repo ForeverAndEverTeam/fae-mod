@@ -546,8 +546,7 @@ transform malpha(a=1.00):
     i11
     alpha a
 
-init -5 python:
-    dissolve_sayori = {"master": Dissolve(0.25, alpha=True)}
+
 init -10 python:
     def getPropFromStyle(style_name, prop_name):
         """

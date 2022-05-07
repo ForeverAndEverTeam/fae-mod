@@ -15,7 +15,7 @@ default extra_settings = True
 
 # This controls the color of outlines in the game like
 # text, say, navigation, labels and such.
-define -2 text_outline_color = "#3BB7FF"
+define -2 text_outline_color = "#6AB7E7"
 
 
 ################################################################################
@@ -232,7 +232,7 @@ init python:
         if not player: return
         persistent.playername = player
         renpy.hide_screen("name_input")
-        renpy.jump_out_of_context("bday_input")
+        renpy.jump_out_of_context("start")
 
 screen navigation():
 
@@ -244,49 +244,47 @@ screen navigation():
 
         spacing gui.navigation_spacing
 
-        #if not persistent.autoload or not main_menu:
+        if not persistent.autoload or not main_menu:
 
-        if main_menu:
+            if main_menu:
 
-            if persistent.playthrough == 1:
-                textbutton _("ŔŗñĮ¼»ŧþŀÂŻŕěōì«") action If(persistent.playername, true=Start(), false=Show(screen="name_input", message="Please enter your name", ok_action=Function(FinishEnterName)))
+                if persistent.playthrough == 1:
+                    textbutton _("ŔŗñĮ¼»ŧþŀÂŻŕěōì«") action If(persistent.playername, true=Start(), false=Show(screen="name_input", message="Please enter your name", ok_action=Function(FinishEnterName)))
+                else:
+                    textbutton _("New Game") action If(persistent.playername, true=Start(), false=Show(screen="name_input", message="Please enter your name", ok_action=Function(FinishEnterName)))
+
             else:
-                textbutton _("New Game") action If(persistent.playername, true=Start(), false=Show(screen="name_input", message="Please enter your name", ok_action=Function(FinishEnterName)))
 
+                textbutton _("History") action [ShowMenu("history"), SensitiveIf(renpy.get_screen("history") == None)]
+
+                textbutton _("Save Game") action [ShowMenu("save"), SensitiveIf(renpy.get_screen("save") == None)]
+
+            textbutton _("Load Game") action [ShowMenu("load"), SensitiveIf(renpy.get_screen("load") == None)]
+
+
+            if _in_replay:
+
+                textbutton _("End Replay") action EndReplay(confirm=True)
+
+            elif not main_menu:
+                if persistent.playthrough != 3:
+                    textbutton _("Main Menu") action MainMenu()
+                else:
+                    textbutton _("Main Menu") action NullAction()
+
+            textbutton _("Settings") action [ShowMenu("preferences"), SensitiveIf(renpy.get_screen("preferences") == None)]
+
+            #textbutton _("About") action ShowMenu("about")
+
+            if renpy.variant("pc"):
+
+                ## Help isn't necessary or relevant to mobile devices.
+                textbutton _("Help") action [Help("README.html"), Show(screen="dialog", message="The help file has been opened in your browser.", ok_action=Hide("dialog"))]
+
+                ## The quit button is banned on iOS and unnecessary on Android.
+                textbutton _("Quit") action Quit(confirm=not main_menu)
         else:
-
-            textbutton _("History") action [ShowMenu("history"), SensitiveIf(renpy.get_screen("history") == None)]
-
-            textbutton _("Save Game") action [ShowMenu("save"), SensitiveIf(renpy.get_screen("save") == None)]
-
-        textbutton _("Load Game") action [ShowMenu("load"), SensitiveIf(renpy.get_screen("load") == None)]
-
-
-        if _in_replay:
-
-            textbutton _("End Replay") action EndReplay(confirm=True)
-
-        elif not main_menu:
-            if persistent.playthrough != 3:
-                textbutton _("Main Menu") action MainMenu()
-            else:
-                textbutton _("Main Menu") action NullAction()
-
-        textbutton _("Settings") action [ShowMenu("preferences"), SensitiveIf(renpy.get_screen("preferences") == None)]
-
-        textbutton _("QABs") action [ShowMenu("qab"), SensitiveIf(renpy.get_screen("qab") == None)]
-
-        #textbutton _("About") action ShowMenu("about")
-
-        if renpy.variant("pc"):
-
-            ## Help isn't necessary or relevant to mobile devices.
-            textbutton _("Help") action [Help("README.html"), Show(screen="dialog", message="The help file has been opened in your browser.", ok_action=Hide("dialog"))]
-
-            ## The quit button is banned on iOS and unnecessary on Android.
-            textbutton _("Quit") action Quit(confirm=not main_menu)
-        #else:
-        #    timer 1.75 action Start("autoload_yurikill")
+            timer 1.75 action Start("autoload_yurikill")
 
 
 
@@ -298,7 +296,27 @@ screen navigation():
 ## http://www.renpy.org/doc/html/screen_special.html#main-menu
 
 screen main_menu():
-
+    python:
+        # Note: 'event_name': callback
+        callbacks = {
+            'ready': readyCallback,
+            'disconnected': disconnectedCallback,
+            'error': errorCallback,
+            }
+        discord_rpc.initialize('951882871289806899', callbacks=callbacks, log=False)
+        start = time.time()
+        print(start)
+        discord_rpc.update_connection()
+        discord_rpc.run_callbacks()
+        discord_rpc.update_presence(
+            **{
+                'details': 'Main Menu',
+                'start_timestamp': start,
+                'large_image_key': 'logo'
+                }
+                )
+        discord_rpc.update_connection()
+        discord_rpc.run_callbacks()
     # This ensures that any other menu screen is replaced.
     tag menu
 
@@ -580,140 +598,123 @@ screen preferences():
     else:
         $ cols = 4
 
-    use game_menu(_("Settings")):
+    use game_menu(_("Settings"), scroll="viewport"):
 
-        viewport id "preferences":
-            scrollbars "vertical"
-            mousewheel True
-            draggable True
-
-
-
-            vbox:
-
-                yoffset 0
+        vbox:
+            if extra_settings:
+                xoffset 35
+            else:
                 xoffset 50
-                #if extra_settings:
-                #    xoffset 35
-                #else:
-                #    xoffset 50
 
-                hbox:
-                    box_wrap True
+            hbox:
+                box_wrap True
 
-                    if renpy.variant("pc"):
+                if renpy.variant("pc"):
 
-                        vbox:
-                            style_prefix "radio"
-                            label _("Display")
-                            textbutton _("Windowed") action Preference("display", "window")
-                            textbutton _("Fullscreen") action Preference("display", "fullscreen")
-                    if config.developer:
-                        vbox:
-                            style_prefix "radio"
-                            label _("Rollback Side")
-                            textbutton _("Disable") action Preference("rollback side", "disable")
-                            textbutton _("Left") action Preference("rollback side", "left")
-                            textbutton _("Right") action Preference("rollback side", "right")
+                    vbox:
+                        style_prefix "radio"
+                        label _("Display")
+                        textbutton _("Windowed") action Preference("display", "window")
+                        textbutton _("Fullscreen") action Preference("display", "fullscreen")
+                if config.developer:
+                    vbox:
+                        style_prefix "radio"
+                        label _("Rollback Side")
+                        textbutton _("Disable") action Preference("rollback side", "disable")
+                        textbutton _("Left") action Preference("rollback side", "left")
+                        textbutton _("Right") action Preference("rollback side", "right")
 
+                vbox:
+                    style_prefix "check"
+                    label _("Skip")
+                    textbutton _("Unseen Text") action Preference("skip", "toggle")
+                    textbutton _("After Choices") action Preference("after choices", "toggle")
+                    #textbutton _("Transitions") action InvertSelected(Preference("transitions", "toggle"))
+                
+                if extra_settings:
                     vbox:
                         style_prefix "check"
-                        label _("Skip")
-                        textbutton _("Unseen Text") action Preference("skip", "toggle")
-                        textbutton _("After Choices") action Preference("after choices", "toggle")
-                        #textbutton _("Transitions") action InvertSelected(Preference("transitions", "toggle"))
+                        label _("Extra Settings")
+                        textbutton _("Uncensored Mode") action If(persistent.uncensored_mode, 
+                            ToggleField(persistent, "uncensored_mode"), 
+                            Show("confirm", message="Are you sure you want to turn on Uncensored Mode?\nDoing so will enable more adult/sensitive\ncontent in your playthrough.\n\nThis setting will be dependent on the modder if\nthey programmed these checks in their story.", 
+                                yes_action=[Hide("confirm"), ToggleField(persistent, "uncensored_mode")],
+                                no_action=Hide("confirm")
+                            ))
+                        textbutton _("Let's Play Mode") action If(persistent.lets_play, 
+                            ToggleField(persistent, "lets_play"),
+                            [ToggleField(persistent, "lets_play"), Show("dialog", 
+                                message="You have enabled Let's Play Mode.\nThis mode allows you to skip content that\ncontains sensitive information or apply alternative\nstory options.\n\nThis setting will be dependent on the modder\nif they programmed these checks in their story.", 
+                                ok_action=Hide("dialog")
+                            )])
+                            
 
-                    vbox:
-                        style_prefix "check"
-                        label _("Chatter")
-                        textbutton _("Repeat Random Topics") action [
-                            ToggleField(
-                                object=persistent,
-                                field="repeat_chat",
-                                true_value=True,
-                                false_value=False)
-                        ]
-                hbox:
-                    style_prefix "slider"
-                    box_wrap True
+                ## Additional vboxes of type "radio_pref" or "check_pref" can be
+                ## added here, to add additional creator-defined preferences.
 
-                    vbox:
-                        label _("Random Talk: {0}".format(sayo_utilities.rcf.get_desc()))
+            null height (4 * gui.pref_spacing)
 
-                        bar value FieldValue(
-                            object=persistent,
-                            field="sayo_rctf",
-                            range=5,
-                            style="slider",
-                            step=1
-                        )
+            hbox:
+                if extra_settings:
+                    xoffset 15
+                style_prefix "slider"
+                box_wrap True
 
-                    ## Additional vboxes of type "radio_pref" or "check_pref" can be
-                    ## added here, to add additional creator-defined preferences.
+                vbox:
 
-                null height (4 * gui.pref_spacing)
+                    label _("Text Speed")
 
-                hbox:
+                    #bar value Preference("text speed")
+                    bar value FieldValue(_preferences, "text_cps", range=180, max_is_zero=False, style="slider", offset=20)
+
+                    label _("Auto-Forward Time")
+
+                    bar value Preference("auto-forward time")
+
+                vbox:
                     if extra_settings:
                         xoffset 15
-                    style_prefix "slider"
-                    box_wrap True
+                    
+                    if config.has_music:
+                        label _("Music Volume")
 
+                        hbox:
+                            bar value Preference("music volume")
+
+                    if config.has_sound:
+
+                        label _("Sound Volume")
+
+                        hbox:
+                            bar value Preference("sound volume")
+
+                            if config.sample_sound:
+                                textbutton _("Test") action Play("sound", config.sample_sound)
+
+
+                    if config.has_voice:
+                        label _("Voice Volume")
+
+                        hbox:
+                            bar value Preference("voice volume")
+
+                            if config.sample_voice:
+                                textbutton _("Test") action Play("voice", config.sample_voice)
+
+                    if config.has_music or config.has_sound or config.has_voice:
+                        null height gui.pref_spacing
+
+                        textbutton _("Mute All"):
+                            action Preference("all mute", "toggle")
+                            style "mute_all_button"
+
+            if config.developer:  
+                hbox:
                     vbox:
-
-                        label _("Text Speed")
-
-                        #bar value Preference("text speed")
-                        bar value FieldValue(_preferences, "text_cps", range=180, max_is_zero=False, style="slider", offset=20)
-
-                        label _("Auto-Forward Time")
-
-                        bar value Preference("auto-forward time")
-
-                    vbox:
-                        if extra_settings:
-                            xoffset 15
-                        
-                        if config.has_music:
-                            label _("Music Volume")
-
-                            hbox:
-                                bar value Preference("music volume")
-
-                        if config.has_sound:
-
-                            label _("Sound Volume")
-
-                            hbox:
-                                bar value Preference("sound volume")
-
-                                if config.sample_sound:
-                                    textbutton _("Test") action Play("sound", config.sample_sound)
-
-
-                        if config.has_voice:
-                            label _("Voice Volume")
-
-                            hbox:
-                                bar value Preference("voice volume")
-
-                                if config.sample_voice:
-                                    textbutton _("Test") action Play("voice", config.sample_voice)
-
-                        if config.has_music or config.has_sound or config.has_voice:
-                            null height gui.pref_spacing
-
-                            textbutton _("Mute All"):
-                                action Preference("all mute", "toggle")
-                                style "mute_all_button"
-
-                if config.developer:  
-                    hbox:
-                        vbox:
-                            textbutton _("Export Mod Icon as ICO"):
-                                action Function(saveIco, "mod_assets/DDLCModTemplateLogo.png")
-                                style "navigation_button"
-                                
+                        textbutton _("Export Mod Icon as ICO"):
+                            action Function(saveIco, "mod_assets/DDLCModTemplateLogo.png")
+                            style "navigation_button"
+                            
     text "v[config.version]":
                 xalign 1.0 yalign 1.0
                 xoffset -10 yoffset -10
@@ -1429,84 +1430,3 @@ transform bsod_qrcode(x):
 ## This controls the maximum number of NVL-mode entries that can be displayed at
 ## once.
 define config.nvl_list_length = 6
-
-
-screen qab():
-    tag menu
-
-    use game_menu(("Hotkeys"), scroll="viewport"):
-
-        default tooltip = GetTooltip("")
-
-        # making each indivual list a vbox essentially lets us auto-align
-        vbox:
-            spacing 25
-
-            hbox:
-                style_prefix "check"
-                vbox:
-                    label _("General")
-                    spacing 10
-                    text _("Music")
-                    text _("Play")
-                    text _("Talk")
-                    text _("Bookmark")
-                    text _("Fullscreen")
-                    text _("Screenshot")
-                    text _("Settings")
-
-                vbox:
-                    label _("")
-                    spacing 10
-                    text _("M")
-                    text _("P")
-                    text _("T")
-                    text _("B")
-                    text _("F")
-                    text _("S")
-                    text _("Esc")
-
-            hbox:
-                style_prefix "check"
-                vbox:
-                    label _("Music")
-                    spacing 10
-                    text _("Volume Up")
-                    text _("Volume Down")
-                    text _("Mute")
-
-                vbox:
-                    label _("")
-                    spacing 10
-                    text _("+")
-                    text _("-")
-                    text _("Shift-M")
-
-    # there are lesser used hotkeys in Help that aren't needed here
-    text "Click 'Help' for the complete list.":
-        xalign 1.0 yalign 0.0
-        xoffset -10
-        style "main_menu_version"
-
-screen upd_scr(ok_action,interr_action,status):
-    modal True
-
-    frame:
-        vbox:
-            xalign 1
-            yalign 1
-
-            if status == 1:
-                label ('A new update is available.')
-            elif status == 2:
-                label ('You\'re up to date')
-            elif status == 3:
-                label ('Looking for new versions...')
-            else:
-                label ('An error occured. Wait a while and try again.')
-            
-            hbox:
-                textbutton _("Install New Update") action [ok_action, SensitiveIf(status == 1)]
-
-                textbutton _('Cancel') action interr_action
-
