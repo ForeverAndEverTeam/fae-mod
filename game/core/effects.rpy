@@ -466,3 +466,78 @@ image veins:
         choice:
             xoffset -2
         repeat
+transform fade_in(time=1.0):
+    alpha 0.0
+    ease time alpha 1.0
+
+transform kiss_zoom(_zoom, _y,time=2.0):
+    i11
+    xcenter 640 yoffset 700 yanchor 1.0
+    linear time ypos _y zoom _zoom
+
+transform kiss_return(time, y):
+    linear time xcenter 640 yoffset (y) zoom 0.80
+
+label sayo_kiss(
+    transition=4.0,
+    duration=2.0,
+    hide_everything=True,
+    start_code="bbagbaab",
+    end_code="fbagbiab",
+    fade_time=1.0
+):
+    if persistent._sayo_kiss_first is None:
+        $ persistent._sayo_kiss_first = datetime.datetime.now()
+    
+    window hide
+
+    if hide_everything:
+        hide screen hidden
+    
+    show sayori at i11
+
+    $ renpy.pause(5.0, hard=True)
+
+    $ _sayo_kiss_zoom = 4.9
+    $ _sayo_kiss_y = 360
+    $ _sayo_kiss_y2 = 380
+
+    $ renpy.show("sayori {}".format(start_code), [kiss_zoom(_sayo_kiss_zoom,int(_sayo_kiss_y),transition)])
+
+    $ renpy.pause(transition)
+
+    show black zorder 100 at fade_in(fade_time)
+
+    $ renpy.pause(duration/2)
+
+    play sound "mod_assets/bgm/FX/kissing.ogg"
+
+    window auto
+    "chu~{fast}{w=1}{nw}"
+    window hide
+
+    $ renpy.pause(duration/2)
+    # hide the black scene
+    hide black
+
+    $ renpy.show("sayori {}".format(end_code),[kiss_return(transition,_sayo_kiss_y2)])
+
+    pause transition
+
+    $ renpy.show("sayori {}".format(end_code),[i11()])
+
+    show sayori with dissolve_sayori
+
+    if hide_everything:
+
+        show screen hidden
+    window auto
+    return
+
+label kiss_quick(**kwargs):
+    python:
+        kwargs.setdefault("duration", 0.5)
+        kwargs.setdefault("fade_time", 0.5)
+        kwargs.setdefault("start_code", "bbagbaab")
+    call sayo_kiss(**kwargs)
+    return

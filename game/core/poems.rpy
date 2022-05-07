@@ -1,7 +1,11 @@
 
 init python:
-#D-Day poem by Megumi. Thanks!
-
+    # This class defines the poems for the poem sharing mini-game.
+    # Syntax:
+    #   author - This variable contains the characters' name.
+    #   title - This variable contains the title of the poem.
+    #   text - This variable contains the poem lines for the poem.
+    userplayer = renpy.substitute(persistent.playername)
     class Poem:
         def __init__(self, author="", title="", text="", d_day_poem=False):
             self.author = author.lower()
@@ -15,6 +19,7 @@ init python:
         d_day_poem=True,
         title = "The Life of a Hopeless Romantic",
         text = """\
+
 Every second, and everyday, no matter what I do, 
 You cross my mind like the rays of the sun, when I'm down and blue. 
 When I'm sad I think of you. 
@@ -47,7 +52,33 @@ Waiting until you'd think of me as anything more."""
     )
 
 
+    poem_v_day = Poem(
+        author = "sayori",
+        title = "Hope",
+        text = """\
+A poem for you. 
+A poem for me. 
+The world is quiet, 
+Even the noise from the sea. 
+
+
+A friend, becomes a lover. 
+A lover becomes a bride. 
+Prevents each from drowning. 
+From being pulled by the tide. 
+
+
+When the world is dark, 
+The light is gone 
+Everything is fear. 
+I will forever always have hope. 
+
+Whenever you are near."""
+    )
+
 image d_day_paper = "mod_assets/poem/d_day.png"
+
+
 
 image paper = "images/bg/poem.jpg"
 
@@ -60,10 +91,7 @@ transform paper_out:
     alpha 1
     linear 1.0 alpha 0
 
-if persistent.d_day:
-    $ paper = "mod_assets/poem/d_day.png"
-
-screen poem(currentpoem, paper="[paper]"):
+screen poem(currentpoem, paper="d_day_paper"):
     style_prefix "poem"
 
     vbox:

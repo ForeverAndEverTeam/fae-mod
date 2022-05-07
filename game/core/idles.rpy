@@ -25,16 +25,10 @@ init python:
 
 label sayo_autoload:
 
-    #Low AFFECTION D-DAY CHECK
-
-    #if persistent.cthulu_d_day:
-    #    $ delete_everything()
-    #else:
-    #    pass
-
-
     #Start with black screen
     scene black
+
+    # D DAY MODE CHECK
 
     $ persistent.d_day = True
 
@@ -47,11 +41,16 @@ label sayo_autoload:
 
     #Do all the things for initial setup flow
 
+    python:
+        #persistent.boot_to_d_day = True
+        persistent._sayo_d_day_poem_code = "d_day_1"
+
+    if persistent.boot_to_d_day:
+        jump d_day_control
     
-    #TODO: FINAL FAREWELL MODE
 
     #if persistent.d_day:
-    #    jump sayori_d_day
+    #    jump d_day_control
 
     #FALL THROUGH
 
@@ -61,7 +60,9 @@ label sayo_setup:
 
     show black zorder 99
 
-    show bg spaceroom zorder 1
+    show sky_day zorder 1
+
+    show bg spaceroom zorder 2
 
     #scene bg spaceroom zorder 1
 
@@ -93,15 +94,28 @@ label sayo_init:
 
 label idle_loop:
     
-    show sayori idle zorder sayo_zorder with moveinleft 
-    
+    show sayori idle at t11 zorder sayo_zorder
+
+    #call showpoem_s(v_day_1)
+    #python:
+
+        #_curr_time = datetime.datetime.now()
+
+        #if LMC.minute is not _curr_time.minute:
+        #    reg_chk1()
+        #    LMC = _curr_time
+
+        #sayo_globals.pia = False
+
     while persistent._event_list:
         call cnc
 
-    show screen hidden
+    show screen hidden(False)
 
 label idle_wait:
     window hide
+
+    show sayori aahcnaa
 
     $ renpy.pause(delay=5.0, hard=True)
     jump idle_loop
@@ -111,6 +125,8 @@ label cnc:
         $ _chat = persistent._event_list.pop(0)
 
         if renpy.has_label(_chat):
+        
+            $ sayo_globals.pia = True
 
             call expression _chat
     
@@ -133,3 +149,7 @@ label cnc:
         global LCC
         LCC = datetime.datetime.now()
     jump idle_loop
+
+
+
+

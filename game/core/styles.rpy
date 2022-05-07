@@ -65,11 +65,18 @@ style gui_text:
 
 style button:
     properties gui.button_properties("button")
+    xysize (None, 36)
+    padding (4, 4, 4, 4)
 
 style button_text is gui_text:
     properties gui.button_text_properties("button")
-    yalign 0.5
-
+    font gui.interface_font
+    size gui.interface_text_size
+    idle_color gui.idle_color
+    hover_color gui.hover_color
+    selected_color gui.selected_color
+    insensitive_color gui.insensitive_color
+    align (0.0, 0.5)
 
 style label_text is gui_text:
     color gui.accent_color
@@ -79,20 +86,43 @@ style prompt_text is gui_text:
     color gui.text_color
     size gui.interface_text_size
 
+style tm_vbox is choice_vbox:
+    xcenter 960
+
+style tm_button is choice_button:
+    #xysize (215, 35)
+    padding (5, 2, 5, 5)
+    #background Frame("mod_assets/buttons/[prefix_]bg2.png", Borders(5, 5, 5, 5), tile=False)
+    #insensitive_color sayo_utilities.button_text_insensitive_color
+
+style tm_button_text is choice_button_text:
+    kerning 0.2
+
+
 style tc_vbox is choice_vbox:
     xcenter 960
 
-style tc_button is choice_button
+style tc_button is choice_button:
+    xysize (215, 35)
+    padding (5, 5, 5, 5)
+    background Frame("mod_assets/buttons/[prefix_]bg2.png", Borders(5, 5, 5, 5), tile=False)
+    #insensitive_color sayo_utilities.button_text_insensitive_color
 
-style tc_button_dark is choice_button_dark
+style tc_button_text is choice_button_text:
+    kerning 0.2
 
-style tc_button_text is choice_button_text
+style tcs_b_vbox is choice_vbox:
+    xcenter 960
 
-style tc_button_text_dark is choice_button_text_dark
-#style bar:
-#    ysize gui.bar_size
-#    left_bar Frame("gui/bar/left.png", gui.bar_borders, tile=gui.bar_tile)
-#    right_bar Frame("gui/bar/right.png", gui.bar_borders, tile=gui.bar_tile)
+style tcs_b_button is choice_button:
+    background Frame("mod_assets/buttons/[prefix_]bg2.png", Borders(5, 5, 5, 5), tile=False)
+
+style tcs_b_button_text is choice_button_text
+
+style bar:
+    ysize gui.bar_size
+    left_bar Frame("gui/bar/left.png", gui.bar_borders, tile=gui.bar_tile)
+    right_bar Frame("gui/bar/right.png", gui.bar_borders, tile=gui.bar_tile)
 
 style vbar:
     xsize gui.bar_size
@@ -118,10 +148,10 @@ style vscrollbar:
     unscrollable "hide"
     bar_invert True
 
-#style vscrollbar:
-#    xsize gui.scrollbar_size
-#    base_bar Frame("gui/scrollbar/vertical_[prefix_]bar.png", gui.vscrollbar_borders, tile=gui.scrollbar_tile)
-#    thumb Frame("gui/scrollbar/vertical_[prefix_]thumb.png", gui.vscrollbar_borders, tile=gui.scrollbar_tile)
+style vscrollbar:
+    xsize gui.scrollbar_size
+    base_bar Frame("gui/scrollbar/vertical_[prefix_]bar.png", gui.vscrollbar_borders, tile=gui.scrollbar_tile)
+    thumb Frame("gui/scrollbar/vertical_[prefix_]thumb.png", gui.vscrollbar_borders, tile=gui.scrollbar_tile)
 
 style slider:
     ysize 18
@@ -138,6 +168,9 @@ style frame:
     padding gui.frame_borders.padding
     background Frame("gui/frame.png", gui.frame_borders, tile=gui.frame_tile)
     # background Frame(recolorize("gui/frame.png"), gui.frame_borders, tile=gui.frame_tile)
+
+
+
 
 
 style window is default

@@ -232,7 +232,7 @@ init python:
         if not player: return
         persistent.playername = player
         renpy.hide_screen("name_input")
-        renpy.jump_out_of_context("start")
+        renpy.jump_out_of_context("bday_input")
 
 screen navigation():
 
@@ -580,123 +580,140 @@ screen preferences():
     else:
         $ cols = 4
 
-    use game_menu(_("Settings"), scroll="viewport"):
+    use game_menu(_("Settings")):
 
-        vbox:
-            if extra_settings:
-                xoffset 35
-            else:
+        viewport id "preferences":
+            scrollbars "vertical"
+            mousewheel True
+            draggable True
+
+
+
+            vbox:
+
+                yoffset 0
                 xoffset 50
+                #if extra_settings:
+                #    xoffset 35
+                #else:
+                #    xoffset 50
 
-            hbox:
-                box_wrap True
+                hbox:
+                    box_wrap True
 
-                if renpy.variant("pc"):
+                    if renpy.variant("pc"):
 
-                    vbox:
-                        style_prefix "radio"
-                        label _("Display")
-                        textbutton _("Windowed") action Preference("display", "window")
-                        textbutton _("Fullscreen") action Preference("display", "fullscreen")
-                if config.developer:
-                    vbox:
-                        style_prefix "radio"
-                        label _("Rollback Side")
-                        textbutton _("Disable") action Preference("rollback side", "disable")
-                        textbutton _("Left") action Preference("rollback side", "left")
-                        textbutton _("Right") action Preference("rollback side", "right")
+                        vbox:
+                            style_prefix "radio"
+                            label _("Display")
+                            textbutton _("Windowed") action Preference("display", "window")
+                            textbutton _("Fullscreen") action Preference("display", "fullscreen")
+                    if config.developer:
+                        vbox:
+                            style_prefix "radio"
+                            label _("Rollback Side")
+                            textbutton _("Disable") action Preference("rollback side", "disable")
+                            textbutton _("Left") action Preference("rollback side", "left")
+                            textbutton _("Right") action Preference("rollback side", "right")
 
-                vbox:
-                    style_prefix "check"
-                    label _("Skip")
-                    textbutton _("Unseen Text") action Preference("skip", "toggle")
-                    textbutton _("After Choices") action Preference("after choices", "toggle")
-                    #textbutton _("Transitions") action InvertSelected(Preference("transitions", "toggle"))
-                
-                if extra_settings:
                     vbox:
                         style_prefix "check"
-                        label _("Extra Settings")
-                        textbutton _("Uncensored Mode") action If(persistent.uncensored_mode, 
-                            ToggleField(persistent, "uncensored_mode"), 
-                            Show("confirm", message="Are you sure you want to turn on Uncensored Mode?\nDoing so will enable more adult/sensitive\ncontent in your playthrough.\n\nThis setting will be dependent on the modder if\nthey programmed these checks in their story.", 
-                                yes_action=[Hide("confirm"), ToggleField(persistent, "uncensored_mode")],
-                                no_action=Hide("confirm")
-                            ))
-                        textbutton _("Let's Play Mode") action If(persistent.lets_play, 
-                            ToggleField(persistent, "lets_play"),
-                            [ToggleField(persistent, "lets_play"), Show("dialog", 
-                                message="You have enabled Let's Play Mode.\nThis mode allows you to skip content that\ncontains sensitive information or apply alternative\nstory options.\n\nThis setting will be dependent on the modder\nif they programmed these checks in their story.", 
-                                ok_action=Hide("dialog")
-                            )])
-                            
+                        label _("Skip")
+                        textbutton _("Unseen Text") action Preference("skip", "toggle")
+                        textbutton _("After Choices") action Preference("after choices", "toggle")
+                        #textbutton _("Transitions") action InvertSelected(Preference("transitions", "toggle"))
 
-                ## Additional vboxes of type "radio_pref" or "check_pref" can be
-                ## added here, to add additional creator-defined preferences.
+                    vbox:
+                        style_prefix "check"
+                        label _("Chatter")
+                        textbutton _("Repeat Random Topics") action [
+                            ToggleField(
+                                object=persistent,
+                                field="repeat_chat",
+                                true_value=True,
+                                false_value=False)
+                        ]
+                hbox:
+                    style_prefix "slider"
+                    box_wrap True
 
-            null height (4 * gui.pref_spacing)
+                    vbox:
+                        label _("Random Talk: {0}".format(sayo_utilities.rcf.get_desc()))
 
-            hbox:
-                if extra_settings:
-                    xoffset 15
-                style_prefix "slider"
-                box_wrap True
+                        bar value FieldValue(
+                            object=persistent,
+                            field="sayo_rctf",
+                            range=5,
+                            style="slider",
+                            step=1
+                        )
 
-                vbox:
+                    ## Additional vboxes of type "radio_pref" or "check_pref" can be
+                    ## added here, to add additional creator-defined preferences.
 
-                    label _("Text Speed")
+                null height (4 * gui.pref_spacing)
 
-                    #bar value Preference("text speed")
-                    bar value FieldValue(_preferences, "text_cps", range=180, max_is_zero=False, style="slider", offset=20)
-
-                    label _("Auto-Forward Time")
-
-                    bar value Preference("auto-forward time")
-
-                vbox:
+                hbox:
                     if extra_settings:
                         xoffset 15
-                    
-                    if config.has_music:
-                        label _("Music Volume")
+                    style_prefix "slider"
+                    box_wrap True
 
-                        hbox:
-                            bar value Preference("music volume")
-
-                    if config.has_sound:
-
-                        label _("Sound Volume")
-
-                        hbox:
-                            bar value Preference("sound volume")
-
-                            if config.sample_sound:
-                                textbutton _("Test") action Play("sound", config.sample_sound)
-
-
-                    if config.has_voice:
-                        label _("Voice Volume")
-
-                        hbox:
-                            bar value Preference("voice volume")
-
-                            if config.sample_voice:
-                                textbutton _("Test") action Play("voice", config.sample_voice)
-
-                    if config.has_music or config.has_sound or config.has_voice:
-                        null height gui.pref_spacing
-
-                        textbutton _("Mute All"):
-                            action Preference("all mute", "toggle")
-                            style "mute_all_button"
-
-            if config.developer:  
-                hbox:
                     vbox:
-                        textbutton _("Export Mod Icon as ICO"):
-                            action Function(saveIco, "mod_assets/DDLCModTemplateLogo.png")
-                            style "navigation_button"
-                            
+
+                        label _("Text Speed")
+
+                        #bar value Preference("text speed")
+                        bar value FieldValue(_preferences, "text_cps", range=180, max_is_zero=False, style="slider", offset=20)
+
+                        label _("Auto-Forward Time")
+
+                        bar value Preference("auto-forward time")
+
+                    vbox:
+                        if extra_settings:
+                            xoffset 15
+                        
+                        if config.has_music:
+                            label _("Music Volume")
+
+                            hbox:
+                                bar value Preference("music volume")
+
+                        if config.has_sound:
+
+                            label _("Sound Volume")
+
+                            hbox:
+                                bar value Preference("sound volume")
+
+                                if config.sample_sound:
+                                    textbutton _("Test") action Play("sound", config.sample_sound)
+
+
+                        if config.has_voice:
+                            label _("Voice Volume")
+
+                            hbox:
+                                bar value Preference("voice volume")
+
+                                if config.sample_voice:
+                                    textbutton _("Test") action Play("voice", config.sample_voice)
+
+                        if config.has_music or config.has_sound or config.has_voice:
+                            null height gui.pref_spacing
+
+                            textbutton _("Mute All"):
+                                action Preference("all mute", "toggle")
+                                style "mute_all_button"
+
+                if config.developer:  
+                    hbox:
+                        vbox:
+                            textbutton _("Export Mod Icon as ICO"):
+                                action Function(saveIco, "mod_assets/DDLCModTemplateLogo.png")
+                                style "navigation_button"
+                                
     text "v[config.version]":
                 xalign 1.0 yalign 1.0
                 xoffset -10 yoffset -10

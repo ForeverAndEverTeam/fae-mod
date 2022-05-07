@@ -12,6 +12,9 @@ init -100 python:
             if archive not in config.archives:
                 renpy.error("DDLC archive files not found in /game folder. Check your installation and try again.")
 
+
+init python:
+    config.rollback_enabled = False
 ## Splash Message
 # This python statement is where the splash messages reside in.
 init python:
@@ -422,8 +425,12 @@ label splashscreen:
 
     # This if statement checks whether we have a auto-load set to load it than
     # start the game screen as-new.
-    if persistent.autoload and not _restart:
-        jump autoload
+
+    if not persistent.sayo_first_visit_date:
+        $ persistent.sayo_first_visit_date = datetime.datetime.now()
+
+    #if persistent.autoload and not _restart:
+    jump autoload
 
     # This variable sets skipping to False for the splash screen.
     $ config.allow_skipping = False
@@ -588,8 +595,14 @@ label autoload:
         #try: renpy.pop_call()
         #except: pass
     $renpy.pop_call()
+
+    if not persistent.sayo_intro_seen:
+        jump sayo_intro_checker
+    else:
+        jump sayo_autoload
+
     #jump expression persistent.autoload
-    jump sayo_autoload
+    #jump sayo_autoload
 
 # This label sets the main menu music to Doki Doki Literature Club before the
 # menu starts

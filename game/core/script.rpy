@@ -2,7 +2,7 @@
 
 # This is the main script that Ren'Py calls upon to start
 # your mod's story! 
-init python:
+init -999 python:
     import discord_rpc
     import time
 
@@ -59,6 +59,9 @@ label start:
     # This is where your script code is called!
     # 'persistent.playthrough' controls the playthrough number the player is on i.e (Act 1, 2, 3, 4)
     #jump ch30_autoload
+    #if persistent.autoload:
+    #    jump idle_loop
+    
     jump sayo_autoload
 # This label is where the game 'ends' during Act 1.
 label endgame(pause_length=4.0):

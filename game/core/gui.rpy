@@ -51,7 +51,7 @@ define -2 gui.interface_text_color = '#ffffff'
 # These variables set the font and its' size for DDLC's text in-game.
 
 # This font is used for in-game text.
-define -2 gui.default_font = "gui/font/Aller_Rg.ttf"
+define -2 gui.default_font = "gui/font/s1.ttf"
 
 # This font is used for character names.
 define -2 gui.name_font = "gui/font/RifficFree-Bold.ttf"
@@ -60,7 +60,7 @@ define -2 gui.name_font = "gui/font/RifficFree-Bold.ttf"
 define -2 gui.interface_font = "gui/font/Aller_Rg.ttf"
 
 # The text size of normal dialogue text.
-define -2 gui.text_size = 24
+define -2 gui.text_size = 38
 
 # This determines the text size of character names.
 define -2 gui.name_text_size = 24
@@ -418,12 +418,3 @@ init python:
 
         ## Quick Menu
         gui.quick_button_text_size = 14
-style neat_menu_button is choice_button:
-    xysize (250, None)
-    padding (25, 5, 25, 5)
-    top_padding 10
-    bottom_padding 5
-
-style neat_menu_button_text is choice_button_text:
-    align (0.0, 0.0)
-    text_align 0.0

@@ -209,6 +209,8 @@ init python:
     build.classify("game/**.chr", "scripts all")
     build.classify("game/advanced_scripts/**","scripts all") ## Backwards Compatibility
     build.classify("game/tl/**", "scripts all") ## Translation Folder
+    build.classify("game/RPASongMetadata.json", "scripts all")
+    build.classify("game/python-packages/**", "mod")
 
     build.classify('**~', None)
     build.classify('**.bak', None)

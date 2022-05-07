@@ -61,5 +61,10 @@ init 0 python:
 
 
 
+default persistent.boot_to_d_day = False
+init -2:
+
+    default persistent.other_clothes = False
+    default persistent.clothes = {}
 
 
