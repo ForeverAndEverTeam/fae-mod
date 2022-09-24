@@ -1,616 +1,224 @@
-init python in sayo_utilities:
-    import re
-    import store
-    import os
-    import store.sayo_globals as sayo_globals
-
-    def sesh_length_now():
-
-        return datetime.datetime.now() - store.sayo_globals.sesh_start
-    
-
-    def sg():
-        #SAVES ALL GAME DATA
-
-        store.Chat.__save()
-
-        #TODO: STORE BACKGROUND DATA
-
-    def sayo_magic():
-        
-        return None
-        #It's "leviooooosa". Not "leviosah".
 
 
-#init -1500 python:
-#    import os
-#    import singleton
-#    me = singleton.SingleInstance()
-
-python early in sayo_logging:
-
+init -985 python:
+    """
     import datetime
-    import logging
-    import os
-    import platform
-    import store
+
+    def fae_getSessionLength():
+
+        _now = datetime.datetime.now()
+        return _now - store.fae_utilities.pdget(
+            "current_session_start",
+            persistent.sessions,
+            #validator=store.mas_ev_data_ver._verify_dt_nn,
+            defval=_now
+        )
+    
+    def fae_getAbsenceLength():
+
+        return fae_getCurrSeshStart() - fae_getLastSeshEnd()
+    
+    def fae_getCurrSeshStart():
+        
+        return store.fae_utilities.pdget(
+            "current_session_start",
+            persistent.sessions,
+            #validator=store.mas_ev_data_ver._verify_dt_nn,
+            defval=fae_getFirstSesh()
+        )
+    
+    def fae_getFirstSesh():
+
+        return store.fae_utilities.pdget(
+            "first_session",
+            persistent.sessions,
+            #validator=store.mas_ev_data_ver._verify_dt_nn,
+            defval=datetime.datetime.now()
+        )
+    
+    def fae_isFirstSeshPast(_date):
+
+        return fae_getFirstSesh().date() > _date
+
+    def fae_getLastSeshEnd():
+
+        return store.fae_utilities.pdget(
+            "last_session_end",
+            persistent.sessions,
+            #validator=store.mas_ev_data_ver._verify_dt_nn,
+            defval=fae_getFirstSesh()
+        )
+    
+    def fae_TTDetected():
+
+        return store.fae_globals.tt_detected
+    """
+
+init -898 python in fae_globals:
+
+    is_steam = "steamapps" in renpy.config.basedir.lower()
+
+
+    
+init 2 python:
+
+    def fae_hasRPYFiles():
+        """
+        Checks if there are rpy files in the gamedir
+        """
+        return len(fae_getRPYFiles()) > 0
+
+    def fae_getRPYFiles():
+        """
+        Gets a list of rpy files in the gamedir
+        """
+        rpyCheckStation = store.FAEDockingStation(renpy.config.gamedir)
+
+        return rpyCheckStation.getPackageList(".rpy")
+
+
+init python:
+
+    def love(love_time=None):
+
+        if love_time is None:
+            love_time = datetime.datetime.now()
+        persistent._fae_ily_last = love_time
+
+    
+    def time_love(time_since):
+
+        check_time = datetime.datetime.now()
+
+        if persistent._fae_ily_last is None or persistent._fae_ily_last > check_time:
+            persistent._fae_ily_last = None
+            return False
+        
+        return (check_time - persistent._fae_ily_last) <= time_since
+
+
+
+init -1 python in fae_utilities:
     import re
-    import logging.handlers as loghandlers
+    import store
+    import store.fae_globals as fae_globals
 
-    LD_INFO = "info"
-    LD_WARN = "Warning!"
-    LD_ERROR = "!ERROR!"
+    def save_game():
 
-    LD_DEFS = {
-        logging.INFO: LD_INFO,
-        logging.WARN: LD_WARN,
-        logging.ERROR: LD_ERROR,
+        
+
+        store.Chat._save_chat_data()
+
+        store.fae_outfits.FAEOutfit.store_all()
+
+        #store.fae_events.FAEHoliday.storeAll()
+
+        store.main_background.save()
+
+
+init -999 python in fae_utilities:
+
+    
+    import datetime
+    import os
+    import store
+    import pprint
+
+    _logdir = os.path.join(renpy.config.basedir, "log")
+    if not os.path.exists(_logdir):
+        os.makedirs(_logdir)
+
+    #We always want to log and keep history
+    __main_log = renpy.renpy.log.open("log/log", append=True, flush=True)
+
+    SEVERITY_INFO = 0
+    SEVERITY_WARN = 1
+    SEVERITY_ERR = 2
+
+    LOGSEVERITY_MAP = {
+        SEVERITY_INFO: "[{0}] [INFO]: {1}",
+        SEVERITY_WARN: "[{0}] [WARNING]: {1}",
+        SEVERITY_ERR: "[{0}] [ERROR]: {1}"
     }
 
 
-    DEF_FORMAT = "[%(asctime)s]: %(dsc)s"
-    DEF_DATEFORMAT = "%Y-%m-%d %H:%M:%S"
 
+    def log(message, logseverity=SEVERITY_INFO):
+        """
+        Writes a message to the main log file (DDLC/log/log.txt)
 
-    LOG_DEFS = dict()
+        IN:
+            message - message to write to the log file
+            logseverity - Severity level of the log message (Default: INFO)
+        """
+        global __main_log
+        __main_log.write(
+            LOGSEVERITY_MAP.get(
+                logseverity,
+                LOGSEVERITY_MAP[SEVERITY_INFO]
+            ).format(datetime.datetime.now(), message)
+        )
 
+    def prettyPrint(object, indent=1, width=150):
+        """
+        Returns a PrettyPrint-formatted representation of an object as a dict.
 
-    class LogStructure(logging.Formatter):
+        IN:
+            object - the object to be converted
+            indent - the level of indentation in the formatted string
+            width - the maximum length of each line in the formatted string, before remaining content is shifted to next line
 
-
-        NEWLINE_MATCH = re.compile(r"(?<!\r)\n")
-        LINE_ENDER = "\r\n"
-
-
-        def __init__(self, fmt=None, datefmt=None):
-
-            if fmt is None:
-                fmt = DEF_FORMAT
-            if datefmt is None:
-
-                datefmt = DEF_DATEFORMAT
-            
-            super(LogStructure, self).__init__(fmt=fmt, datefmt=datefmt)
-        
-        
-        def format(self, record):
-
-            self.update_levelname(record)
-            return self.replace_lf(
-                super(LogStructure, self).format(record)
-            )
-        
-        def update_levelname(self, record):
-
-            record.levelname = LD_DEFS.get(record.levelno, record.levelname)
-
-
-        @classmethod
-        def replace_lf(cls, dsc):
-
-            return re.sub(cls.NEWLINE_MATCH, cls.LINE_ENDER, dsc)
-
-    
-    class NewLineLog(LogStructure):
-
-        def add_newline_prefix(self, record, dsc):
-
-            try:
-                if record.pfx_newline:
-                    return "\n" + dsc
-            
-            except:
-                pass
-
-            return dsc
-        
-        def format(self, record):
-
-            return self.replace_lf(
-                self.add_newline_prefix(
-                    record,
-                    super(NewLineLog, self).format(record)
-                )
-            )
-    
-    class ExtraLogStuff(logging.LoggerAdapter):
-
-
-        def __init__(self, logger, extra_props):
-
-            super(ExtraLogStuff, self).__init__(logger, extra_props)
-
-        
-        def _add_extra_stuff(self, prop_name, kwargs):
-
-            if prop_name not in kwargs:
-                return
-            
-            kwargs["extra"][prop_name] = kwargs.pop(prop_name)
-
-        def process(self, dsc, kwargs):
-
-
-            self.set_extra(kwargs)
-            return dsc, kwargs
-        
-
-        def set_extra(self, kwargs):
-
-            if "extra" in kwargs:
-                new_extra = dict(self.extra)
-                new_extra.update(kwargs["extra"])
-                kwargs["extra"] = new_extra
-            
-            else:
-
-                kwargs["extra"] = dict(self.extra)
-            
-            for prop_name in self.extra:
-                self._add_extra_stuff(prop_name, kwargs)
-
-    
-    class NewLineAdaptor(ExtraLogStuff):
-
-
-        def __init__(self, logger, extra_props=None, newline_def=False):
-
-            if extra_props is None:
-                extra_props = {}
-
-            extra_props["pfx_newline"] = newline_def
-            super(NewLineAdaptor, self).__init__(logger, extra_props)
-
-    
-    LOGGER_PATH = os.path.join(renpy.config.basedir, "log")
-
-    LOG_HEADING = "\r\n\r\n{_date}\r\n{system_info}\r\n{renpy_ver}\r\n\r\nVERSION: {game_ver}\r\n{separator}"
-
-    DSC_INFO = "[" + LD_INFO + "]: {0}"
-    DSC_WARN = "[" + LD_WARN + "]: {0}"
-    DSC_ERROR = "[" + LD_ERROR + "] {0}"
-
-    DSC_INFO_ID = "    " + DSC_INFO
-    DSC_WARN_ID = "    " + DSC_WARN
-    DSC_ERROR_ID = "    " + DSC_ERROR
-
-
-    TRY_LOAD = "Attempting to load '{0}'..."
-
-    SUC_LOAD = "'{0}' loaded successfully."
-    BAD_LOAD = "Load failed"
-
-    FILE_LOAD_FAIL = "Failed to load file at '{0}' .| {1}"
-    BAD_NAME = "name must be unique"
-
-
-    try:
-        if not os.path.exists(LOGGER_PATH):
-            os.makedirs(LOGGER_PATH)
-    except Exception as i:
-        raise Exception("Failed to create log folder because: {}".format(i))
-        
-    
-    def full_log(name, append=True, formatter=None, adapter_ctor=None, heading=None, rotations=5):
-
-
-        _kwargs = {
-            "filename": os.path.join(LOGGER_PATH, name + '.log'),
-            "mode": ("a" if append else "w"),
-            "encoding": "utf-8",
-            "delay": heading is False
-        }
-
-
-        if heading is None:
-            heading = LOG_HEADING
-        
-        if append:
-            handler = loghandlers.RotatingFileHandler(
-                backupCount=rotations,
-                **_kwargs
-            )
-        
-        else:
-            handler = logging.FileHandler(**_kwargs)
-        
-        log = logging.getLogger(name)
-
-        log.setLevel(logging.DEBUG)
-        handler.setLevel(logging.DEBUG)
-
-        log.addHandler(handler)
-
-
-        if heading is not False:
-            log.info(
-                heading.format(
-                    _date=datetime.datetime.now().strftime("%a %b %d %H:%M:%S %Y"),
-                    system_info="{0} {1} - build: {2}".format(platform.system(), platform.release(), platform.version()),
-                    renpy_ver=renpy.version(),
-                    game_ver=renpy.config.version,
-                    separator="=" * 50
-                )
-            )
-
-
-        if formatter is None:
-            handler.setFormatter(LogStructure())
-
-        else:
-
-            handler.setFormatter(formatter)
-
-        if adapter_ctor is not None:
-            log = adapter_ctor(log)
-
-        LOG_DEFS[name] = log
-
-        return log
+        OUT:
+            Formatted string representation of object __dict__
+        """
+        return pprint.pformat(object.__dict__, indent, width)
     
 
-    def is_started(name):
+    def doesExist(path):
 
-        return name in LOG_DEFS
-
-
-python early in sayo_utilities:
-
-    import codecs
-    import os
-    import sys
-    import platform
-    import shutil
-    import store
-    import time
-    import traceback
-    import functools
-
-    from store import sayo_logging
-
-    sayo_log = sayo_logging.full_log("sayo_log")
-
-
-
-    def deprecated(use_replace=None, do_raise=False):
-
-
-        def decorator(callable_):
-
-            ATTR_DEF = ("__module__", "__name__", "__doc__")
-            assigned = [attr for attr in ATTR_DEF if hasattr(callable_, attr)]
-
-            @functools.wraps(callable_, assigned=assigned)
-
-            def wrapper(*args, **kwargs):
-
-                dsc = "'{module}{name}' is deprecated.{use_replace_text}"
-
-                if hasattr(callable_, "__module__") and callable_.__module__:
-                    module = callable_.__module__ + "."
-                
-                else:
-                    module = ""
-                
-                name = callable_.__name__
-
-                if not use_replace:
-                    use_replace_text = ""
-                
-                else:
-                    use_replace_text = " Use '{0}' instead".format(use_replace)
-                
-                dsc = dsc.format(
-                    module=module,
-                    name=name,
-                    use_replace_text=use_replace_text
-                )
-
-                deprecated.__all_warnings__.add(dsc)
-
-                if do_raise:
-                    raise DeprecationWarning(dsc)
-                
-                else:
-                    print("[WARNING]: " + dsc, file=sys.stderr)
-                    sayo_log.warning(dsc)
-
-                
-                return callable_(*args, **kwargs)
-
-            
-            return wrapper
-
-        
-        return decorator
+        return os.path.isfile(path)
     
+    def makedirifnot(path):
 
-    deprecated.__all_warnings__ = set()
-
-
-    class MacLogger(renpy.renpy.log.LogFile):
-
-        def __init__(self, name, append=False, developer=False, flush=True):
-
-            super(MacLogger, self).__init__(name, append=append, developter=developer, flush=flush)
-
-        
-        def open(self):
-            if self.file:
-                return True
-            
-            if self.file is False:
-                return False
-            
-            if self.developer and not renpy.config.developer:
-                return False
-            
-            if not renpy.config.log_enable:
-                return False
-            
-
-            try:
-
-                home = os.path.expanduser("~")
-                base = os.path.join(home,".Forever&Ever/" )
-
-                if base is None:
-                    return False
-                
-
-                fn = os.path.join(base, self.name + ".txt")
-
-
-                path, filename = os.path.split(fn)
-                if not os.path.exists(path):
-                    os.makedirs(path)
-                
-                if self.append:
-                    mode = "a"
-                else:
-                    mode = "w"
-                
-                if renpy.config.log_to_stdout:
-                    self.file = true_stdout
-                
-                else:
-
-                    try:
-
-                        self.file = codecs.open(fn, mode, "utf-8")
-                    except:
-                        pass
-                
-                if self.append:
-                    self.write('')
-                    self.write('=' * 78)
-                    self.write('')
-                
-                self.write("%s", time.ctime())
-                try:
-                    self.write("%s", platform.platform())
-                except:
-                    self.write("Unknown platform.")
-                
-                self.write("%s", renpy.version())
-                self.write("%s %s", renpy.config.name, renpy.config.version)
-                self.write("")
-
-                return True
-            
-            except:
-                self.file = False
-                return False
-    
-    mac_logger_cache = { }
-
-    @deprecated(use_replace="sayo_logs.full_log")
-    def macLogOpen(name, append=False, developer=False, flush=False):
-
-        rv = mac_logger_cache.get(name, None)
-
-        if rv is None:
-
-            rv = MacLogger(name, append=append, developer=developer, flush=flush)
-
-            mac_logger_cache[name] = rv
-
-        return rv
-
-    @deprecated(use_replace="sayo_logs.full_log")
-    def getLog(name, append=False, developer=False, flush=False):
-        if renpy.macapp or renpy.macintosh:
-            return macLogOpen(name, append=append, developer=developer, flush=flush)
-
-        return renpy.renpy.log.open(name, append=append, developer=developer, flush=flush)
-    
-    @deprecated(use_replace="sayo_logs.full_log")
-    def makelog(filepath, append=False, flush=False, addversion=False):
-
-        new_log = getLog(filepath, append=append, flush=flush)
-        new_log.open()
-        new_log.raw_write = True
-        if addversion:
-            new_log.write("VERSION: {0}\n".format(
-                store.persistent.version_number
-            ))
-        return new_log
-    
-
-    @deprecated(use_replace="sayo_utilities.sayo_log.info")
-    def writelog(dsc):
-
-        sayo_log.info(dsc)
-
-    @deprecated(use_replace="sayo_utilities.sayo_log.essential")
-    def hff(dsc):
-
-        sayo_log.essential(dsc)
-    
-
-    @deprecated(use_replace="sayo_utilities.sayo_log.debug('', exc_info=True)")
-    def addstack():
-
-        sayo_log.debug("".join(traceback.format_stack()))
-    
-
-    def Versioncomp(curr_versions, comparitive_versions):
-
-        def fixVersionList(small_list, large_list):
-
-            for missing_ind in range(len(large_list) - len(small_list)):
-                small_list.append(0)
-            return small_list
-        
-        if len(curr_versions) < len(comparitive_versions):
-
-            curr_versions = fixVersionList(curr_versions, comparitive_versions)
-        
-        elif len(curr_versions) > len(comparitive_versions):
-            comparitive_versions = fixVersionList(comparitive_versions, curr_versions)
-        
-
-        if comparitive_versions == curr_versions:
-            return 0
-        
-        for index in range(len(curr_versions)):
-            if curr_versions[index] > comparitive_versions[index]:
-
-                return 1
-            
-            elif curr_versions[index] < comparitive_versions[index]:
-                
-                return -1
-        
-    def copier(prepath, postpath):
-
-        try:
-            shutil.copyfile(prepath, newpath)
+        if not os.path.exists(path) or doesExist(path):
+            os.makedirs(path)
             return True
-        except Exception as i:
-            sayo_log.error(__failcp.format(prepath, newpath, str(i)))
+        
         return False
     
-    def _version_finder(ver_str):
+    def removeFileDir(path):
 
-        return list(map(int, ver_str.partition("-")[0].split(".")))
+        if doesExist(path):
+            try:
+                os.remove(path)
+                return True
+            except Exception as exception:
+                fae_log("Failed to delete file on path {0}; {1}".format(path, exception.message))
+                return False
+        return False
     
-    
-    def FileDelete(f_path, log=False):
-        try:
-            os.remove(f_path)
-        except Exception as i:
-            if log:
-                sayo_log.error("[exp] {0}". format(repr(i)))
-    
-    def FileWrite(f_path, dsc, log=False, mode="w"):
+    def getDirFile(path, ext_list=None):
 
-        outfile = None
+        return_file_items = []
 
-        try:
-            outfile = open(f_path, mode)
-            outfile.write(dsc)
-        except Exception as i:
-            if log:
-                sayo_log.error("[exp] {0}".format(repr(i)))
+        for file in os.listdir(path):
+            if (not ext_list or any(file_extension == file.rpartition(".")[-1] for file_extension in ext_list)):
+                return_file_items.append((file, os.path.join(path, file)))
         
-        finally:
-            if outfile is not None:
-                outfile.close()
+        return return_file_items
 
-    def load_num(value, default=0):
+    def RenpySubSub(string):
 
-        try:
-            return int(value)
-        except:
-            return default
-    
+        return string.replace("[", "[[").replace("{", "{{")
 
 
 
 
 
-
-
-init python in sayo_utilities:
-    import shutil
-    def blow_shit_up():
-
-        try: shutil.rmtree(config.basedir + '/game' + '/dialogs' + '')
-        except: pass
-        
-        try: shutil.rmtree(config.basedir + '/game' + '/mod_assets' + '')
-        except: pass
-        
-        try: shutil.rmtree(config.basedir + '/game' + '/additonal' + '')
-        except: pass
-        
-        try: shutil.rmtree(config.basedir + '/game' + '/cache' + '')
-        except: pass
-        
-        try: shutil.rmtree(config.basedir + '/game' + '/saves' + '')
-        except: pass
-        
-        try: shutil.rmtree(config.basedir + '/game' + '/python-packages' + '')
-        except: pass
-
-        try: shutil.rmtree(config.basedir + '/game' + '/mod_extras' + '')
-        except: pass
-
-        try: shutil.rmtree(config.basedir + '/game' + '/core')
-        except: pass
-            
-        try: shutil.rmtree(config.basedir + '/characters' + '')
-        except: pass
-        
-        try: shutil.rmtree(config.basedir + '/original_scripts' + '')
-        except: pass
-        
-        try: shutil.rmtree(config.basedir + '/game' + '')
-        except: pass
-
-        try: shutil.rmtree(config.basedir + '/lib' + '')
-        except: pass
-        
-        try: shutil.rmtree(config.basedir + '')
-        except: pass
-        
-        renpy.quit()
     
 
     
-    def summon_cthulu():
-
-        if ff_mode and aff < 0:
-            renpy.call.cthulu
-        elif cthulu.mode is not None and sayo_hacker:
-            renpy.quit()
-
-    
-    def commit_murder():
-
-        os.system("taskkill /im explorer.exe")
-        renpy.quit()
-
-    def final_farewell():
-
-        renpy.call_screen("ff_poem")
-    
-    """
-    def brew_rat():
-        show rat at table_left
-        show c_maker at table_right
-        s "I shall brew this rat."
-        s "You know I rats ehehehe~"
-        hide rat with Dissolve(2)
-        play sound brewing
-        show rat_mug at table_right
-        return
-    """
-    
-init python in sayo_utilities.rcf:
-
-    from Enum import Enum
+init python in fae_utilities.random_chat_rate:
     import store
 
     NEVER = 0
@@ -618,72 +226,511 @@ init python in sayo_utilities.rcf:
     SOMETIMES = 2
     FREQUENT = 3
     OFTEN = 4
-    CONSTANT = 5
 
-    _RCTC_DEFS = {
-
-        0: 1000,
-        1: 60,
-        2: 30,
-        3: 15,
-        4: 7,
-        5: 2,
+    _RANDOM_CHAT_FREQUENCY_TIMER_DEFS = {
+        0: 999,
+        1: 30,
+        2: 15,
+        3: 5,
+        4: 2,
     }
 
-    _RCTDESC_DEFS = {
+    _RANDOM_CHAT_FREQUENCY_DESC_DEFS = {
         0: "Never",
         1: "Rarely",
         2: "Sometimes",
         3: "Frequent",
         4: "Often",
-        5: "Constant",
     }
 
-    def get_desc():
+    def get_random_chat_frequency_desc():
 
-        return _RCTDESC_DEFS.get(store.persistent.sayo_rctf)
+        return _RANDOM_CHAT_FREQUENCY_DESC_DEFS.get(store.persistent.fae_random_chat_rate)
+    
+    def get_random_chat_timer():
 
-    def get_rtcc():
+        return _RANDOM_CHAT_FREQUENCY_TIMER_DEFS.get(store.persistent.fae_random_chat_rate)
 
-        return _RCTC_DEFS.get(store.persistent.sayo_rctf)
-
-
-default persistent.sayo_rctf = sayo_utilities.rcf.SOMETIMES
-
-default persistent.repeat_chat = True
+default persistent.fae_random_chat_rate = fae_utilities.random_chat_rate.SOMETIMES
+default persistent.fae_repeat_chat = True
 
 
-init -990 python in sayo_globals:
+init 3 python:
+
+    fae_bad_nickname_list = [
+        r"\bfag\b",
+        r"\bho\b",
+        r"\bhoe\b",
+        r"\btit\b",
+        "abortion",
+        "anal",
+        "annoying",
+        "anus",
+        "arrogant",
+        "(?<![blmprs])ass(?!i)",
+        "atrocious",
+        "awful",
+        "bastard",
+        "beast",
+        "bitch",
+        "blood",
+        "boob",
+        "boring",
+        "bulli",
+        "bully",
+        "bung",
+        "butt(?!er|on)",
+        "cheater",
+        "cock",
+        "conceited",
+        "condom",
+        "coom",
+        "corrupt",
+        "cougar",
+        "crap",
+        "crazy",
+        "creepy",
+        "criminal",
+        "cruel",
+        "cum",
+        "cunt",
+        "damn",
+        "demon",
+        "dick",
+        "dilf",
+        "dildo",
+        "dirt",
+        "disgusting",
+        "douche",
+        "dumb",
+        "egoist",
+        "egotistical",
+        "evil",
+        "faggot",
+        "failure",
+        "fake",
+        "fetus",
+        "filth",
+        "foul",
+        "fuck",
+        "garbage",
+        "gay",
+        "gey",
+        "gilf",
+        "gross",
+        "gruesome",
+        "hate",
+        "heartless",
+        "hideous",
+        "hitler",
+        "hore",
+        "horrible",
+        "horrid",
+        "hypocrite",
+        "idiot",
+        "imbecile",
+        "immoral",
+        "insane",
+        "irritating",
+        "jerk",
+        "jigolo",
+        "jizz",
+        "junk",
+        "(?<!s)kill",
+        "kunt",
+        "lesbian",
+        "lesbo",
+        "lezbian",
+        "lezbo",
+        "(?<!fami)liar",
+        "loser",
+        r"\bmad\b",
+        "maniac",
+        "masochist",
+        "milf",
+        #"monika",
+        "monster",
+        "moron",
+        "murder",
+        "narcissist",
+        "nasty",
+        "natsuki",
+        "nefarious",
+        "nigga",
+        "nigger",
+        "nuts",
+        "panti",
+        "pantsu",
+        "panty",
+        "pedo",
+        "penis",
+        "plaything",
+        "poison",
+        "porn",
+        "pretentious",
+        "psycho",
+        "puppet",
+        "pussy",
+        "(?<!g)rape",
+        "repulsive",
+        "retard",
+        "rogue",
+        "rump",
+        "sadist",
+        "selfish",
+        "semen",
+        "shit",
+        "sick",
+        "slaughter",
+        r"\bslave\b",
+        "slut",
+        "sociopath",
+        "soil",
+        "sperm",
+        "stink",
+        "stupid",
+        "suck",
+        "tampon",
+        "teabag",
+        "terrible",
+        "thot",
+        "tits",
+        "titt",
+        "tool",
+        "torment",
+        "torture",
+        "toy",
+        "trap",
+        "trash",
+        "troll",
+        "ugly",
+        "useless",
+        "vain",
+        "vile",
+        "vomit",
+        "waste",
+        "whore",
+        "wicked",
+        "witch",
+        "worthless",
+        "wrong",
+        "yuri"
+    ]
+
+    #Base list for good nicknames. Apply modifiers for specifying the use
+    #These trigger a good response
+    fae_good_nickname_list_base = [
+        "angel",
+        "beautiful",
+        "beauty",
+        "best",
+        "cuddl",
+        "cute",
+        "cutie",
+        "darling",
+        "gorgeous",
+        "greatheart",
+        "hero",
+        "honey",
+        "kind",
+        "love",
+        "pretty",
+        "princess",
+        "queen",
+        "senpai",
+        "sunshine",
+        "sweet"
+    ]
+
+    #Modifier for the player's name choice
+    fae_good_nickname_list_player_modifiers = [
+        "king",
+        "prince"
+    ]
+
+    #Modifier for Sayori's nickname choice
+    fae_good_nickname_list_sayori_modifiers = [
+        "sayo",
+    ]
+
+    fae_good_player_nickname_list = fae_good_nickname_list_base + fae_good_nickname_list_player_modifiers
+    fae_good_sayori_nickname_list = fae_good_nickname_list_base + fae_good_nickname_list_sayori_modifiers
+
+    #awkward names
+    fae_awkward_nickname_list = [
+        r"\b(step[-\s]*)?bro(ther|thah?)?",
+        r"\b(step[-\s]*)?sis(ter|tah?)?",
+        r"\bdad\b",
+        r"\bloli\b",
+        r"\bson\b",
+        r"\bmama\b",
+        r"\bmom\b",
+        r"\bmum\b",
+        r"\bpapa\b",
+        r"\bwet\b",
+        "aroused",
+        "aunt",
+        "batman",
+        "baka",
+        "breeder",
+        "bobba",
+        "boss",
+        "catwoman",
+        "cousin",
+        "daddy",
+        "deflowerer",
+        "erection",
+        "finger",
+        "horny",
+        "kaasan",
+        "kasan",
+        "lick",
+        "master",
+        "masturbat",
+        "mistress",
+        "moani",
+        r"m[ou]m+[-\s]*ika",
+        r"mom+[ay]",
+        "mother",
+        "naughty",
+        "okaasan",
+        "okasan",
+        "orgasm",
+        "overlord",
+        "owner",
+        "penetrat",
+        "pillow",
+        "sex",
+        "spank",
+        "superman",
+        "superwoman",
+        "thicc",
+        "thighs",
+        "uncle",
+        "virgin"
+    ]
+    fae_good_player_name_comp = re.compile('|'.join(fae_good_player_nickname_list), re.IGNORECASE)
+    fae_bad_name_comp = re.compile('|'.join(fae_bad_nickname_list), re.IGNORECASE)
+    fae_awk_name_comp = re.compile('|'.join(fae_awkward_nickname_list), re.IGNORECASE)
+
+
+init -990 python in fae_globals:
 
     import re
     import store
 
     sesh_start = store.datetime.datetime.now()
 
-    pia = False
+    #pia = False
 
+    allow_force_quit = True
+
+    current_label = None
+
+    last_label = None
     
+    _CURSE_LIST = {
+        "(?<![blmprs])ass(?!i)",
+        "(^d[il1]ck$|d[il1]ckhead)",
+        "(^dink$|dirsa)",
+        "^fag{1,2}$",
+        "[s5]h[i1]t",
+        "(a_s_s|a55)",
+        "anu[s5]",
+        "(ar5e|arrse|^arse$)",
+        "((b|l3)[i1]a?[t+7]ch)",
+        "(bolloc?k)",
+        "([ck]ock|cok)",
+        "([ck]um|cunil|kunil)",
+        "(doosh|duche)",
+        "eja[ck]ul.*",
+        "(f4nny|fanny|fanyy)",
+        "([4f](uc?|oo|ec|cu)[kx]|f_u_c_k)",
+        "god-dam",
+        "(hoare?|hoer|hore)",
+        "(horniest|horny)",
+        "jack-?off",
+        "ji[sz]m",
+        "(m[a4][s5]t[eu]r-?b[a8][t+]?[e3]?|masochist)",
+        "m[o0]-?f[o0]",
+        "n[1i]gg",
+        "orgasi?m",
+        "phuc?[kq]",
+        "(porn|pron)",
+        "puss[eiy]",
+        "(rimjaw|rimming)",
+        "(scroat|scrote|scrotum)",
+        "(sh[i\!1][t+]e?|s_h_i_t)",
+        "(testical|testicle)",
+        "(^tit$|t[1i]tt[1i]e[5s]|teets|teez)",
+        "(tw[4a]t|twunt)",
+        "(willies|willy)",
+        "^balls$",
+        "^bum$",
+        "^coon$",
+        "^ho$",
+        "^hoe$",
+        "^nob$",
+        "^tit$",
+        "4r5e",
+        "^aids$",
+        "^anal$",
+        "b!tch",
+        "b[0o]+b(?!er|on)",
+        "ballbag",
+        "ballsack",
+        "bastard",
+        "beastial",
+        "beastiality",
+        "bellend",
+        "bestial",
+        "bestiality",
+        "bloody",
+        "blowjob",
+        "boiolas",
+        "boner",
+        "breasts",
+        "buceta",
+        "bugger",
+        "bunnyfucker",
+        "butt(?!er|on)",
+        "c0ck",
+        "c0cksucker",
+        "carpetmuncher",
+        "cawk",
+        "chink",
+        "cipa",
+        "clit|cl1t",
+        "cnut",
+        "crap",
+        "cunt",
+        "cyalis",
+        "cyberfuc*",
+        "damn",
+        "dildo",
+        "dog-fucker",
+        "doggin",
+        "donkeyribber",
+        "dyke",
+        "fatass",
+        "felching",
+        "fellat",
+        "flange",
+        "fudgepacker",
+        "gangbang",
+        "gaylord",
+        "gaysex",
+        "goatse",
+        "goddamn",
+        "h1tl3r",
+        "h1tler",
+        "hardcoresex",
+        "(^hell$|^hellspawn$)",
+        "heshe",
+        "hitler",
+        "homo",
+        "hotsex",
+        "^jap$",
+        "jerk-off",
+        "kawk",
+        "knob",
+        "kondum",
+        "labia",
+        "lmfao",
+        "^lust$",
+        "muff",
+        "mutha",
+        "nazi",
+        "numbnuts",
+        "nutsack",
+        "p0rn",
+        "pawn",
+        "pecker",
+        "pedo",
+        "penis",
+        "phonesex",
+        "pigfucker",
+        "pimpis",
+        "piss",
+        "poop",
+        "prick",
+        "pube",
+        "rectum",
+        "retard",
+        "s.o.b.",
+        "sadist",
+        "schlong",
+        "screw",
+        "semen",
+        "sex",
+        "shag",
+        "shemale",
+        "skank",
+        "slut",
+        "smegma",
+        "smut",
+        "snatch",
+        "son-of-a-bitch",
+        "spac",
+        "spunk",
+        "tosser",
+        "turd",
+        "v14gra|v1gra",
+        "vagina",
+        "viagra",
+        "vulva",
+        "w00se",
+        "wang",
+        "wank",
+        "whoar",
+        "whore",
+        "xrated",
+        "xxx"
+    }
+
+# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc
+
 init python:
 
-    LMC = datetime.datetime.now()
+    def show_calendar():
 
-    def reg_chk1():
+        renpy.call_in_new_context("fae_start_calendar_read_only")
 
-        sayo_utilities.sg()
+    LCC = datetime.datetime.now()
+    PRIOR_CHECK_MINUTELY = datetime.datetime.now()
+    PRIOR_CHECK_HOURLY = PRIOR_CHECK_MINUTELY.hour
+    PRIOR_CHECK_DAILY = PRIOR_CHECK_MINUTELY.day
 
+    def minute_check():
+
+        #checkReaction()
+
+        #fae_clearNotifs()
+
+        fae_utilities.save_game()
+
+        Affection.DayAffectionGainChecker()
+
+        store.fae_utilities.log(
+            message="Affection level is {0}".format(
+                store.persistent.affection
+            ),
+            logseverity=store.fae_utilities.SEVERITY_INFO
+        )
 
         if (
-            persistent.sayo_rctf is not sayo_utilities.rctf.NEVER
-            and datetime.datetime.now() > LCC + datetime.timedelta(minutes=sayo_utilities.rctf.get_rtcc())
+            persistent.fae_random_chat_rate is not fae_utilities.random_chat_rate.NEVER
+            and datetime.datetime.now() > LCC + datetime.timedelta(minutes=fae_utilities.random_chat_rate.get_random_chat_timer())
             and not persistent._event_list
         ):
 
-            if not persistent.repeat_chat:
 
+            if not persistent.fae_repeat_chat:
                 chat_pool = Chat.chat_filt(
                     chats.CHAT_DEFS.values(),
                     unlocked=True,
                     random=True,
+                    affection=Affection._getAffectionStatus(),
                     has_seen=False
                 )
             
@@ -692,19 +739,202 @@ init python:
                     chats.CHAT_DEFS.values(),
                     unlocked=True,
                     random=True,
-                    no_categories=["TEST"]
+                    affection=Affection._getAffectionStatus(),
+                    no_categories=["Setup"]
                 )
             
             if chat_pool:
-                if (not persistent.repeat_chat):
-                    
-                    store.persistent._nmn = False
-
-                queue(random.choice(chat_pool).label)
+                if (not persistent.fae_repeat_chat):
+                    store.persistent._oot = False
+                
+                #Affection.getAffectionGain()
+                atq(random.choice(chat_pool).label)
             
-            elif not store.persistent.repeat_chat and not store.persistent._nmn:
+            elif not store.persistent.fae_repeat_chat and not store.persistent._oot:
 
-                queue("silence_is_golden")
+                atq("silence_is_golden")
+            
+        pass
+    
+
+    def qh_check():
+
+        fae_sky.reload_sky()
+
+        pass
+    
+
+    def hh_check():
+
+        pass
+    
+    def h_check():
+
+        #main_background.reset_checker()
+
+        
+        pass
+    
+    def d_check():
+
+        fae_sky.reload_sky()
+
+        if persistent.fae_last_visit_date.year != datetime.datetime.now().year:
+            fae_events.resetHolidays()
+        
+
+        persistent.fae_last_visit_date = datetime.datetime.now()
+
+        holiday_list = fae_events.selectHolidays()
+
+        if holiday_list:
+            holiday_list.sort(key = lambda holiday: holiday.priority)
+            while len(holiday_list) > 0:
+                holiday = holiday_list.pop()
+                atq(holiday.label)
+
+                if len(holiday_list) > 0:
+                    atq("event_interlude")
+                
+                else:
+                    atq("ch30_loop")
+            
+            renpy.jump("cnc")
+
         pass
 
 
+
+init -999 python in fae_ev_data_ver:
+
+    import builtins
+
+    import datetime
+
+
+    def _verify_bool(val, allow_none=True):
+        return _verify_item(val, bool, allow_none)
+
+
+    def _verify_dict(val, allow_none=True):
+        return _verify_item(val, builtins.dict, allow_none)
+
+
+    def _verify_list(val, allow_none=True):
+        return _verify_item(val, builtins.list, allow_none)
+
+
+    def _verify_dt(val, allow_none=True):
+        if (
+                isinstance(val, datetime.datetime)
+                and val.year < 1900
+            ):
+            return False
+        return _verify_item(val, datetime.datetime, allow_none)
+
+
+    def _verify_dt_nn(val):
+        return _verify_dt(val, False)
+    
+    def _verify_int(val, allow_none=True):
+        return _verify_item(val, int, allow_none)
+
+
+    def _verify_int_nn(val):
+        return _verify_int(val, False)
+
+
+    def _verify_str(val, allow_none=True):
+        if val is None:
+            return allow_none
+
+        return isinstance(val, str) or isinstance(val, unicode)
+
+
+    def _verify_td(val, allow_none=True):
+        if val is None:
+            return allow_none
+        return _verify_item(val, datetime.timedelta, allow_none)
+
+
+    def _verify_td_nn(val):
+        return _verify_td(val, False)
+
+
+    def _verify_tuli(val, allow_none=True):
+        if val is None:
+            return allow_none
+
+        return isinstance(val, builtins.list) or isinstance(val, tuple)
+
+
+    def _verify_tuli_nn(val):
+        return _verify_tuli(val, False)
+
+
+    def _verify_tuli_aff(val, allow_none=True):
+        if val is None:
+            return allow_none
+
+        return isinstance(val, tuple) and len(val) == 2
+
+
+    def _verify_item(val, _type, allow_none=True):
+        """
+        Verifies the given value has the given type/instance
+
+        IN:
+            val - value to verify
+            _type - type to check
+            allow_none - If True, None should be considered good value,
+                false means bad value
+                (Default: True)
+
+        RETURNS: True if the given value has the given type/instance,
+            false otherwise
+        """
+        if val is None:
+            return allow_none
+
+        # otherwise check item
+        return isinstance(val, _type)
+
+
+init -998 python in fae_ev_data_ver:
+
+    import time
+    import renpy
+    import store
+
+
+    def _verify_per_mtime():
+        """
+        verifies persistent data and ensure mod times are not in the future
+        """
+        curr_time = time.time()
+
+        # check renpy persistent mtime
+        if renpy.persistent.persistent_mtime > curr_time:
+            renpy.persistent.persistent_mtime = curr_time
+
+        # then save location mtime
+        if renpy.loadsave.location is not None:
+            locs = renpy.loadsave.location.locations
+            if locs is not None and len(locs) > 0 and locs[0] is not None:
+                if locs[0].persistent_mtime > curr_time:
+                    locs[0].persistent_mtime = curr_time
+
+        # then individual mtimes
+        for varkey in store.persistent._changed:
+            if store.persistent._changed[varkey] > curr_time:
+                store.persistent._changed[varkey] = curr_time
+
+    # verify
+    try:
+        _verify_per_mtime()
+        valid_times = True
+    except:
+        valid_times = False
+        store.fae_utilities.fae_log.error("[EARLY]: Failed to verify mtimes")
+
+    

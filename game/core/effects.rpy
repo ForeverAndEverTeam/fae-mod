@@ -2,7 +2,7 @@
 
 # This file defines all the effects in DDLC used in Act 2.
 
-init python:
+init -2 python:
     # This screenshot is used to screenshot the game which is used for different
     # effects in-game.
     def screenshot_srf():
@@ -56,7 +56,7 @@ screen invert(length, delay=0.0):
     on "hide" action Stop("sound")
     on "hide" action Function(hide_windows_enabled, enabled=True)
 
-init python:
+init -2 python:
     # This class defines the code for the tear piece effect in 'screen tear'.
     class TearPiece:
         def __init__(self, startY, endY, offtimeMult, ontimeMult, offsetMin, offsetMax):
@@ -140,7 +140,7 @@ image m_rectstatic2:
 image m_rectstatic3:
     RectStatic(im.FactorScale(im.Crop("gui/menu_art_s.png", (100, 100, 64, 64)), 0.5), 2, 32, 32).sm
 
-init python:
+init -2 python:
     import math
 
     # This class declares the code used for the RectStatic effect.
@@ -338,19 +338,19 @@ image blood_eye2:
     truecenter
     Blood("blood_particle", dripChance=0.005, numSquirts=0, burstSize=0).sm
 
-init python:
+init -2 python:
     import math
 
     ## AnimatedMask
     # This class declares the code used for the AnimatedMask effect in Act 3.
     class AnimatedMask(renpy.Displayable):
         
-        def __init__(self, child, mask, maskb, oc, op, moving=True, speed=1.0, frequency=1.0, amount=0.5, **properties):
+        def __init__(self, child, faek, faekb, oc, op, moving=True, speed=1.0, frequency=1.0, amount=0.5, **properties):
             super(AnimatedMask, self).__init__(**properties)
             
             self.child = renpy.displayable(child)
-            self.mask = renpy.displayable(mask)
-            self.maskb = renpy.displayable(maskb)
+            self.faek = renpy.displayable(faek)
+            self.faekb = renpy.displayable(faekb)
             self.oc = oc
             self.op = op
             self.null = None
@@ -363,16 +363,16 @@ init python:
         def render(self, width, height, st, at):
             
             cr = renpy.render(self.child, width, height, st, at)
-            mr = renpy.render(self.mask, width, height, st, at)
+            mr = renpy.render(self.faek, width, height, st, at)
             mb = renpy.Render(width, height)
             
             
             if self.moving:
-                mb.place(self.mask, ((-st * 50) % (width * 2)) - (width * 2), 0)
-                mb.place(self.maskb, -width / 2, 0)
+                mb.place(self.faek, ((-st * 50) % (width * 2)) - (width * 2), 0)
+                mb.place(self.faekb, -width / 2, 0)
             else:
-                mb.place(self.mask, 0, 0)
-                mb.place(self.maskb, 0, 0)
+                mb.place(self.faek, 0, 0)
+                mb.place(self.faekb, 0, 0)
             
             
             
@@ -388,7 +388,7 @@ init python:
             
             nr = renpy.render(self.null, width, height, st, at)
             
-            rv = renpy.Render(w, h, opaque=False)
+            rv = renpy.Render(w, h)#, opaque=False)
             
             rv.operation = renpy.display.render.IMAGEDISSOLVE
             rv.operation_alpha = 1.0
@@ -431,7 +431,7 @@ image bsod = LiveComposite((1280, 720), (0, 0), "bsod_1", (0, 0), "bsod_2")
 # This image transform creates a veiny border around the screen that shakes and pulses
 # during a random playthrough in Act 2.
 image veins:
-    AnimatedMask("images/bg/veinmask.png", "images/bg/veinmask.png", "images/bg/veinmaskb.png", 0.15, 16, moving=False, speed=10.0, frequency=0.25, amount=0.1)
+    AnimatedMask("images/bg/veinfaek.png", "images/bg/veinfaek.png", "images/bg/veinfaekb.png", 0.15, 16, moving=False, speed=10.0, frequency=0.25, amount=0.1)
     xanchor 0.05 zoom 1.10
     xpos -5
     subpixel True
@@ -470,74 +470,235 @@ transform fade_in(time=1.0):
     alpha 0.0
     ease time alpha 1.0
 
-transform kiss_zoom(_zoom, _y,time=2.0):
+
+transform fae_kissing(_zoom, _y, time=2.0):
+
     i11
     xcenter 640 yoffset 700 yanchor 1.0
     linear time ypos _y zoom _zoom
 
-transform kiss_return(time, y):
+transform fae_kiss_return(time, y):
+
     linear time xcenter 640 yoffset (y) zoom 0.80
 
-label sayo_kiss(
+
+label fae_kiss_engine(
     transition=4.0,
     duration=2.0,
-    hide_everything=True,
-    start_code="bbagbaab",
-    end_code="fbagbiab",
-    fade_time=1.0
+    hide_ui=True,
+    initial_exp="aahcnaaa",
+    mid_exp="aahcnaaa",
+    final_exp="aahcnaaa",
+    fade_duration=1.0
 ):
-    if persistent._sayo_kiss_first is None:
-        $ persistent._sayo_kiss_first = datetime.datetime.now()
-    
-    window hide
 
-    if hide_everything:
-        hide screen hidden
+    window hide
+    if hide_ui:
+        hide screen hidden1
     
     show sayori at i11
 
-    $ renpy.pause(5.0, hard=True)
+    $ _fae_kiss_zoom = 4.9 / fae_sprites.value_zoom
+    $ _fae_kiss_y = 2060 - ( 1700 * (fae_sprites.value_zoom - 1.1))
+    $ _fae_kiss_y2 = -1320 + (1700 * (fae_sprites.value_zoom - 1.1))
 
-    $ _sayo_kiss_zoom = 4.9
-    $ _sayo_kiss_y = 360
-    $ _sayo_kiss_y2 = 380
-
-    $ renpy.show("sayori {}".format(start_code), [kiss_zoom(_sayo_kiss_zoom,int(_sayo_kiss_y),transition)])
+    $ renpy.show("sayori {}".format(initial_exp), [fae_kissing(_fae_kiss_zoom, int(_fae_kiss_y), transition)])
 
     $ renpy.pause(transition)
 
-    show black zorder 100 at fade_in(fade_time)
+    show black zorder 100 at fade_in(fade_duration)
 
     $ renpy.pause(duration/2)
-
-    play sound "mod_assets/bgm/FX/kissing.ogg"
-
+    play sound "mod_assets/sfx/kissing.ogg"
     window auto
     "chu~{fast}{w=1}{nw}"
     window hide
-
     $ renpy.pause(duration/2)
     # hide the black scene
     hide black
 
-    $ renpy.show("sayori {}".format(end_code),[kiss_return(transition,_sayo_kiss_y2)])
-
+    $ renpy.show("sayori {}".format(mid_exp), [fae_kiss_return(transition, _fae_kiss_y2)])
     pause transition
 
-    $ renpy.show("sayori {}".format(end_code),[i11()])
+    $ renpy.show("sayori {}".format(final_exp),[i11()])
 
     show sayori with dissolve_sayori
+    if hide_ui:
 
-    if hide_everything:
-
-        show screen hidden
+        show screen hidden1(True)
+    
     window auto
     return
 
-label kiss_quick(**kwargs):
+
+label fae_kiss_short(**kwargs):
+
     python:
         kwargs.setdefault("duration", 0.5)
-        kwargs.setdefault("fade_time", 0.5)
-        kwargs.setdefault("start_code", "bbagbaab")
-    call sayo_kiss(**kwargs)
+        kwargs.setdefault("fade_duration", 0.5)
+        kwargs.setdefault("initial_exp", "6hua")
+    call fae_kiss_engine(**kwargs) from _call_fae_kiss_engine
     return
+
+
+label fae_zoom_value_transition(new_zoom, transition=3.0):
+
+    if new_zoom == fae_sprites.value_zoom:
+        return
+    
+    if new_zoom > 2.1:
+        $ new_zoom = 2.1
+    
+    elif new_zoom < 1.1:
+        $ new_zoom = 1.1
+    
+    $ _fae_transition_time = transition
+
+    $ _fae_old_zoom = fae_sprites.zoom_level
+    $ _fae_old_zoom_value = fae_sprites.value_zoom
+    $ _fae_old_y = fae_sprites.adjust_y
+
+    # calculate and store the new values
+    $ _fae_new_zoom = ((new_zoom - fae_sprites.default_value_zoom) / fae_sprites.zoom_step ) + fae_sprites.default_zoom_level
+    if _fae_new_zoom > fae_sprites.default_value_zoom:
+        $ _fae_new_y = fae_sprites.default_y + ((_fae_new_zoom-fae_sprites.default_zoom_level) * fae_sprites.y_step)
+    else:
+        $ _fae_new_y = fae_sprites.default_y
+    $ _fae_new_zoom = ((new_zoom - fae_sprites.default_value_zoom) / fae_sprites.zoom_step ) + fae_sprites.default_zoom_level
+
+    # calculate and store the differences between new and old values
+    $ _fae_zoom_diff = _fae_new_zoom - _fae_old_zoom
+    $ _fae_zoom_value_diff = new_zoom - _fae_old_zoom_value
+    $ _fae_zoom_y_diff = _fae_new_y - _fae_old_y
+    # do the transition and pause so it force waits for the transition to end
+    show sayori at fae_smooth_transition
+    $ renpy.pause(transition, hard=True)
+    return
+
+label fae_zoom_fixed_duration_transition(new_zoom,transition=3.0):
+    # Sanity checks
+    if new_zoom == fae_sprites.zoom_level:
+        return
+    if new_zoom > 20:
+        $ new_zoom = 20
+    elif new_zoom < 0:
+        $ new_zoom = 0
+    # store the time the transition will take
+    $ _fae_transition_time = transition
+
+    # store the old values
+    $ _fae_old_zoom = fae_sprites.zoom_level
+    $ _fae_old_zoom_value = fae_sprites.value_zoom
+    $ _fae_old_y = fae_sprites.adjust_y
+
+    # calculate and store the new values
+    if new_zoom > fae_sprites.default_zoom_level:
+        $ _fae_new_y = fae_sprites.default_y + (
+            (new_zoom - fae_sprites.default_zoom_level) * fae_sprites.y_step
+        )
+        $ _fae_new_zoom_value = fae_sprites.default_value_zoom + (
+            (new_zoom - fae_sprites.default_zoom_level) * fae_sprites.zoom_step
+        )
+    else:
+        $ _fae_new_y = fae_sprites.default_y
+        if new_zoom == fae_sprites.default_zoom_level:
+            $ _fae_new_zoom_value = fae_sprites.default_value_zoom
+        else:
+            $ _fae_new_zoom_value = fae_sprites.default_value_zoom - (
+                (fae_sprites.default_zoom_level - new_zoom) * fae_sprites.zoom_step
+            )
+    # calculate and store the differences between new and old values
+    $ _fae_zoom_diff = new_zoom - _fae_old_zoom
+    $ _fae_zoom_value_diff = _fae_new_zoom_value - _fae_old_zoom_value
+    $ _fae_zoom_y_diff = _fae_new_y - _fae_old_y
+    # do the transition and pause so it force waits for the transition to end
+    show sayori at fae_smooth_transition
+    $ renpy.pause(transition, hard=True)
+    return
+
+# Zoom Transition label #3
+# Used to transition from any valid zoom value to another valid
+# zoom valid zoom value in a smooth way
+# IN:
+#     new_zoom - the new zoom level to move to
+#     transition - the time in seconds used to transition from the maximum to the
+#         minimum zoom level, this works in a way that the time used in the
+#         transition is lower the nearer the current zoom level is to the
+#         new zoom level (Default: 3.0)
+label fae_zoom_transition(new_zoom,transition=3.0):
+    # Sanity checks
+    if new_zoom == fae_sprites.zoom_level:
+        return
+    if new_zoom > 20:
+        $ new_zoom = 20
+    elif new_zoom < 0:
+        $ new_zoom = 0
+
+    # store the old values
+    $ _fae_old_zoom = fae_sprites.zoom_level
+    $ _fae_old_zoom_value = fae_sprites.value_zoom
+    $ _fae_old_y = fae_sprites.adjust_y
+
+    # calculate and store the new values
+    if new_zoom > fae_sprites.default_zoom_level:
+        $ _fae_new_y = fae_sprites.default_y + (
+            (new_zoom - fae_sprites.default_zoom_level) * fae_sprites.y_step
+        )
+        $ _fae_new_zoom_value = fae_sprites.default_value_zoom + (
+            (new_zoom - fae_sprites.default_zoom_level) * fae_sprites.zoom_step
+        )
+    else:
+        $ _fae_new_y = fae_sprites.default_y
+        if new_zoom == fae_sprites.default_zoom_level:
+            $ _fae_new_zoom_value = fae_sprites.default_value_zoom
+        else:
+            $ _fae_new_zoom_value = fae_sprites.default_value_zoom - (
+                (fae_sprites.default_zoom_level - new_zoom) * fae_sprites.zoom_step
+            )
+
+    # calculate and store the differences between new and old values
+    $ _fae_zoom_diff = new_zoom - _fae_old_zoom
+    $ _fae_zoom_value_diff = _fae_new_zoom_value - _fae_old_zoom_value
+    $ _fae_zoom_y_diff = _fae_new_y - _fae_old_y
+
+    # store the time the transition will take
+    $ _fae_transition_time = abs(_fae_zoom_value_diff) * transition
+
+    # do the transition and pause so it force waits for the transition to end
+    show sayori at fae_smooth_transition
+    $ renpy.pause(_fae_transition_time, hard=True)
+    return
+
+label fae_zoom_transition_reset(transition=3.0):
+    call fae_zoom_transition(store.fae_sprites.default_zoom_level, transition) from _call_fae_zoom_transition
+    return
+
+init python:
+    def zoom_smoothly(trans, st, at):
+
+        # check if the transition time is lower than the elapsed time
+        if _fae_transition_time > st:
+            # do some calcs
+            step = st / _fae_transition_time
+            fae_sprites.zoom_level = _fae_old_zoom + (step * _fae_zoom_diff)
+            fae_sprites.value_zoom = _fae_old_zoom_value + (step * _fae_zoom_value_diff)
+            fae_sprites.adjust_y = int(_fae_old_y + (step * _fae_zoom_y_diff))
+            if fea_sprites.adjust_y < fae_sprites.default_y:
+                fea_sprites.adjust_y = fae_sprites.default_y
+
+            renpy.restart_interaction()
+            # to be called as soon as possible we return 0
+            return 0.1
+        else:
+            # get the zoom level and call adjust zoom to be sure it works
+            fae_sprites.zoom_level = int(round(fae_sprites.zoom_level))
+            fae_sprites.change_zoom()
+            renpy.restart_interaction()
+            # we return None to be able to move to the next statement
+            return None
+
+# zoom transition animation transform
+transform fae_smooth_transition:
+    i11 # this one may not be needed but I keep it just in case
+    function zoom_smoothly
+

@@ -1,6 +1,17 @@
 screen tcs(items):
     style_prefix "choice"
 
+    #s "What should we talk about?"
+
+    vbox:
+        xcenter 250
+        #ypos 800
+        for i in items:
+            textbutton i.caption action i.action
+
+screen scs(items):
+    style_prefix "choice"
+
     vbox:
         xcenter 250
         #ypos 800
@@ -8,60 +19,128 @@ screen tcs(items):
             textbutton i.caption action i.action
 
 
-
 label talk_menu_wip:
 
     show sayori idle at t22
 
+    $ Sayori.setInChat(True)
+
+    #$ show_sayori_talk_menu()
+
     python:
 
+        renpy.show("sayori idle", at_list=[t22])
+
         talk_menu = []
-        talk_menu.append((_("Hey, Sayori..."), "talk"))
-        talk_menu.append((_("Can you tell me again about..."), "rep"))
+        talk_menu.append((_("Hey, [s_name]..."), "talk"))
+        talk_menu.append((_("Can you tell me again about..."), "repeat"))
         talk_menu.append((_("I feel..."), "mood"))
         talk_menu.append((_("I want to say..."), "say"))
-        talk_menu.append((_("Change Player Information"), "cpi"))
-        #talk_menu.append((_("Kiss me"), "kiss"))
-        #if renpy.exists('dev/dev_tools.rpy'):
-        #    talk_menu.append((_("Dev Tools"), "dev"))
-        talk_menu.append((_("Back"), "back"))
+        talk_menu.append((_("Nevermind"), "nevermind"))
 
-        tchoice = renpy.display_menu(talk_menu, screen="tcs")
+        renpy.say(s, store.fae_quips.talk_quip()[1], interact=False)
+        madechoice = renpy.display_menu(talk_menu, screen="talk_choice")
 
-    if tchoice == "talk":
+    if madechoice == "talk":
         call talk_pinit
-    elif tchoice == "rep":
-        call rep
-    elif tchoice == "mood":
-        call mood
-    elif tchoice == "say":
-        call say
-    elif tchoice == "cpi":
-        call cpi
-    elif tchoice == "kiss":
-        call sayo_kiss_short
-    elif tchoice == "dev":
-        call dev
+    
+    elif madechoice == "repeat":
+        call talk_pinit(True)
+    
+    elif madechoice == "mood":
+        call mood_init
+    
+    elif madechoice == "say":
+        call tell
+    
     else:
-        $ ret = None
-    
-    if ret is False:
+        $ _return = None
+
+    if _return is False:
         jump talk_menu_wip
+    
+label talk_menu_end:
 
-label tme:
-    show sayori idle at t11
-    jump idle_loop
+    show sayori at t11
+
+    jump ch30_loop
+
+
+    #menu:
+    #    s "What do you want to talk about?"
+
+    #    "Hey, Sayori...":
+    #        call talk_pinit
+    #    "Can you tell me again about...":
+    #        call talk_pinit(True)
+    #    "I feel...":
+    #        call mood_init
+    #    "I want to say...":
+    #        call tell
+        
+    #    "Nevermind":
+    #        jump ch30_loop
+
+    
+    #return
+
     
 
+init -2 python:
 
-init python:
     def dlg():
-        renpy.hide_screen('hidden')
+        renpy.hide_screen('hidden1')
         renpy.jump('talk_menu_wip')
     
-    def select_music():
-        renpy.hide_screen('hidden')
-        renpy.show_screen('music_menu')
-
     def mg():
+        renpy.hide_screen('hidden1')
         renpy.jump('mglist')
+    
+    def music_init():
+        renpy.hide_screen('hidden1')
+        renpy.jump('music_menu')
+
+label mglist():
+
+    show sayori idle at t22
+
+
+    python:
+        mg_list = []
+
+        ttt = minigame(_("Tic-Tac-Toe"), 'mg_ttt', ttt_prep)
+        mg_list.append(ttt)
+
+        reversi = minigame(_("Reversi"), 'mg_reversi', reversi_prep)
+        mg_list.append(reversi)
+
+        bnc = minigame(_("Bows & Cows"), 'mg_bnc', bnc_prep)
+        mg_list.append(bnc)
+
+        #checkers = minigame(_("Checkers"), 'mg_checkers', checkers_prep)
+        #mg_list.append(checkers)
+
+
+    call screen minigame_ui() nopredict
+    hide screen minigame_ui
+    show screen hidden1(True)
+    jump ch30_loop
+
+screen minigame_ui():
+    style_prefix "choice"
+    
+    vbox:
+        xcenter 250
+        
+        for i in mg_list:
+            if i.available:
+                textbutton i.name action [Function(i), Hide("minigame_ui")]# Jump("main_loop")]
+        
+        textbutton _("Close") action [Hide("minigame_ui"), Show("hidden1", None, True), Jump("ch30_loop")]
+
+
+#label try_force_quit:
+
+#    $ renpy.jump("quit")
+
+    #return

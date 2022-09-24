@@ -441,6 +441,36 @@ image noise:
     yzoom 1
     repeat
 
+transform fae_tcommon(x=640):
+    yanchor 1.0 subpixel True
+    on show:
+        ypos 1.03
+        xcenter x yoffset -20
+        easein .25 yoffset 0 alpha 1.00
+    on replace:
+
+        alpha 1.00
+        parallel:
+            easein .25 xcenter x
+        parallel:
+            easein .15 yoffset 0 ypos 1.03
+
+
+transform fae_center:
+    fae_tcommon(640)
+
+transform fae_left:
+    fae_tcommon(400)
+
+transform fae_farleft:
+    fae_tcommon(240)
+
+transform fae_right:
+    fae_tcommon(880)
+
+transform fae_veryright:
+    fae_tcommon(1040)
+
 # This transform causes the noise effect to appear 25% transparent.
 transform noise_alpha:
     alpha 0.25
@@ -546,6 +576,8 @@ transform malpha(a=1.00):
     i11
     alpha a
 
+init -5 python:
+    dissolve_sayori = {"master": Dissolve(0.25, alpha=True)}
 
 init -10 python:
     def getPropFromStyle(style_name, prop_name):

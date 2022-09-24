@@ -3,18 +3,21 @@
 ### DO NOT REMOVE OR CHANGE THE ABOVE COMMENT. ###
 
 ## options.rpy
+#init python:
+#    config.use_cpickle = False
+#define config.quit_action = Function(fae_quit_override)
 
 # This file customizes what your mod is and and how it starts and builds!
 
 # This controls what your mod is called.
-define config.name = "Forever&Ever"
+define config.name = "Forever & Ever (DEV-ALPHA)"
 
 # This controls whether you want your mod name to show in the main menu.
 # If your mod name is big, it is suggested to turn this off.
 define gui.show_name = True
 
 # This controls the version number of your mod.
-define config.version = "0.0.5 alpha"
+define config.version = "0.0.1"
 
 # This adds information about your mod in the About screen.
 # DDLC does not have a 'About' screen so you can leave this blank.
@@ -38,7 +41,7 @@ define config.has_voice = False
 
 # This configures what music will play when you launch your mod and in the 
 # main menu.
-define config.main_menu_music = audio.t1
+define config.main_menu_music = audio.s1
 
 # These variables control the transition effects of DDLC when entering and exiting
 # a menu.
@@ -173,6 +176,8 @@ init python:
     ## subdirectories.
     ##  "**.psd" matches psd files anywhere in the project.
 
+    build.include_update = True
+
     # These variables declare the packages to build your mod that is Team Salvato
     # IPG compliant. Do not mess with these variables whatsoever.
     build.package(build.directory_name + "Mod",'zip','mod',description="Ren'Py 6 DDLC Compliant Mod")
@@ -209,6 +214,8 @@ init python:
     build.classify("game/**.chr", "scripts all")
     build.classify("game/advanced_scripts/**","scripts all") ## Backwards Compatibility
     build.classify("game/tl/**", "scripts all") ## Translation Folder
+    build.classify("game/RPASongMetadata.json", "scripts all")
+    build.classify("game/python-packages/**", "mod")
 
     build.classify('**~', None)
     build.classify('**.bak', None)

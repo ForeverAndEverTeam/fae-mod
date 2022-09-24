@@ -1,7 +1,0 @@
---Legacy specification
-a = Normal brows
-b = Frown brows
-c = Angry brows
---New specification
-d = left frown + right normal
-e = smug brows

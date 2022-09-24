@@ -15,10 +15,29 @@ define config.log_live2d_loading = False
 # This python statement starts singleton to make sure only one copy of the mod
 # is running.
 python early:
+
+    import io
+    import os
     import datetime
+    import random
+    import traceback
+    from collections import defaultdict
+
+init -1500 python:
+    import os
     import singleton
     me = singleton.SingleInstance()
 
+default persistent._event_list = list()
+
+define FAE_NEW_YEARS_DAY = datetime.date(datetime.date.today().year, 1, 1)
+define FAE_VALENTINES_DAY = datetime.date(datetime.date.today().year, 2, 14)
+define FAE_EASTER = datetime.date(_easter.year, _easter.month, _easter.day)
+define FAE_SAYORI_BIRTHDAY = datetime.date(datetime.date.today().year, 5, 1)
+define FAE_HALLOWEEN = datetime.date(datetime.date.today().year, 10, 31)
+define FAE_CHRISTMAS_EVE = datetime.date(datetime.date.today().year, 12, 24)
+define FAE_CHRISTMAS_DAY = datetime.date(datetime.date.today().year, 12, 25)
+define FAE_NEW_YEARS_EVE = datetime.date(datetime.date.today().year, 12, 31)
 # This init python statement sets up the functions, keymaps and channels
 # for the game.
 init python:
@@ -157,6 +176,8 @@ define audio.closet_close = "sfx/closet-close.ogg"
 define audio.page_turn = "sfx/pageflip.ogg"
 define audio.fall = "sfx/fall.ogg"
 
+#MOD AUDIO
+define audio.s1 = "<loop 0>mod_assets/bgm/s1_ac.ogg"
 
 
 
@@ -169,7 +190,7 @@ define audio.fall = "sfx/fall.ogg"
 # To define a new background, declare a new image statement like this instead:
 #     image bg bathroom = "mod_assets/bathroom.png" 
 
-image sky_day = "mod_assets/masks/sky_day.png"
+
 
 image black = "#000000"
 image dark = "#000000e4"
@@ -1404,7 +1425,7 @@ image monika g2:
 # To define a new character without assets, declare a character variable like this instead:
 #   define en = Character('Eileen & Nat', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
 
-
+define mc = DynamicCharacter('player', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
 
 define s = DynamicCharacter('s_name', image='sayori', what_prefix='', what_suffix='', ctc="ctc", ctc_position="fixed")
 
@@ -1453,7 +1474,7 @@ default persistent.lets_play = False
 ###########################
 #PERSISTENT-BASED DEFAULTS#
 ###########################
-default persistent.playername = "Nathan"
+default persistent.playername = ""
 default persistent.playthrough = 0
 default persistent.yuri_kill = 0
 default persistent.seen_eyes = None
@@ -1470,9 +1491,21 @@ default persistent.first_poem = None
 default persistent.seen_colors_poem = None
 default persistent.monika_back = None
 default persistent.intro_stage = None
-default persistent.sayo_intro_seen = False
-default persistent.sayo_first_visit_date = None
-default persistent.sayo_nickname_given = False
+default persistent.fae_intro_seen = False
+default persistent.fae_first_visit_date = datetime.datetime.now()
+default persistent.fae_last_visit_date = datetime.datetime.now()
+default persistent.fae_visit_counter = 0
+default persistent.fae_nickname_given = False
+default persistent.game_crash = False
+default persistent._fae_player_south_hemisphere = True
+
+default persistent.sessions = {
+    "last_session_end": None,
+    "current_session_start": None,
+    "total_playtime": datetime.timedelta(seconds=0),
+    "total_sessions": 0,
+    "first_session": datetime.datetime.now()
+}
 #########################
 #NON-PERSISTENT DEFAULTS#
 #########################
@@ -1572,3 +1605,125 @@ default sayori_confess = True
 # This variable tracks whether we read Natsuki's 3rd poem in Act 2.
 default natsuki_23 = None
 
+
+
+
+init 21 python:
+
+    def fae_input(prompt, default="", allow=None, exclude="{}", length=None, with_none=None, pixel_width=None, screen="input", screen_kwargs={}):
+
+
+        renpy.exports.mode("input")
+
+        roll_forward = renpy.exports.roll_forward_info()
+
+
+        if not isinstance(roll_forward, basestring):
+            roll_forward = None
+        
+        if roll_forward is not None:
+            default = roll_forward
+        
+        fixed = renpy.in_fixed_rollback()
+
+        if renpy.has_screen(screen):
+            widget_properties = { }
+            widget_properties["input"] = dict(default=default, length=length, allow=allow, exclude=exclude, editable=not fixed, pixel_width=pixel_width)
+
+            screen_kwargs["prompt"] = prompt
+
+            renpy.show_screen(screen, _transient=True, _widget_properties=widget_properties, **screen_kwargs)
+        
+        else:
+
+            if screen != "input":
+                raise Exception("The '{}' screen does not exist.".format(screen))
+            
+            renpy.ui.window(style="input_window")
+            renpy.ui.vbox()
+            renpy.ui.text(prompt, style="input_prompt")
+            inputwidget = renpy.ui.input(default, length=length, style="input_text", allow=allow, exclude=exclude)
+
+            if fixed:
+
+                inputwidget.disable()
+            
+            renpy.ui.close()
+        
+        renpy.exports.shown_window()
+
+        if not renpy.game.after_rollback:
+            renpy.loadsave.force_autosave(True)
+        
+        if fixed:
+            renpy.ui.saybehavior()
+
+        rv = renpy.ui.interact(mouse="prompt", type="input", roll_forward=roll_forward)
+        renpy.exports.checkpoint(rv)
+
+        if with_none is None:
+            with_none = renpy.config.implicit_with_none
+
+        if with_none:
+            renpy.game.interface.do_with(None, None)
+        
+        return rv
+
+init python in fae_utilities:
+
+    import re
+    import store
+    import store.fae_globals as fae_globals
+
+    __CURSE_CHECKER = re.compile('|'.join(fae_globals._CURSE_LIST), re.IGNORECASE)
+
+
+    def string_has_cursing(string):
+
+
+        return re.search(__CURSE_CHECKER, string.lower())
+
+
+init -985 python:
+
+    def fae_getWindowTitle():
+
+        return renpy.game.interface.window_caption
+
+
+init -999 python:
+
+    def label_callback(name, abnormal):
+
+        fae_globals.last_label = fae_globals.current_label
+        fae_globals.current_label = name
+    
+    config.label_callback = label_callback
+
+    def quit_input_check():
+
+
+        if (
+            not renpy.get_screen("input")
+            and not renpy.get_screen("choice")
+            and fae_globals.allow_force_quit
+        ):
+            renpy.call("fae_force_quit_attempt")
+
+
+    class FAEEvent(object):
+
+        def __init__(self):
+            self.__eventhandlers = []
+
+        def __iadd__(self, handler):
+            self.__eventhandlers.append(handler)
+            return self
+
+        def __isub__(self, handler):
+            self.__eventhandlers.remove(handler)
+            return self
+
+        def __call__(self, *args, **keywargs):
+            for eventhandler in self.__eventhandlers:
+                eventhandler(*args, **keywargs)

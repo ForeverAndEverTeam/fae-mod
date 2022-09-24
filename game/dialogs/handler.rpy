@@ -1,20 +1,27 @@
+#Credit to the JN team who wrote the original code this was based off
+
+
 init python in chat_handler:
     import store
 
     standard_chat_defs = dict()
 
     CHAT_CODE_DEFS = {
-        store.CHAT_GROUP_GREETING: store.greetings.GREETING_DEFS,
-        store.CHAT_GROUP_FAREWELL: store.farewells.FAREWELL_DEFS,
+        store.CHAT_GROUP_GREETING: store.fae_greetings.GREETING_DEFS,
+        store.CHAT_GROUP_FAREWELL: store.fae_farewells.FAREWELL_DEFS,
         store.CHAT_GROUP_NORMAL: store.chats.CHAT_DEFS,
-        store.CHAT_GROUP_EVENT: store.sayo_events.EVENT_DEFS
+        store.CHAT_GROUP_EVENT: store.fae_events.EVENT_DEFS,
+        store.CHAT_GROUP_REGRET: store.fae_regrets.REGRET_DEFS,
+        store.CHAT_GROUP_FLATTER: store.fae_flatter.FLATTERY_DEFS,
+        store.CHAT_GROUP_MOOD: store.fae_moods.MOOD_DEFS,
+        #store.CHAT_GROUP_DEV: store.fae_dev_tools.DEV_DEFS
     }
 
 init 6 python in chat_handler:
 
     ALL_CHAT_DEFS = dict()
 
-    for chat_defs in CHAT_CODE_DEFS.itervalues():
+    for chat_defs in CHAT_CODE_DEFS.values():
         ALL_CHAT_DEFS.update(chat_defs)
 
 init 6 python:
@@ -44,22 +51,12 @@ init -3 python:
 
     from collections import OrderedDict
     import datetime
+    from Enum import Enum
     import re
-    import store.sayo_utilities as sayo_utilities
+    import store.fae_affection as fae_affection
+    import store.fae_utilities as fae_utilities
+    import webbrowser
 
-
-    class Holidays():
-        none = 1
-        nyd = 2
-        easter = 3
-        halloween = 4
-        ce = 5
-        cd = 6
-        nye = 7
-
-        def __str__(self):
-            return self.name
-        
 
 
     #Constants for types. Add more here if we need more organizational areas
@@ -67,12 +64,17 @@ init -3 python:
     CHAT_GROUP_GREETING = "GREETING"
     CHAT_GROUP_NORMAL = "NORMAL"
     CHAT_GROUP_EVENT = "EVENT"
+    CHAT_GROUP_REGRET = "REGRET"
+    CHAT_GROUP_FLATTER = "FLATTER"
+    CHAT_GROUP_MOOD = "MOOD"
+    #CHAT_GROUP_DEV = "DEV"
 
     #LOCKED BASE MAP
     clm = {
         #STUFF WHICH SHOULDN"T CHANGE
         "conditional": True,
         "unlocked": True,
+        "random": True,
         "seen_no": True,
         "latest_seen": True,
         
@@ -80,18 +82,23 @@ init -3 python:
         "label": False,
         "category": False,
         "prompt": False,
-        "additional_properties": False
+        "affection_range": False,
+        "extra_props": False
     }
 
     class Chat(object):
         """
-        Chat class. Manages all topics
-        PROPERTIES:
-            - label: renpy label this topic corresponds to
-            - prompt: prompt for this topic in menus
-            - category: how to categorize this topic
-            - unlocked: whether we show this topic to the user in menus or not
-            - additional_properties: extra properties which don't directly affect the topic
+        Chat manager
+        
+        persistent_db - since we save topics seen to the persistent_db
+        
+        label - the label used
+        
+        prompt - for the "repeat topics" thingy
+        
+        contional - yes (insert requirements here)
+        
+        random - whether it's random (duh)
         """
 
         def __init__(
@@ -102,22 +109,28 @@ init -3 python:
             conditional=None,
             category=None,
             unlocked=False,
-            additional_properties=None
+            random=False,
+            affection_range=None,
+            extra_props=None
         ):
             """
-            Topic constructor
-            IN:
-                persistent_db - persistent dict reference to store the topic data in
+            Chat Handler
+            
+                persistent_db: Persistent dictionary.
                 label - renpy label (as string) this topic corresponds to
-                prompt - string representing the prompt to use for this topic in menus
-                    (Default: '')
+                prompt - The text show in the "Tell me again about, or Hey, Sayori..." menus (Defaults to empty)
                 conditional - condition under which this topic should be allowed to be shown
                     (Default: None)
                 category - list of strings representing categories to group this topic under. If None, an empty list is assigned
                     (Default: None)
                 unlocked - whether or not this topic is displayed to the user in menus
 
-                additional_properties - dictionary representing additional properties which don't directly affect the topic itself. If None, an empty dict is assigned
+                affection_range - Specify the range of affection Sayori needs to be at before the topic can be seen.
+                    No value(False) results in the topic being seen at all affection stages.
+                
+                random - do I really need to explain this?
+
+                extra_props - dictionary representing additional properties which don't directly affect the topic itself. If None, an empty dict is assigned
                     (Default: None)
             """
             if not isinstance(persistent_db, dict):
@@ -128,12 +141,16 @@ init -3 python:
             if not renpy.has_label(label):
                 raise Exception("Label {0} does not exist.".format(label))
             
+
+            if not fae_affection._checkAffectionRange(affection_range):
+                raise Exception("Affection range: {0} is invalid.".format(affection_range))
+            
             #STUFF WHICH SHOULDN'T CHANGE FROM PERSISTENT DATA
             self.label = label
             self.conditional = conditional
             self.unlocked = unlocked
-
-
+            self.random = random
+            self.affection_range = affection_range
             #SOME EXTRA PROPERTIES
             self.seen_no = 0
             self.latest_seen = None
@@ -149,13 +166,13 @@ init -3 python:
 
             self.prompt = prompt
 
-            if additional_properties is None:
-                additional_properties = list()
+            if extra_props is None:
+                extra_props = list()
 
-            self.additional_properties = additional_properties
+            self.extra_props = extra_props
 
             #ADD IT ALL BACK TO PERSISTENT DATA
-
+            
             persistent_db[label] = dict()
             self.__save()
 
@@ -163,12 +180,9 @@ init -3 python:
             """
             Equals override for the Chat class
             Checks if the labels are equivalent, as otherwise, loading data should be from the same persistent key
-            IN:
-                other - comparitor
-            OUT:
-                boolean:
-                    - True if the dialogue labels are the same
-                    - False otherwise
+            other: Thing to compare
+            
+            True if the labels haven't changed, otherwise False
             """
 
             if isinstance(other, Chat):
@@ -183,13 +197,11 @@ init -3 python:
         
         def as_dict(self):
             """
-            Exports a dict representation of the data to be persisted
-            OUT:
-                dictionary representation of the topic object (excluding the persistent_db property)
+            Dictionary rep of the chat class without the database thing
             """
             return {
                 key:value
-                for key, value in self.__dict__.iteritems()
+                for key, value in self.__dict__.items()
                 if key != "_m1_handler__persistent_db"
             }
 
@@ -200,82 +212,92 @@ init -3 python:
 
             if self.conditional is not None:
                 try:
-                    return eval(self.condtional, globals=store.__dict__)
+                    return eval(self.conditional, globals=store.__dict__)
                 
                 except Exception as e:
+                    store.fae_utilities.log("Error evaluating conditional on topic '{0}'. {1}".format(self.label, e.message), fae_utilities.SEVERITY_ERR)
                     return False
             
             return True
+        
+        def now_affection_in_affection_range(self, affection_status=None):
+
+            if not affection_status:
+                affection_status = fae_affection._getAffectionStatus()
+            
+            return fae_affection._AffectionStateInRange(affection_status, self.affection_range)
         
         def __load(self):
             """
             Load the chat stuff
             """
             
-            for persistent_key, value in self.__persistent_db[self.label].iteritems():
-                if clm[persistent_key]:
-                    self.__dict__[persistent_key] = value
+            for persist_key, value in self.__persistent_db[self.label].items():
+                if clm[persist_key]:
+                    self.__dict__[persist_key] = value
         
         def __save(self):
             """
             Save dialogue to persistent
             """
-            for persistent_key, value in self.as_dict().iteritems():
-                if clm[persistent_key]:
-                    self.__persistent_db[self.label][persistent_key] = value
+            for persist_key, value in self.as_dict().items():
+                if clm[persist_key]:
+                    self.__persistent_db[self.label][persist_key] = value
         
         @staticmethod
-        def _std():
+        def _save_chat_data():
             """
             Saves all topics
             """
-            for chat in store.chat_handler.ALL_CHAT_DEFS.itervalues():
+            for chat in store.chat_handler.ALL_CHAT_DEFS.values():
                 chat.__save()
 
         def hapwv(self, prop_key, prop_val):
             """
             Returns whether this topic has a given additional_attribute key with
             the supplied value
-            IN:
-                self - Reference to this topic
-                property_key - The key under additional_properties to test against
-                property_value - The value to test the value under the property_key
-            OUT:
-                True if the property exists and matches the given value, otherwise False, or raises an Exception if missing/undefined
+            True if the property exists and matches the given value, otherwise False, raises an Exception if missing/undefined
             """
 
-            if prop_key not in self.additional_properties:
+            if prop_key not in self.extra_props:
                 return False
-            return self.additional_properties[prop_key] is prop_val
+            return self.extra_props[prop_key] is prop_val
 
-            
+        def derandom(self):
+
+            self.random = False
 
         def _chat_filt(
             self,
             unlocked=None,
+            random=None,
             has_seen=None,
+            affection=None,
             seen_no=None,
             in_categories=list(),
             no_categories=list(),
-            additional_properties=list()
+            extra_props=list()
         ):
             """
-            Filters this topic accordng to conditions
-            IN:
-                unlocked - boolean: Whether or not this topic is unlocked
-                is_seen - boolean: Whether or not this topic should be seen
-                includes_categories - list: A list of categories, all of which this topic MUST have
-                excludes_categories - list: A list of categories, none of which this topic should have
-                additional_properties - list: A list of additional properties, can be either string or tuple
-                    If tuple, the first item is the key, the second is the expected value. If just string, only presence is validated
-                NOTE: If these values are None or empty, checks on them are not performed.
-            OUT:
-                boolean - True if all checks pass, False otherwise
+            Filters this chat accordng to specificatiosn
+            Should this topic be unlocked?
+            Should this topic be seen?
+            in_categories: A list of cats, all of which this topic MUST have
+            no_categories: A list of cats, none of which this topic should have
+            extra_props: A list of additional properties
+                If tuple, the first item is the key, the second is the expected value. If just string, only presence is validated
+            Returns a boolean - True if all valid, False otherwise
             """
             if unlocked is not None and unlocked != self.unlocked:
                 return False
+
+            if random is not None and random != self.random:
+                return False
             
             if has_seen is not None and renpy.seen_label(self.label) != has_seen:
+                return False
+            
+            if affection and not self.now_affection_in_affection_range(affection):
                 return False
             
             if not self.conditional_checker():
@@ -291,16 +313,16 @@ init -3 python:
             if no_categories and self.category and len(set(no_categories).intersection(set(self.category))) > 0:
                 return False
             
-            if additional_properties:
-                for additional_prop in additional_properties:
+            if extra_props:
+                for extra_prop in extra_props:
                     #KEY VALUE CHECKER
-                    if isinstance(additional_prop, tuple):
-                        if not self.hapwv(*additional_prop):
+                    if isinstance(extra_prop, tuple):
+                        if not self.hapwv(*extra_prop):
                             return False
                     
                     #JUST KEY STUFF
                     else:
-                        if additional_prop not in self.additional_properties:
+                        if extra_prop not in self.extra_props:
                             return False
             
             
@@ -312,20 +334,19 @@ init -3 python:
         def chat_filt(
             chat_list,
             unlocked=None,
+            random=None,
             has_seen=None,
+            affection=None,
             seen_no=None,
             in_categories=list(),
             no_categories=list(),
-            additional_properties=list()
+            extra_props=list()
         ):
             """
             Filters this chat accordng to conditions
-            IN:
-                chat_list - List of topics to filter down
-                See _chat_filt for the rest of the properties
-                NOTE: If these values are None or empty, checks on them are not performed.
-            OUT:
-                List of topics matching the filter criteria
+            chat_list - List of topics to filter down
+            See _chat_filt for the rest of the properties
+            Returns a list of topics matching the filter criteria
             """
 
             return [
@@ -333,24 +354,26 @@ init -3 python:
                 for _chat in chat_list
                 if _chat._chat_filt(
                     unlocked,
+                    random,
                     has_seen,
+                    affection,
                     seen_no,
                     in_categories,
                     no_categories,
-                    additional_properties
+                    extra_props
                 )
             ]
     
     #MAIN FUNCTIONS THAT WE USE A FUCK-TON
 
-    def Chatreg(Chat, chat_group=CHAT_GROUP_NORMAL):
+    def chatReg(Chat, chat_group=CHAT_GROUP_NORMAL):
         """
         Registers a topic to the defs to allow it to be picked from the topic "pool"
         IN:
-            Chat - Topic object representing the topic to be added
+            Chat - Chat class representing the topic to be added
             chat_group - group to map this topic to
-                (Default: CHAT_GROUP_NORMAL (in other words, a standard topic, not greeting/farewell/special))
-        NOTE: Should be used at init 5
+                (Defaults to CHAT_GROUP_NORMAL (not an event/greeting/farewell etc)
+        NOTE: Must be used at init 5
         """
         local_defs = store.chat_handler.CHAT_CODE_DEFS.get(chat_group)
 
@@ -364,27 +387,24 @@ init -3 python:
 
     def ats(chat_label):
         """
-        Adds a dialogue to the stack
-        IN:
-            chat_label - Chat.label of the dialogue you want to push
+        Adds a dialogue to the queue at position 1
+        
+        chat_label - topic label you want to force push
         """
         persistent._event_list.insert(0, chat_label)
 
     def atq(chat_label):
         """
         Adds a dialogue to the queue
-        IN:
-            chat_label - Chat.label of the dialogue you wish to queue
+        chat_label - topic label of the dialogue you wish to queue
         """
         persistent._event_list.append(chat_label)
 
     def ciel(chat_label):
         """
         Returns whether or not a topic is in the event list
-        IN:
-            chat_label - Chat.label of the topic you wish to check
-        OUT:
-            boolean - True if the topic is in the event list, False otherwise
+        chat_label - Chat label of the topic you wish to check
+        Returns boolean - True if the topic is in the event list, False otherwise
         """
 
         return chat_label in persistent._event_list
@@ -393,10 +413,10 @@ init -3 python:
     def cielp(chat_pattern):
         """
         Returns whether or not a topic is in the event list
-        IN:
-            chat_pattern - Pattern to match against the topic labels
-        OUT:
-            boolean - True if the topic is in the event list, False otherwise
+        
+        chat_pattern - Pattern to match against the topic labels
+        
+        Returns boolean - True if the topic is in the event list, False otherwise
         """
 
         return any(
@@ -439,30 +459,30 @@ init -3 python:
             if not re.match(chat_label_pattern, _chat_label)
         ]
 
-    def makelist(menu_chat, additional_chats):
+    def makelist(menu_entries, additional_chats):
         """
         Returns a list of items ready for a menu
         IN:
-            chat_topics - List<Topic> of topics
+            menu_entries - List<Topic> of topics
             additional_chats - optional, array of tuples
                 syntax: [("prompt1", "label2"), ("prompt2", "label2"), ...]
         OUT:
             array of tuples usable by menu()
         """
 
-        menu_entries = []
-        for chat in menu_chat:
-            menu_entries.append((chat.prompt, chat.label))
+        menu_parts = []
+        for chat in menu_entries:
+            menu_parts.append((chat.prompt, chat.label))
 
         for chat in additional_chats:
-            menu_entries.append(chat)
-        return menu_entries.sort()
+            menu_parts.append(chat)
+        return menu_parts.sort()
 
-    def makedict(menu_chat):
+    def makedict(menu_entries):
         """
         Builds a dict of items ready for use in a categorized menu
         IN:
-            menu_chat - A List<Topic> of topics to populate the menu
+            menu_entries - A List<Topic> of topics to populate the menu
         OUT:
             Dictionary<string, List<string>> representing a dict of category: [ ...prompts ]
         """
@@ -484,48 +504,12 @@ init -3 python:
 
         #Send the dialogues into the ordered dictionary.
         #NOTE: EACH DIALOGUE CAN HAVE MULTIPLE CATEGORIES
-        for chat in menu_chat:
+        for chat in menu_entries:
             for category in chat.category:
                 omi[category].append(chat)
         
         return omi
 
-
-init -999 python in sayo_utilities:
-    import datetime
-    import hashlib
-    import os
-    import store
-    import pygame
-
-    __KEY_HASH = "5420cfc14ddb171df60c55cfea8d5beb39543f0696a4fe34c396bfe0e23a5bc9"
-
-
-init python in sayo_utilities:
-    import re
-    import store
-    #import store.sayo_globals as sayo_globals
-    # Key setup
-    key_path = os.path.join(renpy.config.basedir, "game/dev/key.txt").replace("\\", "/")
-    if not os.path.exists(key_path):
-        __KEY_VALID = False
-
-    else:
-        with open(name=key_path, mode="r") as key_file:
-            __KEY_VALID = hashlib.sha256(key_file.read().encode("utf-8")).hexdigest() == __KEY_HASH
-
-    def get_key_valid():
-        """
-        Returns the validation state of the key.
-        """
-        return __KEY_VALID
-
-    def save_game():
-        """
-        Saves all game data.
-        """
-        #Save topic data
-        store.Chat._save_topic_data()
 
 
 

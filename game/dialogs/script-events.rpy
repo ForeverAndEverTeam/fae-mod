@@ -1,13 +1,49 @@
 default persistent._event_db = dict()
+default persistent._fae_holiday_list = dict()
+default persistent._fae_holiday_completion_states = dict()
+
+image asset mr_cow = "mod_assets/images/EVENT/mr_cow.png"
+image asset spe1 = "mod_assets/images/EVENT/spe1.png"
+image asset spe2 = "mod_assets/images/EVENT/spe2.png"
+image asset desk = "mod_assets/sayori/table/desk.png"
+image asset chair = "mod_assets/sayori/table/chair.png"
+image asset desk_shadow = "mod_assets/sayori/table/desk_sh.png"
+image asset note = "mod_assets/sayori/table/note.png"
+image asset knife = Image("mod_assets/images/EVENT/pointy_stick.png", yoffset=1)
 
 
-init -2 python in sayo_events:
+
+image asset mr_cow_desk = Composite(
+    (1280, 720),
+    (0, 0), "mod_assets/sayori/table/chair.png",
+    (0, 0), "mod_assets/images/EVENT/mr_cow.png",
+    (0, 0), "mod_assets/sayori/table/desk.png",
+    (0, 0), "mod_assets/sayori/table/desk_sh.png"
+)
+
+
+init -1 python in fae_events:
     import random
     import store
-    import store
+    #import store
+    import datetime
+    from Enum import Enum
+    import store.fae_music as fae_music
+    import store.fae_sky as fae_sky
+    import store.fae_affection as fae_affection
+    import store.fae_globals as fae_globals
+    import store.fae_outfits as fae_outfits
+    import store.fae_utilities as fae_utilities
 
-
+    FAE_EVENT_DECOR_ZORDER = 2
+    FAE_EVENT_ASSET_ZORDER = 4
+    
     EVENT_DEFS = dict()
+    EVENT_RETURN_OUTFIT = None
+
+    
+
+
 
 
     def event_selector():
@@ -17,6 +53,7 @@ init -2 python in sayo_events:
         event_list = store.Chat.chat_filt(
             EVENT_DEFS.values(),
             unlocked=True,
+            affection=store.Affection._getAffectionStatus(),
             has_seen=False,
             **kwargs
         )
@@ -26,129 +63,151 @@ init -2 python in sayo_events:
         
         else:
             return None
-
-label d_day_control:
-    call sayo_d_day_death
-
-    show bg spaceroom with flash
-
-    call sayori_d_day
-
-
-
-label sayori_d_day:
-
-    #IF YOU MAKE HER SAD I WILL EAT YOUR CHILDREN -NATHAN :)
-
-    #show bg spaceroom zorder 1
-    #show sayori_d_day_note zorder 11
-
-    $ persistent.d_day = True
-
-    python:
-        disable_esc()
-        allow_dialogue = False
-        layout.QUIT = glitchtext(20)
-        #Console is not going to save you.
-        #If you've got to this point, you've consiously tried to be an ass
-        #Therefore you deserve what happens now
-        config.keymap["console"] = []
     
-    jump d_day_real
 
-label d_day_real:
     
-    #add(D_DAY_POEM_DISPLAY())
     
-    call showpoem(poem_d_day)
+    
+    def show_visuals(
+        sayori_sprite_code,
+        bgm="mod_assets/bgm/s1_ac.ogg"
+    ):
 
-    $ persistent.nwb = True
 
+        renpy.show("sayori {0}".format(sayori_sprite_code), at_list=[store.fae_center], zorder=store.fae_sprites.SAYO_ZORDER)
+        renpy.hide("black")
+
+        renpy.play(filename=bgm, channel="music")
+
+        renpy.hide("black")
+    
+ 
+
+label event_new_years_eve:
+    $ fae_events.getHoliday("event_new_years_eve").run()
+    s "[player]!{w=1}{nw}"
+    s "[player]!{w=0.5} [player]!"
+    s "Look at the date!{w=0.5}{nw}"
+    extend " Do you even know what day it is?!{w=1}{nw}"
+    extend " It's almost the new year!"
+    s "Man...{w=1}{nw}"
+    extend " and about time too,{w=0.1} huh?"
+    s "I don't know about you,{w=0.1} [player]...{w=1}{nw}"
+    $ current_year = datetime.date.today().year
+    extend " but I can't {i}WAIT{/i} to tell [current_year] where to stick it!"
+    s "And what better way to do that...{w=0.75}{nw}" 
+    extend " than a crap ton of explosions and snacks?"
+    s "Ehehe.{w=0.5}{nw}"
+    extend " It's gonna be great!"
+
+    
+
+    $ fae_events.getHoliday("event_new_years_eve").complete()
+
+    return
+
+
+
+
+init 5 python:
+    chatReg(
+        Chat(
+            persistent._event_db,
+            label="fae_event_mr_cow_transform20",
+            unlocked=True,
+            affection_range=(fae_affection.NORMAL, None)
+        ),
+        chat_group=CHAT_GROUP_EVENT
+    )
+
+label fae_event_mr_cow_transform20:
+
+    hide black
+
+    $ fae_globals.allow_force_quit = False
+
+    show asset mr_cow_desk as mr_cow_desk zorder fae_sprites.SAYO_ZORDER
+   
+    s "[player] heeeeeeelp!!!"
+    s "I was messing with the code and accidentally turned myself into Mr. Cow!"
+    s "Noooooooo!!!!"
+    
+    pause 1.5
+    
+    s "Pffffftt-"
+    
+    show asset spe1 zorder 2
+
+    
+    s "Bwahahahahah- I'm sorry, [player]!"
+    s "I'm fine- I just couldn't resist that one!"
+    s "I'll go put him away now, I'll be back in a sec!"
+    
+    hide mr_cow_desk
+    
+    hide asset spe1
+
+    $ fae_events.show_visuals("abhfbcqa")
+
+    #show sayori idle at t11 zorder fae_sprites.SAYO_ZORDER
+    
+    s abhfbcqa "There we go, ehehe~"
+    s abhfbcoa "Welcome back, [player]!" 
+    s abhabbsa "I was just kinda starting to miss you so…"
+    s abhabcea "I dug in the code until I could rescue Mr. Cow!"
+    s abbbbloa "It was hard work, buuuuut!"
+    s abgcbdoa "Now I'll always have someone to cuddle with, and it'll never get {i}too{/i} lonely in here!"
+    s abhfbcaa "Anyways,I'm glad you're here now!" 
+    return
+    
+init 5 python:
+    chatReg(
+        Chat(
+            persistent._event_db,
+            label="fae_event_pointy_stick_stabber_girl",
+            unlocked=True,
+            affection_range=(fae_affection.NORMAL, None)
+        ),
+        chat_group=CHAT_GROUP_EVENT
+    )
+
+label fae_event_pointy_stick_stabber_girl:
+
+    #$ fae_events.show_visuals("abbcbckc")
+
+    hide black
+
+    #$ fae_events.show_visuals("idle")
+
+    show sayori idle at fae_center zorder fae_sprites.SAYO_ZORDER
+
+
+    show asset knife as knife at fae_center zorder fae_sprites.SAYO_ZORDER
+
+    
+
+    s abbcbckc "Hi, [player]! Ready to chop up some bitches?"
+    s "Does this look like the face of mercy, [player]?"
+    s bbfcbeea "AHAHAHA….{nw}"
+    extend bbfcbdia"Just kidding!"
+    s abbcbiia "Sorry about that!"
+    
     menu:
-        "I'm sorry":
-            pass
-        "...":
+        "Where did you even get that???":
             pass
     
-    $ persistent.cthulu_d_day = True
-    jump d_day_real
-
-label sayo_d_day_death:
-    window hide(None)
-    window auto
-    play music td
-    show s_kill_bg2
-    show s_kill2
-    show s_kill_bg as s_kill_bg at s_kill_bg_start
-    show s_kill as s_kill at s_kill_start
-    $ pause(3.75)
-    show s_kill_bg2 as s_kill_bg
-    show s_kill2 as s_kill
-    $ pause(0.01)
-    show screen tear(20, 0.1, 0.1, 0, 40)
-    play sound "sfx/s_kill_glitch1.ogg"
-    $ pause(0.25)
-    stop sound
-    hide screen tear
-    hide s_kill_bg
-    hide s_kill
-    show s_kill_bg_zoom zorder 1
-    show s_kill_bg2_zoom zorder 1
-    show s_kill_zoom zorder 3
-    show s_kill2_zoom zorder 3
-    show s_kill as s_kill_zoom_trans zorder 3:
-        truecenter
-        alpha 0.5
-        zoom 2.0 xalign 0.5 yalign 0.05
-        pause 0.5
-        dizzy(1, 1.0)
-    $ pause(2.0)
-    show noise zorder 3:
-        alpha 0.0
-        linear 3.0 alpha 0.25
-    show vignette zorder 3:
-        alpha 0.0
-        linear 3.0 alpha 0.75
-    $ pause(1.5)
-    show white zorder 2
-    show splash_glitch zorder 2
-    $ pause(1.5)
-    show screen tear(20, 0.1, 0.1, 0, 40)
-    play sound "sfx/s_kill_glitch1.ogg"
-    $ pause(0.2)
-    stop sound
-    hide screen tear
-    $ pause(4.0)
-    show screen tear(20, 0.1, 0.1, 0, 40)
-    play sound "sfx/s_kill_glitch1.ogg"
-    $ pause(0.2)
-    stop sound
-    hide screen tear
-    hide splash_glitch
-    show splash_glitch2 zorder 2
-    show splash_glitch_m zorder 2
-    show splash_glitch_n zorder 2
-    show splash_glitch_y zorder 2
-    $ pause(0.75)
-    hide white
-    hide splash_glitch2
-    hide splash_glitch_m
-    hide splash_glitch_n
-    hide splash_glitch_y
-    show exception_bg zorder 2
-    show fake_exception zorder 2:
-        xpos 0.1 ypos 0.05
-    show fake_exception2 zorder 2:
-        xpos 0.1 ypos 0.15
-    python:
-        try: sys.modules['renpy.error'].report_exception("Oh jeez...I didn't break anything, did I? Hold on a sec, I can probably fix this...I think...\nActually, you know what? This would probably be a lot easier if I just deleted her. She's the one who's making this so difficult. Ahaha! Well, here goes nothing.", False)
-        except: pass
-    $ pause(6.0)
-
-    hide fake_exception
-    hide fake_exception2
-    hide exception_bg
-
-    scene black with dissolve_cg
-
+    s eahcbbsa "Great question!{w=1.0} {nw}"
+    extend eahcbada "I've been doing some more digging into the code to recover as much stuff as possible!"
+    
+    s ebbcbcqa "I managed to get this knife back today!"
+    s fbfcbkdaj"Not really sure if I'll ever need it for anything, but I figured I might as well have it."
+    s bbfcbmoaj "But maybe it's better if I put this away now."
+    s bbbcbciaj "I wouldn't want anything bad to happen, ehehe~"
+    
+    hide knife 
+    
+    s abhabaoa "Hope you're doing good today, [player]~" 
+    s abhabiia "Did I make you nervous?"
+    s ebhhbcoa "Sorry for scaring you, ehehe~"
+    
     return
