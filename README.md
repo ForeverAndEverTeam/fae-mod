@@ -49,6 +49,8 @@ Sayori
 
 Emilia
 
+[Otter](https://github.com/my-otter-self)
+
 # LEGACY CREDITS
 
 
