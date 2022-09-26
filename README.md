@@ -20,7 +20,7 @@ Why not get creative and try to add a feature or two yourself? (I'm sure she'd l
 
 # NEW CREDITS
 
-# DIRECTOR
+## DIRECTOR
 [Orcaramelo](https://github.com/Orcaramelo)
 
 ## PROGRAMMING
