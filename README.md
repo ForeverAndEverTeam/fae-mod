@@ -1,87 +1,106 @@
-# Important notices before download  
-***Download notice:** Don't clone the master branch to download the mod. Use a [stable release](https://github.com/AlexanDDOS/fae-mod/releases) instead!*  
-  
-***Сompatibility notice:** We are aware of the announcement of Doki Doki Literature Club Plus, so we warn beforehand that this mod will probably be **uncompatibilitible with DDLC+** as it's based on the DDLC classic edition and its outdated engine. If you own a DDLC+ copy, please download the classic DDLC on its [offical website](http://ddlc.moe) to run this mod.*
+# NOTICES
+## DOWNLOAD NOTICE
+Please don't clone the master branch to download the mod. 
+Use a stable release instead!
 
-# Doki Doki Literature Club "Forever & Ever"  
-**"Forever & Ever"** is a [Doki Doki Literature Club](http://ddlc.moe) mod providing you the ability to be alone with **Sayori**. This mod is designed like [Monika After Story](https://github.com/Monika-After-Story/MonikaModDev) but has a few differences to date, including the wonderful Sayori as the star of the show.  
-## History
-After the release of [Monika After Story](https://github.com/Monika-After-Story/MonikaModDev), there were a few attempts to create similar mods for other DDLC characters. But nobody had published a _proper_ mod for Sayori, despite the new abilities she got at the end of the game. As a Sayori lover, I was strongly dissatisfied by the fake ["Sayori After Story"](https://www.reddit.com/r/DDLC/comments/8nviad/mod_release_sayori_after_story/) mod, so I decided to create a real one for my beloved 'doki'.  
+## СOMPATIBILITY NOTICE 
+This mod is incompatible with Doki Doki Literature Club Plus. 
+If you own a DDLC+ copy, please download the original game from it's [official website](https://ddlc.moe) to install the mod.
 
-## Features  
-As of now, I am trying to implement most of the MAS features, including player questions and mini-games. The dialogue was written by me and most of them were reviwed by proofreaders and is based on the original game story as well as Sayori's character and experiences (toning down the worst character traits, although).  
-  
-This mod is available in multiple languages. Now you can select one of few game languages besides English. If you want to add your own language, read [this Wiki aritcle](https://github.com/AlexanDDOS/fae-mod/wiki/Translator-Guidelines).
+## REPORTING BUGS
 
-## Credits  
-**Project Lead:**  
-Alexander Osipov (aka AlexanDDOS, [GitHub](https://github.com/AlexanDDOS), [Reddit](https://www.reddit.com/user/AlexanDDOS), [VK](https://vk.com/alexanddos), [FB](https://www.facebook.com/alexanDDOS))  
-  
-**Programming:**  
-AlexanDDOS  
-[vignedev](https://github.com/vignedev)  
-Dan Salvato (original scripts)  
-DDLC Mod Template team ([mod base](https://github.com/Monika-After-Story/DDLCModTemplate))  
-[ElReyZero](https://github.com/ElReyZero) (small fixes)
-  
-**Old Sayori Sprite Artists:**  
-*Excluded since 0.4.0*  
-Fj0rd_ ([Reddit](https://www.reddit.com/user/Fj0rd_), [the original Sayori art](https://www.reddit.com/r/DDLC/comments/7h40q6/ok_final_version_this_time_i_swear/))  
-AlexanDDOS (Sprite compositor & editor)  
-  
-**New Sayori Sprite Artists:**  
-[Orcaramelo](https://github.com/Orcaramelo)  
-[Nemu-sus](https://github.com/Nemu-sus)  
-AlexanDDOS (Sprite compositor)  
-  
-**Misc Arts & Edits:**  
-AlexanDDOS (Small artilces & sprite edits)  
-Team Salvato artists (original sprites)  
-Lucian Pavel (Santa hat original model, excluded from the stable version)  
-  
-**Writers (without proofreading and translation):**  
-AlexanDDOS  
-Orcaramelo  
-Venus  
-*Read [this](https://github.com/AlexanDDOS/fae-mod/wiki/Writer-Guidelines) if you want to see you here*  
 
-**Proofreaders:**  
-[tberriman](https://www.reddit.com/user/tberriman)  
-[vermicellibug](https://github.com/vermicellibug)  
-[Atlas](https://www.reddit.com/user/Nekochroma)  
-  
-**Translators:**  
-AlexanDDOS (Russian, Esperanto & Toki Pona (WIP))  
-[Vova Petelin](https://vk.com/toxin_666) (Russian)  
-ElReyZero (Spanish)  
-[littlebin](https://www.reddit.com/user/lvkaibin) (Chinese)  
-*Read [this](https://github.com/AlexanDDOS/fae-mod/wiki/Translator-Guidelines) if you want to see you here*  
-  
-**SFX:**  
-Pipe98x (drawing cross)  
-sirrealist2 (drawing circle/line)  
-  
-**Testers & Platinum Troubleshooters:**  
-AlexanDDOS  
-Leon9023 ([Reddit](https://www.reddit.com/user/leon9023), [VK](https://vk.com/leon9023))  
-[Evgeny Zotov](https://vk.com/everlastingtolovesayori)  
-littlebin  
-[MarioXenobladefan614](https://www.reddit.com/user/MarioXenobladefan614)  
-*Report bugs on [Issues](https://github.com/AlexanDDOS/fae-mod/issues) or your feedback if you want to see you here*  
-  
-**Sponsors:**  
-*Comming soon*  
-  
-**Special Thanks**:  
-[Team Salvato](http://teamsalvato.com) and  
-Team Monika  
-The "Just Natsuki" team  
-Independent supporters of "Just *{doki_name}*" mod  
-The Ren'Py developer team  
-The Reddit DDLC community  
-The Russian DDLC community  
-  
-## License & Copyright  
-See "[LICENSE](https://raw.githubusercontent.com/AlexanDDOS/fae-mod/master/LICENSE)" for license information  
-Made in accordance with Team Salvato's [IP Guidelines](http://teamsalvato.com/ip-guidelines/)   
-*Copyright (c) 2018-2021 Alexander Osipov and the other creators*
+# ABOUT THE MOD
+In "Forever & Ever", you can become closer to Sayori than ever before! 
+You have all the time in the world to build the perfect relationship with our cinnamon bun star of the show. 
+At the heart of the mod, we took a mental health based approach in line with the experiences Sayori had in the original game, so we can hopefully support people by offering a source of positivity, advice, and unconditional understanding. 
+
+Currently we have a whole range of unique dialogue, questions, and games for you and Sayori to enjoy, and we have so many more ideas for the near future! We're very active around the mod and on our discord server and we promise to deliver frequent updates and announcements so there's always something new and exciting to do! 
+Why not get creative and try to add a feature or two yourself? (I'm sure she'd love that!)
+
+# NEW CREDITS
+
+# DIRECTOR
+[Orcaramelo](https://github.com/Orcaramelo)
+
+## PROGRAMMING
+
+[Nathan](https://github.com/TRIDENT1313)
+
+## ART
+
+[Orcaramelo](https://github.com/Orcaramelo)
+[Nemu-sus](https://github.com/Nemu-sus)
+
+## MUSIC
+
+SlightlyAmiss (Theme)
+[Multimokia](https://github.com/multimokia) (Music box loop)
+
+## WRITING
+
+Sobb (Lead)
+Sayori
+[Orcaramelo](https://github.com/Orcaramelo)
+Emilia
+
+# LEGACY CREDITS
+
+
+## Project Lead:
+Alexander Osipov (aka AlexanDDOS, GitHub, Reddit, VK, FB)
+## Programming:
+AlexanDDOS
+vignedev
+Dan Salvato (original scripts)
+DDLC Mod Template team (mod base)
+ElReyZero (small fixes)
+## Old Sayori Sprite Artists:
+Excluded since 0.4.0
+Fj0rd_ (Reddit, the original Sayori art)
+AlexanDDOS (Sprite compositor & editor)
+## New Sayori Sprite Artists:
+Orcaramelo
+Nemu-sus
+AlexanDDOS (Sprite compositor)
+## Misc Arts & Edits:
+AlexanDDOS (Sprite edits)
+Team Salvato artists (original sprites)
+Lucian Pavel (Santa hat original model, excluded from the stable version)
+## Writers (without proofreading and translation):
+AlexanDDOS
+Orcaramelo
+Venus
+
+## Proofreaders:
+tberriman
+vermicellibug
+Atlas
+Translators:
+AlexanDDOS (Russian, Esperanto & Toki Pona (WIP))
+Vova Petelin (Russian)
+ElReyZero (Spanish)
+littlebin (Chinese)
+
+## SFX:
+Pipe98x (drawing cross)
+sirrealist2 (drawing circle/line)
+Testers & Platinum Troubleshooters:
+AlexanDDOS
+Leon9023 (Reddit, VK)
+Evgeny Zotov
+littlebin
+MarioXenobladefan614
+
+Special Thanks:
+Team Salvato and
+Team Monika
+The "Just Natsuki" team
+Independent supporters of "Just {doki_name}" mod
+The Ren'Py developer team
+The Reddit DDLC community
+The Russian DDLC community
+License & Copyright
+See "LICENSE" for license information
+Made in accordance with Team Salvato's IP Guidelines
+Copyright (c) 2018-2021 Alexander Osipov and the other creators
