@@ -47,13 +47,13 @@ Sayori
 
 [Orcaramelo](https://github.com/Orcaramelo)
 
-Emilia
+[Emilia/Monika (EYLO)](https://www.reddit.com/u/EmiliaMonika?utm_medium=android_app&utm_source=share)
 
 [Otter](https://github.com/my-otter-self)
 
 ## SPECIAL THANKS
 
-Emilia
+[Emilia/Monika (EYLO)](https://www.reddit.com/u/EmiliaMonika?utm_medium=android_app&utm_source=share)
 
 [Nathan](https://github.com/TRIDENT1313)
 
