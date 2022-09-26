@@ -51,6 +51,13 @@ Emilia
 
 [Otter](https://github.com/my-otter-self)
 
+## SPECIAL THANKS
+
+Emilia
+
+[Nathan](https://github.com/TRIDENT1313)
+
+
 # LEGACY CREDITS
 
 
