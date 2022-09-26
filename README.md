@@ -8,7 +8,7 @@ This mod is incompatible with Doki Doki Literature Club Plus.
 If you own a DDLC+ copy, please download the original game from it's [official website](https://ddlc.moe) to install the mod.
 
 ## REPORTING BUGS
-
+Please report bugs on our [issues](https://github.com/ForeverAndEverTeam/fae-mod/issues) page.
 
 # ABOUT THE MOD
 In "Forever & Ever", you can become closer to Sayori than ever before! 
