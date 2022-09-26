@@ -30,18 +30,23 @@ Why not get creative and try to add a feature or two yourself? (I'm sure she'd l
 ## ART
 
 [Orcaramelo](https://github.com/Orcaramelo)
+
 [Nemu-sus](https://github.com/Nemu-sus)
 
 ## MUSIC
 
 SlightlyAmiss (Theme)
+
 [Multimokia](https://github.com/multimokia) (Music box loop)
 
 ## WRITING
 
 Sobb (Lead)
+
 Sayori
+
 [Orcaramelo](https://github.com/Orcaramelo)
+
 Emilia
 
 # LEGACY CREDITS
@@ -50,57 +55,104 @@ Emilia
 ## Project Lead:
 Alexander Osipov (aka AlexanDDOS, GitHub, Reddit, VK, FB)
 ## Programming:
+
 AlexanDDOS
+
 vignedev
+
 Dan Salvato (original scripts)
+
 DDLC Mod Template team (mod base)
+
 ElReyZero (small fixes)
+
 ## Old Sayori Sprite Artists:
+
 Excluded since 0.4.0
+
 Fj0rd_ (Reddit, the original Sayori art)
+
 AlexanDDOS (Sprite compositor & editor)
+
 ## New Sayori Sprite Artists:
+
 Orcaramelo
+
 Nemu-sus
+
 AlexanDDOS (Sprite compositor)
+
 ## Misc Arts & Edits:
+
 AlexanDDOS (Sprite edits)
+
 Team Salvato artists (original sprites)
+
 Lucian Pavel (Santa hat original model, excluded from the stable version)
+
 ## Writers (without proofreading and translation):
+
 AlexanDDOS
+
 Orcaramelo
+
 Venus
 
 ## Proofreaders:
+
 tberriman
+
 vermicellibug
+
 Atlas
-Translators:
+
+## Translators:
+
 AlexanDDOS (Russian, Esperanto & Toki Pona (WIP))
+
 Vova Petelin (Russian)
 ElReyZero (Spanish)
+
 littlebin (Chinese)
 
 ## SFX:
+
 Pipe98x (drawing cross)
+
 sirrealist2 (drawing circle/line)
-Testers & Platinum Troubleshooters:
+
+## Testers & Platinum Troubleshooters:
+
 AlexanDDOS
+
 Leon9023 (Reddit, VK)
+
 Evgeny Zotov
+
 littlebin
+
 MarioXenobladefan614
 
-Special Thanks:
+## Special Thanks:
+
 Team Salvato and
+
 Team Monika
+
 The "Just Natsuki" team
+
 Independent supporters of "Just {doki_name}" mod
+
 The Ren'Py developer team
+
 The Reddit DDLC community
+
 The Russian DDLC community
-License & Copyright
+
+## License & Copyright
+
 See "LICENSE" for license information
+
 Made in accordance with Team Salvato's IP Guidelines
+
 Copyright (c) 2018-2021 Alexander Osipov and the other creators
