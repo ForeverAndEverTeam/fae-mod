@@ -155,6 +155,33 @@ label fae_kiss:
 
     return
 
+init 5 python:
+    
+    chatReg(
+        Chat(
+            persistent._chat_db,
+            label="fae_time",
+            unlocked=True,
+            prompt="How long until the update?",
+            random=False,
+            category=["Update"]
+        ),
+        chat_group=CHAT_GROUP_NORMAL
+    )
+
+label fae_time:
+
+    #call fae_kiss_engine(duration=0.5, initial_exp="aahcnaaa", final_exp="aahcnaaa", fade_duration=0.5) from _call_fae_kiss_engine_1
+
+    #$ love()
+
+    s abbbbcea "Soon!"
+
+    s abbbbjea "Very soon!"
+
+
+
+    return
 
 
 

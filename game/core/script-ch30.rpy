@@ -1,32 +1,18 @@
+default persistent.first_run = True
 
+default persistent.s_name = "Sayori"
 
-#init -890 python in sayo_globals:
-
+#init -890 python in fae_globals:
 #    import datetime
 #    import store
 
-#    time_travel_detected = (
-#        store.LastSessionEnd() - datetime.datetime.now()
-#        > datetime.timedelta(hours=30)
+#    tt_detected = (
+#        store.fae_getLastSeshEnd() - datetime.datetime.now()
+#            > datetime.timedelta(hours=30)
 #    )
 
-#    if time_travel_detected:
-#        store.persistent.player_has_time_travelled = True
-
-default persistent.first_run = True
-
-
-init -890 python in fae_globals:
-    import datetime
-    import store
-
-    #tt_detected = (
-    #    store.fae_getLastSeshEnd() - datetime.datetime.now()
-    #        > datetime.timedelta(hours=30)
-    #)
-
-    #if tt_detected:
-    #    store.persistent._fae_pm_has_went_back_in_time = True
+#    if tt_detected:
+#        store.persistent._fae_pm_has_went_back_in_time = True
 
 init python:
 
@@ -74,6 +60,8 @@ label ch30_autoload:
 
     if fae_is_evening():
         play music s1
+    
+    
 
     #the real start of the game
 
@@ -154,40 +142,31 @@ label ch30_init:
         
         fae_utilities.log("Outfit Set.")
         
-        #fae_events.FAEHoliday.loadAll()
+        fae_events.EVENT_RETURN_OUTFIT = fae_outfits.get_outfit(store.persistent.fae_outfit_quit)
 
-        #fae_utilities.log("Event data loaded.")
-
-        #if (datetime.datetime.now().year > persistent.fae_last_visit_date.year):
-            #fae_events.resetEvents()
-            #fae_utilities.log("Event completion state reset.")
-
-        #possible_event_list = fae_events.selectHolidays()
-
-        #fae_events.EVENT_RETURN_OUTFIT = fae_outfits.get_outfit(store.persistent.fae_outfit_quit)
+        available_holiday_list = fae_events.selectHolidays()
 
         
-        """
-        if possible_event_list:
-            fae_events.EVENT_RETURN_OUTFIT = fae_outfits.get_outfit(store.persistent.fae_outfit_quit)
-            possible_event_list.sort(key = lambda holiday: holiday.priority)
-            queued_event_cats = list()
+        if available_holiday_list:
+            fae_events.EVENT_RETURN_OUTFIT = fae_outifts.get_outfit(store.persistent.fae_outfit_quit)
+            available_holiday_list.sort(key = lambda holiday: holiday.priority)
+            queued_holiday_types = list()
 
-            while len(possible_event_list) > 0:
-                holiday = possible_event_list.pop()
-            
-                if not holiday.holiday_type in queued_event_cats:
-                    queued_event_cats.append(holiday.holiday_type)
+            while len(available_holiday_list) > 0:
+                holiday = available_holiday_list.pop()
+
+                if not holiday.holiday_type in queued_holiday_types:
+                    queued_holiday_types.append(holiday.holiday_type)
                     atq(holiday.label)
+                    if len(available_holiday_list) > 0:
+                        queue("event_interlude")
 
-                    if len(possible_event_list) > 0:
-                        atq("event_intelude")
-                    
                     else:
-                        atq("ch30_loop")
-
+                        queue("ch30_loop")
+            
             renpy.jump("cnc")
-        """
+
+        
 
 
         #init_qabs()

@@ -1,7 +1,33 @@
 
 
-init -985 python:
-    """
+init -985 python in fae_utilities:
+
+    
+    def pdget(key, table, validator=None, defval=None):
+        """
+        Protected Dict GET
+        Gets an item from a dict, using protections to ensure this item is
+        valid
+
+        IN:
+            key - key of item to get
+            table - dict to get from
+            validator - function to call with the item to validate it
+                If None, no validating done
+                (Default: None)
+            defval - default value to return if could not get from dict
+        """
+        if table is not None and key in table:
+
+            item = table[key]
+
+            if validator is None:
+                return item
+
+            if validator(table[key]):
+                return item
+
+        return defval
     import datetime
 
     def fae_getSessionLength():
@@ -52,7 +78,7 @@ init -985 python:
     def fae_TTDetected():
 
         return store.fae_globals.tt_detected
-    """
+    
 
 init -898 python in fae_globals:
 

@@ -1,4 +1,4 @@
-init -1 python:# in affection_engine:
+init -1 python:
     
     class Affection(object):
 
