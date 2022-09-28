@@ -18,7 +18,7 @@ You can do this by going to Appdata\Roaming\ and looking for the folder called "
 
 Copy that folder, and save it to a USB/SSD
 
-(https://i.imgur.com/yZlNmQB.png)
+See [here].(https://i.imgur.com/yZlNmQB.png)
 
 On your other device, go to the same place (Appdata\Roaming), and paste the folder in.
 
