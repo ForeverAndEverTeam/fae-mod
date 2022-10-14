@@ -40,4 +40,4 @@ The above code will import a submod with this information:
 - Settings: No settings
 - Version Updates: No update scripts
 
-When creating dialogue submods, please try and adhere to the [Coding Style](https://github.com/ForeverAndEverTeam/fae-mod/style.md)
+When creating dialogue submods, please try and adhere to the [Coding Style](https://github.com/ForeverAndEverTeam/fae-mod/blob/master/STYLE.md)
