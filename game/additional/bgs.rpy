@@ -7,6 +7,7 @@ default persistent.fae_moonup = 21
 init -1 python in fae_rooms:
 
     import store
+    
     ROOM_DEFS = dict()
 
 init -20 python:
@@ -17,7 +18,7 @@ init -20 python:
 
     class Rooms(object):
 
-
+        # Day suffixes
         DAY = "-day"
         NIGHT = "-night"
 
