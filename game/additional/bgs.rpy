@@ -18,7 +18,7 @@ init -20 python:
 
     class Rooms(object):
 
-        # Day suffixes
+        # Room file suffixes (not including extentions)
         DAY = "-day"
         NIGHT = "-night"
 
