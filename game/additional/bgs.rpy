@@ -13,7 +13,8 @@ init -1 python in fae_rooms:
 init -20 python:
 
     import os
-
+    
+    # The zorder of the room. Behind Sayori, in front of sky.
     FAE_ROOM_ZORDER = 1
 
     class Rooms(object):
