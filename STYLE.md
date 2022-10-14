@@ -19,7 +19,7 @@ Specific prefixes are reserved for certain things.
 - `ch30` - used for key chapter 30 labels
 - `s_topic` - used for nearly every sayori topic
 - `fae_poem` - used for poemgame system
-- `bye` - used for farewells
+- `s_farewell` - used for farewells
 
 There *are* more, so be careful of the labels you use.
 
