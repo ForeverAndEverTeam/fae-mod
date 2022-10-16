@@ -20,6 +20,15 @@ init -20 python:
     FAE_ROOM_ZORDER = 1
 
     class Rooms(object):
+    
+        """
+        Props:
+            id
+            image_directory
+            when_enter
+            when_leave
+            decoration_permitted
+        """
 
         # Room file suffixes (not including extentions)
         DAY = "-day"
