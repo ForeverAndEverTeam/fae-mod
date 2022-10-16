@@ -23,24 +23,7 @@ init -1 python in chats:
     CHAT_DEFS = dict()
 
 
-init 5 python:
-    chatReg(
-        Chat(
-            persistent._chat_db,
-            label="checker",
-            unlocked=True,
-            prompt="Check for gift",
-            random=False,
-            category=["DEV", "Testing"]
-        ),
-        chat_group=CHAT_GROUP_NORMAL
-    )
 
-label checker:
-
-    $ look_for_gift()
-
-    return
 
 
 init 5 python:
@@ -87,29 +70,6 @@ label pets:
     return
 
 
-
-init 5 python:
-    chatReg(
-        Chat(
-            persistent._chat_db,
-            label="derandom_example",
-            unlocked=True,
-            prompt="Derandom Test",
-            random=True,
-            category=["DEV"]
-        ),
-        chat_group=CHAT_GROUP_NORMAL
-    )
-
-label derandom_example:
-
-    s "This is an example of how to use derandom."
-    
-    s "Simply add it to the end after the return statement."
-
-    s "Thanks for listening. Now I will only talk about this from the \"Tell me again about...\" menu"
-
-    return "derandom"
 
 
 
