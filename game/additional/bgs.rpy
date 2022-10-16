@@ -1,6 +1,7 @@
 # Start in the spaceroom (as usual)
 default persistent._present_room = "spaceroom"
 
+# Sunrise Sunset times
 default persistent.fae_sunup = 6
 default persistent.fae_sundown = 18
 default persistent.fae_moonup = 21
