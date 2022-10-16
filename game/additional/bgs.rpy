@@ -1,3 +1,4 @@
+# Start in the spaceroom (as usual)
 default persistent._present_room = "spaceroom"
 
 default persistent.fae_sunup = 6
