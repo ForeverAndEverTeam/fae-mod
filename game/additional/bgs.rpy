@@ -72,6 +72,7 @@ init -20 python:
                     )
                 )
             
+            # Check it can be loaded.
             if id in store.fae_rooms.ROOM_DEFS:
                 raise Exception("[ERROR]: A room with id '{0}' already exists.".format(id))
             
