@@ -72,6 +72,9 @@ init -20 python:
                     )
                 )
             
+            if id in store.fae_rooms.ROOM_DEFS:
+                raise Exception("[ERROR]: A room with id '{0}' already exists.".format(id))
+            
             daytime_path = "mod_assets/rooms/{0}/{1}".format(image_directory, id + Rooms.DAY + Rooms.IMG_EXTENSION)
             night_path = "mod_assets/rooms/{0}/{1}".format(image_directory, id + Rooms.NIGHT + Rooms.IMG_EXTENSION)
 
