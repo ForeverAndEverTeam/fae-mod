@@ -76,6 +76,14 @@ init -20 python:
             if id in store.fae_rooms.ROOM_DEFS:
                 raise Exception("[ERROR]: A room with id '{0}' already exists.".format(id))
             
+            if not os.path.isdir(renpy.config.gamedir + "/mod_assets/background/{0}".format(image_directory)):
+                raise Exception(
+                    "[ERROR]: Image dir '{0}' is not a directory.".format(
+                        os.path.join(renpy.config.gamedir, "mod_assets", "backgrounds", image_directory)
+                    )
+                )
+                    
+            
             daytime_path = "mod_assets/rooms/{0}/{1}".format(image_directory, id + Rooms.DAY + Rooms.IMG_EXTENSION)
             night_path = "mod_assets/rooms/{0}/{1}".format(image_directory, id + Rooms.NIGHT + Rooms.IMG_EXTENSION)
 
