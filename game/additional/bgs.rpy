@@ -34,7 +34,22 @@ init -20 python:
             when_enter=None,
             when_leave=None,
         ):
-
+            """
+            Constructor
+            
+            Feed:
+                id - a unique id for this background. Will raise exceptions if a Location with a duplicate initialized
+                image_directory - Path to images
+                image_failsafe - a dict of image tags with the following keys:
+                    "DAY", "NIGHT", these will have image tags as their values, which should be used to display
+                decoration_permitted - List of strings representing categories for decorations which are supported for this Location
+                    If None, this is set to an empty list. Empty lists mean no decorations are supported
+                    (Default: None)
+                when_enter - Function to run when changing into this Location. If None, nothing is done.
+                    (Default: None)
+                when_leave - Function to run when leaving this Location. If None, nothing is done.
+                    (Default: None)
+            """
 
             if id in store.fae_rooms.ROOM_DEFS:
                 raise Exception("[ERROR]: A room with id '{0}' already exists.".format(id))
