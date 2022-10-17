@@ -579,3 +579,7 @@ init -1 python in fae_pong:
     )
 
 
+label fae_pong_dlg_winner:
+    
+
+
