@@ -422,7 +422,7 @@ label s_greeting_8:
 label s_greetings_long:
 
     show desknote
-    call fae_showpoem(long_wait)
+    call fae_showpoem(long_wait) from _call_fae_showpoem
 
     menu:
         "Call out for Sayori":
