@@ -317,4 +317,88 @@ init:
                 elif self.computery < self.COURT_TOP:
                     self.computery = self.COURT_TOP
                 
+
+                def paddle(px, py, hotside, is_computer):
+
+                    # Render the paddle image. We give it an 1280x720 area
+                    # to render into, knowing that images will render smaller.
+                    # (This isn't the case with all displayables. Solid, Frame,
+                    # and Fixed will expand to fill the space allotted.)
+                    # We also pass in st and at.
+                    pi = renpy.render(self.paddle, self.COURT_WIDTH, self.COURT_HEIGHT, st, at)
+
+                    # renpy.render returns a Render object, which we can
+                    # blit to the Render we're making.
+                    r.blit(pi, (int(px), int(py - self.PADDLE_RADIUS)))
+
+                    # Checks whether the ball went through the paddle on the x-axis and gets the y-collision-posisiton.
+                    collisionby = self.getCollisionY(hotside, is_computer)
+
+                    # Checks whether the ball went through the paddle on the y-axis.
+                    collidedony = py - self.PADDLE_RADIUS - self.BALL_HEIGHT / 2 <= collisionby <= py + self.PADDLE_RADIUS + self.BALL_HEIGHT / 2
+
+                    # Checks whether the ball collided with the paddle
+                    if not self.stuck and self.collidedonx and collidedony:
+                        hit = True
+                        if self.oldbx >= hotside >= self.bx:
+                            self.bx = hotside + (hotside - self.bx)
+                        elif self.oldbx <= hotside <= self.bx:
+                            self.bx = hotside - (self.bx - hotside)
+                        else:
+                            hit = False
+
+                        if hit:
+                            # The reflection angle scales linearly with the
+                            # distance from the centre to the point of impact.
+                            angle = (self.by - py) / (self.PADDLE_RADIUS + self.BALL_HEIGHT / 2) * self.MAX_REFLECT_ANGLE
+
+                            if angle >    self.MAX_ANGLE:
+                                angle =   self.MAX_ANGLE
+                            elif angle < -self.MAX_ANGLE:
+                                angle =  -self.MAX_ANGLE
+
+                            global pong_angle_last_shot
+                            pong_angle_last_shot = angle
+
+                            self.bdy = .5 * math.sin(angle)
+                            self.bdx = math.copysign(.5 * math.cos(angle), -self.bdx)
+
+                            global ball_paddle_bounces
+                            ball_paddle_bounces += 1
+
+                            # Changes where the computer aims after a hit.
+                            if is_computer:
+                                self.ctargetoffset = self.get_random_offset()
+
+                            if self.playsounds:
+                                renpy.sound.play(self.soundboop, channel=1)
+
+                            self.bspeed += 125.0 + self.CURRENT_DIFFICULTY * 12.5
+                            if self.bspeed > self.BALL_MAX_SPEED:
+                                self.bspeed = self.BALL_MAX_SPEED
+
+                # Draw the two paddles.
+                paddle(self.PADDLE_X_PLAYER, self.playery, self.PADDLE_X_PLAYER + self.PADDLE_WIDTH, False)
+                paddle(self.PADDLE_X_MONIKA, self.computery, self.PADDLE_X_MONIKA, True)
+
+                # Draw the ball.
+                ball = renpy.render(self.ball, self.COURT_WIDTH, self.COURT_HEIGHT, st, at)
+                r.blit(ball, (int(self.bx - self.BALL_WIDTH / 2),
+                                int(self.by - self.BALL_HEIGHT / 2)))
+
+                # Show the player names.
+                player = renpy.render(self.player, self.COURT_WIDTH, self.COURT_HEIGHT, st, at)
+                r.blit(player, (self.PADDLE_X_PLAYER, 25))
+
+                # Show Monika's name.
+                monika = renpy.render(self.monika, self.COURT_WIDTH, self.COURT_HEIGHT, st, at)
+                ew, eh = monika.get_size()
+                r.blit(monika, (self.PADDLE_X_MONIKA - ew, 25))
+
+                # Show the "Click to Begin" label.
+                if self.stuck:
+                    ctb = renpy.render(self.ctb, self.COURT_WIDTH, self.COURT_HEIGHT, st, at)
+                    cw, ch = ctb.get_size()
+                    r.blit(ctb, ((self.COURT_WIDTH - cw) / 2, 30))
                 
+
