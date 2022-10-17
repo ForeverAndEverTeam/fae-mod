@@ -220,3 +220,101 @@ init:
 
                     return True
                 return False
+
+            def getCollisionY(self, hotside, is_computer):
+                # Checks whether the ball went through the player's paddle on the x-axis while moving left or monika's paddle while moving right.
+                # Returns the y collision-position and sets self.collidedonx
+
+                self.collidedonx = is_computer and self.oldbx <= hotside <= self.bx or not is_computer and self.oldbx >= hotside >= self.bx;
+
+                if self.collidedonx:
+
+                    # Checks whether a bounce happened before potentially colliding with the paddle.
+                    if self.oldbx <= self.bouncebx <= hotside <= self.bx or self.oldbx >= self.bouncebx >= hotside >= self.bx:
+                        startbx = self.bouncebx
+                        startby = self.bounceby
+                    else:
+                        startbx = self.oldbx
+                        startby = self.oldby
+
+                    # The y value at which the ball hits the paddle.
+                    if startbx - self.bx != 0:
+                        return startby + (self.by - startby) * ((startbx - hotside) / (startbx - self.bx))
+                    else:
+                        return startby
+
+                # The ball did not go through the paddle on the x-axis.
+                else:
+                    return self.oldby
+
+            def render(self, width, height, st, at):
+
+                # The Render object we'll be drawing into.
+                r = renpy.Render(width, height)
+
+                # Figure out the time elapsed since the previous frame.
+                if self.oldst is None:
+                    self.oldst = st
+
+                dtime = st - self.oldst
+                self.oldst = st
+
+                # Figure out where we want to move the ball to.
+                speed = dtime * self.bspeed
+
+                # Stores the starting position of the ball.
+                self.oldbx = self.bx
+                self.oldby = self.by
+                self.bouncebx = self.bx
+                self.bounceby = self.by
+
+                # Handles the ball-speed.
+                if self.stuck:
+                    self.by = self.playery
+                else:
+                    self.bx += self.bdx * speed
+                    self.by += self.bdy * speed
+
+                # Bounces the ball up to one time, either up or down
+                if not self.check_bounce_off_top():
+                    self.check_bounce_off_bottom()
+
+                # Handles Monika's targeting and speed.
+
+                # If the ball goes through Monika's paddle, aim for the collision-y, not ball-y.
+                # Avoids Monika overshooting her aim on lags.
+                collisionby = self.getCollisionY(self.PADDLE_X_MONIKA, True)
+                if self.collidedonx:
+                    self.ctargety = collisionby + self.ctargetoffset
+                else:
+                    self.ctargety = self.by + self.ctargetoffset
+
+                cspeed = self.computerspeed * dtime
+
+                # Moves Monika's paddle. It wants to go to self.by, but
+                # may be limited by it's speed limit.
+                global lose_on_purpose
+                if lose_on_purpose and self.bx >= self.COURT_WIDTH * 0.75:
+                    if self.bx <= self.PADDLE_X_MONIKA:
+                        if self.ctargety > self.computery:
+                            self.computery -= cspeed
+                        else:
+                            self.computery += cspeed
+
+                else:
+                    cspeed = self.computerspeed * dtime
+
+                    if abs(self.ctargety - self.computery) <= cspeed:
+                        self.computery = self.ctargety
+                    elif self.ctargety >= self.computery:
+                        self.computery += cspeed
+                    else:
+                        self.computery -= cspeed
+
+                # Limits the position of Monika's paddle.
+                if self.computery > self.COURT_BOTTOM:
+                    self.computery = self.COURT_BOTTOM
+                elif self.computery < self.COURT_TOP:
+                    self.computery = self.COURT_TOP
+                
+                
