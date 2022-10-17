@@ -444,6 +444,26 @@ init:
                 renpy.redraw(self, 0.0)
 
                 return r
-            
+
+            def event(self, ev, x, y, st):
+
+                import pygame
+
+                # Mousebutton down == start the game by setting stuck to
+                # false.
+                if ev.type == pygame.MOUSEBUTTONDOWN and ev.button == 1:
+                    self.stuck = False
+
+                # Set the position of the player's paddle.
+                y = max(y, self.COURT_TOP)
+                y = min(y, self.COURT_BOTTOM)
+                self.playery = y
+
+                # If we have a winner, return him or her. Otherwise, ignore
+                # the current event.
+                if self.winner:
+                    return self.winner
+                else:
+                    raise renpy.IgnoreEvent()
                 
 
