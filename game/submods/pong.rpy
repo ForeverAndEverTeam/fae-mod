@@ -105,3 +105,47 @@ init:
                 self.PADDLE_X_MONIKA = 1152 - self.PADDLE_WIDTH                 #self.COURT_WIDTH * 0.9 - self.PADDLE_WIDTH
 
                 self.BALL_MAX_SPEED = 2000.0 + self.CURRENT_DIFFICULTY * 100.0
+
+                # The maximum possible reflection angle, achieved when the ball
+                # hits the corners of the paddle.
+                self.MAX_REFLECT_ANGLE = math.pi / 3
+                # A bit redundand, but math.pi / 3 is greater than 1, which is a problem.
+                self.MAX_ANGLE = 0.9
+
+                # If the ball is stuck to the paddle.
+                self.stuck = True
+
+                # The positions of the two paddles.
+                self.playery = (self.COURT_BOTTOM - self.COURT_TOP) / 2
+                self.computery = (self.COURT_BOTTOM - self.COURT_TOP) / 2
+
+                # The computer should aim at somewhere along the paddle, but
+                # not always at the centre. This is the offset, measured from
+                # the centre.
+                self.ctargetoffset = self.get_random_offset()
+
+                # The speed of Monika's paddle.
+                self.computerspeed = 150.0 + self.CURRENT_DIFFICULTY * 30.0
+
+                # Get an initial angle for launching the ball.
+                init_angle = random.uniform(-self.MAX_REFLECT_ANGLE, self.MAX_REFLECT_ANGLE)
+
+                # The position, dental-position, and the speed of the ball.
+                self.bx = self.PADDLE_X_PLAYER + self.PADDLE_WIDTH + 0.1
+                self.by = self.playery
+                self.bdx = .5 * math.cos(init_angle)
+                self.bdy = .5 * math.sin(init_angle)
+                self.bspeed = 500.0 + self.CURRENT_DIFFICULTY * 25
+
+                # Where the computer wants to go.
+                self.ctargety = self.by + self.ctargetoffset
+
+                # The time of the past render-frame.
+                self.oldst = None
+
+                # The winner.
+                self.winner = None
+            
+
+            def get_random_offset(self):
+                return random.uniform(-self.PADDLE_RADIUS, self.PADDLE_RADIUS)
