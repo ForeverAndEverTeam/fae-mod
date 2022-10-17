@@ -106,7 +106,7 @@ label fae_bday_player_select_select:
                 "player-bday",
                 "Your Birthday",
                 selected_date,
-                range(selected_date.year,FAECalendar.MAX_VIEWABLE_YEAR)
+                range(selected_date.year,store.FAECalendar.MAX_VIEWABLE_YEAR)
             )
 
     else:
@@ -115,7 +115,7 @@ label fae_bday_player_select_select:
                 "player-bday",
                 "Your Birthday",
                 selected_date,
-                range(selected_date.year,FAECalendar.MAX_VIEWABLE_YEAR)
+                range(selected_date.year,FAECALENDAR.MAX_VIEWABLE_YEAR)
             )
     
     $ persistent._fae_player_bday = selected_date
