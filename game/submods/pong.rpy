@@ -594,7 +594,65 @@ label fae_pong_dlg_winner:
         $ sayori_asks_to_go_easy = False
 
     
+    elif ball_paddle_bounces == 1:
+
+        #Once
+        if instant_loss_streak_counter == 1:
+            s "Ahaha, that's unfortunate..."
+
+        #Twice
+        elif instant_loss_streak_counter == 2:
+            s "[player],{w=0.1} you missed again..."
+
+        #Thrice
+        elif instant_loss_streak_counter == 3:
+            s  "[player]!"
+
+            if persistent._fae_pm_ever_let_monika_win_on_purpose:
+                $ menu_response = _("Are you letting me win on purpose again?")
+            else:
+                $ menu_response = _("Are you letting me win on purpose?")
+
+            s  "[menu_response]"
+            $ _history_list.pop()
+            menu:
+                s "[menu_response]{fast}"
+
+                "...Maybe.":
+                    s  "Ehehe!~"
+                    s  "Thank you, [player]~"
+                    #show monika  at t11 zorder MAS_MONIKA_Z with dissolve_monika
+                    s "But you know,{w=0.1} I don't mind losing to you every now and then."
+
+                    if persistent._fae_pm_ever_let_monika_win_on_purpose:
+                        s  "I like to see you win just as much as you like to see me win~"
+
+                    $ player_lets_monika_win_on_purpose = True
+                    $ persistent._fae_pm_ever_let_monika_win_on_purpose = True
+
+                "No.":
+                    if persistent._fae_pm_ever_let_monika_win_on_purpose:
+                        show sayori idle
+                        s "Are you {i}sure?{/i}{nw}"
+                        $ _history_list.pop()
+                        menu:
+                            m "Are you {i}sure?{/i}{fast}"
+
+                            "Yes":
+                                call fae_pong_dlg_sorry_assuming
+
+                            "No":
+                                s "[player]!"
+                                s "Stop teasing me!"
+                                $ player_lets_monika_win_on_purpose = True
+                                $ lose_on_purpose = True
+
+                    else:
+                        call fae_pong_dlg_sorry_assuming
+        
+
     
+
 
 
 
