@@ -1407,7 +1407,7 @@ init python:
             "player-bday",
             _("Your Birthday"),
             player_bday,
-            range(player_bday.year,FAECalendar.MAX_VIEWABLE_YEAR)
+            range(player_bday.year,FAECALENDAR.MAX_VIEWABLE_YEAR)
         )
 
 init 2 python in fae_calendar:
