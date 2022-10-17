@@ -1,6 +1,8 @@
 default persistent._event_db = dict()
 default persistent._fae_holiday_list = list()
 default persistent._fae_holiday_completion_status = dict()
+
+default persistent._fae_player_anniversary = None
 #default persistent._fae_holiday_list = dict()
 #default persistent._fae_holiday_completion_states = dict()
 
@@ -210,16 +212,17 @@ init -1 python in fae_events:
 
     def __regHoliday(holiday):
 
-        if holiday.label in __ALL_HOLIDAYS:
-            fae_utilities.log("Cannot register holiday name: {0}, as a holiday with that name already exists.".format(holiday.reference_name))
+        #if holiday.label in __ALL_HOLIDAYS:
+        #    fae_utilities.log("Cannot register holiday name: {0}, as a holiday with that name already exists.".format(holiday.reference_name))
 
-        else:
-            __ALL_HOLIDAYS[holiday.label] = holiday
-            if holiday.label not in store.persistent._fae_holiday_list:
-                holiday.__save()
+        #else:
+        #    __ALL_HOLIDAYS[holiday.label] = holiday
+            #if holiday.label not in store.persistent._fae_holiday_list:
+            #    holiday.__save()
 
-            else:
-                holiday.__load()
+        #    else:
+        #        holiday.__load()
+        return None
 
     def getHoliday(holiday_name):
 
@@ -301,6 +304,22 @@ init -1 python in fae_events:
 
         return (input_date == player_bday)
 
+    def isAnniversary(input_date=None):
+
+        if not store.persistent._fae_player_anniversary:
+            return False
+
+        if input_date is None:
+            input_date = datetime.datetime.today()
+
+        anniversary_date = datetime.date(
+            2020,
+            store.persistent._fae_player_anniversary[1],
+            store.persistent._fae_player_anniversary[0]
+        )
+
+        return (input_date.month == anniversary_date.month and input_date.day == anniversary_date.day)
+
     def getHolidaysForDate(input_date=None):
 
         if input_date is None:
@@ -356,8 +375,8 @@ init -1 python in fae_events:
         holiday_list = FAEHoliday.filterHolidays(
             holiday_list=getAllHolidays(),
             holiday_types=getHolidaysForDate(),
-            affection=store.Sayori._getAffinityState(),
-            holiday_completion_state=False
+            affection=store.Affection._getAffectionStatus(),
+            holiday_completion_status=False
         )
 
         if len(holiday_list) > 0:
@@ -410,7 +429,7 @@ init -1 python in fae_events:
     # New year's day
     __regHoliday(FAEHoliday(
         label="event_new_years_day",
-        holiday_type=FAEHolidayTypes.new_years_eve,
+        holiday_type=FAEHolidayTypes.new_years_day,
         conditional="store.fae_holidays.isNewYearsDay()",
         affection_range=(fae_affection.HAPPY, None),
         sayori_sprite_code="aaabaa",
