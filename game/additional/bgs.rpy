@@ -87,7 +87,7 @@ init -20 python:
             daytime_path = "mod_assets/rooms/{0}/{1}".format(image_directory, id + Rooms.DAY + Rooms.IMG_EXTENSION)
             night_path = "mod_assets/rooms/{0}/{1}".format(image_directory, id + Rooms.NIGHT + Rooms.IMG_EXTENSION)
 
-
+            # Check to see if it can be loaded
             if not renpy.loadable(daytime_path):
                 raise Exception("[ERROR]: Daytime image ('{0}') is not loadable.".format(daytime_path))
             
