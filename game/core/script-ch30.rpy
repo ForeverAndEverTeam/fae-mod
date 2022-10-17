@@ -143,7 +143,7 @@ label ch30_init:
         fae_utilities.log("Outfit Set.")
         
         fae_events.EVENT_RETURN_OUTFIT = fae_outfits.get_outfit(store.persistent.fae_outfit_quit)
-
+        """
         available_holiday_list = fae_events.selectHolidays()
 
         
@@ -165,6 +165,8 @@ label ch30_init:
                         queue("ch30_loop")
             
             renpy.jump("cnc")
+
+        """
 
         
 
@@ -235,7 +237,7 @@ label ch30_loop:
             
     #$ calendar = Calendar(5, 2, 2014, 2016)
     while persistent._event_list:
-        call cnc(True, True)
+        call cnc(True, True) from _call_cnc
     
 
 
@@ -277,7 +279,7 @@ label cnc(show_sayori=True, notify=False):
 
             hide screen hidden1#(True)
 
-            call expression _chat
+            call expression _chat from _call_expression
     
     python:
         return_keys = _return if isinstance(_return, dict) else dict()
