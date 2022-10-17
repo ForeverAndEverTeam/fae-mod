@@ -401,4 +401,26 @@ init:
                     cw, ch = ctb.get_size()
                     r.blit(ctb, ((self.COURT_WIDTH - cw) / 2, 30))
                 
+                if self.bx < -200:
+
+                    if self.winner == None:
+                        global loss_streak_counter
+                        loss_streak_counter += 1
+
+                        if ball_paddle_bounces <= 1:
+                            global instant_loss_streak_counter
+                            instant_loss_streak_counter += 1
+                        else:
+                            global instant_loss_streak_counter
+                            instant_loss_streak_counter = 0
+
+                    global win_streak_counter
+                    win_streak_counter = 0
+
+                    self.winner = "sayori"
+
+                    # Needed to ensure that event is called, noticing
+                    # the winner.
+                    renpy.timeout(0)
+                
 
