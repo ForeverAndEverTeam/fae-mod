@@ -587,5 +587,14 @@ label fae_pong_dlg_winner:
         s "I do appreciate the gesture though~"
         $ sayori_asks_to_go_easy = False
 
-        
+    elif sayori_asks_to_go_easy and ball_paddle_bounces <= 9:
+        s "Yay, I won!"
+        show sayori at t11 zorder SAYO_ZORDER with dissolve
+        s "Thanks. I appreciate it~"
+        $ sayori_asks_to_go_easy = False
+
+    
+    
+
+
 
