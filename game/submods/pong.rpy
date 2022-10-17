@@ -423,4 +423,22 @@ init:
                     # the winner.
                     renpy.timeout(0)
                 
+                elif self.bx > self.COURT_WIDTH + 200:
+
+                    if self.winner == None:
+                        global win_streak_counter
+                        win_streak_counter += 1;
+
+                    global loss_streak_counter
+                    loss_streak_counter = 0
+
+                    #won't reset if Monika misses the first hit
+                    if ball_paddle_bounces > 1:
+                        global instant_loss_streak_counter
+                        instant_loss_streak_counter = 0
+
+                    self.winner = "player"
+
+                    renpy.timeout(0)
+                
 
