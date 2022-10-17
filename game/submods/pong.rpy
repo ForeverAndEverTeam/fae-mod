@@ -496,4 +496,41 @@ label demo_minigame_pong:
 
     scene bg pong field
 
+    $ ball_paddle_bounces = 0
+    $ pong_difficulty_before = persistent._fae_pong_difficulty
+    $ powerup_value_this_game = persistent._fae_pong_difficulty_change_next_game
+    $ loss_streak_counter_before = loss_streak_counter
+    $ win_streak_counter_before = win_streak_counter
+    $ instant_loss_streak_counter_before = instant_loss_streak_counter
+
+    python:
+        ui.add(PongDisplayable())
+        winner = ui.interact(suppress_overlay=True, suppress_underlay=True)
+
     
+    scene spaceroom
+
+    $ persistent._fae_pong_difficulty_change_next_game = 0;
+
+    if winner == "monika":
+        $ new_difficulty = persistent._fae_pong_difficulty + PONG_DIFFICULTY_CHANGE_ON_LOSS
+
+        $ inst_dialogue = store.fae_pong.DLG_WINNER
+
+    else:
+        $ new_difficulty = persistent._fae_pong_difficulty + PONG_DIFFICULTY_CHANGE_ON_WIN
+
+        $ inst_dialogue = store.fae_pong.DLG_LOSER
+
+        #Give player XP if this is their first win
+        if not persistent._fae_ever_won['pong']:
+            $ persistent._fae_ever_won['pong'] = True
+    
+    if new_difficulty < 0:
+        $ persistent._fae_pong_difficulty = 0
+    else:
+        $ persistent._fae_pong_difficulty = new_difficulty
+    
+    
+
+
