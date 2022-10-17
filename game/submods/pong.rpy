@@ -440,5 +440,10 @@ init:
                     self.winner = "player"
 
                     renpy.timeout(0)
+
+                renpy.redraw(self, 0.0)
+
+                return r
+            
                 
 
