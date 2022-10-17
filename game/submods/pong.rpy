@@ -560,7 +560,13 @@ label demo_minigame_pong:
 
 init -1 python in fae_pong:
 
-    
+    DLG_WINNER = "fae_pong_dlg_winner"
+    DLG_WINNER_FAST = "fae_pong_dlg_winner_fast"
+    DLG_LOSER = "fae_pong_dlg_loser"
+    DLG_LOSER_FAST = "fae_pong_dlg_loser_fast"
+
+    DLG_WINNER_END = "fae_pong_dlg_winner_end"
+    DLG_LOSER_END = "fae_pong_dlg_loser_end"
 
 
 
