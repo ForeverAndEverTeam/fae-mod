@@ -186,3 +186,37 @@ init:
 
                     return True
                 return False
+
+            def check_bounce_off_bottom(self):
+                # The ball wants to leave the screen downwards.
+                if self.by > self.BALL_BOTTOM and self.oldby - self.by != 0:
+
+                    # The x value at which the ball hits the lower wall.
+                    collisionbx = self.oldbx + (self.bx - self.oldbx) * ((self.oldby - self.BALL_BOTTOM) / (self.oldby - self.by))
+
+                    # Ignores the walls outside the field.
+                    if collisionbx < self.BALL_LEFT or collisionbx > self.BALL_RIGHT:
+                        return
+
+                    self.bouncebx = collisionbx
+                    self.bounceby = self.BALL_BOTTOM
+
+                    # Bounce off by teleporting ball (mirror position on wall).
+                    self.by = -self.by + 2 * self.BALL_BOTTOM
+
+                    if not self.stuck:
+                        self.bdy = -self.bdy
+
+                    # Ball is so fast it still wants to leave the screen after mirroring, now downwards.
+                    # Bounces the ball again (to the other wall) and leaves it there.
+                    if self.by < self.BALL_TOP:
+                        self.bx = self.bouncebx + (self.bx - self.bouncebx) * ((self.bounceby - self.BALL_TOP) / (self.bounceby - self.by))
+                        self.by = self.BALL_TOP
+                        self.bdy = -self.bdy
+
+                    if not self.stuck:
+                        if self.playsounds:
+                            renpy.sound.play(self.soundbeep, channel=1)
+
+                    return True
+                return False
