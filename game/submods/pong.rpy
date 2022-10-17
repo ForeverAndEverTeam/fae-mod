@@ -531,6 +531,36 @@ label demo_minigame_pong:
     else:
         $ persistent._fae_pong_difficulty = new_difficulty
     
+    s "Would you like to play again?"
+
+    $ history_list.pop()
+
+    menu:
+        s "Would you like to play again?{fast}"
+
+        "Yes":
+            
+            jump demo_minigame_pong
+        
+        "No.":
+            if winner == "monika":
+                if renpy.seen_label(store.fae_pong.DLG_WINNER_END):
+                    $ end_dialogue = store.fae_pong.DLG_WINNER_FAST
+                else:
+                    $ end_dialogue = store.fae_pong.DLG_WINNER_END
+
+            else:
+                if renpy.seen_label(store.fae_pong.DLG_LOSER_END):
+                    $ end_dialogue = store.fae_pong.DLG_LOSER_FAST
+                else:
+                    $ end_dialogue = store.fae_pong.DLG_LOSER_END
+
+            call expression end_dialogue from _fae_pong_end_dialogue
+    return
+
+init -1 python in fae_pong:
+
     
+
 
 
