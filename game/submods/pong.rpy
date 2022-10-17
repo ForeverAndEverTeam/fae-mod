@@ -467,3 +467,33 @@ init:
                     raise renpy.IgnoreEvent()
                 
 
+label game_pong:
+
+    
+    if played_pong_this_session:
+        if fae_pong_taking_break:
+            s "Ready to try again?"
+            s "Give me your hardest{nw}"
+            s "Give me your{fast} best shot!"
+
+            $ fae_pong_taking_break = False
+
+        else:
+            s "You want to play again?"
+            s "Sure!"
+    else:
+        $ played_pong_this_session = True
+
+    
+    $ pong_sayori_last_response_id = PONG_SAYORI_RESPONSE_NONE
+
+    call demo_minigame_pong from _call_demo_minigame_pong
+    return
+
+label demo_minigame_pong:
+
+    window hide None
+
+    scene bg pong field
+
+    
