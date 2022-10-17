@@ -84,4 +84,24 @@ init:
 
                 self.PADDLE_WIDTH = 8
                 self.PADDLE_HEIGHT = 79
-                
+                self.PADDLE_RADIUS = self.PADDLE_HEIGHT / 2
+                self.BALL_WIDTH = 15
+                self.BALL_HEIGHT = 15
+                self.COURT_TOP = 124
+                self.COURT_BOTTOM = 654
+
+                # Other variables
+                self.CURRENT_DIFFICULTY = max(persistent._fae_pong_difficulty + persistent._fae_pong_difficulty_change_next_game, 0)
+
+                self.COURT_WIDTH = 1280
+                self.COURT_HEIGHT = 720
+
+                self.BALL_LEFT = 80 - self.BALL_WIDTH / 2
+                self.BALL_RIGHT = 1199 + self.BALL_WIDTH / 2
+                self.BALL_TOP = self.COURT_TOP + self.BALL_HEIGHT / 2
+                self.BALL_BOTTOM = self.COURT_BOTTOM - self.BALL_HEIGHT / 2
+
+                self.PADDLE_X_PLAYER = 128                                      #self.COURT_WIDTH * 0.1
+                self.PADDLE_X_MONIKA = 1152 - self.PADDLE_WIDTH                 #self.COURT_WIDTH * 0.9 - self.PADDLE_WIDTH
+
+                self.BALL_MAX_SPEED = 2000.0 + self.CURRENT_DIFFICULTY * 100.0
