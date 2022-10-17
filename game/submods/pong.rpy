@@ -152,4 +152,37 @@ init:
 
             def visit(self):
                 return [ self.paddle, self.ball, self.player, self.sayori, self.ctb ]
-            
+
+            def check_bounce_off_top(self):
+                # The ball wants to leave the screen upwards.
+                if self.by < self.BALL_TOP and self.oldby - self.by != 0:
+
+                    # The x value at which the ball hits the upper wall.
+                    collisionbx = self.oldbx + (self.bx - self.oldbx) * ((self.oldby - self.BALL_TOP) / (self.oldby - self.by))
+
+                    # Ignores the walls outside the field.
+                    if collisionbx < self.BALL_LEFT or collisionbx > self.BALL_RIGHT:
+                        return
+
+                    self.bouncebx = collisionbx
+                    self.bounceby = self.BALL_TOP
+
+                    # Bounce off by teleporting ball (mirror position on wall).
+                    self.by = -self.by + 2 * self.BALL_TOP
+
+                    if not self.stuck:
+                        self.bdy = -self.bdy
+
+                    # Ball is so fast it still wants to leave the screen after mirroring, now downwards.
+                    # Bounces the ball again (to the other wall) and leaves it there.
+                    if self.by > self.BALL_BOTTOM:
+                        self.bx = self.bouncebx + (self.bx - self.bouncebx) * ((self.bounceby - self.BALL_BOTTOM) / (self.bounceby - self.by))
+                        self.by = self.BALL_BOTTOM
+                        self.bdy = -self.bdy
+
+                    if not self.stuck:
+                        if self.playsounds:
+                            renpy.sound.play(self.soundbeep, channel=1)
+
+                    return True
+                return False
