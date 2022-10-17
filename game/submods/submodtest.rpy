@@ -17,7 +17,7 @@ init 5 python:
             label="submod_test",
             unlocked=True,
             prompt="Submod Test",
-            random=True,
+            random=False,
             category=["submods"]
         ),
         chat_group=CHAT_GROUP_NORMAL
@@ -29,14 +29,30 @@ label submod_test:
     
     s "My affection is [persistent.affection]"
 
-    if player_has_time_travelled:
-        s "And they have time travelled"
-    
-    else:
-        s "No time travel detected."
-
     s "Looks like it worked."
 
     s "Good job!"
 
     return
+
+
+init 5 python:
+    chatReg(
+        Chat(
+            persistent._chat_db,
+            label="submod_chess",
+            unlocked=True,
+            prompt="Submod Chess",
+            random=False,
+            category=["Game"]
+        ),
+        chat_group=CHAT_GROUP_NORMAL
+    )
+
+label submod_chess:
+
+    call game_chess
+
+    return
+
+

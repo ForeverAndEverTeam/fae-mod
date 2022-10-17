@@ -1,7 +1,7 @@
 # Start in the spaceroom (as usual)
 default persistent._present_room = "spaceroom"
 
-# Sunrise Sunset times
+# Start in the spaceroom (as usual)
 default persistent.fae_sunup = 6
 default persistent.fae_sundown = 18
 default persistent.fae_moonup = 21
@@ -9,7 +9,7 @@ default persistent.fae_moonup = 21
 init -1 python in fae_rooms:
 
     import store
-    
+
     ROOM_DEFS = dict()
 
 init -20 python:
@@ -17,10 +17,11 @@ init -20 python:
     import os
     
     # The zorder of the room. Behind Sayori, in front of sky.
+
     FAE_ROOM_ZORDER = 1
 
     class Rooms(object):
-    
+
         """
         Props:
             id
@@ -31,6 +32,8 @@ init -20 python:
         """
 
         # Room file suffixes (not including extentions)
+
+
         DAY = "-day"
         NIGHT = "-night"
 
@@ -45,6 +48,7 @@ init -20 python:
             when_enter=None,
             when_leave=None,
         ):
+
             """
             Constructor
             
@@ -62,6 +66,8 @@ init -20 python:
                     (Default: None)
             """
 
+            # Check it can be loaded.
+
             if id in store.fae_rooms.ROOM_DEFS:
                 raise Exception("[ERROR]: A room with id '{0}' already exists.".format(id))
             
@@ -71,23 +77,12 @@ init -20 python:
                         os.path.join(renpy.config.gamedir, "mod_assets", "rooms", image_directory)
                     )
                 )
+
+            # TOD filepaths
             
-            # Check it can be loaded.
-            if id in store.fae_rooms.ROOM_DEFS:
-                raise Exception("[ERROR]: A room with id '{0}' already exists.".format(id))
-            
-            if not os.path.isdir(renpy.config.gamedir + "/mod_assets/background/{0}".format(image_directory)):
-                raise Exception(
-                    "[ERROR]: Image dir '{0}' is not a directory.".format(
-                        os.path.join(renpy.config.gamedir, "mod_assets", "backgrounds", image_directory)
-                    )
-                )
-                    
-            # Image FPs
             daytime_path = "mod_assets/rooms/{0}/{1}".format(image_directory, id + Rooms.DAY + Rooms.IMG_EXTENSION)
             night_path = "mod_assets/rooms/{0}/{1}".format(image_directory, id + Rooms.NIGHT + Rooms.IMG_EXTENSION)
 
-            # Check to see if it can be loaded
             if not renpy.loadable(daytime_path):
                 raise Exception("[ERROR]: Daytime image ('{0}') is not loadable.".format(daytime_path))
             
