@@ -569,4 +569,13 @@ init -1 python in fae_pong:
     DLG_LOSER_END = "fae_pong_dlg_loser_end"
 
 
+    DLG_BLOCKS = (
+        DLG_WINNER,
+        DLG_WINNER_FAST,
+        DLG_WINNER_END,
+        DLG_LOSER,
+        DLG_LOSER_FAST,
+        DLG_LOSER_END
+    )
+
 
