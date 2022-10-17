@@ -21,7 +21,31 @@ init -1 python in chats:
     import store
     CHAT_DEFS = dict()
 
+################
+#TESTING TOPICS#
+################
 
+init 5 python:
+    
+    chatReg(
+        Chat(
+            persistent._chat_db,
+            label="fae_topic_page",
+            unlocked=True,
+            prompt="FRONTPAGE",
+            random=False,
+            category=["DEV", "Testing"]
+        ),
+        chat_group=CHAT_GROUP_NORMAL
+    )
+
+label fae_topic_page:
+
+    s abgcbcoa "We'll be together forever and ever!"
+
+    s abgcbgoaj "We'll be together forever and ever!"
+
+    return
 
 
 
@@ -29,24 +53,72 @@ init 5 python:
     chatReg(
         Chat(
             persistent._chat_db,
-            label="kiss",
+            label="checker",
             unlocked=True,
-            prompt="Kiss me",
+            prompt="Check for gift",
             random=False,
-            category=["Romance", "[player]"]
+            category=["DEV", "Testing"]
         ),
         chat_group=CHAT_GROUP_NORMAL
     )
-label kiss:
-    call kiss_quick(start_code="bbagbaab") from _call_kiss_quick
-    return
 
+label checker:
+
+    $ look_for_gift()
+
+    return
 
 
 label boop:
     s "Did you just boop me?"
     s "Hehehe"
     return
+
+
+init 5 python:
+    chatReg(
+        Chat(
+            persistent._chat_db,
+            label="pets",
+            unlocked=True,
+            prompt="Pets",
+            random=False,
+            category=["[player]"],
+            affection_range=(fae_affection.NORMAL, None)
+        ),
+        chat_group=CHAT_GROUP_NORMAL
+    )
+
+label pets:
+
+    s "Testing"
+    return
+
+
+
+init 5 python:
+    chatReg(
+        Chat(
+            persistent._chat_db,
+            label="derandom_example",
+            unlocked=True,
+            prompt="Derandom Test",
+            random=True,
+            category=["DEV"]
+        ),
+        chat_group=CHAT_GROUP_NORMAL
+    )
+
+label derandom_example:
+
+    s "This is an example of how to use derandom."
+    
+    s "Simply add it to the end after the return statement."
+
+    s "Thanks for listening. Now I will only talk about this from the \"Tell me again about...\" menu"
+
+    return "derandom"
+
 
 
 init 5 python:
@@ -92,6 +164,34 @@ label fae_kiss:
 
     return
 
+init 5 python:
+    
+    chatReg(
+        Chat(
+            persistent._chat_db,
+            label="fae_time",
+            unlocked=True,
+            prompt="How long until the update?",
+            random=False,
+            category=["Update"]
+        ),
+        chat_group=CHAT_GROUP_NORMAL
+    )
+
+label fae_time:
+
+    #call fae_kiss_engine(duration=0.5, initial_exp="aahcnaaa", final_exp="aahcnaaa", fade_duration=0.5) from _call_fae_kiss_engine_1
+
+    #$ love()
+
+    s abbbbcea "Soon!"
+
+    s abbbbjea "Very soon!"
+
+
+
+    return
+
 
 
 ######################
@@ -115,8 +215,8 @@ init 5 python:
 label s_topics_depression:
     s bbhfbaaa "Hey, now that I think about it, I probably made you worry, didn't I..."
     s bbhfbbaa "When I told you about the... you know..."
-    s "The 'rainclouds' I have in my head..."
-    s bbbbbbaa "...you remember what I meant by that, don't you? It's what I called my depression..."
+    s "The 'rainclouds' I have in my head... {w=0.5}{nw}"
+    extend bbbbbbaa "...you remember what I meant by that, don't you? It's what I called my depression..."
     s bbfdbjaaj "It sounds so silly when I talk about it now, now that I don't really have a reason to hide it."
     s bbhfbaaaj "Anyways..."
     s abhabaca "I was like that for as long as I could remember, and I ended up getting really good at keeping the 'rainclouds' inside. At least in front of others."
@@ -465,7 +565,7 @@ label s_topics_videogames:
     s "You can play with your friends, cooperating and sharing the experience together."
     s "I think it’s just a really wholesome way to enjoy yourself and connect with others!"
     s abhabaca "Besides, online games allow us to make friends and connect with people far away!"
-    s "I’m sure you’ve probably played some kind of co-op game before, right, [Player]?"
+    s "I’m sure you’ve probably played some kind of co-op game before, right, [player]?"
     s "I'd love to play with you sometime!"
     s abhfbcaa "Really makes me wish I was able to run more complex games in here..."
     s "But the games we already have here will have to be enough for now!"
@@ -722,8 +822,6 @@ label s_topics_bulli:
     s abbdbaca "Well I found a place called \"Reddit\", {w=0.5} and there were people talking about the game there."
     s bbfcbjca "But I also found people making fun of what happened to me."
     s abagbjca"As I know, fans call them {i}'Bulli'{/i} posts."
-    #$ persistent.depr_known = True
-    $ depr_known = True
     
     s cbbcbaca "They think it's funny to joke about a broken girl, {w=0.5}who had committed suicide under her mad friend's influence..."
     s abhfbapa"Even if she was revived and got over her problems since then."
