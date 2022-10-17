@@ -13,16 +13,16 @@ init python:
 
     def look_for_gift():
 
-        cookies = fae_gifts.COOKIES
+        # cookies = fae_gifts.COOKIES
 
         
 
         #fae_gifts.COOKIES
 
-        #if renpy.exists("cookies.gift"):
-            #renpy.call("fae_cookies")
-        #else:
-            #renpy.call("fae_no_gift")
+        if renpy.exists("cookies.gift"):
+            renpy.call("fae_cookies")
+        else:
+            renpy.call("fae_no_gift")
         
         return
 
