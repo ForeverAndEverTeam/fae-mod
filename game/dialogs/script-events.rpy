@@ -391,9 +391,9 @@ init -1 python in fae_events:
         # Reveal
         renpy.hide("black")
 
-    for holiday_type in FAEHolidayTypes:
-        if not str(holiday_type) in store.persistent._fae_holiday_completion_states:
-            store.persistent._fae_holiday_completion_states[str(holiday_type)] = False
+    #for holiday_type in FAEHolidayTypes:
+    #    if not str(holiday_type) in store.persistent._fae_holiday_completion_states:
+    #        store.persistent._fae_holiday_completion_states[str(holiday_type)] = False
 
     # Holiday registration
 
@@ -410,7 +410,7 @@ init -1 python in fae_events:
     # New year's day
     __regHoliday(FAEHoliday(
         label="event_new_years_day",
-        holiday_type=FAEHolidayTypes.new_years_day,
+        holiday_type=FAEHolidayTypes.new_years_eve,
         conditional="store.fae_holidays.isNewYearsDay()",
         affection_range=(fae_affection.HAPPY, None),
         sayori_sprite_code="aaabaa",
