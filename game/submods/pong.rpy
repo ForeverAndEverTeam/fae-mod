@@ -580,6 +580,12 @@ init -1 python in fae_pong:
 
 
 label fae_pong_dlg_winner:
-    
 
+    if sayori_asks_to_go_easy and ball_paddle_bounces == 1:
+        s "Ehehehe~"
+        s "I know I asked you to go easy on me, but this isn't what I had in mind..."
+        s "I do appreciate the gesture though~"
+        $ sayori_asks_to_go_easy = False
+
+        
 
