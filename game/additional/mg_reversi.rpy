@@ -399,7 +399,7 @@ screen mg_reversi_scr():
         hbox:
             spacing 8
             text str(reversi.occupied_cells[0]) color "#6acdcd" xsize 60# style s_text_style()
-            text ":" color "#000" style s_text_style()
+            text ":" color "#000"# style s_text_style()
             text str(reversi.occupied_cells[1]) color "#f00" xsize 60# style s_text_style()
     vbox:
         style_prefix "choice"
@@ -421,8 +421,8 @@ screen mg_reversi_scr():
                     textbutton _("Undo (Z)") xpadding 0 xsize 200 keysym 'z' action Function(reversi.last_move.undo)
 
 label mg_reversi:
-    $justIsSitting = False
-    show sayori abhfbaaa at t11i
+    # $justIsSitting = False
+    show sayori abhfbaaa at t11
     call screen mg_reversi_scr() nopredict
     return
 
