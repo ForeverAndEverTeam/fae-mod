@@ -149,3 +149,7 @@ init:
 
             def get_random_offset(self):
                 return random.uniform(-self.PADDLE_RADIUS, self.PADDLE_RADIUS)
+
+            def visit(self):
+                return [ self.paddle, self.ball, self.player, self.sayori, self.ctb ]
+            
