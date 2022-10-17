@@ -196,6 +196,10 @@ label fae_intro_3:
 
     s abhfbcoa "Thank you! I think that is enough for now."
     s abhfbcaa "I need to rest a bit after all of that... So, for now, let’s just sit and relax together."
+
+    $ persistent.s_name = "Sayori"
+    $ s_name = "Sayori"
+    $ renpy.save_persistent()
     
 
     show screen hidden1(True)
