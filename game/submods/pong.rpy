@@ -984,7 +984,7 @@ label mas_pong_dlg_loser:
         #Medium
         elif pong_difficulty_before <= 10:
             if pong_monika_last_response_id == PONG_MONIKA_RESPONSE_LOSE_MEDIUM_GAME:
-                m 1eua "It's nice seeing you win, [player]."
+                s "It's nice seeing you win, [player]."
                 m 1hub "Keep it up~"
             else:
                 if win_streak_counter > 1:
