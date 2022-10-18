@@ -972,7 +972,7 @@ label mas_pong_dlg_loser:
         #Easy difficulty
         if pong_difficulty_before <= 5:
             if pong_monika_last_response_id == PONG_MONIKA_RESPONSE_LOSE_EASY_GAME:
-                m 4eub "You win this round as well."
+                s "You win this round as well."
             else:
                 if win_streak_counter > 1:
                     m 1hub "You won again!"
