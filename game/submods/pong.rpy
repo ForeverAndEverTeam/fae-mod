@@ -885,7 +885,7 @@ label mas_pong_dlg_loser:
     #Player wins after losing at least three times in a row
     elif loss_streak_counter_before >= 3:
         s "Congrats, [player]!{w=0.3} {nw}"
-        extend 2hub "I knew you would win a game after enough practice!"
+        extend "I knew you would win a game after enough practice!"
         m 4eua "Remember, if you train long enough I'm sure you can reach everything you aim for!"
 
     #Monika loses after saying she would win this time
