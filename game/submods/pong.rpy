@@ -953,7 +953,7 @@ label mas_pong_dlg_loser:
             s "Wow,{w=0.1} I can't keep up!"
         else:
             s "Amazing, [player]!"
-            m 4eub "You're really good!"
+            s "You're really good!"
 
         $ pong_monika_last_response_id = PONG_MONIKA_RESPONSE_LOSE_LONG_GAME
 
