@@ -800,7 +800,7 @@ label fae_pong_dlg_winner:
                 s "Don't worry, I'm sure you'll win again soon~"
             else:
                 if loss_streak_counter > 1:
-                    m 2eub "I win another round!"
+                    s "I win another round!"
                 else:
                     m 2eub "I win this round!"
 
