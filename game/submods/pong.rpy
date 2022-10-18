@@ -1062,6 +1062,6 @@ label mas_pong_dlg_loser_end:
 label mas_pong_dlg_winner_end:
     s "I can't really get excited for a game this simple..."
     s "But at least it's still fun to play."
-    m 1ekbsa "Especially with you, [player]."
+    s "Especially with you, [player]."
     m 1hubfa "Ehehe~"
     return
