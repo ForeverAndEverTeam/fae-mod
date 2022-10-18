@@ -746,10 +746,10 @@ label fae_pong_dlg_winner:
         if pong_monika_last_response_id == PONG_MONIKA_RESPONSE_WIN_TRICKSHOT:
             s "Ah...{w=0.3}{nw}"
             extend "it happened again."
-            m 1hksdlb "Sorry about that, [player]!"
+            s "Sorry about that, [player]!"
         else:
-            m 2rksdlb "Sorry, [player]!"
-            m 3hksdlb "I didn't mean for it to bounce around that much..."
+            s "Sorry, [player]!"
+            s "I didn't mean for it to bounce around that much..."
 
         $ pong_monika_last_response_id = PONG_MONIKA_RESPONSE_WIN_TRICKSHOT
 
