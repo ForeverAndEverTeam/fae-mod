@@ -1001,7 +1001,7 @@ label mas_pong_dlg_loser:
                 s "Great job, [player]."
             else:
                 if win_streak_counter > 1:
-                    m 2hub "You won again! {w=0.2}Congrats!"
+                    s "You won again! {w=0.2}Congrats!"
                 else:
                     m 2hua "You won! {w=0.2}Congratulations!"
 
