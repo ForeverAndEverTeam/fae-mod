@@ -897,7 +897,7 @@ label mas_pong_dlg_loser:
     #Monika loses after going easy on the player
     elif powerup_value_this_game == PONG_DIFFICULTY_POWERDOWN:
         s "Ehehe!"
-        m 2hub "Good job, [player]!"
+        s "Good job, [player]!"
 
     #Monika loses after going even easier on the player
     elif powerup_value_this_game == PONG_PONG_DIFFICULTY_POWERDOWNBIG:
