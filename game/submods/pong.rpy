@@ -886,7 +886,7 @@ label mas_pong_dlg_loser:
     elif loss_streak_counter_before >= 3:
         s "Congrats, [player]!{w=0.3} {nw}"
         extend "I knew you would win a game after enough practice!"
-        m 4eua "Remember, if you train long enough I'm sure you can reach everything you aim for!"
+        s "Remember, if you train long enough I'm sure you can reach everything you aim for!"
 
     #Monika loses after saying she would win this time
     elif powerup_value_this_game == PONG_DIFFICULTY_POWERUP:
