@@ -901,12 +901,12 @@ label mas_pong_dlg_loser:
 
     #Monika loses after going even easier on the player
     elif powerup_value_this_game == PONG_PONG_DIFFICULTY_POWERDOWNBIG:
-        m 1hua "I'm glad you won this time, [player]."
+        s "I'm glad you won this time, [player]."
 
     #Monika loses by a trickshot
     elif pong_angle_last_shot >= 0.9 or pong_angle_last_shot <= -0.9:
         if pong_monika_last_response_id == PONG_MONIKA_RESPONSE_LOSE_TRICKSHOT:
-            m 2wuo "[player]!"
+            s "[player]!"
             m 2hksdlb "There's no way I could've hit that!"
         else:
             m 2wuo "Wow, that was a great shot!"
