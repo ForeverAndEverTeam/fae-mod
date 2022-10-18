@@ -868,7 +868,7 @@ label mas_pong_dlg_loser:
 
     #Monika loses without hitting the ball
     elif ball_paddle_bounces == 0:
-        m 1rksdlb "Ahaha..."
+        s "Ahaha..."
 
         if pong_monika_last_response_id == PONG_MONIKA_RESPONSE_LOSE_WITHOUT_HITTING_BALL:
             m "Maybe I should try a bit harder..."
