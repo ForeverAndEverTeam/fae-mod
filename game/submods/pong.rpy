@@ -936,7 +936,7 @@ label mas_pong_dlg_loser:
 
         #Extreme
         else:
-            m 2hub "That was legendary!"
+            s "That was legendary!"
 
     #Monika loses five times in a row
     elif win_streak_counter == 5:
