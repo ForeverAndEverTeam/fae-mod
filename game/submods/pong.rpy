@@ -1036,7 +1036,7 @@ label mas_pong_dlg_loser:
 
 label mas_pong_dlg_loser_fast:
     s "Alright, [player]."
-    m 3tfu "But I'll beat you next time."
+    s "But I'll beat you next time."
 
     $ persistent._mas_pong_difficulty_change_next_game = PONG_DIFFICULTY_POWERUP;
     $ persistent._mas_pong_difficulty_change_next_game_date = datetime.date.today()
