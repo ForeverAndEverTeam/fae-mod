@@ -1052,7 +1052,7 @@ label mas_pong_dlg_winner_fast:
 
 #Post dlg Moni lose
 label mas_pong_dlg_loser_end:
-    m 1wuo "Wow, I was really trying that time."
+    s "Wow, I was really trying that time."
     m 1eua "You must have really been practicing to get so good."
     m 2tuu "I guess you wanted to impress me, [player]."
     m 1hua "You're so sweet~"
