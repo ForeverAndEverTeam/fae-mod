@@ -783,7 +783,7 @@ label fae_pong_dlg_winner:
             if pong_monika_last_response_id == PONG_MONIKA_RESPONSE_WIN_HARD_GAME:
                 s "Ahaha!"
                 s "Am I playing too well for you?"
-                m 1tsu "I'm just kidding, [player]."
+                s "I'm just kidding, [player]."
                 m 3hub "You're pretty good!"
             else:
                 if loss_streak_counter > 1:
