@@ -774,7 +774,7 @@ label fae_pong_dlg_winner:
                 if loss_streak_counter > 1:
                     s "Looks like I won again~"
                 else:
-                    m 3hua "Looks like I won~"
+                    s "Looks like I won~"
 
             $ pong_monika_last_response_id = PONG_MONIKA_RESPONSE_WIN_MEDIUM_GAME
 
