@@ -725,7 +725,7 @@ label fae_pong_dlg_winner:
             s "Playing against you is really tough, [player]."
             s "Keep it up and you'll beat me, I'm sure of it!"
         else:
-            m 3hub "Well played, [player], you're really good!"
+            s "Well played, [player], you're really good!"
             m 1tfu "But so am I,{w=0.1} {nw}"
             extend 1hub "ahaha!"
 
