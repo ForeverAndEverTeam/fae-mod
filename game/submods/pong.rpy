@@ -1015,7 +1015,7 @@ label mas_pong_dlg_loser:
                 s "Ahaha!"
             else:
                 if win_streak_counter > 1:
-                    m 4hub "You won again! {w=0.2}Nice work!"
+                    s "You won again! {w=0.2}Nice work!"
                 else:
                     m 4hub "You won! {w=0.2}Impressive!"
 
