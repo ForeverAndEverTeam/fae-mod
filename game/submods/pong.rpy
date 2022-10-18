@@ -932,7 +932,7 @@ label mas_pong_dlg_loser:
 
         #Expert
         elif pong_difficulty_before <= 20:
-            m 4wuo "That was amazing!"
+            s "That was amazing!"
 
         #Extreme
         else:
