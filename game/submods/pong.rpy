@@ -737,7 +737,7 @@ label fae_pong_dlg_winner:
             s "Another quick win for me~"
         else:
             s "Ehehe,{w=0.1} {nw}"
-            extend 4hub "I got you with that one!"
+            extend "I got you with that one!"
 
         $ pong_monika_last_response_id = PONG_MONIKA_RESPONSE_WIN_SHORT_GAME
 
