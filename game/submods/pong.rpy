@@ -1024,7 +1024,7 @@ label mas_pong_dlg_loser:
         #Extreme
         else:
             if pong_monika_last_response_id == PONG_MONIKA_RESPONSE_LOSE_EXTREME_GAME:
-                m 3eua "You're really good, [player]."
+                s "You're really good, [player]."
                 m 1hub "I love playing Pong with you!"
             else:
                 m 1tsu "This is intense!"
