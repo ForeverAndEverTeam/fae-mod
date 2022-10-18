@@ -950,7 +950,7 @@ label mas_pong_dlg_loser:
     #Monika loses a long game
     elif ball_paddle_bounces > 10 and ball_paddle_bounces > pong_difficulty_before * 0.5:
         if pong_monika_last_response_id == PONG_MONIKA_RESPONSE_LOSE_LONG_GAME:
-            m 2wuo "Wow,{w=0.1} I can't keep up!"
+            s "Wow,{w=0.1} I can't keep up!"
         else:
             m 2hub "Amazing, [player]!"
             m 4eub "You're really good!"
