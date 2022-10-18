@@ -1003,7 +1003,7 @@ label mas_pong_dlg_loser:
                 if win_streak_counter > 1:
                     s "You won again! {w=0.2}Congrats!"
                 else:
-                    m 2hua "You won! {w=0.2}Congratulations!"
+                    s "You won! {w=0.2}Congratulations!"
 
             $ pong_monika_last_response_id = PONG_MONIKA_RESPONSE_LOSE_HARD_GAME
 
