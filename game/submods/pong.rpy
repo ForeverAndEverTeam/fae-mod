@@ -920,7 +920,7 @@ label mas_pong_dlg_loser:
 
         #Easy
         if pong_difficulty_before <= 5:
-            m 2tsu "Maybe it's time I pick up the pace~"
+            s "Maybe it's time I pick up the pace~"
 
         #Medium
         elif pong_difficulty_before <= 10:
