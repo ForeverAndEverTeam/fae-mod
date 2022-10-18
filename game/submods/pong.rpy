@@ -796,7 +796,7 @@ label fae_pong_dlg_winner:
         #Expert
         elif pong_difficulty_before <= 20:
             if pong_monika_last_response_id == PONG_MONIKA_RESPONSE_WIN_EXPERT_GAME:
-                m 2tub "It feels good to win!"
+                s "It feels good to win!"
                 m 2hub "Don't worry, I'm sure you'll win again soon~"
             else:
                 if loss_streak_counter > 1:
