@@ -761,7 +761,7 @@ label fae_pong_dlg_winner:
                 s "You can do it, [fae_get_player_nickname(regex_replace_with_nullstr='my ')]!"
                 s "I believe in you~"
             else:
-                m 2duu "Concentrate, [player]."
+                s "Concentrate, [player]."
                 m 3hub "Keep trying, I know you'll beat me soon!"
 
             $ pong_monika_last_response_id = PONG_MONIKA_RESPONSE_WIN_EASY_GAME
