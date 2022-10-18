@@ -784,7 +784,7 @@ label fae_pong_dlg_winner:
                 s "Ahaha!"
                 s "Am I playing too well for you?"
                 s "I'm just kidding, [player]."
-                m 3hub "You're pretty good!"
+                s "You're pretty good!"
             else:
                 if loss_streak_counter > 1:
                     m 1hub "I win again~"
