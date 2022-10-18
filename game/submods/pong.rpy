@@ -1028,7 +1028,7 @@ label mas_pong_dlg_loser:
                 s "I love playing Pong with you!"
             else:
                 s "This is intense!"
-                s "Keep at it, [mas_get_player_nickname(regex_replace_with_nullstr='my ')]!"
+                s "Keep at it, [player]!"
 
             $ pong_monika_last_response_id = PONG_MONIKA_RESPONSE_LOSE_EXTREME_GAME
     return
