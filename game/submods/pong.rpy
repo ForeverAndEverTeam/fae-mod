@@ -802,7 +802,7 @@ label fae_pong_dlg_winner:
                 if loss_streak_counter > 1:
                     s "I win another round!"
                 else:
-                    m 2eub "I win this round!"
+                    s "I win this round!"
 
             $ pong_monika_last_response_id = PONG_MONIKA_RESPONSE_WIN_EXPERT_GAME
 
