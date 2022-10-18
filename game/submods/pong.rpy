@@ -726,7 +726,7 @@ label fae_pong_dlg_winner:
             s "Keep it up and you'll beat me, I'm sure of it!"
         else:
             s "Well played, [player], you're really good!"
-            m 1tfu "But so am I,{w=0.1} {nw}"
+            s "But so am I,{w=0.1} {nw}"
             extend 1hub "ahaha!"
 
         $ pong_monika_last_response_id = PONG_MONIKA_RESPONSE_WIN_LONG_GAME
