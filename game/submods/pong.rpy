@@ -1011,7 +1011,7 @@ label mas_pong_dlg_loser:
         elif pong_difficulty_before <= 20:
             if pong_monika_last_response_id == PONG_MONIKA_RESPONSE_LOSE_EXPERT_GAME:
                 s "Wow,{w=0.1} I'm really trying...{w=0.3}you're unstoppable!"
-                m 2tfu "But I'm sure I'll beat you sooner or later, [player]."
+                s "But I'm sure I'll beat you sooner or later, [player]."
                 m 3hub "Ahaha!"
             else:
                 if win_streak_counter > 1:
