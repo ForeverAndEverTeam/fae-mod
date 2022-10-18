@@ -880,7 +880,7 @@ label mas_pong_dlg_loser:
     #Player starts playing seriously and wins after losing at least 3 times on purpose
     elif instant_loss_streak_counter_before >= 3 and persistent._mas_pm_ever_let_monika_win_on_purpose:
         s "Playing serious now, are we?~"
-        m 2tfu "Let's find out how good you really are, [player]!"
+        s "Let's find out how good you really are, [player]!"
 
     #Player wins after losing at least three times in a row
     elif loss_streak_counter_before >= 3:
