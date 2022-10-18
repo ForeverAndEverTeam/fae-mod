@@ -1012,7 +1012,7 @@ label mas_pong_dlg_loser:
             if pong_monika_last_response_id == PONG_MONIKA_RESPONSE_LOSE_EXPERT_GAME:
                 s "Wow,{w=0.1} I'm really trying...{w=0.3}you're unstoppable!"
                 s "But I'm sure I'll beat you sooner or later, [player]."
-                m 3hub "Ahaha!"
+                s "Ahaha!"
             else:
                 if win_streak_counter > 1:
                     m 4hub "You won again! {w=0.2}Nice work!"
