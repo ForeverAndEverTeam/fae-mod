@@ -873,7 +873,7 @@ label mas_pong_dlg_loser:
         if pong_monika_last_response_id == PONG_MONIKA_RESPONSE_LOSE_WITHOUT_HITTING_BALL:
             s "Maybe I should try a bit harder..."
         else:
-            m "I guess I was a bit too slow there..."
+            s "I guess I was a bit too slow there..."
 
         $ pong_monika_last_response_id = PONG_MONIKA_RESPONSE_LOSE_WITHOUT_HITTING_BALL
 
