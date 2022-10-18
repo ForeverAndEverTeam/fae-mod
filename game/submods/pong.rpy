@@ -963,7 +963,7 @@ label mas_pong_dlg_loser:
             s "Ahaha..."
             s "I guess I should try a little harder..."
         else:
-            m 1rusdlb "I didn't expect to lose this quickly."
+            s "I didn't expect to lose this quickly."
 
         $ pong_monika_last_response_id = PONG_MONIKA_RESPONSE_LOSE_SHORT_GAME
 
