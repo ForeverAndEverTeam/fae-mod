@@ -745,7 +745,7 @@ label fae_pong_dlg_winner:
     elif pong_angle_last_shot >= 0.9 or pong_angle_last_shot <= -0.9:
         if pong_monika_last_response_id == PONG_MONIKA_RESPONSE_WIN_TRICKSHOT:
             s "Ah...{w=0.3}{nw}"
-            extend 2rksdlc "it happened again."
+            extend "it happened again."
             m 1hksdlb "Sorry about that, [player]!"
         else:
             m 2rksdlb "Sorry, [player]!"
