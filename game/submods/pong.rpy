@@ -762,7 +762,7 @@ label fae_pong_dlg_winner:
                 s "I believe in you~"
             else:
                 s "Concentrate, [player]."
-                m 3hub "Keep trying, I know you'll beat me soon!"
+                s "Keep trying, I know you'll beat me soon!"
 
             $ pong_monika_last_response_id = PONG_MONIKA_RESPONSE_WIN_EASY_GAME
 
