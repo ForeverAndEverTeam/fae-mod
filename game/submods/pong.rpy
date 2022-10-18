@@ -66,7 +66,7 @@ init:
         import random
         import math
 
-        class PongDisplayable(renpy.displayable):
+        class PongDisplayable(renpy.Displayable):
 
             def __init__(self):
 
@@ -533,7 +533,7 @@ label demo_minigame_pong:
     
     s "Would you like to play again?"
 
-    $ history_list.pop()
+    $ _history_list.pop()
 
     menu:
         s "Would you like to play again?{fast}"
@@ -823,4 +823,32 @@ label fae_pong_dlg_winner:
 
 
 
+label mas_pong_dlg_sorry_assuming:
+    s "Alright."
+    s "I'm sorry for assuming..."
+
+    #This is only used in bits where the player lets Monika win on purpose
+    $ player_lets_monika_win_on_purpose = False
+
+    s "Would you like to take a break, [player]?{nw}"
+    $ _history_list.pop()
+    menu:
+        s "Would you like to take a break, [player]?{fast}"
+
+        "Okay.":
+            s "Alright, [player].{w=0.3} {nw}"
+            extend "I had fun, thanks for playing Pong with me!"
+            s "Let me know when you're ready to play again."
+
+            #Set this var so Monika knows you're ready to play again
+            $ mas_pong_taking_break = True
+
+            #Dissolve into idle poses
+            show sayori idle with dissolve
+            jump ch30_loop
+
+        "No.":
+            s "Alright, [player]. If you're sure."
+            s "Keep going, you'll beat me soon!"
+    return
 
