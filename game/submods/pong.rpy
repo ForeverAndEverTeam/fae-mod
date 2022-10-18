@@ -1044,7 +1044,7 @@ label mas_pong_dlg_loser_fast:
 
 #Quick Moni win dlg
 label mas_pong_dlg_winner_fast:
-    m 1eka "Alright, [player]. Thanks for playing Pong with me."
+    s "Alright, [player]. Thanks for playing Pong with me."
     m 1hua "I had a lot of fun! Let's play again sometime soon, okay?"
 
     $ persistent._mas_pong_difficulty_change_next_game = PONG_DIFFICULTY_POWERDOWN;
