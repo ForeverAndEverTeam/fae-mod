@@ -1032,3 +1032,36 @@ label mas_pong_dlg_loser:
 
             $ pong_sayori_last_response_id = PONG_SAYORI_RESPONSE_LOSE_EXTREME_GAME
     return
+
+
+label mas_pong_dlg_loser_fast:
+    s "Alright, [player]."
+    m 3tfu "But I'll beat you next time."
+
+    $ persistent._mas_pong_difficulty_change_next_game = PONG_DIFFICULTY_POWERUP;
+    $ persistent._mas_pong_difficulty_change_next_game_date = datetime.date.today()
+    return
+
+#Quick Moni win dlg
+label mas_pong_dlg_winner_fast:
+    m 1eka "Alright, [player]. Thanks for playing Pong with me."
+    m 1hua "I had a lot of fun! Let's play again sometime soon, okay?"
+
+    $ persistent._mas_pong_difficulty_change_next_game = PONG_DIFFICULTY_POWERDOWN;
+    return
+
+#Post dlg Moni lose
+label mas_pong_dlg_loser_end:
+    m 1wuo "Wow, I was really trying that time."
+    m 1eua "You must have really been practicing to get so good."
+    m 2tuu "I guess you wanted to impress me, [player]."
+    m 1hua "You're so sweet~"
+    return
+
+#Post dlg Moni win
+label mas_pong_dlg_winner_end:
+    m 4tku "I can't really get excited for a game this simple..."
+    m 1eua "But at least it's still fun to play."
+    m 1ekbsa "Especially with you, [player]."
+    m 1hubfa "Ehehe~"
+    return
