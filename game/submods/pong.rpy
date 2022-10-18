@@ -909,7 +909,7 @@ label mas_pong_dlg_loser:
             s "[player]!"
             s "There's no way I could've hit that!"
         else:
-            m 2wuo "Wow, that was a great shot!"
+            s "Wow, that was a great shot!"
 
         $ pong_monika_last_response_id = PONG_MONIKA_RESPONSE_LOSE_TRICKSHOT
 
