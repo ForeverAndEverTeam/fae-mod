@@ -222,7 +222,7 @@ init:
                 return False
 
             def getCollisionY(self, hotside, is_computer):
-                # Checks whether the ball went through the player's paddle on the x-axis while moving left or monika's paddle while moving right.
+                # Checks whether the ball went through the player's paddle on the x-axis while moving left or sayori's paddle while moving right.
                 # Returns the y collision-position and sets self.collidedonx
 
                 self.collidedonx = is_computer and self.oldbx <= hotside <= self.bx or not is_computer and self.oldbx >= hotside >= self.bx;
@@ -391,9 +391,9 @@ init:
                 r.blit(player, (self.PADDLE_X_PLAYER, 25))
 
                 # Show Monika's name.
-                monika = renpy.render(self.monika, self.COURT_WIDTH, self.COURT_HEIGHT, st, at)
-                ew, eh = monika.get_size()
-                r.blit(monika, (self.PADDLE_X_SAYORI - ew, 25))
+                sayori = renpy.render(self.sayori, self.COURT_WIDTH, self.COURT_HEIGHT, st, at)
+                ew, eh = sayori.get_size()
+                r.blit(sayori, (self.PADDLE_X_SAYORI - ew, 25))
 
                 # Show the "Click to Begin" label.
                 if self.stuck:
@@ -512,7 +512,7 @@ label demo_minigame_pong:
 
     $ persistent._fae_pong_difficulty_change_next_game = 0;
 
-    if winner == "monika":
+    if winner == "sayori":
         $ new_difficulty = persistent._fae_pong_difficulty + PONG_DIFFICULTY_CHANGE_ON_LOSS
 
         $ inst_dialogue = store.fae_pong.DLG_WINNER
@@ -543,7 +543,7 @@ label demo_minigame_pong:
             jump demo_minigame_pong
         
         "No.":
-            if winner == "monika":
+            if winner == "sayori":
                 if renpy.seen_label(store.fae_pong.DLG_WINNER_END):
                     $ end_dialogue = store.fae_pong.DLG_WINNER_FAST
                 else:
@@ -608,7 +608,7 @@ label fae_pong_dlg_winner:
         elif instant_loss_streak_counter == 3:
             s  "[player]!"
 
-            if persistent._fae_pm_ever_let_monika_win_on_purpose:
+            if persistent._fae_pm_ever_let_sayori_win_on_purpose:
                 $ menu_response = _("Are you letting me win on purpose again?")
             else:
                 $ menu_response = _("Are you letting me win on purpose?")
@@ -621,17 +621,17 @@ label fae_pong_dlg_winner:
                 "...Maybe.":
                     s  "Ehehe!~"
                     s  "Thank you, [player]~"
-                    #show monika  at t11 zorder MAS_SAYORI_Z with dissolve_monika
+                    #show sayori  at t11 zorder MAS_SAYORI_Z with dissolve_sayori
                     s "But you know,{w=0.1} I don't mind losing to you every now and then."
 
-                    if persistent._fae_pm_ever_let_monika_win_on_purpose:
+                    if persistent._fae_pm_ever_let_sayori_win_on_purpose:
                         s  "I like to see you win just as much as you like to see me win~"
 
-                    $ player_lets_monika_win_on_purpose = True
-                    $ persistent._fae_pm_ever_let_monika_win_on_purpose = True
+                    $ player_lets_sayori_win_on_purpose = True
+                    $ persistent._fae_pm_ever_let_sayori_win_on_purpose = True
 
                 "No.":
-                    if persistent._fae_pm_ever_let_monika_win_on_purpose:
+                    if persistent._fae_pm_ever_let_sayori_win_on_purpose:
                         show sayori idle
                         s "Are you {i}sure?{/i}{nw}"
                         $ _history_list.pop()
@@ -644,13 +644,13 @@ label fae_pong_dlg_winner:
                             "No":
                                 s "[player]!"
                                 s "Stop teasing me!"
-                                $ player_lets_monika_win_on_purpose = True
+                                $ player_lets_sayori_win_on_purpose = True
                                 $ lose_on_purpose = True
 
                     else:
                         call fae_pong_dlg_sorry_assuming
         else:
-            if player_lets_monika_win_on_purpose:
+            if player_lets_sayori_win_on_purpose:
                 s "Aren't you getting tired of letting me win, [player]?"
             else:
                 s "..."
@@ -661,7 +661,7 @@ label fae_pong_dlg_winner:
                     s "You can do it, I believe in you!"
 
     #Monika wins a game after the player let her win on purpose at least three times
-    elif instant_loss_streak_counter_before >= 3 and player_lets_monika_win_on_purpose:
+    elif instant_loss_streak_counter_before >= 3 and player_lets_sayori_win_on_purpose:
         s "Nice try [player],{w=0.1} {nw}"
         extend "but I can win by myself!"
         s "Ahaha!"
@@ -709,19 +709,19 @@ label fae_pong_dlg_winner:
         extend "but it looks like your luck's run out."
         s "Now it's my time to shine~"
 
-        $ pong_monika_last_response_id = PONG_SAYORI_RESPONSE_WIN_AFTER_PLAYER_WON_MIN_THREE_TIMES
+        $ pong_sayori_last_response_id = PONG_SAYORI_RESPONSE_WIN_AFTER_PLAYER_WON_MIN_THREE_TIMES
 
     #Monika wins a second time after the player got a 3+ winstreak
-    elif pong_monika_last_response_id == PONG_SAYORI_RESPONSE_WIN_AFTER_PLAYER_WON_MIN_THREE_TIMES:
+    elif pong_sayori_last_response_id == PONG_SAYORI_RESPONSE_WIN_AFTER_PLAYER_WON_MIN_THREE_TIMES:
         s "Ehehe!"
         s "Keep up, [player]!{w=0.3} {nw}"
         extend "It looks like your streak is over!"
 
-        $ pong_monika_last_response_id = PONG_SAYORI_RESPONSE_SECOND_WIN_AFTER_PLAYER_WON_MIN_THREE_TIMES
+        $ pong_sayori_last_response_id = PONG_SAYORI_RESPONSE_SECOND_WIN_AFTER_PLAYER_WON_MIN_THREE_TIMES
 
     #Monika wins a long game
     elif ball_paddle_bounces > 9 and ball_paddle_bounces > pong_difficulty_before * 0.5:
-        if pong_monika_last_response_id == PONG_SAYORI_RESPONSE_WIN_LONG_GAME:
+        if pong_sayori_last_response_id == PONG_SAYORI_RESPONSE_WIN_LONG_GAME:
             s "Playing against you is really tough, [player]."
             s "Keep it up and you'll beat me, I'm sure of it!"
         else:
@@ -729,21 +729,21 @@ label fae_pong_dlg_winner:
             s "But so am I,{w=0.1} {nw}"
             extend 1hub "ahaha!"
 
-        $ pong_monika_last_response_id = PONG_SAYORI_RESPONSE_WIN_LONG_GAME
+        $ pong_sayori_last_response_id = PONG_SAYORI_RESPONSE_WIN_LONG_GAME
 
     #Monika wins a short game
     elif ball_paddle_bounces <= 3:
-        if pong_monika_last_response_id == PONG_SAYORI_RESPONSE_WIN_SHORT_GAME:
+        if pong_sayori_last_response_id == PONG_SAYORI_RESPONSE_WIN_SHORT_GAME:
             s "Another quick win for me~"
         else:
             s "Ehehe,{w=0.1} {nw}"
             extend "I got you with that one!"
 
-        $ pong_monika_last_response_id = PONG_SAYORI_RESPONSE_WIN_SHORT_GAME
+        $ pong_sayori_last_response_id = PONG_SAYORI_RESPONSE_WIN_SHORT_GAME
 
     #Monika wins by a trickshot
     elif pong_angle_last_shot >= 0.9 or pong_angle_last_shot <= -0.9:
-        if pong_monika_last_response_id == PONG_SAYORI_RESPONSE_WIN_TRICKSHOT:
+        if pong_sayori_last_response_id == PONG_SAYORI_RESPONSE_WIN_TRICKSHOT:
             s "Ah...{w=0.3}{nw}"
             extend "it happened again."
             s "Sorry about that, [player]!"
@@ -751,24 +751,24 @@ label fae_pong_dlg_winner:
             s "Sorry, [player]!"
             s "I didn't mean for it to bounce around that much..."
 
-        $ pong_monika_last_response_id = PONG_SAYORI_RESPONSE_WIN_TRICKSHOT
+        $ pong_sayori_last_response_id = PONG_SAYORI_RESPONSE_WIN_TRICKSHOT
 
     #Monika wins a game
     else:
         #Easy
         if pong_difficulty_before <= 5:
-            if pong_monika_last_response_id == PONG_SAYORI_RESPONSE_WIN_EASY_GAME:
+            if pong_sayori_last_response_id == PONG_SAYORI_RESPONSE_WIN_EASY_GAME:
                 s "You can do it, [fae_get_player_nickname(regex_replace_with_nullstr='my ')]!"
                 s "I believe in you~"
             else:
                 s "Concentrate, [player]."
                 s "Keep trying, I know you'll beat me soon!"
 
-            $ pong_monika_last_response_id = PONG_SAYORI_RESPONSE_WIN_EASY_GAME
+            $ pong_sayori_last_response_id = PONG_SAYORI_RESPONSE_WIN_EASY_GAME
 
         #Medium
         elif pong_difficulty_before <= 10:
-            if pong_monika_last_response_id == PONG_SAYORI_RESPONSE_WIN_MEDIUM_GAME:
+            if pong_sayori_last_response_id == PONG_SAYORI_RESPONSE_WIN_MEDIUM_GAME:
                 s "I win another round~"
             else:
                 if loss_streak_counter > 1:
@@ -776,11 +776,11 @@ label fae_pong_dlg_winner:
                 else:
                     s "Looks like I won~"
 
-            $ pong_monika_last_response_id = PONG_SAYORI_RESPONSE_WIN_MEDIUM_GAME
+            $ pong_sayori_last_response_id = PONG_SAYORI_RESPONSE_WIN_MEDIUM_GAME
 
         #Hard
         elif pong_difficulty_before <= 15:
-            if pong_monika_last_response_id == PONG_SAYORI_RESPONSE_WIN_HARD_GAME:
+            if pong_sayori_last_response_id == PONG_SAYORI_RESPONSE_WIN_HARD_GAME:
                 s "Ahaha!"
                 s "Am I playing too well for you?"
                 s "I'm just kidding, [player]."
@@ -791,11 +791,11 @@ label fae_pong_dlg_winner:
                 else:
                     s "I win~"
 
-            $ pong_monika_last_response_id = PONG_SAYORI_RESPONSE_WIN_HARD_GAME
+            $ pong_sayori_last_response_id = PONG_SAYORI_RESPONSE_WIN_HARD_GAME
 
         #Expert
         elif pong_difficulty_before <= 20:
-            if pong_monika_last_response_id == PONG_SAYORI_RESPONSE_WIN_EXPERT_GAME:
+            if pong_sayori_last_response_id == PONG_SAYORI_RESPONSE_WIN_EXPERT_GAME:
                 s "It feels good to win!"
                 s "Don't worry, I'm sure you'll win again soon~"
             else:
@@ -804,18 +804,18 @@ label fae_pong_dlg_winner:
                 else:
                     s "I win this round!"
 
-            $ pong_monika_last_response_id = PONG_SAYORI_RESPONSE_WIN_EXPERT_GAME
+            $ pong_sayori_last_response_id = PONG_SAYORI_RESPONSE_WIN_EXPERT_GAME
 
         #Extreme
         else:
-            if pong_monika_last_response_id == PONG_SAYORI_RESPONSE_WIN_EXTREME_GAME:
+            if pong_sayori_last_response_id == PONG_SAYORI_RESPONSE_WIN_EXTREME_GAME:
                 s "Not bad, [fae_get_player_nickname(regex_replace_with_nullstr='my ')]."
                 s "I gave it everything I had, so don't feel too bad for losing from time to time."
             else:
                 s "This time, the win is mine!"
                 s "Keep up, [player]!"
 
-            $ pong_monika_last_response_id = PONG_SAYORI_RESPONSE_WIN_EXTREME_GAME
+            $ pong_sayori_last_response_id = PONG_SAYORI_RESPONSE_WIN_EXTREME_GAME
 
     return
 
