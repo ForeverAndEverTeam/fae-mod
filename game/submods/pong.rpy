@@ -997,8 +997,8 @@ label mas_pong_dlg_loser:
         #Hard
         elif pong_difficulty_before <= 15:
             if pong_monika_last_response_id == PONG_MONIKA_RESPONSE_LOSE_HARD_GAME:
-                m 4hub "Another win for you!"
-                m 4eua "Great job, [player]."
+                s "Another win for you!"
+                s "Great job, [player]."
             else:
                 if win_streak_counter > 1:
                     m 2hub "You won again! {w=0.2}Congrats!"
