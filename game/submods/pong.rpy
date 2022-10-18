@@ -863,7 +863,7 @@ label mas_pong_dlg_loser:
     #Monika loses on purpose
     if lose_on_purpose:
         s "Ahaha!"
-        m 1kua "Now we're even, [player]!"
+        s "Now we're even, [player]!"
         $ lose_on_purpose = False
 
     #Monika loses without hitting the ball
