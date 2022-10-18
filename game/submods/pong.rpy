@@ -975,7 +975,7 @@ label mas_pong_dlg_loser:
                 s "You win this round as well."
             else:
                 if win_streak_counter > 1:
-                    m 1hub "You won again!"
+                    s "You won again!"
                 else:
                     m 1hua "You won!"
 
