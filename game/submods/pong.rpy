@@ -1055,7 +1055,7 @@ label mas_pong_dlg_loser_end:
     s "Wow, I was really trying that time."
     s "You must have really been practicing to get so good."
     s "I guess you wanted to impress me, [player]."
-    m 1hua "You're so sweet~"
+    s "You're so sweet~"
     return
 
 #Post dlg Moni win
