@@ -928,7 +928,7 @@ label mas_pong_dlg_loser:
 
         #Hard
         elif pong_difficulty_before <= 15:
-            m 3hub "Well played!"
+            s "Well played!"
 
         #Expert
         elif pong_difficulty_before <= 20:
