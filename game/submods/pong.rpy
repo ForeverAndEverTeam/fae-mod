@@ -915,7 +915,7 @@ label mas_pong_dlg_loser:
 
     #Monika loses three times in a row
     elif win_streak_counter == 3:
-        m 2wuo "Wow, [player]..."
+        s "Wow, [player]..."
         m 2wud "You've won three times in a row already..."
 
         #Easy
