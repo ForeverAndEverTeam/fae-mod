@@ -813,7 +813,7 @@ label fae_pong_dlg_winner:
                 s "I gave it everything I had, so don't feel too bad for losing from time to time."
             else:
                 s "This time, the win is mine!"
-                m 2efu "Keep up, [player]!"
+                s "Keep up, [player]!"
 
             $ pong_monika_last_response_id = PONG_MONIKA_RESPONSE_WIN_EXTREME_GAME
 
