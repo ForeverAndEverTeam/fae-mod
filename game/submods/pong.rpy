@@ -907,7 +907,7 @@ label mas_pong_dlg_loser:
     elif pong_angle_last_shot >= 0.9 or pong_angle_last_shot <= -0.9:
         if pong_monika_last_response_id == PONG_MONIKA_RESPONSE_LOSE_TRICKSHOT:
             s "[player]!"
-            m 2hksdlb "There's no way I could've hit that!"
+            s "There's no way I could've hit that!"
         else:
             m 2wuo "Wow, that was a great shot!"
 
