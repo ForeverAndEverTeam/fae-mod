@@ -1054,7 +1054,7 @@ label mas_pong_dlg_winner_fast:
 label mas_pong_dlg_loser_end:
     s "Wow, I was really trying that time."
     s "You must have really been practicing to get so good."
-    m 2tuu "I guess you wanted to impress me, [player]."
+    s "I guess you wanted to impress me, [player]."
     m 1hua "You're so sweet~"
     return
 
