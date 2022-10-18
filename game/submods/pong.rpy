@@ -1061,7 +1061,7 @@ label mas_pong_dlg_loser_end:
 #Post dlg Moni win
 label mas_pong_dlg_winner_end:
     s "I can't really get excited for a game this simple..."
-    m 1eua "But at least it's still fun to play."
+    s "But at least it's still fun to play."
     m 1ekbsa "Especially with you, [player]."
     m 1hubfa "Ehehe~"
     return
