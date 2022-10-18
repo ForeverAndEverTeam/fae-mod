@@ -782,7 +782,7 @@ label fae_pong_dlg_winner:
         elif pong_difficulty_before <= 15:
             if pong_monika_last_response_id == PONG_MONIKA_RESPONSE_WIN_HARD_GAME:
                 s "Ahaha!"
-                m 2tsb "Am I playing too well for you?"
+                s "Am I playing too well for you?"
                 m 1tsu "I'm just kidding, [player]."
                 m 3hub "You're pretty good!"
             else:
