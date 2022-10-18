@@ -961,7 +961,7 @@ label mas_pong_dlg_loser:
     elif ball_paddle_bounces <= 2:
         if pong_monika_last_response_id == PONG_MONIKA_RESPONSE_LOSE_SHORT_GAME:
             s "Ahaha..."
-            m 3eksdla "I guess I should try a little harder..."
+            s "I guess I should try a little harder..."
         else:
             m 1rusdlb "I didn't expect to lose this quickly."
 
