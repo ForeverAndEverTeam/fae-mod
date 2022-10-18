@@ -943,7 +943,7 @@ label mas_pong_dlg_loser:
         s "[player]..."
         s "Have you been practicing?"
         s "I don't know what happened, but I don't stand a chance against you!"
-        m 1eka "Could you go a little bit easier on me please?{w=0.3} {nw}"
+        s "Could you go a little bit easier on me please?{w=0.3} {nw}"
         extend 3hub "I would really appreciate it~"
         $ monika_asks_to_go_easy = True
 
