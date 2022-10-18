@@ -772,7 +772,7 @@ label fae_pong_dlg_winner:
                 s "I win another round~"
             else:
                 if loss_streak_counter > 1:
-                    m 3hub "Looks like I won again~"
+                    s "Looks like I won again~"
                 else:
                     m 3hua "Looks like I won~"
 
