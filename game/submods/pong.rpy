@@ -892,7 +892,7 @@ label mas_pong_dlg_loser:
     elif powerup_value_this_game == PONG_DIFFICULTY_POWERUP:
         s "Wow...{w=0.3}{nw}"
         extend "I was really trying that time!"
-        m 3hub "Way to go, [player]!"
+        s "Way to go, [player]!"
 
     #Monika loses after going easy on the player
     elif powerup_value_this_game == PONG_DIFFICULTY_POWERDOWN:
