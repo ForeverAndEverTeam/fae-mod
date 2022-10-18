@@ -769,7 +769,7 @@ label fae_pong_dlg_winner:
         #Medium
         elif pong_difficulty_before <= 10:
             if pong_monika_last_response_id == PONG_MONIKA_RESPONSE_WIN_MEDIUM_GAME:
-                m 1hub "I win another round~"
+                s "I win another round~"
             else:
                 if loss_streak_counter > 1:
                     m 3hub "Looks like I won again~"
