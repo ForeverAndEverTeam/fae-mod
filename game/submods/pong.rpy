@@ -828,7 +828,7 @@ label mas_pong_dlg_sorry_assuming:
     s "I'm sorry for assuming..."
 
     #This is only used in bits where the player lets Monika win on purpose
-    $ player_lets_monika_win_on_purpose = False
+    $ player_lets_sayori_win_on_purpose = False
 
     s "Would you like to take a break, [player]?{nw}"
     $ _history_list.pop()
@@ -858,7 +858,7 @@ label mas_pong_dlg_loser:
     # todo: adapt dialog to affection
     # todo: add randomized dialog
 
-    $ monika_asks_to_go_easy = False
+    $ sayori_asks_to_go_easy = False
 
     #Monika loses on purpose
     if lose_on_purpose:
@@ -870,15 +870,15 @@ label mas_pong_dlg_loser:
     elif ball_paddle_bounces == 0:
         s "Ahaha..."
 
-        if pong_monika_last_response_id == PONG_MONIKA_RESPONSE_LOSE_WITHOUT_HITTING_BALL:
+        if pong_sayori_last_response_id == PONG_MONIKA_RESPONSE_LOSE_WITHOUT_HITTING_BALL:
             s "Maybe I should try a bit harder..."
         else:
             s "I guess I was a bit too slow there..."
 
-        $ pong_monika_last_response_id = PONG_MONIKA_RESPONSE_LOSE_WITHOUT_HITTING_BALL
+        $ pong_sayori_last_response_id = PONG_MONIKA_RESPONSE_LOSE_WITHOUT_HITTING_BALL
 
     #Player starts playing seriously and wins after losing at least 3 times on purpose
-    elif instant_loss_streak_counter_before >= 3 and persistent._mas_pm_ever_let_monika_win_on_purpose:
+    elif instant_loss_streak_counter_before >= 3 and persistent._mas_pm_ever_let_sayori_win_on_purpose:
         s "Playing serious now, are we?~"
         s "Let's find out how good you really are, [player]!"
 
@@ -905,13 +905,13 @@ label mas_pong_dlg_loser:
 
     #Monika loses by a trickshot
     elif pong_angle_last_shot >= 0.9 or pong_angle_last_shot <= -0.9:
-        if pong_monika_last_response_id == PONG_MONIKA_RESPONSE_LOSE_TRICKSHOT:
+        if pong_sayori_last_response_id == PONG_MONIKA_RESPONSE_LOSE_TRICKSHOT:
             s "[player]!"
             s "There's no way I could've hit that!"
         else:
             s "Wow, that was a great shot!"
 
-        $ pong_monika_last_response_id = PONG_MONIKA_RESPONSE_LOSE_TRICKSHOT
+        $ pong_sayori_last_response_id = PONG_MONIKA_RESPONSE_LOSE_TRICKSHOT
 
     #Monika loses three times in a row
     elif win_streak_counter == 3:
@@ -945,33 +945,33 @@ label mas_pong_dlg_loser:
         s "I don't know what happened, but I don't stand a chance against you!"
         s "Could you go a little bit easier on me please?{w=0.3} {nw}"
         extend  "I would really appreciate it~"
-        $ monika_asks_to_go_easy = True
+        $ sayori_asks_to_go_easy = True
 
     #Monika loses a long game
     elif ball_paddle_bounces > 10 and ball_paddle_bounces > pong_difficulty_before * 0.5:
-        if pong_monika_last_response_id == PONG_MONIKA_RESPONSE_LOSE_LONG_GAME:
+        if pong_sayori_last_response_id == PONG_MONIKA_RESPONSE_LOSE_LONG_GAME:
             s "Wow,{w=0.1} I can't keep up!"
         else:
             s "Amazing, [player]!"
             s "You're really good!"
 
-        $ pong_monika_last_response_id = PONG_MONIKA_RESPONSE_LOSE_LONG_GAME
+        $ pong_sayori_last_response_id = PONG_MONIKA_RESPONSE_LOSE_LONG_GAME
 
     #Monika loses a short game
     elif ball_paddle_bounces <= 2:
-        if pong_monika_last_response_id == PONG_MONIKA_RESPONSE_LOSE_SHORT_GAME:
+        if pong_sayori_last_response_id == PONG_MONIKA_RESPONSE_LOSE_SHORT_GAME:
             s "Ahaha..."
             s "I guess I should try a little harder..."
         else:
             s "I didn't expect to lose this quickly."
 
-        $ pong_monika_last_response_id = PONG_MONIKA_RESPONSE_LOSE_SHORT_GAME
+        $ pong_sayori_last_response_id = PONG_MONIKA_RESPONSE_LOSE_SHORT_GAME
 
     #Monika loses a game
     else:
         #Easy difficulty
         if pong_difficulty_before <= 5:
-            if pong_monika_last_response_id == PONG_MONIKA_RESPONSE_LOSE_EASY_GAME:
+            if pong_sayori_last_response_id == PONG_MONIKA_RESPONSE_LOSE_EASY_GAME:
                 s "You win this round as well."
             else:
                 if win_streak_counter > 1:
@@ -979,11 +979,11 @@ label mas_pong_dlg_loser:
                 else:
                     s "You won!"
 
-            $ pong_monika_last_response_id = PONG_MONIKA_RESPONSE_LOSE_EASY_GAME
+            $ pong_sayori_last_response_id = PONG_MONIKA_RESPONSE_LOSE_EASY_GAME
 
         #Medium
         elif pong_difficulty_before <= 10:
-            if pong_monika_last_response_id == PONG_MONIKA_RESPONSE_LOSE_MEDIUM_GAME:
+            if pong_sayori_last_response_id == PONG_MONIKA_RESPONSE_LOSE_MEDIUM_GAME:
                 s "It's nice seeing you win, [player]."
                 s "Keep it up~"
             else:
@@ -992,11 +992,11 @@ label mas_pong_dlg_loser:
                 else:
                     s "You won! {w=0.2}Not bad."
 
-            $ pong_monika_last_response_id = PONG_MONIKA_RESPONSE_LOSE_MEDIUM_GAME
+            $ pong_sayori_last_response_id = PONG_MONIKA_RESPONSE_LOSE_MEDIUM_GAME
 
         #Hard
         elif pong_difficulty_before <= 15:
-            if pong_monika_last_response_id == PONG_MONIKA_RESPONSE_LOSE_HARD_GAME:
+            if pong_sayori_last_response_id == PONG_MONIKA_RESPONSE_LOSE_HARD_GAME:
                 s "Another win for you!"
                 s "Great job, [player]."
             else:
@@ -1005,11 +1005,11 @@ label mas_pong_dlg_loser:
                 else:
                     s "You won! {w=0.2}Congratulations!"
 
-            $ pong_monika_last_response_id = PONG_MONIKA_RESPONSE_LOSE_HARD_GAME
+            $ pong_sayori_last_response_id = PONG_MONIKA_RESPONSE_LOSE_HARD_GAME
 
         #Expert
         elif pong_difficulty_before <= 20:
-            if pong_monika_last_response_id == PONG_MONIKA_RESPONSE_LOSE_EXPERT_GAME:
+            if pong_sayori_last_response_id == PONG_MONIKA_RESPONSE_LOSE_EXPERT_GAME:
                 s "Wow,{w=0.1} I'm really trying...{w=0.3}you're unstoppable!"
                 s "But I'm sure I'll beat you sooner or later, [player]."
                 s "Ahaha!"
@@ -1019,16 +1019,16 @@ label mas_pong_dlg_loser:
                 else:
                     s "You won! {w=0.2}Impressive!"
 
-            $ pong_monika_last_response_id = PONG_MONIKA_RESPONSE_LOSE_EXPERT_GAME
+            $ pong_sayori_last_response_id = PONG_MONIKA_RESPONSE_LOSE_EXPERT_GAME
 
         #Extreme
         else:
-            if pong_monika_last_response_id == PONG_MONIKA_RESPONSE_LOSE_EXTREME_GAME:
+            if pong_sayori_last_response_id == PONG_MONIKA_RESPONSE_LOSE_EXTREME_GAME:
                 s "You're really good, [player]."
                 s "I love playing Pong with you!"
             else:
                 s "This is intense!"
                 s "Keep at it, [player]!"
 
-            $ pong_monika_last_response_id = PONG_MONIKA_RESPONSE_LOSE_EXTREME_GAME
+            $ pong_sayori_last_response_id = PONG_MONIKA_RESPONSE_LOSE_EXTREME_GAME
     return
