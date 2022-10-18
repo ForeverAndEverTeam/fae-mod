@@ -734,9 +734,9 @@ label fae_pong_dlg_winner:
     #Monika wins a short game
     elif ball_paddle_bounces <= 3:
         if pong_monika_last_response_id == PONG_MONIKA_RESPONSE_WIN_SHORT_GAME:
-            m 3hub "Another quick win for me~"
+            s "Another quick win for me~"
         else:
-            m 4huu "Ehehe,{w=0.1} {nw}"
+            s "Ehehe,{w=0.1} {nw}"
             extend 4hub "I got you with that one!"
 
         $ pong_monika_last_response_id = PONG_MONIKA_RESPONSE_WIN_SHORT_GAME
