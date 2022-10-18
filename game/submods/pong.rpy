@@ -924,7 +924,7 @@ label mas_pong_dlg_loser:
 
         #Medium
         elif pong_difficulty_before <= 10:
-            m 4hua "You're pretty good!"
+            s "You're pretty good!"
 
         #Hard
         elif pong_difficulty_before <= 15:
