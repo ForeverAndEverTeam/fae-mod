@@ -952,7 +952,7 @@ label mas_pong_dlg_loser:
         if pong_monika_last_response_id == PONG_MONIKA_RESPONSE_LOSE_LONG_GAME:
             s "Wow,{w=0.1} I can't keep up!"
         else:
-            m 2hub "Amazing, [player]!"
+            s "Amazing, [player]!"
             m 4eub "You're really good!"
 
         $ pong_monika_last_response_id = PONG_MONIKA_RESPONSE_LOSE_LONG_GAME
