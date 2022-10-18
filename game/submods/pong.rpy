@@ -941,7 +941,7 @@ label mas_pong_dlg_loser:
     #Monika loses five times in a row
     elif win_streak_counter == 5:
         s "[player]..."
-        m 2tsu "Have you been practicing?"
+        s "Have you been practicing?"
         m 3hksdlb "I don't know what happened, but I don't stand a chance against you!"
         m 1eka "Could you go a little bit easier on me please?{w=0.3} {nw}"
         extend 3hub "I would really appreciate it~"
