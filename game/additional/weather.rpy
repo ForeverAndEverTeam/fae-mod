@@ -28,7 +28,7 @@ image sky night sunny:
     "mod_assets/masks/sky_night.png"
     sky_scroll
 
-
+# Transform
 transform sky_scroll:
     # Clouds shift from left to right
     subpixel True
