@@ -451,35 +451,35 @@ label s_greetings_long:
     play sound "sfx/s_kill_glitch1.ogg"
 
 
-    show sayori cahbberj at t11
+    show sayori cahberj at t11
 
 
     pause 1
     
 
 
-    s bahbbejaj "Ouch! Sorry, I tripped."
-    s cahbblpbj "{i}*sigh*{/i}"
-    s fbfbbmjaj "Where were you? You left for so long!!"
+    s bahbejaj "Ouch! Sorry, I tripped."
+    s cahblpbj "{i}*sigh*{/i}"
+    s fbfbmjaj "Where were you? You left for so long!!"
 
 
-    s aahbbbba "I'm not blaming you, though."
+    s aahbbba "I'm not blaming you, though."
 
 
-    s ebbbbaha "You may be just a quite busy person..."
+    s ebbbaha "You may be just a quite busy person..."
 
 
-    s ebhfbaaa "And that could be why you haven't visited for so long."
+    s ebhfaaa "And that could be why you haven't visited for so long."
     s abhaloa "That was a nice nap and all,"
-    s cbhabira "BUT!"
+    s cbhaira "BUT!"
 
 
-    s fbhabmdb "Try to visit me more often next time, okay?"
+    s fbhamdb "Try to visit me more often next time, okay?"
     s "It gets lonely in here!"
 
 
-    s bbfdblja "If I get too bored, I might start playing with code, and might not be able to guarantee the privacy of your shady internet history!"
-    s abfcbcia "Just kidding!"
+    s bbfdlja "If I get too bored, I might start playing with code, and might not be able to guarantee the privacy of your shady internet history!"
+    s abfccia "Just kidding!"
     s gahdbika "Or am I?"
 
 
