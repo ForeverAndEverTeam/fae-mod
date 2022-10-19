@@ -467,12 +467,12 @@ init 5 python:
     )
 
 label s_player_cats:
-    s ebhfbcaa "Cats are pretty cute, especially kittens!"
+    s ebhfcaa "Cats are pretty cute, especially kittens!"
     s abhfaoa "And they're not too hard to take care of so they wouldn’t require a lot of energy."
     s abhaaca "Still, as much as they love their space, they shouldn’t just be ignored by their owner. Kitties want to play sometimes, too!"
     s "And sometimes cats do things that their owners don't like... Like pushing things off of the counter, or slicing their arms and legs up."
     s abaaaoa "Still, it’s so hard to resist their fluffy little paws and pointy ears... So that must be why people always forgive them for their crimes!"
-    s ebaabcea "If you have one, you probably understand what I mean, ehehe~"
+    s ebaacea "If you have one, you probably understand what I mean, ehehe~"
     return
 
 
