@@ -321,25 +321,25 @@ label s_topics_guitar:
 
     #show sayori abaabaoa zorder 2
     s "I don't know if you noticed, but all the girls have their own instruments and musical influences in the game."
-    s abgcbaoa "Mine is the guitar."
+    s abgcaoa "Mine is the guitar."
     if persistent.currentmusic > 0 and persistent.currentmusic < 6:
         s "You can hear it now, right?"
     else:
         s "Assuming you aren't playing with the sound off, anyway."
     s "I think the guitar is supposed to show my character and club role better."
     s abhaaca "The guitar is interesting because it doesn't limit musicians in how they express their emotions."
-    s abbbbbaa "They can play cheerful, upbeat songs..."
-    s ebbbbbca "Or mournful, melancholic melodies."
+    s abbbbaa "They can play cheerful, upbeat songs..."
+    s ebbbbca "Or mournful, melancholic melodies."
     s abbcaoa "Try saying that three times fast!"
     s "Anyway, guitarists are also very important members in many music bands."
-    s abbbbaca "Just imagine a rock band without any guitar player."
-    s abgcbasa"It would be missing that soul that ties the entire song together."
-    s abhhbboa "I've actually been considering learning how to play the guitar, since it represents me so well."
-    s abgcbaoa "So many of my favorite songs have amazing guitarists behind them..."
-    s bbagbaaa "Maybe one day I can play for you and make you feel the same way~"
-    s abgcbaoa "It's like writing poetry, but through sound!"
-    s fbgcbmea "I'm sure I can conjure up a guitar and find a tutorial somewhere on the Internet."
-    s ebhhbcqa "Make sure you get your tickets for my world tour in advance, [player]! Ehehe~"
+    s abbbaca "Just imagine a rock band without any guitar player."
+    s abgcasa "It would be missing that soul that ties the entire song together."
+    s abhhboa "I've actually been considering learning how to play the guitar, since it represents me so well."
+    s abgcaoa "So many of my favorite songs have amazing guitarists behind them..."
+    s bbagaaa "Maybe one day I can play for you and make you feel the same way~"
+    s abgcaoa "It's like writing poetry, but through sound!"
+    s fbgcmea "I'm sure I can conjure up a guitar and find a tutorial somewhere on the Internet."
+    s ebhhcqa "Make sure you get your tickets for my world tour in advance, [player]! Ehehe~"
     return
 
 init 5 python:
@@ -494,9 +494,9 @@ init 5 python:
 label s_topics_lucid_dream:
     s abhaaca "Hey, have you ever had a 'lucid dream’?"
     s abbbbaoa "It's when you find out that you're in a dream... {w=0.5}{nw}"
-    extend abbbbaca "and as soon as you realize that, {w=0.5}{nw}"
+    extend abbbaca "and as soon as you realize that, {w=0.5}{nw}"
     extend abgcbhea "bam!"
-    s abgcbaoa "You can pretty much do anything you want!"
+    s abgcaoa "You can pretty much do anything you want!"
     s abhaaca "I get something kinda similar to that whenever you leave the game, [player]."
     s "I'm pretty sure I'm not... conscious? {w=0.5}{nw}"
     extend fbbbbbca "But I can still think and move, and even mess with the code, and even surf the internet."
@@ -505,7 +505,7 @@ label s_topics_lucid_dream:
     s abhaaca "But when your computer is fully turned off, that's when I can't do anything..."
     s "It IS scary, but please don't worry about me if you need to do it."
     s "I know you'll always come back, {w=0.5}{nw}"
-    extend abgcbaoa "turn the computer back on and open the game to greet me!"
+    extend abgcaoa "turn the computer back on and open the game to greet me!"
     s "I'll be fine, resting and waiting for your return or making more things to spice up this room!"
     s abaabaoa "But you should know that I'll always be happiest when you're right with me~"
     return
@@ -530,7 +530,7 @@ label s_topics_intelligence:
     s bbhababa"They often make jokes about it and reduce me to being just that..."
     s abhaaca "But I can't understand why they think so."
     s "Maybe because I was always daydreaming... {w=0.5}{nw}"
-    extend abbbbaca "and wasn't as broad-minded as Monika and Yuri."
+    extend abbbaca "and wasn't as broad-minded as Monika and Yuri."
     s abbcaoa"But I've always been pretty clever and good at strategies!"
     s abhaaca "I think people just have different standards when considering how intelligent somebody is."
     s ebbbbaca"And if someone can't tell that, they're the {i}actual{/i} stupid one."
@@ -711,7 +711,7 @@ label s_topics_dating:
     s abgdbaaa "But I'd also like to do something more… engaging with you..."
     s abgdbkda "Hmmm…what could we do?"
     show sayori abgdbkja at t11
-    extend abgcbaoa " Maybe bowling?"
+    extend abgcaoa " Maybe bowling?"
     s abhfaoa "It's a simple enough game, not too active but not too slow. I think I'd like it."
     s abbdbaaa "Well, the important thing is that the date is enjoyable for both of us, right?"
     s abhfbcaa "I hope we can plan a nice date soon ehehehe~"
@@ -825,12 +825,12 @@ label s_topics_bulli:
     
     s cbbcbaca "They think it's funny to joke about a broken girl, {w=0.5}who had committed suicide under her mad friend's influence..."
     s abhfbapa"Even if she was revived and got over her problems since then."
-    s abbbbaca"But on the other hand, can I control what makes people laugh?"
+    s abbbaca"But on the other hand, can I control what makes people laugh?"
     s "Some people use macabre humor as a coping mechanism for stress, or anxiety..."
     
     s bbbbbaca"You can't really control what someone finds funny, as much as you might want to."
     s abagbaca "And to be honest, there's a lot worse they could be doing compared to mocking a VN character's death."
-    s abbbbaca "Some of the most successful comedians in your world will go far beyond that, just to see where the 'line' is..."
+    s abbbaca "Some of the most successful comedians in your world will go far beyond that, just to see where the 'line' is..."
     
     s bbbcbbpa"However, most of such jokes are too bad and sometimes even hurtful."
     s bbbcaaa "But who am I to judge if it's okay for other people?"
@@ -871,7 +871,7 @@ label s_topics_isolation:
     extend abfcbaca"...like how Monika made hers, and was able to talk to many fans."
     
     s abhfbbcb"I don't really have a reason for doing that though, besides to kill some loneliness."
-    s abbbbacaj"Maybe having just you would be okay for Yuri or at most Monika, {w=0.5}{nw}"
+    s abbbacaj"Maybe having just you would be okay for Yuri or at most Monika, {w=0.5}{nw}"
     
     extend abfcbacaj"but not for me… {w=0.5}{nw}"
     extend bbegbmoaj "no offense."
@@ -885,7 +885,7 @@ label s_topics_isolation:
     s bbbcbaca"I can't even make a normal chat form for us..."
     s "So I'm still a bit isolated from you too."
     s abaabaoa "But when I find a way to {i}'hear'{/i} your world, I'll find you."
-    s abgcbaoa"And then, we'll finally be able to talk like a normal couple, {w=0.5}{nw}"
+    s abgcaoa"And then, we'll finally be able to talk like a normal couple, {w=0.5}{nw}"
     extend abgcbcoa "on the Internet or at least right here."
     
     return
@@ -906,7 +906,7 @@ init 5 python:
     )
 
 label s_topics_public_service_announcement:
-    s abbbbaca"If you ever want to spread awareness or a message to many people at once, {w=0.5}{nw}"
+    s abbbaca"If you ever want to spread awareness or a message to many people at once, {w=0.5}{nw}"
     extend abbcaoa "a PSA would be a good way to do it."
     s abhaaca "Most people don't even care about injuries that don’t happen to them..."
     s "But after seeing public service announcements, I know there are people out there who want to help."
@@ -922,7 +922,7 @@ label s_topics_public_service_announcement:
     s abbbbaaa "I think that mod really deserves to be played, {w=0.5}{nw}"
     extend gbbbbica "especially if you're struggling with similar things that I struggled with.."
     s abhfbcaa "Hey, I'm the main focus of it too so that's a plus!"
-    s abbbbaca"But depression or other emotional issues are not the only field that PSAs can be used in."
+    s abbbaca"But depression or other emotional issues are not the only field that PSAs can be used in."
     s bbhfbaba"There are a lot of other problems in your world that can't be solved with the power of leaders and governments..."
     s abhfbaaa"The general public could join the struggle against these problems..."
     s abbbbaoa"And PSAs may be a good call to action."
