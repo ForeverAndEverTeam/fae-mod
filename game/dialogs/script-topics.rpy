@@ -442,13 +442,13 @@ init 5 python:
 
 label s_player_pets:
 
-    s gbaabbda "Hmmm let me think...." 
+    s gbaabda "Hmmm let me think...." 
     s "I really like a lot of different animals, but I don't think I could properly care for anything that requires a lot of constant attention..." 
-    s bbegbcia "I'd love to have a dog, but I'd have to have the energy to keep up with it."
-    s abbcbbba "But I suppose I could keep an aquarium?"
-    s gbaablha "Wait, I think I heard from somewhere that those also take a lot of work to keep them running smoothly..."
+    s bbegcia "I'd love to have a dog, but I'd have to have the energy to keep up with it."
+    s abbcbba "But I suppose I could keep an aquarium?"
+    s gbaalha "Wait, I think I heard from somewhere that those also take a lot of work to keep them running smoothly..."
     s "..."
-    s ebgcbaea "Ohhh, I know! I could adopt an elderly cat that mostly just wants to lay around and sleep all day, just like me!"
+    s ebgcaea "Ohhh, I know! I could adopt an elderly cat that mostly just wants to lay around and sleep all day, just like me!"
     call s_player_cats from _call_s_player_cats
     return
 
