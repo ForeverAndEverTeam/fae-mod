@@ -103,6 +103,13 @@ init 0 python in fae_sky:
 
     def reload_sky(with_transition=True):
 
+        """
+        Shows the sky based on sunrise/sunset times specified in persistent.
+        
+        FEED:
+            with_transition = If True, will visually fade in the new weather
+        """
+
         form_sky(WEATHER_SUNNY, with_transition=with_transition)
     
 
