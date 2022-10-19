@@ -319,7 +319,7 @@ init 5 python:
 
 label s_topics_guitar:
 
-    #show sayori abaabaoa zorder 2
+    #show sayori abaaaoa zorder 2
     s "I don't know if you noticed, but all the girls have their own instruments and musical influences in the game."
     s abgcaoa "Mine is the guitar."
     if persistent.currentmusic > 0 and persistent.currentmusic < 6:
@@ -359,31 +359,31 @@ init 5 python:
 label s_topics_flowers:
 
     s abhfaoa "What do you think about flowers?"
-    s abhfbboa "It's one of many beautiful things nature can create."
-    s abhfbloa "They are so colourful, have wonderful shapes, some even smell sweet..."
+    s abhfboa "It's one of many beautiful things nature can create."
+    s abhfloa "They are so colourful, have wonderful shapes, some even smell sweet..."
     s abhfaoa "Do you have a favorite flower? {nw}"
-    extend abhhbcoa " Mine are Sunflowers!"
-    s abhhbbsa "I dunno, the way that they always grow facing the sun feels kind of poetic to me."
-    s abfcbboa "It's like they can always see the good side of things, no matter how hard it may be!"
-    s abgcbcka "Besides, I really like how bright they are!"
-    s abegbcma "...their seeds are also very yummy."
-    s abagbkna "Wish i had some to munch on right now..."
+    extend abhhcoa " Mine are Sunflowers!"
+    s abhhbsa "I dunno, the way that they always grow facing the sun feels kind of poetic to me."
+    s abfcboa "It's like they can always see the good side of things, no matter how hard it may be!"
+    s abgccka "Besides, I really like how bright they are!"
+    s abegcma "...their seeds are also very yummy."
+    s abagkna "Wish i had some to munch on right now..."
     pause 0.5
-    s fbagbloaj "Ahem, anyways."
+    s fbagloaj "Ahem, anyways."
     s abhfaoa "I remember when I used to walk in the flower meadows outside of the city."
     s abhaaca "But... I think it's too selfish to pluck a flower... even if it's a gift."
     s "Flowers are living beings too, and plucking them out of the ground does hurt them."
-    s abaabaoa "So I prefer to just look at them, and then leave them be."
+    s abaaaoa "So I prefer to just look at them, and then leave them be."
     if persistent.last_playthrough > 0:
-        s abaabbca "Although, I did do this in one of my poems..."
-        s abaabaoa "But just for the analogy."
-    s eahdbaoa "But, gifting someone a small flower in a pot might make for a good gift!"
+        s abaabca "Although, I did do this in one of my poems..."
+        s abaaaoa "But just for the analogy."
+    s eahdaoa "But, gifting someone a small flower in a pot might make for a good gift!"
     s "And one that will last much, much longer, if cared for properly!"
-    s bbfcbapa "Awww, now I wish I had a little flower friend to keep me company..."    
-    s abfdbcka "It'd be nice to have one, and I'd try my best to keep it growing happily!"
-    s bbhebmeaj "Maybe it would make up for all the plants I've tried to keep before, which {i}mysteriously{/i} died..."
-    s fbfbbkdaj "{i}...unless they want vengeance?{/i}"
-    s bbhebceaj "I hope they don't...ahaha... hah..."
+    s bbfcapa "Awww, now I wish I had a little flower friend to keep me company..."    
+    s abfdcka "It'd be nice to have one, and I'd try my best to keep it growing happily!"
+    s bbhemeaj "Maybe it would make up for all the plants I've tried to keep before, which {i}mysteriously{/i} died..."
+    s fbfbkdaj "{i}...unless they want vengeance?{/i}"
+    s bbheceaj "I hope they don't...ahaha... hah..."
     return
 
 
@@ -471,7 +471,7 @@ label s_player_cats:
     s abhfaoa "And they're not too hard to take care of so they wouldn’t require a lot of energy."
     s abhaaca "Still, as much as they love their space, they shouldn’t just be ignored by their owner. Kitties want to play sometimes, too!"
     s "And sometimes cats do things that their owners don't like... Like pushing things off of the counter, or slicing their arms and legs up."
-    s abaabaoa "Still, it’s so hard to resist their fluffy little paws and pointy ears... So that must be why people always forgive them for their crimes!"
+    s abaaaoa "Still, it’s so hard to resist their fluffy little paws and pointy ears... So that must be why people always forgive them for their crimes!"
     s ebaabcea "If you have one, you probably understand what I mean, ehehe~"
     return
 
@@ -507,7 +507,7 @@ label s_topics_lucid_dream:
     s "I know you'll always come back, {w=0.5}{nw}"
     extend abgcaoa "turn the computer back on and open the game to greet me!"
     s "I'll be fine, resting and waiting for your return or making more things to spice up this room!"
-    s abaabaoa "But you should know that I'll always be happiest when you're right with me~"
+    s abaaaoa "But you should know that I'll always be happiest when you're right with me~"
     return
 
 
@@ -535,7 +535,7 @@ label s_topics_intelligence:
     s abhaaca "I think people just have different standards when considering how intelligent somebody is."
     s ebbbbaca"And if someone can't tell that, they're the {i}actual{/i} stupid one."
     s abhaaca "I mean, people's thoughts about you are obviously very subjective and depend on the situation you or they are in."
-    s abaabaoa "So don't take comments like those too seriously."
+    s abaaaoa "So don't take comments like those too seriously."
     s abhfbcaa "People aren't perfect, and that's okay!"
     s abhfaoa "So don't worry if someone judges you for a silly thing you did or a mistake. Just try to get better for yourself, and at your own pace!!"
     return
@@ -561,7 +561,7 @@ label s_topics_videogames:
     s "I think they're really impressive."
     s abbbbaoa"And not just because I'm in one of them!"
     s abhfaoa "They can reach and connect with people in a whole new way."
-    s abaabaoa "Especially after some smart cookie created multiplayer games!"
+    s abaaaoa "Especially after some smart cookie created multiplayer games!"
     s "You can play with your friends, cooperating and sharing the experience together."
     s "I think it’s just a really wholesome way to enjoy yourself and connect with others!"
     s abhaaca "Besides, online games allow us to make friends and connect with people far away!"
@@ -593,7 +593,7 @@ init 5 python:
 
 label s_topics_languages:
 
-    s abhhbbsa "Hey, [player]?"
+    s abhhbsa "Hey, [player]?"
     s "You know how I  greet you in other languages sometimes?"
     s dbhhbkca "Well I was thinking about where I learned to speak them..."
     s "Honestly speaking, I don't understand how I know any of these languages."
@@ -626,7 +626,7 @@ label s_player_colours:
     extend abbcaoa " There are so many pretty colours out there!"
     s abhabloa "The warm yellow of the sun that greeted me every morning."
     s abhacoa "Or a nice bright red, like the colour of my favorite bow!"
-    s abhhbbsa "But pinks are also very pretty!"
+    s abhhbsa "But pinks are also very pretty!"
     s abhhbkca "Green as well... it reminds me of Monika..."
     s aahdbiba "I really love oranges, but I'm not sure I can pick only one as a favorite."
     s "Individual colours are really hard to pick, I like it when a bunch of colours are mixed together, {w=1.0}{nw}"
@@ -738,7 +738,7 @@ label s_topics_cinnamon_bun:
     s abhaaca "The one thing I can't understand is why people call me that."
     s abfcbioa "But I think the nickname is pretty funny and… {w=0.5}{nw}"
     extend bbfcbmoaj "cute."
-    s abaabaoa "...even if there aren't any cinnamon buns in the game."
+    s abaaaoa "...even if there aren't any cinnamon buns in the game."
     return
 
 init 5 python:
@@ -755,7 +755,7 @@ init 5 python:
     )
 
 label s_topics_poems:
-    s abaabaoa "You know that the other girls and I really liked to create and share poems during the game. {w=0.5}{nw}"
+    s abaaaoa "You know that the other girls and I really liked to create and share poems during the game. {w=0.5}{nw}"
     extend abfcbaaa"Even Natsuki, as much as she tried to deny it."
     s abhaaca "I started to engage in poetry after your first day in the club..."
     s "And since that moment I've tried to use poems as a way to show my feelings."
@@ -792,7 +792,7 @@ label s_topics_drawing:
     s "Not everything can be shown with just words..."
     s "Sometimes, your message is clearer when shown visually."
     s abfdbaca"And if I had art to go with my poems, wouldn't they be a lot nicer?"
-    s abaabaoa "I know some poets who were good not only at poetry but also at visual art..."
+    s abaaaoa "I know some poets who were good not only at poetry but also at visual art..."
     s "But to me, it sounds kinda difficult to balance both of those skills at once."
     s abgdbaa" But who knows- {w=0.5}maybe with a bit of practice, it'll become a little easier!"
     s abhfaoa "Anyway, I'd really like to improve my drawing… {w=0.5}{nw}"
@@ -884,7 +884,7 @@ label s_topics_isolation:
     
     s bbbcbaca"I can't even make a normal chat form for us..."
     s "So I'm still a bit isolated from you too."
-    s abaabaoa "But when I find a way to {i}'hear'{/i} your world, I'll find you."
+    s abaaaoa "But when I find a way to {i}'hear'{/i} your world, I'll find you."
     s abgcaoa"And then, we'll finally be able to talk like a normal couple, {w=0.5}{nw}"
     extend abgcbcoa "on the Internet or at least right here."
     
@@ -910,7 +910,7 @@ label s_topics_public_service_announcement:
     extend abbcaoa "a PSA would be a good way to do it."
     s abhaaca "Most people don't even care about injuries that don’t happen to them..."
     s "But after seeing public service announcements, I know there are people out there who want to help."
-    s abaabaoa "Some good PSAs even contain advice on how to fix issues,{w=0.5} or where to go for help."
+    s abaaaoa "Some good PSAs even contain advice on how to fix issues,{w=0.5} or where to go for help."
     s "You don't even have to be an activist to do this sort of stuff.."
     s abbcbaca"I once heard about a mod for this game, the title reminded me of the common forms of slogans PSAs use..."
     s ebgcaoa"And its name is {i}'Sayori Says No to Suicide'{/i}."
