@@ -595,14 +595,14 @@ label s_topics_languages:
 
     s abhhbsa "Hey, [player]?"
     s "You know how I  greet you in other languages sometimes?"
-    s dbhhbkca "Well I was thinking about where I learned to speak them..."
+    s dbhhkca "Well I was thinking about where I learned to speak them..."
     s "Honestly speaking, I don't understand how I know any of these languages."
-    s ebbbbasa "I think language works a bit differently here than it does for you."
+    s ebbbasa "I think language works a bit differently here than it does for you."
     s fbhalhaj "It's- Hmmm..."
-    s dbhabbcaj "It's similar to dreaming, I guess? {w=0.5}{nw}"
-    extend dbhabbda "It's not like I'm speaking in any language in particular, the code just seems to write itself for me when I talk."
-    s bbhebciaj "But, let's get into that another time. It's kinda complicated to talk about, you know?" 
-    s abagbdea "Anyway, The more languages you can speak, the more friends you can make, right?"
+    s dbhabcaj "It's similar to dreaming, I guess? {w=0.5}{nw}"
+    extend dbhabda "It's not like I'm speaking in any language in particular, the code just seems to write itself for me when I talk."
+    s bbheciaj "But, let's get into that another time. It's kinda complicated to talk about, you know?" 
+    s abagdea "Anyway, The more languages you can speak, the more friends you can make, right?"
     return
 
 
