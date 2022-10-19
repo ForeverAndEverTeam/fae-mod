@@ -912,20 +912,20 @@ label s_topics_public_service_announcement:
     s "But after seeing public service announcements, I know there are people out there who want to help."
     s abaaaoa "Some good PSAs even contain advice on how to fix issues,{w=0.5} or where to go for help."
     s "You don't even have to be an activist to do this sort of stuff.."
-    s abbcbaca"I once heard about a mod for this game, the title reminded me of the common forms of slogans PSAs use..."
-    s ebgcaoa"And its name is {i}'Sayori Says No to Suicide'{/i}."
+    s abbcaca "I once heard about a mod for this game, the title reminded me of the common forms of slogans PSAs use..."
+    s ebgcaoa "And its name is {i}'Sayori Says No to Suicide'{/i}."
     if persistent.last_playthrough == 0:
-        s abbbbbca"That refers to what's supposed to happen to me in this world… {w=0.5}{nw}"
+        s abbbbca "That refers to what's supposed to happen to me in this world… {w=0.5}{nw}"
         extend abhaaca "...but didn't happen, because of you."
     else:
         s abhaaca "...And other people playing this mod."
     s abbbaaa "I think that mod really deserves to be played, {w=0.5}{nw}"
-    extend gbbbbica "especially if you're struggling with similar things that I struggled with.."
+    extend gbbbica "especially if you're struggling with similar things that I struggled with.."
     s abhfcaa "Hey, I'm the main focus of it too so that's a plus!"
-    s abbbaca"But depression or other emotional issues are not the only field that PSAs can be used in."
-    s bbhfbaba"There are a lot of other problems in your world that can't be solved with the power of leaders and governments..."
-    s abhfbaaa"The general public could join the struggle against these problems..."
-    s abbbaoa"And PSAs may be a good call to action."
+    s abbbaca "But depression or other emotional issues are not the only field that PSAs can be used in."
+    s bbhfaba "There are a lot of other problems in your world that can't be solved with the power of leaders and governments..."
+    s abhfaaa "The general public could join the struggle against these problems..."
+    s abbbaoa "And PSAs may be a good call to action."
     return
 
 
