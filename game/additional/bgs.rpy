@@ -188,6 +188,10 @@ init -20 python:
             """
             Checks if it's day at the moment
 
+            RESULT 
+                True if day
+                Otherwise False
+
             """
 
             return self.fae_sunup <= datetime.datetime.now().time() < self.fae_sundown
