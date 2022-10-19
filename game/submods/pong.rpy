@@ -639,7 +639,7 @@ label fae_pong_dlg_winner:
                             s "Are you {i}sure?{/i}{fast}"
 
                             "Yes":
-                                call fae_pong_dlg_sorry_assuming
+                                call fae_pong_dlg_sorry_assuming from _call_fae_pong_dlg_sorry_assuming
 
                             "No":
                                 s "[player]!"
@@ -648,7 +648,7 @@ label fae_pong_dlg_winner:
                                 $ lose_on_purpose = True
 
                     else:
-                        call fae_pong_dlg_sorry_assuming
+                        call fae_pong_dlg_sorry_assuming from _call_fae_pong_dlg_sorry_assuming_1
         else:
             if player_lets_sayori_win_on_purpose:
                 s "Aren't you getting tired of letting me win, [player]?"
@@ -823,7 +823,7 @@ label fae_pong_dlg_winner:
 
 
 
-label mas_pong_dlg_sorry_assuming:
+label fae_pong_dlg_sorry_assuming:
     s "Alright."
     s "I'm sorry for assuming..."
 
@@ -841,7 +841,7 @@ label mas_pong_dlg_sorry_assuming:
             s "Let me know when you're ready to play again."
 
             #Set this var so Monika knows you're ready to play again
-            $ mas_pong_taking_break = True
+            $ fae_pong_taking_break = True
 
             #Dissolve into idle poses
             show sayori idle with dissolve
@@ -852,7 +852,7 @@ label mas_pong_dlg_sorry_assuming:
             s "Keep going, you'll beat me soon!"
     return
 
-label mas_pong_dlg_loser:
+label fae_pong_dlg_loser:
     # adapts the dialog, depending on the difficulty, game length (bounces), games losses, wins and dialog response.
     # the order of the dialog is crucial, the first matching condition is chosen, other possible dialog is cancelled in the process.
     # todo: adapt dialog to affection
@@ -878,7 +878,7 @@ label mas_pong_dlg_loser:
         $ pong_sayori_last_response_id = PONG_SAYORI_RESPONSE_LOSE_WITHOUT_HITTING_BALL
 
     #Player starts playing seriously and wins after losing at least 3 times on purpose
-    elif instant_loss_streak_counter_before >= 3 and persistent._mas_pm_ever_let_sayori_win_on_purpose:
+    elif instant_loss_streak_counter_before >= 3 and persistent._fae_pm_ever_let_sayori_win_on_purpose:
         s "Playing serious now, are we?~"
         s "Let's find out how good you really are, [player]!"
 
@@ -1034,24 +1034,24 @@ label mas_pong_dlg_loser:
     return
 
 
-label mas_pong_dlg_loser_fast:
+label fae_pong_dlg_loser_fast:
     s "Alright, [player]."
     s "But I'll beat you next time."
 
-    $ persistent._mas_pong_difficulty_change_next_game = PONG_DIFFICULTY_POWERUP;
-    $ persistent._mas_pong_difficulty_change_next_game_date = datetime.date.today()
+    $ persistent._fae_pong_difficulty_change_next_game = PONG_DIFFICULTY_POWERUP;
+    $ persistent._fae_pong_difficulty_change_next_game_date = datetime.date.today()
     return
 
 #Quick Moni win dlg
-label mas_pong_dlg_winner_fast:
+label fae_pong_dlg_winner_fast:
     s "Alright, [player]. Thanks for playing Pong with me."
     s "I had a lot of fun! Let's play again sometime soon, okay?"
 
-    $ persistent._mas_pong_difficulty_change_next_game = PONG_DIFFICULTY_POWERDOWN;
+    $ persistent._fae_pong_difficulty_change_next_game = PONG_DIFFICULTY_POWERDOWN;
     return
 
 #Post dlg Moni lose
-label mas_pong_dlg_loser_end:
+label fae_pong_dlg_loser_end:
     s "Wow, I was really trying that time."
     s "You must have really been practicing to get so good."
     s "I guess you wanted to impress me, [player]."
@@ -1059,7 +1059,7 @@ label mas_pong_dlg_loser_end:
     return
 
 #Post dlg Moni win
-label mas_pong_dlg_winner_end:
+label fae_pong_dlg_winner_end:
     s "I can't really get excited for a game this simple..."
     s "But at least it's still fun to play."
     s "Especially with you, [player]."
