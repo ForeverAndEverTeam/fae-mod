@@ -53,6 +53,7 @@ init 0 python in fae_sky:
     # V SAYORI
     # V BACKGROUND
     # V DIM
+    # SKY
     _DIM_Z_ORDER = 2
     _CLOUDS_Z_ORDER = -1
     _SKY_Z_ORDER = -2
