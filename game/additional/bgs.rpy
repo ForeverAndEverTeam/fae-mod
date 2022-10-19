@@ -247,12 +247,13 @@ init -20 python:
         
         def is_seeing_day(self):
             """
-            Check if we need to reset the room
+            Check if we're showing the day room
             """
 
             return self.__is_seeing_day
         
         def reset_checker(self):
+
 
             if self.is_daytime() and self.__is_seeing_day is False:
                 self.__is_seeing_day = True
