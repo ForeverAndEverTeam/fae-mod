@@ -39,6 +39,8 @@ define config.has_music = True
 # This configures whether your mod has voices.
 define config.has_voice = False
 
+define config.rollback_enabled = False
+
 # This configures what music will play when you launch your mod and in the 
 # main menu.
 define config.main_menu_music = audio.s1
