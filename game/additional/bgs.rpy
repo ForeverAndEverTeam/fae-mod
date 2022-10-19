@@ -139,6 +139,7 @@ init -20 python:
             self.fae_sunup = datetime.time(fae_sunup)
             self.fae_sundown = datetime.time(fae_sundown)
 
+            # State
             self.__is_seeing_day = self.is_daytime()
 
             self.day_to_night_switch = FAEEvent()
