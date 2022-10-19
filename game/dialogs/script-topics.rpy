@@ -622,25 +622,25 @@ init 5 python:
 )
 
 label s_player_colours:
-    s abgcbbda "That's a hard one.{nw}"
+    s abgcbda "That's a hard one.{nw}"
     extend abbcaoa " There are so many pretty colours out there!"
-    s abhabloa "The warm yellow of the sun that greeted me every morning."
+    s abhaloa "The warm yellow of the sun that greeted me every morning."
     s abhacoa "Or a nice bright red, like the colour of my favorite bow!"
     s abhhbsa "But pinks are also very pretty!"
-    s abhhbkca "Green as well... it reminds me of Monika..."
-    s aahdbiba "I really love oranges, but I'm not sure I can pick only one as a favorite."
+    s abhhkca "Green as well... it reminds me of Monika..."
+    s aahdiba "I really love oranges, but I'm not sure I can pick only one as a favorite."
     s "Individual colours are really hard to pick, I like it when a bunch of colours are mixed together, {w=1.0}{nw}"
     extend abhfaoa " like the sky at different times of day, for example!"
-    s abhebcqa "I would pick rainbow, but that's probably cheating, ehehe~"
-    s abhfbaja "Am I allowed to pick a range of colours instead of just one?"
-    s abhfbcoa "Cause if I am, maybe I'd pick blue. I like pretty much all shades of blue!"
-    s ebhfbloa "The nice gentle sky blue... or the really dark purply blue from when it starts to turn dark...{nw}"
-    extend abgcbnoa " and that pretty greenish blue from tropical beaches, too! They're all soooo pretty!"
-    s abgcbmeaj "It may not be a proper one colour answer, but hey, {nw}"
-    extend abbbbdia "maybe we should start advocating for colour equality!"
+    s abhecqa "I would pick rainbow, but that's probably cheating, ehehe~"
+    s abhfaja "Am I allowed to pick a range of colours instead of just one?"
+    s abhfcoa "Cause if I am, maybe I'd pick blue. I like pretty much all shades of blue!"
+    s ebhfloa "The nice gentle sky blue... or the really dark purply blue from when it starts to turn dark...{nw}"
+    extend abgcnoa " and that pretty greenish blue from tropical beaches, too! They're all soooo pretty!"
+    s abgcmeaj "It may not be a proper one colour answer, but hey, {nw}"
+    extend abbbdia "maybe we should start advocating for colour equality!"
     pause 1.0
-    s gbbbbbca "...except for that weird greenish gray mixture. {w=1.0}{nw}"
-    extend ebhabodaj "That colour sucks."
+    s gbbbbca "...except for that weird greenish gray mixture. {w=1.0}{nw}"
+    extend ebhaodaj "That colour sucks."
  
     return
 
@@ -692,7 +692,7 @@ init 5 python:
 label s_topics_dating:
     s abhfaoa "What would our first date be like?"
     s abhfcaa "What's with the look? Ehehe~"
-    s abgcbnoa "Maybe we could go to a good café, and eat together!."
+    s abgcnoa "Maybe we could go to a good café, and eat together!."
     s abgcbkma "Like cakes, or cinnamon buns~"
     s abfdbkoa "Then we could go somewhere interesting!"
     s abhaaca "Maybe to the movies? What do you think?"
