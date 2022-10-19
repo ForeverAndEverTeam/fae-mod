@@ -257,7 +257,7 @@ init -20 python:
             Check if we need to reset for time change.
             """
 
-
+            # If it's day and we're showing the night room, we need to reset
             if self.is_daytime() and self.__is_seeing_day is False:
                 self.__is_seeing_day = True
                 self.form(dissolve_all=True)
