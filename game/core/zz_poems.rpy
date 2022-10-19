@@ -29,7 +29,7 @@ init python in fae_poems:
 
     def poem_unlocked():
 
-        return len(store.persistent._seen_poems) > 0
+        return len(store.persistent._fae_seen_poems) > 0
 
 init 11 python in fae_poems:
     import store
@@ -136,11 +136,11 @@ init 10 python:
         
         def is_seen(self):
 
-            return self.poem_code in store.persistent._seen_poems
+            return self.poem_code in store.persistent._fae_seen_poems
 
         def seen_no(self):
 
-            return store.persistent._seen_poems.get(self.poem_code, 0)
+            return store.persistent._fae_seen_poems.get(self.poem_code, 0)
 
 
 
@@ -185,16 +185,16 @@ label fae_showpoem(poem=None, paper=None, post_label=None):
     window auto
     
     if post_label and renpy.has_label(post_label):
-        call expression post_label# from _call_expression_1
+        call expression post_label from _call_expression_1# from _call_expression_1
 
     
 
     if is_faepoem and poem.prompt:
 
-        if poem.poem_code in persistent._seen_poems:
-            $ persistent._seen_poems[poem.poem_code] += 1
+        if poem.poem_code in persistent._fae_seen_poems:
+            $ persistent._fae_seen_poems[poem.poem_code] += 1
         else:
-            $ persistent._seen_poems[poem.poem_code] = 1
+            $ persistent._fae_seen_poems[poem.poem_code] = 1
     return
 
 
@@ -205,9 +205,9 @@ init 5 python:
             persistent._chat_db,
             label="poem_redux",
             unlocked=True,
-            prompt="Can I read a poem?",
+            prompt="Let's talk about a poem",
             random=False,
-            category=["poetry"]
+            category=["Poetry"]
         ),
         chat_group=CHAT_GROUP_NORMAL
     )
