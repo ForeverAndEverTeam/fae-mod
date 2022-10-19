@@ -40,30 +40,30 @@ label s_poems_bottles:
 
 label s_poems_flower:
     s abhfbca "You might have already guessed, but, this poem is about the way I felt when dealing with my depression."
-    s bbhfbmda  "I used to constantly try to find things to look forward to and be happy about, until I felt like I was running out of those, I guess."
+    s bbhfmda  "I used to constantly try to find things to look forward to and be happy about, until I felt like I was running out of those, I guess."
     s bbhfmoaj "It feels kind of weird now, {w=0.5}{nw}"
-    extend bbbcaaaj"reflecting on my perspective during those times."
-    s nbhfblca "After being depressed for so long, {w=0.5}{nw}"
-    extend nbbbbica "I began to see my future and all aspects of my life as an empty wasteland, and nothing more than that."
-    s bbfdbmoa "I would pick all of the flowers I could see, {w=0.5}{nw}"
-    extend bbfdbjaa"handing them to the people around me."
-    s nbhfblca"I never allowed myself to enjoy them, {w=0.5}{nw}"
-    extend bbgbbaca "nor did I give them time to grow back and bloom again."
-    s abhabbba "This poem feels even sadder now, {w=0.5}{nw}"
-    extend bbhabbca "because even when there was a big meadow of flowers, {w=0.5}{nw}"
-    extend bbhabcoaj "I simply couldn't see their worth..."
+    extend bbbcaaaj "reflecting on my perspective during those times."
+    s nbhflca "After being depressed for so long, {w=0.5}{nw}"
+    extend nbbbica "I began to see my future and all aspects of my life as an empty wasteland, and nothing more than that."
+    s bbfdmoa "I would pick all of the flowers I could see, {w=0.5}{nw}"
+    extend bbfdjaa "handing them to the people around me."
+    s nbhflca "I never allowed myself to enjoy them, {w=0.5}{nw}"
+    extend bbgbaca "nor did I give them time to grow back and bloom again."
+    s abhabba "This poem feels even sadder now, {w=0.5}{nw}"
+    extend bbhabca "because even when there was a big meadow of flowers, {w=0.5}{nw}"
+    extend bbhacoaj "I simply couldn't see their worth..."
     s "It really goes to show how dark of a place I was in back then, especially as I kept wasting those joyous moments."
-    s bbhebjoa "That's why I regret being silent about it for that long. {w=0.5}{nw}"
-    extend bbhebmba "I thought the only real joy was the one I got out of making other people happy."
-    show sayori nbagblfa at t11
+    s bbhejoa "That's why I regret being silent about it for that long. {w=0.5}{nw}"
+    extend bbhemba "I thought the only real joy was the one I got out of making other people happy."
+    show sayori nbaglfa at t11
     pause 1
-    s bbagblfag "Why does it still hurt so much?"
+    s bbaglfag "Why does it still hurt so much?"
     s "Even after being freed from my blindness…"
     pause 1
-    s bbagbdoag "Oops! I think my flowers might not have fully grown back just yet! Sorry, [player]."
+    s bbagdoag "Oops! I think my flowers might not have fully grown back just yet! Sorry, [player]."
     pause 0.5
-    s bbagbmoa "Maybe I just need to give them some more time."
-    s bbbcbcia "I'll just keep watering them in the meantime, ehehe~"
+    s bbagmoa "Maybe I just need to give them some more time."
+    s bbbccia "I'll just keep watering them in the meantime, ehehe~"
     return
 
 label s_poems_last:
@@ -86,7 +86,7 @@ label s_poems_last:
     extend bbgcbjca "but they still haunt me even now."
     s bbbbbmca "I still remember almost everything I felt back then."
     s "And this poem makes me feel as if it's happening all over again.{w=0.5}{nw}" 
-    extend bbfdbjaa "Of course the feeling isn't as strong now, but it's still not easy to read it."
+    extend bbfdjaa "Of course the feeling isn't as strong now, but it's still not easy to read it."
     show sayori gbhablf at t11
     pause 1
     s bbhabmca "I don't really know how to feel about everything that happened, if I'm being honest..."
@@ -123,7 +123,7 @@ label s_poems_fruits:
     s abagbboa "But if someone feels really upset about something, it's nice to try to share a more hopeful perspective for them to make them feel better about it. {w=0.5}{nw}"
     extend abgcaaa "So, that's what I did for the people around me!"
     s abagaca "And I still do it, but not nearly as often as before. It can get pretty lonely, you know?" 
-    s bbagbmoa "Always being that beacon in someone else's life, while letting yourself sink deeper and deeper in your own problems."
+    s bbagmoa "Always being that beacon in someone else's life, while letting yourself sink deeper and deeper in your own problems."
     s abagbdia "But for once, I don't feel the need to put myself below anyone… {w=0.5}{nw}"
     extend abgcbcob"It actually kind of feels like you're the one being that beacon of hope instead of me"
     s bbagbbab "So thank you, [player], for always being there for me."
