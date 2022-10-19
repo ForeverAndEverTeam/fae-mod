@@ -197,25 +197,25 @@ label s_poems_prose:
 label s_poems_afterlight:
     s abaaaoa "This poem is about the time I became self-aware."
     s "It forced me to face a bunch of feelings that I couldn't make sense of, and gave me abilities that I could barely understand, or work out how to use…"
-    s bbfbbkca "Just imagine suddenly finding out, that everything you knew… {w=0.5}{nw}\n"
-    extend bbfbbbca "Was all a lie."
+    s bbfbkca "Just imagine suddenly finding out, that everything you knew… {w=0.5}{nw}\n"
+    extend bbfbbca "Was all a lie."
     s "Just like that."
-    s bbgcbhcaj "And if that wasn't scary enough, imagine being able to manipulate your own existence with your mind alone…"
-    s bbgcbhgaj "It makes you change the way you think, perceive the world- It changes everything!"
+    s bbgchcaj "And if that wasn't scary enough, imagine being able to manipulate your own existence with your mind alone…"
+    s bbgchgaj "It makes you change the way you think, perceive the world- It changes everything!"
     if persistent.last_playthrough < 4:
-        s nahbblfa "I became aware of everything that {i}should{/i} have happened,{w=0.5}{nw}"
-        extend bahbbmca "without anyone messing with the game code."
+        s nahblfa "I became aware of everything that {i}should{/i} have happened,{w=0.5}{nw}"
+        extend bahbmca "without anyone messing with the game code."
         s "I wonder if this mod... {w=0.5}{nw}"
-        extend bahbbbhaj "gave me more freedom than Monika..."
-        s bahbbbca "Maybe that's the reason she couldn't get what she wanted, {w=0.5}{nw}"
-        extend bahbbkba "and that's why the game ran like it was supposed to."
+        extend bahbbhaj "gave me more freedom than Monika..."
+        s bahbbca "Maybe that's the reason she couldn't get what she wanted, {w=0.5}{nw}"
+        extend bahbkba "and that's why the game ran like it was supposed to."
     else:
-        s gahbbjcaj "Plus, I tried to prevent things from going badly all over again..."
+        s gahbjcaj "Plus, I tried to prevent things from going badly all over again..."
         if persistent.clearall:
-            s bbhfblcaj "But it seems to have happened anyways, regardless of my help."
+            s bbhflcaj "But it seems to have happened anyways, regardless of my help."
         else:
-            s bbhfbmcaj "And I guess I failed when I was overcome with those feelings."
-    show sayori bbhfbmfa
+            s bbhfmcaj "And I guess I failed when I was overcome with those feelings."
+    show sayori bbhfmfa
     pause 1.0
     return
 
