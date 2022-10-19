@@ -91,7 +91,7 @@ init -20 python:
             if not renpy.loadable(night_path):
                 raise Exception("[ERROR]: Nighttime image ('{0}') is not loadable.".format(night_path))
 
-            
+            # Create object
             self.id = id
 
             self.daytime_tag = "{0}_day".format(id)
