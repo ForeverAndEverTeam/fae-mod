@@ -300,6 +300,8 @@ init 0 python:
     # Register the event handler
     main_background.select_room(spaceroom)
 
+    # Run the appropriate eventhandler
+    # If it's day, we need to run the switch and vice versa
     if main_background.is_daytime():
         main_background.night_to_day_switch()
     
