@@ -68,6 +68,16 @@ init 0 python in fae_sky:
             night_sky_image,
             dim_image=None,
         ):
+            """
+            Initializes a new instance of weather.
+
+            FEED:
+                day_sky_image = name of image to show for the weather event
+                evening_sky_image = name of image to show for evening
+                night_sky_image = name of the image to show for evening
+                dim_image = name of dimming effect to use
+            """
+
 
             self.day_sky_image = day_sky_image
             self.evening_sky_image = evening_sky_image
