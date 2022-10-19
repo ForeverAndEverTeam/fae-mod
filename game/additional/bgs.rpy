@@ -168,6 +168,14 @@ init -20 python:
         
         def room_switcher(self, new_room, **kwargs):
 
+            """
+            Changer for location
+
+            FEED:
+                new_location = new location
+            
+            """
+
             if self.room.when_leave is not None:
 
                 self.room.when_leave(new_room, **kwargs)
