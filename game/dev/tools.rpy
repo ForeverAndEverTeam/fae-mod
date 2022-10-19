@@ -79,4 +79,4 @@ init -1 python in fae_dev_tools:
         }
 
     
-
+$ renpy.config.allow_skipping = True
