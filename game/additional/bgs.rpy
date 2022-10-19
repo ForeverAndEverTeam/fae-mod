@@ -96,7 +96,7 @@ init -20 python:
 
             # Make Daytime tag
             self.daytime_tag = "{0}_day".format(id)
-
+            # Nighttime tag
             self.nighttime_tag = "{0}_night".format(id)
 
             renpy.display.image.images.update({
