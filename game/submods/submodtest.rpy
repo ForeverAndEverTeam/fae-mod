@@ -51,8 +51,25 @@ init 5 python:
 
 label submod_chess:
 
-    call game_chess
+    call game_chess from _call_game_chess
 
     return
 
 
+init 5 python:
+    chatReg(
+        Chat(
+            persistent._chat_db,
+            label="submod_pong",
+            unlocked=True,
+            prompt="Submod Pong",
+            random=False,
+            category=["Game"]
+        ),
+        chat_group=CHAT_GROUP_NORMAL
+    )
+
+label submod_pong:
+
+    call game_pong from _call_game_pong
+    return
