@@ -119,7 +119,8 @@ init 0 python in fae_sky:
         Shows the specified sky with clouds/dimming effect
         FEED:
             weather = Weather to set
-            with_transition = If Tru, will fa
+            with_transition = If True, will visually fade in new weather
+        """
 
         if store.fae_is_day():
             sky_to_show = weather.day_sky_image
