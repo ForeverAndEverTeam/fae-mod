@@ -20,7 +20,7 @@ init -1 python in fae_music:
     
 
 label music_menu:
-    $ fae_globals.pia = True
+    $ Sayori.setInChat(True)
     $ music_title = "Why didn't this change?"
 
     python:
@@ -47,6 +47,7 @@ label music_menu:
         s "Something isn't right."
         $ location = fae_music.MUSIC_DIR_PLAYER
         s "If you don't remember, anything you want me to play has to be in {a=[location]}custom_bgm{/a} folder."
+        $ Sayori.setInChat(False)
         jump ch30_loop
     
     elif preferences.get_volume("music") == 0:
@@ -68,6 +69,7 @@ label music_menu:
             
             "No thanks.":
                 s "Okay."
+                $ Sayori.setInChat(False)
                 jump ch30_loop
     
     else:
@@ -78,6 +80,7 @@ label music_menu:
     show sayori idle at t11
 
     if not _return:
+        $ Sayori.isInChat(False)
         jump ch30_loop
     
 
@@ -107,6 +110,8 @@ label music_menu:
     
     $ fae_music._now_playing = music_title
     $ renpy.notify("Now playing: {0}".format(fae_music._now_playing))
+
+    $ Sayori.isInChat(False)
 
     jump ch30_loop
         
