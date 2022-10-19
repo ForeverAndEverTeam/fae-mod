@@ -60,37 +60,37 @@ init 5 python:
     )
 
 label s_mood_angry: #Angry player
-    s bbaabaca "Awh, [player]."
+    s bbaaaca "Awh, [player]."
     s "I think you should try to breathe slowly, so you calm down a little bit."
     s "I promise, no matter what's wrong, being angry won't solve the problem."
-    s bbaabcoa "It's easy to make impulsive decisions when you're mad, so let's make sure not to do that first!"
+    s bbaacoa "It's easy to make impulsive decisions when you're mad, so let's make sure not to do that first!"
     s "That way, you don't end up doing something you'll regret when you've calmed down."
-    s bbaabcoa "Do you need to vent for a bit? I'm here for you if you need to."
+    s bbaacoa "Do you need to vent for a bit? I'm here for you if you need to."
     menu:
         "Yes":
-            s abhfbcoa "Alright, I'm listening."
+            s abhfcoa "Alright, I'm listening."
             show sayori idle
             s "{w}"
-            s gbhabbfa "Yeah, I can see why that would make you angry." 
-            s bbhabica "I'm sorry that happened, [player]."
+            s gbhabfa "Yeah, I can see why that would make you angry." 
+            s bbhaica "I'm sorry that happened, [player]."
         "No":
-            s bbaabaoa "That's Alright, we can do something else."
-            s fbaablhaj "Hmmmm...lemme think..."
+            s bbaaaoa "That's Alright, we can do something else."
+            s fbaalhaj "Hmmmm...lemme think..."
             pause 0.5
-            s ebbcbaea "Oh, I know! Do you want to play a game with me? It will help distract you from whatever is making you feel like this, even if just for a little while."
+            s ebbcaea "Oh, I know! Do you want to play a game with me? It will help distract you from whatever is making you feel like this, even if just for a little while."
             menu:
                 "Yes":
-                    s fbgcbiea "Alright, give me your best!"
+                    s fbgciea "Alright, give me your best!"
                     call screen mglist
                 "No":
-                    s abfcbaca "Not in the mood? That's ok too."
-                    s bbhfbmoaj "In that case, I have one last suggestion, but it might sound a bit silly..."
-                    s ebbbbcoaj "Have you had the time to do one biiiiiig stretch today yet?"
-                    s fbgcbipbj "Hey- I know it sounds silly, but it works!!!" 
-                    s ebgcbcaa "Try getting one of those good stretches that make all the right places pop~" 
-                    s gbgcbmjaj "It really does help!"
-    s bbhabaoa "I hope you're feeling a little better, [player]."
-    s ebhabcoa "Remember, you can always come talk to me."
+                    s abfcaca "Not in the mood? That's ok too."
+                    s bbhfmoaj "In that case, I have one last suggestion, but it might sound a bit silly..."
+                    s ebbbcoaj "Have you had the time to do one biiiiiig stretch today yet?"
+                    s fbgcipbj "Hey- I know it sounds silly, but it works!!!" 
+                    s ebgccaa "Try getting one of those good stretches that make all the right places pop~" 
+                    s gbgcmjaj "It really does help!"
+    s bbhaaoa "I hope you're feeling a little better, [player]."
+    s ebhacoa "Remember, you can always come talk to me."
     return
 
 init 5 python:
@@ -110,13 +110,13 @@ label s_mood_hungry: #Hungry player
     s bbfcbaa "Aw… well I wish I could give you a cookie right now!"
     s bbhebmma "I'm sure it would be super tasty ehehe!" 
     s bbfdbmoaj "Though…{nw}"
-    extend bbfcbaaa "That wouldn’t be a very good meal now, would it?{w=1.5}{nw}" 
+    extend bbfcaaa "That wouldn’t be a very good meal now, would it?{w=1.5}{nw}" 
     extend bbfcbmoa "Sorry, ehehe~" 
-    s abhfbaaa "You should go eat something, [player]."
-    s abbcbaaa "If you have to cook something yourself, I can wait till you're done!" 
-    s abfcbaca "After all, skipping meals is a bad idea!" 
+    s abhfaaa "You should go eat something, [player]."
+    s abbcaaa "If you have to cook something yourself, I can wait till you're done!" 
+    s abfcaca "After all, skipping meals is a bad idea!" 
     s "Take as long as you need, and then let me know when you’re back!" 
-    s abhfbaoa "I'll be waiting for you, [player]." 
+    s abhfaoa "I'll be waiting for you, [player]." 
     return
 
 
@@ -137,25 +137,25 @@ label s_mood_excited: #Excited player
     s ebfbbnsa "Ohhhh! Now that's the kind of news I like to hear!"
     s ebagbkoa "I hope that's it's because you have something fun coming up soon!"
     s eahdbada "Is there anything in particular you're looking forward to?"
-    s ebhhbcqa "Ooooor~"
+    s ebhhcqa "Ooooor~"
     s ebbdbdia "Maybe, you're just excited to spend some time with me today, ehehe~" 
     s bbhebijb "Can you tell me a little bit about it? I'm curious~"
     menu:
         "Yes":
             s ebgcbnea "Yayyy! Thank you!"
-            s ebbcbcqa "Go on~"
+            s ebbccqa "Go on~"
             show sayori idle
             s "{w}"
             s abbcbnea "Ohhh, that does sound really nice!"
             s abgcbcea "I'm already excited for you, [player]!" 
-            s abhfbaoa "Thank you for telling me about it!"
+            s abhfaoa "Thank you for telling me about it!"
         "It's a secret":
             s bahcbjga " Whaaaat??? Not fair!!"
             s gbhabjja "I wanna know too! You're such a meanie..."
             pause 1.0
             s abhabdia "Just kidding!"
-            s abhfbboa "It's alright if you don't feel like telling anyone."
-            s abhfbcaa "Whatever it is that made you excited, I am glad it did! I like seeing you happy!"
-    s abhhbcoa "Knowing that you're having a good day always makes me happy, too!"
-    s abgcbcoa "Well, I hope things keep going well for you, and that today gets even better, [player]!" 
+            s abhfboa "It's alright if you don't feel like telling anyone."
+            s abhfcaa "Whatever it is that made you excited, I am glad it did! I like seeing you happy!"
+    s abhhcoa "Knowing that you're having a good day always makes me happy, too!"
+    s abgccoa "Well, I hope things keep going well for you, and that today gets even better, [player]!" 
     return
