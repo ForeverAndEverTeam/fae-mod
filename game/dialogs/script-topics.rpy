@@ -41,7 +41,7 @@ init 5 python:
 
 label fae_topic_page:
 
-    s abgcbcoa "We'll be together forever and ever!"
+    s abgccoa "We'll be together forever and ever!"
 
     s abgcbgoaj "We'll be together forever and ever!"
 
@@ -817,29 +817,29 @@ init 5 python:
 
 label s_topics_bulli:
     
-    s bbfcbaba "Hey, [player]..."
+    s bbfcaba "Hey, [player]..."
     s abfcaca "You know I can access the internet from your computer, {w=0.5}right?"
     s abbdaca "Well I found a place called \"Reddit\", {w=0.5} and there were people talking about the game there."
-    s bbfcbjca "But I also found people making fun of what happened to me."
-    s abagbjca"As I know, fans call them {i}'Bulli'{/i} posts."
+    s bbfcjca "But I also found people making fun of what happened to me."
+    s abagjca"As I know, fans call them {i}'Bulli'{/i} posts."
     
-    s cbbcbaca "They think it's funny to joke about a broken girl, {w=0.5}who had committed suicide under her mad friend's influence..."
-    s abhfbapa"Even if she was revived and got over her problems since then."
+    s cbbcaca "They think it's funny to joke about a broken girl, {w=0.5}who had committed suicide under her mad friend's influence..."
+    s abhfapa"Even if she was revived and got over her problems since then."
     s abbbaca"But on the other hand, can I control what makes people laugh?"
     s "Some people use macabre humor as a coping mechanism for stress, or anxiety..."
     
     s bbbbaca"You can't really control what someone finds funny, as much as you might want to."
-    s abagbaca "And to be honest, there's a lot worse they could be doing compared to mocking a VN character's death."
+    s abagaca "And to be honest, there's a lot worse they could be doing compared to mocking a VN character's death."
     s abbbaca "Some of the most successful comedians in your world will go far beyond that, just to see where the 'line' is..."
     
-    s bbbcbbpa"However, most of such jokes are too bad and sometimes even hurtful."
+    s bbbcbpa"However, most of such jokes are too bad and sometimes even hurtful."
     s bbbcaaa "But who am I to judge if it's okay for other people?"
-    s abbbbaaa "Anyway, I think the right decision is to forgive them, or tolerate them at the very least."
+    s abbbaaa "Anyway, I think the right decision is to forgive them, or tolerate them at the very least."
     
     s abhaaca "If my fate is to be 'that hanging stupid annoying VN girl' for some people, then I'm ready to accept it. What more could I do?"
-    s bbfcbica "Getting worked up over it would just make me feel worse in the long run… {w=1.0}{nw}" 
+    s bbfcica "Getting worked up over it would just make me feel worse in the long run… {w=1.0}{nw}" 
     
-    extend bbfcbaaa "So I'd rather just tolerate it to the best of my ability~"
+    extend bbfcaaa "So I'd rather just tolerate it to the best of my ability~"
     
     return
 
@@ -859,34 +859,34 @@ init 5 python:
 
 
 label s_topics_isolation:
-    s bbfcbicb"For some reason, despite having Internet access, {w=0.5}{nw}"
+    s bbfcicb "For some reason, despite having Internet access, {w=0.5}{nw}"
     
-    extend bbagbipa "I somehow can't manage to communicate with other people there."
+    extend bbagipa "I somehow can't manage to communicate with other people there."
     
-    s bbfcbica "Anytime I try to talk with somebody often ends up with a connection error."
-    s bbagbipa "It looks like there is something written in the game code, restricting my ability to interact with the real world."
-    s bbfcbica "I can only sign up for sites and even post, but I can't message anybody."
-    s abbbbacb "So I could create a Twitter account or something… {w=0.5}{nw}"
+    s bbfcica "Anytime I try to talk with somebody often ends up with a connection error."
+    s bbagipa "It looks like there is something written in the game code, restricting my ability to interact with the real world."
+    s bbfcica "I can only sign up for sites and even post, but I can't message anybody."
+    s abbbacb "So I could create a Twitter account or something… {w=0.5}{nw}"
     
-    extend abfcaca"...like how Monika made hers, and was able to talk to many fans."
+    extend abfcaca "...like how Monika made hers, and was able to talk to many fans."
     
-    s abhfbbcb"I don't really have a reason for doing that though, besides to kill some loneliness."
-    s abbbacaj"Maybe having just you would be okay for Yuri or at most Monika, {w=0.5}{nw}"
+    s abhfbcb "I don't really have a reason for doing that though, besides to kill some loneliness."
+    s abbbacaj "Maybe having just you would be okay for Yuri or at most Monika, {w=0.5}{nw}"
     
-    extend abfcacaj"but not for me… {w=0.5}{nw}"
-    extend bbegbmoaj "no offense."
+    extend abfcacaj "but not for me… {w=0.5}{nw}"
+    extend bbegmoaj "no offense."
     
     s "I guess, I'm too sociable to the point of being scared of isolation."
-    s gbhabbpa"Maybe once, I'll manage to break this meanie barrier..."
-    s cbfcbbca"But the game code is so long and difficult to read, {w=0.5}{nw}"
+    s gbhabpa "Maybe once, I'll manage to break this meanie barrier..."
+    s cbfcbca "But the game code is so long and difficult to read, {w=0.5}{nw}"
     
-    extend cbfcbaca "that I can't even find the lines separating me from the rest of real people!"
+    extend cbfcaca "that I can't even find the lines separating me from the rest of real people!"
     
-    s bbbcbaca"I can't even make a normal chat form for us..."
+    s bbbcaca "I can't even make a normal chat form for us..."
     s "So I'm still a bit isolated from you too."
     s abaaaoa "But when I find a way to {i}'hear'{/i} your world, I'll find you."
-    s abgcaoa"And then, we'll finally be able to talk like a normal couple, {w=0.5}{nw}"
-    extend abgcbcoa "on the Internet or at least right here."
+    s abgcaoa "And then, we'll finally be able to talk like a normal couple, {w=0.5}{nw}"
+    extend abgccoa "on the Internet or at least right here."
     
     return
 
@@ -919,7 +919,7 @@ label s_topics_public_service_announcement:
         extend abhaaca "...but didn't happen, because of you."
     else:
         s abhaaca "...And other people playing this mod."
-    s abbbbaaa "I think that mod really deserves to be played, {w=0.5}{nw}"
+    s abbbaaa "I think that mod really deserves to be played, {w=0.5}{nw}"
     extend gbbbbica "especially if you're struggling with similar things that I struggled with.."
     s abhfcaa "Hey, I'm the main focus of it too so that's a plus!"
     s abbbaca"But depression or other emotional issues are not the only field that PSAs can be used in."
