@@ -77,7 +77,7 @@ label mg_bnc:
         if persistent.cooldown >= datetime.datetime.now():
             $ persistent.cooldown = None
         else:
-            s gbaabipa "..."
+            s gbaaipa "..."
             return
     else:
         pass
@@ -138,29 +138,29 @@ label mg_bnc:
 label mg_bnc_s_comment(state = -1, restart = False): #Sayori's comment. 0 = initial, -2 = annoyed, other = state reaction
     hide screen mg_bnc_scr
     if state == 0:
-        s abaabaoa "I propose you a number of [bnc.guessed_len] digits..."
+        s abaaaoa "I propose you a number of [bnc.guessed_len] digits..."
         s "Try to guess it."
     elif state == -1:
         if restart:
-            s bbaabada "Are you giving up?"
+            s bbaaada "Are you giving up?"
         else:
-            s abaabcia "Your tries are over."
+            s abaacia "Your tries are over."
         if bnc.bulls + bnc.cows == bnc.guessed_len:
             s "You were close to the right answer."
         elif restart:
-            s abaabdaa"OK, I'll tell you the right answer."
-        s abaabloa "The right number was {i}[bnc.guessed]{/i}."
-        s ebaabcqa"Let me think of another number."
+            s abaadaa"OK, I'll tell you the right answer."
+        s abaaloa "The right number was {i}[bnc.guessed]{/i}."
+        s ebaacqa"Let me think of another number."
         $ bnc(restart = True)
     elif state == 1:
-        s abaabcoa "You're right. It was {i}[bnc.guessed]{/i}!"
-        s abaabaea "Let's play one more time."
+        s abaacoa "You're right. It was {i}[bnc.guessed]{/i}!"
+        s abaaaea "Let's play one more time."
         $bnc(restart = True)
     elif state == -2:
-        s gbaabipa "OK, you win, {i}meanie{/i}!"
+        s gbaaipa "OK, you win, {i}meanie{/i}!"
         s "I'm really annoyed right now..."
         $ mg_list.remove(bnc)
-        s gbaabbpa "So I don't want to play this game with you anymore."
+        s gbaabpa "So I don't want to play this game with you anymore."
         s "I won't lose next time."
         $ persistent.cooldown = datetime.datetime.now() + datetime.timedelta(minutes=5)
         return
