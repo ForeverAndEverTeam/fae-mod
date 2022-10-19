@@ -527,16 +527,16 @@ init 5 python:
 
 label s_topics_intelligence:
     s abhaaca "I often hear people calling me an'airhead'..."
-    s bbhababa"They often make jokes about it and reduce me to being just that..."
+    s bbhaaba"They often make jokes about it and reduce me to being just that..."
     s abhaaca "But I can't understand why they think so."
     s "Maybe because I was always daydreaming... {w=0.5}{nw}"
     extend abbbaca "and wasn't as broad-minded as Monika and Yuri."
     s abbcaoa"But I've always been pretty clever and good at strategies!"
     s abhaaca "I think people just have different standards when considering how intelligent somebody is."
-    s ebbbbaca"And if someone can't tell that, they're the {i}actual{/i} stupid one."
+    s ebbbaca"And if someone can't tell that, they're the {i}actual{/i} stupid one."
     s abhaaca "I mean, people's thoughts about you are obviously very subjective and depend on the situation you or they are in."
     s abaaaoa "So don't take comments like those too seriously."
-    s abhfbcaa "People aren't perfect, and that's okay!"
+    s abhfcaa "People aren't perfect, and that's okay!"
     s abhfaoa "So don't worry if someone judges you for a silly thing you did or a mistake. Just try to get better for yourself, and at your own pace!!"
     return
 
@@ -567,11 +567,11 @@ label s_topics_videogames:
     s abhaaca "Besides, online games allow us to make friends and connect with people far away!"
     s "I’m sure you’ve probably played some kind of co-op game before, right, [player]?"
     s "I'd love to play with you sometime!"
-    s abhfbcaa "Really makes me wish I was able to run more complex games in here..."
+    s abhfcaa "Really makes me wish I was able to run more complex games in here..."
     s "But the games we already have here will have to be enough for now!"
     s cbgcbaqa "Don't expect me to let you beat me, though!"
     s ebfdbmca "Now that I think about it, you would just be playing against a computer anyway. I'm just a bunch of code..."
-    s abhfbcaa "But I'm one of the cutest piles of code around!"
+    s abhfcaa "But I'm one of the cutest piles of code around!"
     s abhfaoa "If you ever want to play something with me..."
     s "Just press the '{i}Play{/i}' button and select a game"
     return
@@ -691,7 +691,7 @@ init 5 python:
 
 label s_topics_dating:
     s abhfaoa "What would our first date be like?"
-    s abhfbcaa "What's with the look? Ehehe~"
+    s abhfcaa "What's with the look? Ehehe~"
     s abgcbnoa "Maybe we could go to a good café, and eat together!."
     s abgcbkma "Like cakes, or cinnamon buns~"
     s abfdbkoa "Then we could go somewhere interesting!"
@@ -714,7 +714,7 @@ label s_topics_dating:
     extend abgcaoa " Maybe bowling?"
     s abhfaoa "It's a simple enough game, not too active but not too slow. I think I'd like it."
     s abbdbaaa "Well, the important thing is that the date is enjoyable for both of us, right?"
-    s abhfbcaa "I hope we can plan a nice date soon ehehehe~"
+    s abhfcaa "I hope we can plan a nice date soon ehehehe~"
     return
 
 init 5 python:
@@ -734,7 +734,7 @@ label s_topics_cinnamon_bun:
     s abhhbica "Hey, [player]..."
     s abfcbaaa "Have you ever eaten a cinnamon bun?"
     s abgcbjma"I had one once, and it was sooo goood…"
-    s abhfbcaa "I'd like to say thanks to the people who came up with such tasty buns."
+    s abhfcaa "I'd like to say thanks to the people who came up with such tasty buns."
     s abhaaca "The one thing I can't understand is why people call me that."
     s abfcbioa "But I think the nickname is pretty funny and… {w=0.5}{nw}"
     extend bbfcbmoaj "cute."
@@ -797,7 +797,7 @@ label s_topics_drawing:
     s abgdbaa" But who knows- {w=0.5}maybe with a bit of practice, it'll become a little easier!"
     s abhfaoa "Anyway, I'd really like to improve my drawing… {w=0.5}{nw}"
     extend abgdbao "and I guess I have all the time in the world to do it now, don't I?"
-    s abhfbcaa "Maybe I'll even share my art with you!"
+    s abhfcaa "Maybe I'll even share my art with you!"
     return
 
 
@@ -921,7 +921,7 @@ label s_topics_public_service_announcement:
         s abhaaca "...And other people playing this mod."
     s abbbbaaa "I think that mod really deserves to be played, {w=0.5}{nw}"
     extend gbbbbica "especially if you're struggling with similar things that I struggled with.."
-    s abhfbcaa "Hey, I'm the main focus of it too so that's a plus!"
+    s abhfcaa "Hey, I'm the main focus of it too so that's a plus!"
     s abbbaca"But depression or other emotional issues are not the only field that PSAs can be used in."
     s bbhfbaba"There are a lot of other problems in your world that can't be solved with the power of leaders and governments..."
     s abhfbaaa"The general public could join the struggle against these problems..."
