@@ -107,11 +107,11 @@ init 5 python:
 
 
 label s_mood_hungry: #Hungry player
-    s bbfcbaa "Aw… well I wish I could give you a cookie right now!"
-    s bbhebmma "I'm sure it would be super tasty ehehe!" 
-    s bbfdbmoaj "Though…{nw}"
+    s bbfcaa "Aw… well I wish I could give you a cookie right now!"
+    s bbhemma "I'm sure it would be super tasty ehehe!" 
+    s bbfdmoaj "Though…{nw}"
     extend bbfcaaa "That wouldn’t be a very good meal now, would it?{w=1.5}{nw}" 
-    extend bbfcbmoa "Sorry, ehehe~" 
+    extend bbfcmoa "Sorry, ehehe~" 
     s abhfaaa "You should go eat something, [player]."
     s abbcaaa "If you have to cook something yourself, I can wait till you're done!" 
     s abfcaca "After all, skipping meals is a bad idea!" 
