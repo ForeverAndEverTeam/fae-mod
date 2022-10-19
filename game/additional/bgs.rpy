@@ -253,6 +253,9 @@ init -20 python:
             return self.__is_seeing_day
         
         def reset_checker(self):
+            """
+            Check if we need to reset for time change.
+            """
 
 
             if self.is_daytime() and self.__is_seeing_day is False:
