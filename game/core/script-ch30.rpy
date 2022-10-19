@@ -98,12 +98,19 @@ label ch30_setup:
     $ main_background.form()
 
     $ fae_sky.reload_sky()
+
+    $ setupRPC("Setting up FaE")
+
+        #while True:
+        #    time.sleep(15)
     
     
 
     #FALL THROUGH
 
 label ch30_init:
+
+    $ setupRPC("In the spaceroom")
 
     $ persistent.autoload = "ch30_autoload"
 
@@ -206,6 +213,10 @@ label ch30_init:
     #FALL THRouGH
 
 label ch30_loop:
+
+    
+
+    
     
     show sayori idle at fae_center zorder store.fae_sprites.SAYO_ZORDER
 
