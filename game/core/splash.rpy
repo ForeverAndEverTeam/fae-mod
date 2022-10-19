@@ -346,7 +346,7 @@ label warningscreen:
 # This label checks if the save loaded matches the anti-cheat stored in the save.
 label after_load:
 
-    
+
     $ config.allow_skipping = False
     $ _dismiss_pause = config.developer
     $ persistent.ghost_menu = False
@@ -411,6 +411,7 @@ label autoload:
 # menu starts
 label before_main_menu:
 
+
     $ config.main_menu_music = audio.s1
     python:
         # Note: 'event_name': callback
@@ -433,7 +434,7 @@ label before_main_menu:
         )
         discord_rpc.update_connection()
         discord_rpc.run_callbacks()
-        
+       
     
     #$ config.main_menu_music = audio.t1
 
