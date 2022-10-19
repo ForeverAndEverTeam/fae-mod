@@ -166,17 +166,17 @@ label s_poems_angel:
     return
 
 label s_poems_leaf:
-    s abhfbbda "How do you feel about this poem?"
+    s abhfbda "How do you feel about this poem?"
     s "I think, it should flow from bittersweet to desperate and then to very happy at the end of it..."
-    s abaabaca "That's because it's a story about my life"
+    s abaaaca "That's because it's a story about my life"
     s abfcaaa"{i}'A leaf in the wind'{/i} is how I can describe the past 'me' in short:{w=0.5}{nw}"
     extend abbbaaa"I was alive as long as there was wind pushing me forward..."
-    s abaabcaa "But now, I feel much stronger than I used to feel, so I can 'fly' much further than before."
+    s abaacaa "But now, I feel much stronger than I used to feel, so I can 'fly' much further than before."
     s bbaaaoa "Well, anyway… I hope you understand what this poem means to me now, [player]."
     return
 
 label s_poems_prose:
-    s abaabaca "This poem is about my main trait, my contradictions."
+    s abaaaca "This poem is about my main trait, my contradictions."
     s bbegbmob "But I'm sure it's not only {i}me{/i} who contradicts themselves...right?"
     s abbbbhca "Even nature contradicts itself sometimes!"
     s gbhabkdaj "Is it possible to make the right choice, {w=0.5}{i}all{/i} the time?"
