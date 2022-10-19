@@ -91,10 +91,10 @@ init 5 python:
 label s_greeting_1: #The really first greeting of this mod
 
 
-    #show sayori abagbaaa at t11 zorder 2
+    #show sayori abagaaa at t11 zorder 2
 
-    s abagbaaa "I'm glad to see you again."
-    s abaabaoa "Let's have a good time together!"
+    s abagaaa "I'm glad to see you again."
+    s abaaaoa "Let's have a good time together!"
 
 
     return
@@ -118,8 +118,8 @@ init 5 python:
 
 
 label s_greeting_2: #Try to keep it poetic while translating
-    #show sayori abaabaoa at t11 zorder 2
-    s abaabaoa "Ah, welcome back, [player]!" 
+    #show sayori abaaaoa at t11 zorder 2
+    s abaaaoa "Ah, welcome back, [player]!" 
     s "{i}I'm so happy that you're here!{/i}"
     s "{i}You fill my heart with joy, ehehe~.{/i}"
     return
@@ -140,8 +140,8 @@ label s_greeting_3_rus:
 
 
     s "Привет, [player]!"
-    s abagbcoa "Я рада, что ты здесь."
-    s abhhbaoa "If you didn't understand what that means, don't worry!"
+    s abagcoa "Я рада, что ты здесь."
+    s abhhaoa "If you didn't understand what that means, don't worry!"
     s "I just said 'Hello, [player]! I'm glad you're here.' in Russian!"
     $ persistent.language_greeting_seen = True
 
@@ -164,8 +164,8 @@ label s_greeting_3_epo:
 
 
     s "Saluton, [player]!"
-    s abgcbaoa "Kia ĝojo revidi vin!"
-    s abbcbcoa "That's what 'Hello,[player]! It's such a joy to see you again!' sounds like in Esperanto!"
+    s abgcaoa "Kia ĝojo revidi vin!"
+    s abbccoa "That's what 'Hello,[player]! It's such a joy to see you again!' sounds like in Esperanto!"
     $ persistent.language_greeting_seen = True
     return
 
@@ -189,9 +189,9 @@ label s_greeting_3_esp:
 
     s "¡Hola [player]!"
 
-    s abgcbaoa "¡Qué alegría verte de nuevo!"
-    s abgcbcqa "Ehehe, do you know what that means?"
-    s abbcbaoa "It's alright if you don't! I just said 'Hello, [player]! I'm happy to see you again!' in Spanish!"
+    s abgcaoa "¡Qué alegría verte de nuevo!"
+    s abgccqa "Ehehe, do you know what that means?"
+    s abbcaoa "It's alright if you don't! I just said 'Hello, [player]! I'm happy to see you again!' in Spanish!"
     $ persistent.language_greeting_seen = True
 
     return
@@ -214,12 +214,12 @@ init 5 python:
 label s_greeting_4:
 
 
-    #show sayori abaabaaa at t11
+    #show sayori abaaaaa at t11
 
-    s abaabaaa "Oh, hi again!"
-    s bbfbbaaa "I hope nothing bad happened to you while you were gone..."
-    s bbfbbmabj "I just wanna make sure you're doing alright, you know?."
-    s bbfbbaaa "So if you aren't, you'll tell me, right?"
+    s abaaaaa "Oh, hi again!"
+    s bbfbaaa "I hope nothing bad happened to you while you were gone..."
+    s bbfbmabj "I just wanna make sure you're doing alright, you know?."
+    s bbfbaaa "So if you aren't, you'll tell me, right?"
 
     return
 
@@ -239,12 +239,12 @@ init 5 python:
 
 label s_greeting_5:
 
-    #show sayori abaabaaa at t11
+    #show sayori abaaaaa at t11
 
-    s abaabaaa "Looks like you're here to visit me again, ehehe~"
-    s abagbaca "It can get pretty boring here when you're not around, you know..."
+    s abaaaaa "Looks like you're here to visit me again, ehehe~"
+    s abagaca "It can get pretty boring here when you're not around, you know..."
     s "Cause after all, you're the only friend I have anymore."
-    s abbcbcaa "But I wouldn't choose anyone else over you, because you always know how to cheer me up!"
+    s abbccaa "But I wouldn't choose anyone else over you, because you always know how to cheer me up!"
     s "So, hopefully I can do the same for you!"
 
     return
@@ -261,9 +261,9 @@ init 5 python:
 
 
 label s_greeting_6:
-    #show sayori abgcbaoa at t11
-    s abgcbaoa "Oh hey [player], you're back!"
-    s abaabaoa "I'm glad to see you again!"
+    #show sayori abgcaoa at t11
+    s abgcaoa "Oh hey [player], you're back!"
+    s abaaaoa "I'm glad to see you again!"
     s "Let's spend some time together."
     return
     
@@ -281,9 +281,9 @@ label player_bday:
             s "Hey, welcome back [player]!"
             s "I'll do my best to make today really nice for you, ehehe~"
         else:
-            s abbbbcka"Oh, [player], you're here! I hope you're feeling good today!"
-            s ebbbbasa "But even if you aren't, that's okay too, you know!"
-            s abhabaaa "You don't need to be in a great mood all the time- I still enjoy being by your side just as much."
+            s abbbcka "Oh, [player], you're here! I hope you're feeling good today!"
+            s ebbbasa "But even if you aren't, that's okay too, you know!"
+            s abhaaaa "You don't need to be in a great mood all the time- I still enjoy being by your side just as much."
             return
 
     if not persistent.bday_feb29:
@@ -291,41 +291,41 @@ label player_bday:
         if not persistent.birthday1:
             $ persistent.birthday1 = True
             $ age = get_now().year - persistent.playerbdate.year
-            s aahcbcaa"Welcome back [player]!"
-            s fbgcbkdaj "Huh?? 'Persistent.playerbdate'? What's that abou-" 
-            s bbgcbegbj "OH MY GOD IT'S YOUR BIRTHDAY I'M SO SORRY!!!"
-            s bbbcbcobj "Happy birthday, [player]!!!"
+            s aahccaa "Welcome back [player]!"
+            s fbgckdaj "Huh?? 'Persistent.playerbdate'? What's that abou-" 
+            s bbgcegbj "OH MY GOD IT'S YOUR BIRTHDAY I'M SO SORRY!!!"
+            s bbbccobj "Happy birthday, [player]!!!"
             #if not has_present:
             #    s bbfbbmoaj "I'm so sorry... I'm not very good with dates!"
             #    s bbfbbidaj "Oh jeez... I really hope you're not mad at me..."
-            #    s bbegbmoaj "Aaaaanyways..."
+            #    s bbegmoaj "Aaaaanyways..."
             #    s ebgcbhea ""
             if age == 18:
                 s "Oh hey, we're finally the same age now!"
-                s fbhfbkda "I can't exactly age like you can, so I figure it makes sense to just call myself 18."
+                s fbhfkda "I can't exactly age like you can, so I figure it makes sense to just call myself 18."
             s "Aww, I wish I could throw a little birthday party for you..."
-            s abbcbloa "Well, I'll figure something out someday, okay?"
-            s aahcbcea "Either way, now that you're here, let's spend some time together for your special day!"
+            s abbcloa "Well, I'll figure something out someday, okay?"
+            s aahccea "Either way, now that you're here, let's spend some time together for your special day!"
             return
 
     elif bday_feb29:
         if persistent.bday_feb29_seen:
-            s aahcbcea "Happy birthday, [player]!"
-            s aahcbaoa "So let's get to celebrating together, [player]! And again, Happy birthday!"
+            s aahccea "Happy birthday, [player]!"
+            s aahcaoa "So let's get to celebrating together, [player]! And again, Happy birthday!"
             return
 
         else:
 
             $ age = get_now().year - persistent.playerbdate.year
-            s aahcbcea "Happy birthday, [player]!"
-            s eahdbkea "Huh, it's pretty cool that your birthday falls on the leap year!"
-            s bbagbapa "Though, it must be a little disappointing to not have a \"proper\" birthday most years..."
+            s aahccea "Happy birthday, [player]!"
+            s eahdkea "Huh, it's pretty cool that your birthday falls on the leap year!"
+            s bbagapa "Though, it must be a little disappointing to not have a \"proper\" birthday most years..."
 
 
-            s ebgcbaoa "I wonder, do you celebrate it on the 28th of February, or March 1st?"
-            s ebgcbkgaj "Maybe you can celebrate on both days!"
-            s ebbcbcea "When you look at it that way, you actually have a way cooler birthday than most people!"
-            s aahcbaoa "So let's get to celebrating together, [player]! And again, Happy birthday!"
+            s ebgcaoa "I wonder, do you celebrate it on the 28th of February, or March 1st?"
+            s ebgckgaj "Maybe you can celebrate on both days!"
+            s ebbccea "When you look at it that way, you actually have a way cooler birthday than most people!"
+            s aahcaoa "So let's get to celebrating together, [player]! And again, Happy birthday!"
             return
 
 
@@ -339,26 +339,26 @@ label s_val_present(first = False):
     if get_now().date() == val_date:
         
         s "Hey [player], happy Valentines Day!"
-        s aahbbcaa"I actually have a little present for you.."
+        s aahbcaa "I actually have a little present for you.."
         
         call showpoem(poem_val, "paper_val", 200, 0.5, 360) from _call_showpoem
     
     elif get_now().date() > val_date:
         
         if first:
-            s bbhebmjb "I've never really given anyone a Valentine's day gift before, but..."
+            s bbhemjb "I've never really given anyone a Valentine's day gift before, but..."
             s "I actually have something special for you right now! Just wait a second..."
         
         else:
-            s gbhabkpa "You missed Valentine's day!"
-        s abheblab "But I made a special present for you..."
+            s gbhakpa "You missed Valentine's day!"
+        s abhelab "But I made a special present for you..."
         
         call showpoem(poem_val, "paper_val", 200, 0.5, 360) from _call_showpoem_1
     
-    s bbhebcob "Ehehe, I hope you like it, [player]! I know it's a bit sappy, but..."
+    s bbhecob "Ehehe, I hope you like it, [player]! I know it's a bit sappy, but..."
     s "But I couldn't help it, I just wanted to make you something for the occasion!"
-    s abfcbaoa "And don't worry! You don't have to give me anything back..."
-    s abfcbcqb "Cause, you know, spending time with you is already the best present I could ever receive!"
+    s abfcaoa "And don't worry! You don't have to give me anything back..."
+    s abfccqb "Cause, you know, spending time with you is already the best present I could ever receive!"
     
     return
 
@@ -409,9 +409,9 @@ init 5 python:
 label s_greeting_8:
 
 
-    #show sayori abgcbaoa at t11
+    #show sayori abgcaoa at t11
 
-    s abgcbaoa "Hi [player]!"
+    s abgcaoa "Hi [player]!"
     s abgcbcaa "Are you here for your daily dose of sunshine?"
     s abfdbcqa "I'll get you some right now then, ehehe~"
 
@@ -470,7 +470,7 @@ label s_greetings_long:
 
 
     s ebhfbaaa "And that could be why you haven't visited for so long."
-    s abhabloa "That was a nice nap and all,"
+    s abhaloa "That was a nice nap and all,"
     s cbhabira "BUT!"
 
 
