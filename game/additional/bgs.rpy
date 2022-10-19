@@ -94,6 +94,7 @@ init -20 python:
             # Create object
             self.id = id
 
+            # Make Daytime tag
             self.daytime_tag = "{0}_day".format(id)
 
             self.nighttime_tag = "{0}_night".format(id)
