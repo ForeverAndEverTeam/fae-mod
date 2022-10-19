@@ -274,6 +274,9 @@ init -20 python:
                 self.day_to_night_switch()
         
         def save(self):
+            """
+            Saves room related into persistent
+            """
 
             persistent._present_room = self.room.id
 
