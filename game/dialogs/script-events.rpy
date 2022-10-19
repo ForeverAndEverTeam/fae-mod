@@ -562,17 +562,17 @@ label fae_event_mr_cow_transform20:
     
     hide asset spe1
 
-    $ fae_events.show_visuals("abhfbcqa")
+    $ fae_events.show_visuals("abhfcqa")
 
     #show sayori idle at t11 zorder fae_sprites.SAYO_ZORDER
     
-    s abhfbcqa "There we go, ehehe~"
-    s abhfbcoa "Welcome back, [player]!" 
-    s abhabbsa "I was just kinda starting to miss you so…"
-    s abhabcea "I dug in the code until I could rescue Mr. Cow!"
-    s abbbbloa "It was hard work, buuuuut!"
-    s abgcbdoa "Now I'll always have someone to cuddle with, and it'll never get {i}too{/i} lonely in here!"
-    s abhfbcaa "Anyways,I'm glad you're here now!" 
+    s abhfcqa "There we go, ehehe~"
+    s abhfcoa "Welcome back, [player]!" 
+    s abhabsa "I was just kinda starting to miss you so…"
+    s abhacea "I dug in the code until I could rescue Mr. Cow!"
+    s abbbloa "It was hard work, buuuuut!"
+    s abgcdoa "Now I'll always have someone to cuddle with, and it'll never get {i}too{/i} lonely in here!"
+    s abhfcaa "Anyways,I'm glad you're here now!" 
     return
     
 init 5 python:
@@ -616,7 +616,7 @@ label fae_event_pointy_stick_stabber_girl:
     
     s ebbcbcqa "I managed to get this knife back today!"
     s fbfcbkdaj"Not really sure if I'll ever need it for anything, but I figured I might as well have it."
-    s bbfcbmoaj "But maybe it's better if I put this away now."
+    s bbfcmoaj "But maybe it's better if I put this away now."
     s bbbcbciaj "I wouldn't want anything bad to happen, ehehe~"
     
     hide knife 
