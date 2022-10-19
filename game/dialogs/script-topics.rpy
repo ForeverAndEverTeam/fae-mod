@@ -786,17 +786,17 @@ init 5 python:
 label s_topics_drawing:
     s abhaaca "I wish I was good at drawing."
     s "I think it would be a very useful skill, especially now."
-    s abbcbhea "If I could draw, I would be able to edit game sprites… {w=0.5}{nw}"
+    s abbchea "If I could draw, I would be able to edit game sprites… {w=0.5}{nw}"
     extend abbbaoa"Even of myself."
     s abhaaca "And besides the practical purpose, it would be one more way to express myself."
     s "Not everything can be shown with just words..."
     s "Sometimes, your message is clearer when shown visually."
-    s abfdbaca"And if I had art to go with my poems, wouldn't they be a lot nicer?"
+    s abfdaca"And if I had art to go with my poems, wouldn't they be a lot nicer?"
     s abaaaoa "I know some poets who were good not only at poetry but also at visual art..."
     s "But to me, it sounds kinda difficult to balance both of those skills at once."
-    s abgdbaa" But who knows- {w=0.5}maybe with a bit of practice, it'll become a little easier!"
+    s abgdaaa " But who knows- {w=0.5}maybe with a bit of practice, it'll become a little easier!"
     s abhfaoa "Anyway, I'd really like to improve my drawing… {w=0.5}{nw}"
-    extend abgdbao "and I guess I have all the time in the world to do it now, don't I?"
+    extend abgdao "and I guess I have all the time in the world to do it now, don't I?"
     s abhfcaa "Maybe I'll even share my art with you!"
     return
 
