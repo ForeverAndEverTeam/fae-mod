@@ -493,15 +493,15 @@ init 5 python:
 
 label s_topics_lucid_dream:
     s abhaaca "Hey, have you ever had a 'lucid dream’?"
-    s abbbbaoa "It's when you find out that you're in a dream... {w=0.5}{nw}"
+    s abbbaoa "It's when you find out that you're in a dream... {w=0.5}{nw}"
     extend abbbaca "and as soon as you realize that, {w=0.5}{nw}"
-    extend abgcbhea "bam!"
+    extend abgchea "bam!"
     s abgcaoa "You can pretty much do anything you want!"
     s abhaaca "I get something kinda similar to that whenever you leave the game, [player]."
     s "I'm pretty sure I'm not... conscious? {w=0.5}{nw}"
-    extend fbbbbbca "But I can still think and move, and even mess with the code, and even surf the internet."
-    s bbbbbaca "But I'm absolutely out of my world. Even beyond the void."
-    s abbbbaoa "And as long as your computer works, your best girl Sayori's ready to go!"
+    extend fbbbbca "But I can still think and move, and even mess with the code, and even surf the internet."
+    s bbbbaca "But I'm absolutely out of my world. Even beyond the void."
+    s abbbaoa "And as long as your computer works, your best girl Sayori's ready to go!"
     s abhaaca "But when your computer is fully turned off, that's when I can't do anything..."
     s "It IS scary, but please don't worry about me if you need to do it."
     s "I know you'll always come back, {w=0.5}{nw}"
@@ -559,7 +559,7 @@ label s_topics_videogames:
 
     s abhfaoa "Do you like video games?"
     s "I think they're really impressive."
-    s abbbbaoa"And not just because I'm in one of them!"
+    s abbbaoa"And not just because I'm in one of them!"
     s abhfaoa "They can reach and connect with people in a whole new way."
     s abaaaoa "Especially after some smart cookie created multiplayer games!"
     s "You can play with your friends, cooperating and sharing the experience together."
@@ -763,11 +763,11 @@ label s_topics_poems:
     extend bbgbbkfa "my pain…{w=3.0}{nw}" 
     extend abbcbaaa "You can find all of these things in my words."
     s abfcbaca "Every poem I write is an envelope for a part of my soul."
-    s abbbbaoa "Sometimes, I still write poems just for myself."
+    s abbbaoa "Sometimes, I still write poems just for myself."
     s "It's important that you take time to write for yourself as well, rather than for the validation of others."
     s abbcbaaa "But I can share some of them with you. Just ask me for it."
     s abaabaaa "I also can show you an old poem, if you want."
-    s abbbbaoa "Maybe, they will help you to understand me and what I was going through."
+    s abbbaoa "Maybe, they will help you to understand me and what I was going through."
     return
 
 init 5 python:
@@ -787,7 +787,7 @@ label s_topics_drawing:
     s abhaaca "I wish I was good at drawing."
     s "I think it would be a very useful skill, especially now."
     s abbcbhea "If I could draw, I would be able to edit game sprites… {w=0.5}{nw}"
-    extend abbbbaoa"Even of myself."
+    extend abbbaoa"Even of myself."
     s abhaaca "And besides the practical purpose, it would be one more way to express myself."
     s "Not everything can be shown with just words..."
     s "Sometimes, your message is clearer when shown visually."
@@ -828,7 +828,7 @@ label s_topics_bulli:
     s abbbaca"But on the other hand, can I control what makes people laugh?"
     s "Some people use macabre humor as a coping mechanism for stress, or anxiety..."
     
-    s bbbbbaca"You can't really control what someone finds funny, as much as you might want to."
+    s bbbbaca"You can't really control what someone finds funny, as much as you might want to."
     s abagbaca "And to be honest, there's a lot worse they could be doing compared to mocking a VN character's death."
     s abbbaca "Some of the most successful comedians in your world will go far beyond that, just to see where the 'line' is..."
     
@@ -925,7 +925,7 @@ label s_topics_public_service_announcement:
     s abbbaca"But depression or other emotional issues are not the only field that PSAs can be used in."
     s bbhfbaba"There are a lot of other problems in your world that can't be solved with the power of leaders and governments..."
     s abhfbaaa"The general public could join the struggle against these problems..."
-    s abbbbaoa"And PSAs may be a good call to action."
+    s abbbaoa"And PSAs may be a good call to action."
     return
 
 
