@@ -270,6 +270,7 @@ init -20 python:
                 self.__is_seeing_day = False
                 self.form(dissolve_all=True)
 
+                # Run event
                 self.day_to_night_switch()
         
         def save(self):
