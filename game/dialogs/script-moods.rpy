@@ -134,26 +134,26 @@ init 5 python:
 
 
 label s_mood_excited: #Excited player
-    s ebfbbnsa "Ohhhh! Now that's the kind of news I like to hear!"
-    s ebagbkoa "I hope that's it's because you have something fun coming up soon!"
-    s eahdbada "Is there anything in particular you're looking forward to?"
+    s ebfbnsa "Ohhhh! Now that's the kind of news I like to hear!"
+    s ebagkoa "I hope that's it's because you have something fun coming up soon!"
+    s eahdada "Is there anything in particular you're looking forward to?"
     s ebhhcqa "Ooooor~"
-    s ebbdbdia "Maybe, you're just excited to spend some time with me today, ehehe~" 
-    s bbhebijb "Can you tell me a little bit about it? I'm curious~"
+    s ebbddia "Maybe, you're just excited to spend some time with me today, ehehe~" 
+    s bbheijb "Can you tell me a little bit about it? I'm curious~"
     menu:
         "Yes":
-            s ebgcbnea "Yayyy! Thank you!"
+            s ebgcnea "Yayyy! Thank you!"
             s ebbccqa "Go on~"
             show sayori idle
             s "{w}"
-            s abbcbnea "Ohhh, that does sound really nice!"
-            s abgcbcea "I'm already excited for you, [player]!" 
+            s abbcnea "Ohhh, that does sound really nice!"
+            s abgccea "I'm already excited for you, [player]!" 
             s abhfaoa "Thank you for telling me about it!"
         "It's a secret":
-            s bahcbjga " Whaaaat??? Not fair!!"
-            s gbhabjja "I wanna know too! You're such a meanie..."
+            s bahcjga " Whaaaat??? Not fair!!"
+            s gbhajja "I wanna know too! You're such a meanie..."
             pause 1.0
-            s abhabdia "Just kidding!"
+            s abhadia "Just kidding!"
             s abhfboa "It's alright if you don't feel like telling anyone."
             s abhfcaa "Whatever it is that made you excited, I am glad it did! I like seeing you happy!"
     s abhhcoa "Knowing that you're having a good day always makes me happy, too!"
