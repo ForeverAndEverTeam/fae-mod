@@ -319,7 +319,7 @@ init 5 python:
 
 label s_topics_guitar:
 
-    show sayori abaabaoa zorder 2
+    #show sayori abaabaoa zorder 2
     s "I don't know if you noticed, but all the girls have their own instruments and musical influences in the game."
     s abgcbaoa "Mine is the guitar."
     if persistent.currentmusic > 0 and persistent.currentmusic < 6:
