@@ -265,6 +265,7 @@ init -20 python:
                 # Run events
                 self.night_to_day_switch()
             
+            # If it's night and we're showing the day room we should reset
             elif not self.is_daytime() and self.__is_seeing_day is True:
                 self.__is_seeing_day = False
                 self.form(dissolve_all=True)
