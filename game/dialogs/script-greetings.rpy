@@ -412,8 +412,8 @@ label s_greeting_8:
     #show sayori abgcaoa at t11
 
     s abgcaoa "Hi [player]!"
-    s abgcbcaa "Are you here for your daily dose of sunshine?"
-    s abfdbcqa "I'll get you some right now then, ehehe~"
+    s abgccaa "Are you here for your daily dose of sunshine?"
+    s abfdcqa "I'll get you some right now then, ehehe~"
 
     return
 
