@@ -693,27 +693,27 @@ label s_topics_dating:
     s abhfaoa "What would our first date be like?"
     s abhfcaa "What's with the look? Ehehe~"
     s abgcnoa "Maybe we could go to a good café, and eat together!."
-    s abgcbkma "Like cakes, or cinnamon buns~"
-    s abfdbkoa "Then we could go somewhere interesting!"
+    s abgckma "Like cakes, or cinnamon buns~"
+    s abfdkoa "Then we could go somewhere interesting!"
     s abhaaca "Maybe to the movies? What do you think?"
     s "Though I don't really want to go see a romance movie every time we go..."
-    s abegbaaa "...okay, maybe once or twice? Ehehe~"
-    s abbdbaoa "Maybe a comedy?"
-    s abgcbaea "Or what about animated movies, like the ones {i}Disney{/i} and {i}Pixar{/i} make?"
-    s abfcbaaa "I know they're meant for kids, but hey, they can be fun for anyone!"
-    s abbdbaca "Some of them have deep messages and sad scenes, {w=0.5}{nw}"
-    extend abfcbaca "and the director knows only older teens or adults would be able to recognize them, while a kid won't."
+    s abegaaa "...okay, maybe once or twice? Ehehe~"
+    s abbdaoa "Maybe a comedy?"
+    s abgcaea "Or what about animated movies, like the ones {i}Disney{/i} and {i}Pixar{/i} make?"
+    s abfcaaa "I know they're meant for kids, but hey, they can be fun for anyone!"
+    s abbdaca "Some of them have deep messages and sad scenes, {w=0.5}{nw}"
+    extend abfcaca "and the director knows only older teens or adults would be able to recognize them, while a kid won't."
     if depr_known:
-        s abbcbica "I've already seen a lot of harsh things in my short time here, you know. {w=0.5}{nw}"
-        extend abfcbiaa "So my opinion may be different from most people."
+        s abbcica "I've already seen a lot of harsh things in my short time here, you know. {w=0.5}{nw}"
+        extend abfciaa "So my opinion may be different from most people."
     
     s "Isn't it really interesting to discuss movies like that with someone, seeing how your views are similar or different to theirs?"
-    s abgdbaaa "But I'd also like to do something more… engaging with you..."
-    s abgdbkda "Hmmm…what could we do?"
-    show sayori abgdbkja at t11
+    s abgdaaa "But I'd also like to do something more… engaging with you..."
+    s abgdkda "Hmmm…what could we do?"
+    show sayori abgdkja at t11
     extend abgcaoa " Maybe bowling?"
     s abhfaoa "It's a simple enough game, not too active but not too slow. I think I'd like it."
-    s abbdbaaa "Well, the important thing is that the date is enjoyable for both of us, right?"
+    s abbdaaa "Well, the important thing is that the date is enjoyable for both of us, right?"
     s abhfcaa "I hope we can plan a nice date soon ehehehe~"
     return
 
@@ -732,7 +732,7 @@ init 5 python:
 
 label s_topics_cinnamon_bun:
     s abhhbica "Hey, [player]..."
-    s abfcbaaa "Have you ever eaten a cinnamon bun?"
+    s abfcaaa "Have you ever eaten a cinnamon bun?"
     s abgcbjma"I had one once, and it was sooo goood…"
     s abhfcaa "I'd like to say thanks to the people who came up with such tasty buns."
     s abhaaca "The one thing I can't understand is why people call me that."
@@ -756,13 +756,13 @@ init 5 python:
 
 label s_topics_poems:
     s abaaaoa "You know that the other girls and I really liked to create and share poems during the game. {w=0.5}{nw}"
-    extend abfcbaaa"Even Natsuki, as much as she tried to deny it."
+    extend abfcaaa"Even Natsuki, as much as she tried to deny it."
     s abhaaca "I started to engage in poetry after your first day in the club..."
     s "And since that moment I've tried to use poems as a way to show my feelings."
     s "My wishes, my love, {w=1.0}{nw}"
     extend bbgbbkfa "my pain…{w=3.0}{nw}" 
     extend abbcbaaa "You can find all of these things in my words."
-    s abfcbaca "Every poem I write is an envelope for a part of my soul."
+    s abfcaca "Every poem I write is an envelope for a part of my soul."
     s abbbaoa "Sometimes, I still write poems just for myself."
     s "It's important that you take time to write for yourself as well, rather than for the validation of others."
     s abbcbaaa "But I can share some of them with you. Just ask me for it."
@@ -818,8 +818,8 @@ init 5 python:
 label s_topics_bulli:
     
     s bbfcbaba "Hey, [player]..."
-    s abfcbaca "You know I can access the internet from your computer, {w=0.5}right?"
-    s abbdbaca "Well I found a place called \"Reddit\", {w=0.5} and there were people talking about the game there."
+    s abfcaca "You know I can access the internet from your computer, {w=0.5}right?"
+    s abbdaca "Well I found a place called \"Reddit\", {w=0.5} and there were people talking about the game there."
     s bbfcbjca "But I also found people making fun of what happened to me."
     s abagbjca"As I know, fans call them {i}'Bulli'{/i} posts."
     
@@ -868,12 +868,12 @@ label s_topics_isolation:
     s bbfcbica "I can only sign up for sites and even post, but I can't message anybody."
     s abbbbacb "So I could create a Twitter account or something… {w=0.5}{nw}"
     
-    extend abfcbaca"...like how Monika made hers, and was able to talk to many fans."
+    extend abfcaca"...like how Monika made hers, and was able to talk to many fans."
     
     s abhfbbcb"I don't really have a reason for doing that though, besides to kill some loneliness."
     s abbbacaj"Maybe having just you would be okay for Yuri or at most Monika, {w=0.5}{nw}"
     
-    extend abfcbacaj"but not for me… {w=0.5}{nw}"
+    extend abfcacaj"but not for me… {w=0.5}{nw}"
     extend bbegbmoaj "no offense."
     
     s "I guess, I'm too sociable to the point of being scared of isolation."
