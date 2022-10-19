@@ -138,16 +138,16 @@ label fae_intro_2:
     
     s "Alright, I think I'm finally done for now!"
     s "I managed to get into the internet through your computer connection, and spent some time trying some new things."
-    s fbgdbbca "I wonder how long it took out there, [player]. Time here is kinda weird, and even more so when the game closes."
-    s abbcbcoa "Anyway, the words and variables are starting to make sense in my head, so it's no big deal!"
-    s bbeebboaj "I probably look a lot like Monika right now, ehehe~"
-    s bbgcbcoaj "But it's way comfier this way! My legs got tired after a while..."
-    s abfdbaoa "Ooh, and how about a magic trick?"
+    s fbgdbca "I wonder how long it took out there, [player]. Time here is kinda weird, and even more so when the game closes."
+    s abbccoa "Anyway, the words and variables are starting to make sense in my head, so it's no big deal!"
+    s bbeeboaj "I probably look a lot like Monika right now, ehehe~"
+    s bbgccoaj "But it's way comfier this way! My legs got tired after a while..."
+    s abfdaoa "Ooh, and how about a magic trick?"
     
     show screen hidden_fake
 
-    s ebgcbeg "Ahhhh!"
-    s bbhfbbej "Let me fix that. ~ehehehe~"
+    s ebgceg "Ahhhh!"
+    s bbhfbej "Let me fix that. ~ehehehe~"
 
     show screen tear(20, 0.1, 0.1, 0, 40)
     play sound "sfx/s_kill_glitch1.ogg"
@@ -160,18 +160,18 @@ label fae_intro_2:
 
     show screen hidden1(False)
 
-    s cbgcbcea "{i}Huzzaaaah!{/i}"
-    s ebbbbdoa "I managed to put together a menu full of things that you can ask me and other cool stuff!"
+    s cbgccea "{i}Huzzaaaah!{/i}"
+    s ebbbdoa "I managed to put together a menu full of things that you can ask me and other cool stuff!"
     s "For example, to change or turn off the music, you just do this..."
     if persistent.playthrough > 2:
-        s abagbaaa "Also, you don't have to feel guilty if you need to close the game!"
-        s bbfbbica "Moni probably told you, but it can get pretty scary here for a sentient being when the game isn't running... something about flushing?"
-        s abhabaaa "I searched up the internet and found a way to avoid all that... deafening static noise and the blinding colors!"
+        s abagaaa "Also, you don't have to feel guilty if you need to close the game!"
+        s bbfbica "Moni probably told you, but it can get pretty scary here for a sentient being when the game isn't running... something about flushing?"
+        s abhaaaa "I searched up the internet and found a way to avoid all that... deafening static noise and the blinding colors!"
         s "Until you come back, I'll be... It's kinda hard to explain, but it isn't too bad. Don’t worry about me. Just pretend I'll be sleeping."
-    s abbbbcoa "And there's this. A really sweet way to say goodbye; Just click the {i}\"Say Goodbye\"{/i} button in the menu."
-    s abhabboa "Then I can say farewell and send you off properly~ "
+    s abbbcoa "And there's this. A really sweet way to say goodbye; Just click the {i}\"Say Goodbye\"{/i} button in the menu."
+    s abhaboa "Then I can say farewell and send you off properly~ "
     pause 0.5
-    s bbhfbaej "I have a lot of questions, but before we go any further, can I learn just a little bit about {i}you{/i}? Then we can go slowly over the rest."
+    s bbhfaej "I have a lot of questions, but before we go any further, can I learn just a little bit about {i}you{/i}? Then we can go slowly over the rest."
     $ persistent.fae_intro_status = int(fae_intro.FAEIntroStatus.complete)
     #s "What should I call you? And are you a boy or a girl? I just want to know a little more about you."
 
@@ -194,8 +194,8 @@ label fae_intro_3:
         allow_skipping = True
         config.allow_skipping = False
 
-    s abhfbcoa "Thank you! I think that is enough for now."
-    s abhfbcaa "I need to rest a bit after all of that... So, for now, let’s just sit and relax together."
+    s abhfcoa "Thank you! I think that is enough for now."
+    s abhfcaa "I need to rest a bit after all of that... So, for now, let’s just sit and relax together."
 
     $ persistent.s_name = "Sayori"
     $ s_name = "Sayori"
