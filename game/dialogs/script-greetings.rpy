@@ -376,22 +376,22 @@ init 5 python:
 label s_greeting_7:
 
 
-    #show sayori abhfbaka at t11
+    #show sayori abhfaka at t11
 
-    s abhfbaka "Look who's back!"
-    s abagbaoa "It's [player], of course!"
+    s abhfaka "Look who's back!"
+    s abagaoa "It's [player], of course!"
 
     if gender is True:
 
-        s abagbcaa "And it looks like she's ready to spend some time with her sunshine."
+        s abagcaa "And it looks like she's ready to spend some time with her sunshine."
 
     elif gender is False:
 
-        s abagbcaa "And it looks like he's ready to spend some time with his sunshine."
+        s abagcaa "And it looks like he's ready to spend some time with his sunshine."
 
     else:
 
-        s abagbcaa "And it looks like they're ready to spend some time with their sunshine."
+        s abagcaa "And it looks like they're ready to spend some time with their sunshine."
 
     return
 
