@@ -141,7 +141,8 @@ init -20 python:
 
             # State
             self.__is_seeing_day = self.is_daytime()
-
+            
+            # Event Handlers
             self.day_to_night_switch = FAEEvent()
 
             self.night_to_day_switch = FAEEvent()
