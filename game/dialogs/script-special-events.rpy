@@ -106,7 +106,7 @@ label fae_bday_player_select_select:
                 "player-bday",
                 "Your Birthday",
                 selected_date,
-                range(selected_date.year,store.FAECalendar.MAX_VIEWABLE_YEAR)
+                range(selected_date.year,store.FAECALENDAR.MAX_VIEWABLE_YEAR)
             )
 
     else:
