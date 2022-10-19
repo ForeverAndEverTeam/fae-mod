@@ -1,7 +1,7 @@
 default persistent._chat_db = dict()
 
 #APPEARANCE-BASED SHIT
-
+default persistent._derp_known = True
 #EYE COLOUR
 default persistent.ec = None
 
@@ -526,7 +526,7 @@ init 5 python:
     )
 
 label s_topics_intelligence:
-    s abhabaca "I often hear people calling me an ‘airhead'..."
+    s abhabaca "I often hear people calling me an'airhead'..."
     s bbhababa"They often make jokes about it and reduce me to being just that..."
     s abhabaca "But I can't understand why they think so."
     s "Maybe because I was always daydreaming... {w=0.5}{nw}"
@@ -706,7 +706,7 @@ label s_topics_dating:
     if depr_known:
         s abbcbica "I've already seen a lot of harsh things in my short time here, you know. {w=0.5}{nw}"
         extend abfcbiaa "So my opinion may be different from most people."
-    #else:
+    
     s "Isn't it really interesting to discuss movies like that with someone, seeing how your views are similar or different to theirs?"
     s abgdbaaa "But I'd also like to do something more… engaging with you..."
     s abgdbkda "Hmmm…what could we do?"
@@ -734,7 +734,7 @@ label s_topics_cinnamon_bun:
     s abhhbica "Hey, [player]..."
     s abfcbaaa "Have you ever eaten a cinnamon bun?"
     s abgcbjma"I had one once, and it was sooo goood…"
-    s abhfbcaa "I'd like to say thanks to the people, who came up with such tasty buns."
+    s abhfbcaa "I'd like to say thanks to the people who came up with such tasty buns."
     s abhabaca "The one thing I can't understand is why people call me that."
     s abfcbioa "But I think the nickname is pretty funny and… {w=0.5}{nw}"
     extend bbfcbmoaj "cute."
