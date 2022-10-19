@@ -107,55 +107,55 @@ label first_leave:
 
 #Farewells
 label farewell_sleep: #The actual first farewell of this mod
-    show sayori abhfbaoa at ss1 zorder 2
+    show sayori abhfaoa at ss1 zorder 2
     s "Oh, are you heading out, [player]?" 
-    s abhfbcoa "Got it- I;ll see you later, then! Be safe out there!"
+    s abhfcoa "Got it- I;ll see you later, then! Be safe out there!"
     return "quit"
 
 label farewell_school:
-    show sayori abhfbaaa at ss1 zorder 2
+    show sayori abhfaaa at ss1 zorder 2
     s "Goodbye, [player]!"
     s "You can come back whenever you're feeling lonely, you know..."
-    s abfdbaoa "I'll always be here to spend time with you!"
+    s abfdaoa "I'll always be here to spend time with you!"
     return "quit"
 
 label farewell_game:
-    show sayori abhfbaaa at ss1 zorder 2
+    show sayori abhfaaa at ss1 zorder 2
     s "Bye, [player]!"
-    s abgcbcqa "Don't forget to come see me again soon!"
+    s abgccqa "Don't forget to come see me again soon!"
     return "quit"
 
 label farewell_eat:
-    show sayori abhfbaaa at ss1 zorder 2
+    show sayori abhfaaa at ss1 zorder 2
     s "Bye-bye!"
     s "I’ll be wishing you health and happiness!"
-    s abhebaka "Be safe out there, okay, [player]? Ehehe~."
+    s abheaka "Be safe out there, okay, [player]? Ehehe~."
     return "quit"
 
 label farewell_exercise:
     if fae_find_hour() == 0:
-        s abhfbaaa "Goodnight, [player]!"
-        s fbhabica "Make sure you get enough sleep so you aren’t all grumpy when you wake up, okay?"
+        s abhfaaa "Goodnight, [player]!"
+        s fbhaica "Make sure you get enough sleep so you aren’t all grumpy when you wake up, okay?"
     elif fae_find_hour() < 3:
-        s abhfbaaa "Have a good day, [player]!"
-        s abhfbaaa "I hope you can accomplish all of your goals for today, whether they’re big or small. I’ll be proud of you either way!"
+        s abhfaaa "Have a good day, [player]!"
+        s abhfaaa "I hope you can accomplish all of your goals for today, whether they’re big or small. I’ll be proud of you either way!"
     else:
-        s abhfbaaa "See you later, [player]!"
+        s abhfaaa "See you later, [player]!"
         s "I'm glad you were able to spend the day with me!"
     return "quit"
 
 label farewell_work:
-    show sayori abhfbaaa at ss1 zorder 2
+    show sayori abhfaaa at ss1 zorder 2
     s "Bye, [player]!"
-    s fbhabica "And don’t forget to make sure that you’re taking good care of yourself!"
-    s abagbcaa "I want you to be able to come back and be safe and sound, okay?"
+    s fbhaica "And don’t forget to make sure that you’re taking good care of yourself!"
+    s abagcaa "I want you to be able to come back and be safe and sound, okay?"
     return "quit"
 
 label farewell_die:
-    show sayori abhfbaaa at ss1 zorder 2
+    show sayori abhfaaa at ss1 zorder 2
     s "See you later, [player]!"
-    s abfbbaha "I wish I could give you a little farewell hug..."
-    s abfdbcqa "But as long as you know that I would if I were able to... that’s already enough, isn’t it? Ehehe~"
+    s abfbaha "I wish I could give you a little farewell hug..."
+    s abfdcqa "But as long as you know that I would if I were able to... that’s already enough, isn’t it? Ehehe~"
     return "quit"
 
 
