@@ -246,6 +246,9 @@ init -20 python:
             return
         
         def is_seeing_day(self):
+            """
+            Check if we need to reset the room
+            """
 
             return self.__is_seeing_day
         
