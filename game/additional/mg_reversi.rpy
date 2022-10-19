@@ -422,7 +422,7 @@ screen mg_reversi_scr():
 
 label mg_reversi:
     # $justIsSitting = False
-    show sayori abhfbaaa at t11
+    show sayori abhfaaa at t11
     call screen mg_reversi_scr() nopredict
     return
 
@@ -433,46 +433,46 @@ label mg_reversi_s_comment(id = 0): #Sayori's comment; -1/1 = Sayori's victory/d
     if id == -1:
         $random_id = renpy.random.randint(0, 2)
         if random_id == 0:
-            s ebbcbcea "Yay! I won this game!"
-            s abgcbaoa "Don't worry, you'll have better luck next time~"
+            s ebbccea "Yay! I won this game!"
+            s abgcaoa "Don't worry, you'll have better luck next time~"
         elif random_id == 1:
-            s abgcbkda "Oh, the board is full."
+            s abgckda "Oh, the board is full."
             s "And you have less pieces."
-            s abgcbaoa "Well, maybe you'll have more next time!"
+            s abgcaoa "Well, maybe you'll have more next time!"
         else:
-            s ebgcbcaa "Don't worry!"
+            s ebgccaa "Don't worry!"
             s "Maybe you'll win next time."
-            s abagbiia "You'll just have to watch out for my ultra smart moves~."
+            s abagiia "You'll just have to watch out for my ultra smart moves~."
     elif id == 1:
         $random_id = renpy.random.randint(0, 2)
         if random_id == 0:
-            s abagbaha "Okay, you win!"
-            s gbagbiaa "But know I'll be more crafty next time!"
+            s abagaha "Okay, you win!"
+            s gbagiaa "But know I'll be more crafty next time!"
         elif random_id == 1:
-            s bbegbboaj "Woah, you're better than me at this game."
+            s bbegboaj "Woah, you're better than me at this game."
             s "Maybe, I should pay more attention next round."
         else:
-            s abagbkgaj "Wait, you took more pieces than me!"
-            s bbagbciaj "I should probably be more attentive next time."
+            s abagkgaj "Wait, you took more pieces than me!"
+            s bbagciaj "I should probably be more attentive next time."
     elif id == 2:
         $random_id = renpy.random.randint(0, 1)
         if random_id == 0:
-            s eahcbaoa "Hey, we split the board in half!"
-            s gahdbkdaj "Unless I messed up my math."
-            s abfdbcoa "But a draw is also a result, isn't it?"
+            s eahcaoa "Hey, we split the board in half!"
+            s gahdkdaj "Unless I messed up my math."
+            s abfdcoa "But a draw is also a result, isn't it?"
         else:
-            s ebbcbaoa  "Hey, we have the same number of pieces!"
-            s ebgcbcqa "We really seem to have {i}soooooooooo{/i} much in common, ehehe~"
+            s ebbcaoa  "Hey, we have the same number of pieces!"
+            s ebgccqa "We really seem to have {i}soooooooooo{/i} much in common, ehehe~"
     elif id == -2:
         $random_id = renpy.random.randint(0, 1)
         if random_id == 0:
-            s ebhfbada "Are you giving up?"
-            s abhfbcaa "Ok, we'll start again, but I'll get a point for this game."
+            s ebhfada "Are you giving up?"
+            s abhfcaa "Ok, we'll start again, but I'll get a point for this game."
         else:
-            s ebagbaba "What's up, [player]?"
+            s ebagaba "What's up, [player]?"
             s "Do you think you'll lose?"
-            s ebagbbca "Or do you just want to do a nice thing?"
-            s abhfbcaa "Anyways, according to the game rules, I'll get a point for this game."
+            s ebagbca "Or do you just want to do a nice thing?"
+            s abhfcaa "Anyways, according to the game rules, I'll get a point for this game."
             s "But maybe, you'll win next time."
     python:
         if id < 0:
