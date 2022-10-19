@@ -297,7 +297,7 @@ init 0 python:
         image_directory="bedroom"
     )
     
-
+    # Register the event handler
     main_background.select_room(spaceroom)
 
     if main_background.is_daytime():
