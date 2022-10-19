@@ -220,17 +220,17 @@ label s_poems_afterlight:
     return
 
 label s_poems_val:
-    s abaabcoa "So, what did you think about my card?"
+    s abaacoa "So, what did you think about my card?"
     s bbegmoaj "I know it doesn't look too fancy. I couldn't really find out how to make it cute..."
     s abegaaa "But at least I did my best writing that poem for you!"
-    s cbgcbnaa "I tried to show that my love for you has no dimensional limits." 
+    s cbgcnaa "I tried to show that my love for you has no dimensional limits." 
     s "Ehehe~."
-    s abhfbkda "Ironically, the card had a limit for how much I could write in it."
+    s abhfkda "Ironically, the card had a limit for how much I could write in it."
     s "So I had to try and express all of my love using as little words as possible…"
     s abaaaoa "I hope you can understand the meaning regardless."
-    s abhhbdia "Short but meaningful... Doesn't that sound really romantic?"
-    s bbagbmda "But, I still feel a bit guilty because I think it's not good enough..."
-    s gbfcbmpa "Hopefully for my next one, my skills will have improved a bit."
+    s abhhdia "Short but meaningful... Doesn't that sound really romantic?"
+    s bbagmda "But, I still feel a bit guilty because I think it's not good enough..."
+    s gbfcmpa "Hopefully for my next one, my skills will have improved a bit."
     show sayori abfccia
     pause 1.0
     return
