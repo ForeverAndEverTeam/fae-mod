@@ -99,6 +99,7 @@ init -20 python:
             # Nighttime tag
             self.nighttime_tag = "{0}_night".format(id)
 
+            # Register images
             renpy.display.image.images.update({
                 (self.daytime_tag,): Image(daytime_path),
                 (self.nighttime_tag,): Image(night_path)
