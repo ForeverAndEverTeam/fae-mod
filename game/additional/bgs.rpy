@@ -216,11 +216,14 @@ init -20 python:
             if dissolve_all or complete_reset:
                 room = self.room.find_room_now()
             
+            # Draw the room if it's not being shown
             if room is not None:
                 renpy.show(room, tag="main_bg", zorder=FAE_ROOM_ZORDER)
             
             else:
                 fae_utilities.log("Unable to draw room: no room image was found.")
+            
+            # Dissolving everything
             
             if dissolve_all or complete_reset:
                 renpy.hide("black")
