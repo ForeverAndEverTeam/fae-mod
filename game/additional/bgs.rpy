@@ -185,6 +185,11 @@ init -20 python:
 
         def is_daytime(self):
 
+            """
+            Checks if it's day at the moment
+
+            """
+
             return self.fae_sunup <= datetime.datetime.now().time() < self.fae_sundown
         
         def render(self, dissolve_all=False, complete_reset=False):
