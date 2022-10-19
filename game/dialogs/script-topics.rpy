@@ -289,18 +289,18 @@ label s_topics_childhood:
 
 
     s abhaaca "I wonder why I have almost no memory of my childhood."
-    s abhabbfa "I guess that's just how it is for some people, but..."
-    s abbbbica"In the game, my childhood was the only thing that tied me with the MC, since we grew up together."
+    s abhabfa "I guess that's just how it is for some people, but..."
+    s abbbica"In the game, my childhood was the only thing that tied me with the MC, since we grew up together."
     s "I was nostalgic about those times, the times when everything had been much easier for me..."
-    s abagbmca "At least, I used to think so..."
-    s bbagbjca "But now, I only have a few vague, foggy memories from back then."
-    s abfcbica "I don't even remember what happened to me even right before the plot started, at all..."
-    s bbagbmba "Not to mention the rest of my childhood."
-    s bbagbmfa "It feels weird."
-    s abgcbaaa "At least I still can hold onto some special ones. The times I fell down and he helped clean my scraped knee. That time I fell off a tree."
-    s ebaabaca "I wrote a few of those stories down in a notebook to never forget they existed. That doesn't mean I'll keep wishing for things to miraculously go back to normal."
-    s ebgcbaoa "There are many good things to look forward to in the future, so no reason to cling onto the past. But I'll never forget those good memories."
-    s ebgcbcaa "They're a part of me after all."
+    s abagmca "At least, I used to think so..."
+    s bbagjca "But now, I only have a few vague, foggy memories from back then."
+    s abfcica "I don't even remember what happened to me even right before the plot started, at all..."
+    s bbagmba "Not to mention the rest of my childhood."
+    s bbagmfa "It feels weird."
+    s abgcaaa "At least I still can hold onto some special ones. The times I fell down and he helped clean my scraped knee. That time I fell off a tree."
+    s ebaaaca "I wrote a few of those stories down in a notebook to never forget they existed. That doesn't mean I'll keep wishing for things to miraculously go back to normal."
+    s ebgcaoa "There are many good things to look forward to in the future, so no reason to cling onto the past. But I'll never forget those good memories."
+    s ebgccaa "They're a part of me after all."
     return
 
 init 5 python:
@@ -913,7 +913,7 @@ label s_topics_public_service_announcement:
     s abaabaoa "Some good PSAs even contain advice on how to fix issues,{w=0.5} or where to go for help."
     s "You don't even have to be an activist to do this sort of stuff.."
     s abbcbaca"I once heard about a mod for this game, the title reminded me of the common forms of slogans PSAs use..."
-    s ebgcbaoa"And its name is {i}'Sayori Says No to Suicide'{/i}."
+    s ebgcaoa"And its name is {i}'Sayori Says No to Suicide'{/i}."
     if persistent.last_playthrough == 0:
         s abbbbbca"That refers to what's supposed to happen to me in this world… {w=0.5}{nw}"
         extend abhaaca "...but didn't happen, because of you."
