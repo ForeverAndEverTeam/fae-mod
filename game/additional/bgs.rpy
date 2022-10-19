@@ -121,6 +121,10 @@ init -20 python:
     
     class FAERooms(object):
 
+        """
+        Main class
+        """
+
         def __init__(self, fae_sunup, fae_sundown):
 
             self.room = None
