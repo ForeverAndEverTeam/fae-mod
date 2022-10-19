@@ -149,6 +149,16 @@ init -20 python:
         
         def select_room(self, new_room, **kwargs):
 
+            """
+            Sets the location.
+
+            Doesn't persist
+
+            FEED:
+                new_location = new location
+            
+            """
+
 
             if new_room.when_enter is not None:
 
