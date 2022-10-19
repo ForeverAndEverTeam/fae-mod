@@ -127,6 +127,12 @@ init -20 python:
 
         def __init__(self, fae_sunup, fae_sundown):
 
+            """
+            Constructor
+
+            Object managing everything.
+            """
+
             self.room = None
             self.decoration = dict()
 
