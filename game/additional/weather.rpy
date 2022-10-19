@@ -49,6 +49,7 @@ init 0 python in fae_sky:
 
     # Zorder indexes
     # Complete order is:
+    # V PROPS
     _DIM_Z_ORDER = 2
     _CLOUDS_Z_ORDER = -1
     _SKY_Z_ORDER = -2
