@@ -87,7 +87,7 @@ init -20 python:
 
             if not renpy.loadable(daytime_path):
                 raise Exception("[ERROR]: Daytime image ('{0}') is not loadable.".format(daytime_path))
-            
+            # And night
             if not renpy.loadable(night_path):
                 raise Exception("[ERROR]: Nighttime image ('{0}') is not loadable.".format(night_path))
 
