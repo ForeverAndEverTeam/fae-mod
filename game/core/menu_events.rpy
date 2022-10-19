@@ -42,16 +42,16 @@ label talk_menu_wip:
         madechoice = renpy.display_menu(talk_menu, screen="talk_choice")
 
     if madechoice == "talk":
-        call talk_pinit
+        call talk_pinit from _call_talk_pinit
     
     elif madechoice == "repeat":
-        call talk_pinit(True)
+        call talk_pinit(True) from _call_talk_pinit_1
     
     elif madechoice == "mood":
-        call mood_init
+        call mood_init from _call_mood_init
     
     elif madechoice == "say":
-        call tell
+        call tell from _call_tell
     
     else:
         $ _return = None
@@ -124,6 +124,7 @@ label mglist():
     call screen minigame_ui() nopredict
     hide screen minigame_ui
     show screen hidden1(True)
+    
     jump ch30_loop
 
 screen minigame_ui():
@@ -134,9 +135,10 @@ screen minigame_ui():
         
         for i in mg_list:
             if i.available:
-                textbutton i.name action [Function(i), Hide("minigame_ui")]# Jump("main_loop")]
+                textbutton i.name action [Function(i), Hide("minigame_ui"), Jump("ch30_loop")]# Jump("main_loop")]
         
-        textbutton _("Close") action [Hide("minigame_ui"), Show("hidden1", None, True), Jump("ch30_loop")]
+        textbutton _("Close") action [Hide("minigame_ui"), Return()]#Show("hidden1", None, True)]
+    
 
 
 #label try_force_quit:
