@@ -47,7 +47,7 @@ init 0 python in fae_sky:
     import store
     import store.fae_utilities as fae_utilities
 
-
+    # Zorder indexes
     _DIM_Z_ORDER = 2
     _CLOUDS_Z_ORDER = -1
     _SKY_Z_ORDER = -2
