@@ -731,13 +731,13 @@ init 5 python:
     )
 
 label s_topics_cinnamon_bun:
-    s abhhbica "Hey, [player]..."
+    s abhhica "Hey, [player]..."
     s abfcaaa "Have you ever eaten a cinnamon bun?"
-    s abgcbjma"I had one once, and it was sooo goood…"
+    s abgcjma"I had one once, and it was sooo goood…"
     s abhfcaa "I'd like to say thanks to the people who came up with such tasty buns."
     s abhaaca "The one thing I can't understand is why people call me that."
-    s abfcbioa "But I think the nickname is pretty funny and… {w=0.5}{nw}"
-    extend bbfcbmoaj "cute."
+    s abfcioa "But I think the nickname is pretty funny and… {w=0.5}{nw}"
+    extend bbfcmoaj "cute."
     s abaaaoa "...even if there aren't any cinnamon buns in the game."
     return
 
