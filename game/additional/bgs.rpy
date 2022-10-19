@@ -262,6 +262,7 @@ init -20 python:
                 self.__is_seeing_day = True
                 self.form(dissolve_all=True)
 
+                # Run events
                 self.night_to_day_switch()
             
             elif not self.is_daytime() and self.__is_seeing_day is True:
