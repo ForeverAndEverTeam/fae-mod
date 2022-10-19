@@ -224,7 +224,7 @@ init -20 python:
                 fae_utilities.log("Unable to draw room: no room image was found.")
             
             # Dissolving everything
-            
+
             if dissolve_all or complete_reset:
                 renpy.hide("black")
                 renpy.with_statement(Dissolve(1.0))
@@ -232,6 +232,9 @@ init -20 python:
             return
         
         def form(self):
+            """
+            Draws the location without flashy-washy
+            """
 
             room = self.room.find_room_now()
             if room is not None:
