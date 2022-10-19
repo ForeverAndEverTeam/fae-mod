@@ -760,13 +760,13 @@ label s_topics_poems:
     s abhaaca "I started to engage in poetry after your first day in the club..."
     s "And since that moment I've tried to use poems as a way to show my feelings."
     s "My wishes, my love, {w=1.0}{nw}"
-    extend bbgbbkfa "my pain…{w=3.0}{nw}" 
-    extend abbcbaaa "You can find all of these things in my words."
+    extend bbgbkfa "my pain…{w=3.0}{nw}" 
+    extend abbcaaa "You can find all of these things in my words."
     s abfcaca "Every poem I write is an envelope for a part of my soul."
     s abbbaoa "Sometimes, I still write poems just for myself."
     s "It's important that you take time to write for yourself as well, rather than for the validation of others."
-    s abbcbaaa "But I can share some of them with you. Just ask me for it."
-    s abaabaaa "I also can show you an old poem, if you want."
+    s abbcaaa "But I can share some of them with you. Just ask me for it."
+    s abaaaaa "I also can show you an old poem, if you want."
     s abbbaoa "Maybe, they will help you to understand me and what I was going through."
     return
 
