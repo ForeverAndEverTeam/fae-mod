@@ -115,6 +115,12 @@ init 0 python in fae_sky:
 
     def form_sky(weather, with_transition=True):
 
+        """
+        Shows the specified sky with clouds/dimming effect
+        FEED:
+            weather = Weather to set
+            with_transition = If Tru, will fa
+
         if store.fae_is_day():
             sky_to_show = weather.day_sky_image
         elif store.fae_is_evening():
