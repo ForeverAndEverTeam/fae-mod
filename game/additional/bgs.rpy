@@ -197,6 +197,13 @@ init -20 python:
             return self.fae_sunup <= datetime.datetime.now().time() < self.fae_sundown
         
         def render(self, dissolve_all=False, complete_reset=False):
+            """
+            Creates the location
+
+            FEED:
+                dissolve_all = dissolve everything
+                complete_reset = Do we want to re-render everything?
+            """
 
             renpy.with_statement(None)
 
