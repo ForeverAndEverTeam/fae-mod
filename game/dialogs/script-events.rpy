@@ -588,7 +588,7 @@ init 5 python:
 
 label fae_event_pointy_stick_stabber_girl:
 
-    #$ fae_events.show_visuals("abbcbckc")
+    #$ fae_events.show_visuals("abbcckc")
 
     hide black
 
@@ -601,28 +601,28 @@ label fae_event_pointy_stick_stabber_girl:
 
     
 
-    s abbcbckc "Hi, [player]! Ready to chop up some bitches?"
+    s abbcckc "Hi, [player]! Ready to chop up some bitches?"
     s "Does this look like the face of mercy, [player]?"
-    s bbfcbeea "AHAHAHA….{nw}"
-    extend bbfcbdia"Just kidding!"
-    s abbcbiia "Sorry about that!"
+    s bbfceea "AHAHAHA….{nw}"
+    extend bbfcdia"Just kidding!"
+    s abbciia "Sorry about that!"
     
     menu:
         "Where did you even get that???":
             pass
     
-    s eahcbbsa "Great question!{w=1.0} {nw}"
-    extend eahcbada "I've been doing some more digging into the code to recover as much stuff as possible!"
+    s eahcbsa "Great question!{w=1.0} {nw}"
+    extend eahcada "I've been doing some more digging into the code to recover as much stuff as possible!"
     
-    s ebbcbcqa "I managed to get this knife back today!"
-    s fbfcbkdaj"Not really sure if I'll ever need it for anything, but I figured I might as well have it."
+    s ebbccqa "I managed to get this knife back today!"
+    s fbfckdaj"Not really sure if I'll ever need it for anything, but I figured I might as well have it."
     s bbfcmoaj "But maybe it's better if I put this away now."
-    s bbbcbciaj "I wouldn't want anything bad to happen, ehehe~"
+    s bbbcciaj "I wouldn't want anything bad to happen, ehehe~"
     
     hide knife 
     
-    s abhabaoa "Hope you're doing good today, [player]~" 
-    s abhabiia "Did I make you nervous?"
-    s ebhhbcoa "Sorry for scaring you, ehehe~"
+    s abhaaoa "Hope you're doing good today, [player]~" 
+    s abhaiia "Did I make you nervous?"
+    s ebhhcoa "Sorry for scaring you, ehehe~"
     
     return
