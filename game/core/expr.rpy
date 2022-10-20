@@ -379,6 +379,10 @@ init 1 python in fae_sprites:
     
 
     def _auto_gen(exp_code):
+        """
+        Generates image from spritecode
+        """
+        
         if len(exp_code) < 7:
             raise ValueError("Invalid expression code: {0}".format(exp_code))
         
