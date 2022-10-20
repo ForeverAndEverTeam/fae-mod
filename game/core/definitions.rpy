@@ -9,7 +9,7 @@ define persistent.demo = False
 define persistent.steam = ("steamapps" in config.basedir.lower())
 
 # This variable declares whether Developer Mode is on or off in the mod.
-define config.developer = True
+define config.developer = False
 define config.gl2 = True
 define config.log_live2d_loading = False
 # This python statement starts singleton to make sure only one copy of the mod
@@ -1498,6 +1498,7 @@ default persistent.fae_visit_counter = 0
 default persistent.fae_nickname_given = False
 default persistent.game_crash = False
 default persistent._fae_player_south_hemisphere = True
+default persistent._fae_ever_won = collections.defaultdict(bool)
 
 default persistent.sessions = {
     "last_session_end": None,
