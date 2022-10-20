@@ -1,4 +1,9 @@
-﻿## This template version is 3.0.0. When asked to provide the template version
+﻿init -1200 python:
+
+    renpy.config.allow_skipping = True
+
+
+## This template version is 3.0.0. When asked to provide the template version
 ## you are using, give them this version number. 
 ### DO NOT REMOVE OR CHANGE THE ABOVE COMMENT. ###
 
@@ -92,8 +97,6 @@ define config.save_directory = "Forever&Ever"
 # This controls the window logo of your mod.
 define config.window_icon = "gui/window_icon.png"
 
-# This controls whether your mod allows the player to skip dialogue.
-define config.allow_skipping = True
 
 # This controls whether your mod saves automatically.
 define config.has_autosave = False
