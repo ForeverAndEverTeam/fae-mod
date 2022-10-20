@@ -1,5 +1,32 @@
 default persistent._fae_seen_poems = dict()
 
+image paper = "images/bg/poem.jpg"
+transform paper_in:
+    truecenter
+    alpha 0
+    linear 1.0 alpha 1
+
+transform paper_out:
+    alpha 1
+    linear 1.0 alpha 0
+
+style poem_vbox:
+    xalign 0.5
+
+# This style controls the viewport of the poem lines to add scrolling for
+# larger poems.
+style poem_viewport:
+    xanchor 0
+    xsize 720
+    xpos 280
+
+# This style controls the position of the poem vertical box.
+style poem_vbar is vscrollbar:
+    xpos 1000
+    yalign 0.5
+
+    ysize 700
+
 style sayori_handwriting:
     font "gui/font/s1.ttf"
     size 34
