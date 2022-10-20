@@ -38,7 +38,7 @@ label talk_menu_wip:
         talk_menu.append((_("I want to say..."), "say"))
         talk_menu.append((_("Nevermind"), "nevermind"))
 
-        renpy.say(s, store.fae_quips.talk_quip()[1], interact=False)
+        renpy.say(s, renpy.substitute(store.fae_quips.get_quip()), interact=False)#, interact=False)
         madechoice = renpy.display_menu(talk_menu, screen="talk_choice")
 
     if madechoice == "talk":
