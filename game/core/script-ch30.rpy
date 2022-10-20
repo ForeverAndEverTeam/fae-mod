@@ -75,8 +75,9 @@ label ch30_autoload:
         quick_menu = True
         style.say_dialogue = style.normal
         in_sayori_kill = None
-        allow_skipping = True
-        config.allow_skipping = False
+        
+        if not config.developer:
+            config.allow_skipping = False
 
     #Do all the things for init setup
 
@@ -99,7 +100,7 @@ label ch30_setup:
 
     $ fae_sky.reload_sky()
 
-    $ setupRPC("Setting up FaE")
+    $ setupRPC("In the spaceroom")
 
         #while True:
         #    time.sleep(15)
@@ -110,7 +111,7 @@ label ch30_setup:
 
 label ch30_init:
 
-    $ setupRPC("In the spaceroom")
+    #$ setupRPC("In the spaceroom")
 
     $ persistent.autoload = "ch30_autoload"
 
@@ -278,7 +279,7 @@ label cnc(show_sayori=True, notify=False):
             #        $ fae_notifications.flash_taskbar()
             if notify:
 
-                if store.fae_notifs.can_show_notifs:
+                if store.fae_notifs.can_show_notifs and persistent._fae_notifs_enabled:
 
                     if renpy.windows:
                         $ fae_notifs.notifyWindows()
