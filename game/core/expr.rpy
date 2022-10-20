@@ -451,7 +451,9 @@ init 1 python in fae_sprites:
 
 
     def _auto_gen(exp_code):
-        
+        """
+        Generates image from exp code
+        """
 
         disp = fae_gen_sprite(**_exp_renderer(exp_code))
 
