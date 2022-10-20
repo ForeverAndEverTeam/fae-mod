@@ -444,7 +444,7 @@ init 1 python in fae_sprites:
     def _auto_gen(exp_code):
         
 
-        disp = realgen(**_exp_renderer(exp_code))
+        disp = fae_gen_sprite(**_exp_renderer(exp_code))
 
         _existing_attr_list = renpy.display.image.image_attributes["sayori"]
 
