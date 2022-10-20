@@ -264,6 +264,10 @@ init -3 python:
             return self.extra_props[prop_key] is prop_val
 
         def derandom(self):
+            """
+            Makes a topic unable to be brought up randomly.
+            Makes it available through talk menu
+            """
 
             self.random = False
 
