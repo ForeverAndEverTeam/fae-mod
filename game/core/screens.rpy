@@ -1886,22 +1886,6 @@ screen qab():
                     text _("S")
                     text _("Esc")
 
-            hbox:
-                style_prefix "check"
-                vbox:
-                    label _("Music")
-                    spacing 10
-                    text _("Volume Up")
-                    text _("Volume Down")
-                    text _("Mute")
-
-                vbox:
-                    label _("")
-                    spacing 10
-                    text _("+")
-                    text _("-")
-                    text _("Shift-M")
-
     # there are lesser used hotkeys in Help that aren't needed here
     text "Click 'Help' for the complete list.":
         xalign 1.0 yalign 0.0
