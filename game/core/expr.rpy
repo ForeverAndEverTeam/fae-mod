@@ -381,7 +381,11 @@ init 1 python in fae_sprites:
 
     def _auto_gen(exp_code):
         """
-        Generates image from spritecode
+        Reads given sprite code and returns the args to build it.
+
+        ERRORS:
+            ValueError if the exp is invalid because of length
+            KeyError is the exp is invalide because of parts
         """
 
         if len(exp_code) < 7:
