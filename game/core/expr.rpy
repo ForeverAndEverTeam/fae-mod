@@ -465,6 +465,9 @@ init 1 python in fae_sprites:
         #    _existing_attr_list.append(exp_code)
 
     def _find_target_override(self):
+        """
+        Finds an image by reference.
+        """
         
         name = self.name
 
