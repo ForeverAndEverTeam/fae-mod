@@ -461,6 +461,7 @@ init -1 python:
         config.keymap["dlg"] = ["t", "T"]
         config.keymap["music"] = ["m", "M"]
         config.keymap["games"] = ["g", "G"]
+        config.keymap["calendar"] = ["c", "C"]
         config.keymap["Mute"] = ["shift_m", "shift_M"]
         #config.keymap["inc_musicvol"] = [
         #    "shift_K_PLUS","K_EQUALS","K_KP_PLUS"
@@ -479,6 +480,10 @@ init -1 python:
 
         config.underlay.append(
             renpy.Keymap(games=mg)
+        )
+
+        config.underlay.append(
+            renpy.Keymap(calendar=show_calendar)
         )
 
         config.underlay.append(
