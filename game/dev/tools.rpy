@@ -52,6 +52,8 @@ init -1 python in fae_dev_tools:
             'first_session':datetime.datetime.now()
         }
 
+        renpy.game.persistent._fae_player_pronouns = None
+
         renpy.game.persistent._fae_affection["affection"] = 0
 
         renpy.game.persistent._fae_chess_stats = {
@@ -78,5 +80,6 @@ init -1 python in fae_dev_tools:
             "first_session": datetime.datetime.now()
         }
 
-    
-$ renpy.config.allow_skipping = True
+
+define config.allow_skipping = True
+define config.developer = True
