@@ -61,28 +61,9 @@ label talk_menu_wip:
     
 label talk_menu_end:
 
-    show sayori at t11
+    show sayori idle at t11
 
     jump ch30_loop
-
-
-    #menu:
-    #    s "What do you want to talk about?"
-
-    #    "Hey, Sayori...":
-    #        call talk_pinit
-    #    "Can you tell me again about...":
-    #        call talk_pinit(True)
-    #    "I feel...":
-    #        call mood_init
-    #    "I want to say...":
-    #        call tell
-        
-    #    "Nevermind":
-    #        jump ch30_loop
-
-    
-    #return
 
     
 
