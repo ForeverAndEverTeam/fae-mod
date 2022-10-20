@@ -215,9 +215,7 @@ label ch30_init:
 
 label ch30_loop:
 
-    
-
-    
+    $ init_qabs()
     
     show sayori idle at fae_center zorder store.fae_sprites.SAYO_ZORDER
 
