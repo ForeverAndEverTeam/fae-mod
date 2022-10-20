@@ -26,31 +26,6 @@ screen hidden1(active=False):
         textbutton _("Calendar") action [ SensitiveIf(active==True), Function(show_calendar)]
 
 
-screen hidden:
-    #(active=True):
-    style_prefix "tc"
-    imagemap:
-        auto "mod_assets/images/gui_prefs_%s.png"
-
-        hotspot (608, 276, 48, 45) action Jump("boop")
-    zorder 50
-    vbox:
-        xpos 0.090
-    #        xalign 0.05
-        yanchor 1.0
-        ypos 715    
-    #        yalign 0.95
-
-        textbutton _("Talk") action [ SensitiveIf(not sayo_globals.pia), Function(dlg)]
-
-        #textbutton _("Music") action [ SensitiveIf(active==True), Function(select_music)]
-
-        textbutton _("Music") action [ SensitiveIf(not sayo_globals.pia), Jump("music_menu")]
-
-        textbutton _("Play") action [ SensitiveIf(not sayo_globals.pia), Function(mg)]
-
-        textbutton _("Extras") action [ SensitiveIf(not sayo_globals.pia), Function(extra_menu)]
-
 screen hidden_fake(active=False):
     style_prefix "tc"
     zorder 50
