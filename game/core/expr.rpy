@@ -221,6 +221,7 @@ init -50 python in fae_sprites:
         tears=None
     ):
         """
+        Generates sprite based on outfit, exp, pose, etc
         """
         ad_hoc = [
             (1280, 720),
@@ -382,7 +383,7 @@ init 1 python in fae_sprites:
         """
         Generates image from spritecode
         """
-        
+
         if len(exp_code) < 7:
             raise ValueError("Invalid expression code: {0}".format(exp_code))
         
