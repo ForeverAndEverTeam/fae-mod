@@ -15,11 +15,6 @@ screen hidden1(active=False):
         ypos 715    
     #        yalign 0.95
 
-        key "t" action [ SensitiveIf(active==True), Function(dlg)]
-        key "m" action [ SensitiveIf(active==True), Jump("music_menu")]
-        key "p" action [ SensitiveIf(active==True), Function(mg)]
-
-        key "c" action [ SensitiveIf(active==True), Function(show_calendar)]
 
         textbutton _("Talk") action [ SensitiveIf(active==True), Function(dlg)]
 
