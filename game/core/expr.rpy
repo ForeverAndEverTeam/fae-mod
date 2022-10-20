@@ -210,7 +210,7 @@ init -50 python in fae_sprites:
         def __str__(self):
             return self.name
 
-    def realgen(
+    def fae_gen_sprite(
         arms,
         arms2,
         backarm,
