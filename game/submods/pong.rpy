@@ -508,7 +508,9 @@ label demo_minigame_pong:
         winner = ui.interact(suppress_overlay=True, suppress_underlay=True)
 
     
-    scene spaceroom
+    
+    $ main_background.form()
+    $ fae_sky.reload_sky()
 
     $ persistent._fae_pong_difficulty_change_next_game = 0;
 
@@ -530,6 +532,8 @@ label demo_minigame_pong:
         $ persistent._fae_pong_difficulty = 0
     else:
         $ persistent._fae_pong_difficulty = new_difficulty
+    
+    show sayori idle at t11 zorder store.fae_sprites.SAYO_ZORDER
     
     s "Would you like to play again?"
 
