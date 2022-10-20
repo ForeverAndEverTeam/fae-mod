@@ -479,6 +479,9 @@ init 1 python in fae_sprites:
             name = tuple(name.split())
 
         def error(msg):
+            """
+            Sets the image target to a displayable (text) for missing image.
+            """
             self.target = renpy.text.text.Text(
                 msg,
                 color=(255, 0, 0, 255),
