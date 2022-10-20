@@ -796,7 +796,7 @@ init python:
     
     def h_check():
 
-        #main_background.reset_checker()
+        main_background.reset_checker()
 
         
         pass
