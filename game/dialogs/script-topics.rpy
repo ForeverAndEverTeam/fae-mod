@@ -913,7 +913,7 @@ init 5 python:
             persistent._chat_db,
             label="s_topic_voice",
             unlocked=True,
-            prompt="Archetypes",
+            prompt="Voice",
             random=True,
             category=["Life", "Personality"]
         ),
@@ -937,4 +937,35 @@ label s_topic_voice:
     extend abfbbora {font=mod_assets/fonts/Fantasque/FantasqueSansMono-Regular.ttf}{cps=30}T4LK L1KE 4 R0B0T{/cps}{/font}?"
     s ebfciea"{font=mod_assets/fonts/Fantasque/FantasqueSansMono-Regular.ttf}{cps=30}1 4M 4 HUM4N BE1N6 4FTER 4LL{/cps}{/font}"
     s ebagcea "Ehehehe~ just kidding, [player]!"
+    return
+
+init 5 python:
+
+    chatReg(
+        Chat(
+            persistent._chat_db,
+            label="s_topic_lit",
+            unlocked=True,
+            prompt="Archetypes",
+            random=True,
+            category=["Art", "Literature"]
+        ),
+        chat_group=CHAT_GROUP_NORMAL
+    )
+
+
+label s_topic_lit:
+    s abhabaca "As you know, this game {i}was{/i} about our literature club..."
+    s abbbbbca "At least, before everything changed here."
+    s abhabaca "And I remember MC noticed that I never seemed to be fond of literature in the first place."
+    s "And, honestly? He was right."
+    s "Of course I’d read a few books before, but only really because I needed to for school..."
+    s bbegbmeaj"And even then, I tried to cheat to pass the exams ehehe..."
+    s abhabaca "I just think it’s pretty boring, I think I’m more of a visual person anyways!"
+    s bbhfbbca"But as Yuri used to say, maybe I just haven't found the right book yet."
+    s abhabaca "But anyways, when I first joined, the thing I wanted to do most was help a friend start a new club."
+    s abhabmca "Besides, I was the only one who showed any interest in the club after Monika announced it."
+    s abhabcka "She was pretty surprised at first but she was very welcoming and I enjoyed spending time there, just to hang out with friends."
+    s abhabdkb "That said, I liked writing about my feelings when we all shared poems together."
+    s abgcbaoa"And that helped me to get closer to {i}you{/i}, even if I didn't know it yet."
     return
