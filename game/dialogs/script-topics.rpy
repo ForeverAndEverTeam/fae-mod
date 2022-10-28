@@ -102,6 +102,8 @@ label fae_time:
 # ACTUAL TOPICS HERE #
 ######################
 
+# SAYORI STARTED TOPICS
+
 init 5 python:
 
     chatReg(
@@ -291,93 +293,6 @@ label s_topics_flowers:
     return
 
 
-init 5 python:
-
-    chatReg(
-        Chat(
-            persistent._chat_db,
-            label="s_player_cooking",
-            unlocked=True,
-            prompt="Are you good at cooking?",
-            random=False,
-            category=["Life", "Cooking"]
-        ),
-        chat_group=CHAT_GROUP_NORMAL
-    )
-
-label s_player_cooking:
-
-    s bbaamoaj "To be honest, {nw}"
-    extend bbheiiaj "scrambled eggs are probably the most elaborate thing I've ever cooked..."
-    s abhhksa "I've never baked anything before, though."
-    s fbhalhaj "But there's a lot of stuff that could go wrong, so it feels a bit intimidating to me." 
-    s ebbcaoa "Even so, I'd love to get better at cooking, even if I don't have any reason to anymore, ehehe~"
-    s abgcbfa "Now that I think about it... {nw}"
-    extend dbgckca "I don't really remember the last time I’ve been hungry, honestly."
-    s fahcnka "But I can still taste! That means I can eat as much as I want!"
-    s aahcbda "Of course, I could just try to 'make' food with code, like Nat's cupcakes, but I wanna make something on my own..."
-    s abfdboa "First of all, I need to try to make some kitchenware."
-    s abhhbba "Then find some recipes online."
-    s dbhhbca "Then... follow a tutorial...or something..."
-    s fbhakdaj "Wait...I'm also going to need to make each ingredient too..."
-    s bbgcegaj "That's a lot of steps!!!!"
-    s bbgcjja "With all of that effort, it’s too bad you won't be able to taste it... {nw}"
-    extend abhfbca "not yet at least."
-    s abhfcka "But I'll try to become a good cook for you regardless!"
-    s abhfasa "Though, I'll probably never be as good as Natsuki."
-    s abbbcoa "Well, I guess as long as I'm having fun in the process, that’s what matters the most, isn't it?"
-    return
-
-
-init 5 python:
-
-    chatReg(
-        Chat(
-            persistent._chat_db,
-            label="s_player_pets",
-            unlocked=True,
-            prompt="What pet would you like to have?",
-            random=False,
-
-            category=["Life", "Animals"]
-        ),
-        chat_group=CHAT_GROUP_NORMAL
-    )
-
-label s_player_pets:
-
-    s gbaabda "Hmmm let me think...." 
-    s "I really like a lot of different animals, but I don't think I could properly care for anything that requires a lot of constant attention..." 
-    s bbegcia "I'd love to have a dog, but I'd have to have the energy to keep up with it."
-    s abbcbba "But I suppose I could keep an aquarium?"
-    s gbaalha "Wait, I think I heard from somewhere that those also take a lot of work to keep them running smoothly..."
-    s "..."
-    s ebgcaea "Ohhh, I know! I could adopt an elderly cat that mostly just wants to lay around and sleep all day, just like me!"
-    call s_player_cats from _call_s_player_cats
-    return
-
-init 5 python:
-
-    chatReg(
-        Chat(
-            persistent._chat_db,
-            label="s_player_cats",
-            unlocked=True,
-            prompt="What do you think about cats?",
-            random=False,
-            category=["Life", "Animals"]
-        ),
-        chat_group=CHAT_GROUP_NORMAL
-    )
-
-label s_player_cats:
-    s ebhfcaa "Cats are pretty cute, especially kittens!"
-    s abhfaoa "And they're not too hard to take care of so they wouldn’t require a lot of energy."
-    s abhaaca "Still, as much as they love their space, they shouldn’t just be ignored by their owner. Kitties want to play sometimes, too!"
-    s "And sometimes cats do things that their owners don't like... Like pushing things off of the counter, or slicing their arms and legs up."
-    s abaaaoa "Still, it’s so hard to resist their fluffy little paws and pointy ears... So that must be why people always forgive them for their crimes!"
-    s ebaacea "If you have one, you probably understand what I mean, ehehe~"
-    return
 
 
 
@@ -863,3 +778,95 @@ label s_topics_pets:
     s abfdaaa "I guess I don't play favorites when it comes to pets!"
     return
 
+
+
+# PLAYER TOPICS
+
+
+init 5 python:
+
+    chatReg(
+        Chat(
+            persistent._chat_db,
+            label="s_player_cooking",
+            unlocked=True,
+            prompt="Are you good at cooking?",
+            random=False,
+            category=["Life", "Cooking"]
+        ),
+        chat_group=CHAT_GROUP_NORMAL
+    )
+
+label s_player_cooking:
+
+    s bbaamoaj "To be honest, {nw}"
+    extend bbheiiaj "scrambled eggs are probably the most elaborate thing I've ever cooked..."
+    s abhhksa "I've never baked anything before, though."
+    s fbhalhaj "But there's a lot of stuff that could go wrong, so it feels a bit intimidating to me." 
+    s ebbcaoa "Even so, I'd love to get better at cooking, even if I don't have any reason to anymore, ehehe~"
+    s abgcbfa "Now that I think about it... {nw}"
+    extend dbgckca "I don't really remember the last time I’ve been hungry, honestly."
+    s fahcnka "But I can still taste! That means I can eat as much as I want!"
+    s aahcbda "Of course, I could just try to 'make' food with code, like Nat's cupcakes, but I wanna make something on my own..."
+    s abfdboa "First of all, I need to try to make some kitchenware."
+    s abhhbba "Then find some recipes online."
+    s dbhhbca "Then... follow a tutorial...or something..."
+    s fbhakdaj "Wait...I'm also going to need to make each ingredient too..."
+    s bbgcegaj "That's a lot of steps!!!!"
+    s bbgcjja "With all of that effort, it’s too bad you won't be able to taste it... {nw}"
+    extend abhfbca "not yet at least."
+    s abhfcka "But I'll try to become a good cook for you regardless!"
+    s abhfasa "Though, I'll probably never be as good as Natsuki."
+    s abbbcoa "Well, I guess as long as I'm having fun in the process, that’s what matters the most, isn't it?"
+    return
+
+
+init 5 python:
+
+    chatReg(
+        Chat(
+            persistent._chat_db,
+            label="s_player_pets",
+            unlocked=True,
+            prompt="What pet would you like to have?",
+            random=False,
+
+            category=["Life", "Animals"]
+        ),
+        chat_group=CHAT_GROUP_NORMAL
+    )
+
+label s_player_pets:
+
+    s gbaabda "Hmmm let me think...." 
+    s "I really like a lot of different animals, but I don't think I could properly care for anything that requires a lot of constant attention..." 
+    s bbegcia "I'd love to have a dog, but I'd have to have the energy to keep up with it."
+    s abbcbba "But I suppose I could keep an aquarium?"
+    s gbaalha "Wait, I think I heard from somewhere that those also take a lot of work to keep them running smoothly..."
+    s "..."
+    s ebgcaea "Ohhh, I know! I could adopt an elderly cat that mostly just wants to lay around and sleep all day, just like me!"
+    call s_player_cats from _call_s_player_cats
+    return
+
+init 5 python:
+
+    chatReg(
+        Chat(
+            persistent._chat_db,
+            label="s_player_cats",
+            unlocked=True,
+            prompt="What do you think about cats?",
+            random=False,
+            category=["Life", "Animals"]
+        ),
+        chat_group=CHAT_GROUP_NORMAL
+    )
+
+label s_player_cats:
+    s ebhfcaa "Cats are pretty cute, especially kittens!"
+    s abhfaoa "And they're not too hard to take care of so they wouldn’t require a lot of energy."
+    s abhaaca "Still, as much as they love their space, they shouldn’t just be ignored by their owner. Kitties want to play sometimes, too!"
+    s "And sometimes cats do things that their owners don't like... Like pushing things off of the counter, or slicing their arms and legs up."
+    s abaaaoa "Still, it’s so hard to resist their fluffy little paws and pointy ears... So that must be why people always forgive them for their crimes!"
+    s ebaacea "If you have one, you probably understand what I mean, ehehe~"
+    return
