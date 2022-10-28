@@ -1039,3 +1039,35 @@ label s_topic_programming:
     s bbfdbca "Maybe there are many Sayoris who were saved in this way, {w=0.5}{nw}"
     extend abgcaea "and I’m sure they'll be glad to get something awesome from you too!"
     return
+
+init 5 python:
+
+    chatReg(
+        Chat(
+            persistent._chat_db,
+            label="s_topic_travel",
+            unlocked=True,
+            prompt="Travel",
+            random=True,
+            category=["You", "Lifestyle", "Travelling"]
+        ),
+        chat_group=CHAT_GROUP_NORMAL
+    )
+
+label s_topic_travel:
+    s abhfbaoa"Say [player], have you ever traveled anywhere?"
+    s abbbbmoaj "I've never gotten the chance to, so I was wondering if you had in your reality." 
+    s "You're so lucky to have such an amazing world out there to explore..." 
+    s abfbbmhaj "While I'm trapped in this tiny room island in the middle of the code sea…"
+    s "Sorry, I didn't mean to sound like I was sulking, ehehe~" 
+    s abhabaca "I know it's selfish, but I'd love to go and see it all with you instead of being here..." 
+    s "It doesn’t really matter where we’d go, {w=0.5}{nw}"
+    extend abbbbaqa "I just want to see all the beautiful colors and places that your reality has to offer!"
+    s "It'd be pretty silly to just sit in your room all day when the whole wide world is out there, huh?" 
+    s abegbmoa "Maybe you could take a laptop with you?" 
+    s "So we can still be together on your travels! {w=0.5}{nw}"
+    extend abgcbcea "That’d be so much fun! " 
+    s abhhbaea "I wonder if there's a way you could show me any photos you take too." 
+    s abhfbaoa "Anyway, what's most important is that you enjoy yourself!" 
+    s abhfbaka "I'll have to look around the code a little more and see how I can help on my end in the meantime."
+    return
