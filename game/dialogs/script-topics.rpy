@@ -1276,15 +1276,15 @@ init 5 python:
     )
 
 label s_topics_rtl_thanks:
-    s bbbcbaka "Hey [player], I want to sincerely thank you from the bottom of my heart for everything you've done for me."
-    s bbhfblka "You’ve given me hope for this world and myself…"
+    s bbbcaka "Hey [player], I want to sincerely thank you from the bottom of my heart for everything you've done for me."
+    s bbhflka "You’ve given me hope for this world and myself…"
     s "You've helped me feel truly happy again..."
-    s bbhfbloa "You visit me often..."
-    s bbhfbioa "You care for me, something I would've rejected before..."
+    s bbhfloa "You visit me often..."
+    s bbhfioa "You care for me, something I would've rejected before..."
     s "And you tried to make all my friends happy too..."
-    s bbhfbika "So even if it's not all sunshine and rainbows just yet, I'm so grateful that you're still here."
-    s bbhfbmoaj "I can't pay you back for what you've given me, {w=0.5}{nw}"
-    extend bbhfbmhaj "I haven't thought of a way, I mean."
-    s bbhfbmcaj "I hope I'll think of something sooner or later..."
+    s bbhfika "So even if it's not all sunshine and rainbows just yet, I'm so grateful that you're still here."
+    s bbhfmoaj "I can't pay you back for what you've given me, {w=0.5}{nw}"
+    extend bbhfmhaj "I haven't thought of a way, I mean."
+    s bbhfmcaj "I hope I'll think of something sooner or later..."
     s "But for now, thank you, [player]."
     return "derandom"
