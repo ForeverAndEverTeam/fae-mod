@@ -1103,8 +1103,20 @@ label s_topic_cleaning:
     return
 
 
+init 5 python:
 
-label s_topics_game_clones:
+    chatReg(
+        Chat(
+            persistent._chat_db,
+            label="s_topic_clones",
+            unlocked=True,
+            prompt="Clones",
+            random=True,
+            category=["Game", "Sayori"]
+        ),
+        chat_group=CHAT_GROUP_NORMAL
+    )
+label s_topic_clones:
     s abagmo "So... there's kind of been something on my mind lately, [ player ]..."
     s abagboa "It's about me, I think."
     s abegheja "I mean, not just me, but also still me?"
