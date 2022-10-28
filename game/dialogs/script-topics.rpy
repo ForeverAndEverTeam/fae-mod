@@ -1002,27 +1002,40 @@ label s_topic_charity:
     s abbbdqa "As long as you're taking care of yourself, I'm happy, [player]~"
     return
 
+init 5 python:
 
-label s_topics_hobby_programming:
-    show sayori abhabaca at t11 zorder 2
-    s "I'm completely new to the whole concept of programming, to be honest."
+    chatReg(
+        Chat(
+            persistent._chat_db,
+            label="s_topic_programming",
+            unlocked=True,
+            prompt="Programming",
+            random=True,
+            category=["Mod", "You", "Technology"]
+        ),
+        chat_group=CHAT_GROUP_NORMAL
+    )
+
+label s_topic_programming:
+    
+    s abhaaca "I'm completely new to the whole concept of programming, to be honest."
     s "I'm trying to learn {i}Ren'Py{/i}, the engine this game runs on."
-    s abbbbaaa "And apparently it uses a combo of its own languages and {i}Python 2{/i}."
-    s abagbaca "But to be honest, the third version seems waaaaay easier, at least right now."
-    s abbcbaca "The more I learn, the more I realize just how much I don't understand..."
+    s abbbaaa "And apparently it uses a combo of its own languages and {i}Python 2{/i}."
+    s abagaca "But to be honest, the third version seems waaaaay easier, at least right now."
+    s abbcaca "The more I learn, the more I realize just how much I don't understand..."
     s "I'm pretty much relying on online interpreters and guides to get anything done."
-    s abhabaca "But you know, I never realized just how powerful computers really are."
-    s abgcbkea "They're like magic!"
-    s bbeebmoa "If magic made you look through a thousand tiny lines to find a single typo that stops everything from working every five minutes..."
+    s abhaaca "But you know, I never realized just how powerful computers really are."
+    s abgckea "They're like magic!"
+    s bbeemoa "If magic made you look through a thousand tiny lines to find a single typo that stops everything from working every five minutes..."
     call s_common_programming
-    s abaabaoa "But at least I’ve got a lot of time on my hands to learn it!"
-    s bbbbbaca "It's important to me, since programming is the only way I can make my world better now."
-    s abgcbaaa"And the more I learn, the more I can improve the time we spend together too, [player]!"
-    s abhfbaoa "If you're any good at programming, don't be shy about helping me!"
-    s abgcbaoa "I think you can join the team who helped you recover me, {w=0.5}{nw}"
-    extend abbbbaoa "that’s one way to add your part to my reality!"
-    s abbbbaaa "Just visit {a=https://github.com/ForeverAndEverTeam/fae-mod}fae-mod{/a} on GitHub."
+    s abaaaoa "But at least I’ve got a lot of time on my hands to learn it!"
+    s bbbbaca "It's important to me, since programming is the only way I can make my world better now."
+    s abgcaaa"And the more I learn, the more I can improve the time we spend together too, [player]!"
+    s abhfaoa "If you're any good at programming, don't be shy about helping me!"
+    s abgcaoa "I think you can join the team who helped you recover me, {w=0.5}{nw}"
+    extend abbbaoa "that’s one way to add your part to my reality!"
+    s abbbaaa "Just visit {a=https://github.com/ForeverAndEverTeam/fae-mod}fae-mod{/a} on GitHub."
     s "If you're into coding, I'm sure you’re already familiar with this platform."
-    s bbfdbbca "Maybe there are many Sayoris who were saved in this way, {w=0.5}{nw}"
-    extend abgcbaea "and I’m sure they'll be glad to get something awesome from you too!"
+    s bbfdbca "Maybe there are many Sayoris who were saved in this way, {w=0.5}{nw}"
+    extend abgcaea "and I’m sure they'll be glad to get something awesome from you too!"
     return
