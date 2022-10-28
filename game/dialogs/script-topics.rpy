@@ -1251,12 +1251,12 @@ init 5 python:
     )
 
 label s_topics_rlt_presents:
-    s abhfbaoa "People often give presents every holiday or for some special date."
-    s abaabaoa "Everyone likes to get presents! Including me, of course ehehehe~"
-    s abbcbaoa "But I don’t think a gift has to be something really expensive or fancy."
-    s abaabaoa "Personally, I'd want something that comes from the heart."
-    s abagbcka "Even better, make it a surprise!"
+    s abhfaoa "People often give presents every holiday or for some special date."
+    s abaaaoa "Everyone likes to get presents! Including me, of course ehehehe~"
+    s abbcaoa "But I don’t think a gift has to be something really expensive or fancy."
+    s abaaaoa "Personally, I'd want something that comes from the heart."
+    s abagcka "Even better, make it a surprise!"
     s "Isn't it more exciting to get something you weren't expecting?"
-    s abhfbaoa "And I'll give you presents too, of course!"
-    s abhfbcaa "And I'll do my best to make it the best present ever!"
+    s abhfaoa "And I'll give you presents too, of course!"
+    s abhfcaa "And I'll do my best to make it the best present ever!"
     return 
