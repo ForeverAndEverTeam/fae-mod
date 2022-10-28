@@ -903,5 +903,5 @@ label s_topics_personal_archetype:
     s ebbbaca "Like Yuri, who was always polite and quiet while hiding her intrusive feelings."
     s ebgccea "And Natsuki, whose brash exterior was caused by her problems at home."
     s ebhacea "There’s always more to a person than meets the eye, so try to always be kind."
-    s ebhadqa "You never know what someone else might be going through, and a simple smile can really make someone’s day!”
+    s ebhadqa "You never know what someone else might be going through, and a simple smile can really make someone’s day!"
     return
