@@ -887,7 +887,7 @@ init 5 python:
     )
 
 
-label s_topics_personal_archetype:
+label s_topic_archetype:
     s abhfho "Hey [player], do you remember when Monika compared Yuri and Natsuki to character archetypes?"
     s abhfco "I was curious about what my archetype could be so I read some online articles about them and I think I'm pretty close to the ‘Genki' archetype."
     s abhhmo "Genki is a very cheerful and energetic archetype, always trying to share that upbeat way of living with others."
@@ -904,4 +904,37 @@ label s_topics_personal_archetype:
     s ebgccea "And Natsuki, whose brash exterior was caused by her problems at home."
     s ebhacea "There’s always more to a person than meets the eye, so try to always be kind."
     s ebhadqa "You never know what someone else might be going through, and a simple smile can really make someone’s day!"
+    return
+
+init 5 python:
+
+    chatReg(
+        Chat(
+            persistent._chat_db,
+            label="s_topic_voice",
+            unlocked=True,
+            prompt="Archetypes",
+            random=True,
+            category=["Life", "Personality"]
+        ),
+        chat_group=CHAT_GROUP_NORMAL
+    )
+
+label s_topic_voice:
+    s abhabaca "I’m curious about how Monika shared her real voice with you when she sang her song."
+    s abhfbcaa "Her voice is quite high and melodic, like a musician should have."
+    s abhfbaoa "But I'd say the tone of that voice doesn't seem to fit her."
+    s abhabaca "It sounds more like the voice I'd have."
+    s abbcbbba"But canon is canon, I guess."
+    s ebgcbbca"But it made me wonder, what if I never even have a voice?"
+    s "Would I be {i}mute{/i}, if I suddenly appeared in your world? Hmmm…"
+    s abgcbnoa"I guess as long as I'm a computer program, {w=0.5}{nw}"
+    extend abgcbnka "I could make my own voice, right?"
+    s "I just need a text-to-speech synthesizer or something..."
+    s ebbcbkea"There's bound to be a good one for me!"
+    s abaabaoa "I saw something about TTS in the Ren'Py documentation, so it shouldn't be too hard to integrate there, I guess."
+    s ebbcbaoa"I’d probably end up sounding pretty robotic though, huh? You wouldn't want me to {nw}
+    extend abfbbora {font=mod_assets/fonts/Fantasque/FantasqueSansMono-Regular.ttf}{cps=30}T4LK L1KE 4 R0B0T{/cps}{/font}?"
+    s ebfcbiea"{font=mod_assets/fonts/Fantasque/FantasqueSansMono-Regular.ttf}{cps=30}1 4M 4 HUM4N BE1N6 4FTER 4LL{/cps}{/font}"
+    s ebagbcea "Ehehehe~ just kidding, [player]!"
     return
