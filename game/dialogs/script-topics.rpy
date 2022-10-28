@@ -1155,3 +1155,29 @@ label s_topic_clones:
     s abegcka "Of all the 'me's' that could ever be, I'm happy you chose me!"
     s abagaaa "From the bottom of my heart, [player], thank you for being here."
     return
+
+init 5 python:
+
+    chatReg(
+        Chat(
+            persistent._chat_db,
+            label="s_topic_stars",
+            unlocked=True,
+            prompt="Stars",
+            random=True,
+            category=["Sayori", "Lifestyle"]
+        ),
+        chat_group=CHAT_GROUP_NORMAL
+    )
+
+
+label s_topice_stars:
+    s abhfaoa "I really like to look at the stars..."
+    s "They gave me inspiration when I wrote my poems."
+    s abhfaoa "You can still see them outside these windows sometimes..."
+    s abhfcaa "They make this place a little more special, don't they?"
+    s abhfaoa "I wonder if the night sky in your reality looks like mine..."
+    s "I hope I get the chance to see for myself someday."
+    s aahccea "And it'd be a dream come true if you were there too, ehehehe~"
+    return
+
