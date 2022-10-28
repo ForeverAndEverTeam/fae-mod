@@ -955,17 +955,17 @@ init 5 python:
 
 
 label s_topic_lit:
-    s abhabaca "As you know, this game {i}was{/i} about our literature club..."
-    s abbbbbca "At least, before everything changed here."
-    s abhabaca "And I remember MC noticed that I never seemed to be fond of literature in the first place."
+    s abhaaca "As you know, this game {i}was{/i} about our literature club..."
+    s abbbbca "At least, before everything changed here."
+    s abhaaca "And I remember MC noticed that I never seemed to be fond of literature in the first place."
     s "And, honestly? He was right."
     s "Of course I’d read a few books before, but only really because I needed to for school..."
-    s bbegbmeaj"And even then, I tried to cheat to pass the exams ehehe..."
-    s abhabaca "I just think it’s pretty boring, I think I’m more of a visual person anyways!"
-    s bbhfbbca"But as Yuri used to say, maybe I just haven't found the right book yet."
-    s abhabaca "But anyways, when I first joined, the thing I wanted to do most was help a friend start a new club."
-    s abhabmca "Besides, I was the only one who showed any interest in the club after Monika announced it."
-    s abhabcka "She was pretty surprised at first but she was very welcoming and I enjoyed spending time there, just to hang out with friends."
-    s abhabdkb "That said, I liked writing about my feelings when we all shared poems together."
-    s abgcbaoa"And that helped me to get closer to {i}you{/i}, even if I didn't know it yet."
+    s bbegmeaj"And even then, I tried to cheat to pass the exams ehehe..."
+    s abhaaca "I just think it’s pretty boring, I think I’m more of a visual person anyways!"
+    s bbhfbca"But as Yuri used to say, maybe I just haven't found the right book yet."
+    s abhaaca "But anyways, when I first joined, the thing I wanted to do most was help a friend start a new club."
+    s abhamca "Besides, I was the only one who showed any interest in the club after Monika announced it."
+    s abhacka "She was pretty surprised at first but she was very welcoming and I enjoyed spending time there, just to hang out with friends."
+    s abhadkb "That said, I liked writing about my feelings when we all shared poems together."
+    s abgcaoa"And that helped me to get closer to {i}you{/i}, even if I didn't know it yet."
     return
