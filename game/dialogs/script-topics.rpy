@@ -984,7 +984,7 @@ init 5 python:
         chat_group=CHAT_GROUP_NORMAL
     )
 
-label s_topics_society_charity:
+label s_topic_charity:
     s abhaaca "What do you think about charity and volunteering?"
     s abaaaoa "I think it's the best way to make the world a little bit better and to support people in need."
     s bbgcaca "I mean, don't you worry about ill and hungry people, {w=0.5}{nw}"
@@ -1001,3 +1001,5 @@ label s_topics_society_charity:
     s abbbcqa "And that's completely okay!"
     s abbbdqa "As long as you're taking care of yourself, I'm happy, [player]~"
     return
+
+
