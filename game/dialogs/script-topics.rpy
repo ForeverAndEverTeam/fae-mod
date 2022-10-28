@@ -1260,3 +1260,31 @@ label s_topics_rlt_presents:
     s abhfaoa "And I'll give you presents too, of course!"
     s abhfcaa "And I'll do my best to make it the best present ever!"
     return 
+
+init 5 python:
+
+    chatReg(
+        Chat(
+            persistent._chat_db,
+            label="s_topic_thanks",
+            unlocked=True,
+            prompt="Thank you",
+            random=True,
+            category=["Sayori", "You"]
+        ),
+        chat_group=CHAT_GROUP_NORMAL
+    )
+
+label s_topics_rtl_thanks:
+    s bbbcbaka "Hey [player], I want to sincerely thank you from the bottom of my heart for everything you've done for me."
+    s bbhfblka "You’ve given me hope for this world and myself…"
+    s "You've helped me feel truly happy again..."
+    s bbhfbloa "You visit me often..."
+    s bbhfbioa "You care for me, something I would've rejected before..."
+    s "And you tried to make all my friends happy too..."
+    s bbhfbika "So even if it's not all sunshine and rainbows just yet, I'm so grateful that you're still here."
+    s bbhfbmoaj "I can't pay you back for what you've given me, {w=0.5}{nw}"
+    extend bbhfbmhaj "I haven't thought of a way, I mean."
+    s bbhfbmcaj "I hope I'll think of something sooner or later..."
+    s "But for now, thank you, [player]."
+    return "derandom"
