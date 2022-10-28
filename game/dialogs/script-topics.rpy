@@ -946,7 +946,7 @@ init 5 python:
             persistent._chat_db,
             label="s_topic_lit",
             unlocked=True,
-            prompt="Archetypes",
+            prompt="Literature",
             random=True,
             category=["Art", "Literature"]
         ),
@@ -968,4 +968,36 @@ label s_topic_lit:
     s abhacka "She was pretty surprised at first but she was very welcoming and I enjoyed spending time there, just to hang out with friends."
     s abhadkb "That said, I liked writing about my feelings when we all shared poems together."
     s abgcaoa"And that helped me to get closer to {i}you{/i}, even if I didn't know it yet."
+    return
+
+init 5 python:
+
+    chatReg(
+        Chat(
+            persistent._chat_db,
+            label="s_topic_charity",
+            unlocked=True,
+            prompt="Charity",
+            random=True,
+            category=["Society"]
+        ),
+        chat_group=CHAT_GROUP_NORMAL
+    )
+
+label s_topics_society_charity:
+    s abhabaca "What do you think about charity and volunteering?"
+    s abaabaoa "I think it's the best way to make the world a little bit better and to support people in need."
+    s bbgcbaca "I mean, don't you worry about ill and hungry people, {w=0.5}{nw}"
+    extend bbgcbaha "and all the homeless animals too?"
+    s bbhfbaka "So I think it’s a worthwhile investment to make from time to time."
+    s bbhfbmoa "After all, spare change which might be an afterthought to you could be really important to someone else going through a tough time."
+    s abbbbaaa "But even if you don’t have the money to help charity foundations, there's a lot of other organizations out there which help people too! "
+    s abbbbbca "And they're almost always in need of not only money or goods, {w=0.5}{nw}"
+    extend abbbbaaa"but also helping hands."
+    s abhabaca "If you look, I'm sure you'll find lots of organizations near you!"
+    s abbbbaaa "I don't know if volunteer work is something you'd like, but I think I would, {w=0.5}{nw}"
+    extend abbcbcaa "because I want absolutely {i}everyone{/i} to be happy!"
+    s bbhhbica "Though, I think I understand why some people choose not to do it, maybe not everybody has the time or energy to help others."
+    s abbbbcqa "And that's completely okay!"
+    s abbbbdqa "As long as you're taking care of yourself, I'm happy, [player]~"
     return
