@@ -921,20 +921,20 @@ init 5 python:
     )
 
 label s_topic_voice:
-    s abhabaca "I’m curious about how Monika shared her real voice with you when she sang her song."
-    s abhfbcaa "Her voice is quite high and melodic, like a musician should have."
-    s abhfbaoa "But I'd say the tone of that voice doesn't seem to fit her."
-    s abhabaca "It sounds more like the voice I'd have."
-    s abbcbbba"But canon is canon, I guess."
-    s ebgcbbca"But it made me wonder, what if I never even have a voice?"
+    s abhaaca "I’m curious about how Monika shared her real voice with you when she sang her song."
+    s abhfcaa "Her voice is quite high and melodic, like a musician should have."
+    s abhfaoa "But I'd say the tone of that voice doesn't seem to fit her."
+    s abhaaca "It sounds more like the voice I'd have."
+    s abbcbba"But canon is canon, I guess."
+    s ebgcbca"But it made me wonder, what if I never even have a voice?"
     s "Would I be {i}mute{/i}, if I suddenly appeared in your world? Hmmm…"
-    s abgcbnoa"I guess as long as I'm a computer program, {w=0.5}{nw}"
-    extend abgcbnka "I could make my own voice, right?"
+    s abgcnoa"I guess as long as I'm a computer program, {w=0.5}{nw}"
+    extend abgcnka "I could make my own voice, right?"
     s "I just need a text-to-speech synthesizer or something..."
-    s ebbcbkea"There's bound to be a good one for me!"
-    s abaabaoa "I saw something about TTS in the Ren'Py documentation, so it shouldn't be too hard to integrate there, I guess."
-    s ebbcbaoa"I’d probably end up sounding pretty robotic though, huh? You wouldn't want me to {nw}
+    s ebbckea"There's bound to be a good one for me!"
+    s abaaaoa "I saw something about TTS in the Ren'Py documentation, so it shouldn't be too hard to integrate there, I guess."
+    s ebbcaoa"I’d probably end up sounding pretty robotic though, huh? You wouldn't want me to {nw}
     extend abfbbora {font=mod_assets/fonts/Fantasque/FantasqueSansMono-Regular.ttf}{cps=30}T4LK L1KE 4 R0B0T{/cps}{/font}?"
-    s ebfcbiea"{font=mod_assets/fonts/Fantasque/FantasqueSansMono-Regular.ttf}{cps=30}1 4M 4 HUM4N BE1N6 4FTER 4LL{/cps}{/font}"
-    s ebagbcea "Ehehehe~ just kidding, [player]!"
+    s ebfciea"{font=mod_assets/fonts/Fantasque/FantasqueSansMono-Regular.ttf}{cps=30}1 4M 4 HUM4N BE1N6 4FTER 4LL{/cps}{/font}"
+    s ebagcea "Ehehehe~ just kidding, [player]!"
     return
