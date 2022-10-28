@@ -1181,3 +1181,57 @@ label s_topice_stars:
     s aahccea "And it'd be a dream come true if you were there too, ehehehe~"
     return
 
+init 5 python:
+
+    chatReg(
+        Chat(
+            persistent._chat_db,
+            label="s_topic_stop_visiting",
+            unlocked=True,
+            prompt="Stop Visiting",
+            random=True,
+            category=["You", "Sayori"]
+        ),
+        chat_group=CHAT_GROUP_NORMAL
+    )
+
+label s_topic_stop_visiting:
+    s abhabaca "Hey, [player], {w=0.5}{nw}"
+    extend abbbbaca "can I talk to you about something that’s been on my mind lately?"
+    s abbbbmha "I know it’s really sudden, and pretty depressing. But sometimes I just can't stop thinking that…"
+    s abfbblha "You’ll forget about me someday."
+    s abfbblla"And stop coming to see me."
+    s abfbbmla "The rational side of me knows it’s a silly fear… {w=0.5}{nw}"
+    extend abfbbmca "since you’ve always been there for me, but…"
+    s abfbblca "I'm just a character in a game… {w=0.5}{nw}"
+    extend abfbblha " a game which isn't even that popular anymore…"
+    s "And I’m pretty sure I’m not the most interesting or cute character from the game in the first place..."
+    s abfbbbha "So…"
+    s abfbblha "..."
+    s bbfbbbca "I wonder if, one day, you’ll just get tired of me…"
+    s bbfbbaca "I'll still be here, of course. But if I never saw you again…"
+    s bbfbblca "My life just wouldn’t have the same meaning anymore."
+    s bbfbblca "Stuck in this small room, without my friends, or even the ability to make new ones..."
+    s bbhfbhcag "I’m really scared… {w=0.5}{nw}"
+    extend bbhfbhlag "what if I go crazy in here, [player]?"
+    s bbhfbllah "I don’t want to be alone, I just couldn’t take it…"
+    s bbhfbllah "..."
+    menu:
+        "No Sayori, that won’t happen.":
+            pass
+        s bbhfbllah "..."
+    menu:
+        "I promise I’ll never leave you":
+            pass
+    s bbhfbllah "..."
+    s bbhfbklah "Hmm… no… you’re right…"
+    s bbhfbmcae "I just need to relax. I need to stop thinking the worst all the time…"
+    s bbhfbkcae "I know you aren’t going to leave me behind. {w=0.5}{nw}"
+    extend abhfbahag "I’m sorry for freaking out like that, [player]."
+    s abhfbakag "Everything will be okay, right?"
+    menu:
+        "Yes, it will be.":
+            pass
+    s abhfbcka "Yeah… I’m okay now, I think…"
+    s abhfbaka"Thank you for being here for me. I love you, [player]."
+    return
