@@ -870,3 +870,38 @@ label s_player_cats:
     s abaaaoa "Still, it’s so hard to resist their fluffy little paws and pointy ears... So that must be why people always forgive them for their crimes!"
     s ebaacea "If you have one, you probably understand what I mean, ehehe~"
     return
+
+
+init 5 python:
+
+    chatReg(
+        Chat(
+            persistent._chat_db,
+            label="s_topic_archetype",
+            unlocked=True,
+            prompt="Archetypes",
+            random=True,
+            category=["Life", "Personality"]
+        ),
+        chat_group=CHAT_GROUP_NORMAL
+    )
+
+
+label s_topics_personal_archetype:
+    s abhfho "Hey [player], do you remember when Monika compared Yuri and Natsuki to character archetypes?"
+    s abhfco "I was curious about what my archetype could be so I read some online articles about them and I think I'm pretty close to the ‘Genki' archetype."
+    s abhhmo "Genki is a very cheerful and energetic archetype, always trying to share that upbeat way of living with others."
+    s aahfaeaj  "And they're sometimes clumsy and get in trouble often too, hehehe~"
+    s "And I was the protagonist's childhood friend, which is common to this archetype."
+    s nahekeaj "Do you think I fit that archetype too?"
+    menu:
+            "You're definitely a genki, if they're as clumsy as you say."
+    s aaaegcej"You can't blame me, that's just how I am, ehehe~"
+    s"But that aside, I think  archetypes are too simple to define a whole person"
+    s ebhfaca "We’re all unique and these traits can only scratch the surface of somebody's character."
+    s ebhhaoa "And that applied to me and my friends too."
+    s ebbbaca "Like Yuri, who was always polite and quiet while hiding her intrusive feelings."
+    s ebgccea "And Natsuki, whose brash exterior was caused by her problems at home."
+    s ebhacea "There’s always more to a person than meets the eye, so try to always be kind."
+    s ebhadqa "You never know what someone else might be going through, and a simple smile can really make someone’s day!”
+    return
