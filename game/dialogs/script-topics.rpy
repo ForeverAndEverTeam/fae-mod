@@ -1071,3 +1071,33 @@ label s_topic_travel:
     s abhfaoa "Anyway, what's most important is that you enjoy yourself!" 
     s abhfaka "I'll have to look around the code a little more and see how I can help on my end in the meantime."
     return
+
+
+init 5 python:
+
+    chatReg(
+        Chat(
+            persistent._chat_db,
+            label="s_topic_cleaning",
+            unlocked=True,
+            prompt="Archetypes",
+            random=True,
+            category=["Lifestyle"]
+        ),
+        chat_group=CHAT_GROUP_NORMAL
+    )
+
+label s_topic_cleaning:
+    s abhfbaoa "Hey [player], are you the kind of person that likes being neat and tidy?"
+    s ebhhbada "Frankly, I don’t like cleaning all that much..."
+    s bbhebmoaj "I mean, do you remember the state of my bedroom? Ehehehe~"
+    s bbhebaoaj "Some people say I should because it looks nice and saves time when you have everything organized..."
+    s fbfcbepa "But it's just that cleaning takes so much time, time that you could spend doing fun stuff with friends instead!"
+    s dbfcbapa "So I see nothing wrong with my past lifestyle, I was too lazy to clean up anyway."
+    s ebhfbaoa "Honestly it's kinda funny to live in such a mess, where you won't know where everything is."
+    s ebhfbcoa"It turns the boring time of trying to find something into an adventure!"
+    s ebfdbaoa "But don't think I'm that sloppy, I had a system for some things."
+    s ebhebbpa "Well, at least now I have literally {i}nothing{/i} here besides this desk..."
+    s abhabaca "But it won’t be clean for long! Would you be able to add some other stuff for me?"
+    s ebhhbaoa "...like maybe a beanbag chair? Ehehehe~"
+    return
