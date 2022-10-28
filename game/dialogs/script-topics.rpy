@@ -1235,3 +1235,28 @@ label s_topic_stop_visiting:
     s abhfcka "Yeah… I’m okay now, I think…"
     s abhfaka"Thank you for being here for me. I love you, [player]."
     return
+
+init 5 python:
+
+    chatReg(
+        Chat(
+            persistent._chat_db,
+            label="s_topic_presents",
+            unlocked=True,
+            prompt="Presents",
+            random=True,
+            category=["Holidays", "Society"]
+        ),
+        chat_group=CHAT_GROUP_NORMAL
+    )
+
+label s_topics_rlt_presents:
+    s abhfbaoa "People often give presents every holiday or for some special date."
+    s abaabaoa "Everyone likes to get presents! Including me, of course ehehehe~"
+    s abbcbaoa "But I don’t think a gift has to be something really expensive or fancy."
+    s abaabaoa "Personally, I'd want something that comes from the heart."
+    s abagbcka "Even better, make it a surprise!"
+    s "Isn't it more exciting to get something you weren't expecting?"
+    s abhfbaoa "And I'll give you presents too, of course!"
+    s abhfbcaa "And I'll do my best to make it the best present ever!"
+    return 
