@@ -1251,7 +1251,7 @@ init 5 python:
         chat_group=CHAT_GROUP_NORMAL
     )
 
-label s_topics_rlt_presents:
+label s_topic_presents:
     s abhfaoa "People often give presents every holiday or for some special date."
     s abaaaoa "Everyone likes to get presents! Including me, of course ehehehe~"
     s abbcaoa "But I don’t think a gift has to be something really expensive or fancy."
@@ -1276,7 +1276,7 @@ init 5 python:
         chat_group=CHAT_GROUP_NORMAL
     )
 
-label s_topics_rtl_thanks:
+label s_topic_thanks:
     s bbbcaka "Hey [player], I want to sincerely thank you from the bottom of my heart for everything you've done for me."
     s bbhflka "You’ve given me hope for this world and myself…"
     s "You've helped me feel truly happy again..."
