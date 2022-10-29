@@ -895,7 +895,8 @@ label s_topic_archetype:
     s "And I was the protagonist's childhood friend, which is common to this archetype."
     s nahekeaj "Do you think I fit that archetype too?"
     menu:
-            "You're definitely a genki, if they're as clumsy as you say."
+        "You're definitely a genki, if they're as clumsy as you say.":
+            pass
     s aaaegcej"You can't blame me, that's just how I am, ehehe~"
     s"But that aside, I think  archetypes are too simple to define a whole person"
     s ebhfaca "We’re all unique and these traits can only scratch the surface of somebody's character."
@@ -1171,7 +1172,7 @@ init 5 python:
     )
 
 
-label s_topice_stars:
+label s_topic_stars:
     s abhfaoa "I really like to look at the stars..."
     s "They gave me inspiration when I wrote my poems."
     s abhfaoa "You can still see them outside these windows sometimes..."
