@@ -212,7 +212,7 @@ label fae_showpoem(poem=None, paper=None, post_label=None):
     window auto
     
     if post_label and renpy.has_label(post_label):
-        call expression post_label from _call_expression_1# from _call_expression_1
+        call expression post_label
 
     
 
