@@ -1028,7 +1028,7 @@ label s_topic_programming:
     s abhaaca "But you know, I never realized just how powerful computers really are."
     s abgckea "They're like magic!"
     s bbeemoa "If magic made you look through a thousand tiny lines to find a single typo that stops everything from working every five minutes..."
-    call s_common_programming
+    call s_common_programming from _call_s_common_programming
     s abaaaoa "But at least I’ve got a lot of time on my hands to learn it!"
     s bbbbaca "It's important to me, since programming is the only way I can make my world better now."
     s abgcaaa"And the more I learn, the more I can improve the time we spend together too, [player]!"
@@ -1289,3 +1289,36 @@ label s_topic_thanks:
     s bbhfmcaj "I hope I'll think of something sooner or later..."
     s "But for now, thank you, [player]."
     return "derandom"
+
+
+init 5 python:
+
+    chatReg(
+        Chat(
+            persistent._chat_db,
+            label="s_topic_name",
+            unlocked=True,
+            prompt="Names",
+            random=True,
+            category=["Sayori", "Society"]
+        ),
+        chat_group=CHAT_GROUP_NORMAL
+    )
+
+label s_topic_name:
+    s abaabaoa "Hey [player], I just found out something about my name on the web."
+    s abaabcoa "It's a mix of Saori and Sayuri!"
+    s abbbbaca "I did some research and those two have completely different meanings."
+    s abbbbbca "While ‘Saori' is a mix of the word sand and weave, {w=1.0}{nw}"
+    extend abaabbda "‘Sayuri' means something along the lines of ‘a flower that blooms too fast’."
+    s bbaabbeaj "You know, I'm not the brightest person… {w=0.5}{nw}"
+    extend abaabkca"but I'm seeing some weird implications here…"
+    s abfbbkca "Perhaps I was given this name to signify that I'm a blend of many things."
+    s abgcbcea "But who knows? I like my name regardless!"
+    s "I just think of it as a fun fact hehehe~"
+    S abgcbaea "I also find it funny how everyone pronounces it a little differently!"
+    s ebhfbaea "Say [player], are you part of team {i}Sigh-ori{/i}, or team {i}Say-ori{/i}? Ehehehe~"
+    s abhfbbaa "Honestly I don’t have a preference, {w=0.5}{nw}"
+    extend abaabcqa "I switch between them myself sometimes hehehe~"
+    s abaabasa "What about you, [player], does your name have a special meaning? I’d love to know!" 
+    return
