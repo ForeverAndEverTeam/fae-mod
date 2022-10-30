@@ -269,38 +269,38 @@ label poem_redux:
         return "prompt"
 
     if _poem == poem_bottles:
-        call fae_showpoem(_poem, post_label="s_poems_bottles") from _call_showpoem_s
+        call fae_showpoem(_poem, post_label="s_poems_bottles")
         return
 
     elif _poem == poem_sunshine:
-        call fae_showpoem(_poem, post_label="s_poems_sunshine") from _call_showpoem_s_1
+        call fae_showpoem(_poem, post_label="s_poems_sunshine")
         return
     
     elif _poem == poem_flower:
-        call fae_showpoem(_poem, post_label="s_poems_flower") from _call_showpoem_s_2
+        call fae_showpoem(_poem, post_label="s_poems_flower")
         return
     elif _poem == poem_last:
-        call fae_showpoem(_poem, post_label="s_poems_last") from _call_showpoem_s_3
+        call fae_showpoem(_poem, post_label="s_poems_last")
         return
     
     elif _poem == poem_fruits:
-        call fae_showpoem(_poem, post_label="s_poems_fruits") from _call_showpoem_s_4
+        call fae_showpoem(_poem, post_label="s_poems_fruits")
         return
     
     elif _poem == poem_angel:
-        call fae_showpoem(_poem, post_label="s_poems_angel") from _call_showpoem_s_5
+        call fae_showpoem(_poem, post_label="s_poems_angel")
         return
     
     elif _poem == poem_leaf:
-        call fae_showpoem(_poem, post_label="s_poems_leaf") from _call_showpoem_s_6
+        call fae_showpoem(_poem, post_label="s_poems_leaf")
         return
     
     elif _poem == poem_prose:
-        call fae_showpoem(_poem, post_label="s_poems_prose") from _call_showpoem_s_7
+        call fae_showpoem(_poem, post_label="s_poems_prose")
         return
     
     elif _poem == poem_afterlight:
-        call fae_showpoem(_poem, post_label="s_poems_afterlight") from _call_showpoem_s_8
+        call fae_showpoem(_poem, post_label="s_poems_afterlight")
         return
 
     return
