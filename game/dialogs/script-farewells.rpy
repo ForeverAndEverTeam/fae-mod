@@ -94,7 +94,7 @@ label farewell_options:
     call screen neat_menu_scroll(selectable_leave_options, ("Nevermind.", None))
 
     if isinstance(_return, basestring):
-        show sayori idle at t11 zorder fae_sprites.SAYO_ZORDER
+        show sayori idle at t11 zorder fae_sprites.FAE_SAYORI_ZORDER
         $ ats(_return)
         jump cnc
     
@@ -107,27 +107,27 @@ label first_leave:
 
 #Farewells
 label farewell_sleep: #The actual first farewell of this mod
-    show sayori abhfaoa at ss1 zorder 2
-    s "Oh, are you heading out, [player]?" 
+    
+    s abhfaoa "Oh, are you heading out, [player]?" 
     s abhfcoa "Got it- I;ll see you later, then! Be safe out there!"
     return "quit"
 
 label farewell_school:
-    show sayori abhfaaa at ss1 zorder 2
-    s "Goodbye, [player]!"
+    
+    s abhfaaa "Goodbye, [player]!"
     s "You can come back whenever you're feeling lonely, you know..."
     s abfdaoa "I'll always be here to spend time with you!"
     return "quit"
 
 label farewell_game:
-    show sayori abhfaaa at ss1 zorder 2
-    s "Bye, [player]!"
+    
+    s abhfaaa "Bye, [player]!"
     s abgccqa "Don't forget to come see me again soon!"
     return "quit"
 
 label farewell_eat:
-    show sayori abhfaaa at ss1 zorder 2
-    s "Bye-bye!"
+    
+    s abhfaaa "Bye-bye!"
     s "I’ll be wishing you health and happiness!"
     s abheaka "Be safe out there, okay, [player]? Ehehe~."
     return "quit"
@@ -145,15 +145,15 @@ label farewell_exercise:
     return "quit"
 
 label farewell_work:
-    show sayori abhfaaa at ss1 zorder 2
-    s "Bye, [player]!"
+    
+    s abhfaaa "Bye, [player]!"
     s fbhaica "And don’t forget to make sure that you’re taking good care of yourself!"
     s abagcaa "I want you to be able to come back and be safe and sound, okay?"
     return "quit"
 
 label farewell_die:
-    show sayori abhfaaa at ss1 zorder 2
-    s "See you later, [player]!"
+    
+    s abhfaaa "See you later, [player]!"
     s abfbaha "I wish I could give you a little farewell hug..."
     s abfdcqa "But as long as you know that I would if I were able to... that’s already enough, isn’t it? Ehehe~"
     return "quit"
