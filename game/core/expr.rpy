@@ -28,12 +28,6 @@ init -50 python in fae_sprites:
 #   y_step = 40
     y_step = 20
 
-    if fae_gifts.cookies:
-        gift = True
-    
-    else:
-        gift = False
-
 
     def change_zoom():
 
@@ -225,8 +219,7 @@ init -50 python in fae_sprites:
         eyebrows,
         mouth,
         blush=None,
-        tears=None,
-        gift = store.fae_sprites.gift
+        tears=None
     ):
         """
         Creates sprite from given argument
@@ -272,12 +265,11 @@ init -50 python in fae_sprites:
             (0, 0), "{0}{1}/eyebrows/{2}.png".format(_FAE_SAYORI_IMAGES_PATH, pose, eyebrows),
             
         ])
+        if store.fae_gifts.cookies:
 
-        if gift:
             ad_hoc.extend([
                 (0, 0), "mod_assets/images/food/cookies.png"
             ])
-        
         
        
         return renpy.display.layout.LiveComposite(
@@ -430,9 +422,6 @@ init 1 python in fae_sprites:
         
         blush = None
         tears = None
-
-        if store.fae_gifts.cookies:
-            gift = True
         
 
 
