@@ -17,7 +17,7 @@ init python:
 
         if renpy.exists("cookies.gift"):
             
-            store.fae_utilities.removeFileDir("game/cookies.gift")
+            store.fae_utilities.removeFileDir("{0}/cookies.gift".format(renpy.config.gamedir))
 
             renpy.call("fae_cookies")
 
