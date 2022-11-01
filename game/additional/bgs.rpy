@@ -12,6 +12,29 @@ init -1 python in fae_rooms:
 
     ROOM_DEFS = dict()
 
+    def fae_decorationManager(event=None):
+        """
+        Add a way to decorate the spaceroom on the fly.
+        """
+
+        if event is None:
+            return None
+        
+        if event == "o31":
+            halloweenDecoration()
+        
+        elif event == "d25":
+
+            christmasDecoration()
+    
+
+    def halloweenDecoration():
+        return None
+
+    def christmasDecoration():
+        return None
+
+
 init -20 python:
 
     import os
@@ -310,3 +333,4 @@ init 0 python:
     
     if persistent._present_room in fae_rooms.ROOM_DEFS:
         main_background.room_switcher(persistent._present_room)
+    
