@@ -3,6 +3,7 @@ init -50 python in fae_sprites:
     import store
     import store.fae_outfits as fae_outfits
     import store.fae_utilities as fae_utilities
+    import store.fae_gifts as fae_gifts
 
     ZOOM = "zoom="
 
@@ -26,6 +27,12 @@ init -50 python in fae_sprites:
     adjust_y = default_y
 #   y_step = 40
     y_step = 20
+
+    if fae_gifts.cookies:
+        gift = True
+    
+    else:
+        gift = False
 
 
     def change_zoom():
@@ -62,10 +69,10 @@ init -50 python in fae_sprites:
         zoom_level = 0
         change_zoom()
     
-
+    
     
 
-    SAYO_ZORDER = 3
+    FAE_SAYORI_ZORDER = 3
 
     pose = "sitting"
 
@@ -218,11 +225,15 @@ init -50 python in fae_sprites:
         eyebrows,
         mouth,
         blush=None,
-        tears=None
+        tears=None,
+        gift = store.fae_sprites.gift
     ):
         """
-        Generates sprite based on outfit, exp, pose, etc
+        Creates sprite from given argument
         """
+
+        
+
         ad_hoc = [
             (1280, 720),
             (0, 0), _FAE_SAYORI_IMAGES_PATH + "table/chair.png",
@@ -258,9 +269,16 @@ init -50 python in fae_sprites:
         
         ad_hoc.extend([
               
-            (0, 0), "{0}{1}/eyebrows/{2}.png".format(_FAE_SAYORI_IMAGES_PATH, pose, eyebrows)
+            (0, 0), "{0}{1}/eyebrows/{2}.png".format(_FAE_SAYORI_IMAGES_PATH, pose, eyebrows),
             
         ])
+
+        if gift:
+            ad_hoc.extend([
+                (0, 0), "mod_assets/images/food/cookies.png"
+            ])
+        
+        
        
         return renpy.display.layout.LiveComposite(
             *ad_hoc
@@ -269,6 +287,9 @@ init -50 python in fae_sprites:
         
 
 init 1 python in fae_sprites:
+    import store
+
+    
 
     POSE_DEF = {
         "sitting": Pose.sitting,
@@ -379,16 +400,8 @@ init 1 python in fae_sprites:
 
     
 
-    def _auto_gen(exp_code):
-        """
-        Reads given sprite code and returns the args to build it.
-
-        ERRORS:
-            ValueError if the exp is invalid because of length
-            KeyError is the exp is invalide because of parts
-        """
-
-        if len(exp_code) < 7:
+    def _exp_renderer(exp_code):
+        if len(exp_code) < 6:
             raise ValueError("Invalid expression code: {0}".format(exp_code))
         
         #pose = exp_code[-1]
@@ -406,8 +419,8 @@ init 1 python in fae_sprites:
         arms2 = exp_code[0]
         exp_code = exp_code[1:]
 
-        hair = exp_code[0]
-        exp_code = exp_code[1:]
+        #hair = exp_code[0]
+        #exp_code = exp_code[1:]
 
         eyes = exp_code[0]
         exp_code = exp_code[1:]
@@ -417,6 +430,9 @@ init 1 python in fae_sprites:
         
         blush = None
         tears = None
+
+        if store.fae_gifts.cookies:
+            gift = True
         
 
 
@@ -452,7 +468,7 @@ init 1 python in fae_sprites:
 
     def _auto_gen(exp_code):
         """
-        Generates image from exp code
+        Generating image from given sprite code
         """
 
         disp = fae_gen_sprite(**_exp_renderer(exp_code))
@@ -465,9 +481,6 @@ init 1 python in fae_sprites:
         #    _existing_attr_list.append(exp_code)
 
     def _find_target_override(self):
-        """
-        Finds an image by reference.
-        """
         
         name = self.name
 
@@ -479,9 +492,6 @@ init 1 python in fae_sprites:
             name = tuple(name.split())
 
         def error(msg):
-            """
-            Sets the image target to a displayable (text) for missing image.
-            """
             self.target = renpy.text.text.Text(
                 msg,
                 color=(255, 0, 0, 255),
@@ -548,10 +558,24 @@ init 1 python in fae_sprites:
 
     renpy.display.image.ImageReference.find_target = _find_target_override
 
+init -1 python in fae_sprites:
 
-############
-# IDLE EXPS#
-############
+    def show_empty_desk():
+        """
+        Shows empty desk
+        """
+        renpy.show(
+            "emptydesk",
+            tag="emptydesk",
+            at_list=[store.i11],
+            zorder=store.fae_sprites.FAE_SAYORI_ZORDER - 1
+        )
+
+image emptydesk = Composite(
+    (1280, 720),
+    (0, 0), "mod_assets/sayori/table/chair.png",
+    (0, 0), "mod_assets/sayori/table/desk.png"
+)
 
 
 
@@ -569,17 +593,17 @@ image sayori idle love:
     
     block:
         choice:
-            "sayori abhfbaab"
+            "sayori abhfaab"
             pause 5
         
         choice:
-            "sayori abhfbaaa"
+            "sayori abhfaaa"
             pause 5
-            "sayori abhfbpaa"
+            "sayori abhfpaa"
             pause 0.13
-            "sayori abhfblaa"
+            "sayori abhflaa"
             pause 0.10
-            "sayori abhfbpaa"
+            "sayori abhfpaa"
             pause 0.10
         
         repeat
@@ -588,17 +612,17 @@ image sayori idle enamoured:
 
     block:
         choice:
-            "sayori abhfbaab"
+            "sayori abhfaab"
             pause 10
         
         choice:
-            "sayori abhfbaaa"
+            "sayori abhfaaa"
             pause 5
-            "sayori abhfbpaa"
+            "sayori abhfpaa"
             pause 0.13
-            "sayori abhfblaa"
+            "sayori abhflaa"
             pause 0.10
-            "sayori abhfbpaa"
+            "sayori abhfpaa"
             pause 0.10
         
         repeat
@@ -607,17 +631,17 @@ image sayori idle affectionate:
 
     block:
         choice:
-            "sayori abhfbaaa"
+            "sayori abhfaaa"
             pause 10
         
         choice:
-            "sayori abhfbaaa"
+            "sayori abhfaaa"
             pause 5
-            "sayori abhfbpaa"
+            "sayori abhfpaa"
             pause 0.13
-            "sayori abhfblaa"
+            "sayori abhflaa"
             pause 0.10
-            "sayori abhfbpaa"
+            "sayori abhfpaa"
             pause 0.10
         
         repeat
@@ -626,21 +650,38 @@ image sayori idle normal:
 
     block:
         choice:
-            "sayori abhfbaaa"
+            "sayori abhfaaa"
             pause 10
         
         choice:
-            "sayori abhfbaaa"
+            "sayori abhfaaa"
             pause 5
-            "sayori abhfbpaa"
+            "sayori abhfpaa"
             pause 0.13
-            "sayori abhfblaa"
+            "sayori abhflaa"
             pause 0.10
-            "sayori abhfbpaa"
+            "sayori abhfpaa"
             pause 0.10
         
         repeat
 
 
+init python:
+    def refresh():
+        renpy.show("sayori idle normal")
 
+label fae_show_empty_desk(hide_dlg_box=True):
+    if hide_dlg_box:
+        window hide
+    $ store.fae_sprites.show_empty_desk()
+    hide sayori with dissolve_sayori
+    return
 
+label fae_return_desk(exp="sayori abhfaaa", show_dlg_box=True):
+
+    if show_dlg_box:
+        window auto
+    $ renpy.show(exp, tag="sayori", at_list=[i11], zorder=store.fae_sprites.FAE_SAYORI_ZORDER)
+    $ renpy.with_statement(dissolve_sayori)
+    hide emptydesk
+    return
