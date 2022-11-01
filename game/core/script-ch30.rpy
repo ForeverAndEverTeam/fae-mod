@@ -56,6 +56,34 @@ init python:
         return None
 
 
+label spaceroom(scene_change=True, sayori_exp=None, dissolve_all=False, hide_sayori=False, show_empty_desk=True):
+
+    if scene_change:
+        scene black
+        hide black
+        $ main_background.form()
+        
+        $ fae_sky.reload_sky()
+    python:
+
+        if hide_sayori:
+            if not scene_change:
+                renpy.hide("sayori")
+            if show_empty_desk:
+                store.fae_sprites.show_empty_desk()
+        else:
+
+            if sayori_exp is None:
+                sayori_exp = "sayori idle"
+            
+            if not renpy.showing(sayori_exp):
+                renpy.show(sayori_exp, tag="sayori", at_list=[t11], zorder=store.fae_sprites.FAE_SAYORI_ZORDER)
+
+                if not dissolve_all:
+                    renpy.with_statement(None)
+    
+    return
+
 label ch30_autoload:
 
     if fae_is_evening():
@@ -151,32 +179,7 @@ label ch30_init:
         fae_utilities.log("Outfit Set.")
         
         fae_events.EVENT_RETURN_OUTFIT = fae_outfits.get_outfit(store.persistent.fae_outfit_quit)
-        """
-        available_holiday_list = fae_events.selectHolidays()
-
-        
-        if available_holiday_list:
-            fae_events.EVENT_RETURN_OUTFIT = fae_outifts.get_outfit(store.persistent.fae_outfit_quit)
-            available_holiday_list.sort(key = lambda holiday: holiday.priority)
-            queued_holiday_types = list()
-
-            while len(available_holiday_list) > 0:
-                holiday = available_holiday_list.pop()
-
-                if not holiday.holiday_type in queued_holiday_types:
-                    queued_holiday_types.append(holiday.holiday_type)
-                    atq(holiday.label)
-                    if len(available_holiday_list) > 0:
-                        queue("event_interlude")
-
-                    else:
-                        queue("ch30_loop")
-            
-            renpy.jump("cnc")
-
-        """
-
-        
+               
 
 
         #init_qabs()
@@ -205,7 +208,7 @@ label ch30_init:
     ):
         $ ats("fae_corrupted_persistent")
     
-    show sayori idle at t11 zorder store.fae_sprites.SAYO_ZORDER
+    show sayori idle at t11 zorder store.fae_sprites.FAE_SAYORI_ZORDER
     #show bg spaceroom zorder 1
     hide black with Dissolve(2)
     #show screen hidden1(True)
@@ -213,11 +216,16 @@ label ch30_init:
 
     #FALL THRouGH
 
-label ch30_loop:
+label ch30_loop():
+
+    
+    call spaceroom(False, None)
+
+    
 
     $ init_qabs()
-    
-    show sayori idle at fae_center zorder store.fae_sprites.SAYO_ZORDER
+
+    show sayori idle at fae_center zorder store.fae_sprites.FAE_SAYORI_ZORDER
 
 
     python:
@@ -262,7 +270,7 @@ label loop_wait:
 label cnc(show_sayori=True, notify=False):
 
     if show_sayori:
-        show sayori idle at fae_center zorder fae_sprites.SAYO_ZORDER
+        show sayori idle at fae_center zorder fae_sprites.FAE_SAYORI_ZORDER
 
     #show sayori idle at t11 zorder store.fae_sprites.SAYO_ZORDER
     if persistent._event_list:
@@ -361,3 +369,8 @@ label ch30_main:
     call fae_intro_checks from _call_fae_intro_checks
 
     jump ch30_setup
+
+
+
+
+
