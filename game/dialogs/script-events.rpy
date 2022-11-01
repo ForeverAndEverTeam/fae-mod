@@ -401,7 +401,7 @@ init -1 python in fae_events:
         bgm=None
     ):
 
-        renpy.show("sayori {0}".format(sayori_sprite_code), at_list=[store.fae_center], zorder=store.fae_sprites.SAYORI_ZORDER)
+        renpy.show("sayori {0}".format(sayori_sprite_code), at_list=[store.fae_center], zorder=store.fae_sprites.FAE_SAYORI_ZORDER)
         renpy.hide("black")
         #renpy.show_screen("hkb_overlay")
         #renpy.play(filename=audio.light_switch, channel="audio")
@@ -480,7 +480,7 @@ init -1 python in fae_events:
     ):
 
 
-        renpy.show("sayori {0}".format(sayori_sprite_code), at_list=[store.fae_center], zorder=store.fae_sprites.SAYO_ZORDER)
+        renpy.show("sayori {0}".format(sayori_sprite_code), at_list=[store.fae_center], zorder=store.fae_sprites.FAE_SAYORI_ZORDER)
         renpy.hide("black")
 
         renpy.play(filename=bgm, channel="music")
@@ -541,7 +541,7 @@ label fae_event_mr_cow_transform20:
 
     $ fae_globals.allow_force_quit = False
 
-    show asset mr_cow_desk as mr_cow_desk zorder fae_sprites.SAYO_ZORDER
+    show asset mr_cow_desk as mr_cow_desk zorder fae_sprites.FAE_SAYORI_ZORDER
    
     s "[player] heeeeeeelp!!!"
     s "I was messing with the code and accidentally turned myself into Mr. Cow!"
@@ -594,10 +594,10 @@ label fae_event_pointy_stick_stabber_girl:
 
     #$ fae_events.show_visuals("idle")
 
-    show sayori idle at fae_center zorder fae_sprites.SAYO_ZORDER
+    show sayori idle at fae_center zorder fae_sprites.FAE_SAYORI_ZORDER
 
 
-    show asset knife as knife at fae_center zorder fae_sprites.SAYO_ZORDER
+    show asset knife as knife at fae_center zorder fae_sprites.FAE_SAYORI_ZORDER
 
     
 
