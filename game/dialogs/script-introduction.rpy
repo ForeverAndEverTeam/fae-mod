@@ -26,6 +26,8 @@ default persistent.fae_intro_status = 1
 
 label fae_intro_checks:
 
+    $ setupRPC("In the spaceroom")
+
     if not fae_intro.FAEIntroStatus(persistent.fae_intro_status) == fae_intro.FAEIntroStatus.new_game:
 
         $ Sayori.setOutfit(fae_outfits.get_outfit("uniform"))
@@ -69,7 +71,7 @@ label fae_intro_1:
     hide black
     
 
-    show sayori 3a at f11 zorder store.fae_sprites.SAYO_ZORDER
+    show sayori 3a at f11 zorder store.fae_sprites.FAE_SAYORI_ZORDER
     s 3a "Hmm... this might be a teeny tiny bit awkward..."
     s "I don't know who you are..."
     s "What you look or sound like..."
@@ -132,7 +134,7 @@ label fae_intro_2:
 
     #show bg spaceroom zorder 2
 
-    show sayori idle zorder store.fae_sprites.SAYO_ZORDER
+    show sayori idle zorder store.fae_sprites.FAE_SAYORI_ZORDER
 
     hide black with Dissolve(2)
     
