@@ -89,13 +89,7 @@ label ch30_autoload:
     if fae_is_evening():
         play music s1
     
-    
 
-    #the real start of the game
-
-    #config.rollback_enabled = False
-
-    #Start with black screen
     scene black
 
 
@@ -106,10 +100,9 @@ label ch30_autoload:
         
         if not config.developer:
             config.allow_skipping = False
-
-    #Do all the things for init setup
-
     
+    $ store.fae_utilities.makedirifnot("{0}/gifts/".format(renpy.config.gamedir))
+
 
     #FALL THROUGH
     
@@ -119,9 +112,7 @@ label ch30_setup:
 
     show black zorder 99
 
-    #$ fae_notifutilities._setFAEWindow()
-    
-    #$ fae_updateFilterDict()
+
     $ Sayori.setOutfit(fae_outfits.get_outfit("uniform"))
 
     $ main_background.form()
@@ -130,12 +121,9 @@ label ch30_setup:
 
     $ setupRPC("In the spaceroom")
 
-        #while True:
-        #    time.sleep(15)
-    
-    
 
     #FALL THROUGH
+
 
 label ch30_init:
 
@@ -180,10 +168,6 @@ label ch30_init:
         
         fae_events.EVENT_RETURN_OUTFIT = fae_outfits.get_outfit(store.persistent.fae_outfit_quit)
                
-
-
-        #init_qabs()
-        #renpy.save_persistent()
         
         if not cielp("^greeting_"):
 
@@ -215,6 +199,7 @@ label ch30_init:
     show screen hidden1(True)
 
     #FALL THRouGH
+
 
 label ch30_loop():
 
@@ -369,8 +354,5 @@ label ch30_main:
     call fae_intro_checks from _call_fae_intro_checks
 
     jump ch30_setup
-
-
-
 
 
