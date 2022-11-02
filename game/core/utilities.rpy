@@ -1,5 +1,3 @@
-
-
 init -985 python in fae_utilities:
 
     
@@ -36,7 +34,7 @@ init -985 python in fae_utilities:
         return _now - store.fae_utilities.pdget(
             "current_session_start",
             persistent.sessions,
-            #validator=store.mas_ev_data_ver._verify_dt_nn,
+            #validator=store.fae_ev_data_ver._verify_dt_nn,
             defval=_now
         )
     
@@ -49,7 +47,7 @@ init -985 python in fae_utilities:
         return store.fae_utilities.pdget(
             "current_session_start",
             persistent.sessions,
-            #validator=store.mas_ev_data_ver._verify_dt_nn,
+            #validator=store.fae_ev_data_ver._verify_dt_nn,
             defval=fae_getFirstSesh()
         )
     
@@ -58,7 +56,7 @@ init -985 python in fae_utilities:
         return store.fae_utilities.pdget(
             "first_session",
             persistent.sessions,
-            #validator=store.mas_ev_data_ver._verify_dt_nn,
+            #validator=store.fae_ev_data_ver._verify_dt_nn,
             defval=datetime.datetime.now()
         )
     
@@ -71,7 +69,7 @@ init -985 python in fae_utilities:
         return store.fae_utilities.pdget(
             "last_session_end",
             persistent.sessions,
-            #validator=store.mas_ev_data_ver._verify_dt_nn,
+            #validator=store.fae_ev_data_ver._verify_dt_nn,
             defval=fae_getFirstSesh()
         )
     
@@ -221,6 +219,8 @@ init -999 python in fae_utilities:
             except Exception as exception:
                 fae_log("Failed to delete file on path {0}; {1}".format(path, exception.message))
                 return False
+        else:
+            renpy.notify("File doesn't exist.")
         return False
     
     def getDirFile(path, ext_list=None):
@@ -577,7 +577,7 @@ init -990 python in fae_globals:
         "(horniest|horny)",
         "jack-?off",
         "ji[sz]m",
-        "(m[a4][s5]t[eu]r-?b[a8][t+]?[e3]?|masochist)",
+        "(m[a4][s5]t[eu]r-?b[a8][t+]?[e3]?|faeochist)",
         "m[o0]-?f[o0]",
         "n[1i]gg",
         "orgasi?m",
@@ -796,7 +796,7 @@ init python:
     
     def h_check():
 
-        main_background.reset_checker()
+        #main_background.reset_checker()
 
         
         pass
@@ -828,5 +828,6 @@ init python:
             renpy.jump("cnc")
 
         pass
+
 
 
