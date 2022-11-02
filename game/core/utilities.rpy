@@ -780,26 +780,25 @@ init python:
 
                 atq("silence_is_golden")
             
-        pass
+        return
     
 
     def qh_check():
 
         fae_sky.reload_sky()
 
-        pass
+        return
     
 
     def hh_check():
 
-        pass
+        return
     
     def h_check():
 
-        #main_background.reset_checker()
 
         
-        pass
+        return
     
     def d_check():
 
@@ -827,7 +826,7 @@ init python:
             
             renpy.jump("cnc")
 
-        pass
+        return
 
 
 
