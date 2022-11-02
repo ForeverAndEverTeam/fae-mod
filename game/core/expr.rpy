@@ -268,7 +268,13 @@ init -50 python in fae_sprites:
         if store.fae_gifts.cookies:
 
             ad_hoc.extend([
-                (0, 0), "mod_assets/images/food/cookies.png"
+                (0, 0), "mod_assets/images/food/cookies.png",
+            ])
+        
+        if store.fae_gifts.otter:
+
+            ad_hoc.extend([
+                (0, 0), "mod_assets/images/acs/otter.png"
             ])
         
        
