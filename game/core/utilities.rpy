@@ -241,10 +241,10 @@ init -999 python in fae_utilities:
 
 
 
+default persistent._fae_random_chat_freq = fae_random_chat_rate.SOMETIMES
+define fae_randchat_prev = persistent._fae_random_chat_freq
     
-
-    
-init python in fae_utilities.random_chat_rate:
+init -1 python in fae_random_chat_rate:
     import store
 
     NEVER = 0
@@ -252,6 +252,30 @@ init python in fae_utilities.random_chat_rate:
     SOMETIMES = 2
     FREQUENT = 3
     OFTEN = 4
+
+    OFTEN_WAIT = 5
+    FREQUENT_WAIT = 15
+    SOMETIMES_WAIT = 40
+    RARELY_WAIT = 20*60
+    NEVER_WAIT = 0
+
+    SPAN_MULTIPLIER = 3
+
+    SLIDER_DEFS = {
+        NEVER: NEVER_WAIT,
+        RARELY: RARELY_WAIT,
+        SOMETIMES: SOMETIMES_WAIT,
+        FREQUENT: FREQUENT_WAIT,
+        OFTEN: OFTEN_WAIT
+    }
+
+    SLIDER_DEFS_DISP = {
+        NEVER: "Never",
+        RARELY: "Rarely",
+        SOMETIMES: "Sometimes",
+        FREQUENT: "Frequent",
+        OFTEN: "Often"
+    }
 
     _RANDOM_CHAT_FREQUENCY_TIMER_DEFS = {
         0: 999,
@@ -269,6 +293,35 @@ init python in fae_utilities.random_chat_rate:
         4: "Often",
     }
 
+    rand_low = SOMETIMES
+    rand_high = SOMETIMES * SPAN_MULTIPLIER
+    randchat_time_left = 0
+
+
+    def adjustRandFrequency(slider_value):
+
+        global rand_low
+        global rand_high
+
+        slider_setting = SLIDER_DEFS.get(slider_value, 4)
+
+
+        rand_low = slider_setting
+        rand_high = slider_setting * SPAN_MULTIPLIER
+        store.persistent.fae_random_chat_rate = slider_value
+
+        setWaitingTime()
+    
+    def getRandChatDisp(slider_value):
+
+        return SLIDER_DEFS_DISP.get(slider_value, "UNKNOWN")
+
+    def setWaitingTime():
+
+        global randchat_time_left
+
+        randchat_time_left = renpy.random.randint(rand_low, rand_high)
+
     def get_random_chat_frequency_desc():
 
         return _RANDOM_CHAT_FREQUENCY_DESC_DEFS.get(store.persistent.fae_random_chat_rate)
@@ -276,8 +329,34 @@ init python in fae_utilities.random_chat_rate:
     def get_random_chat_timer():
 
         return _RANDOM_CHAT_FREQUENCY_TIMER_DEFS.get(store.persistent.fae_random_chat_rate)
+    
+    def wait():
 
-default persistent.fae_random_chat_rate = fae_utilities.random_chat_rate.SOMETIMES
+        global randchat_time_left
+
+        WAITING_TIME = 5
+
+        if randchat_time_left > WAITING_TIME:
+            randchat_time_left -= WAITING_TIME
+            renpy.pause(WAITING_TIME, hard=True)
+        
+        elif randchat_time_left > 0:
+            waitFor = randchat_time_left
+            randchat_time_left = 0
+            renpy.pause(waitFor, hard=True)
+
+        else:
+            randchat_time_left = 0
+            renpy.pause(WAITING_TIME, hard=True)
+    
+    def waitedLongEnough():
+
+        global randchat_time_left
+
+        return randchat_time_left == 0 and rand_low != 0
+
+
+#default persistent.fae_random_chat_rate = fae_utilities.random_chat_rate.SOMETIMES
 default persistent.fae_repeat_chat = True
 
 
@@ -745,8 +824,8 @@ init python:
         )
 
         if (
-            persistent.fae_random_chat_rate is not fae_utilities.random_chat_rate.NEVER
-            and datetime.datetime.now() > LCC + datetime.timedelta(minutes=fae_utilities.random_chat_rate.get_random_chat_timer())
+            persistent._fae_random_chat_freq is not fae_random_chat_rate.NEVER
+            and datetime.datetime.now() > LCC + datetime.timedelta(minutes=fae_random_chat_rate.get_random_chat_timer())
             and not persistent._event_list
         ):
 

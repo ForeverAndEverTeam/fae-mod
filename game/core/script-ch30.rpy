@@ -124,6 +124,14 @@ label ch30_setup:
 
     #FALL THROUGH
 
+label fae_event_check:
+
+    if fae_isO31():
+        jump fae_o31_autoload
+    
+label fae_ch30_after_holiday:
+
+    pass
 
 label ch30_init:
 
@@ -183,6 +191,7 @@ label ch30_init:
                 ats(fae_greetings.greet_sel())
                 persistent.fae_mood_on_quit = None
                 persistent._fae_await_apology_quit = None
+                
     #$ begin_song()
 
 
@@ -198,13 +207,15 @@ label ch30_init:
     #show screen hidden1(True)
     show screen hidden1(True)
 
+    call cnc from _call_cnc_1
+
     #FALL THRouGH
 
 
 label ch30_loop():
 
     
-    call spaceroom(False, None)
+    call spaceroom(False, None) from _call_spaceroom
 
     
 
@@ -237,20 +248,30 @@ label ch30_loop():
             PRIOR_CHECK_DAILY = _present.day
         
         Sayori.setInChat(False)
-            
-    #$ calendar = Calendar(5, 2, 2014, 2016)
-    while persistent._event_list:
-        call cnc(True, True) from _call_cnc
+
+    $ fae_random_chat_rate.wait()
+
+    if not fae_random_chat_rate.waitedLongEnough():
+
+        jump after_random_pick
+    else:
+        $ fae_random_chat_rate.setWaitingTime()
     
+    
+    label select_topic:
 
+        while persistent._event_list:
+            call cnc(True, True) from _call_cnc
 
+label after_random_pick:
+
+    $ _return = None
+
+    jump ch30_loop
+    
     show screen hidden1(True)
 
-label loop_wait:
-    window hide
 
-    $ renpy.pause(delay=5.0, hard=True)
-    jump ch30_loop
 
 label cnc(show_sayori=True, notify=False):
 
@@ -311,6 +332,11 @@ label cnc(show_sayori=True, notify=False):
 
     jump ch30_loop
 
+label loop_wait:
+    window hide
+
+    $ renpy.pause(delay=5.0, hard=True)
+    jump ch30_loop
 
 label fae_force_quit_attempt:
 
