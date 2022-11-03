@@ -13,9 +13,9 @@ init -100 python:
 
             renpy.call("fae_cookies")
         
-        elif renpy.exists("otter.gift"):
+        if renpy.exists("gifts/otter.gift"):
 
-            store.fae_utilities.removeFileDir("otter.gift")
+            store.fae_utilities.removeFileDir("{0}/gifts/otter.gift")
 
             renpy.call("fae_otter")
 
@@ -51,6 +51,23 @@ label fae_otter:
 
     return
 
+label fae_chibi:
+
+    if store.fae_gifts.cookies:
+
+        $ store.fae_gifts.cookies = False
+
+        $ store.fae_gifts.chibi = True
+    
+    else:
+        $ store.fae_gifts.chibi = True
+    
+    $ store.fae_sprites._auto_gen("abhfaaa")
+    
+    s "Awwww"
+    s "She's so cute!"
+
+    return
 
 label fae_no_gift:
 
@@ -68,6 +85,8 @@ init -100 python in fae_gifts:
     cookies = False
 
     otter = False
+
+    chibi = False
 
     class FAEGift():
         def __init__(self, gift, zorder):
