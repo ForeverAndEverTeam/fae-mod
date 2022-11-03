@@ -97,6 +97,27 @@ label fae_time:
     return
 
 
+init 5 python:
+    
+    chatReg(
+        Chat(
+            persistent._chat_db,
+            label="fae_gift",
+            unlocked=True,
+            prompt="Check for gift",
+            random=False,
+            category=["DEV"]
+        ),
+        chat_group=CHAT_GROUP_NORMAL
+    )
+
+label fae_gift:
+
+    s "Sure"
+
+    $ look_for_gift()
+
+    return
 
 ######################
 # ACTUAL TOPICS HERE #
@@ -1316,7 +1337,7 @@ label s_topic_name:
     s abfbkca "Perhaps I was given this name to signify that I'm a blend of many things."
     s abgccea "But who knows? I like my name regardless!"
     s "I just think of it as a fun fact hehehe~"
-    S abgcaea "I also find it funny how everyone pronounces it a little differently!"
+    s abgcaea "I also find it funny how everyone pronounces it a little differently!"
     s ebhfaea "Say [player], are you part of team {i}Sigh-ori{/i}, or team {i}Say-ori{/i}? Ehehehe~"
     s abhfbaa "Honestly I don’t have a preference, {w=0.5}{nw}"
     extend abaacqa "I switch between them myself sometimes hehehe~"
