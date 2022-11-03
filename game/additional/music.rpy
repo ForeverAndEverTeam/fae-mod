@@ -80,7 +80,7 @@ label music_menu:
     show sayori idle at t11
 
     if not _return:
-        $ Sayori.isInChat(False)
+        $ Sayori.setInChat(False)
         jump ch30_loop
     
 
@@ -111,7 +111,7 @@ label music_menu:
     $ fae_music._now_playing = music_title
     $ renpy.notify("Now playing: {0}".format(fae_music._now_playing))
 
-    $ Sayori.isInChat(False)
+    $ Sayori.setInChat(False)
 
     jump ch30_loop
         
