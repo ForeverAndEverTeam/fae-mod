@@ -35,8 +35,6 @@ define gui.about = _("")
 #   Example: Doki Doki Yuri Time to DokiDokiYuriTime
 define build.name = "Forever&Ever"
 
-define build.executable_name = config.name
-
 # This configures whether your mod has sound effects.
 define config.has_sound = True
 
