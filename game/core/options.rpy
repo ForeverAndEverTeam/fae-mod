@@ -22,7 +22,7 @@ define config.name = "Forever & Ever (DEV-ALPHA)"
 define gui.show_name = True
 
 # This controls the version number of your mod.
-define config.version = "0.1-New-Beginnings"
+define config.version = "0.1.0"
 
 # This adds information about your mod in the About screen.
 # DDLC does not have a 'About' screen so you can leave this blank.
@@ -34,6 +34,8 @@ define gui.about = _("")
 #   The build name is ASCII only so no numbers, spaces, or semicolons.
 #   Example: Doki Doki Yuri Time to DokiDokiYuriTime
 define build.name = "Forever&Ever"
+
+define build.executable_name = config.name
 
 # This configures whether your mod has sound effects.
 define config.has_sound = True
@@ -183,24 +185,21 @@ init python:
 
     build.include_update = True
 
-    build.classify("game/mod_assets/**", build.name)# "mod_assets all")
-    build.classify("game/**.rpyc", build.name)#"scripts all")
-    build.classify("game/gui/**", build.name)
-    build.classify("game/python-packages/**", build.name)
-    build.classify('README.html', build.name)
-    build.classify("game/RPASongMetadata.json", build.name)
-    build.classify('**~', build.name)
-    build.classify('**/.**', build.name)
-    build.classify('**/#**', build.name)
-    #build.classify('**.rpy', None)
-    #build.classify("renpy/**", build.name)
-    #build.classify("lib/**" build.name)
+    build.classify("game/mod_assets/**", "all")
+    build.classify("game/**.rpyc", "all")
+    build.classify("game/gui/**", "all")
+    build.classify("game/python-packages/**", "all")
+    build.classify('README.html', "all")
+    build.classify("game/RPASongMetadata.json", "all")
+
+    build.classify("renpy/**", "all")
+    build.classify("lib/**", "all")
 
     # These variables declare the packages to build your mod that is Team Salvato
     # IPG compliant. Do not mess with these variables whatsoever.
     #build.package(build.directory_name + "Mod",'zip','mod',description="Ren'Py 6 DDLC Compliant Mod")
     #build.package(build.directory_name + "Renpy7Mod",'zip','windows linux mac renpy mod',description="Ren'Py 7 DDLC Compliant Mod")
-    build.package(build.directory_name + "Mod", 'zip', build.name, description="Ren'Py 8 DDLC Compliant Mod")
+    build.package(build.directory_name + "Mod", 'zip', "all", description="Ren'Py 8 DDLC Compliant Mod")
 
     # These variables declare the archives that will be made to your packaged mod.
     # To add another archive, make a build.archive variable like in this example:
@@ -225,22 +224,13 @@ init python:
     # Make sure to add 'all' to your build.classify variable if you are planning
     # to build your mod on Android like in this example.
     #   Example: build.classify("game/**.pdf", "scripts all")
-    
-    
-    #build.classify("game/README.md", None)
-    #build.classify("game/**.txt", None)#"scripts all")
-    #build.classify("game/**.chr", None)#"scripts all")
-    #build.classify("game/advanced_scripts/**", None)#"scripts all") ## Backwards Compatibility
-    #build.classify("game/tl/**", None)#"scripts all") ## Translation Folder
-    #, "scripts all")
-    # "mod")
 
-    #build.classify('**~', None)
     build.classify('**.bak', None)
-    #build.classify('**/.**', None)
-    #build.classify('**/#**', None)
     build.classify('**/thumbs.db', None)
-    
+    build.classify('**.rpy', None)
+    build.classify('**~', None)
+    build.classify('**/.**', None)
+    build.classify('**/#**', None)    
     build.classify('**.psd', None)
     build.classify('**.sublime-project', None)
     build.classify('**.sublime-workspace', None)
@@ -249,7 +239,12 @@ init python:
     build.classify('/game/10', None)
     build.classify('/game/cache/*.*', None)
     build.classify('**.rpa', None)
-    #'mod all')
+    build.classify('game/dev/**', None)
+    build.classify('game/saves/**', None)
+    build.classify('game/cache/**', None)
+    build.classify('gifts/*', None)
+    build.classify('game/submods/*', None)
+
     #build.classify('README.linux', 'linux')
    
     # This sets' README.html as documentation
