@@ -458,7 +458,7 @@ init -1 python:
     
     def init_qabs():
 
-        config.keymap["dlg"] = ["t", "T"]
+        config.keymap["dialogue"] = ["t", "T"]
         config.keymap["music"] = ["m", "M"]
         config.keymap["games"] = ["g", "G"]
         config.keymap["calendar"] = ["c", "C"]
@@ -471,7 +471,7 @@ init -1 python:
         #]
 
         config.underlay.append(
-            renpy.Keymap(dlg=dlg)
+            renpy.Keymap(dialogue=dlg)
         )
 
         config.underlay.append(
