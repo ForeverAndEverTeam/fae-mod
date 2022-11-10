@@ -2,17 +2,17 @@ default persistent.first_run = True
 
 default persistent.s_name = "Sayori"
 
-#init -890 python in fae_globals:
-#    import datetime
-#    import store
+init -890 python in fae_globals:
+    import datetime
+    import store
 
-#    tt_detected = (
-#        store.fae_getLastSeshEnd() - datetime.datetime.now()
-#            > datetime.timedelta(hours=30)
-#    )
+    tt_detected = (
+        store.fae_getLastSeshEnd() - datetime.datetime.now()
+            > datetime.timedelta(hours=30)
+    )
 
-#    if tt_detected:
-#        store.persistent._fae_pm_has_went_back_in_time = True
+    if tt_detected:
+        store.persistent._fae_pm_has_went_back_in_time = True
 
 init python:
 
@@ -269,7 +269,7 @@ label after_random_pick:
 
     jump ch30_loop
     
-    show screen hidden1(True)
+    #show screen hidden1(True)
 
 
 
@@ -332,11 +332,6 @@ label cnc(show_sayori=True, notify=False):
 
     jump ch30_loop
 
-label loop_wait:
-    window hide
-
-    $ renpy.pause(delay=5.0, hard=True)
-    jump ch30_loop
 
 label fae_force_quit_attempt:
 
