@@ -8,11 +8,18 @@ define FAE_NEW_YEARS_DAY = datetime.date(datetime.date.today().year, 1, 1)
 define FAE_VALENTINES_DAY = datetime.date(datetime.date.today().year, 2, 14)
 define FAE_EASTER = datetime.date(_easter.year, _easter.month, _easter.day)
 define FAE_SAYORI_BIRTHDAY = datetime.date(datetime.date.today().year, 5, 1)
-define FAE_HALLOWEEN = datetime.date(datetime.date.today().year, 10, 31)
+define FAE_HALLOWEEN = datetime.date(datetime.date.today().year, 11, 3)
 define FAE_CHRISTMAS_EVE = datetime.date(datetime.date.today().year, 12, 24)
 define FAE_CHRISTMAS_DAY = datetime.date(datetime.date.today().year, 12, 25)
 define FAE_NEW_YEARS_EVE = datetime.date(datetime.date.today().year, 12, 31)
 
+define fae_nyd = datetime.date(datetime.date.today().year, 1, 1)
+define fae_f14 = datetime.date(datetime.date.today().year, 2, 14)
+define fae_easter = datetime.date(_easter.year, _easter.month, _easter.day)
+define fae_d24 = datetime.date(datetime.date.today().year, 12, 24)
+define fae_d25 = datetime.date(datetime.date.today().year, 12, 25)
+
+define fae_o31 = datetime.date(datetime.date.today().year, 11, 3)
 
 init -3 python:
 
@@ -76,8 +83,64 @@ init -3 python:
 
         def __str__(self):
             return self.name
+
+init -10 python:
+
+    def fae_isO31(_date=None):
+        if _date is None:
+            _date = datetime.date.today()
+        
+        return _date == fae_o31.replace(year=_date.year)
     
+    def fae_isD25(_date=None):
+
+        if _date is None:
+            _date = datetime.date.today()
+        
+        return _date == FAE_CHRISTMAS_DAY.replace(year=_date.year)
     
+    def fae_isNYE(_date=None):
+       
+        if _date is None:
+            _date = datetime.date.today()
+
+        return _date == FAE_NEW_YEARS_EVE.replace(year=_date.year)
+
+    def fae_isNYD(_date=None):
+
+        if _date is None:
+            _date = datetime.date.today()
+        
+        return _date == FAE_NEW_YEARS_DAY.replace(year=_date.year)
+
+    def fae_isF14(_date=None):
+
+        if _date is None:
+            _date = datetime.date.today()
+        
+        return _date == FAE_VALENTINES_DAY.replace(year=_date.year)
+
+    def fae_isPlayerBday(_date=None, use_date_year=False):
+
+        if _date is None:
+            _date = datetime.date.today()
+        
+        if persistent._fae_player_bday is None:
+            return False
+
+        elif use_date_year:
+            return _date == fae_player_bday_curr(_date)
+        return _date == fae_player_bday_curr()
+
+init -11 python:
+    
+    def fae_player_bday_curr(_date=None):
+
+        if _date is None:
+            _date == datetime.date.today()
+        if persistent._fae_player_bday is None:
+            return None
+
 
 init python in fae_utilities:
 
@@ -96,6 +159,7 @@ init python in fae_utilities:
         
         else:
             return datetime.datetime.now() - datetime.datetime.today()
+        
         
     
     def get_total_gameplay_seconds():
@@ -307,3 +371,202 @@ init 900 python:
     persistent._fae_current_season = store.fae_time._seasonalReset(
         persistent._fae_current_season
     )
+
+init -999 python in fae_ev_data_ver:
+    import builtins
+    import renpy
+    import datetime
+
+    def _verify_int(val, allow_none=True):
+        return _verify_item(val, int, allow_none)
+
+
+    def _verify_int_nn(val):
+        return _verify_int(val, False)
+    
+
+    def _verify_item(val, _type, allow_none=True):
+        """
+        Verifies the given value has the given type/instance
+
+        IN:
+            val - value to verify
+            _type - type to check
+            allow_none - If True, None should be considered good value,
+                false means bad value
+                (Default: True)
+
+        RETURNS: True if the given value has the given type/instance,
+            false otherwise
+        """
+        if val is None:
+            return allow_none
+
+        # otherwise check item
+        return isinstance(val, _type)
+
+    def _verify_dt(val, allow_none=True):
+        if (
+                isinstance(val, datetime.datetime)
+                and val.year < 1900
+            ):
+            return False
+        return _verify_item(val, datetime.datetime, allow_none)
+
+
+    def _verify_dt_nn(val):
+        return _verify_dt(val, False)
+
+    def _verify_td(val, allow_none=True):
+        if val is None:
+            return allow_none
+        return _verify_item(val, datetime.timedelta, allow_none)
+
+
+    def _verify_td_nn(val):
+        return _verify_td(val, False)
+
+
+init -995 python in fae_utilities:
+
+    def pdget(key, table, validator=None, defval=None):
+        """
+        Protected Dict GET
+        Gets an item from a dict, using protections to ensure this item is
+        valid
+
+        IN:
+            key - key of item to get
+            table - dict to get from
+            validator - function to call with the item to validate it
+                If None, no validating done
+                (Default: None)
+            defval - default value to return if could not get from dict
+        """
+        if table is not None and key in table:
+
+            item = table[key]
+
+            if validator is None:
+                return item
+
+            if validator(table[key]):
+                return item
+
+        return defval
+
+init -985 python:
+    import datetime
+    # global stuff that should be defined somewhat early
+
+    def fae_getSessionLength():
+        """
+        Gets length of current session, IF this cannot be determined, a
+        time delta of 0 is returned
+        """
+        _now = datetime.datetime.now()
+        return _now - store.fae_utilities.pdget(
+            "current_session_start",
+            persistent.sessions,
+            validator=store.fae_ev_data_ver._verify_dt_nn,
+            defval=_now
+        )
+
+
+    def fae_getAbsenceLength():
+        """
+        Gets time diff between current session start and last session end
+        aka the diff between last session and this
+        if not found, time delta of 0 is returned
+        """
+        return fae_getCurrSeshStart() - fae_getLastSeshEnd()
+
+
+    def fae_getCurrSeshStart():
+        """
+        Returns the current session start datetime
+        If there is None, we use first session
+        """
+        return store.fae_utilities.pdget(
+            "current_session_start",
+            persistent.sessions,
+            validator=store.fae_ev_data_ver._verify_dt_nn,
+            defval=fae_getFirstSesh()
+        )
+
+
+    def fae_getFirstSesh():
+        """
+        Returns the first session datetime.
+
+        If we could not get it, datetime.datetime.now() is returnd
+        """
+        return store.fae_utilities.pdget(
+            "first_session",
+            persistent.sessions,
+            validator=store.fae_ev_data_ver._verify_dt_nn,
+            defval=datetime.datetime.now()
+        )
+
+    def fae_isFirstSeshPast(_date):
+        """
+        Checks if the first session is past the given date
+
+        IN:
+            _date - datetime.date to check against
+
+        OUT:
+            boolean:
+                - True if first sesh is past given date
+                - False otherwise
+        """
+        return fae_getFirstSesh().date() > _date
+
+    def fae_getLastSeshEnd():
+        """
+        Returns datetime of the last session
+        NOTE: if there was no last session, we use first session instead
+        """
+        return store.fae_utilities.pdget(
+            "last_session_end",
+            persistent.sessions,
+            validator=store.fae_ev_data_ver._verify_dt_nn,
+            defval=fae_getFirstSesh()
+        )
+
+
+    def fae_getTotalPlaytime():
+        """
+        Gets total playtime.
+
+        RETURNS: total playtime as a timedelta. If not found, we return a
+            time delta of 0
+        """
+        return store.fae_utilities.pdget(
+            "total_playtime",
+            persistent.sessions,
+            validator=store.fae_ev_data_ver._verify_td_nn,
+            defval=datetime.timedelta(0)
+        )
+
+
+    def fae_getTotalSessions():
+        """
+        Gets total sessions
+
+        REUTRNS: total number of sessions. If not found, we return 1
+        """
+        return store.fae_utilities.pdget(
+            "total_sessions",
+            persistent.sessions,
+            validator=store.fae_ev_data_ver._verify_int_nn,
+            defval=1
+        )
+
+
+    def fae_TTDetected():
+        """
+        Checks if time travel was detected
+        NOTE: TT detection occurs at init -890
+        """
+        return store.fae_globals.tt_detected
