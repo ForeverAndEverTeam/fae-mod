@@ -55,6 +55,13 @@ init python:
                 return user
         return None
 
+    def reveal():
+
+        renpy.show("sayori idle", at_list=[t11], zorder=store.fae_sprites.FAE_SAYORI_ZORDER)
+        
+        renpy.hide("black")
+        
+
 
 label spaceroom(scene_change=True, sayori_exp=None, dissolve_all=False, hide_sayori=False, show_empty_desk=True):
 
@@ -126,12 +133,29 @@ label ch30_setup:
 
 label fae_event_check:
 
+    if fae_isPlayerBday():
+        jump fae_player_bday_autoload
+
     if fae_isO31():
         jump fae_o31_autoload
+    
+    if fae_isD25():
+        jump fae_d25_autoload
+    
+    if fae_isF14():
+        jump fae_f14_autoload
+    
+    if fae_isNYE():
+        jump fae_nye_autoload
+    
+    if fae_isNYD():
+        jump fae_nyd_autoload
     
 label fae_ch30_after_holiday:
 
     pass
+    
+
 
 label ch30_init:
 
@@ -191,12 +215,14 @@ label ch30_init:
                 ats(fae_greetings.greet_sel())
                 persistent.fae_mood_on_quit = None
                 persistent._fae_await_apology_quit = None
+                reveal()
+                renpy.call("cnc")
                 
     #$ begin_song()
 
 
     if (
-        store.fae_per_checker.is_per_corrupt()
+        store.fae_per_check.is_per_corrupt()
         and not renpy.seen_label("fae_corrupted_persistent")
     ):
         $ ats("fae_corrupted_persistent")
@@ -206,8 +232,6 @@ label ch30_init:
     hide black with Dissolve(2)
     #show screen hidden1(True)
     show screen hidden1(True)
-
-    call cnc from _call_cnc_1
 
     #FALL THRouGH
 
@@ -273,7 +297,7 @@ label after_random_pick:
 
 
 
-label cnc(show_sayori=True, notify=False):
+label cnc(show_sayori=True, notify=True):
 
     if show_sayori:
         show sayori idle at fae_center zorder fae_sprites.FAE_SAYORI_ZORDER
