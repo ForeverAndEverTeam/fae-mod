@@ -27,11 +27,11 @@ Why not get creative and try to add a feature or two yourself? (I'm sure she'd l
 
 ## PROGRAMMING
 
-[Nathan](https://github.com/TRIDENT1313)
+[Nathan](https://github.com/TRIDENT1313) (Lead)
 
 ## ART
 
-[Orcaramelo](https://github.com/Orcaramelo)
+[Orcaramelo](https://github.com/Orcaramelo) (Lead)
 
 [Nemu-sus](https://github.com/Nemu-sus)
 
