@@ -62,7 +62,6 @@ Sayori
 
 # LEGACY CREDITS
 
-
 ## Project Lead:
 Alexander Osipov (aka AlexanDDOS, GitHub, Reddit, VK, FB)
 ## Programming:
