@@ -132,6 +132,18 @@ init -10 python:
             return _date == fae_player_bday_curr(_date)
         return _date == fae_player_bday_curr()
 
+
+    def fae_resetSpecialDays():
+
+        persistent.fae_player_bday_mode = False
+        persistent.fae_o31_mode = False
+        persistent.fae_d25_mode = False
+        persistent.fae_nye_mode = False
+        persistent.fae_nyd_mode = False
+        persistent.fae_f14_mode = False
+
+        return
+
 init -11 python:
     
     def fae_player_bday_curr(_date=None):

@@ -136,20 +136,26 @@ label fae_event_check:
     if fae_isPlayerBday():
         jump fae_player_bday_autoload
 
-    if fae_isO31():
+    elif fae_isO31():
         jump fae_o31_autoload
     
-    if fae_isD25():
+    elif fae_isD25():
         jump fae_d25_autoload
     
-    if fae_isF14():
+    elif fae_isF14():
         jump fae_f14_autoload
     
-    if fae_isNYE():
+    elif fae_isNYE():
         jump fae_nye_autoload
     
-    if fae_isNYD():
+    elif fae_isNYD():
         jump fae_nyd_autoload
+
+    #elif fae_isEaster():
+    #    jump fae_easter_autoload
+    
+    else:
+        $ fae_resetSpecialDays()
     
 label fae_ch30_after_holiday:
 
@@ -308,11 +314,6 @@ label cnc(show_sayori=True, notify=True):
 
         if renpy.has_label(_chat):
 
-            #if (persistent.taskbar_alerts
-            #    and fae_time.present_sesh_length().seconds() > 60
-            #    and not fae_notifications.get_fae_window_active()):
-            #        play audio attention
-            #        $ fae_notifications.flash_taskbar()
             if notify:
 
                 if store.fae_notifs.can_show_notifs and persistent._fae_notifs_enabled:
@@ -399,5 +400,3 @@ label ch30_main:
     call fae_intro_checks from _call_fae_intro_checks
 
     jump ch30_setup
-
-
