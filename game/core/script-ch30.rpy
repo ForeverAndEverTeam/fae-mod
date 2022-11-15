@@ -154,13 +154,15 @@ label fae_event_check:
     else:
         $ fae_resetSpecialDays()
     
+    # Fall through
+    
 label fae_ch30_after_holiday:
 
     # TODO: Add post-holiday handling, and skip over greetings as we have a special greeting on special days.
     # TODO: Write function to set up the scenes correctly, and call it
     # since we don't need to go through the init stage, or rather move this to be after init but before greet selection.
     # Either way, we need to override the greet system. Possibly shove the greet selection functions to be a seperate label.
-
+    # Also consider decoration handling, provided decoration is even needed.
     pass
     
 
@@ -380,7 +382,7 @@ label ch30_main:
 
     if not config.developer:
         $ style.say_dialogue = style.default_sayori
-    
+
     $ s_name = persistent._fae_sayori_nickname
 
     $ persistent.clear[9] = True
