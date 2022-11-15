@@ -238,11 +238,8 @@ label ch30_init:
 
 
 label ch30_loop():
-
     
     call spaceroom(False, None) from _call_spaceroom
-
-    
 
     $ init_qabs()
 
