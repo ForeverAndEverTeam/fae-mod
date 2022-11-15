@@ -150,9 +150,6 @@ label fae_event_check:
     
     elif fae_isNYD():
         jump fae_nyd_autoload
-
-    #elif fae_isEaster():
-    #    jump fae_easter_autoload
     
     else:
         $ fae_resetSpecialDays()
@@ -164,8 +161,6 @@ label fae_ch30_after_holiday:
 
 
 label ch30_init:
-
-    #$ setupRPC("In the spaceroom")
 
     $ persistent.autoload = "ch30_autoload"
 
@@ -223,8 +218,6 @@ label ch30_init:
                 persistent._fae_await_apology_quit = None
                 reveal()
                 renpy.call("cnc")
-                
-    #$ begin_song()
 
 
     if (
@@ -234,12 +227,8 @@ label ch30_init:
         $ ats("fae_corrupted_persistent")
     
     show sayori idle at t11 zorder store.fae_sprites.FAE_SAYORI_ZORDER
-    #show bg spaceroom zorder 1
     hide black with Dissolve(2)
-    #show screen hidden1(True)
     show screen hidden1(True)
-
-    #FALL THRouGH
 
 
 label ch30_loop():
@@ -298,9 +287,6 @@ label after_random_pick:
     $ _return = None
 
     jump ch30_loop
-    
-    #show screen hidden1(True)
-
 
 
 label cnc(show_sayori=True, notify=True):
@@ -308,7 +294,6 @@ label cnc(show_sayori=True, notify=True):
     if show_sayori:
         show sayori idle at fae_center zorder fae_sprites.FAE_SAYORI_ZORDER
 
-    #show sayori idle at t11 zorder store.fae_sprites.SAYO_ZORDER
     if persistent._event_list:
         $ _chat = persistent._event_list.pop(0)
 
@@ -326,7 +311,7 @@ label cnc(show_sayori=True, notify=True):
 
             $ Sayori.setInChat(True)
 
-            hide screen hidden1#(True)
+            hide screen hidden1
 
             call expression _chat from _call_expression
     
@@ -345,7 +330,6 @@ label cnc(show_sayori=True, notify=True):
                 love()
     
     if "quit" in return_keys:
-        #$ fae_clearNotifs()
         jump confirm_quit
     
     python:
