@@ -1,3 +1,78 @@
+init -100 python in fae_utilities:
+
+    import ctypes
+    import random
+    import math
+    from collections import defaultdict
+
+    def insert_sort(sort_list, item, key):
+
+        index = len(sort_list) - 1
+        while index >= 0 and key(sort_list[index]) > key(item):
+            index -= 1
+
+        sort_list.insert(index + 1, item)
+
+    def nz_count(value_list):
+        
+        count = 0
+        for value in value_list:
+            count += int(value != 0)
+
+        return count
+
+
+    def ev_distribute(value_list, amt, nz=False):
+       
+        # determine effective size
+        size = len(value_list)
+        if nz:
+            size -= nz_count(value_list)
+
+        # deteremine distribution amount
+        d_amt = amt / size
+
+        # now distribute
+        for index in range(len(value_list)):
+            if not nz or value_list[index] > 0:
+                value_list[index] += d_amt
+
+        # leftovers
+        return amt % size
+
+
+    def lo_distribute(value_list, leftovers, reverse=False, nz=False):
+
+        if nz:
+            size = nz_count(value_list)
+        else:
+            size = len(value_list)
+
+        # apply ev distribute if leftovesr is too large
+        if leftovers >= size:
+            leftovers = ev_distribute(value_list, leftovers, nz=nz)
+
+        # dont add leftovers if none leftover
+        if leftovers < 1:
+            return
+
+        # determine direction
+        if reverse:
+            indexes = range(len(value_list)-1, -1, -1)
+        else:
+            indexes = range(len(value_list))
+
+        # apply leftovers
+        index = 0
+        while leftovers > 0 and index < len(indexes):
+            real_index = indexes[index]
+            if not nz or value_list[real_index] > 0:
+                value_list[real_index] += 1
+                leftovers -= 1
+
+            index += 1
+
+
 init -985 python in fae_utilities:
 
     
@@ -825,7 +900,7 @@ init python:
 
         if (
             persistent._fae_random_chat_freq is not fae_random_chat_rate.NEVER
-            and datetime.datetime.now() > LCC + datetime.timedelta(minutes=fae_random_chat_rate.get_random_chat_timer())
+            #and datetime.datetime.now() > LCC + datetime.timedelta(minutes=fae_random_chat_rate.get_random_chat_timer())
             and not persistent._event_list
         ):
 

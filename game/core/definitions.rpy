@@ -23,6 +23,73 @@ python early:
     import traceback
     from collections import defaultdict
 
+
+    class FAEExtraPropable(object):
+
+        EX_PFX = "ex__"
+        _EX_LEN = len(EX_PFX)
+
+
+        def __init__(self, ex_props=None):
+
+            if ex_props is None:
+                ex_props = {}
+
+            self.ex_props = ex_props
+
+        def __contains__(self, item):
+            return item in self.ex_props
+
+        def __len__(self):
+            return len(self.ex_props)
+
+        def __getattr__(self, key):
+            if key.startswith(self.EX_PFX):
+                return self.ex_props.get(key[self._EX_LEN:], None)
+
+            return super().__getattr__(key)
+
+        def __setattr__(self, key, value):
+            if key.startswith(self.EX_PFX):
+                # the real property name is without the prefix
+                stripped_key = key[self._EX_LEN:]
+                if len(stripped_key) > 0:
+                    self.ex_props[stripped_key] = value
+
+            super().__setattr__(key, value)
+        
+        def ex_has(self, key):
+
+            return key in self
+
+        def ex_iter(self):
+
+            return (item for item in self.ex_props.items())
+
+        def ex_pop(self, key, default=None):
+
+            return self.ex_props.pop(key, default)
+
+
+        @staticmethod
+        def repr_out(obj):
+
+            try:
+
+                ex_props = obj.ex_props
+                if ex_props is None:
+                    return "<exprops: ()>"
+
+                props = [
+                    "{0}: {1}".format(key, value)
+                    for key, value in ex_props.items()
+                ]
+                return "<exprops: ({0})>".format(", ".join(props))
+
+            except:
+                return ""
+
+
 init -1500 python:
     import os
     import singleton
@@ -630,6 +697,8 @@ default persistent.game_crash = False
 default persistent._fae_player_south_hemisphere = True
 default persistent._fae_ever_won = collections.defaultdict(bool)
 default persistent.last_playthrough = persistent.playthrough
+default persistent.fae_sayori_closed = False
+default persistent.fae_intro_complete = False
 
 default persistent.sessions = {
     "last_session_end": None,

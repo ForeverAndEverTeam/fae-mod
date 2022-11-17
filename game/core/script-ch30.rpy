@@ -91,6 +91,23 @@ label spaceroom(scene_change=True, sayori_exp=None, dissolve_all=False, hide_say
     
     return
 
+label ch30_main:
+
+    $ quick_menu = True
+
+    if not config.developer:
+        $ style.say_dialogue = style.default_sayori
+    
+    $ s_name = persistent._fae_sayori_nickname
+
+    $ persistent.clear[9] = True
+
+    if not persistent.fae_intro_complete:
+        jump fae_intro_checks
+    else:
+        jump ch30_setup
+
+
 label ch30_autoload:
 
     if fae_is_evening():
@@ -110,6 +127,8 @@ label ch30_autoload:
     
     $ store.fae_utilities.makedirifnot("{0}/gifts/".format(renpy.config.gamedir))
 
+    jump ch30_main
+
 
     #FALL THROUGH
     
@@ -128,6 +147,8 @@ label ch30_setup:
 
     $ setupRPC("In the spaceroom")
 
+    #if not persistent.fae_sayori_closed:
+    #    jump fae_crash_greeting
 
     #FALL THROUGH
 
@@ -136,37 +157,32 @@ label fae_event_check:
     if fae_isPlayerBday():
         jump fae_player_bday_autoload
 
-    elif fae_isO31():
+    if fae_isO31():
         jump fae_o31_autoload
     
-    elif fae_isD25():
+    if fae_isD25():
         jump fae_d25_autoload
     
-    elif fae_isF14():
+    if fae_isF14():
         jump fae_f14_autoload
     
-    elif fae_isNYE():
+    if fae_isNYE():
         jump fae_nye_autoload
     
-    elif fae_isNYD():
+    if fae_isNYD():
         jump fae_nyd_autoload
-    
-    else:
-        $ fae_resetSpecialDays()
-    
-    # Fall through
     
 label fae_ch30_after_holiday:
 
-    # TODO: Add post-holiday handling, and skip over greetings as we have a special greeting on special days.
-    # TODO: Write function to set up the scenes correctly, and call it
-    # since we don't need to go through the init stage, or rather move this to be after init but before greet selection.
-    # Either way, we need to override the greet system. Possibly shove the greet selection functions to be a seperate label.
-    # Also consider decoration handling, provided decoration is even needed.
     pass
     
 
+
 label ch30_init:
+
+    $ persistent.fae_sayori_closed = False
+
+    #$ setupRPC("In the spaceroom")
 
     $ persistent.autoload = "ch30_autoload"
 
@@ -224,6 +240,8 @@ label ch30_init:
                 persistent._fae_await_apology_quit = None
                 reveal()
                 renpy.call("cnc")
+                
+    #$ begin_song()
 
 
     if (
@@ -233,17 +251,28 @@ label ch30_init:
         $ ats("fae_corrupted_persistent")
     
     show sayori idle at t11 zorder store.fae_sprites.FAE_SAYORI_ZORDER
+    #show bg spaceroom zorder 1
     hide black with Dissolve(2)
+    #show screen hidden1(True)
     show screen hidden1(True)
+
+    #FALL THRouGH
 
 
 label ch30_loop():
+
     
     call spaceroom(False, None) from _call_spaceroom
+
+    
 
     $ init_qabs()
 
     show sayori idle at fae_center zorder store.fae_sprites.FAE_SAYORI_ZORDER
+
+    show screen hidden1(True)
+
+    
 
 
     python:
@@ -289,7 +318,12 @@ label after_random_pick:
 
     $ _return = None
 
+    show screen hidden1(True)
+
     jump ch30_loop
+    
+    #show screen hidden1(True)
+
 
 
 label cnc(show_sayori=True, notify=True):
@@ -297,11 +331,17 @@ label cnc(show_sayori=True, notify=True):
     if show_sayori:
         show sayori idle at fae_center zorder fae_sprites.FAE_SAYORI_ZORDER
 
+    #show sayori idle at t11 zorder store.fae_sprites.SAYO_ZORDER
     if persistent._event_list:
         $ _chat = persistent._event_list.pop(0)
 
         if renpy.has_label(_chat):
 
+            #if (persistent.taskbar_alerts
+            #    and fae_time.present_sesh_length().seconds() > 60
+            #    and not fae_notifications.get_fae_window_active()):
+            #        play audio attention
+            #        $ fae_notifications.flash_taskbar()
             if notify:
 
                 if store.fae_notifs.can_show_notifs and persistent._fae_notifs_enabled:
@@ -314,7 +354,7 @@ label cnc(show_sayori=True, notify=True):
 
             $ Sayori.setInChat(True)
 
-            hide screen hidden1
+            hide screen hidden1#(True)
 
             call expression _chat from _call_expression
     
@@ -333,6 +373,8 @@ label cnc(show_sayori=True, notify=True):
                 love()
     
     if "quit" in return_keys:
+        $ persistent.fae_sayori_closed = True
+        #$ fae_clearNotifs()
         jump confirm_quit
     
     python:
@@ -373,17 +415,6 @@ label fae_force_quit_attempt:
 
 
 
-label ch30_main:
 
-    $ quick_menu = True
 
-    if not config.developer:
-        $ style.say_dialogue = style.default_sayori
 
-    $ s_name = persistent._fae_sayori_nickname
-
-    $ persistent.clear[9] = True
-
-    call fae_intro_checks from _call_fae_intro_checks
-
-    jump ch30_setup

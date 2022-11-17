@@ -392,10 +392,10 @@ label autoload:
 
         #renpy.start_predict("sayori idle")
     
-    if persistent.fae_intro_status == fae_intro.FAEIntroStatus.complete:
-        jump fae_intro_checks
-    else:
-        jump ch30_autoload
+    #if persistent.fae_intro_status == fae_intro.FAEIntroStatus.complete:
+    #    jump fae_intro_checks
+    #else:
+    jump ch30_autoload
     
     #else:
         #$ renpy.quit()
@@ -446,10 +446,6 @@ label before_main_menu:
 
 
 label confirm_quit:
-    if discordrun:
-        python:
-            import os
-            os.popen('taskkill /f /im python.exe')
     #python:
     $ fae_utilities.save_game()
 

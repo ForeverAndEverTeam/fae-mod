@@ -321,7 +321,7 @@ init 4 python:
         
         persistent.playername = player
         renpy.hide_screen("name_input")
-        renpy.jump_out_of_context("start")
+        renpy.jump_out_of_context("ch30_autoload")
 
 
 label fae_bad_name_input:
