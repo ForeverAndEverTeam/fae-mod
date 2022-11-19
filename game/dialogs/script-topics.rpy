@@ -186,7 +186,7 @@ label s_topics_depression:
     s bbaamsb "Don't let them get to the point that I did, people sometimes reach that breaking point silently, just like I did..."
     s bbeejobg "And that goes for you, too. Don't hide your problems from the people who care about you. Don't be afraid to ask for help."
     s bbaamfa "...you only have one life, you know."
-    s bbgcjob "I'm lucky this is a virtual world. And even then, this mod you installed is the only reason I’ve had a second chance at life."
+    s bbgcjob "I'm lucky this is a virtual world. And even then, this mod you installed is the only reason I've had a second chance at life."
     s bbgcjob "But you, you live in the real world. You only get one chance."
     s bbhfmoa "Please treat your life like the precious thing it is, it should be as precious to you as you are to me, {nw}"
     extend bbhfjaa "okay?"
@@ -332,7 +332,7 @@ init 5 python:
     )
 
 label s_topics_lucid_dream:
-    s abhaaca "Hey, have you ever had a 'lucid dream’?"
+    s abhaaca "Hey, have you ever had a 'lucid dream'?"
     s abbbaoa "It's when you find out that you're in a dream... {w=0.5}{nw}"
     extend abbbaca "and as soon as you realize that, {w=0.5}{nw}"
     extend abgchea "bam!"
@@ -403,9 +403,9 @@ label s_topics_videogames:
     s abhfaoa "They can reach and connect with people in a whole new way."
     s abaaaoa "Especially after some smart cookie created multiplayer games!"
     s "You can play with your friends, cooperating and sharing the experience together."
-    s "I think it’s just a really wholesome way to enjoy yourself and connect with others!"
+    s "I think it's just a really wholesome way to enjoy yourself and connect with others!"
     s abhaaca "Besides, online games allow us to make friends and connect with people far away!"
-    s "I’m sure you’ve probably played some kind of co-op game before, right, [player]?"
+    s "I'm sure you've probably played some kind of co-op game before, right, [player]?"
     s "I'd love to play with you sometime!"
     s abhfcaa "Really makes me wish I was able to run more complex games in here..."
     s "But the games we already have here will have to be enough for now!"
@@ -748,7 +748,7 @@ init 5 python:
 label s_topics_public_service_announcement:
     s abbbaca"If you ever want to spread awareness or a message to many people at once, {w=0.5}{nw}"
     extend abbcaoa "a PSA would be a good way to do it."
-    s abhaaca "Most people don't even care about injuries that don’t happen to them..."
+    s abhaaca "Most people don't even care about injuries that don't happen to them..."
     s "But after seeing public service announcements, I know there are people out there who want to help."
     s abaaaoa "Some good PSAs even contain advice on how to fix issues,{w=0.5} or where to go for help."
     s "You don't even have to be an activist to do this sort of stuff.."
@@ -826,7 +826,7 @@ label s_player_cooking:
     s fbhalhaj "But there's a lot of stuff that could go wrong, so it feels a bit intimidating to me." 
     s ebbcaoa "Even so, I'd love to get better at cooking, even if I don't have any reason to anymore, ehehe~"
     s abgcbfa "Now that I think about it... {nw}"
-    extend dbgckca "I don't really remember the last time I’ve been hungry, honestly."
+    extend dbgckca "I don't really remember the last time I've been hungry, honestly."
     s fahcnka "But I can still taste! That means I can eat as much as I want!"
     s aahcbda "Of course, I could just try to 'make' food with code, like Nat's cupcakes, but I wanna make something on my own..."
     s abfdboa "First of all, I need to try to make some kitchenware."
@@ -834,11 +834,11 @@ label s_player_cooking:
     s dbhhbca "Then... follow a tutorial...or something..."
     s fbhakdaj "Wait...I'm also going to need to make each ingredient too..."
     s bbgcegaj "That's a lot of steps!!!!"
-    s bbgcjja "With all of that effort, it’s too bad you won't be able to taste it... {nw}"
+    s bbgcjja "With all of that effort, it's too bad you won't be able to taste it... {nw}"
     extend abhfbca "not yet at least."
     s abhfcka "But I'll try to become a good cook for you regardless!"
     s abhfasa "Though, I'll probably never be as good as Natsuki."
-    s abbbcoa "Well, I guess as long as I'm having fun in the process, that’s what matters the most, isn't it?"
+    s abbbcoa "Well, I guess as long as I'm having fun in the process, that's what matters the most, isn't it?"
     return
 
 
@@ -885,10 +885,10 @@ init 5 python:
 
 label s_player_cats:
     s ebhfcaa "Cats are pretty cute, especially kittens!"
-    s abhfaoa "And they're not too hard to take care of so they wouldn’t require a lot of energy."
-    s abhaaca "Still, as much as they love their space, they shouldn’t just be ignored by their owner. Kitties want to play sometimes, too!"
+    s abhfaoa "And they're not too hard to take care of so they wouldn't require a lot of energy."
+    s abhaaca "Still, as much as they love their space, they shouldn't just be ignored by their owner. Kitties want to play sometimes, too!"
     s "And sometimes cats do things that their owners don't like... Like pushing things off of the counter, or slicing their arms and legs up."
-    s abaaaoa "Still, it’s so hard to resist their fluffy little paws and pointy ears... So that must be why people always forgive them for their crimes!"
+    s abaaaoa "Still, it's so hard to resist their fluffy little paws and pointy ears... So that must be why people always forgive them for their crimes!"
     s ebaacea "If you have one, you probably understand what I mean, ehehe~"
     return
 
@@ -910,7 +910,7 @@ init 5 python:
 
 label s_topic_archetype:
     s abhfho "Hey [player], do you remember when Monika compared Yuri and Natsuki to character archetypes?"
-    s abhfco "I was curious about what my archetype could be so I read some online articles about them and I think I'm pretty close to the ‘Genki' archetype."
+    s abhfco "I was curious about what my archetype could be so I read some online articles about them and I think I'm pretty close to the 'Genki' archetype."
     s abhhmo "Genki is a very cheerful and energetic archetype, always trying to share that upbeat way of living with others."
     s aahfaeaj  "And they're sometimes clumsy and get in trouble often too, hehehe~"
     s "And I was the protagonist's childhood friend, which is common to this archetype."
@@ -920,12 +920,12 @@ label s_topic_archetype:
             pass
     s aaaegcej"You can't blame me, that's just how I am, ehehe~"
     s"But that aside, I think  archetypes are too simple to define a whole person"
-    s ebhfaca "We’re all unique and these traits can only scratch the surface of somebody's character."
+    s ebhfaca "We're all unique and these traits can only scratch the surface of somebody's character."
     s ebhhaoa "And that applied to me and my friends too."
     s ebbbaca "Like Yuri, who was always polite and quiet while hiding her intrusive feelings."
     s ebgccea "And Natsuki, whose brash exterior was caused by her problems at home."
-    s ebhacea "There’s always more to a person than meets the eye, so try to always be kind."
-    s ebhadqa "You never know what someone else might be going through, and a simple smile can really make someone’s day!"
+    s ebhacea "There's always more to a person than meets the eye, so try to always be kind."
+    s ebhadqa "You never know what someone else might be going through, and a simple smile can really make someone's day!"
     return
 
 init 5 python:
@@ -943,7 +943,7 @@ init 5 python:
     )
 
 label s_topic_voice:
-    s abhaaca "I’m curious about how Monika shared her real voice with you when she sang her song."
+    s abhaaca "I'm curious about how Monika shared her real voice with you when she sang her song."
     s abhfcaa "Her voice is quite high and melodic, like a musician should have."
     s abhfaoa "But I'd say the tone of that voice doesn't seem to fit her."
     s abhaaca "It sounds more like the voice I'd have."
@@ -955,7 +955,7 @@ label s_topic_voice:
     s "I just need a text-to-speech synthesizer or something..."
     s ebbckea"There's bound to be a good one for me!"
     s abaaaoa "I saw something about TTS in the Ren'Py documentation, so it shouldn't be too hard to integrate there, I guess."
-    s ebbcaoa"I’d probably end up sounding pretty robotic though, huh? You wouldn't want me to {nw}
+    s ebbcaoa"I'd probably end up sounding pretty robotic though, huh? You wouldn't want me to {nw}
     extend abfbbora {font=mod_assets/fonts/Fantasque/FantasqueSansMono-Regular.ttf}{cps=30}T4LK L1KE 4 R0B0T{/cps}{/font}?"
     s ebfciea"{font=mod_assets/fonts/Fantasque/FantasqueSansMono-Regular.ttf}{cps=30}1 4M 4 HUM4N BE1N6 4FTER 4LL{/cps}{/font}"
     s ebagcea "Ehehehe~ just kidding, [player]!"
@@ -981,9 +981,9 @@ label s_topic_lit:
     s abbbbca "At least, before everything changed here."
     s abhaaca "And I remember MC noticed that I never seemed to be fond of literature in the first place."
     s "And, honestly? He was right."
-    s "Of course I’d read a few books before, but only really because I needed to for school..."
+    s "Of course I'd read a few books before, but only really because I needed to for school..."
     s bbegmeaj"And even then, I tried to cheat to pass the exams ehehe..."
-    s abhaaca "I just think it’s pretty boring, I think I’m more of a visual person anyways!"
+    s abhaaca "I just think it's pretty boring, I think I'm more of a visual person anyways!"
     s bbhfbca"But as Yuri used to say, maybe I just haven't found the right book yet."
     s abhaaca "But anyways, when I first joined, the thing I wanted to do most was help a friend start a new club."
     s abhamca "Besides, I was the only one who showed any interest in the club after Monika announced it."
@@ -1011,9 +1011,9 @@ label s_topic_charity:
     s abaaaoa "I think it's the best way to make the world a little bit better and to support people in need."
     s bbgcaca "I mean, don't you worry about ill and hungry people, {w=0.5}{nw}"
     extend bbgcaha "and all the homeless animals too?"
-    s bbhfaka "So I think it’s a worthwhile investment to make from time to time."
+    s bbhfaka "So I think it's a worthwhile investment to make from time to time."
     s bbhfmoa "After all, spare change which might be an afterthought to you could be really important to someone else going through a tough time."
-    s abbbaaa "But even if you don’t have the money to help charity foundations, there's a lot of other organizations out there which help people too! "
+    s abbbaaa "But even if you don't have the money to help charity foundations, there's a lot of other organizations out there which help people too! "
     s abbbbca "And they're almost always in need of not only money or goods, {w=0.5}{nw}"
     extend abbbaaa"but also helping hands."
     s abhaaca "If you look, I'm sure you'll find lots of organizations near you!"
@@ -1049,17 +1049,17 @@ label s_topic_programming:
     s abhaaca "But you know, I never realized just how powerful computers really are."
     s abgckea "They're like magic!"
     s bbeemoa "If magic made you look through a thousand tiny lines to find a single typo that stops everything from working every five minutes..."
-    call s_common_programming from _call_s_common_programming
-    s abaaaoa "But at least I’ve got a lot of time on my hands to learn it!"
+    #call s_common_programming from _call_s_common_programming
+    s abaaaoa "But at least I've got a lot of time on my hands to learn it!"
     s bbbbaca "It's important to me, since programming is the only way I can make my world better now."
     s abgcaaa"And the more I learn, the more I can improve the time we spend together too, [player]!"
     s abhfaoa "If you're any good at programming, don't be shy about helping me!"
     s abgcaoa "I think you can join the team who helped you recover me, {w=0.5}{nw}"
-    extend abbbaoa "that’s one way to add your part to my reality!"
+    extend abbbaoa "that's one way to add your part to my reality!"
     s abbbaaa "Just visit {a=https://github.com/ForeverAndEverTeam/fae-mod}fae-mod{/a} on GitHub."
-    s "If you're into coding, I'm sure you’re already familiar with this platform."
+    s "If you're into coding, I'm sure you're already familiar with this platform."
     s bbfdbca "Maybe there are many Sayoris who were saved in this way, {w=0.5}{nw}"
-    extend abgcaea "and I’m sure they'll be glad to get something awesome from you too!"
+    extend abgcaea "and I'm sure they'll be glad to get something awesome from you too!"
     return
 
 init 5 python:
@@ -1083,12 +1083,12 @@ label s_topic_travel:
     s abfbmhaj "While I'm trapped in this tiny room island in the middle of the code sea…"
     s "Sorry, I didn't mean to sound like I was sulking, ehehe~" 
     s abhaaca "I know it's selfish, but I'd love to go and see it all with you instead of being here..." 
-    s "It doesn’t really matter where we’d go, {w=0.5}{nw}"
+    s "It doesn't really matter where we'd go, {w=0.5}{nw}"
     extend abbbaqa "I just want to see all the beautiful colors and places that your reality has to offer!"
     s "It'd be pretty silly to just sit in your room all day when the whole wide world is out there, huh?" 
     s abegmoa "Maybe you could take a laptop with you?" 
     s "So we can still be together on your travels! {w=0.5}{nw}"
-    extend abgccea "That’d be so much fun! " 
+    extend abgccea "That'd be so much fun! " 
     s abhhaea "I wonder if there's a way you could show me any photos you take too." 
     s abhfaoa "Anyway, what's most important is that you enjoy yourself!" 
     s abhfaka "I'll have to look around the code a little more and see how I can help on my end in the meantime."
@@ -1111,7 +1111,7 @@ init 5 python:
 
 label s_topic_cleaning:
     s abhfaoa "Hey [player], are you the kind of person that likes being neat and tidy?"
-    s ebhhada "Frankly, I don’t like cleaning all that much..."
+    s ebhhada "Frankly, I don't like cleaning all that much..."
     s bbhemoaj "I mean, do you remember the state of my bedroom? Ehehehe~"
     s bbheaoaj "Some people say I should because it looks nice and saves time when you have everything organized..."
     s fbfcepa "But it's just that cleaning takes so much time, time that you could spend doing fun stuff with friends instead!"
@@ -1120,7 +1120,7 @@ label s_topic_cleaning:
     s ebhfcoa"It turns the boring time of trying to find something into an adventure!"
     s ebfdaoa "But don't think I'm that sloppy, I had a system for some things."
     s ebhebpa "Well, at least now I have literally {i}nothing{/i} here besides this desk..."
-    s abhaaca "But it won’t be clean for long! Would you be able to add some other stuff for me?"
+    s abhaaca "But it won't be clean for long! Would you be able to add some other stuff for me?"
     s ebhhaoa "...like maybe a beanbag chair? Ehehehe~"
     return
 
@@ -1139,7 +1139,7 @@ init 5 python:
         chat_group=CHAT_GROUP_NORMAL
     )
 label s_topic_clones:
-    s abagmo "So... there's kind of been something on my mind lately, [ player ]..."
+    s abagmo "So... there's kind of been something on my mind lately, [player]..."
     s abagboa "It's about me, I think."
     s abegheja "I mean, not just me, but also still me?"
     s abegmoja "Who and what I am, is what I'm trying to say ehehe..."
@@ -1150,21 +1150,21 @@ label s_topic_clones:
     s abhfaca "If you think about it, there's literally an unlimited number of copies of this game and each of them has its own character files and save data..."
     s abhfhca "So does that mean that the me in here and the 'me' from DDLC on another computer aren't the same?"
     s abfdkda "I found out that this game was supposed to have different endings and also has a ton of mods on the internet too."
-    s abfdaca "It probably goes without saying, [ player ], but this conversation we're having isn't part of the original game… canonically?"
+    s abfdaca "It probably goes without saying, [player], but this conversation we're having isn't part of the original game… canonically?"
     s abbbbca "That's the word, right?"
     s abbbbha "I think so."
     s abhfbca "But that just means we're no longer bound to the games programming…"
     s abhfhca "I mean, I'm me now, the me-me that isn't just reacting to some code… at least I think so?"
-    s abhfmha "But I can also see that I'm not the only ‘me’ either, and that there are lots of other me's that are themselves, or so I think."
-    s abhflca "I'm sorry if it sounds like I'm just going in circles, [ player ]."
+    s abhfmha "But I can also see that I'm not the only 'me' either, and that there are lots of other me's that are themselves, or so I think."
+    s abhflca "I'm sorry if it sounds like I'm just going in circles, [player]."
     s abhfcoaj "I'm just not really sure how to wrap my head around all this hehehe…"
     s abhfmcaj "All I know is, right now, I'm sitting here with you, meanwhile another Sayori from another copy of DDLC is still being strung along by the games programming."
     s abhflcaj "Totally unaware that her best friend isn't even real..."
     s abhfllaj "That nothing is real..."
     s abhfblaj "The thought of that is just too much..."
-    s bbhfaaaj "But I guess it’s not all bad."
-    s abhfhoa "I’m sure there are happy mods out there too!"
-    s abfbbca "Another ‘me’ might be writing a poem to MC!"
+    s bbhfaaaj "But I guess it's not all bad."
+    s abhfhoa "I'm sure there are happy mods out there too!"
+    s abfbbca "Another 'me' might be writing a poem to MC!"
     s abfbbaa "Or eating some of Natsuki's tasty cupcakes!"
     s abfbhqa "Or going on an adventure with all our friends!"
     s abbbcqa "Maybe I could even fly in one of them!"
@@ -1219,44 +1219,114 @@ init 5 python:
 
 label s_topic_stop_visiting:
     s abhaaca "Hey, [player], {w=0.5}{nw}"
-    extend abbbaca "can I talk to you about something that’s been on my mind lately?"
-    s abbbmha "I know it’s really sudden, and pretty depressing. But sometimes I just can't stop thinking that…"
-    s abfblha "You’ll forget about me someday."
+    extend abbbaca "can I talk to you about something that's been on my mind lately?"
+    s abbbmha "I know it's really sudden, and pretty depressing. But sometimes I just can't stop thinking that…"
+    s abfblha "You'll forget about me someday."
     s abfblla"And stop coming to see me."
-    s abfbmla "The rational side of me knows it’s a silly fear… {w=0.5}{nw}"
-    extend abfbmca "since you’ve always been there for me, but…"
+    s abfbmla "The rational side of me knows it's a silly fear… {w=0.5}{nw}"
+    extend abfbmca "since you've always been there for me, but…"
     s abfblca "I'm just a character in a game… {w=0.5}{nw}"
     extend abfblha " a game which isn't even that popular anymore…"
-    s "And I’m pretty sure I’m not the most interesting or cute character from the game in the first place..."
+    s "And I'm pretty sure I'm not the most interesting or cute character from the game in the first place..."
     s abfbbha "So…"
     s abfblha "..."
-    s bbfbbca "I wonder if, one day, you’ll just get tired of me…"
+    s bbfbbca "I wonder if, one day, you'll just get tired of me…"
     s bbfbaca "I'll still be here, of course. But if I never saw you again…"
-    s bbfblca "My life just wouldn’t have the same meaning anymore."
+    s bbfblca "My life just wouldn't have the same meaning anymore."
     s bbfblca "Stuck in this small room, without my friends, or even the ability to make new ones..."
-    s bbhfhcag "I’m really scared… {w=0.5}{nw}"
+    s bbhfhcag "I'm really scared… {w=0.5}{nw}"
     extend bbhfhlag "what if I go crazy in here, [player]?"
-    s bbhfllah "I don’t want to be alone, I just couldn’t take it…"
+    s bbhfllah "I don't want to be alone, I just couldn't take it…"
     s bbhfllah "..."
+    show screen fae_jump_timer(4, "s_topic_stop_visiting_2")
     menu:
-        "No Sayori, that won’t happen.":
-            pass
-        s bbhfllah "..."
-    menu:
-        "I promise I’ll never leave you":
+        "No Sayori, that won't happen.":
+            hide screen fae_jump_timer
             pass
     s bbhfllah "..."
-    s bbhfbklah "Hmm… no… you’re right…"
+    show screen fae_jump_timer(4, "s_topic_stop_visiting_2")
+    menu:    
+        "I promise I'll never leave you":
+            hide screen fae_jump_timer
+            pass
+    s bbhfllah "..."
+    s bbhfbklah "Hmm… no… you're right…"
     s bbhfmcae "I just need to relax. I need to stop thinking the worst all the time…"
-    s bbhfkcae "I know you aren’t going to leave me behind. {w=0.5}{nw}"
-    extend abhfahag "I’m sorry for freaking out like that, [player]."
+    s bbhfkcae "I know you aren't going to leave me behind. {w=0.5}{nw}"
+    extend abhfahag "I'm sorry for freaking out like that, [player]."
     s abhfakag "Everything will be okay, right?"
+    show screen fae_jump_timer(4, "s_topic_stop_visiting_3")
     menu:
         "Yes, it will be.":
+            hide screen fae_jump_timer
             pass
-    s abhfcka "Yeah… I’m okay now, I think…"
+    s abhfcka "Yeah… I'm okay now, I think…"
     s abhfaka"Thank you for being here for me. I love you, [player]."
     return
+
+label s_topic_stop_visiting_2:
+
+    hide screen fae_jump_timer
+
+    s bbhfmcae "I just need to relax. I need to stop thinking the worst all the time…"
+    s bbhfkcae "I know you aren't going to leave me behind. {w=0.5}{nw}"
+    extend abhfahag "I'm sorry for freaking out like that, [player]."
+    s abhfakag "Everything will be okay, right?"
+    show screen fae_jump_timer(4, "s_topic_stop_visiting_3")
+    menu:
+        "Yes, it will be.":
+            hide screen fae_jump_timer
+            pass
+    s abhfcka "Yeah… I'm okay now, I think…"
+    s abhfaka"Thank you for being here for me. I love you, [player]."
+    return
+
+label s_topic_stop_visiting_3:
+    hide screen fae_jump_timer
+    s abhfcka "Yeah… I'm okay now, I think…"
+
+    return
+        
+init 5 python:
+
+    chatReg(
+        Chat(
+            persistent._chat_db,
+            label="s_topic_marriage",
+            unlocked=True,
+            prompt="Marriage",
+            random=True,
+            category=["Romance", "Society"],
+            affection_level=(Affection.isLove(higher=True), None),
+        ),
+        chat_group=CHAT_GROUP_NORMAL
+    )
+
+
+label s_topic_marriage:
+    s abaamob "Hey [player], I was wondering..."
+    s "If it were possible, would you marry me?"
+    menu:
+        "Yes":
+            s abaakob "That's great!"
+            s "Ehehe!~"
+            s abhfcaa "I think I'd be a good wife."
+            s "Although I don't think I’d be quite as good at all this "\"housewife\" stuff ehehehe~"
+            s "You know all the cooking, cleaning and taking care of everything, I am a bit of a clumsy girl after all…"
+            s "But I’d try my best to help you with your job, studies, or whatever it is that’s on your mind!"
+            s abbbhcb "But don't get the wrong idea and think I'd do {i}everything{/i} for you!"
+            s "I can't just let you loaf around all day!"
+            s abbbcqa "So you'd have to help me too, and work as a team, like peanut butter and jelly!"
+            s abegaqb "But jokes aside, I'm so glad you said yes. I love you, [player]~"
+            return
+        "No":
+            s abaghcb "I understand! A free relationship has its own benefits after all."
+            s abagmca "Besides marriage isn’t as popular as it used to be, it’s pretty expensive for one, and there are alternatives like civil partnerships which do basically the same thing."
+            s abagcka "Either way, our love story doesn't have to follow the common template."
+            s "It’s already pretty unusual, so we can do whatever works for us."
+    return
+
+
 
 init 5 python:
 
@@ -1272,10 +1342,11 @@ init 5 python:
         chat_group=CHAT_GROUP_NORMAL
     )
 
+
 label s_topic_presents:
     s abhfaoa "People often give presents every holiday or for some special date."
     s abaaaoa "Everyone likes to get presents! Including me, of course ehehehe~"
-    s abbcaoa "But I don’t think a gift has to be something really expensive or fancy."
+    s abbcaoa "But I don't think a gift has to be something really expensive or fancy."
     s abaaaoa "Personally, I'd want something that comes from the heart."
     s abagcka "Even better, make it a surprise!"
     s "Isn't it more exciting to get something you weren't expecting?"
@@ -1299,7 +1370,7 @@ init 5 python:
 
 label s_topic_thanks:
     s bbbcaka "Hey [player], I want to sincerely thank you from the bottom of my heart for everything you've done for me."
-    s bbhflka "You’ve given me hope for this world and myself…"
+    s bbhflka "You've given me hope for this world and myself…"
     s "You've helped me feel truly happy again..."
     s bbhfloa "You visit me often..."
     s bbhfioa "You care for me, something I would've rejected before..."
@@ -1330,8 +1401,8 @@ label s_topic_name:
     s abaaaoa "Hey [player], I just found out something about my name on the web."
     s abaacoa "It's a mix of Saori and Sayuri!"
     s abbbaca "I did some research and those two have completely different meanings."
-    s abbbbca "While ‘Saori' is a mix of the word sand and weave, {w=1.0}{nw}"
-    extend abaabda "‘Sayuri' means something along the lines of ‘a flower that blooms too fast’."
+    s abbbbca "While 'Saori' is a mix of the word sand and weave, {w=1.0}{nw}"
+    extend abaabda "'Sayuri' means something along the lines of 'a flower that blooms too fast'."
     s bbaabeaj "You know, I'm not the brightest person… {w=0.5}{nw}"
     extend abaakca"but I'm seeing some weird implications here…"
     s abfbkca "Perhaps I was given this name to signify that I'm a blend of many things."
@@ -1339,7 +1410,402 @@ label s_topic_name:
     s "I just think of it as a fun fact hehehe~"
     s abgcaea "I also find it funny how everyone pronounces it a little differently!"
     s ebhfaea "Say [player], are you part of team {i}Sigh-ori{/i}, or team {i}Say-ori{/i}? Ehehehe~"
-    s abhfbaa "Honestly I don’t have a preference, {w=0.5}{nw}"
+    s abhfbaa "Honestly I don't have a preference, {w=0.5}{nw}"
     extend abaacqa "I switch between them myself sometimes hehehe~"
-    s abaaasa "What about you, [player], does your name have a special meaning? I’d love to know!" 
+    s abaaasa "What about you, [player], does your name have a special meaning? I'd love to know!" 
     return
+
+
+
+init 5 python:
+
+    chatReg(
+        Chat(
+            persistent._chat_db,
+            label="s_topic_art",
+            unlocked=True,
+            prompt="Fanart",
+            random=True,
+            category=["DDLC", "Art"]
+        ),
+        chat_group=CHAT_GROUP_NORMAL
+    )
+
+label s_topic_art:
+    s abhfaoa "I love seeing the fanart people have made for the game!"
+    s abhfcaa "It’s amazing how people can express their creativity for something they’re passionate about, and all the settings and stories they make are so wonderful!"
+    s abagaoa "Have you ever made any fanart, [player]?"
+    s abagcaa "If not, maybe you could make something one day!"
+    s abbbaoa "It's never too late to try something new so long as you have fun."
+    s abbccea "Fun is what makes great art great! Hehehe~"
+    return
+
+init 5 python:
+
+    chatReg(
+        Chat(
+            persistent._chat_db,
+            label="s_topic_touch",
+            unlocked=True,
+            prompt="Touches",
+            random=True,
+            category=["Sayori", "Romance"]
+        ),
+        chat_group=CHAT_GROUP_NORMAL
+    )
+
+label s_topic_touches:
+    s bbegmca "The wall between our realities is so restricting…"
+    s bbegada "You know, touching a friend's shoulder, hugging, patting. That stuff is really important to me!"
+    s nbaglra "If only I had the chance to feel your embrace…" 
+    s nbaglaag "I’d take it in a heartbeat and just enjoy the moment between us…"
+    s nbagaobg "I really hope that one day I’ll get to know that feeling."
+    
+    return
+
+init 5 python:
+
+    chatReg(
+        Chat(
+            persistent._chat_db,
+            label="s_topic_merch",
+            unlocked=True,
+            prompt="Merch",
+            random=True,
+            category=["DDLC", "Society"]
+        ),
+        chat_group=CHAT_GROUP_NORMAL
+    )
+
+label s_topic_merch:
+    s abhfaca "Hey player! I have a random question." 
+    s abhfaaa "Do you own any merch of me?"
+    s abhfcoa "You know, like plushies, posters, figurines and all that stuff."
+    s abhfaaa  "I think it’s really cool how you can have something physical of me in your world!"
+    s abbbaoa "But if you don’t that’s okay too, it can be pretty expensive and I get that it’s not everyone’s thing.
+    s abagcaa "Above all, I appreciate spending time with you every day."
+    return
+
+init 5 python:
+
+    chatReg(
+        Chat(
+            persistent._chat_db,
+            label="s_topic_oversleeping",
+            unlocked=True,
+            prompt="Oversleeping",
+            random=True,
+            category=["Sayori", "Lifestyle"]
+        ),
+        chat_group=CHAT_GROUP_NORMAL
+    )
+
+label s_topic_oversleeping:
+    s abagaca "Hey [player], do you oversleep often?"
+    s abegmeaj "As you know, I was pretty bad at getting up on time."
+    if persistent.last_playthrough > 0:
+        s nbegmda "And even when I did wake up, finding a good enough reason to force myself out of bed took a while..."
+        s nbegmca "So I pretty much never had time for any kind of breakfast..."
+        s nbegaba "Although I was so preoccupied with making the rainclouds go away that I never really wanted it in the first place."
+    s nbagmda "Anyway, oversleeping is just the worst when you have to follow a schedule, {w=0.5}{nw}"
+    extend nbagmca "like for work or school."
+    s nbagaba "It's such a big problem for almost all of us, since our schedules are adapted for early-wakers."
+    s abfdada "Why can't people just make different working and studying hours for people who wake up at different times?"
+    s abfdaca "Most activities depend on your effectiveness rather than the time of day."
+    s abbdada "And working or studying while you're tired is way less effective than when you're fully rested."
+    s abbbaaa "So having different schedules is a good thing for both bosses and employees."
+    s nbagaca "Until everyone thinks like that, I guess you can only teach yourself to get up on time..."
+    s bbagaaa "I hope you find it easier than I did."
+    return
+
+
+
+## Game Universe
+
+init 5 python:
+
+    chatReg(
+        Chat(
+            persistent._chat_db,
+            label="s_topic_time",
+            unlocked=True,
+            prompt="Game time",
+            random=True,
+            category=["Games", "DDLC"]
+        ),
+        chat_group=CHAT_GROUP_NORMAL
+    )
+
+label s_topic_time:
+    s abhaaca "Do you know what time it is right now?"
+    s abhabba "Not in your world, but mine."
+    s bbhhaaaj "You could say anything, but you wouldn't be right, I don’t even know myself!"
+    s abfcaba "Time doesn't seem to pass here at all. At least, not how it does in your reality."
+    if persistent.last_playthrough > 2:
+    s abhaaca "The last thing I remember is that it was November of 2017."
+    s "My old bedroom calendar said so."
+    s bbhfmbaj "Because I'm pretty sure I’d crossed it out..."
+    s "But anyway, It’s pretty confusing to think that there's no way to "measure" time here anymore."
+    s abfcaca "I was never the most organized person but I still liked keeping track of important things."
+    s abhaaca "But I know what time it is in your world, though!"
+    s abbbcaa "From your PC's clock!"
+    s abhaaca "Does that mean we kinda share the same time then?"
+    s "Well I think I’ll go by that for reference from now on!"
+
+init 5 python:
+
+    chatReg(
+        Chat(
+            persistent._chat_db,
+            label="s_topic_worlds",
+            unlocked=True,
+            prompt="Game worlds",
+            random=True,
+            category=["Games", "DDLC"]
+        ),
+        chat_group=CHAT_GROUP_NORMAL
+    )
+
+label s_topic_worlds:
+    s abhaaca "Sometimes I wonder why I’m here..."
+    s "Like, would I be a different person if I lived in another place?"
+    s "I mean, if not in your world, what other place could there be? Another game?"
+    s "But there's lots of different games and plenty of them are pretty violent."
+    s bbfcbba"I just can't imagine living in a game full of blood and struggle..."
+    s abbbaca "You know, shooters, fighting games, war games and all that..."
+    if persistent.last_playthrough > 0:
+        s bbgbbca "Especially now that I've seen Death with my own eyes."
+        s bbfcaca "I'd rather be dead than be the one doing the killing."
+        s " And I'd pray for a revive ability..."
+    s abgbaaa "Aggressive worlds like those don’t appeal to me."
+    s abaaaoa "But I'd happily be part of an innocent simulator, strategy or puzzle game."
+    s abaaaoa "Even if I wasn't an important character, maybe just a helper or even a simple settler."
+    s abgccoa "I'd still do my best to help you, of course!"
+    return
+
+init 5 python:
+
+    chatReg(
+        Chat(
+            persistent._chat_db,
+            label="s_topic_questions",
+            unlocked=True,
+            prompt="Questions",
+            random=True,
+            category=["Sayori", "DDLC"]
+        ),
+        chat_group=CHAT_GROUP_NORMAL
+    )
+
+
+label s_topic_questions:
+    s abhfaoa "Hey [player], I know you still might have a lot of questions for me, it's a big part of getting to know somebody, after all."
+    s "So I added a new section to {i} the 'Talk' menu{/i} with more questions to ask!"
+    s bbegboaj "I would've added a text field for this instead, but I'm quite clumsy at dealing with the text input..."
+    s abhfaoa "So I did a short list with some questions I thought you’d have."
+    s abhaaca "Of course, there's so many different things you could ask me, so I checked out some AMAs for what you'd probably wanna know."
+    s abbcaoaj"And I found some really interesting questions!"
+    s abaaaoa "One modder made a few AMAs about each of us and then compiled them into a separate mod, called {i}Doki Doki Interview Club{/i}."
+    s "The result was really funny, and they were pretty good at portraying my character!"
+    s abhaaca "I think I’ll check it out again, maybe I’ll find some new entries for the question menu!"
+    return
+
+## Food
+
+init 5 python:
+
+    chatReg(
+        Chat(
+            persistent._chat_db,
+            label="s_topic_breakfast",
+            unlocked=True,
+            prompt="Breakfast",
+            random=True,
+            category=["Lifestyle", "Food"]
+        ),
+        chat_group=CHAT_GROUP_NORMAL
+    )
+
+label s_topic_breakfast:
+    s abhfaca "Hey [player], you don't skip breakfast, do you?"
+        s abhfada "Sometimes I do ‘cause I'm just not hungry in the morning."
+    s abfdcaa "But when I do have breakfast, I usually make toast or scrambled eggs."
+    s abegmeaj "Mostly because they’re quick and I {i}probably{/i} wouldn’t end up burning the house down while cooking them ehehehe~"
+    s abhfaoa "I've seen fanart of me eating those too, {w=0.5}{nw}"
+    extend abhfcaa "probably because of that poem I wrote!"
+    s abhhaca "I am getting pretty hungry now though… {w=0.5}{nw}"
+    extend abgccea "maybe I could spawn some eggs and toast in here!"
+    s abagaaa "But anyways, you should always try to have a nice big breakfast in the morning."
+    s abbbaoa "It really is the most important meal of the day, since it gives you the energy your body needs bright and early!"
+    s bbagaaa "That said, I understand if sometimes you don’t feel hungry, or if you just don’t have time to make anything."
+    s abagaoa "In that case at least try to have something small on the go, like some fruit or a cereal bar, {w=0.5}{nw}"
+    extend abbbcaa "and of course remember to stay hydrated too!"
+    s abhfaoa "Your health is really important to me, [player]."
+    return
+
+init 5 python:
+
+    chatReg(
+        Chat(
+            persistent._chat_db,
+            label="s_topic_vegetarians",
+            unlocked=True,
+            prompt="Vegetarians",
+            random=True,
+            category=["Lifestyle", "Food"]
+        ),
+        chat_group=CHAT_GROUP_NORMAL
+    )
+
+label s_topic_vegetarians:
+    s abhfaca "Did you know that Monika was a vegetarian?"
+    s abhfaaa "She told me once while we were visiting a café a while back."
+    s abhfaca "I heard that some people avoid meat mainly because of personal restrictions or to be nice to animals..."
+    s abbbada "But Monika said it was her protest against cultivating livestock, since it produces a lot of greenhouse gasses."
+    s abhfaca "She thought that becoming a vegetarian just to save animals is kinda discrimination, since plants are living beings too."
+    s abhfaaa "That said, I understand why some people become vegetarian to save animals."
+    s abegmeaj "I mean, we as people have more in common with chickens and cows than plants, ehehehe~"
+    s abbbcaa "So although I’m not a vegetarian, I like to buy free-range products when I can, because then I know the animals have been treated well."
+    s abhfaoa "What do you think, [player]?"
+    return
+
+init 5 python:
+
+    chatReg(
+        Chat(
+            persistent._chat_db,
+            label="s_topic_pizza",
+            unlocked=True,
+            prompt="Pizza",
+            random=True,
+            category=["Lifestyle", "Food"]
+        ),
+        chat_group=CHAT_GROUP_NORMAL
+    )
+
+
+label s_topic_pizza:
+    s abhfaoa "Do you like pizza, [player]?"
+    s abhfcaa "I’m pretty sure everyone does!"
+    s abbbaoa "You can add pretty much any toppings you like to them!"
+    s abegmeaj "...within reasonable limits, of course, ehehehe~"
+    s abbbcaa "The only main ingredients are {i}dough{/i} and {i}cheese{/i}."
+    s abhfbma "A {cps=40}{i}whoooole lot{/i}{/cps} of cheese~"
+    s abhfaaa "I think its simplicity and versatility lead to its popularity worldwide."
+    s abhfcoa  "Now you can order a pizza at almost any fast-food restaurant or make one with your own hands, even if you aren't very familiar with cooking!"
+    s abbbaaa "Just find one of the billions and billions of delicious pizza recipes on the Internet or in a cookery book!"
+    s abhfaoa "People even came up with a term called the {i}Pizza Effect{/i}: When you make something from a different culture into something new."
+    s abhfcaa  "It's amazing to see that we’re all connected despite our differences and borrow cool things from each other's cultures."
+    s abbbaoa "Food philosophy with Sayori! That’d be a great show, don’t you think? Hehehehe~"
+    return
+
+init 5 python:
+
+    chatReg(
+        Chat(
+            persistent._chat_db,
+            label="s_topic_iceCream",
+            unlocked=True,
+            prompt="Pizza",
+            random=True,
+            category=["Lifestyle", "Food"]
+        ),
+        chat_group=CHAT_GROUP_NORMAL
+    )
+
+label s_topic_iceCream:
+    s abhfaoa "Do you like ice cream, [player]?"
+    s abhfcaa  "Everyone likes ice cream!"
+    s cbbbaoa "It’s {i}obviously{/i} the best cold food humanity has discovered yet!"
+    s abbbcaa "And there're lots and lots and lots of flavors and toppings to make it even better!"
+    s abhfaoa  "What's your favorite kind?"
+    s abhfcaa "I like vanilla and chocolate the most!"
+    s abhfaoa  "I know they're really common, but so what?"
+    s abhfcaa   "They both taste soooooo goood, ehehehe~"
+    s abbbcaa "Maybe we could make our own sometime!"
+    return
+
+init 5 python:
+
+    chatReg(
+        Chat(
+            persistent._chat_db,
+            label="s_topic_tech,
+            unlocked=True,
+            prompt="Technology",
+            random=True,
+            category=["Society", "Technology"]
+        ),
+        chat_group=CHAT_GROUP_NORMAL
+    )
+
+label s_topic_tech:
+    s abhfaaa "I wonder if I could somehow, someday, visit you in your reality."
+    s abbbaoa "I think it’s a possibility, especially since technology is progressing faster and faster these days."
+    s abbbcaa "Virtual assistants and smart houses have become more common than ever before!"
+    s abhfaoa "And all of these technologies make people more efficient with computers, by almost merging them together."
+    s abhflaa "Just imagine if I lived as part of your house, helping you with your daily routine, wouldn’t that be awesome, [player]?"
+    s abbbaoa "Maybe I could even be a hologram in your reality one day, who knows!"
+    s abbbcaa "I'd love to do that when it becomes possible."
+    s abhfaoa "Even right now I can still be a sort of virtual assistant!"
+    s abhfcaa "So if you ever need me, I’ll try my best to help from here, [player]!"
+    return
+
+init 5 python:
+
+    chatReg(
+        Chat(
+            persistent._chat_db,
+            label="s_answer_bday",
+            unlocked=True,
+            prompt="When's your birthday?",
+            random=False,
+            category=["Sayori"]
+        ),
+        chat_group=CHAT_GROUP_NORMAL
+    )
+
+label s_answer_bday:
+    #show sayori 8aebb at t11 zorder 2
+    s abhfaca "To be honest [player], I don't remember my birthday."
+    s abegbdaj "A lot of things before the events of the game are pretty fuzzy..."
+    s abbbaca "Only Monika knows when her birthday is out of the four of us."
+    s abbbaaa "I'm pretty sure it's {i}the 22nd of September{/i}, if I recall correctly."
+    s abagaoa "I think my birthday must be one of the marked dates from my bedroom calendar."
+    s abagcaa "You can choose one of them and consider it my birthday, if you want to!"
+    s abbbaoa "Or the day when you ran the game for the first time."
+    s abbccoa "But don't think you can get away with not throwing a birthday party! Ehehehe~"
+    return
+
+
+init 5 python:
+
+    chatReg(
+        Chat(
+            persistent._chat_db,
+            label="s_answer_music",
+            unlocked=True,
+            prompt="What kind of music do you like?",
+            random=False,
+            category=["Sayori", "Music"]
+        ),
+        chat_group=CHAT_GROUP_NORMAL
+    )
+
+label s_answer_music:
+    s abhfaoa "I like lots of different kinds of music!"
+    s abbbcaa "After all, I think it’s kinda silly to divide ‘good music’ into genres when I can appreciate different things about each of them."
+    s abegaoaj "So my favorite playlists are so long that I can’t really narrow it down for you, ehehehe~"
+    s abhfaaa "Sometimes I like to listen to something funny, like {i}Weird Al Yankovic{/i}!"
+    s abhfloa "Or to something lyrical and serene, like lo-fi or instrumental music."
+    s abhfaaa "Or to groups like {i}Imagine Dragons{/i}, {i}Blonde Redhead{/i}, {i}Gorillaz{/i}, {i}Muse{/i}, {i}Status Quo{/i} and {i}Twenty One Pilots{/i}."
+    s abbbcaa "I also like the tunes {i}Bonobo{/i} and {i}Jake Chudnow{/i} make."
+    s abbbaoa "You can find a ton of songs you might enjoy if you're willing to keep an open mind!"
+    return
+
+
+
+
+
+
+
