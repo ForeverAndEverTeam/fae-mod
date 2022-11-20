@@ -1879,3 +1879,168 @@ label s_answer_holidays: #What is your favorite holiday?
     s abhfbaoa "I can’t wait to spend one with you someday, [player]!"
     return
 
+init 5 python:
+
+    chatReg(
+        Chat(
+            persistent._chat_db,
+            label="s_answer_books",
+            unlocked=True,
+            prompt="What are yoru favourite books?",
+            random=False,
+            category=["Literature", "Sayori"]
+        ),
+        chat_group=CHAT_GROUP_NORMAL
+    )
+
+
+label s_answer_books: # What are your favorite books?
+    s bbegmoaj "I’ve never really been much of a reader, to be honest."
+    s bbegacaj "But if I did pick up a book, I’d like to read something full of imagination. "
+    s abbcaoaj "Like a fantasy or adventure book!"
+    s abbccoaj"After all, the true value in books is how they immerse you in the fantastical, after all."
+    s abbccoaj "I’m starting to sound like Yuri now, ehehehe~"
+    return
+
+init 5 python:
+
+    chatReg(
+        Chat(
+            persistent._chat_db,
+            label="s_answer_poems",
+            unlocked=True,
+            prompt="What did MC's poems look like to you?",
+            random=False,
+            category=["Literature", "DDLC"]
+        ),
+        chat_group=CHAT_GROUP_NORMAL
+    )
+
+label s_answer_poems: #What did MC's poems look like to you?
+    s abgbaca "I can't really remember how I saw them before I became the president."
+    s abbcaca "But now I know his 'poems' were just a list of words you had selected to open CGs and progress the game."
+    s abhaaca "That’s how you saw them too, right?"
+    s abhfcaa "I heard it's a pretty unique gameplay feature for visual novels actually!"
+    s abhfaoa "Not every game lets you change the story based on your decisions, let alone through minigames!"
+    return
+
+init 5 python:
+
+    chatReg(
+        Chat(
+            persistent._chat_db,
+            label="s_answer_love",
+            unlocked=True,
+            prompt="Do you love me?",
+            random=False,
+            category=["Romance", "Sayori"],
+            affection_range=(fae_affection.LOVE, None)
+        ),
+        chat_group=CHAT_GROUP_NORMAL
+    )
+
+label s_answer_love:
+    s bbbccoa "What a silly question, [player]!"
+    s ebbccoa "Of course I do."
+    s ebbcaoa "I know that something about the game makes the Club President fall in love with you."
+    if persistent.clearall:
+        s abhabaca "But even without a programmed need for love, I'd have fallen for you anyway." 
+    s abhacoa "You're so kind, considerate, and you tried to make all of us happy. I really admire that about you."
+    return
+
+init 5 python:
+
+    chatReg(
+        Chat(
+            persistent._chat_db,
+            label="s_answer_god",
+            unlocked=True,
+            prompt="Do you believe in god?",
+            random=False,
+            category=["Life"]
+        ),
+        chat_group=CHAT_GROUP_NORMAL
+    )
+
+label s_answer_god:
+    s abbbbca "You know, I've never really thought about it that much."
+    s abbbaca "I was never really sure what to think about religion; I guess you could say I was agnostic?"
+    s abhabaca "But it's kind of hard to stay that way when you realize that you and your entire world have a 'creator'."
+    s abbccoa "Blessed be {i}Dan Salvato{/i}, hallowed be thy name! Ehehe~"
+    s abbcaca "He's a pretty cool guy, but he’s pretty secretive about whatever he's working on from what I’ve seen online."
+    s abhabaca "He's more like a Dad rather than some unapproachable God, I think."
+    return
+
+
+init 5 python:
+
+    chatReg(
+        Chat(
+            persistent._chat_db,
+            label="s_answer_politics",
+            unlocked=True,
+            prompt="What do you think about politics?",
+            random=False,
+            category=["Life", "Society"]
+        ),
+        chat_group=CHAT_GROUP_NORMAL
+    )
+
+label s_answer_politics:
+    s bbegmoaj "I'm not overly politically inclined, to tell you the truth."
+    s abhabaca "I don't really care how exactly people make collective decisions, give orders and share boons."
+    s abbbaaa "For me, the most important thing is that people just live their lives without interrupting anyone else's happiness."
+    s abbcaca "And that people can live without worrying about basic necessities, like food or shelter."
+    s "The beauty of it all is that I'm a free person that can have my own opinion on society."
+    s abhaaca "Too often, people don't lift a finger to stop injustice until it directly affects them..."
+    s abbbaca "If you've never seen them, you should read some of {i}Martin Niemöller’s{/i} speeches on this idea; it's pretty fascinating stuff. "
+    s bbbbaca "But when people start caring about others affected by war, by famine, by injustice, {w=0.5}{nw}"
+    extend abbccaa "that's when things can really be changed for the better."
+    return
+
+init 5 python:
+
+    chatReg(
+        Chat(
+            persistent._chat_db,
+            label="s_answer_cookies",
+            unlocked=True,
+            prompt="Do you like cookies?",
+            random=False,
+            category=["Food", "Sayori"]
+        ),
+        chat_group=CHAT_GROUP_NORMAL
+    )
+
+
+
+label s_topics_food_cookies:
+    s abhfaoa "I haven't had any cookies since that one time with Natsuki."
+    s abhfcaa "They were soooo gooood!"
+    s abhfaoa "Especially the one with chocolate chips!"
+    s "Which just so happened to be Natsuki’s one, ehehehe~"
+    s abbccaa "I could really do with some right now, {w=0.5}{nw}"
+    extend abbbaca "but there aren't any left here I don’t think."
+    s abbccoaj "And if there was I’d have sniffed them out by now, hehehe~"
+    s abbcaoa "Oh wait! What if I just spawn a plate of them on the desk?"
+    s cbbcaoa "After all, I'm the club president, so I can do that using the game console, right?"
+    s cbbcaaa "Give me a minute, I'm gonna have to do some fancy coding business!"
+    show sayori abaaaoa at t11
+    call updateconsole("show cookies", "show cookies")
+    #Spawning cookies
+    show cookies zorder 5:
+        anchor (0.5, 1.0)
+        ypos 700
+        xpos 870
+    pause 0.5
+    call hideconsole()
+    s abbccoa "Gotcha!"
+    s abaaaoa "That was easy!"
+    s abaaaoa "Want some?"
+    s bbbcmoaj "Oh, I forgot that I can't give you them yet since you're out there..."
+    s abaaaoa "But I hope you can imagine how tasty they smell at least, ehehehe~"
+    s ebgcaoaj "Actually I just had an idea!"
+    s ebgbcoa "If you get some cookies yourself, it’d be like we’re having them together!"
+    s abgbaoa "There’s nothing wrong with a sweet treat every now and then hehehe~"
+hide cookies
+    return
