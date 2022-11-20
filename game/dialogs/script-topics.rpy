@@ -2224,6 +2224,77 @@ label s_answer_game_opinion: #Opinion about an other club member
             jump s_answer_game_opinion_mc
     return
 
+label s_answer_game_opinion_n:
+    s bbhfaaa "Natsuki was a good friend of mine."
+    s bbhfaca "While she could come off as pretty arrogant and argumentative sometimes, she really did help out the club."
+    s abbbaaa "I know you didn't really see that side of her during the game, but when she was just around us she would lower her guard and become a lot more approachable."
+    s abbbcaa "She was pretty handy with cooking and baking too!"
+    s bbbbaaa "It's too bad you couldn't have tasted her cupcakes, {w=0.5}{nw}"
+    extend abhfbcaa "they were really tasty!"
+    s abbbcaa "Anyways, I’m glad she decided to join the club in the first place since she needed a shelter from her father."
+    s bbhemoa "As you know, they didn't exactly get along well…"
+    s bbgbaca "And he certainly didn't approve of her reading manga."
+    s abgbaaa "So Natsuki moved her collection to the clubroom when she joined us."
+    s abgbcaa "But besides that, I think she was a lot kinder and more compassionate than what she showed to the outside world."
+    return
+
+label s_answer_game_opinion_y:
+    s abaaaa "Yuri was the most {i}enigmatic{/i} club member."
+    s "That’s a word she’d probably use come to think of it, hehehe~"
+    s abhaaca "She was a quiet, shy, closed off person, who usually prefered to stay alone doing her own thing."
+    s abaabaoa "But she was really intelligent, kind, and never had a bad word to say about anyone."
+    s abaaca "Her poems were also very beautiful, and I could always tell that Yuri felt most at home with books and pens rather than people."
+    s abbcaa "But when you got to know her, she was an approachable, helpful friend."
+    if persistent.last_playthrough > 2:
+        s abhaaca "I was honestly pretty scared when I saw how she became much more unstable and aggressive after I was gone."
+        s bbbcac "But I know that wasn't who Yuri really was."
+        s "She was just a victim of circumstance, like me."
+        s abbcaa "In fact, her first argument with Natsuki in the game was pretty much the limit of Yuri's capabilities to 'lash out' at someone else."
+        s abaaaa "The {i}real{/i} Yuri I knew was a very sweet girl who had her own problems and own solutions, just like everyone else. I won't judge her for that."
+    else:
+    s abaaaa "We all were glad to have her as a club member."
+    s "Even Natsuki, despite the two of them being so different from each other."
+    return
+
+label s_answer_game_opinion_m:
+    s abaaaaa "Well, Monika was the first club president."
+    s "She did her work very well and I was glad to be her right-hand woman."
+    s abaaaca "But she struggled to communicate well with other people, and couldn't control her feelings as time went on."
+    if persistent.last_playthrough == 4:
+        s bbbblca "Look. {w=0.5}{nw}”
+        extend bbbbaca “I know what you're really asking me."
+        s bbbblca "Despite everything she put me and the others through..."
+        s bbaaaca "I truly believe that Monika was our friend, and she just lost sight of what was really important."
+        s bbaabca "I've been the President. I know what it does to you. And for her to be so completely alone the entire time, watching everyone she's ever known run on a script..."        
+        s bbaaaca "I can't blame her for becoming a little desperate."
+        s "So although I think what she did was wrong, I don’t think she’s evil."
+        s bbbbaca "After all, she never truly deleted us, and brought us all back when she had a moment of clarity."
+    elif persistent.last_playthrough > 0:
+        s bbaakca "The thought of what she did to me still hurts sometimes."
+        s bbaaaaa "But I can’t be mad at her since she bought me back and fixed her mistakes at the cost of her own happiness. I respect her a lot for that."
+    return
+
+
+label s_answer_game_opinion_mc:
+    s abbcaaa "Well, I knew him since we were children."
+    s abbccoa "I have a lot of memories about our childhood and I can't say anything bad about him."
+    s "We had tons in common and our houses were super near each other."
+    s bbbcaaa "Maybe that's why we became friends and then I fell in love with him."
+    s bbbbaca "...Or it was just the game's plan to make some drama if he didn't feel the same way."
+    s abhaacaa "Anyway, he always did his best to help me."
+    if persistent.last_playthrough != 0:
+        s bbaaaaa "Even after I confessed to him about my depression, he cared despite me pushing him away."
+        s "He even left the festival to check if I was fine."
+        s bbaalfa "...Unfortunately he was a day late."
+        s abaaaoa "But I can appreciate everything he did for me now."
+    s bbaaafa "It makes me sad knowing he's just a placeholder that's used to make our communication possible."
+    s "But in a way, I think he did all he had to do."
+    s bbbbaaa "After all, he’s just your guide in our world."
+    s abhfaoa "And he managed to bring us together~"
+    return
+
+
+
 init 5 python:
 
     chatReg(
