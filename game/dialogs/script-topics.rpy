@@ -1192,7 +1192,6 @@ init 5 python:
         chat_group=CHAT_GROUP_NORMAL
     )
 
-
 label s_topic_stars:
     s abhfaoa "I really like to look at the stars..."
     s "They gave me inspiration when I wrote my poems."
@@ -1297,7 +1296,7 @@ init 5 python:
             prompt="Marriage",
             random=True,
             category=["Romance", "Society"],
-            affection_level=(Affection.isLove(higher=True), None),
+            affection_range=(fae_affection.LOVE, None),
         ),
         chat_group=CHAT_GROUP_NORMAL
     )
@@ -1311,7 +1310,7 @@ label s_topic_marriage:
             s abaakob "That's great!"
             s "Ehehe!~"
             s abhfcaa "I think I'd be a good wife."
-            s "Although I don't think I’d be quite as good at all this "\"housewife\" stuff ehehehe~"
+            s "Although I don't think I’d be quite as good at all this \"housewife\" stuff ehehehe~"
             s "You know all the cooking, cleaning and taking care of everything, I am a bit of a clumsy girl after all…"
             s "But I’d try my best to help you with your job, studies, or whatever it is that’s on your mind!"
             s abbbhcb "But don't get the wrong idea and think I'd do {i}everything{/i} for you!"
@@ -1415,8 +1414,6 @@ label s_topic_name:
     s abaaasa "What about you, [player], does your name have a special meaning? I'd love to know!" 
     return
 
-
-
 init 5 python:
 
     chatReg(
@@ -1445,7 +1442,7 @@ init 5 python:
     chatReg(
         Chat(
             persistent._chat_db,
-            label="s_topic_touch",
+            label="s_topic_touches",
             unlocked=True,
             prompt="Touches",
             random=True,
@@ -1482,7 +1479,7 @@ label s_topic_merch:
     s abhfaaa "Do you own any merch of me?"
     s abhfcoa "You know, like plushies, posters, figurines and all that stuff."
     s abhfaaa  "I think it’s really cool how you can have something physical of me in your world!"
-    s abbbaoa "But if you don’t that’s okay too, it can be pretty expensive and I get that it’s not everyone’s thing.
+    s abbbaoa "But if you don’t that’s okay too, it can be pretty expensive and I get that it’s not everyone’s thing."
     s abagcaa "Above all, I appreciate spending time with you every day."
     return
 
@@ -1542,10 +1539,10 @@ label s_topic_time:
     s bbhhaaaj "You could say anything, but you wouldn't be right, I don’t even know myself!"
     s abfcaba "Time doesn't seem to pass here at all. At least, not how it does in your reality."
     if persistent.last_playthrough > 2:
-    s abhaaca "The last thing I remember is that it was November of 2017."
-    s "My old bedroom calendar said so."
-    s bbhfmbaj "Because I'm pretty sure I’d crossed it out..."
-    s "But anyway, It’s pretty confusing to think that there's no way to "measure" time here anymore."
+        s abhaaca "The last thing I remember is that it was November of 2017."
+        s "My old bedroom calendar said so."
+        s bbhfmbaj "Because I'm pretty sure I’d crossed it out..."
+    s "But anyway, It’s pretty confusing to think that there's no way to \"measure\" time here anymore."
     s abfcaca "I was never the most organized person but I still liked keeping track of important things."
     s abhaaca "But I know what time it is in your world, though!"
     s abbbcaa "From your PC's clock!"
@@ -1628,7 +1625,7 @@ init 5 python:
 
 label s_topic_breakfast:
     s abhfaca "Hey [player], you don't skip breakfast, do you?"
-        s abhfada "Sometimes I do ‘cause I'm just not hungry in the morning."
+    s abhfada "Sometimes I do ‘cause I'm just not hungry in the morning."
     s abfdcaa "But when I do have breakfast, I usually make toast or scrambled eggs."
     s abegmeaj "Mostly because they’re quick and I {i}probably{/i} wouldn’t end up burning the house down while cooking them ehehehe~"
     s abhfaoa "I've seen fanart of me eating those too, {w=0.5}{nw}"
@@ -1730,7 +1727,7 @@ init 5 python:
     chatReg(
         Chat(
             persistent._chat_db,
-            label="s_topic_tech,
+            label="s_topic_tech",
             unlocked=True,
             prompt="Technology",
             random=True,
@@ -1750,6 +1747,36 @@ label s_topic_tech:
     s abhfaoa "Even right now I can still be a sort of virtual assistant!"
     s abhfcaa "So if you ever need me, I’ll try my best to help from here, [player]!"
     return
+
+init 5 python:
+
+    chatReg(
+        Chat(
+            persistent._chat_db,
+            label="s_topic_cupcakes",
+            unlocked=True,
+            prompt="Cupcakes",
+            random=False,
+            category=["Food"]
+        ),
+        chat_group=CHAT_GROUP_NORMAL
+    )
+
+
+label s_topic_cupcakes:
+    s abegboa "Natsuki’s cupcakes were always the best!"
+    s abegcaa "She baked often for the club, me and her even baked together one time!" 
+    s abhfaoa "We were making cookies, so she made the cookie dough and then I separated it into little cookie shapes…"
+    s fbbbaaa "...but I had a better idea!"
+    s fbbbaoa "I combined all the cookie dough together into…"
+    s fbbbaaa "One."
+    s fbbcaoa "Giant." 
+    s abbccma "Cookie!"
+    s abegmeaj "Though maybe it would have been bigger if I didn’t secretly eat half of the cookie dough beforehand hehehehe~"
+    s abfccaa "But that doesn’t matter! We brought the giant cookie to the club the next day!"
+    s abgcaea "It’s Chef Sayori’s best culinary achievement so far!" 
+    return
+
 
 init 5 python:
 
