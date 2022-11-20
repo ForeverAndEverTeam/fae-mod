@@ -2014,7 +2014,7 @@ init 5 python:
 
 
 
-label s_topics_food_cookies:
+label s_answer_cookies:
     s abhfaoa "I haven't had any cookies since that one time with Natsuki."
     s abhfcaa "They were soooo gooood!"
     s abhfaoa "Especially the one with chocolate chips!"
@@ -2108,13 +2108,147 @@ label s_answer_editing:
     s abaaaoa "I still don't know how it all works exactly, but if I want to make a new file, all I have to do is think about it!"
     
     python:
-        import codecs
         
-        text_file = codecs.open(config.basedir + "/new_text_file.txt", 'w', encoding = "UTF-8")
-        text_file.write(__("all I have to do is think about it!"))
-        text_file.close()
+        makeFile('readme', 'All I have to do is think about it!')
+        
     s abhabaca "It's kinda like telekinesis but much much cooler!"
     s abbbmaaj "I'm still learning though, so there might be some bugs here and there, {w=0.5}{nw}"
-        extend abbbcaaj "but I’m getting better! "
+    extend abbbcaaj "but I’m getting better!"
     s abhabaca "So can you check the updates from time to time for me? Pretty please~"
     return
+
+init 5 python:
+
+    chatReg(
+        Chat(
+            persistent._chat_db,
+            label="s_answer_reality",
+            unlocked=True,
+            prompt="What do you think about the real world?",
+            random=False,
+            category=["Life", "Sayori"]
+        ),
+        chat_group=CHAT_GROUP_NORMAL
+    )
+
+label s_answer_reality: # What do you think about the real world?
+    s abhfaoa "Oh I've already seen lots of things about it on the internet!"
+    s abhfcoa "It looks like such a big and fancy place, full of beautiful sights, culture, and kind people."
+    s abhaaca "Although, it does still have its issues."
+    s abbbaca "Things like poverty, pollution, unjustness and cruelty, just to name a few."
+    s abbbaaa "But that doesn’t mean we can't fix it! If we all try our best to be kind and considerate every day, I’m sure we can make all that a thing of the past."
+    s bbagaca "Come to think of it, my world was imperfect too..."
+    s bbbbaca "Just look at me and the other girls. We all had our pros and cons."
+    s abbbcoa "But that aside, I really wish I can visit your reality someday!"
+    s bbbbmoa "I wonder how I'd look, since your reality is quite different to mine..."
+    s bbbbaca "It's pretty detailed and colorful, while my world is kinda simple."
+    s ebbccoa "But eh, that doesn't matter to me, so long as I’m by your side~"
+    return
+
+
+init 5 python:
+
+    chatReg(
+        Chat(
+            persistent._chat_db,
+            label="s_answer_read",
+            unlocked=True,
+            prompt="What do you think about the real world?",
+            random=False,
+            category=["Life", "Sayori"]
+        ),
+        chat_group=CHAT_GROUP_NORMAL
+    )
+
+label s_answer_read:
+
+    s  ebbcaoa "Okay! Just pick the one you want to read."
+    call poem_redux
+    
+    return
+
+
+init 5 python:
+
+    chatReg(
+        Chat(
+            persistent._chat_db,
+            label="s_answer_profession",
+            unlocked=True,
+            prompt="What would be your ideal job?",
+            random=False,
+            category=["Life", "Sayori"]
+        ),
+        chat_group=CHAT_GROUP_NORMAL
+    )
+
+label s_answer_profession:
+    s abhaaca "To be honest, I've never really thought about it."
+    s abhaaaa "I've always found fulfillment in socializing and helping others."
+    s abhacaa "So, I think I'd be a good caregiver or psychologist!"
+    s abbcaaa  "Maybe even a... diplomatist?"
+    s bbegmpa "No, that's not right... a great {w=0.5}{nw}"
+    extend abbcaoa "{i}diplomat{/i}, ehehe~"
+    s abbccoa "I could stop arguments on a global scale, and do my part to fix any disagreements!"
+    s "I'd be happy doing almost anything, as long as I can be useful and make a difference in somebody's life."
+    s abhaaca "I suppose I could do something a little more creative, like painting, or writing..."
+    s abbbaca "But to be honest, I don't think I could ever charge money for something I made."
+    s abhaaca "Art can express so many amazing feelings and help others feel like someone understands what they're going through, and that’s more than enough of a profit for me."
+    return
+
+init 5 python:
+
+    chatReg(
+        Chat(
+            persistent._chat_db,
+            label="s_answer_opinion",
+            unlocked=True,
+            prompt="Let's talk about the club members...",
+            random=False,
+            category=["DDLC"]
+        ),
+        chat_group=CHAT_GROUP_NORMAL
+    )
+
+label s_answer_game_opinion: #Opinion about an other club member
+    s abaaaoa  "Who do you wanna talk about?{nw}"
+    menu:
+        s "Who do you wanna talk about?{fast}"
+        "Natsuki":
+            jump s_answer_game_opinion_n
+        "Monika":
+            jump s_answer_game_opinion_m
+        "Yuri":
+            jump s_answer_game_opinion_y
+        "The Protagonist":
+            jump s_answer_game_opinion_mc
+    return
+
+init 5 python:
+
+    chatReg(
+        Chat(
+            persistent._chat_db,
+            label="s_answer_lostFriends",
+            unlocked=True,
+            prompt="Do you miss the club members?",
+            random=False,
+            category=["DDLC"]
+        ),
+        chat_group=CHAT_GROUP_NORMAL
+    )
+
+label s_answer_game_lostFriends:
+    s bbaabca "Yes, I do."
+    s bbaaaca"They all deserve to come back."
+    if persistent.last_playthrough != 0:
+        s bbbbaca "...Even Monika."
+    s bbaaaaa "I still remember how we used to hang out in the club together."
+    s bbaaaca "We enjoyed chatting, discussing literature and sharing poems."
+    s bbbbaaa "They really were good friends."
+    s abbbaca "But I think there are ways to bring them back, without making them go through the reality of the original game."
+    s abhfaoa " Maybe you could install a mod, where you can save them and make everyone happy."
+    s abhfcaa "Or you could install 3 mods to 3 game copies where they can spend time with you in a way like you and me now."
+    s "That’d mean so much to me, [player]."
+    return
+
