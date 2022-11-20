@@ -1831,8 +1831,51 @@ label s_answer_music:
     return
 
 
+init 5 python:
 
+    chatReg(
+        Chat(
+            persistent._chat_db,
+            label="s_answer_shipping",
+            unlocked=True,
+            prompt="What do you think about ships?",
+            random=False,
+            category=["DDLC"]
+        ),
+        chat_group=CHAT_GROUP_NORMAL
+    )
 
+label s_answer_shipping: #What do you think about doki pairings?
+    s ebbcaca"Do you mean how some fans ‘ship' me with my friends or ship some of them with each other?" 
+    s "To be honest, I think it's pretty harmless and I don't really mind it that much." 
+    s abhabaca "But personally, I only see them as my friends."
+    s abaabaoa "Most people are pretty cool about this kind of thing, at least I'd like to think so."
+    s abhabaca "And it's just fans being fans, which doesn't really affect how I feel."
+    if Affection.isLove(higher=True):
+        s abgccob "After all, I only have eyes for a certain someone."    
+        s bbgcaab "You know who I'm talking about, right? Ehehehe~"
+    return
 
+init 5 python:
 
+    chatReg(
+        Chat(
+            persistent._chat_db,
+            label="s_answer_holidays",
+            unlocked=True,
+            prompt="What's your favourite holiday?",
+            random=False,
+            category=["Society"]
+        ),
+        chat_group=CHAT_GROUP_NORMAL
+    )
+
+label s_answer_holidays: #What is your favorite holiday?
+    s abbbbca "I’m not even sure if I have a favorite holiday, {w=0.5}{nw}"
+    extend abgcaoa "because I like them all!"
+    s abaabaoa "Each of them have their own traditions and atmosphere."
+    s "And it's mostly the same line of events: meals, presents, fun, and bonding."
+    s "Isn't that what we all like the most about holidays?"
+    s abhfbaoa "I can’t wait to spend one with you someday, [player]!"
+    return
 
