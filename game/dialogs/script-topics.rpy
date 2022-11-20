@@ -2042,5 +2042,79 @@ label s_topics_food_cookies:
     s ebgcaoaj "Actually I just had an idea!"
     s ebgbcoa "If you get some cookies yourself, it’d be like we’re having them together!"
     s abgbaoa "There’s nothing wrong with a sweet treat every now and then hehehe~"
-hide cookies
+    hide cookies
+    return
+
+
+init 5 python:
+
+    chatReg(
+        Chat(
+            persistent._chat_db,
+            label="s_answer_chibi",
+            unlocked=True,
+            prompt="What do you think about Chibis?",
+            random=False,
+            category=["DDLC", "Sayori"]
+        ),
+        chat_group=CHAT_GROUP_NORMAL
+    )
+
+label s_answer_chibi: # What do you think about chibi dokis?
+    #Show chibis
+    show n_sticker zorder 30 at chibi(580)
+    pause 0.1
+    show y_sticker zorder 31 at chibi(680)
+    pause 0.1
+    show m_sticker zorder 32 at chibi(880)
+    pause 0.1
+    show s_sticker zorder 33 at chibi(780)
+    s abgbaoa "Oh! You mean these stickers?"
+    s "They’re so cute, aren’t they!"
+    s abhfbcaa "I like how some people code them into separate characters along with us."
+    s abhfbaoa "Maybe I could try to code one of them into a little buddy!"
+    s "I think it'd be good coding practice for me."
+    #Hide chibis
+    window hide
+    show n_sticker down zorder 30 at chibi_hide(580)
+    show y_sticker down zorder 31 at chibi_hide(680)
+    show m_sticker down zorder 32 at chibi_hide(880)
+    show s_sticker down zorder 33 at chibi_hide(780)
+    pause 1
+    hide n_sticker
+    hide y_sticker
+    hide m_sticker
+    hide s_sticker
+    window auto
+    return
+
+
+init 5 python:
+
+    chatReg(
+        Chat(
+            persistent._chat_db,
+            label="s_answer_editing",
+            unlocked=True,
+            prompt="How do you manipulate the game?",
+            random=False,
+            category=["DDLC", "Sayori"]
+        ),
+        chat_group=CHAT_GROUP_NORMAL
+    )
+
+label s_answer_editing:
+    s bbegmaaj "I do it with the power of my mind… I think? Ehehehe~"
+    s abaaaoa "I still don't know how it all works exactly, but if I want to make a new file, all I have to do is think about it!"
+    
+    python:
+        import codecs
+        
+        text_file = codecs.open(config.basedir + "/new_text_file.txt", 'w', encoding = "UTF-8")
+        text_file.write(__("all I have to do is think about it!"))
+        text_file.close()
+    s abhabaca "It's kinda like telekinesis but much much cooler!"
+    s abbbmaaj "I'm still learning though, so there might be some bugs here and there, {w=0.5}{nw}"
+        extend abbbcaaj "but I’m getting better! "
+    s abhabaca "So can you check the updates from time to time for me? Pretty please~"
     return
