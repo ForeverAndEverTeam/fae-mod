@@ -43,8 +43,6 @@ SlightlyAmiss (Theme)
 
 ## WRITING
 
-Sobb (Lead)
-
 Sayori
 
 [Orcaramelo](https://github.com/Orcaramelo)
@@ -52,6 +50,8 @@ Sayori
 [Emilia/Monika (EYLO)](https://www.reddit.com/u/EmiliaMonika?utm_medium=android_app&utm_source=share)
 
 [Otter](https://github.com/my-otter-self)
+
+Sobb
 
 ## SPECIAL THANKS
 
