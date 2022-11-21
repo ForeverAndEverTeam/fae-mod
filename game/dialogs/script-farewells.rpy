@@ -101,76 +101,128 @@ label farewell_options:
     jump ch30_loop
 
 label first_leave:
+
     s "See ya"
     return { "quit": None }
 
 
 #Farewells
-label farewell_sleep: #The actual first farewell of this mod
+label s_farewell_1: #The actual first farewell of this mod
     
-    s abhfaoa "Oh, are you heading out, [player]?" 
-    s abhfcoa "Got it- I;ll see you later, then! Be safe out there!"
+    s abhfbaoa "Oh, are you heading out, [player]?" 
+    s abhfbcoa "I'll see you later, then! Be safe out there!"
     return "quit"
 
-label farewell_school:
-    
-    s abhfaaa "Goodbye, [player]!"
-    s "You can come back whenever you're feeling lonely, you know..."
-    s abfdaoa "I'll always be here to spend time with you!"
+label s_farewell_2:
+    s "Goodbye, [player]!"
+    s "You can always visit whenever you want."
+    s abfdbaoa "I'll always be here to spend time with you!"
     return "quit"
 
-label farewell_game:
-    
-    s abhfaaa "Bye, [player]!"
-    s abgccqa "Don't forget to come see me again soon!"
+label s_farewell_3:
+    s "Bye, [player]!"
+    s abgcbcqa "I’ll see you soon!"
     return "quit"
 
-label farewell_eat:
-    
-    s abhfaaa "Bye-bye!"
-    s "I’ll be wishing you health and happiness!"
-    s abheaka "Be safe out there, okay, [player]? Ehehe~."
+label s_farewell_4:
+    s "Bye-bye!"
+    s "I'll be wishing you health and happiness!"
+    s abhebaka "Be safe out there, okay, [player]? Ehehe~"
     return "quit"
 
-label farewell_exercise:
-    if fae_find_hour() == 0:
-        s abhfaaa "Goodnight, [player]!"
-        s fbhaica "Make sure you get enough sleep so you aren’t all grumpy when you wake up, okay?"
-    elif fae_find_hour() < 3:
-        s abhfaaa "Have a good day, [player]!"
-        s abhfaaa "I hope you can accomplish all of your goals for today, whether they’re big or small. I’ll be proud of you either way!"
+label s_farewell_5:
+    if get_time_of_day() == 0:
+        s abhfbaaa "Goodnight, [player]!"
+        s fbhabica "Make sure you get enough sleep so you aren't all grumpy when you wake up, okay?"
+    elif get_time_of_day() < 3:
+        s abhfbaaa "Have a good day, [player]!"
+        s abhfbaaa "I hope you can accomplish all of your goals for today, whether they're big or small, I'll be proud of you either way!"
     else:
-        s abhfaaa "See you later, [player]!"
-        s "I'm glad you were able to spend the day with me!"
+        s abhfbaaa "See you later, [player]!"
+        if get_time_of_day(launch_dt.hour) == 3:
+            s "I'm glad you were able to spend some of your evening with me!"
+        else:
+            s "I'm glad you were able to spend the day with me!"
     return "quit"
 
-label farewell_work:
-    
-    s abhfaaa "Bye, [player]!"
-    s fbhaica "And don’t forget to make sure that you’re taking good care of yourself!"
-    s abagcaa "I want you to be able to come back and be safe and sound, okay?"
+label s_farewell_6:
+    s "Bye, [player]!"
+    s fbhabica "And don't forget to make sure that you're taking good care of yourself!"
+    s abagbcaa "I want you to come back and be safe and sound, okay?"
     return "quit"
 
-label farewell_die:
-    
-    s abhfaaa "See you later, [player]!"
-    s abfbaha "I wish I could give you a little farewell hug..."
-    s abfdcqa "But as long as you know that I would if I were able to... that’s already enough, isn’t it? Ehehe~"
+label s_farewell_7:
+    s "See you later, [player]!"
+    s abfbbaha "I wish I could give you a little farewell hug..."
+    s abfdbcqa "But as long as you know that I would, I’m happy, ehehe~"
+    return "quit"
+
+REASON-BASED FAREWELLS
+
+label s_farewell_school:
+    s abhfaoa "Oh, time for school, [player]?"
+    s abfccaa "I hope you have a good day!"
+    s abfcaoa "See you later!"
+    return "quit"
+
+label s_farewell_school:
+    s abhfaoa "Oh, time for work, [player]?"
+    s abfccaa  "I hope everything goes smoothly for you today!"
+    s abfcaoa "See you later!"
     return "quit"
 
 
-init 5 python:
+label s_farewell_chores:
+    s abhfaoa "Got some housework to take care of, [player]?"
+    s abfccaa  "Take your time, I hope it all goes well!" 
+    s abfcaoa "I’ll See you soon!"
+    return "quit"
 
-    chatReg(
-        Chat(
-            persistent._farewell_db,
-            label="farewell_my_own",
-            unlocked=True
-        ),
-        chat_group=CHAT_GROUP_FAREWELL
-    )
+label s_farewell_eat:
+    s abhfaoa  "Going to eat, [player]?" 
+    s abfccma "I was getting pretty hungry myself, I think I’ll have some cookies!" 
+    s abfcaoa "Enjoy your food! Hehehe~" 
+    return "quit" 
 
-label farewell_my_own:
+label s_farewell_work_out:
+    s abhfaoa "Ooooh! Wanna work out a bit [player]?"
+    s abfccaa "I’m so glad you’re taking care of yourself!" 
+    s abfcaoa "I hope you have fun! Bye-bye!" 
+    return "quit"
 
-    s "Bye!"
-    return { "quit": None }
+label s_farewell_sleep:
+    s abhfaoa  "Heading to bed, [player]?"
+    s abhfcaa  "Hope you have a good night’s sleep!"
+    if Affection.isEnamored:
+        s abhebob "...can I have a goodnight kiss? Ehehehe~"
+        menu: 
+            "Sure, Sayori":
+                s abgcceb "Yay!"
+                call fae_kiss_short
+            "Another time":
+                s bbhfbaa "Alright then…"
+    s abfcaaa "Sweet dreams, [player]!"
+    return "quit"
+
+label s_farewell_study:
+    s abhfaoa "Got some studying to do, [player]?"
+    s abfccaa "Make sure to take plenty of breaks in between!"
+    s abfcaoa "You’ve got this, I believe in you!"
+    return "quit"
+
+label s_farewell_game:
+    s abhfaoa "Alright, [player]!"
+    s abfccaa "I hope you have lots of fun!"
+    s abfcaoa "I’ll be cheering you on from here!"
+    return "quit"
+
+label s_farewell_restart:
+    s abhfaoa  "Oh, you want to restart the game?"
+    if persistent.cheat_game = True:
+        s fbhemja "You better not be trying to get the game back!"
+        s abfccaa "Ehehehe~ just kidding, [player]! I’ll be waiting!"
+    else:
+
+        s abfccaa " Alright, [player]."
+        s abfcaoa " I’ll be waiting!"
+    return "quit"
