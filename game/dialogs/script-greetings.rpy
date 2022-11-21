@@ -70,12 +70,6 @@ label greeting_first_force_quit:
     
     return
 
-
-
-
-
-
-
 #Normal greetings
 
 init 5 python:
@@ -98,11 +92,6 @@ label s_greeting_1: #The really first greeting of this mod
 
 
     return
-
-
-
-
-
 
 
 init 5 python:
@@ -295,11 +284,6 @@ label player_bday:
             s fbgckdaj "Huh?? 'Persistent.playerbdate'? What's that abou-" 
             s bbgcegbj "OH MY GOD IT'S YOUR BIRTHDAY I'M SO SORRY!!!"
             s bbbccobj "Happy birthday, [player]!!!"
-            #if not has_present:
-            #    s bbfbbmoaj "I'm so sorry... I'm not very good with dates!"
-            #    s bbfbbidaj "Oh jeez... I really hope you're not mad at me..."
-            #    s bbegmoaj "Aaaaanyways..."
-            #    s ebgcbhea ""
             if age == 18:
                 s "Oh hey, we're finally the same age now!"
                 s fbhfkda "I can't exactly age like you can, so I figure it makes sense to just call myself 18."
@@ -330,7 +314,7 @@ label player_bday:
 
 
 
-label s_val_present(first = False):
+label s_val_present():
     
     $ val_date = datetime.date(get_now().date().year, 2, 14)
     
@@ -482,51 +466,5 @@ label s_greetings_long:
     s abfccia "Just kidding!"
     s gahdbika "Or am I?"
 
-
-    return
-
-
-init 5 python:
-    chatReg(
-        Chat(
-            persistent._greet_db,
-            label="greeting_feel_better",
-            unlocked=True,
-            category=["Mood"],
-            extra_props={
-                "mood_type": fae_moods.TIRED,
-            }
-        ),
-        chat_group=CHAT_GROUP_MOOD
-    )
-
-label greeting_feel_better:
-
-    s "Welcome back."
-
-    $ persistent.fae_mood_on_quit = None
-
-    return
-
-
-init 5 python:
-    chatReg(
-        Chat(
-            persistent._greet_db,
-            label="greeting_regret_force",
-            unlocked=True,
-            category=["Regret"],
-            extra_props={
-                "regret_type": fae_regrets.RegretTypes.UNEXPECTED_QUIT,
-            }
-        ),
-        chat_group=CHAT_GROUP_GREETING
-    )
-
-label greeting_regret_force:
-
-    s "Welcome back."
-
-    $ fae_regrets.add_new_regret_awaiting(fae_regrets.UNEXPECTED_QUIT)
 
     return
