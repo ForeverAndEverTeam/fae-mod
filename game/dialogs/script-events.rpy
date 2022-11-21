@@ -39,29 +39,11 @@ init -1 python in fae_events:
     import store.fae_outfits as fae_outfits
     import store.fae_utilities as fae_utilities
 
-    FAE_EVENT_DECOR_ZORDER = 2
-    FAE_EVENT_ASSET_ZORDER = 4
     
     EVENT_DEFS = dict()
     EVENT_RETURN_OUTFIT = None
 
     
-
-
-
-
-#init -1 python in fae_holidays:
-    
-    
-    import datetime
-    from Enum import Enum
-    import random
-    import store
-    import store.fae_affection as fae_affection
-    import store.fae_globals as fae_globals
-    import store.fae_outfits as fae_outfits
-    import store.fae_utilities as fae_utilities
-
     FAE_EVENT_DECOR_ZORDER = 2
     FAE_EVENT_ASSET_ZORDER = 4
 
@@ -528,14 +510,14 @@ init 5 python:
     chatReg(
         Chat(
             persistent._event_db,
-            label="fae_event_mr_cow_transform20",
-            unlocked=True,
+            label="fae_event_mr_cow_transform",
+            unlocked=False,
             affection_range=(fae_affection.NORMAL, None)
         ),
         chat_group=CHAT_GROUP_EVENT
     )
 
-label fae_event_mr_cow_transform20:
+label fae_event_mr_cow_transform:
 
     hide black
 
@@ -557,10 +539,16 @@ label fae_event_mr_cow_transform20:
     s "Bwahahahahah- I'm sorry, [player]!"
     s "I'm fine- I just couldn't resist that one!"
     s "I'll go put him away now, I'll be back in a sec!"
-    
-    hide mr_cow_desk
-    
+
     hide asset spe1
+
+    hide mr_cow_desk
+
+    show emptydesk
+
+    pause 2.0
+    
+    #ause 2.0
 
     $ fae_events.show_visuals("abhfcqa")
 
@@ -625,4 +613,57 @@ label fae_event_pointy_stick_stabber_girl:
     s abhaiia "Did I make you nervous?"
     s ebhhcoa "Sorry for scaring you, ehehe~"
     
+    return
+
+init 5 python:
+    chatReg(
+        Chat(
+            persistent._event_db,
+            label="fae_event_sayori_desk_hide",
+            unlocked=True,
+            affection_range=(fae_affection.NORMAL, None)
+        ),
+        chat_group=CHAT_GROUP_EVENT
+    )
+
+label fae_event_sayori_desk_hide:
+    show spe2 at s11
+    $ style.say_dialogue = style.whisper
+    s "Hehehe [player] will never see this coming, Mr. Cow!"
+    s "Oh! I think they're here! Shhh~ get down!" 
+    s "Ready? 3…2..1…"
+    hide spe2
+    $ style.say_dialogue = style.normal
+    s ebbccoa "Boo!"
+    s bbbcaoa "Hehehehehe! Did I scare you [player]?"
+    s abgbaoa "I wish I could have seen the look on your face, ehehehe~"
+    s cbgbaoa "You better always be on your toes around me!"
+    s abaacoa "Anyways! Hehehehe~"
+    return
+
+init 5 python:
+    chatReg(
+        Chat(
+            persistent._event_db,
+            label="fae_event_door_open",
+            unlocked=True,
+            affection_range=(fae_affection.NORMAL, None)
+        ),
+        chat_group=CHAT_GROUP_EVENT
+    )
+
+label fae_event_door_open:
+    scene black
+    menu:
+        "...":
+            jump event_door_open
+        "Gently open the door":
+            $ main_background.form()
+            $ fae_sky.reload_sky()
+            s bbegmoajj "Whoops! Sorry about that!"
+            s abegaoaj "Welcome back, [player]! {w=0.5}{nw}"
+            extend gbaamoj "Sorry if I scared you!"
+            s abfccoaj "I've been learning how to use menus, and thought I'd give it a go.{w=0.5}{nw}"
+            extend abfcaoaj "But never mind that."
+            s abegcoaj "I'm so glad you're back!"
     return
