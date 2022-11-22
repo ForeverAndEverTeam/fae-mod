@@ -576,6 +576,17 @@ transform malpha(a=1.00):
     i11
     alpha a
 
+
+transform chibi(x = 640):
+    yanchor 1.0
+    pos (x, 1.25)
+    easein 0.5 ypos 0.795
+    
+transform chibi_hide(x = 64):
+    yanchor 1.0
+    pos (x, 0.795)
+    easeout 0.5 ypos 1.25
+
 init -5 python:
     dissolve_sayori = {"master": Dissolve(0.25, alpha=True)}
 

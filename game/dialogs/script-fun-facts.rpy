@@ -78,3 +78,66 @@ label s_fun_fact_arts: #Arts inside themselves
 
     call fae_fun_facts_end
     return
+
+init 5 python:
+    chatReg(
+        Chat(
+            persistent._fae_fun_facts_db,
+            label="s_fun_fact_number4"
+        )
+    )
+
+label s_fun_fact_number4: #The number 4
+    s abhfcaa "Hey [player]! Can you guess what my favorite number is?"
+    s abbccoa "It's {i}four{/i}!"
+    s abhfaoa "I really like this number, It's a pretty magical one."
+    s abhaaca "And I recently noticed that it's weirdly connected to this game too."
+    s "You know, {i}4{/i} girls, {i}4{/i} acts."
+    if persistent.last_playthrough > 0:
+        s bbheboa "...And {i}4{/i} club meetings too..."
+    s abbbaca "Maybe it's because it’s an unlucky number in East Asian culture."
+    s abbbbca "But that's just superstition, right?"
+    s abbbaoa "Ironically for me it was always a lucky number!"
+    s abbccoa "Is it your lucky number too? That'd be such a funny coincidence ehehe~"
+    call fae_fun_facts_end
+    return
+
+init 5 python:
+    chatReg(
+        Chat(
+            persistent._fae_fun_facts_db,
+            label="s_fun_fact_interpretingWords"
+        )
+    )
+label s_fun_fact_interpretingWords: #Interpreting words
+    s abaaaoa "Hey [player], do you ever read a word without even noticing it's spelled wrong?"
+    s abaacoa "And it always happens with the tiny obvious words!"
+    s abbbaoa "{i}So I bet you can't find the mistake in tihs text! {/i}{#Y'see the mistake in 'tihs'} ehehehe~"
+    s abhaaca "So I did some googling and apparently it's because your lazy brain often only reads the letters at the start and the end of common words, without even considering the letters in between."
+    s abbcaaa "And that's why we make silly mistakes while writing from time to time."
+    s "There’s some funny and not so funny examples of misspellings in the past because someone didn't go back to fix a word or two."
+    s abbccaa  "But y’know, we’re people. We all make mistakes occasionally."
+    s abaaaoa "In the end, no one's perfect."
+    call fae_fun_facts_end
+    return
+
+init 5 python:
+    chatReg(
+        Chat(
+            persistent._fae_fun_facts_db,
+            label="s_fun_fact_Binary"
+        )
+    )
+
+label s_fun_fact_Binary: #Fingers and the binary numbers
+    s abhaaca "Did you know that you can show numbers much bigger than 5 with just one hand?"
+    s "And that’s with the binary system!"
+    s "Just look at your fingers, they’re a perfect match for the classic 0/1 pair!"
+    s "And it works pretty cleverly too!"
+    s "The first number in the unit’s place represents 1, then the next represents 2, and 4, and 8, and so on."
+    s "And by adding them up, you can work out the number in decimal form."
+    s "Just like a computer would!"
+    s "It’s really cool how they compact giant numbers to make calculations easier."
+    s "I wish I could’ve done that in math class, ehehehe~"
+    s abaaaoa "If you use both hands, you can even calculate numbers up to {i}1023{/i}!"
+    return

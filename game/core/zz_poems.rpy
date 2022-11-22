@@ -212,7 +212,7 @@ label fae_showpoem(poem=None, paper=None, post_label=None):
     window auto
     
     if post_label and renpy.has_label(post_label):
-        call expression post_label
+        call expression post_label from _call_expression_1
 
     
 
@@ -269,38 +269,38 @@ label poem_redux:
         return "prompt"
 
     if _poem == poem_bottles:
-        call fae_showpoem(_poem, post_label="s_poems_bottles")
+        call fae_showpoem(_poem, post_label="s_poems_bottles") from _call_fae_showpoem_1
         return
 
     elif _poem == poem_sunshine:
-        call fae_showpoem(_poem, post_label="s_poems_sunshine")
+        call fae_showpoem(_poem, post_label="s_poems_sunshine") from _call_fae_showpoem_2
         return
     
     elif _poem == poem_flower:
-        call fae_showpoem(_poem, post_label="s_poems_flower")
+        call fae_showpoem(_poem, post_label="s_poems_flower") from _call_fae_showpoem_3
         return
     elif _poem == poem_last:
-        call fae_showpoem(_poem, post_label="s_poems_last")
+        call fae_showpoem(_poem, post_label="s_poems_last") from _call_fae_showpoem_4
         return
     
     elif _poem == poem_fruits:
-        call fae_showpoem(_poem, post_label="s_poems_fruits")
+        call fae_showpoem(_poem, post_label="s_poems_fruits") from _call_fae_showpoem_5
         return
     
     elif _poem == poem_angel:
-        call fae_showpoem(_poem, post_label="s_poems_angel")
+        call fae_showpoem(_poem, post_label="s_poems_angel") from _call_fae_showpoem_6
         return
     
     elif _poem == poem_leaf:
-        call fae_showpoem(_poem, post_label="s_poems_leaf")
+        call fae_showpoem(_poem, post_label="s_poems_leaf") from _call_fae_showpoem_7
         return
     
     elif _poem == poem_prose:
-        call fae_showpoem(_poem, post_label="s_poems_prose")
+        call fae_showpoem(_poem, post_label="s_poems_prose") from _call_fae_showpoem_8
         return
     
     elif _poem == poem_afterlight:
-        call fae_showpoem(_poem, post_label="s_poems_afterlight")
+        call fae_showpoem(_poem, post_label="s_poems_afterlight") from _call_fae_showpoem_9
         return
 
     return

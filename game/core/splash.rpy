@@ -297,6 +297,9 @@ label splashscreen:
 
         scene white
         with Dissolve(1.5)
+
+        if not persistent._fae_imported_ddlc:
+            call import_ddlc_persistent
         
         $ persistent.first_run = False
         
@@ -388,19 +391,7 @@ label autoload:
     # Pop the _splashscreen label which has _confirm_quit as False and other stuff
     $ renpy.pop_call()
 
-    #python:
-
-        #renpy.start_predict("sayori idle")
-    
-    #if persistent.fae_intro_status == fae_intro.FAEIntroStatus.complete:
-    #    jump fae_intro_checks
-    #else:
     jump ch30_autoload
-    
-    #else:
-        #$ renpy.quit()
-
-    #jump ch30_autoload
 
 
 
@@ -413,33 +404,6 @@ label before_main_menu:
 
 
     $ config.main_menu_music = audio.s1
-    python:
-        # Note: 'event_name': callback
-        callbacks = {
-            'ready': readyCallback,
-            'disconnected': disconnectedCallback,
-            'error': errorCallback,
-        }
-        discord_rpc.initialize('966384640489295964', callbacks=callbacks, log=False)
-        start = time.time()
-        print(start)
-        discord_rpc.update_connection()
-        discord_rpc.run_callbacks()
-        discord_rpc.update_presence(
-            **{
-                'details': 'Main Menu',
-                'start_timestamp': start,
-                'large_image_key': 'faelogo'
-            }
-        )
-        discord_rpc.update_connection()
-        discord_rpc.run_callbacks()
-       
-    
-    #$ config.main_menu_music = audio.t1
-
-    #if persistent.playername != "":
-    #    $ renpy.jump_out_of_context("start")
     
     #$ store._game_menu_screen = "preferences"
     return

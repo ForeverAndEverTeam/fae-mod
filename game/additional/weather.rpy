@@ -1,4 +1,3 @@
-
 # Dimming effects
 image dim light = "mod_assets/images/atmosphere/dim/dim_light.png"
 image dim medium = "mod_assets/images/atmosphere/dim/dim_medium.png"

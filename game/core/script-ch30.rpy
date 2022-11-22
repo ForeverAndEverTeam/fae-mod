@@ -1,7 +1,5 @@
 default persistent.first_run = True
 
-default persistent.s_name = "Sayori"
-
 init -890 python in fae_globals:
     import datetime
     import store
@@ -89,6 +87,7 @@ label spaceroom(scene_change=True, sayori_exp=None, dissolve_all=False, hide_say
                 if not dissolve_all:
                     renpy.with_statement(None)
     
+    window auto
     return
 
 label ch30_main:
@@ -261,10 +260,7 @@ label ch30_init:
 
 label ch30_loop():
 
-    
     call spaceroom(False, None) from _call_spaceroom
-
-    
 
     $ init_qabs()
 
@@ -337,11 +333,6 @@ label cnc(show_sayori=True, notify=True):
 
         if renpy.has_label(_chat):
 
-            #if (persistent.taskbar_alerts
-            #    and fae_time.present_sesh_length().seconds() > 60
-            #    and not fae_notifications.get_fae_window_active()):
-            #        play audio attention
-            #        $ fae_notifications.flash_taskbar()
             if notify:
 
                 if store.fae_notifs.can_show_notifs and persistent._fae_notifs_enabled:
@@ -382,6 +373,8 @@ label cnc(show_sayori=True, notify=True):
         LCC = datetime.datetime.now()
         Sayori.setInChat(False)
     
+    window auto
+
     show screen hidden1(True)
 
     jump ch30_loop

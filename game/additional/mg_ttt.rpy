@@ -145,7 +145,7 @@ screen mg_ttt_grid(): #3x3 grid with 184x184px tiles
 
 screen mg_ttt_scr():
     layer "master"
-    zorder 0
+    zorder 5
     
     python:
         from math import sqrt
@@ -210,7 +210,7 @@ label mg_ttt:
     return
 
 label mg_ttt_s_comment(id = 0): #Sayori's comment; 0/1 = Sayori's victory/defeat, 2 = draw, 3 = restart
-    if id == 0:
+    if id == 0: # If sayori wins
         $random_id = renpy.random.randint(0, 2)
         if random_id == 0:
             s 2q "Okay, I win this game."
@@ -221,7 +221,7 @@ label mg_ttt_s_comment(id = 0): #Sayori's comment; 0/1 = Sayori's victory/defeat
         else:
             s 2e "Don't worry!"
             s "Maybe you'll win next time."
-    elif id == 1:
+    elif id == 1: # Sayori's win
         $random_id = renpy.random.randint(0, 1)
         if random_id == 0:
             s 5b "Okay, you win!"
@@ -232,7 +232,7 @@ label mg_ttt_s_comment(id = 0): #Sayori's comment; 0/1 = Sayori's victory/defeat
             s "Next time I'll try harder."
     elif id == 2:
         $random_id = renpy.random.randint(0, 1)
-        if random_id == 0:
+        if random_id == 0:# Draw
             s 1k "Oh, the board is full."
             s "And no one got three in a row."
             s "Let's just try again."
@@ -242,7 +242,7 @@ label mg_ttt_s_comment(id = 0): #Sayori's comment; 0/1 = Sayori's victory/defeat
             s "Maybe there will be a winner in the next game."
     else:
         $random_id = renpy.random.randint(0, 1)
-        if random_id == 0:
+        if random_id == 0:# REstart
             s 4o "Are you giving up?"
             s 4c "Then we'll start again, but I'll get a point for this round."
         else:

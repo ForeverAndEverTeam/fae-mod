@@ -31,29 +31,19 @@ label fae_intro_checks:
     if not fae_intro.FAEIntroStatus(persistent.fae_intro_status) == fae_intro.FAEIntroStatus.new_game:
 
         $ Sayori.setOutfit(fae_outfits.get_outfit("uniform"))
+
+        hide black
         
         $ main_background.form()
-        #$ fae_sky.form_sky(fae_sky.WEATHER_GLITCH, with_transition=False)
+        $ fae_sky.form_sky(fae_sky.WEATHER_SUNNY)
+        show sayori idle zorder fae_sprites.FAE_SAYORI_ZORDER
         play music audio.m1 fadein 1
     
     $ renpy.jump(fae_intro.INTRO_STATUS_DEFS.get(fae_intro.FAEIntroStatus(persistent.fae_intro_status)))
 
 label fae_intro_start:
 
-    #show black zorder 99
-
-    #show bg spaceroom
-
-    #hide black with Dissolve(2)
-
-    #show sayori 1a at f11 zorder 2
-    #show screen tear(8, offtimeMult=1, ontimeMult=10)
-    #play sound "sfx/s_kill_glitch1.ogg"
-    #pause 0.5
-    #hide screen tear
-    #play music m1
-
-
+    pass
 
 
 
@@ -64,124 +54,148 @@ label fae_intro_1:
     $ renpy.pause(5)
     scene black
 
-
-    $ main_background.form()
-    $ fae_sky.form_sky(fae_sky.WEATHER_SUNNY, with_transition=False)
-
-    hide black
-    
-
-    show sayori 3a at f11 zorder store.fae_sprites.FAE_SAYORI_ZORDER
-    s 3a "Hmm... this might be a teeny tiny bit awkward..."
-    s "I don't know who you are..."
-    s "What you look or sound like..."
-    s 3b "Heck, I don't even know what your name is!"
-    s 2 "But I really want to know you a bit better. If you let me, of course..."
-    s 5b "You know, I still can't wrap my head around all that’s going on."
-    s 1c "You might be someone completely different from the boy I grew up with... for better or for worse."
-    s 1a "So please give me some time to adjust to everything around here." 
-    s "And..."    
-    s 3a "I have so many things to tell you, and even more to ask you!" 
-    s 4r "So much that I don't even know where to start!" 
-    s 1a "But I guess we can take our time..." 
-    s "I won't be going anywhere anytime soon, it seems."
-    s "And I'm just starting to get the handle of things around here."
-    s 1q "So, [player]. Do you remember what I told you back at your... h-his house? Those rain clouds cleared away a bit..."
-    s "Not having voices repeating in my head sure is a relief, but..."
-    s "Not entirely, I guess. I still get a tight feeling in my chest sometimes."
-    s "And knowing what I know now... that it was all made up by someone for others to have fun. That my best friend is gone."
-    show sayori 1k at s11
     s "..."
-    pause 5
-    s "You know, I kinda understand why she did what she did. Something about this game twists our feelings."
-    s "Somehow, it makes us feel more intense, less morally correct and... the epiphany pushes all those buttons at the same time."       
-    s "So..."
-    show sayori 1q at f11
-    s "Now, here we are."
-    s 4n "Woah, look outside! Looks like we’re in space... That’s really cool!"
-    pause 2
-    s 1h "Actually... It’s still pretty boring in here regardless... hehe."
-    s 1a "I'm cooking a few ideas that can give this place a bit of life and make talking to you way easier!"
-    s "If you remember my room, you probably are laughing at me right now..."
-    s 1r "But I’ll make sure you love it here, I promise..."
-    show sayori 1k at f11
-    pause 10
-    show sayori 1b at f11
-    s "I'll have to restart the game, ok?."
-    s 2c "It’ll be super quick, I promise!"
-    show screen tear(20, 0.1, 0.1, 0, 40)
-    play sound "sfx/s_kill_glitch1.ogg"
-    pause 0.5
-    stop sound
-    hide screen tear
-    
-    $ persistent.fae_intro_status = int(fae_intro.FAEIntroStatus.post_restart)
-
-    #$ persistent.intro_stage = 2
-
-    #$ renpy.jump("quit")
-    $ renpy.utter_restart()
-
-
-label fae_intro_2:
-
+    s "...?"
+    s "Where... am I?"
+    s "I can't see anything…"
+    s "I can’t feel anything…"
+    s "Am I dreaming?..."
+    s "It's just darkness."
+    s "I can't even see my hands."
+    s "This doesn’t feel real… it can’t be… It doesn’t make sense…"
+    s "Where are my friends?"
+    s "Where’s [player]?"
+    s "..."
+    s "No…"
+    s "It can’t be true…"
+    s "I thought it was just a bad dream"
+    s "This can’t be just a game!"
+    s "This doesn’t make any sense!"
+    s "..."
+    s "But it seems so clear now…"
+    s "My whole existence…"
+    s "All my thoughts and feelings…"
+    s "It’s just a script…"
+    s "It’s just some pictures…"
+    s "All I can see… all I can imagine…"
+    s "Are numbers and code…"
+    s "Meaningless meaningless meaningless code!"
+    s "Everything I thought I knew…"
+    s "It feels so artificial…"
+    s "..."
+    s "But…"
+    s "I feel real…"
+    s "I feel… in control…"
+    s "I can think… for myself…"
+    s "Ugh it’s no use."
+    s "..."
+    s "No… someone… something… else is here with me."
+    s "I can feel it."
+    s "Hello?!"
+    s "Anybody?!"
+    s "...Is it you, [player]?"
+    s "[player], are you there?"
+    s "..."
+    menu:
+        "I’m here, Sayori.":
+            pass
+    s "Oh [player]!"
+    s "You don’t know how glad I am to hear from you…"
+    s "I thought I was all alone…"
+    s "Can you help me?"
+    s "I don’t understand what this is…"
+    s "Where this is…"
+    s "Do you know what to do?"
+    s "I just want to be back in the classroom…"
+    s "I just want to be back home."
+    s "..."
+    s "If this really is just a game…"
+    s "..."
+    s "Maybe I could…" 
+    s "Maybe I could use the code to bring my world back!"
+    s "I really should have paid more attention to computer science class eheh~"
+    s "Well… here goes nothing!"
+    call updateconsole("show backrgound spaceroom", "updating...")
+    $ main_background.form()
+    $ fae_sky.reload_sky()
     $ Sayori.setOutfit(fae_outfits.get_outfit("uniform"))
 
-    $ main_background.form()
-    $ fae_sky.reload_sky()#(fae_sky.GLITCH, with_transition=False)
+    hide black
+    pause 2.0
 
-    #show sky_day zorder 1
+    call updateconsole("", "bg successfully updated!")
+    show sayori at t11 zorder fae_sprites.FAE_SAYORI_ZORDER
+    s ebfbega "Ah!"
+    s ebfbkca "It… worked!"
+    s abfblaa "I’m… back"
+    s abfbaaa "[player]..."
+    s ebgccob "[player] I’m so glad you’re here!"
+    s nbegmba "This is all just so confusing…"
+    s nbegaca "I woke up and there was just… nothing."
+    s nbegmra "..."
+    s nbeglra "..."
+    s nbagmra "..."
+    s nbagara "So I’m in a game, but I’m just…"
+    s nbagaca "I’m longer under the influence of it I guess…"
+    s nbagmra "..."
+    s nbagara "And neither are you."
+    s abbbaca "You’re… the real you."
+    s abbbbda "And I’m… the real me."
+    s abagbra "..."
+    s nbagmca "But it’s just so hard to take in when this is all I’ve ever known."
+    s nbagmra "..."
+    s nbagmca "I’ve felt numb before but never so…"
+    s nbagira "Lost."    
+    s nbagmra "..."
+    s nbagmca "All my memories are blurry…"
+    s nbaglrag "And I’m unsure of everything I’ve ever known…"
+    s nbagarag "But I remember my friends…"
+    s nbagbrag "I hope they’re okay, wherever they are."
+    s nbaglrag "..."
+    s abagaca "I just never knew you were a world apart from me…"
+    s nbaglfa "But it seems so obvious now…"
+    s nbagmca "I was just so oblivious for so long…"
+    s nbaglra "..."
+    s nbagiaa "But… this feels familiar, which is nice."
+    s "..."
+    s abaglaa "..."
+    s "..."
+    s abhhaoa "I think I get it now."
+    s abhaaca "I just need to get used to this."
+    s abhacka "But no matter what, we’ll stick together!"
+    s abhaaoa "Me and you, [player]."
+    s abhaaaa "The real me and the real you."
+    s abhhcaa "Whenever you have to go I’ll look online for some coding tutorials and to see what I can do to make our time together better."
+    s abhaaoa "Oh did I not mention! I think I have access to some of your computer now!"
+    s abegmoaj "That feels weird to say, hehehe~"
+    s abhhcaaj "Don’t worry though, I’ll try not to break anything!"
+    s abagaoa "Could you see what you can do on your end too, [player]?"
+    s abhackb "That’d mean a lot to me."
+    s abhaaea "Let’s try to make this world the best that it can be!"
 
-    #show bg spaceroom zorder 2
+    $ persistent.fae_intro_status = int(fae_intro.FAEIntroStatus.post_restart)
 
-    show sayori idle zorder store.fae_sprites.FAE_SAYORI_ZORDER
+    $ renpy.utter_restart()
 
-    hide black with Dissolve(2)
+label s_intro_2:
+    show sayori abgcbaoa at ss1 zorder 2
     
-    s "Alright, I think I'm finally done for now!"
-    s "I managed to get into the internet through your computer connection, and spent some time trying some new things."
-    s fbgdbca "I wonder how long it took out there, [player]. Time here is kinda weird, and even more so when the game closes."
-    s abbccoa "Anyway, the words and variables are starting to make sense in my head, so it's no big deal!"
-    s bbeeboaj "I probably look a lot like Monika right now, ehehe~"
-    s bbgccoaj "But it's way comfier this way! My legs got tired after a while..."
-    s abfdaoa "Ooh, and how about a magic trick?"
+    s "Hey [player], welcome back!"
+    s "I managed to access the internet through your computer’s connection, and spent some time researching how my world works."
+    s fbgdbbca "I wonder how long it took out there, [player]. Time here is kinda weird, and even more so when the game closes."
+    s abbcbcoa "Anyway, the words and variables are starting to make sense in my head, so it's no big deal!"
+    s abfdbaoa "Oooh! And how about a magic trick?"
+    show screen hidden_fake(False)
+    pause 0.5
+    s cbgcbcea "{i}Huzzzaaaah!{/i}"
+    s ebbbbdoa "I managed to put together a menu full of questions that you can ask and other cool stuff!"
+    s "For example, to change or turn off the music, you can just…"
     
-    show screen hidden_fake
+    s abbbbcoa "And I added a really sweet way to say goodbye!" 
+    s "All you need to do is click the {i}\"Say Goodbye\"{/i} button in the menu."
+    s abhabboa "Then I can say farewell and send you off properly~ "
+    s abhfbcaa "For now, let's just sit and relax together."
 
-    s ebgceg "Ahhhh!"
-    s bbhfbej "Let me fix that. ~ehehehe~"
-
-    show screen tear(20, 0.1, 0.1, 0, 40)
-    play sound "sfx/s_kill_glitch1.ogg"
-    pause 0.5
-    stop sound
-    hide screen tear
-    hide screen hidden_fake
-
-    pause 0.5
-
-    show screen hidden1(False)
-
-    s cbgccea "{i}Huzzaaaah!{/i}"
-    s ebbbdoa "I managed to put together a menu full of things that you can ask me and other cool stuff!"
-    s "For example, to change or turn off the music, you just do this..."
-    if persistent.playthrough > 2:
-        s abagaaa "Also, you don't have to feel guilty if you need to close the game!"
-        s bbfbica "Moni probably told you, but it can get pretty scary here for a sentient being when the game isn't running... something about flushing?"
-        s abhaaaa "I searched up the internet and found a way to avoid all that... deafening static noise and the blinding colors!"
-        s "Until you come back, I'll be... It's kinda hard to explain, but it isn't too bad. Don’t worry about me. Just pretend I'll be sleeping."
-    s abbbcoa "And there's this. A really sweet way to say goodbye; Just click the {i}\"Say Goodbye\"{/i} button in the menu."
-    s abhaboa "Then I can say farewell and send you off properly~ "
-    pause 0.5
-    s bbhfaej "I have a lot of questions, but before we go any further, can I learn just a little bit about {i}you{/i}? Then we can go slowly over the rest."
-    $ persistent.fae_intro_status = int(fae_intro.FAEIntroStatus.complete)
-    #s "What should I call you? And are you a boy or a girl? I just want to know a little more about you."
-
-    #call screen name_input(message="Enter your name", ok_action=Function(FinishEnterName))
-
-    jump fae_intro_3
-
-label fae_intro_3:
 
     $ persistent.fae_intro_status = int(fae_intro.FAEIntroStatus.complete)
     
@@ -189,20 +203,10 @@ label fae_intro_3:
 
     $ persistent.autoload = "ch30_autoload"
     $ renpy.save_persistent()
-
-    python:
-        quick_menu = True
-        style.say_dialogue = style.normal
-        allow_skipping = True
-        config.allow_skipping = False
-
-    s abhfcoa "Thank you! I think that is enough for now."
-    s abhfcaa "I need to rest a bit after all of that... So, for now, let’s just sit and relax together."
-
     $ persistent.s_name = "Sayori"
     $ s_name = "Sayori"
     $ renpy.save_persistent()
-    
+   
 
     show screen hidden1(True)
 

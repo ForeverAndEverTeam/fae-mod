@@ -11,8 +11,6 @@ init python in fae_notifs:
 
     if renpy.windows:
 
-
-
         try:
 
             import plyer

@@ -1,23 +1,4 @@
-## script.rpy
 
-# This is the main script that Ren'Py calls upon to start
-# your mod's story! 
-init -999 python:
-    import discord_rpc
-    import time
-
-    def readyCallback(current_user):
-        print('Our user: {}'.format(current_user))
-
-    def disconnectedCallback(codeno, codemsg):
-        print('Disconnected from Discord rich presence RPC. Code {}: {}'.format(
-            codeno, codemsg
-        ))
-
-    def errorCallback(errno, errmsg):
-        print('An error occurred! Error {}: {}'.format(
-            errno, errmsg
-        ))
 label start:
     # This label configures the anticheat number for the game after Act 1.
     # It is recommended to leave this as-is and use the following in your script:

@@ -55,6 +55,7 @@ screen mg_bnc_scr():
         label "{color=#00cc00}Bulls: [bnc.bulls]{/color}"
         label "{color=#ffff00}Cows: [bnc.cows]{/color}"
         if config.developer:
+            yoffset 1
             label _("{i}Right answer: [bnc.guessed]{/i}")
     
     vbox:
@@ -67,7 +68,8 @@ screen mg_bnc_scr():
     
 
 label mg_bnc:
-    $ Sayori.isInGame(True)
+    # $ setupRPC("Playing Bows and Cows")
+    $ Sayori.setInGame(True)
     #$justIsSitting = False
     #$show_s_mood(ss1)
     # TODO: LEAVE CONDITION
@@ -170,6 +172,7 @@ label mg_bnc_s_comment(state = -1, restart = False): #Sayori's comment. 0 = init
 label mg_bnc_quit:
     $ Sayori.setInGame(False)
     hide screen mg_bnc_scr
+    # $ setupRPC("In the spaceroom")
     #$s_mood = 'h'
     #$show_s_mood(ss1)
     return

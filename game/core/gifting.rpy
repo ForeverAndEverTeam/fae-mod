@@ -15,7 +15,7 @@ init -100 python:
         
         if renpy.exists("gifts/otter.gift"):
 
-            store.fae_utilities.removeFileDir("{0}/gifts/otter.gift")
+            store.fae_utilities.removeFileDir("{0}/gifts/otter.gift".format(renpy.config.basedir))
 
             renpy.call("fae_otter")
 

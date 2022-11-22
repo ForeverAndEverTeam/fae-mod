@@ -17,6 +17,8 @@ default persistent.height = None
 #Unit of measurement
 default persistent.metric = True
 
+define audio.ee = "bgm/Message.ogg"
+
 init -1 python in chats:
     import store
     CHAT_DEFS = dict()
@@ -249,10 +251,6 @@ label s_topics_guitar:
     #show sayori abaaaoa zorder 2
     s "I don't know if you noticed, but all the girls have their own instruments and musical influences in the game."
     s abgcaoa "Mine is the guitar."
-    if persistent.currentmusic > 0 and persistent.currentmusic < 6:
-        s "You can hear it now, right?"
-    else:
-        s "Assuming you aren't playing with the sound off, anyway."
     s "I think the guitar is supposed to show my character and club role better."
     s abhaaca "The guitar is interesting because it doesn't limit musicians in how they express their emotions."
     s abbbbaa "They can play cheerful, upbeat songs..."
@@ -543,7 +541,7 @@ label s_topics_dating:
     s abfcaaa "I know they're meant for kids, but hey, they can be fun for anyone!"
     s abbdaca "Some of them have deep messages and sad scenes, {w=0.5}{nw}"
     extend abfcaca "and the director knows only older teens or adults would be able to recognize them, while a kid won't."
-    if depr_known:
+    if persistent.depr_known:
         s abbcica "I've already seen a lot of harsh things in my short time here, you know. {w=0.5}{nw}"
         extend abfciaa "So my opinion may be different from most people."
     
@@ -2031,7 +2029,7 @@ label s_answer_cookies:
     show cookies zorder 5:
         anchor (0.5, 1.0)
         ypos 700
-        xpos 870
+        xpos 1180
     pause 0.5
     call hideconsole()
     s abbccoa "Gotcha!"
@@ -2153,9 +2151,9 @@ init 5 python:
             persistent._chat_db,
             label="s_answer_read",
             unlocked=True,
-            prompt="What do you think about the real world?",
+            prompt="Can I read a poem?",
             random=False,
-            category=["Life", "Sayori"]
+            category=["Life", "Poetry"]
         ),
         chat_group=CHAT_GROUP_NORMAL
     )
@@ -2210,18 +2208,18 @@ init 5 python:
         chat_group=CHAT_GROUP_NORMAL
     )
 
-label s_answer_game_opinion: #Opinion about an other club member
+label s_answer_opinion: #Opinion about an other club member
     s abaaaoa  "Who do you wanna talk about?{nw}"
     menu:
         s "Who do you wanna talk about?{fast}"
         "Natsuki":
-            jump s_answer_game_opinion_n
+            call s_answer_game_opinion_n
         "Monika":
-            jump s_answer_game_opinion_m
+            call s_answer_game_opinion_m
         "Yuri":
-            jump s_answer_game_opinion_y
+            call s_answer_game_opinion_y
         "The Protagonist":
-            jump s_answer_game_opinion_mc
+            call s_answer_game_opinion_mc
     return
 
 label s_answer_game_opinion_n:
@@ -2252,8 +2250,8 @@ label s_answer_game_opinion_y:
         s abbcaa "In fact, her first argument with Natsuki in the game was pretty much the limit of Yuri's capabilities to 'lash out' at someone else."
         s abaaaa "The {i}real{/i} Yuri I knew was a very sweet girl who had her own problems and own solutions, just like everyone else. I won't judge her for that."
     else:
-    s abaaaa "We all were glad to have her as a club member."
-    s "Even Natsuki, despite the two of them being so different from each other."
+        s abaaaa "We all were glad to have her as a club member."
+        s "Even Natsuki, despite the two of them being so different from each other."
     return
 
 label s_answer_game_opinion_m:
@@ -2261,8 +2259,8 @@ label s_answer_game_opinion_m:
     s "She did her work very well and I was glad to be her right-hand woman."
     s abaaaca "But she struggled to communicate well with other people, and couldn't control her feelings as time went on."
     if persistent.last_playthrough == 4:
-        s bbbblca "Look. {w=0.5}{nw}”
-        extend bbbbaca “I know what you're really asking me."
+        s bbbblca "Look. {w=0.5}{nw}"
+        extend bbbbaca "I know what you're really asking me."
         s bbbblca "Despite everything she put me and the others through..."
         s bbaaaca "I truly believe that Monika was our friend, and she just lost sight of what was really important."
         s bbaabca "I've been the President. I know what it does to you. And for her to be so completely alone the entire time, watching everyone she's ever known run on a script..."        
@@ -2309,7 +2307,7 @@ init 5 python:
         chat_group=CHAT_GROUP_NORMAL
     )
 
-label s_answer_game_lostFriends:
+label s_answer_lostFriends:
     s bbaabca "Yes, I do."
     s bbaaaca"They all deserve to come back."
     if persistent.last_playthrough != 0:
@@ -2322,4 +2320,110 @@ label s_answer_game_lostFriends:
     s abhfcaa "Or you could install 3 mods to 3 game copies where they can spend time with you in a way like you and me now."
     s "That’d mean so much to me, [player]."
     return
+
+
+init 5 python:
+
+    chatReg(
+        Chat(
+            persistent._chat_db,
+            label="s_event_music_intro",
+            unlocked=True,
+            prompt="music",
+            conditional="not persistent.fae_custom_music_unlocked",
+            random=True,
+            category=[""],
+            affection_range=(fae_affection.HAPPY, None)
+        ),
+        chat_group=CHAT_GROUP_NORMAL
+    )
+
+label s_event_music_intro:
+
+    s abfcaoa "Hey [player]! Guess what!"
+    s abfccaa "I did some coding and I found a way to let you play your own music here!"
+    s abegabaj "It might be a little buggy ehehehe~"
+    s abegmoaj "It was my first attempt after all…"
+    s abfccaa "But it seems to be working fine for me!"
+    s abagaoa "All you need to do is put a .mp3 file in the {i}music{/i} folder in the game directory, and click on the {i}music{/i} tab in the bottom-left!"
+    s abagcka "I'm basically giving you the aux cord to the rest of my existence, so no pressure! Ehehehe~"
+
+    return
+
+
+
+init 5 python:
+
+    chatReg(
+        Chat(
+            persistent._chat_db,
+            label="s_stopic_bulls_and_cows",
+            unlocked=True,
+            prompt="Bulls and Cows",
+            conditional="not persistent.fae_bnc_unlocked",
+            random=True,
+            category=["Games"],
+            affection_range=(fae_affection.HAPPY, None)
+        ),
+        chat_group=CHAT_GROUP_NORMAL
+    )
+
+label s_stopic_bulls_and_cows:
+    s abfcaoa "Hey player! I have something to show you!"
+    s abagaaa "So, remember how I coded the music player a little while ago?"
+    s abfccaa "I tried to code something a little more complex this time, so I made a game!"
+    s abagaaa "It’s called {i}Bows and Cows{/i}, my version of Bulls and Cows, ehehehe~"
+    s abagaoa "Here I’ll explain the rules!"
+    s abhhcaa "I have to think of a number, and you have to guess the number."
+    s abhhaoa "How do you do that you ask?"
+    s abfccea "Simple!"
+    s abagaaa "If a digit of your guess is in the correct position, it’s a bow."
+    s abagaoa "But if it’s in a different position, it’s a cow."
+    s abhhcaa "With a couple attempts and some clever thinking you should be able to figure out my number!"
+    s abfccea "You can start a round in the {i}play{/i} menu, good luck [player]!"
+    
+    $ bnc = minigame(_("Bows & Cows"), 'mg_bnc', bnc_prep)
+    $ mg_list = []
+    $ mg_list.append(bnc)
+
+    return
+
+init 5 python:
+
+    chatReg(
+        Chat(
+            persistent._chat_db,
+            label="s_topic_reversi",
+            unlocked=True,
+            prompt="Revesi",
+            conditional="not persistent.fae_reversi_unlocked",
+            random=True,
+            category=["Games"],
+            affection_range=(fae_affection.HAPPY, None)
+        ),
+        chat_group=CHAT_GROUP_NORMAL
+    )
+
+label s_topic_reversi:
+    s abfcaoa "Hey player! I’ve been working on something again!"
+    s abfccaa "It’s by far my most challenging project yet!"
+    s abfcaoa "With many hours of crayon doodling and coding, I present to you…"
+    s abbccea "{i}Reversi!{/i}"
+    s abagaaa "It’s a neat little board game where the objective is to get more of your counters on the board than your opponent."
+    s abagcaa "And you do that by placing a counter adjacent to one of your opponent’s counters and flipping the counters between in your favour."
+    s abhhdaa "And [player], I’ve been practising~"
+    s abfccea "You can start a round in the {i}play{/i} menu, good luck [player]!"
+    
+    $ reversi = minigame(_("Reversi"), 'mg_reversi', reversi_prep)
+    $ mg_list = []
+    $ mg_list.append(reversi)
+
+
+
+    return
+
+
+
+
+ 
 

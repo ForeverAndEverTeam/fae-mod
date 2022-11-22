@@ -132,18 +132,6 @@ init -10 python:
             return _date == fae_player_bday_curr(_date)
         return _date == fae_player_bday_curr()
 
-
-    def fae_resetSpecialDays():
-
-        persistent.fae_player_bday_mode = False
-        persistent.fae_o31_mode = False
-        persistent.fae_d25_mode = False
-        persistent.fae_nye_mode = False
-        persistent.fae_nyd_mode = False
-        persistent.fae_f14_mode = False
-
-        return
-
 init -11 python:
     
     def fae_player_bday_curr(_date=None):
@@ -416,6 +404,12 @@ init -999 python in fae_ev_data_ver:
 
         # otherwise check item
         return isinstance(val, _type)
+
+    def _verify_str(val, allow_none=True):
+        if val is None:
+            return allow_none
+
+        return isinstance(val, str) or isinstance(val, unicode)
 
     def _verify_dt(val, allow_none=True):
         if (

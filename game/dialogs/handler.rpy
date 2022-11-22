@@ -12,7 +12,7 @@ init python in chat_handler:
         store.CHAT_GROUP_NORMAL: store.chats.CHAT_DEFS,
         store.CHAT_GROUP_EVENT: store.fae_events.EVENT_DEFS,
         store.CHAT_GROUP_REGRET: store.fae_regrets.REGRET_DEFS,
-        store.CHAT_GROUP_FLATTER: store.fae_flatter.FLATTERY_DEFS,
+        store.CHAT_GROUP_FLATTER: store.fae_flatter.COMPLIMENT_DEFS,
         store.CHAT_GROUP_MOOD: store.fae_moods.MOOD_DEFS,
         #store.CHAT_GROUP_DEV: store.fae_dev_tools.DEV_DEFS
     }
@@ -264,10 +264,6 @@ init -3 python:
             return self.extra_props[prop_key] is prop_val
 
         def derandom(self):
-            """
-            Makes a topic unable to be brought up randomly.
-            Makes it available through talk menu
-            """
 
             self.random = False
 

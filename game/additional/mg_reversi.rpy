@@ -319,7 +319,7 @@ image reversi_selectable:
     zoom 0.75
     
 image reversi_cursor:
-    im.MatrixColor("mod_assets/images/minigames/checkers_selected.png",
+    Matrix("mod_assets/images/minigames/checkers_selected.png",
     (0, 0, 0, 0, 0,
     0, 0, 0, 0, 1,
     0, 1, 0, 0, 0,
@@ -430,7 +430,7 @@ label mg_reversi_s_comment(id = 0): #Sayori's comment; -1/1 = Sayori's victory/d
     pause 1.5
     hide screen mg_reversi_scr
     
-    if id == -1:
+    if id == -1: # Sayori wins
         $random_id = renpy.random.randint(0, 2)
         if random_id == 0:
             s ebbccea "Yay! I won this game!"
@@ -443,7 +443,7 @@ label mg_reversi_s_comment(id = 0): #Sayori's comment; -1/1 = Sayori's victory/d
             s ebgccaa "Don't worry!"
             s "Maybe you'll win next time."
             s abagiia "You'll just have to watch out for my ultra smart moves~."
-    elif id == 1:
+    elif id == 1: # Player wins
         $random_id = renpy.random.randint(0, 2)
         if random_id == 0:
             s abagaha "Okay, you win!"
@@ -454,7 +454,7 @@ label mg_reversi_s_comment(id = 0): #Sayori's comment; -1/1 = Sayori's victory/d
         else:
             s abagkgaj "Wait, you took more pieces than me!"
             s bbagciaj "I should probably be more attentive next time."
-    elif id == 2:
+    elif id == 2: # Draw
         $random_id = renpy.random.randint(0, 1)
         if random_id == 0:
             s eahcaoa "Hey, we split the board in half!"
@@ -463,7 +463,7 @@ label mg_reversi_s_comment(id = 0): #Sayori's comment; -1/1 = Sayori's victory/d
         else:
             s ebbcaoa  "Hey, we have the same number of pieces!"
             s ebgccqa "We really seem to have {i}soooooooooo{/i} much in common, ehehe~"
-    elif id == -2:
+    elif id == -2: # Restart
         $random_id = renpy.random.randint(0, 1)
         if random_id == 0:
             s ebhfada "Are you giving up?"

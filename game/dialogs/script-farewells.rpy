@@ -43,12 +43,13 @@ init -1 python in fae_farewells:
 
         return [
             ("I'm going to sleep.", "farewell_sleep"),
-            ("I'm going to school.", "farewell_school"),
-            ("I'm going to play a game", "farewell_game"),
-            ("I'm going to eat", "farewell_eat"),
-            ("I'm going to work out", "farewell_exercise"),
-            ("I'm going to work", "farewell_work"),
-            ("I'm going to {b}die{/b}", "farewell_die")
+            ("I'm going to school.", "s_farewell_school"),
+            ("I'm going to play a game", "s_farewell_game"),
+            ("I'm going to eat", "s_farewell_eat"),
+            ("I'm going to work out", "s_farewell_work_out"),
+            ("I'm going to work", "s_farewell_work"),
+            ("I'm going to do chores", "s_farewell_chores"),
+            ("I'm going to restart", "s_farewell_restart")
         ]
     
     def farewell_pick():
@@ -66,6 +67,7 @@ init -1 python in fae_farewells:
         )
 
         return random.choice(farewell_pool).label
+
 
 
 label farewell_init:
@@ -97,8 +99,6 @@ label farewell_options:
         show sayori idle at t11 zorder fae_sprites.FAE_SAYORI_ZORDER
         $ ats(_return)
         jump cnc
-    
-    jump ch30_loop
 
 label first_leave:
 
@@ -111,7 +111,8 @@ label s_farewell_1: #The actual first farewell of this mod
     
     s abhfbaoa "Oh, are you heading out, [player]?" 
     s abhfbcoa "I'll see you later, then! Be safe out there!"
-    return "quit"
+
+    return { "quit": None }
 
 label s_farewell_2:
     s "Goodbye, [player]!"
@@ -157,38 +158,106 @@ label s_farewell_7:
     s abfdbcqa "But as long as you know that I would, I’m happy, ehehe~"
     return "quit"
 
-REASON-BASED FAREWELLS
+
+init 5 python:
+    chatReg(
+        Chat(
+            persistent._farewell_db,
+            label="s_farewell_school",
+            unlocked=True,
+            affection_range=(fae_affection.NORMAL, None)
+        ),
+        chat_group=CHAT_GROUP_FAREWELL
+    )
 
 label s_farewell_school:
     s abhfaoa "Oh, time for school, [player]?"
-    s abfccaa "I hope you have a good day!"
+    s abfccaa  "I hope everything goes smoothly for you today!"
     s abfcaoa "See you later!"
-    return "quit"
+    return { "quit": None }
 
-label s_farewell_school:
+init 5 python:
+    chatReg(
+        Chat(
+            persistent._farewell_db,
+            label="s_farewell_work",
+            unlocked=True,
+            affection_range=(fae_affection.NORMAL, None)
+        ),
+        chat_group=CHAT_GROUP_FAREWELL
+    )
+
+label s_farewell_work:
     s abhfaoa "Oh, time for work, [player]?"
     s abfccaa  "I hope everything goes smoothly for you today!"
     s abfcaoa "See you later!"
-    return "quit"
+    return { "quit": None }
+
+init 5 python:
+    chatReg(
+        Chat(
+            persistent._farewell_db,
+            label="s_farewell_chores",
+            unlocked=True,
+            affection_range=(fae_affection.NORMAL, None)
+        ),
+        chat_group=CHAT_GROUP_FAREWELL
+    )
 
 
 label s_farewell_chores:
     s abhfaoa "Got some housework to take care of, [player]?"
     s abfccaa  "Take your time, I hope it all goes well!" 
     s abfcaoa "I’ll See you soon!"
-    return "quit"
+    return { "quit": None }
+
+init 5 python:
+    chatReg(
+        Chat(
+            persistent._farewell_db,
+            label="s_farewell_eat",
+            unlocked=True,
+            affection_range=(fae_affection.NORMAL, None)
+        ),
+        chat_group=CHAT_GROUP_FAREWELL
+    )
+
 
 label s_farewell_eat:
     s abhfaoa  "Going to eat, [player]?" 
     s abfccma "I was getting pretty hungry myself, I think I’ll have some cookies!" 
     s abfcaoa "Enjoy your food! Hehehe~" 
-    return "quit" 
+    return { "quit": None }
+
+init 5 python:
+    chatReg(
+        Chat(
+            persistent._farewell_db,
+            label="s_farewell_work_out",
+            unlocked=True,
+            affection_range=(fae_affection.NORMAL, None)
+        ),
+        chat_group=CHAT_GROUP_FAREWELL
+    )
+
 
 label s_farewell_work_out:
     s abhfaoa "Ooooh! Wanna work out a bit [player]?"
     s abfccaa "I’m so glad you’re taking care of yourself!" 
     s abfcaoa "I hope you have fun! Bye-bye!" 
-    return "quit"
+    return { "quit": None }
+
+init 5 python:
+    chatReg(
+        Chat(
+            persistent._farewell_db,
+            label="s_farewell_sleep",
+            unlocked=True,
+            affection_range=(fae_affection.NORMAL, None)
+        ),
+        chat_group=CHAT_GROUP_FAREWELL
+    )
+
 
 label s_farewell_sleep:
     s abhfaoa  "Heading to bed, [player]?"
@@ -202,19 +271,53 @@ label s_farewell_sleep:
             "Another time":
                 s bbhfbaa "Alright then…"
     s abfcaaa "Sweet dreams, [player]!"
-    return "quit"
+    return { "quit": None }
+
+init 5 python:
+    chatReg(
+        Chat(
+            persistent._farewell_db,
+            label="s_farewell_study",
+            unlocked=True,
+            affection_range=(fae_affection.NORMAL, None)
+        ),
+        chat_group=CHAT_GROUP_FAREWELL
+    )
 
 label s_farewell_study:
     s abhfaoa "Got some studying to do, [player]?"
     s abfccaa "Make sure to take plenty of breaks in between!"
     s abfcaoa "You’ve got this, I believe in you!"
-    return "quit"
+    return { "quit": None }
+
+init 5 python:
+    chatReg(
+        Chat(
+            persistent._farewell_db,
+            label="s_farewell_game",
+            unlocked=True,
+            affection_range=(fae_affection.NORMAL, None)
+        ),
+        chat_group=CHAT_GROUP_FAREWELL
+    )
 
 label s_farewell_game:
     s abhfaoa "Alright, [player]!"
     s abfccaa "I hope you have lots of fun!"
     s abfcaoa "I’ll be cheering you on from here!"
-    return "quit"
+    return { "quit": None }
+
+init 5 python:
+    chatReg(
+        Chat(
+            persistent._farewell_db,
+            label="s_farewell_restart",
+            unlocked=True,
+            affection_range=(fae_affection.NORMAL, None)
+        ),
+        chat_group=CHAT_GROUP_FAREWELL
+    )
+
 
 label s_farewell_restart:
     s abhfaoa  "Oh, you want to restart the game?"
@@ -225,4 +328,4 @@ label s_farewell_restart:
 
         s abfccaa " Alright, [player]."
         s abfcaoa " I’ll be waiting!"
-    return "quit"
+    return { "quit": None }

@@ -1,7 +1,7 @@
 
 
 screen hidden1(active=False): 
-    #(active=True):
+
     style_prefix "tc"
     imagemap:
         auto "mod_assets/images/gui_prefs_%s.png"
@@ -10,15 +10,12 @@ screen hidden1(active=False):
     zorder 50
     vbox:
         xpos 0.090
-    #        xalign 0.05
         yanchor 1.0
         ypos 715    
-    #        yalign 0.95
 
 
         textbutton _("Talk") action [ SensitiveIf(active==True), Function(dlg)]
 
-        #textbutton _("Music") action [ SensitiveIf(active==True), Function(select_music)]
 
         textbutton _("Music") action [ SensitiveIf(active==True), Jump("music_menu")]
 
@@ -32,10 +29,8 @@ screen hidden_fake(active=False):
     zorder 50
     vbox:
         xpos 0.090
-    #        xalign 0.05
         yanchor 1.0
         ypos 715
-    #        yalign 0.95
 
         textbutton _("VGFsaw==") action [ SensitiveIf(active==True), Function(dlg)]
 
@@ -83,12 +78,7 @@ label tell:
     elif schoice == "back":
         jump talk_menu_wip
     
-    #else:
-    #    $ sret = None
-    
-    #if sret is False:
-    #    show sayori idle at t11
-    #    jump ch30_loop
+
     
     return
 
@@ -131,8 +121,6 @@ label talk_pinit(irc=False):
 
     $ _return = None
 
-    #show screen hidden1(True)
-
     jump ch30_loop
 
 
@@ -174,10 +162,6 @@ screen neat_menu1(items):
 
 
 screen neat_menu(menu_parts, cls, ols, cat_length):
-
-    #tag menu
-
-    #default page = 0
 
     style_prefix "t_m"
 
@@ -229,7 +213,6 @@ screen neat_menu(menu_parts, cls, ols, cat_length):
 
     if menu_parts.get(sel_cat):
         
-        #$ renpy.hide_screen(menu, None)
 
         fixed:
             area ols
@@ -252,7 +235,6 @@ screen neat_menu(menu_parts, cls, ols, cat_length):
                         textbutton _("Nevermind."):
                             action [
                                 Return(-1),
-                                #Jump("talk_menu_wip"),
                                 Function(prior_adjust.change, 0),
                                 SetVariable("sel_cat", None)
                             ]
@@ -271,17 +253,6 @@ screen neat_menu(menu_parts, cls, ols, cat_length):
                                 activate_sound gui.activate_sound
                             
                             null height 5
-                        #hbox:
-                            #spacing 324
-                            #if page > 0:
-                            #    textbutton ("<") xpadding 0 xsize 48 keysym 'K_LEFT' action SetScreenVariable("page", page-1) #Previous Page
-                            #else:
-                            #    null width 48
-                            #textbutton (">") xpadding 0 xsize 48 keysym 'K_RIGHT' action SetScreenVariable("page", page+1)
-                            #else:
-                                #null width 48
-
-                            #null height 5
 
 
 
@@ -290,15 +261,11 @@ screen neat_menu(menu_parts, cls, ols, cat_length):
 ################
 screen neat_menu_scroll(items, last_item=None):
     
-    #$ cls=(50, 70, 250, 572)
+
 
     style_prefix "choice"
     fixed:
-        #anchor (0, 0)
-        #pos (cls[0], cls[1])
-        #xsize cls[2]
-        #ysize cls[3]
-        #xcenter 260
+
         area (70, 40, 560, 440)
         vbox:
             ypos 0
@@ -439,10 +406,7 @@ screen fae_gen_scrollable_menu(items, display_area, scroll_align, *args):
             value YScrollValue("viewport")
             xalign scroll_align
 
-#define last_adjust = ui.adjustment()
-#define curr_adjust = ui.adjustment()
 
-#screen neat_menu_wip(menu_parts, cls, ols, cat_length)
 
 python early:
     import io

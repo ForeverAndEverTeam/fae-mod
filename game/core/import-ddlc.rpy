@@ -96,12 +96,7 @@ label import_ddlc_persistent:
         
         else:
 
-            store.fae_versions.init()
-            ddlc_persistent = updateTopicIDs("v030", ddlc_persistent)
-            ddlc_persistent = updateTopicIDs("v031", ddlc_persistent)
-            ddlc_persistent = updateTopicIDs("v032", ddlc_persistent)
-            ddlc_persistent = updateTopicIDs("v033", ddlc_persistent)
-            fae_versions.clear()
+            pass
     
     if ddlc_persistent is None:
         menu:

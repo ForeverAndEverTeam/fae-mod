@@ -130,3 +130,4 @@ label birthdate_set:
     $ persistent._fae_player_confirmed_bday = True
     return
 
+

@@ -613,7 +613,19 @@ image sayori glitch:
     "sayori/glitch2.png"
     pause 0.01666
     repeat
-    
+
+image s_sticker down = "gui/poemgame/s_sticker_2.png"
+image n_sticker down = "gui/poemgame/n_sticker_2.png"
+image y_sticker down = "gui/poemgame/y_sticker_2.png"
+image m_sticker down = "gui/poemgame/m_sticker_2.png"
+
+image s_sticker = "gui/poemgame/s_sticker_1.png"
+image n_sticker = "gui/poemgame/n_sticker_1.png"
+image y_sticker = "gui/poemgame/y_sticker_1.png"
+image m_sticker = "gui/poemgame/m_sticker_1.png"
+
+
+image cookies = "mod_assets/images/food/cookies.png"
 
 ## Character Variables
 # This is where the characters are declared in the mod.
@@ -722,23 +734,23 @@ default chapter = 0
 default currentpos = 0
 default faint_effect = None
 
-
+python:
+    if ((persistent.last_playthrough > 0) or persistent.clear[8]):
+        persistent.depr_known = True
+    else:
+        persistent.depr_known = False
 
 
 # Default Name Variables
 # To define a default name make a character name variable like in this example:
 #   default e_name = "Eileen"
 
-default s_name = "Sayori"
+default s_name = persistent._fae_sayori_nickname
 default m_name = "Monika"
 default n_name = "Natsuki"
 default y_name = "Yuri"
 
-#if persistent.sayo_nickname_given:
-#    s_name = persistent.sayo_nickname_given
-
-#else:
-#    s_name = "Sayori"
+default persistent._fae_sayori_nickname = "Sayori"
 
 
 # Poem Variables
@@ -805,6 +817,22 @@ default sayori_confess = True
 
 # This variable tracks whether we read Natsuki's 3rd poem in Act 2.
 default natsuki_23 = None
+
+
+init python:
+
+    PATH = renpy.config.basedir
+
+    def makeFile(filename, filecontents):
+
+        f = open(PATH)
+
+        with open(filename+'.txt', 'w') as f:
+            f.write(filecontents)
+        
+        f.close()
+
+
 
 init -1 python:
 

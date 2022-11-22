@@ -94,6 +94,7 @@ default preferences.sfx_volume = 0.75
 #   Linux: $HOME/.renpy/
 define config.save_directory = "Forever&Ever"
 
+
 # This controls the window logo of your mod.
 define config.window_icon = "gui/window_icon.png"
 
@@ -181,6 +182,29 @@ init python:
     ## subdirectories.
     ##  "**.psd" matches psd files anywhere in the project.
 
+    build.classify('**.bak', None)
+    build.classify('**/thumbs.db', None)
+    build.classify('**.rpy', None)
+    build.classify('**~', None)
+    build.classify('**/.**', None)
+    build.classify('**/#**', None)    
+    build.classify('**.psd', None)
+    build.classify('**.sublime-project', None)
+    build.classify('**.sublime-workspace', None)
+    build.classify('/music/*.*', None)
+    build.classify('script-regex.txt', None)
+    build.classify('/game/10', None)
+    build.classify('/game/cache/*.*', None)
+    build.classify('**.rpa', None)
+    build.classify("game/dev/**", None)
+    build.classify('gifts/*', None)
+    build.classify('game/submods/*', None)
+    build.classify("log/**", None)
+    build.classify("*.log", None)
+    build.classify("errors.txt", None)
+    build.classify("log.txt", None)
+    build.classify("game/bgm/**", None)
+
     build.include_update = True
 
     build.classify("game/mod_assets/**", "all")
@@ -189,7 +213,6 @@ init python:
     build.classify("game/python-packages/**", "all")
     build.classify('README.html', "all")
     build.classify("game/RPASongMetadata.json", "all")
-
     build.classify("renpy/**", "all")
     build.classify("lib/**", "all")
 
@@ -223,25 +246,9 @@ init python:
     # to build your mod on Android like in this example.
     #   Example: build.classify("game/**.pdf", "scripts all")
 
-    build.classify('**.bak', None)
-    build.classify('**/thumbs.db', None)
-    build.classify('**.rpy', None)
-    build.classify('**~', None)
-    build.classify('**/.**', None)
-    build.classify('**/#**', None)    
-    build.classify('**.psd', None)
-    build.classify('**.sublime-project', None)
-    build.classify('**.sublime-workspace', None)
-    build.classify('/music/*.*', None)
-    build.classify('script-regex.txt', None)
-    build.classify('/game/10', None)
-    build.classify('/game/cache/*.*', None)
-    build.classify('**.rpa', None)
-    build.classify('game/dev/**', None)
-    build.classify('game/saves/**', None)
-    build.classify('game/cache/**', None)
-    build.classify('gifts/*', None)
-    build.classify('game/submods/*', None)
+    #build.classify("game/**", None)
+
+    
 
     #build.classify('README.linux', 'linux')
    

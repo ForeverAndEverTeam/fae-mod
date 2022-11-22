@@ -627,7 +627,8 @@ init 5 python:
     )
 
 label fae_event_sayori_desk_hide:
-    show spe2 at s11
+    hide black
+    show spe2 at s11 zorder fae_sprites.FAE_SAYORI_ZORDER
     $ style.say_dialogue = style.whisper
     s "Hehehe [player] will never see this coming, Mr. Cow!"
     s "Oh! I think they're here! Shhh~ get down!" 
@@ -658,6 +659,7 @@ label fae_event_door_open:
         "...":
             jump event_door_open
         "Gently open the door":
+            hide black
             $ main_background.form()
             $ fae_sky.reload_sky()
             s bbegmoajj "Whoops! Sorry about that!"

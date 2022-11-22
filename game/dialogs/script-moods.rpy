@@ -197,18 +197,16 @@ label s_mood_tired: #Tired player
     s abhfaca "Oh you’re feeling tired, [player]? I think you should rest for a little while, okay?"
     s abbbaaa "Perhaps you could take a nap or listen to your favorite music, that helps me whenever I feel burnt out."
     s bbgciaa "Don't worry about me, I completely understand if you need to spend some time away from the computer."
-        s abgccaa "See you soon, [player]!"
-    else:
-        s abgccaa "Rest well, [player]!"
+    s abgccaa "See you soon, [player]!"
+    s abgccaa "Rest well, [player]!"
     jump confirm_quit
     return 
 
 label s_mood_sleepy: #Sleepy player 
     s abhfaaa "Alright [player], you should head to bed soon so you feel well rested tomorrow." 
     s abgccma "And when you wake up, have a big hearty breakfast before you start the day! It'll make you feel much better."
-        s abhfcoa "Good night, [player]!"
-    else:
-        s abhfcoa "Sweet dreams, [player]!"
+    s abhfcoa "Good night, [player]!"
+    s abhfcoa "Sweet dreams, [player]!"
     jump confirm_quit
     return 
 
@@ -222,8 +220,6 @@ label s_mood_lonely: #Lonely player
     s abbcaaa "If you don't like going out much, you could find people on the internet to chat with too!"
     s abbccaa "I'm sure they can help you just as much as I can!"
     return
-
-Here are the ones not implemented yet
 
 label s_mood_sick: #Sick player
     s bbgcjca "Oh no… I'm so sorry that you feel sick [player]..." 
