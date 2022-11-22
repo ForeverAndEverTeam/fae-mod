@@ -51,6 +51,8 @@ Sayori
 
 [Otter](https://github.com/my-otter-self)
 
+[Nathan](https://github.com/TRIDENT1313)
+
 Sobb
 
 ## SPECIAL THANKS
