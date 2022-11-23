@@ -128,7 +128,7 @@ label s_farewell_3:
 label s_farewell_4:
     s "Bye-bye!"
     s "I'll be wishing you health and happiness!"
-    s abhebaka "Be safe out there, okay, [player]? Ehehe~"
+    s abhebaka "Be safe out there, okay, [player]? Ehehehe~"
     return "quit"
 
 label s_farewell_5:
@@ -155,7 +155,7 @@ label s_farewell_6:
 label s_farewell_7:
     s "See you later, [player]!"
     s abfbbaha "I wish I could give you a little farewell hug..."
-    s abfdbcqa "But as long as you know that I would, I’m happy, ehehe~"
+    s abfdbcqa "But as long as you know that I would, I’m happy, ehehehe~"
     return "quit"
 
 
@@ -226,7 +226,7 @@ init 5 python:
 label s_farewell_eat:
     s abhfaoa "Going to eat, [player]?" 
     s abfccma "I was getting pretty hungry myself, I think I’ll have some cookies!" 
-    s abfcaoa "Enjoy your food! Hehehe~" 
+    s abfcaoa "Enjoy your food! Ehehehe~" 
     return { "quit": None }
 
 init 5 python:
