@@ -58,7 +58,7 @@ python early in fae_data:
         if not match1 or not match2:
             raise ValueError("Invalid version string")
 
-        ver1 = verStrToVerList(match1.gropu("ver"))
+        ver1 = verStrToVerList(match1.group("ver"))
         ver2 = verStrToVerList(match2.group("ver"))
 
         if len(ver1) > len(ver2):
@@ -110,7 +110,7 @@ init python in fae_data:
     import store.fae_utilities as fae_utilities
 
 
-    @transfer(["0.0.0", "0.4.0.1"], "0.1.0", runtime=MigrationRuntimes.INIT)
+    @transfer(["0.4.0.1"], "0.1.0", runtime=MigrationRuntimes.INIT)
     def to_0_1_0():
 
         fae_utilities.log("Begin transfer to 0.1.0")
