@@ -17,7 +17,7 @@ default persistent.height = None
 #Unit of measurement
 default persistent.metric = True
 
-define audio.ee = "bgm/Message.ogg"
+
 
 init -1 python in chats:
     import store
@@ -2421,6 +2421,7 @@ label s_topic_reversi:
 
 
     return
+
 
 
 
