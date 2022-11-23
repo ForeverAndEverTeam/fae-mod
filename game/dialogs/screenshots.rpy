@@ -27,7 +27,7 @@ init -1 python in fae_screenshots:
     
     reactions = [
         "D-did you just take a picture of me?"
-        "Uwaaaa I wasn't ready for a picture."
+        "Uwaaaa, I wasn't ready for a picture."
         "It's rude to take photos of people without asking, [player]!"
         "Please ask me next time, 'kay?"
     ]

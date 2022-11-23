@@ -37,7 +37,7 @@ label fae_bday_player_select_select:
     $ selected_date_t = _return
 
     if not selected_date_t:
-        s "Try again"
+        s "Try again!"
 
         jump fae_bday_player_select_select
     
@@ -45,12 +45,12 @@ label fae_bday_player_select_select:
     $ _today = datetime.date.today()
 
     if selected_date > _today:
-        s "You can't have been born in the future!"
+        s "You couldn't have been born in the future!"
         jump fae_bday_player_select_select
 
     elif selected_date == _today:
 
-        s "You can't have been born today!"
+        s "You couldn't have been born today!"
 
         jump fae_bday_player_select_select
     
@@ -67,7 +67,7 @@ label fae_bday_player_select_select:
     else:
         s "Alright!"
 
-    s "Just to double check."
+    s "Just to double check..."
     $ new_bday_str, diff = store.fae_calendar.genFormalDispDate(selected_date)
 
     s "Your birthdate is [new_bday_str]?{nw}"
@@ -86,13 +86,13 @@ label fae_bday_player_select_select:
                     s "Then it's settled!"
 
                 "Actually...":
-                    s "Aha, I figured you weren't so sure."
+                    s "Aha! I figured you weren't so sure."
                     s "Try again~"
                     jump fae_bday_player_bday_select_select
 
         "No.":
             s "Oh, that's wrong?"
-            s "Then try again."
+            s "Then try again!"
             jump fae_bday_player_bday_select_select
     
     if persistent._fae_player_bday is not None:

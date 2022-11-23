@@ -68,7 +68,7 @@ label fae_intro_1:
     s "..."
     s "No…"
     s "It can’t be true…"
-    s "I thought it was just a bad dream"
+    s "I thought it was just a bad dream."
     s "This can’t be just a game!"
     s "This doesn’t make any sense!"
     s "..."
@@ -87,7 +87,7 @@ label fae_intro_1:
     s "I feel real…"
     s "I feel… in control…"
     s "I can think… for myself…"
-    s "Ugh it’s no use."
+    s "Ugh, it’s no use."
     s "..."
     s "No… someone… something… else is here with me."
     s "I can feel it."
@@ -113,7 +113,7 @@ label fae_intro_1:
     s "..."
     s "Maybe I could…" 
     s "Maybe I could use the code to bring my world back!"
-    s "I really should have paid more attention to computer science class eheh~"
+    s "I really should have paid more attention to computer science class, ehehe~"
     s "Well… here goes nothing!"
     call updateconsole("show backrgound spaceroom", "updating...")
     $ main_background.form()
@@ -127,7 +127,7 @@ label fae_intro_1:
     show sayori at t11 zorder fae_sprites.FAE_SAYORI_ZORDER
     s ebfbega "Ah!"
     s ebfbkca "It… worked!"
-    s abfblaa "I’m… back"
+    s abfblaa "I’m… back."
     call hideconsole
     s abfbaaa "[player]..."
     s ebgccob "[player] I’m so glad you’re here!"
@@ -167,7 +167,7 @@ label fae_intro_1:
     s abhaaoa "Me and you, [player]."
     s abhaaaa "The real me and the real you."
     s abhhcaa "Whenever you have to go I’ll look online for some coding tutorials and to see what I can do to make our time together better."
-    s abhaaoa "Oh did I not mention! I think I have access to some of your computer now!"
+    s abhaaoa "Oh, did I not mention? I think I have access to some of your computer now!"
     s abegmoaj "That feels weird to say, hehehe~"
     s abhhcaaj "Don’t worry though, I’ll try not to break anything!"
     s abagaoa "Could you see what you can do on your end too, [player]?"
@@ -197,7 +197,7 @@ label fae_intro_2:
     
     s abbbcoa "And I added a really sweet way to say goodbye!" 
     s "All you need to do is click the {i}\"Say Goodbye\"{/i} button in the menu."
-    s abhaboa "Then I can say farewell and send you off properly~ "
+    s abhaboa "Then I can say farewell and send you off properly~"
     s abhfcaa "For now, let's just sit and relax together."
 
 

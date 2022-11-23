@@ -46,7 +46,7 @@ init 5 python:
     chatReg(
         Chat(
             persistent._flatter_db,
-            prompt="I think you're cute",
+            prompt="I think you're cute.",
             label="compliment_cute",
             unlocked=True,
             affection_range=(fae_affection.HAPPY, fae_affection.LOVE)
@@ -177,7 +177,7 @@ init 5 python:
     chatReg(
         Chat(
             persistent._flatter_db,
-            prompt="You're so kind..",
+            prompt="You're so kind...",
             label="compliment_kind",
             unlocked=True,
             affection_range=(fae_affection.HAPPY, fae_affection.LOVE)
@@ -199,7 +199,7 @@ init 5 python:
     chatReg(
         Chat(
             persistent._flatter_db,
-            prompt="I look up to you",
+            prompt="I look up to you.",
             label="compliment_look_up_to_you",
             unlocked=True,
             affection_range=(fae_affection.HAPPY, fae_affection.LOVE)

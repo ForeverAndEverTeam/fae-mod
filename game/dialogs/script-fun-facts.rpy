@@ -98,7 +98,7 @@ label s_fun_fact_number4: #The number 4
     s abbbaca "Maybe it's because it’s an unlucky number in East Asian culture."
     s abbbbca "But that's just superstition, right?"
     s abbbaoa "Ironically for me it was always a lucky number!"
-    s abbccoa "Is it your lucky number too? That'd be such a funny coincidence ehehe~"
+    s abbccoa "Is it your lucky number too? That'd be such a funny coincidence, ehehe~"
     call fae_fun_facts_end
     return
 
@@ -112,11 +112,11 @@ init 5 python:
 label s_fun_fact_interpretingWords: #Interpreting words
     s abaaaoa "Hey [player], do you ever read a word without even noticing it's spelled wrong?"
     s abaacoa "And it always happens with the tiny obvious words!"
-    s abbbaoa "{i}So I bet you can't find the mistake in tihs text! {/i}{#Y'see the mistake in 'tihs'} ehehehe~"
+    s abbbaoa "{i}So I bet you can't find the mistake in tihs text! {/i}{#Y'see the mistake in 'tihs'} Ehehehe~"
     s abhaaca "So I did some googling and apparently it's because your lazy brain often only reads the letters at the start and the end of common words, without even considering the letters in between."
     s abbcaaa "And that's why we make silly mistakes while writing from time to time."
     s "There’s some funny and not so funny examples of misspellings in the past because someone didn't go back to fix a word or two."
-    s abbccaa  "But y’know, we’re people. We all make mistakes occasionally."
+    s abbccaa "But y’know, we’re people. We all make mistakes occasionally."
     s abaaaoa "In the end, no one's perfect."
     call fae_fun_facts_end
     return

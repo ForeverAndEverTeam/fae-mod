@@ -41,7 +41,7 @@ init -1 python in fae_greetings:
         ).label
 
 label greeting_first_time:
-    s "hello"
+    s "Hello~"
     $ persistent.fae_first_greet = False
     return
 
@@ -57,14 +57,14 @@ init 5 python:
 
 label s_1:
 
-    s "Hello"
+    s "Hello~"
     
 
     return
 
 label greeting_first_force_quit:
 
-    s "Hello"
+    s "Hello~"
 
     $ persistent.fae_force_quit_state = int(fae_farewells.FAEForceQuitStates.has_force_quit)
     
@@ -110,7 +110,7 @@ label s_greeting_2: #Try to keep it poetic while translating
     #show sayori abaaaoa at t11 zorder 2
     s abaaaoa "Ah, welcome back, [player]!" 
     s "{i}I'm so happy that you're here!{/i}"
-    s "{i}You fill my heart with joy, ehehe~.{/i}"
+    s "{i}You fill my heart with joy, ehehe~{/i}"
     return
 
 
@@ -154,7 +154,7 @@ label s_greeting_3_epo:
 
     s "Saluton, [player]!"
     s abgcaoa "Kia ĝojo revidi vin!"
-    s abbccoa "That's what 'Hello,[player]! It's such a joy to see you again!' sounds like in Esperanto!"
+    s abbccoa "That's what 'Hello, [player]! It's such a joy to see you again!' sounds like in Esperanto!"
     $ persistent.language_greeting_seen = True
     return
 
@@ -207,7 +207,7 @@ label s_greeting_4:
 
     s abaaaaa "Oh, hi again!"
     s bbfbaaa "I hope nothing bad happened to you while you were gone..."
-    s bbfbmabj "I just wanna make sure you're doing alright, you know?."
+    s bbfbmabj "I just wanna make sure you're doing alright, you know?"
     s bbfbaaa "So if you aren't, you'll tell me, right?"
 
     return
@@ -232,7 +232,7 @@ label s_greeting_5:
 
     s abaaaaa "Looks like you're here to visit me again, ehehe~"
     s abagaca "It can get pretty boring here when you're not around, you know..."
-    s "Cause after all, you're the only friend I have anymore."
+    s "Cause after all, you're the only friend I have left."
     s abbccaa "But I wouldn't choose anyone else over you, because you always know how to cheer me up!"
     s "So, hopefully I can do the same for you!"
 
@@ -272,7 +272,7 @@ label player_bday:
         else:
             s abbbcka "Oh, [player], you're here! I hope you're feeling good today!"
             s ebbbasa "But even if you aren't, that's okay too, you know!"
-            s abhaaaa "You don't need to be in a great mood all the time- I still enjoy being by your side just as much."
+            s abhaaaa "You don't need to be in a great mood all the time. I still enjoy being by your side just as much."
             return
 
     if not persistent.bday_feb29:
@@ -309,7 +309,7 @@ label player_bday:
             s ebgcaoa "I wonder, do you celebrate it on the 28th of February, or March 1st?"
             s ebgckgaj "Maybe you can celebrate on both days!"
             s ebbccea "When you look at it that way, you actually have a way cooler birthday than most people!"
-            s aahcaoa "So let's get to celebrating together, [player]! And again, Happy birthday!"
+            s aahcaoa "So let's get to celebrating together, [player]! And again, happy birthday!"
             return
 
 
@@ -322,7 +322,7 @@ label s_val_present():
   
     if get_now().date() == val_date:
         
-        s "Hey [player], happy Valentines Day!"
+        s "Hey [player], happy Valentine's Day!"
         s aahbcaa "I actually have a little present for you.."
         
         call showpoem(poem_val, "paper_val", 200, 0.5, 360) from _call_showpoem
@@ -410,8 +410,8 @@ label s_greetings_long:
 
     menu:
         "Call out for Sayori":
-            s "Hmmmm- wh"
-            s "Mmhhh five more minutes pleeease-"
+            s "Hmmmm, wh-"
+            s "Mmhhh, five more minutes pleeease-"
             pass
 
     
@@ -421,7 +421,7 @@ label s_greetings_long:
                 "...":
                     pass
     
-    s "Hnmmmn wha-"
+    s "Hnmmmn, wha-"
     s "{i}Wait, is that you, [player]?{/i}"
 
 
@@ -454,7 +454,7 @@ label s_greetings_long:
 
 
     s ebhfaaa "And that could be why you haven't visited for so long."
-    s abhaloa "That was a nice nap and all,"
+    s abhaloa "That was a nice nap and all..."
     s cbhaira "BUT!"
 
 
@@ -463,7 +463,7 @@ label s_greetings_long:
 
 
     s bbfdlja "If I get too bored, I might start playing with code, and might not be able to guarantee the privacy of your shady internet history!"
-    s abfccia "Just kidding!"
+    s abfccia "...just kidding!"
     s gahdbika "Or am I?"
 
 
