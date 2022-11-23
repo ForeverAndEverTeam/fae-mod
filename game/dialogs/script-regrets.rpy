@@ -102,7 +102,7 @@ label regret_cheating:
     s "Thank you for apologising."
     s "Cheating is bad, you know!"
     s "You don't want Nathan to hunt you down."
-    s "But thank you for apologising."
+    s "But thank you for apologizing."
     s "Don't do it again!"
     s "I forgive you."
 
