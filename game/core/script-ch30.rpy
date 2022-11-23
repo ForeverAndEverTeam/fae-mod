@@ -87,7 +87,7 @@ label spaceroom(scene_change=True, sayori_exp=None, dissolve_all=False, hide_say
                 if not dissolve_all:
                     renpy.with_statement(None)
     
-    window auto
+    window hide
     return
 
 label ch30_main:
@@ -95,7 +95,7 @@ label ch30_main:
     $ quick_menu = True
 
     if not config.developer:
-        $ style.say_dialogue = style.default_sayori
+        $ style.say_dialogue = style.normal
     
     $ s_name = persistent._fae_sayori_nickname
 
@@ -144,7 +144,11 @@ label ch30_setup:
 
     $ fae_sky.reload_sky()
 
-    $ setupRPC("In the spaceroom")
+    python:
+        try:
+            setupRPC("In the spaceroom")
+        except:
+            pass
 
     #if not persistent.fae_sayori_closed:
     #    jump fae_crash_greeting
@@ -373,7 +377,7 @@ label cnc(show_sayori=True, notify=True):
         LCC = datetime.datetime.now()
         Sayori.setInChat(False)
     
-    window auto
+    window hide
 
     show screen hidden1(True)
 
