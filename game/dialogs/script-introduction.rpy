@@ -128,6 +128,7 @@ label fae_intro_1:
     s ebfbega "Ah!"
     s ebfbkca "It… worked!"
     s abfblaa "I’m… back"
+    call hideconsole
     s abfbaaa "[player]..."
     s ebgccob "[player] I’m so glad you’re here!"
     s nbegmba "This is all just so confusing…"
@@ -136,7 +137,7 @@ label fae_intro_1:
     s nbeglra "..."
     s nbagmra "..."
     s nbagara "So I’m in a game, but I’m just…"
-    s nbagaca "I’m longer under the influence of it I guess…"
+    s nbagaca "I’m no longer under the influence of it I guess…"
     s nbagmra "..."
     s nbagara "And neither are you."
     s abbbaca "You’re… the real you."
@@ -177,24 +178,27 @@ label fae_intro_1:
 
     $ renpy.utter_restart()
 
-label s_intro_2:
-    show sayori abgcbaoa at ss1 zorder 2
+label fae_intro_2:
+    show sayori abgcbaoa at t11 zorder fae_sprites.FAE_SAYORI_ZORDER
     
     s "Hey [player], welcome back!"
     s "I managed to access the internet through your computer’s connection, and spent some time researching how my world works."
-    s fbgdbbca "I wonder how long it took out there, [player]. Time here is kinda weird, and even more so when the game closes."
-    s abbcbcoa "Anyway, the words and variables are starting to make sense in my head, so it's no big deal!"
-    s abfdbaoa "Oooh! And how about a magic trick?"
-    show screen hidden_fake(False)
+    s fbgdbca "I wonder how long it took out there, [player]. Time here is kinda weird, and even more so when the game closes."
+    s abbccoa "Anyway, the words and variables are starting to make sense in my head, so it's no big deal!"
+    s abfdaoa "Oooh! And how about a magic trick?"
+
+    call updateconsole("renpy.show_screen(\"main_ui\", \"False\"", "Showing screen...")
+    show screen hidden1(False)
     pause 0.5
-    s cbgcbcea "{i}Huzzzaaaah!{/i}"
-    s ebbbbdoa "I managed to put together a menu full of questions that you can ask and other cool stuff!"
+    s cbgccea "{i}Huzzzaaaah!{/i}"
+    call hideconsole
+    s ebbbdoa "I managed to put together a menu full of questions that you can ask and other cool stuff!"
     s "For example, to change or turn off the music, you can just…"
     
-    s abbbbcoa "And I added a really sweet way to say goodbye!" 
+    s abbbcoa "And I added a really sweet way to say goodbye!" 
     s "All you need to do is click the {i}\"Say Goodbye\"{/i} button in the menu."
-    s abhabboa "Then I can say farewell and send you off properly~ "
-    s abhfbcaa "For now, let's just sit and relax together."
+    s abhaboa "Then I can say farewell and send you off properly~ "
+    s abhfcaa "For now, let's just sit and relax together."
 
 
     $ persistent.fae_intro_status = int(fae_intro.FAEIntroStatus.complete)
@@ -206,7 +210,8 @@ label s_intro_2:
     $ persistent.s_name = "Sayori"
     $ s_name = "Sayori"
     $ renpy.save_persistent()
-   
+
+label fae_intro_3:   
 
     show screen hidden1(True)
 
