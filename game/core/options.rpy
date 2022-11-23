@@ -203,7 +203,7 @@ init python:
     build.classify("*.log", None)
     build.classify("errors.txt", None)
     build.classify("log.txt", None)
-    build.classify("game/bgm/**", None)
+    #build.classify("game/bgm/**", None)
 
     build.include_update = True
 
