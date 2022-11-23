@@ -560,7 +560,7 @@ label fae_event_mr_cow_transform:
     s abhacea "I dug in the code until I could rescue Mr. Cow!"
     s abbbloa "It was hard work, buuuuut!"
     s abgcdoa "Now I'll always have someone to cuddle with, and it'll never get {i}too{/i} lonely in here!"
-    s abhfcaa "Anyways,I'm glad you're here now!" 
+    s abhfcaa "Anyways, I'm glad you're here now!" 
     return
     
 init 5 python:
@@ -591,7 +591,7 @@ label fae_event_pointy_stick_stabber_girl:
 
     s abbcckc "Hi, [player]! Ready to chop up some bitches?"
     s "Does this look like the face of mercy, [player]?"
-    s bbfceea "AHAHAHA….{nw}"
+    s bbfceea "AHAHAHA…{nw}"
     extend bbfcdia"Just kidding!"
     s abbciia "Sorry about that!"
     
@@ -603,7 +603,7 @@ label fae_event_pointy_stick_stabber_girl:
     extend eahcada "I've been doing some more digging into the code to recover as much stuff as possible!"
     
     s ebbccqa "I managed to get this knife back today!"
-    s fbfckdaj"Not really sure if I'll ever need it for anything, but I figured I might as well have it."
+    s fbfckdaj "Not really sure if I'll ever need it for anything, but I figured I might as well have it."
     s bbfcmoaj "But maybe it's better if I put this away now."
     s bbbcciaj "I wouldn't want anything bad to happen, ehehe~"
     
@@ -630,9 +630,9 @@ label fae_event_sayori_desk_hide:
     hide black
     show spe2 at s11 zorder fae_sprites.FAE_SAYORI_ZORDER
     $ style.say_dialogue = style.whisper
-    s "Hehehe [player] will never see this coming, Mr. Cow!"
-    s "Oh! I think they're here! Shhh~ get down!" 
-    s "Ready? 3…2..1…"
+    s "Hehehe, [player] will never see this coming, Mr. Cow!"
+    s "Oh! I think they're here! Shhh, get down!" 
+    s "Ready? 3... 2... 1..."
     hide spe2
     $ style.say_dialogue = style.normal
     s ebbccoa "Boo!"
@@ -666,6 +666,6 @@ label fae_event_door_open:
             s abegaoaj "Welcome back, [player]! {w=0.5}{nw}"
             extend gbaamoj "Sorry if I scared you!"
             s abfccoaj "I've been learning how to use menus, and thought I'd give it a go.{w=0.5}{nw}"
-            extend abfcaoaj "But never mind that."
+            extend abfcaoaj " But never mind that."
             s abegcoaj "I'm so glad you're back!"
     return
