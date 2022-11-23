@@ -257,7 +257,7 @@ label poem_redux:
 
         ret_back = ("Nevermind", False, False, False, 20)
 
-        poetry_list.extend(fae_poems.gsp())
+        #poetry_list.extend(fae_poems.gsp())
 
 
     call screen fae_gen_scrollable_menu(poetry_list, fae_ui.SCROLLABLE_MENU_TXT_MEDIUM_AREA, fae_ui.SCROLLABLE_MENU_XALIGN, ret_back)
