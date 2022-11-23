@@ -319,6 +319,13 @@ init 0 python:
         id="bedroom",
         image_directory="bedroom"
     )
+
+    d25room = Rooms(
+        id="d25room",
+        image_directory="d25room"
+    )
+
+
     
     # Register the event handler
     main_background.select_room(spaceroom)
