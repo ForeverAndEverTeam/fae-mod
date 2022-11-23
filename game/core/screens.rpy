@@ -321,7 +321,7 @@ init 4 python:
         
         persistent.playername = player
         renpy.hide_screen("name_input")
-        renpy.jump_out_of_context("ch30_autoload")
+        renpy.jump_out_of_context("start")
 
 
 label fae_bad_name_input:
@@ -1937,5 +1937,5 @@ screen qab():
         style "main_menu_version"
 
 
-screen fae_jump_timer(timeout, expiry_label):
+screen fae_jump_timer(time, expiry_label):
     timer timeout action Jump(expiry_label)
