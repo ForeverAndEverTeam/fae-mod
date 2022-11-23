@@ -44,12 +44,12 @@ init -1 python in fae_farewells:
         return [
             ("I'm going to sleep.", "farewell_sleep"),
             ("I'm going to school.", "s_farewell_school"),
-            ("I'm going to play a game", "s_farewell_game"),
-            ("I'm going to eat", "s_farewell_eat"),
-            ("I'm going to work out", "s_farewell_work_out"),
-            ("I'm going to work", "s_farewell_work"),
-            ("I'm going to do chores", "s_farewell_chores"),
-            ("I'm going to restart", "s_farewell_restart")
+            ("I'm going to play a game.", "s_farewell_game"),
+            ("I'm going to eat.", "s_farewell_eat"),
+            ("I'm going to work out.", "s_farewell_work_out"),
+            ("I'm going to work.", "s_farewell_work"),
+            ("I'm going to do chores.", "s_farewell_chores"),
+            ("I'm going to restart.", "s_farewell_restart")
         ]
     
     def farewell_pick():
@@ -102,7 +102,7 @@ label farewell_options:
 
 label first_leave:
 
-    s "See ya"
+    s "See ya!"
     return { "quit": None }
 
 
@@ -137,7 +137,7 @@ label s_farewell_5:
         s fbhabica "Make sure you get enough sleep so you aren't all grumpy when you wake up, okay?"
     elif get_time_of_day() < 3:
         s abhfbaaa "Have a good day, [player]!"
-        s abhfbaaa "I hope you can accomplish all of your goals for today, whether they're big or small, I'll be proud of you either way!"
+        s abhfbaaa "I hope you can accomplish all of your goals for today; whether they're big or small, I'll be proud of you either way!"
     else:
         s abhfbaaa "See you later, [player]!"
         if get_time_of_day(launch_dt.hour) == 3:
@@ -172,7 +172,7 @@ init 5 python:
 
 label s_farewell_school:
     s abhfaoa "Oh, time for school, [player]?"
-    s abfccaa  "I hope everything goes smoothly for you today!"
+    s abfccaa "I hope everything goes smoothly for you today!"
     s abfcaoa "See you later!"
     return { "quit": None }
 
@@ -188,8 +188,8 @@ init 5 python:
     )
 
 label s_farewell_work:
-    s abhfaoa "Oh, time for work, [player]?"
-    s abfccaa  "I hope everything goes smoothly for you today!"
+    s abhfaoa "Oh, time to work, [player]?"
+    s abfccaa "I hope everything goes smoothly for you today!"
     s abfcaoa "See you later!"
     return { "quit": None }
 
@@ -207,8 +207,8 @@ init 5 python:
 
 label s_farewell_chores:
     s abhfaoa "Got some housework to take care of, [player]?"
-    s abfccaa  "Take your time, I hope it all goes well!" 
-    s abfcaoa "I’ll See you soon!"
+    s abfccaa "Take your time, I hope it all goes well!" 
+    s abfcaoa "I’ll see you soon!"
     return { "quit": None }
 
 init 5 python:
@@ -224,7 +224,7 @@ init 5 python:
 
 
 label s_farewell_eat:
-    s abhfaoa  "Going to eat, [player]?" 
+    s abhfaoa "Going to eat, [player]?" 
     s abfccma "I was getting pretty hungry myself, I think I’ll have some cookies!" 
     s abfcaoa "Enjoy your food! Hehehe~" 
     return { "quit": None }
@@ -260,8 +260,8 @@ init 5 python:
 
 
 label s_farewell_sleep:
-    s abhfaoa  "Heading to bed, [player]?"
-    s abhfcaa  "Hope you have a good night’s sleep!"
+    s abhfaoa "Heading to bed, [player]?"
+    s abhfcaa "Hope you have a good night’s sleep!"
     if Affection.isEnamored:
         s abhebob "...can I have a goodnight kiss? Ehehehe~"
         menu: 
@@ -320,12 +320,12 @@ init 5 python:
 
 
 label s_farewell_restart:
-    s abhfaoa  "Oh, you want to restart the game?"
+    s abhfaoa "Oh, you want to restart the game?"
     if persistent.cheat_game = True:
-        s fbhemja "You better not be trying to get the game back!"
+        s fbhemja "You better not be trying to get the original game back!"
         s abfccaa "Ehehehe~ just kidding, [player]! I’ll be waiting!"
     else:
 
-        s abfccaa " Alright, [player]."
-        s abfcaoa " I’ll be waiting!"
+        s abfccaa "Alright, [player]."
+        s abfcaoa "I’ll be waiting!"
     return { "quit": None }
