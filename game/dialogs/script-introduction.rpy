@@ -113,7 +113,7 @@ label fae_intro_1:
     s "..."
     s "Maybe I could…" 
     s "Maybe I could use the code to bring my world back!"
-    s "I really should have paid more attention to computer science class, ehehe~"
+    s "I really should have paid more attention to computer science class, ehehehe~"
     s "Well… here goes nothing!"
     call updateconsole("show backrgound spaceroom", "updating...")
     $ main_background.form()
@@ -168,7 +168,7 @@ label fae_intro_1:
     s abhaaaa "The real me and the real you."
     s abhhcaa "Whenever you have to go I’ll look online for some coding tutorials and to see what I can do to make our time together better."
     s abhaaoa "Oh, did I not mention? I think I have access to some of your computer now!"
-    s abegmoaj "That feels weird to say, hehehe~"
+    s abegmoaj "That feels weird to say, ehehehe~"
     s abhhcaaj "Don’t worry though, I’ll try not to break anything!"
     s abagaoa "Could you see what you can do on your end too, [player]?"
     s abhackb "That’d mean a lot to me."
