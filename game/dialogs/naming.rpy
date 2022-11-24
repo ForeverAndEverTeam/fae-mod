@@ -59,7 +59,7 @@ label sayori_nickname:
                     lowername = inputname.lower()
                 
                 if lowername == "nevermind":
-                    s "Alright then"
+                    s "Alright then!"
 
                     $ done = True
                 
@@ -87,7 +87,7 @@ label sayori_nickname:
                     if not fae_bad_name_comp.search(inputname) and lowername not in ["yuri", "monika", "natsuki"]:
                         if lowername == "sayori":
                             $ inputname = inputname.capitalize()
-                            s "Classics, I see"
+                            s "Sticking to the classics, I see~"
                         elif good_sayori_nickname_comp.search(inputname):
                             s "I love it."
                         
@@ -95,7 +95,7 @@ label sayori_nickname:
                             label .neutral_accept:
                                 pass
                             
-                            s "[inputname]... very nice"
+                            s "[inputname]... very nice."
                         
                         $ persistent._fae_sayori_nickname = inputname
 
@@ -160,7 +160,7 @@ label sayori_give_nickname:
 
     if persistent.fae_allow_nicknames and persistent.fae_current_nickname == "Sayori":
 
-        s "Sure"
+        s "Sure!"
     
     else:
 
@@ -189,7 +189,7 @@ label sayori_give_nickname:
 
         s "Change your mind?"
 
-        s "Okay then"
+        s "Okay then!"
 
         return
     
@@ -218,7 +218,7 @@ label sayori_give_nickname:
 
         s "WHAT?!"
 
-        s "NO"
+        s "NO."
 
         $ persistent.fae_gave_bad_name += 1
     
@@ -230,7 +230,7 @@ label sayori_give_nickname:
     
     elif nickname_category == fae_nicknames.CATEGORY_AMUSING:
 
-        s "hehehehe"
+        s "Ehehehe~"
 
         s "You certainly have a sense of humour."
         s "[nickname] it is."
@@ -256,7 +256,7 @@ label sayori_give_nickname:
 
         else:
 
-            s "Hmmm"
+            s "Hmmm..."
 
             s "Sure!"
 
@@ -282,7 +282,7 @@ label sayori_give_nickname:
 
         s "Again?"
 
-        s "That hurts"
+        s "That hurts."
 
         $ fae_regrets.add_new_regret_awaiting(fae_regrets.BAD_NAME)
         $ Affection.AffectionLossPercentile(2.5)

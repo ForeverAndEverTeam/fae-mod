@@ -111,7 +111,7 @@ label s_mood_hungry: #Hungry player
     s bbhemma "I'm sure it would be super tasty, ehehe!" 
     s bbfdmoaj "Though…{nw} "
     extend bbfcaaa "That wouldn’t be a very good meal now, would it?{w=1.5}{nw}" 
-    extend bbfcmoa " Sorry, ehehe~" 
+    extend bbfcmoa " Sorry, ehehehe~" 
     s abhfaaa "You should go eat something, [player]."
     s abbcaaa "If you have to cook something yourself, I can wait till you're done!" 
     s abfcaca "After all, skipping meals is a bad idea!" 
@@ -138,7 +138,7 @@ label s_mood_excited: #Excited player
     s ebagkoa "I hope that it's because you have something fun coming up soon!"
     s eahdada "Is there anything in particular you're looking forward to?"
     s ebhhcqa "Ooooor~"
-    s ebbddia "Maybe, you're just excited to spend some time with me today, ehehe~" 
+    s ebbddia "Maybe, you're just excited to spend some time with me today, ehehehe~" 
     s bbheijb "Can you tell me a little bit about it? I'm curious~"
     menu:
         "Yes":

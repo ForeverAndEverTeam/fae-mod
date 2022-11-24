@@ -110,7 +110,7 @@ label s_greeting_2: #Try to keep it poetic while translating
     #show sayori abaaaoa at t11 zorder 2
     s abaaaoa "Ah, welcome back, [player]!" 
     s "{i}I'm so happy that you're here!{/i}"
-    s "{i}You fill my heart with joy, ehehe~{/i}"
+    s "{i}You fill my heart with joy, ehehehe~{/i}"
     return
 
 
@@ -179,7 +179,7 @@ label s_greeting_3_esp:
     s "¡Hola [player]!"
 
     s abgcaoa "¡Qué alegría verte de nuevo!"
-    s abgccqa "Ehehe, do you know what that means?"
+    s abgccqa "Ehehehe, do you know what that means?"
     s abbcaoa "It's alright if you don't! I just said 'Hello, [player]! I'm happy to see you again!' in Spanish!"
     $ persistent.language_greeting_seen = True
 
@@ -230,7 +230,7 @@ label s_greeting_5:
 
     #show sayori abaaaaa at t11
 
-    s abaaaaa "Looks like you're here to visit me again, ehehe~"
+    s abaaaaa "Looks like you're here to visit me again, ehehehe~"
     s abagaca "It can get pretty boring here when you're not around, you know..."
     s "Cause after all, you're the only friend I have left."
     s abbccaa "But I wouldn't choose anyone else over you, because you always know how to cheer me up!"
@@ -295,7 +295,7 @@ label player_bday:
     elif bday_feb29:
         if persistent.bday_feb29_seen:
             s aahccea "Happy birthday, [player]!"
-            s aahcaoa "So let's get to celebrating together, [player]! And again, Happy birthday!"
+            s aahcaoa "So let's get to celebrating together, [player]! And again, happy birthday!"
             return
 
         else:
@@ -339,7 +339,7 @@ label s_val_present():
         
         call showpoem(poem_val, "paper_val", 200, 0.5, 360) from _call_showpoem_1
     
-    s bbhecob "Ehehe, I hope you like it, [player]! I know it's a bit sappy, but..."
+    s bbhecob "Ehehehe, I hope you like it, [player]! I know it's a bit sappy, but..."
     s "But I couldn't help it, I just wanted to make you something for the occasion!"
     s abfcaoa "And don't worry! You don't have to give me anything back..."
     s abfccqb "Cause, you know, spending time with you is already the best present I could ever receive!"
@@ -397,7 +397,7 @@ label s_greeting_8:
 
     s abgcaoa "Hi [player]!"
     s abgccaa "Are you here for your daily dose of sunshine?"
-    s abfdcqa "I'll get you some right now then, ehehe~"
+    s abfdcqa "I'll get you some right now then, ehehehe~"
 
     return
 

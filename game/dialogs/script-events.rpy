@@ -494,7 +494,7 @@ label event_new_years_eve:
     extend " but I can't {i}WAIT{/i} to tell [current_year] where to stick it!"
     s "And what better way to do that...{w=0.75}{nw}" 
     extend " than a crap ton of explosions and snacks?"
-    s "Ehehe.{w=0.5}{nw}"
+    s "Ehehehe.{w=0.5}{nw}"
     extend " It's gonna be great!"
 
     
@@ -525,7 +525,7 @@ label fae_event_mr_cow_transform:
 
     show asset mr_cow_desk as mr_cow_desk zorder fae_sprites.FAE_SAYORI_ZORDER
    
-    s "[player] heeeeeeelp!!!"
+    s "[player], heeeeeeelp!!!"
     s "I was messing with the code and accidentally turned myself into Mr. Cow!"
     s "Noooooooo!!!!"
     
@@ -554,7 +554,7 @@ label fae_event_mr_cow_transform:
 
     #show sayori idle at t11 zorder fae_sprites.SAYO_ZORDER
     
-    s abhfcqa "There we go, ehehe~"
+    s abhfcqa "There we go, ehehehe~"
     s abhfcoa "Welcome back, [player]!" 
     s abhabsa "I was just kinda starting to miss you so…"
     s abhacea "I dug in the code until I could rescue Mr. Cow!"
@@ -592,7 +592,7 @@ label fae_event_pointy_stick_stabber_girl:
     s abbcckc "Hi, [player]! Ready to chop up some bitches?"
     s "Does this look like the face of mercy, [player]?"
     s bbfceea "AHAHAHA…{nw}"
-    extend bbfcdia"Just kidding!"
+    extend bbfcdia "Just kidding!"
     s abbciia "Sorry about that!"
     
     menu:
@@ -605,13 +605,13 @@ label fae_event_pointy_stick_stabber_girl:
     s ebbccqa "I managed to get this knife back today!"
     s fbfckdaj "Not really sure if I'll ever need it for anything, but I figured I might as well have it."
     s bbfcmoaj "But maybe it's better if I put this away now."
-    s bbbcciaj "I wouldn't want anything bad to happen, ehehe~"
+    s bbbcciaj "I wouldn't want anything bad to happen, ehehehe~"
     
     hide knife 
     
     s abhaaoa "Hope you're doing good today, [player]~" 
     s abhaiia "Did I make you nervous?"
-    s ebhhcoa "Sorry for scaring you, ehehe~"
+    s ebhhcoa "Sorry for scaring you, ehehehe~"
     
     return
 
@@ -634,7 +634,7 @@ label fae_event_sayori_desk_hide:
     show emptydesk at t11 zorder 4
     pause 0.5
     $ style.say_dialogue = style.whisper
-    s "Hehehe, [player] will never see this coming, Mr. Cow!"
+    s "Ehehehe, [player] will never see this coming, Mr. Cow!"
     s "Oh! I think they're here! Shhh, get down!" 
     s "Ready? 3... 2... 1..."
     hide spe2
@@ -642,10 +642,10 @@ label fae_event_sayori_desk_hide:
     $ style.say_dialogue = style.normal
     show sayori at t11 zorder fae_sprites.FAE_SAYORI_ZORDER
     s ebbccoa "Boo!"
-    s bbbcaoa "Hehehehehe! Did I scare you [player]?"
+    s bbbcaoa "Ehehehe! Did I scare you [player]?"
     s abgbaoa "I wish I could have seen the look on your face, ehehehe~"
     s cbgbaoa "You better always be on your toes around me!"
-    s abaacoa "Anyways! Hehehehe~"
+    s abaacoa "Anyways! Ehehehe~"
     return
 
 init 5 python:

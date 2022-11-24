@@ -79,7 +79,7 @@ init 5 python:
 label compliment_best_girl:
     $ Affection.getAffectionGain(bypass=get_chat("compliment_best_girl").seen_no == 0)
     s abagcea "I'm the best girl? Aww, you're so sweet, [player]!" 
-    s abagdka "I'm really happy you think so! It means a lot to me, ehehe~" 
+    s abagdka "I'm really happy you think so! It means a lot to me, ehehehe~" 
     s bbfclfc "After all, I always thought that I might be the least likable given the fact most would choose one of my friends over me, but…"
     pause 2.0
     s abfbcqa "I'm glad you care so much about me! I love you, [player]~" 
@@ -101,8 +101,8 @@ init 5 python:
 
 label compliment_beautiful:
     $ Affection.getAffectionGain(bypass=get_chat("compliment_beautiful").seen_no == 0)
-    s abhfmkb "You think so, [player]? Aww, I don't know what to say, ehehe~"
-    s bbhfmebj "Especially since I'm pretty messy sometimes, ahaha…"
+    s abhfmkb "You think so, [player]? Aww, I don't know what to say, ehehehe~"
+    s bbhfmebj "Especially since I'm pretty messy sometimes, ahahaha…"
     s abfccea "But that means so much to me coming from you, [player]!"
     s abfcdqa "Remember that you're the most beautiful person in the world to me too!"
     return 
@@ -142,7 +142,7 @@ init 5 python:
 
 label compliment_love_hair:
     $ Affection.getAffectionGain(bypass=get_chat("compliment_love_hair").seen_no == 0)
-    s ebaacqa "Hehehe, even when it's a little messy? You're such a sweetheart, [player]~"
+    s ebaacqa "Ehehehe, even when it's a little messy? You're such a sweetheart, [player]~"
     s ebfcdoa "I hope you like my signature bow, too!"
     s abgcaoa "I think it fits my hairstyle, {w=0.5}{nw}"
     extend abfcaaa "don't you agree?"
@@ -167,7 +167,7 @@ label compliment_love_eyes:
     s abhfkoa "Aww, I'm glad you think so, [player]!" 
     s abegikb "How about we have a staring contest then? Teehee~" 
     s abegmobj "Only kidding, of course! Unless that's something you're really interested in…"
-    s abhfmabj "Ehehe! Anyway…"
+    s abhfmabj "Ehehehe! Anyway…"
     s abbbkoa "I think blue suits me really well! It represents happiness and sensitivity, and I always try my best to connect with others in a positive way."
     s abbbcqa "And I think they make me unique and give me something to be confident about!"
     return 
@@ -233,7 +233,7 @@ init 5 python:
 
 label compliment_like_seeing_happy:
     $ Affection.getAffectionGain(bypass=get_chat("compliment_like_seeing_happy").seen_no == 0)
-    s abhfcka "Awww! That's so cute of you to say, [player]! Thank you so much!" 
+    s abhfcka "Aww! That's so cute of you to say, [player]! Thank you so much!" 
     s ebbckea "I am {i}happy{/i} to make you {i}happy{/i} when you see me {i}happy{/i}, ehehehe~"
     s ebbbcka "I like seeing you happy as well! It makes all the time we spend together worth it."
     return
@@ -281,7 +281,7 @@ label compliment_like_your_writing:
     extend bbbbaaaj "or I get a bit too insecure about my abilities…"
     s abbbcka "But if you really look forward to seeing my creations, I think it's worth it!"
     s abbbksa "Do you write, [player]? I'd love to see your work someday if you do!"
-    s abhfcka "I'm sure you can write some amazing things too, ehehe~"
+    s abhfcka "I'm sure you can write some amazing things too, ehehehe~"
     return
 
 init 5 python:
@@ -302,5 +302,5 @@ label compliment_ball_of_sunshine:
     s abgccea "[player]! That was so cute!"
     s abbcnka "Thank you! I hope I can continue making you happy, and brightening up your days, {w=0.5}{nw}"
     extend abgccaa "just like you do for me!"
-    s abaacqa "Ehehe~"
+    s abaacqa "Ehehehe~"
     return
