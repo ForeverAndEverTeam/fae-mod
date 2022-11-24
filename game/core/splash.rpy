@@ -272,12 +272,14 @@ image tos2 = "bg/warning2.png"
 ## Startup Disclaimer
 # This label calls the disclaimer screen that appears when the game starts.
 label splashscreen:
+
+    $ store._game_menu_screen = "preferences"
     # This python statement grabs the username and process list of the PC.
 
     scene white
     
-
-    if persistent.first_run:
+    default persistent.has_launched_before = False
+    if not persistent.has_launched_before:
         $ quick_menu = False
         pause 0.5
         scene tos
@@ -301,7 +303,9 @@ label splashscreen:
         if not persistent._fae_imported_ddlc:
             call import_ddlc_persistent
         
-        $ persistent.first_run = False
+        $ persistent.has_launched_before = True
+
+        $ renpy.save_persistent()
         
         $ config.allow_skipping = False
     
@@ -375,7 +379,7 @@ label autoload:
             _history = _old_history
             del _old_history
         # Open the settings panel in the menu
-        _game_menu_screen = "preferences"
+        store._game_menu_screen = "preferences"
         renpy.block_rollback()
 
         # Fix the game context (normally done when loading save file)
