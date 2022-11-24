@@ -821,17 +821,26 @@ default natsuki_23 = None
 
 init python:
 
+    def boop():
+        """
+        Boop screen code stuff
+        """
+        Sayori.setInChat(True)
+        renpy.hide_screen("hidden1")
+        renpy.call("boop")
+        renpy.show_screen("hidden1", True)
+        Sayori.setInChat(False)
+        renpy.jump("ch30_loop")
+        
+
     PATH = renpy.config.basedir
 
     def makeFile(filename, filecontents):
 
-        f = open(PATH)
-
-        with open(filename+'.txt', 'w') as f:
+        with open( os.path.join( renpy.config.basedir, filename + ".txt" ), 'w' ) as f:
             f.write(filecontents)
         
-        f.close()
-
+            f.close()
 
 
 init -1 python:
