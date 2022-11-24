@@ -19,7 +19,6 @@ init -10 python in fae_fun_facts:
 
 
 init 5 python:
-
     chatReg(
         Chat(
             persistent._chat_db,
@@ -30,9 +29,7 @@ init 5 python:
         )
     )
 
-
 label s_fun_fact_beginning:
-
     s abbcaoa "Do you want to hear a fun fact, [player]?"
 
     python:
@@ -42,7 +39,6 @@ label s_fun_fact_beginning:
             fact_label_list = unseen_fact_labels
         else:
             fact_label_list = fae_fun_facts.getAllFactsLabel()
-
         
 
         fun_fact_labels = renpy.random.choice(fact_label_list)
@@ -53,7 +49,6 @@ label s_fun_fact_beginning:
 
 label fae_fun_facts_end:
     s abbccoa "I hope you enjoyed that one!"
-
     return
 
 
