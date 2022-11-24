@@ -163,6 +163,32 @@ init 0 python:
             """
             return Sayori.__iig
 
+        @staticmethod
+        def add_new_regret_awaiting(regret_type):
+
+            if not isinstance(regret_type, int) and not isinstance(regret_type, fae_regrets.RegretTypes):
+                raise TypeError("regret_type must be of types int of fae_regrets.RegretTypes")
+            
+            if not int(regret_type) in store.persistent._fae_await_regret:
+                store.persistent._fae_await_regret.append(int(regret_type))
+        
+        @staticmethod
+        def add_regret_quit(regret_type):
+
+            if not isinstance(regret_type, int) and not isinstance(regret_type, fae_regrets.RegretTypes):
+                raise TypeError("regret_type must be of types int or fae_regrets.RegretTypes")
+            
+            store.persistent._fae_await_regret_quit = int(regret_type)
+        
+        @staticmethod
+        def deleteRegret(regret_type):
+
+            if not isinstance(regret_type, int) and not isinstance(regret_type, fae_regrets.RegretTypes):
+                raise TypeError("regret_type must be of types int or fae_regrets.RegretTypes")
+            
+            if int(regret_type) in store.persistent._fae_await_regret:
+                store.persistent._fae_await_regret.remove(int(regret_type))
+
 
 
 
