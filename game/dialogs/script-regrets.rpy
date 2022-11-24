@@ -37,34 +37,6 @@ init -1 python in fae_regrets:
         
         return return_regrets
 
-    @staticmethod
-    def add_new_regret_awaiting(regret_type):
-
-        if not isinstance(regret_type, int) and not isinstance(regret_type, fae_regrets.RegretTypes):
-            raise TypeError("regret_type must be of types int of fae_regrets.RegretTypes")
-        
-        if not int(regret_type) in store.persistent._fae_await_regret:
-            store.persistent._fae_await_regret.append(int(regret_type))
-    
-    @staticmethod
-    def add_regret_quit(regret_type):
-
-        if not isinstance(regret_type, int) and not isinstance(regret_type, fae_regrets.RegretTypes):
-            raise TypeError("regret_type must be of types int or fae_regrets.RegretTypes")
-        
-        store.persistent._fae_await_regret_quit = int(regret_type)
-    
-    @staticmethod
-    def deleteRegret(regret_type):
-
-        if not isinstance(regret_type, int) and not isinstance(regret_type, fae_regrets.RegretTypes):
-            raise TypeError("regret_type must be of types int or fae_regrets.RegretTypes")
-        
-        if int(regret_type) in store.persistent._fae_await_regret:
-            store.persistent._fae_await_regret.remove(int(regret_type))
-
-
-
 label regret_init:
 
     python:
@@ -92,7 +64,7 @@ init 5 python:
             label="regret_cheating",
             unlocked=True,
             prompt="For cheating at our game.",
-            conditional="fae_regrets.load_regret_awaiting(fae_regrets.CHEATING)"
+            conditional="fae_regrets.load_all_regrets(fae_regrets.CHEATING)"
         ),
         chat_group=CHAT_GROUP_REGRET
     )
@@ -106,7 +78,7 @@ label regret_cheating:
     s "Don't do it again!"
     s "I forgive you."
 
-    $ persistent.fae_await_regret.remove(fae_regrets.CHEATING)
+    $ persistent._fae_await_regret.remove(fae_regrets.CHEATING)
     return
 
 
@@ -118,7 +90,7 @@ init 5 python:
             prompt="For leaving without saying goodbye.",
             label="regret_sudden_quit",
             unlocked=True,
-            conditional="fae_regrets.load_regret_awaiting(fae_regrets.UNEXPECTED_QUIT)"
+            conditional="fae_regrets.load_all_regrets(fae_regrets.UNEXPECTED_QUIT)"
         ),
         chat_group=CHAT_GROUP_REGRET
     )
@@ -127,7 +99,7 @@ label regret_sudden_quit:
 
     s "Thank you."
     
-    $ persistent.fae_await_regret.remove(fae_regrets.UNEXPECTED_QUIT)
+    $ persistent._fae_await_regret.remove(fae_regrets.UNEXPECTED_QUIT)
 
     return
 
@@ -146,7 +118,7 @@ init 5 python:
 
 label regret_generic:
 
-    if len(persistent.fae_await_regret) == 0:
+    if len(persistent._fae_await_regret) == 0:
 
         s "Huh?"
 

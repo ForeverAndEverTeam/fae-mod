@@ -8,7 +8,7 @@ default persistent._fae_player_anniversary = None
 
 image asset mr_cow = "mod_assets/images/EVENT/mr_cow.png"
 image asset spe1 = "mod_assets/images/EVENT/spe1.png"
-image asset spe2 = "mod_assets/images/EVENT/spe2.png"
+image asset spe2 = Image("mod_assets/images/EVENT/spe2.png", yoffset=-100)
 image asset desk = "mod_assets/sayori/table/desk.png"
 image asset chair = "mod_assets/sayori/table/chair.png"
 image asset desk_shadow = "mod_assets/sayori/table/desk_sh.png"
@@ -627,14 +627,20 @@ init 5 python:
     )
 
 label fae_event_sayori_desk_hide:
+    hide sayori
+    window hide
     hide black
-    show spe2 at s11 zorder fae_sprites.FAE_SAYORI_ZORDER
+    show asset spe2 at s11 zorder fae_sprites.FAE_SAYORI_ZORDER
+    show emptydesk at t11 zorder 4
+    pause 0.5
     $ style.say_dialogue = style.whisper
     s "Hehehe, [player] will never see this coming, Mr. Cow!"
     s "Oh! I think they're here! Shhh, get down!" 
     s "Ready? 3... 2... 1..."
     hide spe2
+    hide emptydesk
     $ style.say_dialogue = style.normal
+    show sayori at t11 zorder fae_sprites.FAE_SAYORI_ZORDER
     s ebbccoa "Boo!"
     s bbbcaoa "Hehehehehe! Did I scare you [player]?"
     s abgbaoa "I wish I could have seen the look on your face, ehehehe~"

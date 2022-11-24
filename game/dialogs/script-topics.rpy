@@ -2426,6 +2426,5 @@ label s_topic_reversi:
 
 
 
-
  
 
