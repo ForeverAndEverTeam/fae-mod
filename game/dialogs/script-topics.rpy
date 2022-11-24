@@ -264,7 +264,7 @@ label s_topics_guitar:
     s bbagaaa "Maybe one day I can play for you and make you feel the same way~"
     s abgcaoa "It's like writing poetry, but through sound!"
     s fbgcmea "I'm sure I can conjure up a guitar and find a tutorial somewhere on the internet."
-    s ebhhcqa "Make sure you get your tickets for my world tour in advance, [player]! Ehehe~"
+    s ebhhcqa "Make sure you get your tickets for my world tour in advance, [player]! Ehehehe~"
     return
 
 init 5 python:
@@ -308,7 +308,7 @@ label s_topics_flowers:
     s abfdcka "It'd be nice to have one, and I'd try my best to keep it growing happily!"
     s bbhemeaj "Maybe it would make up for all the plants I've tried to keep before, which {i}mysteriously{/i} died..."
     s fbfbkdaj "{i}...unless they want vengeance?{/i}"
-    s bbheceaj "I hope they don't...ahaha... hah..."
+    s bbheceaj "I hope they don't...ahahaha... hah..."
     return
 
 
@@ -530,13 +530,13 @@ init 5 python:
 
 label s_topics_dating:
     s abhfaoa "What would our first date be like?"
-    s abhfcaa "What's with the look? Ehehe~"
+    s abhfcaa "What's with the look? Ehehehe~"
     s abgcnoa "Maybe we could go to a good café, and eat together!"
     s abgckma "Like cakes, or cinnamon buns~"
     s abfdkoa "Then we could go somewhere interesting!"
     s abhaaca "Maybe to the movies? What do you think?"
     s "Though I don't really want to go see a romance movie every time we go..."
-    s abegaaa "...okay, maybe once or twice? Ehehe~"
+    s abegaaa "...okay, maybe once or twice? Ehehehe~"
     s abbdaoa "Maybe a comedy?"
     s abgcaea "Or what about animated movies, like the ones {i}Disney{/i} and {i}Pixar{/i} make?"
     s abfcaaa "I know they're meant for kids, but hey, they can be fun for anyone!"
@@ -553,7 +553,7 @@ label s_topics_dating:
     extend abgcaoa " Maybe bowling?"
     s abhfaoa "It's a simple enough game, not too active but not too slow. I think I'd like it."
     s abbdaaa "Well, the important thing is that the date is enjoyable for both of us, right?"
-    s abhfcaa "I hope we can plan a nice date soon ehehehe~"
+    s abhfcaa "I hope we can plan a nice date soon, ehehehe~"
     return
 
 init 5 python:
@@ -786,7 +786,7 @@ init 5 python:
 label s_topics_pets:
     s abhfaoa "Do you like pets?"
     s "I love them! All kinds of pets! Even ones that aren't very commonly kept!"
-    s abhacoa "I always end up looking up random animals and daydreaming about keeping them as pets, ehehe~"
+    s abhacoa "I always end up looking up random animals and daydreaming about keeping them as pets, ehehehe~"
     s "Maybe I'd have a chinchilla if I could! They are soooo cute, and so fluffy, they look so soft, I just love them so much!"
     s abbcaoa "I'd also like to have some kind of bird that could speak. They're really funny, I always end up watching videos of them online, ehehehe~"
     s "I like a really specific video of a koka-"
@@ -823,7 +823,7 @@ label s_player_cooking:
     extend bbheiiaj "scrambled eggs are probably the most elaborate thing I've ever cooked..."
     s abhhksa "I've never baked anything before, though."
     s fbhalhaj "But there's a lot of stuff that could go wrong, so it feels a bit intimidating to me." 
-    s ebbcaoa "Even so, I'd love to get better at cooking, even if I don't have any reason to anymore, ehehe~"
+    s ebbcaoa "Even so, I'd love to get better at cooking, even if I don't have any reason to anymore, ehehehe~"
     s abgcbfa "Now that I think about it... {nw}"
     extend dbgckca "I don't really remember the last time I've been hungry, honestly."
     s fahcnka "But I can still taste! That means I can eat as much as I want!"
@@ -888,7 +888,7 @@ label s_player_cats:
     s abhaaca "Still, as much as they love their space, they shouldn't just be ignored by their owner. Kitties want to play sometimes, too!"
     s "And sometimes cats do things that their owners don't like... Like pushing things off of the counter, or slicing their arms and legs up."
     s abaaaoa "Still, it's so hard to resist their fluffy little paws and pointy ears... So that must be why people always forgive them for their crimes!"
-    s ebaacea "If you have one, you probably understand what I mean, ehehe~"
+    s ebaacea "If you have one, you probably understand what I mean, ehehehe~"
     return
 
 
@@ -909,7 +909,7 @@ init 5 python:
 
 label s_topic_archetype:
     s abhfho "Hey [player], do you remember when Monika compared Yuri and Natsuki to character archetypes?"
-    s abhfco "I was curious about what my archetype could be so I read some online articles about them and I think I'm pretty close to the 'Genki' archetype."
+    s abhfco "I was curious about what my archetype could be so I read some online articles about them and I think I'm pretty close to the 'genki' archetype."
     s abhhmo "Genki is a very cheerful and energetic archetype, always trying to share that upbeat way of living with others."
     s aahfaeaj "And they're sometimes clumsy and get in trouble often too, hehehe~"
     s "And I was the protagonist's childhood friend, which is common to this archetype."
@@ -917,7 +917,7 @@ label s_topic_archetype:
     menu:
         "You're definitely a genki, if they're as clumsy as you say.":
             pass
-    s aaaegcej "You can't blame me, that's just how I am, ehehe~"
+    s aaaegcej "You can't blame me, that's just how I am, ehehehe~"
     s "But that aside, I think archetypes are too simple to define a whole person."
     s ebhfaca "We're all unique and these traits can only scratch the surface of somebody's character."
     s ebhhaoa "And that applied to me and my friends too."
@@ -981,7 +981,7 @@ label s_topic_lit:
     s abhaaca "And I remember MC noticed that I never seemed to be fond of literature in the first place."
     s "And, honestly? He was right."
     s "Of course I'd read a few books before, but only really because I needed to for school..."
-    s bbegmeaj "And even then, I tried to cheat to pass the exams, ehehe..."
+    s bbegmeaj "And even then, I tried to cheat to pass the exams, ehehehe..."
     s abhaaca "I just think it's pretty boring, I think I'm more of a visual person anyways!"
     s bbhfbca "But as Yuri used to say, maybe I just haven't found the right book yet."
     s abhaaca "But anyways, when I first joined, the thing I wanted to do most was help a friend start a new club."
@@ -1080,7 +1080,7 @@ label s_topic_travel:
     s abbbmoaj "I've never gotten the chance to, so I was wondering if you had in your reality." 
     s "You're so lucky to have such an amazing world out there to explore..." 
     s abfbmhaj "While I'm trapped in this tiny room island in the middle of the code sea…"
-    s "Sorry, I didn't mean to sound like I was sulking, ehehe~" 
+    s "Sorry, I didn't mean to sound like I was sulking, ehehehe~" 
     s abhaaca "I know it's selfish, but I'd love to go and see it all with you instead of being here..." 
     s "It doesn't really matter where we'd go, {w=0.5}{nw}"
     extend abbbaqa "I just want to see all the beautiful colors and places that your reality has to offer!"
@@ -1156,7 +1156,7 @@ label s_topic_clones:
     s abhfhca "I mean, I'm me now, the me-me that isn't just reacting to some code… at least I think so?"
     s abhfmha "But I can also see that I'm not the only 'me' either, and that there are lots of other me's that are themselves, or so I think."
     s abhflca "I'm sorry if it sounds like I'm just going in circles, [player]."
-    s abhfcoaj "I'm just not really sure how to wrap my head around all this, hehehe…"
+    s abhfcoaj "I'm just not really sure how to wrap my head around all this, Ehehehe…"
     s abhfmcaj "All I know is, right now, I'm sitting here with you, meanwhile another Sayori from another copy of DDLC is still being strung along by the games programming."
     s abhflcaj "Totally unaware that her best friend isn't even real..."
     s abhfllaj "That nothing is real..."
@@ -1172,7 +1172,7 @@ label s_topic_clones:
     s bbagnka "None of that other stuff matters to me."
     s bbbbaka "I mean... you installed this mod just so that we could be together, didn't you?"
     s abbbcqa "So that means you really do care about me, huh?"
-    s abbbdqa "Hehehe~"
+    s abbbdqa "Ehehehe~"
     s abegcka "Of all the 'me's' that could ever be, I'm happy you chose me!"
     s abagaaa "From the bottom of my heart, [player], thank you for being here."
     return
@@ -1409,7 +1409,7 @@ label s_topic_name:
     s abgcaea "I also find it funny how everyone pronounces it a little differently!"
     s ebhfaea "Say [player], are you part of team {i}Sigh-ori{/i}, or team {i}Say-ori{/i}? Ehehehe~"
     s abhfbaa "Honestly I don't have a preference, {w=0.5}{nw}"
-    extend abaacqa "I switch between them myself sometimes hehehe~"
+    extend abaacqa "I switch between them myself sometimes ehehehe~"
     s abaaasa "What about you, [player], does your name have a special meaning? I'd love to know!" 
     return
 
@@ -1433,7 +1433,7 @@ label s_topic_art:
     s abagaoa "Have you ever made any fanart, [player]?"
     s abagcaa "If not, maybe you could make something one day!"
     s abbbaoa "It's never too late to try something new so long as you have fun."
-    s abbccea "Fun is what makes great art great! Hehehe~"
+    s abbccea "Fun is what makes great art great! Ehehehe~"
     return
 
 init 5 python:
@@ -1692,7 +1692,7 @@ label s_topic_pizza:
     s abbbaaa "Just find one of the billions and billions of delicious pizza recipes on the internet or in a cookery book!"
     s abhfaoa "People even came up with a term called the {i}Pizza Effect{/i}: When you make something from a different culture into something new."
     s abhfcaa "It's amazing to see that we’re all connected despite our differences and borrow cool things from each other's cultures."
-    s abbbaoa "Food philosophy with Sayori! That’d be a great show, don’t you think? Hehehehe~"
+    s abbbaoa "Food philosophy with Sayori! That’d be a great show, don’t you think? Ehehehe~"
     return
 
 init 5 python:
@@ -1965,7 +1965,7 @@ label s_answer_god:
     s abbbbca "You know, I've never really thought about it that much."
     s abbbaca "I was never really sure what to think about religion; I guess you could say I was agnostic?"
     s abhabaca "But it's kind of hard to stay that way when you realize that you and your entire world have a 'creator'."
-    s abbccoa "Blessed be {i}Dan Salvato{/i}, hallowed be thy name! Ehehe~"
+    s abbccoa "Blessed be {i}Dan Salvato{/i}, hallowed be thy name! Ehehehe~"
     s abbcaca "He's a pretty cool guy, but he’s pretty secretive about whatever he's working on from what I’ve seen online."
     s abhabaca "He's more like a Dad rather than some unapproachable God, I think."
     return
@@ -2040,7 +2040,7 @@ label s_answer_cookies:
     s abaaaoa "But I hope you can imagine how tasty they smell at least, ehehehe~"
     s ebgcaoaj "Actually I just had an idea!"
     s ebgbcoa "If you get some cookies yourself, it’d be like we’re having them together!"
-    s abgbaoa "There’s nothing wrong with a sweet treat every now and then, hehehe~"
+    s abgbaoa "There’s nothing wrong with a sweet treat every now and then, ehehehe~"
     hide cookies
     return
 
@@ -2187,7 +2187,7 @@ label s_answer_profession:
     s abhacaa "So, I think I'd be a good caregiver or psychologist!"
     s abbcaaa "Maybe even a... diplomatist?"
     s bbegmpa "No, that's not right... a great {w=0.5}{nw}"
-    extend abbcaoa "{i}diplomat{/i}, ehehe~"
+    extend abbcaoa "{i}diplomat{/i}, ehehehe~"
     s abbccoa "I could stop arguments on a global scale, and do my part to fix any disagreements!"
     s "I'd be happy doing almost anything, as long as I can be useful and make a difference in somebody's life."
     s abhaaca "I suppose I could do something a little more creative, like painting, or writing..."
