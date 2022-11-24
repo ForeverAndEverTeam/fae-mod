@@ -38,7 +38,6 @@ init -1 python in fae_regrets:
         return return_regrets
 
 label regret_init:
-
     python:
         regrets_menu_items = [
             (_regrets.prompt, _regrets.label)
@@ -70,7 +69,6 @@ init 5 python:
     )
 
 label regret_cheating:
-
     s "Thank you for apologising."
     s "Cheating is bad, you know!"
     s "You don't want Nathan to hunt you down."
@@ -96,12 +94,12 @@ init 5 python:
     )
 
 label regret_sudden_quit:
-
     s "Thank you."
     
     $ persistent._fae_await_regret.remove(fae_regrets.UNEXPECTED_QUIT)
 
     return
+
 
 init 5 python:
 
@@ -115,17 +113,12 @@ init 5 python:
         chat_group=CHAT_GROUP_REGRET
     )
 
-
 label regret_generic:
 
     if len(persistent._fae_await_regret) == 0:
-
         s "Huh?"
-
         s "For what?"
 
     else:
-
         "You know what you did."
-
         return
