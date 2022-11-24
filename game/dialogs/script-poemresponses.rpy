@@ -33,7 +33,7 @@ label s_poems_bottles:
     if persistent.last_playthrough > 0:
         s bbhemoaj "Ironically, all of those 'bottles' would shatter shortly after I'd written this poem."
     s bbhejoaj "I spent a lot of time writing this one, actually. {w=0.5}{nw}"
-    extend bbfcjoaj "I didn't even have time to get my homework done, ehehe…"
+    extend bbfcjoaj "I didn't even have time to get my homework done, ehehehe…"
     s bahdiia "So, I hope you liked it. {w=0.5}{nw}"
     extend abfdaha "I wouldn't want all of the time I spent on it to go to waste."
     return
@@ -63,7 +63,7 @@ label s_poems_flower:
     s bbagdoag "Oops! I think my flowers might not have fully grown back just yet! Sorry, [player]."
     pause 0.5
     s bbagmoa "Maybe I just need to give them some more time."
-    s bbbccia "I'll just keep watering them in the meantime, ehehe~"
+    s bbbccia "I'll just keep watering them in the meantime, ehehehe~"
     return
 
 label s_poems_last:
@@ -184,7 +184,7 @@ label s_poems_prose:
     s abhaaca "Can you be confident in your decisions? Even when {i}you{/i} think it's the correct one?"
     s dbhhbsa "I've read somewhere that modern science thinks that the universe is just a heap of tiny pieces that make up an order in a world of chaos."
     s abhhaoa "So, I decided to make this poem a bit chaotic by writing it in prose."
-    s abhacqa "Ehehe~"
+    s abhacqa "Ehehehe~"
     s fbgcksaj "Wait, I just realized that's something Monika might have done."
     s ebbbbca "She enjoyed playing with the spacing of her poetry. {w=0.5}{nw}"
     extend gbhabra "Although, that could just be to try and stand out..."
@@ -224,7 +224,7 @@ label s_poems_val:
     s bbegmoaj "I know it doesn't look too fancy. I couldn't really find out how to make it cute..."
     s abegaaa "But at least I did my best writing that poem for you!"
     s cbgcnaa "I tried to show that my love for you has no dimensional limits." 
-    s "Ehehe~"
+    s "Ehehehe~"
     s abhfkda "Ironically, the card had a limit for how much I could write in it."
     s "So I had to try and express all of my love using as little words as possible…"
     s abaaaoa "I hope you can understand the meaning regardless."
