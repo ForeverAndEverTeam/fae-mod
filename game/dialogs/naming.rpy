@@ -28,11 +28,9 @@ label sayori_nickname:
     if not persistent._fae_offered_name:
         s "You know..."
         s "Why don't you give me a nickname?"
-
         s "What do you think?"
 
     else:
-
         jump fae_nickname_yes
 
     $ _history_list.pop()
@@ -64,14 +62,12 @@ label sayori_nickname:
                     $ done = True
                 
                 elif not lowername:
-
                     s "You have to give me a nickname, silly."
                 
                 elif lowername != "sayori" and lowername == player.lower():
                     s "That's your name!"
                 
                 elif lowername == s_name.lower():
-
                     s "Choose a new name!"
                 
                 elif persistent._fae_awkward_name and lowername == persistent._fae_awkward_name.lower():
@@ -83,7 +79,6 @@ label sayori_nickname:
                     s "I'm not comfortable calling you that."
                 
                 else:
-
                     if not fae_bad_name_comp.search(inputname) and lowername not in ["yuri", "monika", "natsuki"]:
                         if lowername == "sayori":
                             $ inputname = inputname.capitalize()
@@ -104,6 +99,7 @@ label sayori_nickname:
                         s "Oki-doki"
                         if s_name == "Sayori":
                             s "I'll go back to my name then."
+                            
                         else:
                             s "From now on, you can call me Al{nw}"
                             s "From now on, you can call me{fast} '[s_name].'"
@@ -116,7 +112,6 @@ label sayori_nickname:
 
                         if lowername in ["yuri", "monika", "natsuki"]:
                             s "...!"
-
                             s "Why?!"
 
                             if seen_no("regret_bad_nickname") == 2:
@@ -125,7 +120,7 @@ label sayori_nickname:
                             pause 5.0
                         
                         else:
-                            s "THat's not nice!"
+                            s "That's not nice!"
 
                             if seen_no("regret_bad_nickname") == 2:
                                 call fae_nickname_lock
@@ -136,8 +131,7 @@ label sayori_nickname:
 
                         if s_name.lower() != "sayori":
                             $ s_name = "Sayori"
-                            $ persistent._fae_sayori_nickname = "Sayori"
-                        
+                            $ persistent._fae_sayori_nickname = "Sayori"                        
     
 
 init 5 python:
@@ -159,38 +153,29 @@ init 5 python:
 label sayori_give_nickname:
 
     if persistent.fae_allow_nicknames and persistent.fae_current_nickname == "Sayori":
-
         s "Sure!"
     
     else:
-
         if persistent.fae_gave_bad_name == 0:
             s "Another nickname?"
             s "Sure!"
         
         elif persistent.fae_gave_bad_name == 1:
-
             s "A new nickname?"
             s "Oki-doki."
         
         elif persistent.fae_gave_bad_name == 2:
-
             s "Alright."
             s "Please be respectful."
         
         elif persistent.fae_gave_bad_name == 3:
-
             s "Last chance."
-
     
     $ nickname = renpy.input(prompt="What do you want to call me?", allow=fae_globals.STANDARD_ALPHABETICAL_CHARACTERS, length=10).strip()
 
     if nickname.lower() == "nevermind":
-
         s "Change your mind?"
-
         s "Okay then!"
-
         return
     
     else:
@@ -211,27 +196,21 @@ label sayori_give_nickname:
     
     elif nickname_category == fae_nicknames.CATEGORY_DISLIKED:
         s "I don't think so."
-
         return
     
     elif nickname_category == fae_nicknames.CATEGORY_HATED:
-
         s "WHAT?!"
-
         s "NO."
 
         $ persistent.fae_gave_bad_name += 1
     
     elif nickname_category == fae_nicknames.CATEGORY_PROFANE:
-
         s "EXCUSE ME?!"
 
         $ persistent.fae_gave_bad_name += 1
     
     elif nickname_category == fae_nicknames.CATEGORY_AMUSING:
-
         s "Ehehehe~"
-
         s "You certainly have a sense of humour."
         s "[nickname] it is."
 
@@ -241,56 +220,44 @@ label sayori_give_nickname:
         return
     
     else:
-
         $ neutral_allowed = False
 
         if nickname.lower() == "sayori":
-
             s "That's my name now!"
 
             $ neutral_allowed = True
-        
+       
         elif nickname.lower() == persistent.playername.lower():
-
             s "That's your name."
 
         else:
-
             s "Hmmm..."
-
             s "Sure!"
 
             $ neutral_allowed = True
         
         if (neutral_allowed):
-
             $ persistent.fae_nickname_current_nickname = nickname
             $ s_name = persistent.fae_nickname_current_nickname
         
         return
     
     if persistent.fae_gave_bad_name == 1:
-
         s "This isn't like you..."
-
         s "That hurt."
 
         $ fae_regrets.add_new_regret_awaiting(fae_regrets.BAD_NAME)
         $ Affection.AffectionLossPercentile(1)
 
     elif persistent.fae_gave_bad_name == 2:
-
         s "Again?"
-
         s "That hurts."
 
         $ fae_regrets.add_new_regret_awaiting(fae_regrets.BAD_NAME)
         $ Affection.AffectionLossPercentile(2.5)
     
     elif persistent.fae_gave_bad_name == 3:
-
         s "Seriously?"
-
         s "No more warnings."
 
         $ Affection.AffectionLossPercentile(5)
@@ -298,9 +265,7 @@ label sayori_give_nickname:
         $ fae_regrets.add_new_regret_awaiting(fae_regrets.BAD_NAME)
     
     elif persistent.fae_gave_bad_name == 4:
-
         s "No."
-
         s "No more."
 
         $ Affection.AffectionLossPercentile(25)
