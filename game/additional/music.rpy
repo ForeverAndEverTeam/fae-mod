@@ -35,7 +35,7 @@ label music_menu:
             )
             player_music_options.sort()
 
-            player_music_options.insert(0, ("Sayonara", "mod_assets/bgm/Sayonara_Acoustic_Medley.ogg"))
+            #player_music_options.insert(0, ("Sayonara", "mod_assets/bgm/Sayonara_Acoustic_Medley.ogg"))
             
             player_music_options.append(("No music", "no_music"))
             success = True
