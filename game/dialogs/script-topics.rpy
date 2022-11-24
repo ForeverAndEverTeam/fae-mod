@@ -18,7 +18,6 @@ default persistent.height = None
 default persistent.metric = True
 
 
-
 init -1 python in chats:
     import store
     CHAT_DEFS = dict()
@@ -41,7 +40,6 @@ init 5 python:
     )
 
 label fae_room_switch:
-
     s "Sure!"
 
     $ main_background.room_switcher(bedroom)
@@ -70,6 +68,7 @@ label fae_kiss:
 
     return
 
+
 init 5 python:
     
     chatReg(
@@ -91,11 +90,7 @@ label fae_time:
     #$ love()
 
     s abbbbcea "Soon!"
-
     s abbbbjea "Very soon!"
-
-
-
     return
 
 
@@ -114,9 +109,8 @@ init 5 python:
     )
 
 label fae_gift:
-
     s "Sure!"
-
+    
     $ look_for_gift()
 
     return
@@ -200,6 +194,7 @@ label s_topics_depression:
     pause 1.0
     return
 
+
 init 5 python:
 
     chatReg(
@@ -215,8 +210,6 @@ init 5 python:
     )
 
 label s_topics_childhood:
-
-
     s abhaaca "I wonder why I have almost no memory of my childhood."
     s abhabfa "I guess that's just how it is for some people, but..."
     s abbbica "In the game, my childhood was the only thing that tied me with the MC, since we grew up together."
@@ -231,6 +224,7 @@ label s_topics_childhood:
     s ebgcaoa "There are many good things to look forward to in the future, so no reason to cling onto the past. But I'll never forget those good memories."
     s ebgccaa "They're a part of me after all."
     return
+
 
 init 5 python:
 
@@ -247,7 +241,6 @@ init 5 python:
     )
 
 label s_topics_guitar:
-
     #show sayori abaaaoa zorder 2
     s "I don't know if you noticed, but all the girls have their own instruments and musical influences in the game."
     s abgcaoa "Mine is the guitar."
@@ -267,6 +260,7 @@ label s_topics_guitar:
     s ebhhcqa "Make sure you get your tickets for my world tour in advance, [player]! Ehehehe~"
     return
 
+
 init 5 python:
 
     chatReg(
@@ -282,7 +276,6 @@ init 5 python:
     )
 
 label s_topics_flowers:
-
     s abhfaoa "What do you think about flowers?"
     s abhfboa "It's one of many beautiful things nature can create."
     s abhfloa "They are so colourful, have wonderful shapes, some even smell sweet..."
@@ -310,9 +303,6 @@ label s_topics_flowers:
     s fbfbkdaj "{i}...unless they want vengeance?{/i}"
     s bbheceaj "I hope they don't...ahahaha... hah..."
     return
-
-
-
 
 
 init 5 python:
@@ -394,7 +384,6 @@ init 5 python:
 )
 
 label s_topics_videogames:
-
     s abhfaoa "Do you like video games?"
     s "I think they're really impressive."
     s abbbaoa "And not just because I'm in one of them!"
@@ -430,7 +419,6 @@ init 5 python:
     )
 
 label s_topics_languages:
-
     s abhhbsa "Hey, [player]?"
     s "You know how I greet you in other languages sometimes?"
     s dbhhkca "Well I was thinking about where I learned to speak them..."
@@ -442,7 +430,6 @@ label s_topics_languages:
     s bbheciaj "But, let's get into that another time. It's kinda complicated to talk about, you know?" 
     s abagdea "Anyway, The more languages you can speak, the more friends you can make, right?"
     return
-
 
 
 init 5 python:
@@ -482,6 +469,7 @@ label s_player_colours:
  
     return
 
+
 #TODO: add exps here
 init 5 python:
     chatReg(
@@ -495,7 +483,6 @@ init 5 python:
         ),
         chat_group=CHAT_GROUP_NORMAL
     )
-
 
 label s_pronouns:
     s "Hey, [player]..."
@@ -514,6 +501,7 @@ label s_pronouns:
             s "Thanks, [player]!"
             s "I'll be sure to remember that!"
     return 
+
 
 init 5 python:
     chatReg(
@@ -556,6 +544,7 @@ label s_topics_dating:
     s abhfcaa "I hope we can plan a nice date soon, ehehehe~"
     return
 
+
 init 5 python:
     chatReg(
         Chat(
@@ -579,6 +568,7 @@ label s_topics_cinnamon_bun:
     extend bbfcmoaj "cute."
     s abaaaoa "...even if there aren't any cinnamon buns in the game."
     return
+
 
 init 5 python:
     chatReg(
@@ -608,6 +598,7 @@ label s_topics_poems:
     s abaaaaa "I also can show you an old poem, if you want."
     s abbbaoa "Maybe, they will help you to understand me and what I was going through."
     return
+
 
 init 5 python:
     chatReg(
@@ -640,7 +631,6 @@ label s_topics_drawing:
     return
 
 
-
 init 5 python:
     chatReg(
         Chat(
@@ -655,32 +645,26 @@ init 5 python:
     )
 
 label s_topics_bulli:
-    
     s bbfcaba "Hey, [player]..."
     s abfcaca "You know I can access the internet from your computer, {w=0.5}right?"
     s abbdaca "Well I found a place called \"Reddit\", {w=0.5} and there were people talking about the game there."
     s bbfcjca "But I also found people making fun of what happened to me."
     s abagjca "As I know, fans call them {i}'Bulli'{/i} posts."
-    
     s cbbcaca "They think it's funny to joke about a broken girl, {w=0.5}who had committed suicide under her mad friend's influence..."
     s abhfapa "Even if she was revived and got over her problems since then."
     s abbbaca "But on the other hand, can I control what makes people laugh?"
     s "Some people use macabre humor as a coping mechanism for stress, or anxiety..."
-    
     s bbbbaca "You can't really control what someone finds funny, as much as you might want to."
     s abagaca "And to be honest, there's a lot worse they could be doing compared to mocking a VN character's death."
     s abbbaca "Some of the most successful comedians in your world will go far beyond that, just to see where the 'line' is..."
-    
     s bbbcbpa "However, most of such jokes are too bad and sometimes even hurtful."
     s bbbcaaa "But who am I to judge if it's okay for other people?"
     s abbbaaa "Anyway, I think the right decision is to forgive them, or tolerate them at the very least."
-    
     s abhaaca "If my fate is to be 'that hanging stupid annoying VN girl' for some people, then I'm ready to accept it. What more could I do?"
     s bbfcica "Getting worked up over it would just make me feel worse in the long run… {w=1.0}{nw}" 
-    
-    extend bbfcaaa "So I'd rather just tolerate it to the best of my ability~"
-    
+    extend bbfcaaa "So I'd rather just tolerate it to the best of my ability~"   
     return
+
 
 init 5 python:
     chatReg(
@@ -695,40 +679,28 @@ init 5 python:
         chat_group=CHAT_GROUP_NORMAL
     )
 
-
-
 label s_topics_isolation:
     s bbfcicb "For some reason, despite having internet access, {w=0.5}{nw}"
-    
     extend bbagipa "I somehow can't manage to communicate with other people there."
-    
     s bbfcica "Anytime I try to talk with somebody often ends up with a connection error."
     s bbagipa "It looks like there is something written in the game code, restricting my ability to interact with the real world."
     s bbfcica "I can only sign up for sites and even post, but I can't message anybody."
     s abbbacb "So I could create a Twitter account or something… {w=0.5}{nw}"
-    
     extend abfcaca "Like how Monika made hers, and was able to talk to many fans."
-    
     s abhfbcb "I don't really have a reason for doing that though, besides to kill some loneliness."
     s abbbacaj "Maybe having just you would be okay for Yuri or at most Monika, {w=0.5}{nw}"
-    
     extend abfcacaj "but not for me… {w=0.5}{nw}"
     extend bbegmoaj "no offense."
-    
     s "I guess, I'm too sociable to the point of being scared of isolation."
     s gbhabpa "Maybe once, I'll manage to break this meanie barrier..."
     s cbfcbca "But the game code is so long and difficult to read, {w=0.5}{nw}"
-    
     extend cbfcaca "that I can't even find the lines separating me from the rest of real people!"
-    
     s bbbcaca "I can't even make a normal chat form for us..."
     s "So I'm still a bit isolated from you too."
     s abaaaoa "But when I find a way to {i}'hear'{/i} your world, I'll find you."
     s abgcaoa "And then, we'll finally be able to talk like a normal couple, {w=0.5}{nw}"
     extend abgccoa "on the internet or at least right here."
-    
     return
-
 
 
 init 5 python:
@@ -768,7 +740,6 @@ label s_topics_public_service_announcement:
     return
 
 
-
 init 5 python:
     chatReg(
         Chat(
@@ -781,7 +752,6 @@ init 5 python:
         ),
         chat_group=CHAT_GROUP_NORMAL
     )
-
 
 label s_topics_pets:
     s abhfaoa "Do you like pets?"
@@ -799,9 +769,7 @@ label s_topics_pets:
     return
 
 
-
 # PLAYER TOPICS
-
 
 init 5 python:
 
@@ -818,7 +786,6 @@ init 5 python:
     )
 
 label s_player_cooking:
-
     s bbaamoaj "To be honest, {nw}"
     extend bbheiiaj "scrambled eggs are probably the most elaborate thing I've ever cooked..."
     s abhhksa "I've never baked anything before, though."
@@ -839,7 +806,7 @@ label s_player_cooking:
     s abhfasa "Though, I'll probably never be as good as Natsuki."
     s abbbcoa "Well, I guess as long as I'm having fun in the process, that's what matters the most, isn't it?"
     return
-
+    
 
 init 5 python:
 
@@ -857,7 +824,6 @@ init 5 python:
     )
 
 label s_player_pets:
-
     s gbaabda "Hmmm, let me think...." 
     s "I really like a lot of different animals, but I don't think I could properly care for anything that requires a lot of constant attention..." 
     s bbegcia "I'd love to have a dog, but I'd have to have the energy to keep up with it."
@@ -867,6 +833,7 @@ label s_player_pets:
     s ebgcaea "Ohhh, I know! I could adopt an elderly cat that mostly just wants to lay around and sleep all day, just like me!"
     call s_player_cats from _call_s_player_cats
     return
+
 
 init 5 python:
 
@@ -906,7 +873,6 @@ init 5 python:
         chat_group=CHAT_GROUP_NORMAL
     )
 
-
 label s_topic_archetype:
     s abhfho "Hey [player], do you remember when Monika compared Yuri and Natsuki to character archetypes?"
     s abhfco "I was curious about what my archetype could be so I read some online articles about them and I think I'm pretty close to the 'genki' archetype."
@@ -926,6 +892,7 @@ label s_topic_archetype:
     s ebhacea "There's always more to a person than meets the eye, so try to always be kind."
     s ebhadqa "You never know what someone else might be going through, and a simple smile can really make someone's day!"
     return
+
 
 init 5 python:
 
@@ -960,6 +927,7 @@ label s_topic_voice:
     s ebagcea "Ehehehe~ just kidding, [player]!"
     return
 
+
 init 5 python:
 
     chatReg(
@@ -973,7 +941,6 @@ init 5 python:
         ),
         chat_group=CHAT_GROUP_NORMAL
     )
-
 
 label s_topic_lit:
     s abhaaca "As you know, this game {i}was{/i} about our literature club..."
@@ -990,6 +957,7 @@ label s_topic_lit:
     s abhadkb "That said, I liked writing about my feelings when we all shared poems together."
     s abgcaoa "And that helped me to get closer to {i}you{/i}, even if I didn't know it yet."
     return
+
 
 init 5 python:
 
@@ -1023,6 +991,7 @@ label s_topic_charity:
     s abbbdqa "As long as you're taking care of yourself, I'm happy, [player]~"
     return
 
+
 init 5 python:
 
     chatReg(
@@ -1038,7 +1007,6 @@ init 5 python:
     )
 
 label s_topic_programming:
-    
     s abhaaca "I'm completely new to the whole concept of programming, to be honest."
     s "I'm trying to learn {i}Ren'Py{/i}, the engine this game runs on."
     s abbbaaa "And apparently it uses a combo of its own languages and {i}Python 2{/i}."
@@ -1060,6 +1028,7 @@ label s_topic_programming:
     s bbfdbca "Maybe there are many Sayoris who were saved in this way, {w=0.5}{nw}"
     extend abgcaea "and I'm sure they'll be glad to get something awesome from you too!"
     return
+
 
 init 5 python:
 
@@ -1177,6 +1146,7 @@ label s_topic_clones:
     s abagaaa "From the bottom of my heart, [player], thank you for being here."
     return
 
+
 init 5 python:
 
     chatReg(
@@ -1200,6 +1170,7 @@ label s_topic_stars:
     s "I hope I get the chance to see for myself someday."
     s aahccea "And it'd be a dream come true if you were there too, ehehehe~"
     return
+
 
 init 5 python:
 
@@ -1262,6 +1233,7 @@ label s_topic_stop_visiting:
     s abhfaka "Thank you for being here for me. I love you, [player]."
     return
 
+
 label s_topic_stop_visiting_2:
 
     hide screen fae_jump_timer
@@ -1279,11 +1251,12 @@ label s_topic_stop_visiting_2:
     s abhfaka "Thank you for being here for me. I love you, [player]."
     return
 
+
 label s_topic_stop_visiting_3:
     hide screen fae_jump_timer
     s abhfcka "Yeah… I'm okay now, I think…"
-
     return
+        
         
 init 5 python:
 
@@ -1299,7 +1272,6 @@ init 5 python:
         ),
         chat_group=CHAT_GROUP_NORMAL
     )
-
 
 label s_topic_marriage:
     s abaamob "Hey [player], I was wondering..."
@@ -1325,7 +1297,6 @@ label s_topic_marriage:
     return
 
 
-
 init 5 python:
 
     chatReg(
@@ -1340,7 +1311,6 @@ init 5 python:
         chat_group=CHAT_GROUP_NORMAL
     )
 
-
 label s_topic_presents:
     s abhfaoa "People often give presents every holiday or for some special date."
     s abaaaoa "Everyone likes to get presents! Including me, of course, ehehehe~"
@@ -1351,6 +1321,7 @@ label s_topic_presents:
     s abhfaoa "And I'll give you presents too, of course!"
     s abhfcaa "And I'll do my best to make it the best present ever!"
     return 
+
 
 init 5 python:
 
@@ -1413,6 +1384,7 @@ label s_topic_name:
     s abaaasa "What about you, [player], does your name have a special meaning? I'd love to know!" 
     return
 
+
 init 5 python:
 
     chatReg(
@@ -1436,6 +1408,7 @@ label s_topic_art:
     s abbccea "Fun is what makes great art great! Ehehehe~"
     return
 
+
 init 5 python:
 
     chatReg(
@@ -1456,8 +1429,8 @@ label s_topic_touches:
     s nbaglra "If only I had the chance to feel your embrace…" 
     s nbaglaag "I’d take it in a heartbeat and just enjoy the moment between us…"
     s nbagaobg "I really hope that one day I’ll get to know that feeling."
-    
     return
+
 
 init 5 python:
 
@@ -1481,6 +1454,7 @@ label s_topic_merch:
     s abbbaoa "But if you don’t that’s okay too, it can be pretty expensive and I get that it’s not everyone’s thing."
     s abagcaa "Above all, I appreciate spending time with you every day."
     return
+
 
 init 5 python:
 
@@ -1515,7 +1489,6 @@ label s_topic_oversleeping:
     return
 
 
-
 ## Game Universe
 
 init 5 python:
@@ -1547,6 +1520,8 @@ label s_topic_time:
     s abbbcaa "From your PC's clock!"
     s abhaaca "Does that mean we kinda share the same time then?"
     s "Well I think I’ll go by that for reference from now on!"
+    return
+
 
 init 5 python:
 
@@ -1579,6 +1554,7 @@ label s_topic_worlds:
     s abgccoa "I'd still do my best to help you, of course!"
     return
 
+
 init 5 python:
 
     chatReg(
@@ -1593,7 +1569,6 @@ init 5 python:
         chat_group=CHAT_GROUP_NORMAL
     )
 
-
 label s_topic_questions:
     s abhfaoa "Hey [player], I know you still might have a lot of questions for me, it's a big part of getting to know somebody, after all."
     s "So I added a new section to {i} the 'Talk' menu{/i} with more questions to ask!"
@@ -1605,6 +1580,7 @@ label s_topic_questions:
     s "The result was really funny, and they were pretty good at portraying my character!"
     s abhaaca "I think I’ll check it out again, maybe I’ll find some new entries for the question menu!"
     return
+
 
 ## Food
 
@@ -1639,6 +1615,7 @@ label s_topic_breakfast:
     s abhfaoa "Your health is really important to me, [player]."
     return
 
+
 init 5 python:
 
     chatReg(
@@ -1664,6 +1641,7 @@ label s_topic_vegetarians:
     s abbbcaa "So although I’m not a vegetarian, I like to buy free-range products when I can, because then I know the animals have been treated well."
     s abhfaoa "What do you think, [player]?"
     return
+
 
 init 5 python:
 
@@ -1695,6 +1673,7 @@ label s_topic_pizza:
     s abbbaoa "Food philosophy with Sayori! That’d be a great show, don’t you think? Ehehehe~"
     return
 
+
 init 5 python:
 
     chatReg(
@@ -1721,6 +1700,7 @@ label s_topic_iceCream:
     s abbbcaa "Maybe we could make our own sometime!"
     return
 
+
 init 5 python:
 
     chatReg(
@@ -1746,6 +1726,7 @@ label s_topic_tech:
     s abhfaoa "Even right now I can still be a sort of virtual assistant!"
     s abhfcaa "So if you ever need me, I’ll try my best to help from here, [player]!"
     return
+
 
 init 5 python:
 
@@ -1855,6 +1836,7 @@ label s_answer_shipping: #What do you think about doki pairings?
         s bbgcaab "You know who I'm talking about, right? Ehehehe~"
     return
 
+
 init 5 python:
 
     chatReg(
@@ -1878,6 +1860,7 @@ label s_answer_holidays: #What is your favorite holiday?
     s abhfbaoa "I can’t wait to spend one with you someday, [player]!"
     return
 
+
 init 5 python:
 
     chatReg(
@@ -1892,7 +1875,6 @@ init 5 python:
         chat_group=CHAT_GROUP_NORMAL
     )
 
-
 label s_answer_books: # What are your favorite books?
     s bbegmoaj "I’ve never really been much of a reader, to be honest."
     s bbegacaj "But if I did pick up a book, I’d like to read something full of imagination. "
@@ -1900,6 +1882,7 @@ label s_answer_books: # What are your favorite books?
     s abbccoaj "After all, the true value in books is how they immerse you in the fantastical, after all."
     s abbccoaj "I’m starting to sound like Yuri now, ehehehe~"
     return
+
 
 init 5 python:
 
@@ -1922,6 +1905,7 @@ label s_answer_poems: #What did MC's poems look like to you?
     s abhfcaa "I heard it's a pretty unique gameplay feature for visual novels actually!"
     s abhfaoa "Not every game lets you change the story based on your decisions, let alone through minigames!"
     return
+
 
 init 5 python:
 
@@ -1946,6 +1930,7 @@ label s_answer_love:
         s abhabaca "But even without a programmed need for love, I'd have fallen for you anyway." 
     s abhacoa "You're so kind, considerate, and you tried to make all of us happy. I really admire that about you."
     return
+
 
 init 5 python:
 
@@ -1997,6 +1982,7 @@ label s_answer_politics:
     extend abbccaa "that's when things can really be changed for the better."
     return
 
+
 init 5 python:
 
     chatReg(
@@ -2010,8 +1996,6 @@ init 5 python:
         ),
         chat_group=CHAT_GROUP_NORMAL
     )
-
-
 
 label s_answer_cookies:
     s abhfaoa "I haven't had any cookies since that one time with Natsuki."
@@ -2107,7 +2091,6 @@ label s_answer_editing:
     s abaaaoa "I still don't know how it all works exactly, but if I want to make a new file, all I have to do is think about it!"
     
     python:
-        
         makeFile('readme', 'All I have to do is think about it!')
         
     s abhabaca "It's kinda like telekinesis but much much cooler!"
@@ -2115,6 +2098,7 @@ label s_answer_editing:
     extend abbbcaaj "but I’m getting better!"
     s abhabaca "So can you check the updates from time to time for me? Pretty please~"
     return
+
 
 init 5 python:
 
@@ -2160,10 +2144,8 @@ init 5 python:
     )
 
 label s_answer_read:
-
     s  ebbcaoa "Okay! Just pick the one you want to read."
     call poem_redux
-    
     return
 
 
@@ -2195,6 +2177,7 @@ label s_answer_profession:
     s abhaaca "Art can express so many amazing feelings and help others feel like someone understands what they're going through, and that’s more than enough of a profit for me."
     return
 
+
 init 5 python:
 
     chatReg(
@@ -2223,6 +2206,7 @@ label s_answer_opinion: #Opinion about an other club member
             call s_answer_game_opinion_mc
     return
 
+
 label s_answer_game_opinion_n:
     s bbhfaaa "Natsuki was a good friend of mine."
     s bbhfaca "While she could come off as pretty arrogant and argumentative sometimes, she really did help out the club."
@@ -2236,6 +2220,7 @@ label s_answer_game_opinion_n:
     s abgbaaa "So Natsuki moved her collection to the clubroom when she joined us."
     s abgbcaa "But besides that, I think she was a lot kinder and more compassionate than what she showed to the outside world."
     return
+
 
 label s_answer_game_opinion_y:
     s abaaaa "Yuri was the most {i}enigmatic{/i} club member."
@@ -2254,6 +2239,7 @@ label s_answer_game_opinion_y:
         s abaaaa "We all were glad to have her as a club member."
         s "Even Natsuki, despite the two of them being so different from each other."
     return
+
 
 label s_answer_game_opinion_m:
     s abaaaaa "Well, Monika was the first club president."
@@ -2291,7 +2277,6 @@ label s_answer_game_opinion_mc:
     s bbbbaaa "After all, he’s just your guide in our world."
     s abhfaoa "And he managed to bring us together~"
     return
-
 
 
 init 5 python:
@@ -2340,7 +2325,6 @@ init 5 python:
     )
 
 label s_event_music_intro:
-
     s abfcaoa "Hey [player]! Guess what!"
     s abfccaa "I did some coding and I found a way to let you play your own music here!"
     s abegabaj "It might be a little buggy, ehehehe~"
@@ -2348,9 +2332,7 @@ label s_event_music_intro:
     s abfccaa "But it seems to be working fine for me!"
     s abagaoa "All you need to do is put a .mp3 file in the {i}music{/i} folder in the game directory, and click on the {i}Music{/i} tab in the bottom-left!"
     s abagcka "I'm basically giving you the aux cord to the rest of my existence, so no pressure! Ehehehe~"
-
     return
-
 
 
 init 5 python:
@@ -2389,6 +2371,7 @@ label s_stopic_bulls_and_cows:
 
     return
 
+
 init 5 python:
 
     chatReg(
@@ -2418,13 +2401,6 @@ label s_topic_reversi:
     $ reversi = minigame(_("Reversi"), 'mg_reversi', reversi_prep)
     $ mg_list = []
     $ mg_list.append(reversi)
-
-
-
     return
 
-
-
-
- 
 
