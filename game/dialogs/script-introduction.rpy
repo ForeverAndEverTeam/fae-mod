@@ -1,6 +1,3 @@
-
-
-
 init 0 python in fae_intro:
     import random
     import store
@@ -42,10 +39,7 @@ label fae_intro_checks:
     $ renpy.jump(fae_intro.INTRO_STATUS_DEFS.get(fae_intro.FAEIntroStatus(persistent.fae_intro_status)))
 
 label fae_intro_start:
-
     pass
-
-
 
 label fae_intro_1:
 
@@ -194,17 +188,13 @@ label fae_intro_2:
     call hideconsole
     s ebbbdoa "I managed to put together a menu full of questions that you can ask and other cool stuff!"
     s "For example, to change or turn off the music, you can just…"
-    
     s abbbcoa "And I added a really sweet way to say goodbye!" 
     s "All you need to do is click the {i}\"Say Goodbye\"{/i} button in the menu."
     s abhaboa "Then I can say farewell and send you off properly~"
     s abhfcaa "For now, let's just sit and relax together."
 
-
     $ persistent.fae_intro_status = int(fae_intro.FAEIntroStatus.complete)
-    
     $ persistent.fae_intro_complete = True
-
     $ persistent.autoload = "ch30_autoload"
     $ renpy.save_persistent()
     $ persistent.s_name = "Sayori"

@@ -433,7 +433,6 @@ init -1 python in fae_events:
     ))
 
 
-
     def event_selector():
 
         kwargs = dict()
@@ -451,11 +450,8 @@ init -1 python in fae_events:
         
         else:
             return None
-    
 
-    
-    
-    
+
     def show_visuals(
         sayori_sprite_code,
         bgm="mod_assets/bgm/s1_ac.ogg"
@@ -471,13 +467,7 @@ init -1 python in fae_events:
     
 label event_interlude:
     s "..."
-
     return
-
-
-
-    
-    
  
 
 label event_new_years_eve:
@@ -496,14 +486,10 @@ label event_new_years_eve:
     extend " than a crap ton of explosions and snacks?"
     s "Ehehehe.{w=0.5}{nw}"
     extend " It's gonna be great!"
-
     
-
     $ fae_events.getHoliday("event_new_years_eve").complete()
 
     return
-
-
 
 
 init 5 python:
@@ -534,7 +520,6 @@ label fae_event_mr_cow_transform:
     s "Pffffftt-"
     
     show asset spe1 zorder 2
-
     
     s "Bwahahahahah- I'm sorry, [player]!"
     s "I'm fine- I just couldn't resist that one!"
@@ -548,7 +533,7 @@ label fae_event_mr_cow_transform:
 
     pause 2.0
     
-    #ause 2.0
+    #pause 2.0
 
     $ fae_events.show_visuals("abhfcqa")
 
@@ -584,10 +569,7 @@ label fae_event_pointy_stick_stabber_girl:
 
     show sayori idle at fae_center zorder fae_sprites.FAE_SAYORI_ZORDER
 
-
     show asset knife as knife at fae_center zorder fae_sprites.FAE_SAYORI_ZORDER
-
-    
 
     s abbcckc "Hi, [player]! Ready to chop up some bitches?"
     s "Does this look like the face of mercy, [player]?"
@@ -601,7 +583,6 @@ label fae_event_pointy_stick_stabber_girl:
     
     s eahcbsa "Great question!{w=1.0} {nw}"
     extend eahcada "I've been doing some more digging into the code to recover as much stuff as possible!"
-    
     s ebbccqa "I managed to get this knife back today!"
     s fbfckdaj "Not really sure if I'll ever need it for anything, but I figured I might as well have it."
     s bbfcmoaj "But maybe it's better if I put this away now."

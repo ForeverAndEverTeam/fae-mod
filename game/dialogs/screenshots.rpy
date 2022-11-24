@@ -114,11 +114,9 @@ label photo_topic:
 
         call take_photo from _call_take_photo
 
-
         s "Did you just take a photo of me?"
 
         menu:
-
             "Yes, I did.":
                 s "Well..."
 
@@ -126,7 +124,6 @@ label photo_topic:
         $ persistent.fae_good_photos += 1
 
         s "Oh...{w=0.5} you're taking that photo now?"
-
         s "Sure!"
 
         call take_photo from _call_take_photo_1

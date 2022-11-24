@@ -18,17 +18,11 @@ init 5 python:
     )
 
 label s_player_birthday:
-
     s "Shall you share your birthday?"
-
     menu:
         "Sure!":
             s "Alright!"
             jump fae_bday_player_select_select
-
-
-
-
 
 
 label fae_bday_player_select_select:
@@ -38,7 +32,6 @@ label fae_bday_player_select_select:
 
     if not selected_date_t:
         s "Try again!"
-
         jump fae_bday_player_select_select
     
     $ selected_date = selected_date_t.date()
@@ -49,19 +42,16 @@ label fae_bday_player_select_select:
         jump fae_bday_player_select_select
 
     elif selected_date == _today:
-
         s "You couldn't have been born today!"
 
         jump fae_bday_player_select_select
     
     elif _today.year - selected_date.year < 5:
-
         s "No way!"
 
         jump fae_bday_player_select_select
     
     if _today.year - selected_date.year < 13:
-
         s "No way you're that young."
     
     else:
@@ -72,7 +62,6 @@ label fae_bday_player_select_select:
 
     s "Your birthdate is [new_bday_str]?{nw}"
     $ _history_list.pop()
-
     menu:
         s "Your birthdate is [new_bday_str]?{fast}"
 
@@ -96,7 +85,6 @@ label fae_bday_player_select_select:
             jump fae_bday_player_bday_select_select
     
     if persistent._fae_player_bday is not None:
-
         python:
             store.fae_calendar.removeRepeatable_d(
                 "player-bday",
@@ -124,7 +112,6 @@ label fae_bday_player_select_select:
 
 
 label birthdate_set:
-
     if old_bday is not None:
         $ old_bday = old_bday.replace(year=fae_player_bday_curr().year)
     $ persistent._fae_player_confirmed_bday = True

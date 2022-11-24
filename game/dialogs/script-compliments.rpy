@@ -59,8 +59,6 @@ label compliment_cute:
     $ Affection.getAffectionGain(bypass=get_chat("compliment_cute").seen_no == 0)
 
     return
-
-
     
 
 init 5 python:
