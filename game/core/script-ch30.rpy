@@ -99,8 +99,6 @@ label ch30_main:
     
     $ s_name = persistent._fae_sayori_nickname
 
-    $ persistent.clear[9] = True
-
     if not persistent.fae_intro_complete:
         jump fae_intro_checks
     else:
@@ -138,11 +136,7 @@ label ch30_setup:
     show black zorder 99
 
 
-    $ Sayori.setOutfit(fae_outfits.get_outfit("uniform"))
-
-    $ main_background.form()
-
-    $ fae_sky.reload_sky()
+    $ Sayori.setOutfit(fae_outfits.get_outfit("fae_uniform"))
 
     python:
         try:
@@ -220,7 +214,7 @@ label ch30_init:
             Sayori.setOutfit(fae_outfits.get_outfit(persistent.fae_outfit_quit))
         
         else:
-            Sayori.setOutfit(fae_outfits.get_outfit("uniform"))
+            Sayori.setOutfit(fae_outfits.get_outfit("fae_uniform"))
         
         fae_utilities.log("Outfit Set.")
         
@@ -264,6 +258,7 @@ label ch30_init:
 
 label ch30_loop():
 
+
     call spaceroom(False, None) from _call_spaceroom
 
     $ init_qabs()
@@ -271,9 +266,6 @@ label ch30_loop():
     show sayori idle at fae_center zorder store.fae_sprites.FAE_SAYORI_ZORDER
 
     show screen hidden1(True)
-
-    
-
 
     python:
 
@@ -402,10 +394,11 @@ label fae_force_quit_attempt:
         s "Wait what?"
 
         s "You can't just leave like that!"
-        
-        $ Affection.AffectionLossPercentile(2)
-        $ fae_regrets.add_new_regret_awaiting(fae_regrets.RegretTypes.UNEXPECTED_QUIT)
-        $ persistent._fae_await_apology_quit = fae_regrets.RegretTypes.UNEXPECTED_QUIT
+        python:
+
+            Affection.AffectionLossPercentile(2)
+            Sayori.add_new_regret_awaiting(fae_regrets.RegretTypes.UNEXPECTED_QUIT)
+            Sayori.add_regret_quit(fae_regrets.RegretTypes.UNEXPECTED_QUIT)
 
         hide screen hidden1
         $ renpy.jump("confirm_quit")
