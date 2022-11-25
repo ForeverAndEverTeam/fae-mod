@@ -195,7 +195,7 @@ init 0 python:
 init -2:
     default persistent.fae_outfit_self_change_enabled = True
     default persistent.fae_user_outfits_enabled = False
-    default persistent.fae_outfit_quit = "uniform"
+    default persistent.fae_outfit_quit = "fae_uniform"
     default persistent.fae_outfit_list = {}
     default persistent.fae_acs_list = {}
 
@@ -205,6 +205,7 @@ init -1 python in fae_outfits:
     import json
     import os
     import random
+    import re
     import store
     import store.fae_utilities as fae_utilities
     import store.fae_affection as fae_affection
@@ -314,6 +315,11 @@ init -1 python in fae_outfits:
         def unlock(self):
 
             self.unlocked = True
+            self.__store()
+        
+        def lock(self):
+
+            self.unlocked = False
             self.__store()
         
 
@@ -527,6 +533,11 @@ init -1 python in fae_outfits:
 
             if self.headgear and not self.headgear.unlocked:
                 self.headgear.unlock()
+        
+        def lock(self):
+
+            self.unlocked = False
+            self.__store()
 
 
         def to_json(self):
@@ -617,7 +628,7 @@ init -1 python in fae_outfits:
             return True
 
 
-    def __log_outfit(outfit, player_created=False):
+    def __reg_outfit(outfit, player_created=False):
         """
         Adds new outfit to complete list
         If it doesn't exist already in persistent memory, it's saved
@@ -651,7 +662,7 @@ init -1 python in fae_outfits:
                     _VISIT_NEW_UNLOCKS.append(outfit)
 
 
-    def __log_acs(acs):
+    def __reg_acs(acs):
 
         if acs.ref_name in __ALL_ACS:
             fae_utilities.log("Cannot register acs name: {0}, as already exists.".format(acs.ref_name))
@@ -740,8 +751,8 @@ init -1 python in fae_outfits:
             fae_utilities.log("Cannot load {0} as attributes are incorrect type.".format(json["ref_name"]))
             return False
         
-        elif "sayo_" or "fae_" in json["ref_name"]:
-            fae_utilities.log("Cannot load {0} as name is in a reserved namespace.".format(json["ref_name"]))
+        elif re.search("^fae_.", json["ref_name"].lower()):
+            fae_utilities.log("Cannot load acs {0} as the ref name contains a reserved namespace.".format(json["ref_name"]))
             return False
         
         elif re.search(__DISALLOWED_CHARACTERS_REGEX, json["ref_name"]):
@@ -777,7 +788,7 @@ init -1 python in fae_outfits:
                 fae_utilities.log("Cannot load acs {0} as sprites are missing".format(acs.ref_name))
                 return False
             
-            __log_acs(acs)
+            __reg_acs(acs)
             return True
     
 
@@ -815,8 +826,8 @@ init -1 python in fae_outfits:
             fae_utilities.log("Cannot load outfit as data is incorrect.")
             return False
         
-        elif "fae_" or "sayo_" in json["ref_name"]:
-            fae_utilities.log("Cannot load outfit {0} as the name contains reserved namespace.".format(json["ref_name"]))
+        elif re.search("^fae_.", json["ref_name"].lower()):
+            fae_utilities.log("Cannot load outfit {0} as the ref name contains a reserved namespace.".format(json["ref_name"]))
             return False
         
         elif re.search(__DISALLOWED_CHARACTERS_REGEX, json["ref_name"]):
@@ -887,7 +898,7 @@ init -1 python in fae_outfits:
                     fae_utilities.log("Outfit {0} contains locked elements; locking outfit.".format(outfit.ref_name))
                     outfit.unlocked = False
             
-            __log_outfit(outfit)
+            __reg_outfit(outfit)
             return True
     
     def _wipe_outfit_list():
@@ -1023,7 +1034,7 @@ init -1 python in fae_outfits:
             with open(os.path.join(__USER_OUTFITS_DIR, "{0}.json".fomat(outfit.ref_name)), "w") as file:
                 file.write(outfit.to_json())
             
-            __log_outfit(outfit, player_created=True)
+            __reg_outfit(outfit, player_created=True)
             store.Sayori.setOutfit(outfit)
             renpy.notify("Outfit saved!")
             return True
@@ -1039,7 +1050,7 @@ init -1 python in fae_outfits:
 
         if fae_utilities.makedirifnot(__USER_OUTFITS_DIR):
 
-            fae_utilities.log("Custom outfits dir was nto found and created.")
+            fae_utilities.log("Custom outfits dir was not found and created.")
         
         elif not fae_utilities.removeFileDir(
             path=os.path.join(__USER_OUTFITS_DIR, "{0}.json".format(outfit.ref_name))
@@ -1072,35 +1083,35 @@ init -1 python in fae_outfits:
                 return _OUTFIT_SCHEDULE_WEEKEND_LOW_AFFECTION.get(store.fae_get_current_time_block())
 
     
-    __log_acs(FAEHairstyle(
+    __reg_acs(FAEHairstyle(
         ref_name="bow",
         disp_name="Bow",
         unlocked=True,
         is_fae_acs=True
     ))
 
-    __log_acs(FAEClothes(
-        ref_name="uniform",
+    __reg_acs(FAEClothes(
+        ref_name="fae_uniform",
         disp_name="School Uniform",
         unlocked=True,
         is_fae_acs=True
     ))
 
-    __log_acs(FAEClothes(
+    __reg_acs(FAEClothes(
         ref_name="base",
         disp_name="Base",
         unlocked=True,
         is_fae_acs=True
     ))
 
-    __log_acs(FAEClothes(
+    __reg_acs(FAEClothes(
         ref_name="casual",
         disp_name="Tank Top",
         unlocked=True,
         is_fae_acs=True
     ))
 
-    __log_outfit(FAEOutfit(
+    __reg_outfit(FAEOutfit(
         ref_name="base",
         disp_name="Base",
         unlocked=True,
@@ -1109,16 +1120,16 @@ init -1 python in fae_outfits:
         hairstyle=get_acs("bow")
     ))
 
-    __log_outfit(FAEOutfit(
-        ref_name="uniform",
+    __reg_outfit(FAEOutfit(
+        ref_name="fae_uniform",
         disp_name="School Uniform",
         unlocked=True,
         is_fae_outfit=True,
-        clothes=get_acs("uniform"),
+        clothes=get_acs("fae_uniform"),
         hairstyle=get_acs("bow")
     ))
 
-    __log_outfit(FAEOutfit(
+    __reg_outfit(FAEOutfit(
         ref_name="casaul",
         disp_name="Casual/Tank Top",
         unlocked=True,
@@ -1130,45 +1141,45 @@ init -1 python in fae_outfits:
     
     _OUTFIT_SCHEDULE_WEEKDAY_HIGH_AFFECTION = {
 
-        store.FAETimeBlocks.early_morning: get_outfit("uniform"),
-        store.FAETimeBlocks.mid_morning: get_outfit("uniform"),
-        store.FAETimeBlocks.late_morning: get_outfit("uniform"),
-        store.FAETimeBlocks.afternoon: get_outfit("uniform"),
-        store.FAETimeBlocks.evening: get_outfit("uniform"),
-        store.FAETimeBlocks.night: get_outfit("uniform")
+        store.FAETimeBlocks.early_morning: get_outfit("fae_uniform"),
+        store.FAETimeBlocks.mid_morning: get_outfit("fae_uniform"),
+        store.FAETimeBlocks.late_morning: get_outfit("fae_uniform"),
+        store.FAETimeBlocks.afternoon: get_outfit("fae_uniform"),
+        store.FAETimeBlocks.evening: get_outfit("fae_uniform"),
+        store.FAETimeBlocks.night: get_outfit("fae_uniform")
     }
 
 
     _OUTFIT_SCHEDULE_WEEKEND_HIGH_AFFECTION = {
 
-        store.FAETimeBlocks.early_morning: get_outfit("uniform"),
-        store.FAETimeBlocks.mid_morning: get_outfit("uniform"),
-        store.FAETimeBlocks.late_morning: get_outfit("uniform"),
-        store.FAETimeBlocks.afternoon: get_outfit("uniform"),
-        store.FAETimeBlocks.evening: get_outfit("uniform"),
-        store.FAETimeBlocks.night: get_outfit("uniform")
+        store.FAETimeBlocks.early_morning: get_outfit("fae_uniform"),
+        store.FAETimeBlocks.mid_morning: get_outfit("fae_uniform"),
+        store.FAETimeBlocks.late_morning: get_outfit("fae_uniform"),
+        store.FAETimeBlocks.afternoon: get_outfit("fae_uniform"),
+        store.FAETimeBlocks.evening: get_outfit("fae_uniform"),
+        store.FAETimeBlocks.night: get_outfit("fae_uniform")
 
     }
 
     _OUTFIT_SCHEDULE_WEEKDAY_LOW_AFFECTION = {
 
-        store.FAETimeBlocks.early_morning: get_outfit("uniform"),
-        store.FAETimeBlocks.mid_morning: get_outfit("uniform"),
-        store.FAETimeBlocks.late_morning: get_outfit("uniform"),
-        store.FAETimeBlocks.afternoon: get_outfit("uniform"),
-        store.FAETimeBlocks.evening: get_outfit("uniform"),
-        store.FAETimeBlocks.night: get_outfit("uniform")
+        store.FAETimeBlocks.early_morning: get_outfit("fae_uniform"),
+        store.FAETimeBlocks.mid_morning: get_outfit("fae_uniform"),
+        store.FAETimeBlocks.late_morning: get_outfit("fae_uniform"),
+        store.FAETimeBlocks.afternoon: get_outfit("fae_uniform"),
+        store.FAETimeBlocks.evening: get_outfit("fae_uniform"),
+        store.FAETimeBlocks.night: get_outfit("fae_uniform")
     }
 
 
     _OUTFIT_SCHEDULE_WEEKEND_LOW_AFFECTION = {
 
-        store.FAETimeBlocks.early_morning: get_outfit("uniform"),
-        store.FAETimeBlocks.mid_morning: get_outfit("uniform"),
-        store.FAETimeBlocks.late_morning: get_outfit("uniform"),
-        store.FAETimeBlocks.afternoon: get_outfit("uniform"),
-        store.FAETimeBlocks.evening: get_outfit("uniform"),
-        store.FAETimeBlocks.night: get_outfit("uniform")
+        store.FAETimeBlocks.early_morning: get_outfit("fae_uniform"),
+        store.FAETimeBlocks.mid_morning: get_outfit("fae_uniform"),
+        store.FAETimeBlocks.late_morning: get_outfit("fae_uniform"),
+        store.FAETimeBlocks.afternoon: get_outfit("fae_uniform"),
+        store.FAETimeBlocks.evening: get_outfit("fae_uniform"),
+        store.FAETimeBlocks.night: get_outfit("fae_uniform")
 
     }
 
