@@ -6,7 +6,7 @@ screen hidden1(active=False):
     imagemap:
         auto "mod_assets/images/gui_prefs_%s.png"
 
-        hotspot (608, 276, 48, 45) action Jump("boop")
+        hotspot (608, 276, 48, 45) action [ Function(boop)]
     zorder 50
     vbox:
         xpos 0.090
@@ -80,6 +80,13 @@ label tell:
     
 
     
+    return
+
+
+label boop:
+
+    s "Did you just boop me?"
+    s "Eheheeh"
     return
 
 
