@@ -618,7 +618,7 @@ label fae_event_sayori_desk_hide:
     s "Ehehehe, [player] will never see this coming, Mr. Cow!"
     s "Oh! I think they're here! Shhh, get down!" 
     s "Ready? 3... 2... 1..."
-    hide spe2
+    hide asset spe2
     hide emptydesk
     $ style.say_dialogue = style.normal
     show sayori at t11 zorder fae_sprites.FAE_SAYORI_ZORDER
@@ -647,6 +647,7 @@ label fae_event_door_open:
             jump event_door_open
         "Gently open the door":
             hide black
+            show Sayori
             $ main_background.form()
             $ fae_sky.reload_sky()
             s bbegmoajj "Whoops! Sorry about that!"

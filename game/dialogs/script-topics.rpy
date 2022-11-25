@@ -496,6 +496,7 @@ label s_topic_pronouns:
             abgbcoa "Alright! From now on I’ll use {i}They/Them{/i}."
     s abhfaoa "And of course if you’d ever like me to use different ones, just ask!"
     s abgbaaa "The most important thing for me is that you’re comfortable expressing yourself."
+    return
 
 init 5 python:
     chatReg(
@@ -509,17 +510,19 @@ init 5 python:
         ),
         chat_group=CHAT_GROUP_NORMAL
     )
+label s_topic_pronouns_redux:
 
     s abgbaaa "Which pronouns would you like me to refer to you by?"
     menu:
         "He/Him":
-            abgbcoa "Alright! From now on I’ll use {i}He/Him{/i}."  
+            s abgbcoa "Alright! From now on I’ll use {i}He/Him{/i}."  
         "She/Her":
-            abgbcoa "Alright! From now on I’ll use {i}She/Her{/i}."
+            s abgbcoa "Alright! From now on I’ll use {i}She/Her{/i}."
         "They/Them":
-            abgbcoa "Alright! From now on I’ll use {i}They/Them{/i}."
+            s abgbcoa "Alright! From now on I’ll use {i}They/Them{/i}."
     s abhfaoa "And of course if you’d ever like me to use different ones, just ask!"
     s abgbaaa "The most important thing for me is that you’re comfortable expressing yourself."
+    return
 
 
 init 5 python:
@@ -1307,7 +1310,7 @@ label s_topic_marriage:
             s "I can't just let you loaf around all day!"
             s abbbcqa "So you'd have to help me too, and work as a team, like peanut butter and jelly!"
             s abegaqb "But jokes aside, I'm so glad you said yes. I love you, [player]~"
-            return
+            return "love"
         "No":
             s abaghcb "I understand! A free relationship has its own benefits after all."
             s abagmca "Besides marriage isn’t as popular as it used to be, it’s pretty expensive for one, and there are alternatives like civil partnerships which do basically the same thing."
@@ -2164,9 +2167,72 @@ init 5 python:
 
 label s_answer_read:
     s  ebbcaoa "Okay! Just pick the one you want to read."
-    call poem_redux
-    return
 
+    python:
+
+        poetry_list = [
+            #("The Life of a Hopeless Romantic", poem_d_day)#, False, False)
+            ("Bottles", poem_bottles, False, False),
+            ("Sunshine", poem_sunshine, False, False),
+            ("Flower", poem_flower, False, False),
+            ("Last", poem_last, False, False),
+            ("Fruits", poem_fruits, False, False),
+            ("Angel", poem_angel, False, False),
+            ("Leaf", poem_leaf, False, False),
+            ("Prose", poem_prose, False, False),
+            ("Afterlight", poem_afterlight, False, False)
+        ]
+
+        ret_back = ("Nevermind", False, False, False, 20)
+
+        #poetry_list.extend(fae_poems.gsp())
+
+
+    call screen fae_gen_scrollable_menu(poetry_list, fae_ui.SCROLLABLE_MENU_TXT_MEDIUM_AREA, fae_ui.SCROLLABLE_MENU_XALIGN, ret_back)
+
+
+    $ _poem = _return
+
+    if not _poem:
+        return "prompt"
+
+    if _poem == poem_bottles:
+        call fae_showpoem(_poem)
+        
+
+    elif _poem == poem_sunshine:
+        call fae_showpoem(_poem)
+        
+    
+    elif _poem == poem_flower:
+        call fae_showpoem(_poem)
+        
+
+    elif _poem == poem_last:
+        call fae_showpoem(_poem)
+        
+    
+    elif _poem == poem_fruits:
+        call fae_showpoem(_poem)
+        
+    
+    elif _poem == poem_angel:
+        call fae_showpoem(_poem)
+        
+    
+    elif _poem == poem_leaf:
+        call fae_showpoem(_poem)
+        
+    
+    elif _poem == poem_prose:
+        call fae_showpoem(_poem)
+        
+    
+    elif _poem == poem_afterlight:
+        call fae_showpoem(_poem)
+        
+
+    return
 
 init 5 python:
 
@@ -2337,7 +2403,7 @@ init 5 python:
             prompt="music",
             conditional="not persistent.fae_custom_music_unlocked",
             random=True,
-            category=[""],
+            category=["Music"],
             affection_range=(fae_affection.HAPPY, None)
         ),
         chat_group=CHAT_GROUP_NORMAL
@@ -2351,6 +2417,7 @@ label s_event_music_intro:
     s abfccaa "But it seems to be working fine for me!"
     s abagaoa "All you need to do is put a .mp3 file in the {i}music{/i} folder in the game directory, and click on the {i}Music{/i} tab in the bottom-left!"
     s abagcka "I'm basically giving you the aux cord to the rest of my existence, so no pressure! Ehehehe~"
+    $ persistent.fae_custom_music_unlocked = True
     return
 
 
@@ -2383,6 +2450,8 @@ label s_stopic_bulls_and_cows:
     s abagaoa "But if it’s in a different position, it’s a cow."
     s abhhcaa "With a couple attempts and some clever thinking you should be able to figure out my number!"
     s abfccea "You can start a round in the {i}Play{/i} menu, good luck [player]!"
+
+    $ persistent.fae_bnc_unlocked = True
     
     $ bnc = minigame(_("Bows & Cows"), 'mg_bnc', bnc_prep)
     $ mg_list = []
@@ -2416,6 +2485,8 @@ label s_topic_reversi:
     s abagcaa "And you do that by placing a counter adjacent to one of your opponent’s counters and flipping the counters between in your favour."
     s abhhdaa "And [player], I’ve been practicing~"
     s abfccea "You can start a round in the {i}Play{/i} menu, good luck [player]!"
+
+    $ persistent.fae_reversi_unlocked = True
     
     $ reversi = minigame(_("Reversi"), 'mg_reversi', reversi_prep)
     $ mg_list = []
@@ -2473,4 +2544,183 @@ label s_answer_visual_novels: # Have you ever played visual novels?
     s abhfaoa "How about you, [player]? Have you played any visual novels before?"
     s abgbcaa "If you’re looking for some recommendations, you could try {i}Steins;Gate{/i}, {i}Miagete Goran{/i}, or {i}Katawa Shoujo{/i}!"
     s abgbaoa "I heard they're pretty popular in your world, each of them having unique features like this game!"
+    return
+
+
+label love_quip1:
+    s abhfaob "And guess what, [player]?"
+    s abgbcab "I love you too!"
+    return
+
+label love_quip2:
+    s abhfaob "I...{w=1.5} Love...{w=1.5} You...{w=1.5}... {b}MORE!{/b}{nw}"
+    extend abhfaob "I...{w=1.5} Love...{w=1.5} You...{w=1.5}...{fast} ...Too~!"
+    s abgbcab "Ehehehe~"
+    return
+
+label love_quip3:
+    s abgbcab "I love you too, [player]!"
+    s abhfaob "You mean the world to me."
+    return
+
+label love_quip4:
+    s abgbcab "I love you too, [player]!"
+    s abhfaob "I’m so glad to have you by my side."
+    return
+
+label love_quip5:
+    s abgbcab "I love you too, [player]!"
+    s abhfaob "You’re the sunshine in my life."
+    return
+
+label love_quip6:
+    s abgbcab "I love you too, [player]!"
+    s abhfaob "With all my heart."
+    return
+
+label love_quip7:
+    s abgbcab "I love you too, [player]!"
+    s abhfaob "I couldn’t possibly express how much you mean to me."
+    return
+
+label love_quip8:
+    s abgbcab "I love you too, [player]!"
+    s abhfaob "To the moon and back! Ehehehe~"
+    return
+
+label love_quip9:
+    s abgbcob "I love you too, [player]!"
+    s abhfaab "More than you’ll ever know~"
+    return
+
+
+label love_quip_rare:
+    s abgbcab "I love you too, [player]!"
+    s abhfaob "Thank you for always being here for me."
+    s "..."
+    s abhfaab "You know…"
+    s abhflab "Even though we’re worlds apart, I can still feel your warmth..."
+    s abhfaabg "I couldn’t be happier."
+    s abhfaobg "Thank you for everything."
+
+    return
+
+
+default persistent._fae_sayori_love_count = 0
+default persistent._fae_sayori_love_count_time = datetime.datetime.now() - datetime.timedelta(days=1)
+
+label sayo_love:
+
+    python:
+        love_quips = [
+            _("love_quip1"),
+            _("love_quip2"),
+            _("love_quip3"),
+            _("love_quip4"),
+            _("love_quip5"),
+            _("love_quip6"),
+            _("love_quip7"),
+            _("love_quip8"),
+            _("love_quip9")
+        ]
+
+        if renpy.random.randint(1, 100) == 1:
+            love_quip = "love_quip_rare"
+        else:
+
+            love_quip = renpy.random.choice(love_quips)
+    
+    if not persistent._fae_sayori_love_count == 0:
+
+        call expression love_quip
+
+        jump sayori_love_count
+
+    if persistent._fae_sayori_love_count == 0:
+        s ebhfhgb "Huh!? O-{w=1.0}Oh my gosh!"
+        s abhebebj "I didn't expect to hear that from you, [player]!"
+        s abheegbj "Uwaaaa! I'm so embarrassed!"
+        s abhfakbg "But also {i}really{/i} happy to hear that!"
+        s abfdbcbg "I was wondering if you even felt that way about me or if you just simply wanted to save me from my fate..."
+        s abgdabbg "Like maybe you still saw me as a dear friend or felt really bad for me..."
+        s abhflabg "But nevermind that, I’m so happy you feel that way…"
+        s abhfaobf "I love you too, [player]."
+        s abgccebf "I love you so much!"
+    
+    # Fall through
+
+
+label sayori_love_count:
+
+    if fae_timePastSince(persistent._fae_sayori_love_count_time, datetime.timedelta(minutes=3)):
+        if Affection.isNormal(higher=True):
+
+            $ persistent._fae_sayori_love_count += 1
+        
+        $ Affection.getAffectionGain()
+    
+    elif Affection.isNormal(higher=True) and persistent._fae_sayori_love_count % 5 == 0:
+
+        $ persistent._fae_sayori_love_count += 1
+    
+    $ persistent._fae_sayori_love_count_time = datetime.datetime.now()
+
+    return
+    
+init 5 python:
+ 
+    chatReg(
+        Chat(
+            persistent._chat_db,
+            label="sayo_love_too",
+            unlocked=False,
+        ),
+        chat_group=CHAT_GROUP_NORMAL
+    )
+
+
+label sayo_love_too:
+
+    s "Thank you!"
+
+    if datetime.datetime.now() > persistent._fae_sayori_love_count_time + datetime.timedelta(minutes=3):
+
+        $ Affection.getAffectionGain()
+    
+    $ persistent._fae_sayori_love_count_time = datetime.datetime.now()
+
+    $ persistent._fae_ily_last = None
+
+    return
+
+
+init 5 python:
+ 
+    chatReg(
+        Chat(
+            persistent._chat_db,
+            label="s_answer_old_clothes",
+            unlocked=True,
+            prompt="Old sprites",
+            random=True,
+            category=["Sayori"]
+        ),
+        chat_group=CHAT_GROUP_NORMAL
+    )
+
+label s_answer_old_clothes:
+
+    s abhfaoa "Say [player], did you know that I never used to look like this?"
+    s abegbeaj "That fields weird to say hehehe~"
+    s abgbaaa "But it’s true!"
+    s abgbaoa "I was snooping around online about my character sprite, after my epiphany and all."
+    s abgbcaa "And it turns out there were lots of other ideas for my design before this one!"
+    s abhfaoa  "It’s pretty crazy to think about, but it’s kinda nice that I have some kind of ancestry."
+    s abgbacaj "So anyways, originally I had a blue uniform, as did the other girls, and I didn't have my signature bow back then either!"
+    s abgcegaj"I sure do love my bow, I don't know what I'd do without it!"
+    s abgbaaa "But I wouldn't mind trying a blue outfit someday."
+    s abgbcoa "It'd match my eyes, don't you think? Ehehehe~"
+    s abhfaca "I'd really like some new clothes though, I've only ever had two outfits now that I think of it..."
+    s abfccaa "Perhaps you could create one for me if you're feeling artistic!"
+
     return

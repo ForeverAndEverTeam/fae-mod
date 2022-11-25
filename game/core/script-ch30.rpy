@@ -135,6 +135,9 @@ label ch30_setup:
 
     show black zorder 99
 
+    $ main_background.form()
+
+    $ fae_sky.reload_sky()
 
     $ Sayori.setOutfit(fae_outfits.get_outfit("fae_uniform"))
 

@@ -3,19 +3,19 @@ default persistent._fae_player_bday = None
 
 default peristent._fae_player_confirmed_bday = False
 
-init 5 python:
-    chatReg(
-        Chat(
-            persistent._chat_db,
-            label="s_player_birthday",
-            unlocked=True,
-            prompt="My birthday",
-            category=["Setup", "You"],
-            random=False,
-            affection_range=(fae_affection.AFFECTIONATE, None)
-        ),
-        chat_group=CHAT_GROUP_NORMAL
-    )
+#init 5 python:
+#    chatReg(
+#        Chat(
+#            persistent._chat_db,
+#            label="s_player_birthday",
+#            unlocked=True,
+#            prompt="My birthday",
+#            category=["Setup", "You"],
+#            random=False,
+#            affection_range=(fae_affection.AFFECTIONATE, None)
+#        ),
+#        chat_group=CHAT_GROUP_NORMAL
+#    )
 
 label s_player_birthday:
     s "Shall you share your birthday?"

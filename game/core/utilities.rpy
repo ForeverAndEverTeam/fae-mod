@@ -161,6 +161,37 @@ init -898 python in fae_globals:
     
 init 2 python:
 
+    def fae_timePastSince(timekeeper, passed_time, _now=None):
+        """
+        Checks if a certain amount of time has passed since the time in the timekeeper
+        IN:
+            timekeeper:
+                variable holding the time we last checked whatever it restricts
+                (can be datetime.datetime or datetime.date)
+
+            passed_time:
+                datetime.timedelta of the amount of time which should
+                have passed since the last check in order to return True
+
+            _now:
+                time to check against (If none, now is assumed, (Default: None))
+        OUT:
+            boolean:
+                - True if it has been passed_time units past timekeeper
+                - False otherwise
+        """
+        if timekeeper is None:
+            return True
+
+        elif _now is None:
+            _now = datetime.datetime.now()
+
+        #If our timekeeper is holding a datetime.date, we need to convert it to a datetime.datetime
+        if not isinstance(timekeeper, datetime.datetime):
+            timekeeper = datetime.datetime.combine(timekeeper, datetime.time())
+
+        return timekeeper + passed_time <= _now
+
     def fae_hasRPYFiles():
         """
         Checks if there are rpy files in the gamedir

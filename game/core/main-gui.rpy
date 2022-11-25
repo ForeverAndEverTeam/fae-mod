@@ -17,7 +17,7 @@ screen hidden1(active=False):
         textbutton _("Talk") action [ SensitiveIf(active==True), Function(dlg)]
 
 
-        textbutton _("Music") action [ SensitiveIf(active==True), Jump("music_menu")]
+        textbutton _("Music") action [ SensitiveIf((active==True) and persistent.fae_custom_music_unlocked), Jump("music_menu")]
 
         textbutton _("Play") action [ SensitiveIf(active==True), Function(mg)]
 
