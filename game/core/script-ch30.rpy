@@ -259,7 +259,7 @@ label ch30_init:
     #FALL THRouGH
 
 
-label ch30_loop():
+label ch30_loop:
 
 
     call spaceroom(False, None) from _call_spaceroom

@@ -707,7 +707,7 @@ default persistent.fae_visit_counter = 0
 default persistent.fae_nickname_given = False
 default persistent.game_crash = False
 default persistent._fae_player_south_hemisphere = True
-default persistent._fae_ever_won = collections.defaultdict(bool)
+
 default persistent.last_playthrough = persistent.playthrough
 default persistent.fae_sayori_closed = False
 default persistent.fae_intro_complete = False

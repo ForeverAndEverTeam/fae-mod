@@ -42,7 +42,7 @@ init -1 python in fae_farewells:
     def load_farewell_choices():
 
         return [
-            ("I'm going to sleep.", "farewell_sleep"),
+            ("I'm going to sleep.", "s_farewell_sleep"),
             ("I'm going to school.", "s_farewell_school"),
             ("I'm going to play a game.", "s_farewell_game"),
             ("I'm going to eat.", "s_farewell_eat"),
@@ -93,7 +93,10 @@ label farewell_options:
         selectable_leave_options.sort(key = lambda option: option[0])
         selectable_leave_options.append(("Goodbye.", "farewell_init"))
     
-    call screen neat_menu_scroll(selectable_leave_options, ("Nevermind.", None))
+    call screen neat_menu_scroll(selectable_leave_options, ("Nevermind.", False))
+
+    if not _return:
+        jump ch30_loop
 
     if isinstance(_return, basestring):
         show sayori idle at t11 zorder fae_sprites.FAE_SAYORI_ZORDER
@@ -247,6 +250,7 @@ label s_farewell_work_out:
     s abfcaoa "I hope you have fun! Bye-bye!" 
     return { "quit": None }
 
+
 init 5 python:
     chatReg(
         Chat(
@@ -262,7 +266,7 @@ init 5 python:
 label s_farewell_sleep:
     s abhfaoa "Heading to bed, [player]?"
     s abhfcaa "Hope you have a good night’s sleep!"
-    if Affection.isEnamored:
+    if Affection.isEnamoured():
         s abhebob "...can I have a goodnight kiss? Ehehehe~"
         menu: 
             "Sure, Sayori":

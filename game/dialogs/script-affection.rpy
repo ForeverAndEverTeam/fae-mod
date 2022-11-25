@@ -85,7 +85,7 @@ init -1 python:
             elif lower:
                 return Affection.__StatusLess(affection_status)
             
-            return Affection._getAffectionStatus() == aff_status
+            return Affection._getAffectionStatus() == affection_status
         
 
         @staticmethod

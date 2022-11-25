@@ -486,8 +486,10 @@ init 5 python:
 
 label s_topic_pronouns:
     s abhfaoa "Say [player], since I’m talking to the real {i}you{/i} now, I was wondering."
-    s abgbaaa "Which pronouns would you like me to refer to you by?"
+    s abgbaaa "Which pronouns would you like me to refer to you by?{nw}"
+    $ _history_list.pop()
     menu:
+        s "Which pronouns would you like me to refer to you by?{fast}"
         "He/Him":
             abgbcoa "Alright! From now on I’ll use {i}He/Him{/i}."  
         "She/Her":
@@ -512,8 +514,10 @@ init 5 python:
     )
 label s_topic_pronouns_redux:
 
-    s abgbaaa "Which pronouns would you like me to refer to you by?"
+    s abgbaaa "Which pronouns would you like me to refer to you by?{nw}"
+    $ _history_list.pop()
     menu:
+        s "Which pronouns would you like me to refer to you by?{fast}"
         "He/Him":
             s abgbcoa "Alright! From now on I’ll use {i}He/Him{/i}."  
         "She/Her":
@@ -901,8 +905,10 @@ label s_topic_archetype:
     s abhhmo "Genki is a very cheerful and energetic archetype, always trying to share that upbeat way of living with others."
     s aahfaeaj "And they're sometimes clumsy and get in trouble often too, hehehe~"
     s "And I was the protagonist's childhood friend, which is common to this archetype."
-    s nahekeaj "Do you think I fit that archetype too?"
+    s nahekeaj "Do you think I fit that archetype too?{nw}"
+    $ _history_list.pop()
     menu:
+        s "Do you think I fit that archetype too?{fast}"
         "You're definitely a genki, if they're as clumsy as you say.":
             pass
     s aaaegcej "You can't blame me, that's just how I am, ehehehe~"
@@ -1297,8 +1303,10 @@ init 5 python:
 
 label s_topic_marriage:
     s abaamob "Hey [player], I was wondering..."
-    s "If it were possible, would you marry me?"
+    s "If it were possible, would you marry me?{nw}"
+    $ _history_list.pop()
     menu:
+        s "If it were possible, would you marry me?{fast}"
         "Yes":
             s abaakob "That's great!"
             s "Ehehe!~"
@@ -2279,6 +2287,7 @@ init 5 python:
 
 label s_answer_opinion: #Opinion about an other club member
     s abaaaoa  "Who do you wanna talk about?{nw}"
+    $ _history_list.pop()
     menu:
         s "Who do you wanna talk about?{fast}"
         "Natsuki":
@@ -2724,3 +2733,53 @@ label s_answer_old_clothes:
     s abfccaa "Perhaps you could create one for me if you're feeling artistic!"
 
     return
+
+
+define audio.ee = "bgm/Message.ogg"
+########################
+# BRONWYN'S EASTER EGG #
+########################
+ 
+ 
+ 
+init 5 python:
+ 
+    chatReg(
+        Chat(
+            persistent._chat_db,
+            label="s_music_test",
+            unlocked=True,
+            prompt="Easter Egg",
+            random=True,
+            category=["[player]"]
+        ),
+        chat_group=CHAT_GROUP_NORMAL
+    )
+ 
+label s_music_test:
+ 
+    s abbbaca "Hey, [player]?"
+ 
+    s abbbaaa "I was digging through the mod files and found an audio message for you."
+ 
+    s abbcaoa "Shall I play it for you?{nw}"
+ 
+    menu:
+        s "Shall I play it for you?{fast}"
+ 
+        "Yes, please.":
+            s abbccoa "Okay!"
+            play audio ee
+            show sayori idle
+            window hide
+ 
+            $ renpy.pause(6.0, hard=True)
+            window auto
+       
+        "Not right now.":
+            s bbbcaaa "Okay!"
+   
+    return
+ 
+ 
+
