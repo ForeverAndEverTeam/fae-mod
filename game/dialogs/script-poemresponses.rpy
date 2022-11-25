@@ -1,5 +1,6 @@
 label s_poems_sunshine:
-    $ seen_topics = get_chat("s_topics_depression").seen_no > 0 or get_chat("s_poems_sunshine").seen_no > 0
+    python:
+        seen_topics = get_chat("s_topics_depression").seen_no > 0
     if seen_topics:
         s abbbaca "[player], this poem is about your avatar, you know."
     else:

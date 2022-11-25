@@ -88,7 +88,7 @@ label mglist:
         mg_list = []
 
         #ttt = minigame(_("Tic-Tac-Toe"), 'mg_ttt', ttt_prep)
-        mg_list.append(ttt)
+        #mg_list.append(ttt)
 
     call screen minigame_ui() nopredict
     hide screen minigame_ui
