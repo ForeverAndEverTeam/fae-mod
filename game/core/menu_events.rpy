@@ -87,7 +87,7 @@ label mglist:
     python:
         mg_list = []
 
-        ttt = minigame(_("Tic-Tac-Toe"), 'mg_ttt', ttt_prep)
+        #ttt = minigame(_("Tic-Tac-Toe"), 'mg_ttt', ttt_prep)
         mg_list.append(ttt)
 
     call screen minigame_ui() nopredict
