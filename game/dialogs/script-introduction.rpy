@@ -27,7 +27,7 @@ label fae_intro_checks:
 
     if not fae_intro.FAEIntroStatus(persistent.fae_intro_status) == fae_intro.FAEIntroStatus.new_game:
 
-        $ Sayori.setOutfit(fae_outfits.get_outfit("uniform"))
+        $ Sayori.setOutfit(fae_outfits.get_outfit("fae_uniform"))
 
         hide black
         
@@ -112,7 +112,7 @@ label fae_intro_1:
     call updateconsole("show backrgound spaceroom", "updating...")
     $ main_background.form()
     $ fae_sky.reload_sky()
-    $ Sayori.setOutfit(fae_outfits.get_outfit("uniform"))
+    $ Sayori.setOutfit(fae_outfits.get_outfit("fae_uniform"))
 
     hide black
     pause 2.0
