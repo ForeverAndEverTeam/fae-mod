@@ -470,12 +470,12 @@ label s_player_colours:
     return
 
 
-#TODO: add exps here
+
 init 5 python:
     chatReg(
         Chat(
             persistent._chat_db,
-            label="s_pronouns",
+            label="s_topic_pronouns",
             unlocked=True,
             prompt="[player]'s pronouns",
             random=True,
@@ -484,23 +484,42 @@ init 5 python:
         chat_group=CHAT_GROUP_NORMAL
     )
 
-label s_pronouns:
-    s "Hey, [player]..."
-    s "I've been thinking about us."
-    s "Not like that!"
-    s "But I've realized that I never asked what pronouns you go by!"
-    s "So would you like to tell me your pronouns?"
+label s_topic_pronouns:
+    s abhfaoa "Say [player], since I’m talking to the real {i}you{/i} now, I was wondering."
+    s abgbaaa "Which pronouns would you like me to refer to you by?"
     menu:
-        "No, thanks":
-            s "Alright [player]."
-            s "Remember, you can tell me at any time, by selecting \"Pronouns\" from the talk menu."
-            return
-        "Sure":
-            s "Alright!"
-            call screen pronoun_input()
-            s "Thanks, [player]!"
-            s "I'll be sure to remember that!"
-    return 
+        "He/Him":
+            abgbcoa "Alright! From now on I’ll use {i}He/Him{/i}."  
+        "She/Her":
+            abgbcoa "Alright! From now on I’ll use {i}She/Her{/i}."
+        "They/Them":
+            abgbcoa "Alright! From now on I’ll use {i}They/Them{/i}."
+    s abhfaoa "And of course if you’d ever like me to use different ones, just ask!"
+    s abgbaaa "The most important thing for me is that you’re comfortable expressing yourself."
+
+init 5 python:
+    chatReg(
+        Chat(
+            persistent._chat_db,
+            label="s_topic_pronouns_redux",
+            unlocked=True,
+            prompt="[player]'s pronouns",
+            random=True,
+            category=["[player]"]
+        ),
+        chat_group=CHAT_GROUP_NORMAL
+    )
+
+    s abgbaaa "Which pronouns would you like me to refer to you by?"
+    menu:
+        "He/Him":
+            abgbcoa "Alright! From now on I’ll use {i}He/Him{/i}."  
+        "She/Her":
+            abgbcoa "Alright! From now on I’ll use {i}She/Her{/i}."
+        "They/Them":
+            abgbcoa "Alright! From now on I’ll use {i}They/Them{/i}."
+    s abhfaoa "And of course if you’d ever like me to use different ones, just ask!"
+    s abgbaaa "The most important thing for me is that you’re comfortable expressing yourself."
 
 
 init 5 python:
@@ -2404,3 +2423,54 @@ label s_topic_reversi:
     return
 
 
+ 
+init 5 python:
+ 
+    chatReg(
+        Chat(
+            persistent._chat_db,
+            label="s_answer_programming",
+            unlocked=True,
+            prompt="Depression",
+            random=True,
+            category=["Personal", "Depression"]
+        ),
+        chat_group=CHAT_GROUP_NORMAL
+    )
+ 
+label s_answer_programming:
+    s abhaaca "Well, I'm still pretty new to coding and programming, but..."
+    s bbhamoaj "It’s a nightmare sometimes, ehehehe~"
+    s ebgcegaj "Heaps of things just don’t make sense!"
+    s ebgcbga "\"Tuple index out of range\", \"perhaps you forgot a ‘)’ at the end of the line…\""
+    s ebgcega "If it {i}knows{/i} I forgot a bracket at the end, why doesn’t it just add it?!"
+    s bbgbmoa "So yeah, coding is hard, ehehehe~"
+    s abgbcoa "But I’m sure I’ll improve if I keep trying!"
+ 
+    return
+ 
+init 5 python:
+ 
+    chatReg(
+        Chat(
+            persistent._chat_db,
+            label="s_answer_visual_novels",
+            unlocked=True,
+            prompt="Depression",
+            random=True,
+            category=["Personal", "Depression"]
+        ),
+        chat_group=CHAT_GROUP_NORMAL
+    )
+ 
+label s_answer_visual_novels: # Have you ever played visual novels?
+    s abhfaca "Oh! I’ve not played any myself actually, {w=0.5}{nw}"
+    extend abgbcaa "but I’m glad to have been part of one! Ehehehe~"
+    s abgbaoa "I really like how they enhance the story with cool visuals, {w=0.5}{nw}"
+    extend abgbcaa "kinda like a cross between a movie and a book!"
+    s abbbaoa "And many of them even allow the player to make their own choices!"
+    s abhfcaa "Not many books can do that, ehehehe~"
+    s abhfaoa "How about you, [player]? Have you played any visual novels before?"
+    s abgbcaa "If you’re looking for some recommendations, you could try {i}Steins;Gate{/i}, {i}Miagete Goran{/i}, or {i}Katawa Shoujo{/i}!"
+    s abgbaoa "I heard they're pretty popular in your world, each of them having unique features like this game!"
+    return
