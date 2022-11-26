@@ -1,6 +1,10 @@
-# NOTICES
-## DOWNLOAD NOTICE
-Please don't clone the master branch to download the mod. 
+# Forever and Ever (FAE)
+"Forever & Ever" is a mod for the free game [Doki Doki Literature Club](https://www.ddlc.moe) from [Team Salvato](http://teamsalvato.com/). In it, you can become closer to Sayori than ever before! You have all the time in the world to build the perfect relationship with our cinnamon bun as the star of the show. At the heart of the mod, we took a mental health based approach in line with the experiences Sayori had in the original game, so we can hopefully support people by offering a source of positivity, advice, and unconditional understanding. 
+Currently we have a whole range of unique dialogue, questions, and games for you and Sayori to enjoy, and we have so many more ideas for the near future! We're very active around the mod and on our discord server and we promise to deliver frequent updates and announcements so there's always something new and exciting to do! 
+Why not get creative and try to add a feature or two yourself? (I'm sure she'd love that!)
+
+Please check the [Releases](https://github.com/ForeverAndEverTeam/fae-mod/releases) page for the latest stable build.
+Also, please don't clone the master branch to download the mod. 
 Use a stable release instead!
 
 ## СOMPATIBILITY NOTICE 
@@ -12,17 +16,11 @@ Please report bugs on our [issues](https://github.com/ForeverAndEverTeam/fae-mod
 Please do not raise issues about the current version, as we are in the middle of a re-write of the mod.
 Issues related to the current version, will be ignored, and closed by default.
 
-# ABOUT THE MOD
-In "Forever & Ever", you can become closer to Sayori than ever before! 
-You have all the time in the world to build the perfect relationship with our cinnamon bun star of the show. 
-At the heart of the mod, we took a mental health based approach in line with the experiences Sayori had in the original game, so we can hopefully support people by offering a source of positivity, advice, and unconditional understanding. 
-
-Currently we have a whole range of unique dialogue, questions, and games for you and Sayori to enjoy, and we have so many more ideas for the near future! We're very active around the mod and on our discord server and we promise to deliver frequent updates and announcements so there's always something new and exciting to do! 
-Why not get creative and try to add a feature or two yourself? (I'm sure she'd love that!)
-
-# NEW CREDITS
-
+<details>
+  <summary>NEW CREDITS</summary>
+  
 ## DIRECTOR
+
 [Orcaramelo](https://github.com/Orcaramelo)
 
 ## PROGRAMMING
@@ -31,41 +29,34 @@ Why not get creative and try to add a feature or two yourself? (I'm sure she'd l
 
 ## ART
 
-[Orcaramelo](https://github.com/Orcaramelo) (Lead)
-
-[Nemu-sus](https://github.com/Nemu-sus)
+[Orcaramelo](https://github.com/Orcaramelo) (Lead), [Nemu-sus](https://github.com/Nemu-sus)
 
 ## MUSIC
 
-SlightlyAmiss (Theme)
-
-[Multimokia](https://github.com/multimokia) (Music box loop)
+SlightlyAmiss (Theme), [Multimokia](https://github.com/multimokia) (Music box loop)
 
 ## WRITING
 
-Sayori
+Sayori, [Orcaramelo](https://github.com/Orcaramelo), [Emilia/Monika (EYLO)](https://www.reddit.com/u/EmiliaMonika?utm_medium=android_app&utm_source=share), [Otter](https://github.com/my-otter-self), [Nathan](https://github.com/TRIDENT1313), Sobb
 
-[Orcaramelo](https://github.com/Orcaramelo)
+</details>
 
-[Emilia/Monika (EYLO)](https://www.reddit.com/u/EmiliaMonika?utm_medium=android_app&utm_source=share)
-
-[Otter](https://github.com/my-otter-self)
-
-[Nathan](https://github.com/TRIDENT1313)
-
-Sobb
-
-## SPECIAL THANKS
-
-[Emilia/Monika (EYLO)](https://www.reddit.com/u/EmiliaMonika?utm_medium=android_app&utm_source=share)
-
-[Nathan](https://github.com/TRIDENT1313)
+<details>
+  <summary>SPECIAL THANKS</summary>
+  
+[Emilia/Monika (EYLO)](https://www.reddit.com/u/EmiliaMonika?utm_medium=android_app&utm_source=share), [Nathan](https://github.com/TRIDENT1313)
 
 
-# LEGACY CREDITS
+Team Salvato and Team Monika, The "Just Natsuki" team, Independent supporters of "Just {doki_name}" mod, The Ren'Py developer team, The Reddit DDLC community, The Russian DDLC community
+
+</details>
+
+<details>
+  <summary>LEGACY CREDITS</summary>
 
 ## Project Lead:
 Alexander Osipov (aka AlexanDDOS, GitHub, Reddit, VK, FB)
+
 ## Programming:
 
 AlexanDDOS
@@ -145,26 +136,22 @@ littlebin
 
 MarioXenobladefan614
 
-## Special Thanks:
+</details>
 
-Team Salvato and
-
-Team Monika
-
-The "Just Natsuki" team
-
-Independent supporters of "Just {doki_name}" mod
-
-The Ren'Py developer team
-
-The Reddit DDLC community
-
-The Russian DDLC community
-
-## License & Copyright
-
+<details>
+  <summary>License & Copyright</summary>
+  
 See "LICENSE" for license information
 
 Made in accordance with Team Salvato's IP Guidelines
 
 Copyright (c) 2018-2021 Alexander Osipov and the other creators
+
+</details>
+
+### Community
+You can [follow us on twitter](https://twitter.com/JustSayoriDev) for game updates.
+
+Feel free to join our discord server too:
+
+ [![Discord](banner)](https://discord.gg/ZqfEddFKux)
