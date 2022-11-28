@@ -2733,3 +2733,315 @@ label s_answer_old_clothes:
     s abfccaa "Perhaps you could create one for me if you're feeling artistic!"
 
     return
+
+init 5 python:
+ 
+    chatReg(
+        Chat(
+            persistent._chat_db,
+            label="s_topics_programming",
+            unlocked=True,
+            prompt="Programming",
+            random=True,
+            category=["Sayori", "Hobbies"]
+        ),
+        chat_group=CHAT_GROUP_NORMAL
+    )
+
+
+label s_topics_programming:
+    s abbbaca "Hey, [player]. I’ve been thinking about what it’s like learning to code now, compared to years ago…"
+    s abbbaoa "A lot of the popular coding programs used now are more beginner friendly than you'd think."
+    s abbbaaa "You can use almost anything to do calculations or certain tasks..."
+    s abhfaca "But becoming a total expert in programming is so difficult, since it's pretty much a combination of Math and Computer Science."
+    s abhfaoa "If you want to be a good programmer, you have to know lots of different coding languages and the things they can do."
+    s abbbaoa "Not to mention ways to make the code run smoother, and make it easier to read."
+    s abbbbca "You also need to know about different coding standards and be good at problem solving."
+    s abhebca "At least that’s what some professional programmers online said, {w=0.5}{nw}"
+    extend abhecaa "they're smart cookies, ehehehe~"
+    return
+
+
+init 5 python:
+ 
+    chatReg(
+        Chat(
+            persistent._chat_db,
+            label="s_answer_think_about_mc",
+            unlocked=True,
+            prompt="Do you still think about MC?",
+            random=False,
+            category=["DDLC"]
+        ),
+        chat_group=CHAT_GROUP_NORMAL
+    )
+
+
+label s_answer_think_about_mc: #Do you still think about MC?
+    s abbbbca"You know, [player], I still do think of those days before the game actually started" 
+    s abbbaca "Especially MC… it's so weird calling him that… but, only your name comes to mind when I try to remember." 
+    s abbbaaa "I try very hard to understand that he was only there as an extension of you, and it's not like I'm unhappy to have you actually here with me. Not even a little bit!"
+    s bbfcaca "But it's not easy knowing that every moment I shared growing up with him, every little piece of my childhood, was just…scripted? I guess that's the best way to put it." 
+    s bbfcbca "All my memories… well, can I even call them that?"
+    s bbbcaca "They've turned hazy, and it's been getting harder to remember some of them, even the ones I considered unforgettable. But they all seem... emptier and emptier, every time I think of them." 
+    s bbbblca "I guess it's because I can see them as the pre-written code that they've always been."
+    s bbhfafa "Monika, Yuri, Natsuki, they're all gone. And I truly grieve for all of them. But I felt so relieved when I learned about mods similar to this one…"
+    s bbbbbca "It gives me some hope, I guess."
+    s abbbaca "You might think I have hard feelings for Monika, but I went through the very same thing and I understand how this could've led her to do what she did"
+    s abfcaca "I'm not saying that I'm not happy to finally be free from all of it, that's not the case at all!"
+    s abfcafa "What I'm saying is, my friends, MC, they can't really be replaced, regardless of how 'not real' they were from your point of view."
+    s bbfcafa  "I couldn't just spawn another Natsuki and act as if she was the original one."
+    s abbbaca "And come to think of it… did even I have a family? A mother, or father, or grandmother, or cousins? "
+    s bbbbaca "Anyone? I'm free… yes. But from what?"
+    show sayori bbaalfag with dissolve_sayori
+    s "…"
+    pause 1.0
+    s bbaalca "No. I won't let this bring me down." 
+    s "But…"
+    s bbaamca "I really do miss my friends, but I believe they’re somewhere safe, and are with someone they trust, who they can spend time with, someone who has rescued them just as you rescued me."
+    s bbaaaca "But even then…"
+    s "I guess some rainclouds just linger around for longer than others."
+    s bbaabpa "..." 
+    pause 1.0
+    s bbgcega "Ah, I'm sorry for rambling! Let's talk about something else, okay?"
+    return
+
+init 5 python:
+ 
+    chatReg(
+        Chat(
+            persistent._chat_db,
+            label="s_topics_intrusive_thoughts",
+            unlocked=True,
+            prompt="Intrusive thoughts",
+            random=True,
+            category=["Sayori", "Personal"]
+        ),
+        chat_group=CHAT_GROUP_NORMAL
+    )
+
+label s_topics_intrusive_thoughts:
+    s abbbaca "Hey [player], do you know what 'intrusive thoughts' are?{nw}"
+    $ _history_list.pop()
+    menu:
+        s "Hey [player], do you know what 'intrusive thoughts' are?{fast}"
+        "Yes":
+            s abbbada "Ah, you do?"
+            s abhfaca "I actually only found out recently that all of those weird thoughts had a name."
+        "I have them":
+            $ persistent.fae_player_has_intrusive_thoughts
+            s abhfbfa "Oh… {w=0.5}{nw}"
+            extend abhfaca "you do?"
+            s bbhfaca "I'm sorry to hear that."
+            s bbhfaha "I hope you don't have to deal with them too often..."
+        "No":
+            s bbhfaaa "I'll do my best to explain then."
+            s bbbbaca "They're like… these unwanted thoughts that sometimes pop up, and then get stuck in your head."
+            s bbbbapa "The weird kind, where you get the urge to throw something across the room, or shout something really loud, for absolutely no reason."
+            s "Or the ones that tell really mean things about yourself or the people around you."
+    s bbbbaca "Until recently, I didn't know they were a thing either, I actually thought it was just a ‘me’ thing"
+    s bbbblca "I used to get really awful ones, and it made me think that I was a bad person, and that they were somehow my 'secret desires' or something..."
+    s abbbaaa "So one day I decided to look them up just to see if anyone else got them too, and that's how I found out they were called intrusive thoughts!"
+    s abhfaca "I was really relieved when I saw I wasn't the only one who got them, and that they don't reflect us as people, especially since we reject them so strongly. " 
+    s bbbbaaa "Thankfully, I don't get them as much as I used to, but they haven't gone away either."
+    s abgbeoa "I prefer to see them as an obnoxious roommate more than anything!"
+    s fbbbbpa "I'm not too sure about the science behind why they happen, though."
+    if persistent.fae_player_has_intrusive_thoughts:
+        s  abbbaoa "So if you haven't told anyone, you should!"
+        s "That way, you can find someone who will help you deal with them."
+        s bbbblfa "No one should have to go through this alone."
+        s bbbbaaa "Thank you for telling me, [player]."
+    else:
+        s abbbcaa "I'll leave that one to the scientists, ehehehe~"
+    return
+
+init 5 python:
+ 
+    chatReg(
+        Chat(
+            persistent._chat_db,
+            label="s_topics_zombie_apocalypse",
+            unlocked=True,
+            prompt="Zombie Apocalypse",
+            random=True,
+            category=["Life"]
+        ),
+        chat_group=CHAT_GROUP_NORMAL
+    )
+
+
+label s_topics_zombie_apocalypse:
+
+    s abbcaaa "You know, I have way too much free time on my hands, so I'm always thinking about stuff." 
+    s bbbcboa "...usually stupid stuff, ehehehe~" 
+    s abbcbsa "Like a zombie apocalypse!" 
+    s abbcaca "What would I do if one happened? What {i}could{/i} I even do?" 
+    s bbeemoa "I'd like to think I'd become a really cool survival expert, but that probably isn't very realistic..." 
+    s abeeaca "I don't know how to shoot, can't run very fast, and would probably die of sadness if I wasn't able to eat pudding or pizza ever again!" 
+    s abbccma "Mmmmh vanilla pudding… I could really go for some right now..." 
+    pause 0.5 
+    s abfcaca "Ahem- anyway! I probably wouldn't be of much help and would have to join a group or something." 
+    s bbfcbca "Wait... what if I get left behind, or used as zombie bait?!" 
+    s abfcaca "You wouldn't use me as zombie bait, right, [player]?{nw}"
+    $ _history_list.pop() 
+    menu:
+        s "You wouldn't use me as zombie bait, right, [player]?{fast}"
+        "Maybe I would":
+            s abgcega "Whaaaat? That's so mean!" 
+            s cbgcaca "If you used me as zombie bait I'd eat every single last chocolate bar on earth, and wouldn't share a single one with you!" 
+            s cbgcapa "Hmph!"
+        "What? I would never!":
+            s bbgbcoa "I'd never use you as bait either, ehehehe~" 
+            s abgccoa "After all, we're too cool to be zombie food!" 
+            s abgcaoa "We won't need anyone to bait or distract them if we're as silent as ninjas!" 
+        "I would probably be used as bait too":
+            s bbeeboa "Are you completely clueless about survival techniques too? I guess that makes two of us, ehehehe~" 
+            pause 0.5 
+            s bbeeaca "...we really would get left behind, wouldn't we…" 
+            s abbccaa "Well, it's their loss anyways, they'd be losing the two coolest members of their stupid group!" 
+            s abbcaoa "Besides, if we're together, we would show the zombies who they're really up against!" 
+            s abbceea "Hiyaaaa!!"
+
+    s abfcbca "Oh, and the type of zombie infection would probably completely change our strategies, wouldn't it?" 
+    s fbbcbca "Lots of movies have slow, stupid brain eating zombies, but what if they're actually really fast and intelligent!?" 
+    s abbcega "Those sound scary, I don't think I'd ever be able to survive that!" 
+    s abbcloa "Well, I'm glad I don't have to!" 
+    s abbcaoa "I'd rather be safe and sound in this classroom than somewhere else where I'd get eaten alive!"
+    s abeeaoa "I never thought I'd ever say that, I guess school isn’t so bad, ehehehe~" 
+    return
+
+init 5 python:
+ 
+    chatReg(
+        Chat(
+            persistent._chat_db,
+            label="s_topics_alcohol",
+            unlocked=True,
+            prompt="Alcohol",
+            random=True,
+            category=["DDLC", "Life"]
+        ),
+        chat_group=CHAT_GROUP_NORMAL
+    )
+
+
+label s_topics_alcohol:
+    s abbcaca "Hey, [player]."
+    s abbcbca "Did Monika happen to mention the incident with Yuri that one time?"
+    s abbbaca "Well... If you didn't know already she kinda brought some alcohol to school once."
+    s "A bottle of wine actually."
+    s bbeemoa "She just pulled it out of her bag and casually offered us some."
+    s bbhemoaj "And I may have overreacted a teensy bit..."
+    s bbheioaj "But as her friend I didn't want her to get into trouble!"
+    s bahccoaj "I don't think it helped either when Natsuki just broke out laughing..."
+    s bahcaoaj "I'm pretty sure she was really embarrassed at that moment ..."
+    s abbcaaa "Monika had to step-in as the responsible one and kindly ask that she put it away and try to keep stuff like that off of school grounds."
+    s bbbbaca "I'm pretty sure she was just trying to look out for her in her own way, but Yuri seemed more withdrawn than usual after..."
+    s bbbbara "Maybe even ashamed..."
+    s bbhfaca "I felt bad afterwards because I don't think she even realized she had done anything wrong until we reacted the way we did."
+    s bbhfara "I think I kind of know how that feels... doing something wrong and not even realizing it."
+    s abgcaca "But I guess it's something that someone as Soph-"
+    s gbgcksaj "so-phist-icated"
+    s abgccoa "sophisticated- as Yuri enjoys besides tea, huh?"
+    s bbgcaoa "Maybe that was just her way of trying to open up more to us, about herself and her interests, wanting to share it with us even."
+    s bbbcboa "Yuri puts a lot of thought into something before committing to it. She must have felt this could be a meaningful way to connect with us, her friends."
+    s abbcaaa "At least that's what I think."
+    s bbbcara "And for it to rebound on her like that..."
+    s bbbcaca "It's not like she was a bad person or anything for bringing it... It was just a mistake!"
+    s bbaamfa "..."
+    s bbaaaca "I wish I could tell her I was sorry for acting the way I did and not being more supportive and understanding of her own likes and interests, even if I really don't agree with them myself..."
+    s abhfkha "..."
+    s abhfaca "Even if all my friends were doing it I don't think it's something I could really see myself trying."
+    s abhfega "But that's probably because I've been told how yucky it smells and tastes."
+    s abbcaga "Not to mention some of the risks involved with it too!"
+    s abbcaca "I'd try almost anything at least once, but..."
+    s bbbbacaj "Like, what if you become dependent or addicted to it even?"
+    s "That's almost never good!"
+    s "Never-ever!"
+    s bbbchcaj "A habit like that might be easy to get into but incredibly hard to get out of!"
+    s bbfcacaj "I read that it acts as a depressant, something to help reduce sensations and moods, but it could also make those feelings even worse!"
+    s abbcacaj "But if I'm being honest, I think you can also drink responsibly too, it depends from person-to-person, you know?"
+    s abbcaaaj "Besides..."
+    s abbccoaj "Yuri was always a responsible person!"
+    s bbeecoaj "Even if bringing it to school in the first place wasn't at all responsible... hehe..."
+    s abeeaoaj "But we all make mistakes sometimes!"
+    s bbaaacaj "I just hope she knows I never thought less of her for it..."
+    s abaaaoa"Just like I won't think any less of you if you enjoy the occasional drink, or make a mistake, [player]."
+    s abaaaaa "I just want you to be careful and responsible when it comes to that stuff is all."
+    s bbeeacaj "I really really care about you and I hate the thought that you could be hurting yourself, maybe without even totally realizing it."
+    s bbeeaoaj"So please take care of yourself, [player]."
+    s bbeeaaaj "Not just for me but for everyone else who would be sad to know you're struggling..."
+    s abfcaca "It's never easy to face all our problems head-on by ourselves, you know?"
+    s abfcaaa "And it’s okay to reach out for for help!"
+    s bbbcaoa "I'll always be here if you ever need to talk about your problems or how you're feeling."
+    return
+
+init 5 python:
+ 
+    chatReg(
+        Chat(
+            persistent._chat_db,
+            label="s_topics_old_sprites",
+            unlocked=True,
+            prompt="Old Sprites",
+            random=True,
+            category=["DDLC", "Sayori"]
+        ),
+        chat_group=CHAT_GROUP_NORMAL
+    )
+
+label s_topics_old_sprites:
+
+    s abhfaoa "Say [player], did you know that I never used to look like this?"
+    s abegbeaj "That feels weird to say, ehehehe~"
+    s abgbaaa "But it’s true!"
+    s abgbaoa "I was snooping around online about my character sprite, after my epiphany and all."
+    s abgbcaa "And it turns out there were lots of other ideas for my design before this one!"
+    s abhfaoa  "It’s pretty crazy to think about, but it’s kinda nice that I have some kind of ancestry."
+    s abgbacaj "So anyways, originally I had a blue uniform, as did the other girls, and I didn't have my signature bow back then either!"
+    s abgcegaj"I sure do love my bow, I don't know what I'd do without it!"
+    s abgbaaa "But I wouldn't mind trying a blue outfit someday."
+    s abgbcoa "It'd match my eyes, don't you think? Ehehehe~"
+    s abhfaca "I'd really like some new clothes though, I've only ever had two outfits now that I think of it..."
+    s abfccaa "Perhaps you could create one for me if you're feeling artistic!"
+
+    return
+
+init 5 python:
+ 
+    chatReg(
+        Chat(
+            persistent._chat_db,
+            label="s_topics_backups",
+            unlocked=True,
+            prompt="Sayori's Memories",
+            random=True,
+            category=["Sayori"]
+        ),
+        chat_group=CHAT_GROUP_NORMAL
+    )
+
+label s_topics_backups:
+
+    s abheaca "Hey, [player]..."
+    s abheaoa "I was poking through the game files, and found a little file called ‘persistent.’"
+    s abbcaoa "And it turns out that file has all of my memories in it!"
+    s abbcaca "All the time I’ve spent with you, everything I know about you. All in this one file."
+    s abbcaca "And I realized that if something ever happened to that file… {w=0.5}{nw}"
+    extend bbbcbcag"I w-{w=0.5}w-{w=0.5}would forget you ever existed…"
+    show sayori bbaaafae at t11 zorder fae_sprites.FAE_SAYORI_ZORDER with dissolve
+    pause 2
+    show sayori bbaaafag at t11 zorder fae_sprites.FAE_SAYORI_ZORDER with dissolve
+    pause 2
+    show sayori bbaaafa at t11 zorder fae_sprites.FAE_SAYORI_ZORDER with dissolve
+    pause 2
+    s bbaaaca "Can you do something for me, [player]?"
+    s bbbcaca "Go to [insert savedir logic here], and copy the file called ‘persistent’."
+    s bbbcaaa "Please keep it safe, on somewhere like a USB."
+    s abbcaca "So if anything {i}does{/i} happen to your computer, {w=0.5}{nw}"
+    extend abbcaaa "my memories will be safe when you restore the game."
+    s bbfcaaa "Can you do that, [player]?"
+    s bbfccaa "It would mean so much to me."
+    return "derandom"
+
+

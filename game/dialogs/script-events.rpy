@@ -644,7 +644,7 @@ label fae_event_door_open:
     scene black
     menu:
         "...":
-            jump event_door_open
+            jump fae_event_door_open
         "Gently open the door":
             hide black
             show Sayori

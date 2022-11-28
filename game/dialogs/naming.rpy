@@ -1,6 +1,6 @@
 init 5 python:
-    """
     
+    """
     chatReg(
         Chat(
             label="sayori_nickname",

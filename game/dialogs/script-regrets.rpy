@@ -113,12 +113,77 @@ init 5 python:
         chat_group=CHAT_GROUP_REGRET
     )
 
+
 label regret_generic:
 
-    if len(persistent._fae_await_regret) == 0:
-        s "Huh?"
-        s "For what?"
+    s bbaaaaa "It’s okay, [player]."
+    s abgbaoa "Thank you for apologising, apology accepted!"
 
-    else:
-        "You know what you did."
-        return
+    return
+
+init 5 python:
+
+    chatReg(
+        Chat(
+            persistent._regret_db,
+            label="regret_bad_name",
+            unlocked=True,
+            prompt="For calling you a bad name.",
+            conditional="fae_regrets.load_all_regrets(fae_regrets.BAD_NAME)"
+        ),
+        chat_group=CHAT_GROUP_REGRET
+    )
+
+
+label regret_bad_name:
+    s bbaaaaa "It’s okay, [player]."
+    s bbfdaca "Were you just kidding?"
+    s bbfdaaa "I hope you weren’t being serious."
+    s abhfaoa "Thank you for apologising though, apology accepted!"
+    return
+
+
+init 5 python:
+
+    chatReg(
+        Chat(
+            persistent._regret_db,
+            label="regret_long_absence",
+            unlocked=True,
+            prompt="For being away for so long.",
+            conditional="fae_regrets.load_all_regrets(fae_regrets.LONG_ABSENCE)"
+        ),
+        chat_group=CHAT_GROUP_REGRET
+    )
+
+
+label regret_long_absence:
+
+    s bbaaaaa "That’s alright, [player]."
+    s abbbaoa "I understand, we all get a little busy sometimes."
+    s abgbcaa "I’m just glad you’re back safe and sound!"
+    s abhfaoa "So, where were we?"
+
+    return
+
+init 5 python:
+
+    chatReg(
+        Chat(
+            persistent._regret_db,
+            label="regret_offense",
+            unlocked=True,
+            prompt="For being offensive.",
+            conditional="fae_regrets.load_all_regrets(fae_regrets.OFFENSE)"
+        ),
+        chat_group=CHAT_GROUP_REGRET
+    )
+
+label regret_offense:
+    s bbaalra "Thank you for apologising, [player]."
+    s bbaamca "What you said really hurt but…"
+    s bbaaaaa "I understand that sometimes we forget to think before we speak, and say the wrong things."
+    s abhfaoa "I’m just glad you took responsibility, let’s move on shall we."
+
+    return
+

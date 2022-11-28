@@ -81,7 +81,7 @@ label s_mood_angry: #Angry player
             menu:
                 "Yes":
                     s fbgciea "Alright, give me your best!"
-                    call screen mglist
+                    call screen minigame_ui
                 "No":
                     s abfcaca "Not in the mood? That's okay too."
                     s bbhfmoaj "In that case, I have one last suggestion, but it might sound a bit silly..."
