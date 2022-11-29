@@ -51,6 +51,27 @@ init 5 python:
     chatReg(
         Chat(
             persistent._chat_db,
+            label="fae_room_switch_return",
+            unlocked=True,
+            prompt="Can we go back to the Spaceroom?",
+            random=False,
+            category=["Location"]
+        ),
+        chat_group=CHAT_GROUP_NORMAL
+    )
+
+label fae_room_switch_return:
+    s "Sure!"
+
+    $ main_background.room_switcher(spaceroom)
+    $ main_background.render(dissolve_all=True, complete_reset=False)
+    return
+
+
+init 5 python:
+    chatReg(
+        Chat(
+            persistent._chat_db,
             label="fae_kiss",
             unlocked=True,
             prompt="Kiss me",
@@ -3044,4 +3065,6 @@ label s_topics_backups:
     s bbfccaa "It would mean so much to me."
     return "derandom"
 
+
+ 
 
