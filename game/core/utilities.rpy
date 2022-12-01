@@ -920,7 +920,7 @@ init python:
 
         fae_utilities.save_game()
 
-        Affection.DayAffectionGainChecker()
+        Affection.checkResetDailyAffectionGain()
 
         store.fae_utilities.log(
             message="Affection level is {0}".format(

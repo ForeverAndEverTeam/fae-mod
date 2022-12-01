@@ -58,17 +58,27 @@ init -1 python in fae_farewells:
 
             return "first_leave"
         
-        kwargs = dict()
+        #kwargs = dict()
 
-        farewell_pool = store.Chat.chat_filt(
-            FAREWELL_DEFS.values(),
-            affection=Affection._getAffectionStatus(),
-            **kwargs
-        )
+        #farewell_pool = store.Chat.chat_filt(
+        #    FAREWELL_DEFS.values(),
+        #    affection=Affection._getAffectionStatus(),
+        #    **kwargs
+        #)
 
-        return random.choice(farewell_pool).label
+        farewell_pool = [
+            ("s_farewell_1"),
+            ("s_farewell_2"),
+            ("s_farewell_3"),
+            ("s_farewell_4"),
+            ("s_farewell_5"),
+            ("s_farewell_6"),
+            ("s_farewell_7")
+        ]
 
 
+
+        return random.choice(farewell_pool)
 
 label farewell_init:
 
@@ -121,45 +131,45 @@ label s_farewell_2:
     s "Goodbye, [player]!"
     s "You can always visit whenever you want."
     s abfdbaoa "I'll always be here to spend time with you!"
-    return "quit"
+    return { "quit": None }
 
 label s_farewell_3:
     s "Bye, [player]!"
     s abgcbcqa "I’ll see you soon!"
-    return "quit"
+    return { "quit": None }
 
 label s_farewell_4:
     s "Bye-bye!"
     s "I'll be wishing you health and happiness!"
     s abhebaka "Be safe out there, okay, [player]? Ehehehe~"
-    return "quit"
+    return { "quit": None }
 
-label s_farewell_5:
-    if get_time_of_day() == 0:
-        s abhfbaaa "Goodnight, [player]!"
-        s fbhabica "Make sure you get enough sleep so you aren't all grumpy when you wake up, okay?"
-    elif get_time_of_day() < 3:
-        s abhfbaaa "Have a good day, [player]!"
-        s abhfbaaa "I hope you can accomplish all of your goals for today; whether they're big or small, I'll be proud of you either way!"
-    else:
-        s abhfbaaa "See you later, [player]!"
-        if get_time_of_day(launch_dt.hour) == 3:
-            s "I'm glad you were able to spend some of your evening with me!"
-        else:
-            s "I'm glad you were able to spend the day with me!"
-    return "quit"
+#label s_farewell_5:
+#    if get_time_of_day() == 0:
+#        s abhfbaaa "Goodnight, [player]!"
+#        s fbhabica "Make sure you get enough sleep so you aren't all grumpy when you wake up, okay?"
+#    elif get_time_of_day() < 3:
+#        s abhfbaaa "Have a good day, [player]!"
+#        s abhfbaaa "I hope you can accomplish all of your goals for today; whether they're big or small, I'll be proud of you either way!"
+#    else:
+#        s abhfbaaa "See you later, [player]!"
+#        if get_time_of_day(launch_dt.hour) == 3:
+#            s "I'm glad you were able to spend some of your evening with me!"
+#        else:
+#            s "I'm glad you were able to spend the day with me!"
+#    return "quit"
 
 label s_farewell_6:
     s "Bye, [player]!"
     s fbhabica "And don't forget to make sure that you're taking good care of yourself!"
     s abagbcaa "I want you to come back and be safe and sound, okay?"
-    return "quit"
+    return { "quit": None }
 
 label s_farewell_7:
     s "See you later, [player]!"
     s abfbbaha "I wish I could give you a little farewell hug..."
     s abfdbcqa "But as long as you know that I would, I’m happy, ehehehe~"
-    return "quit"
+    return { "quit": None }
 
 
 init 5 python:

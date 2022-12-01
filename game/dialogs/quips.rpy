@@ -94,7 +94,7 @@ init 15 python in fae_quips:
 
     def get_quip():
 
-        affection_status = store.Affection._findAffectionLevel()
+        affection_status = store.Affection._getAffinityTierName()
 
         if affection_status == "NORMAL":
             return random.choice(quips)

@@ -1,196 +1,18 @@
-init -1 python:
-    
-    class Affection(object):
-
-
-        @staticmethod
-        def getAffectionGain(default=5, bypass=False):
-
-            add = default
-            if bypass:
-
-                persistent.affection += add
-            
-            elif persistent.affection_day_gain > 0:
-
-                persistent.affection_day_gain -= add
-            
-                persistent.affection += add
-            
-                if persistent.affection_day_gain < 0:
-                    persistent.affection_day_gain = 0
-                
-            else:
-                fae_utilities.log("Daily affection cap hath been reachethed!")
-        
-        @staticmethod
-        def getAffectionLoss(default=5):
-
-            persistent.affection -= default
-        
-        @staticmethod
-        def AffectionGainPercetile(percentile_gain):
-
-            persistent.affection += persistent.affection * (float(percentile_gain) / 100)
-        
-        @staticmethod
-        def AffectionLossPercentile(percentile_loss):
-
-            persistent.affection -= persistent.affection * (float(percentile_loss) / 100)
-        
-
-        @staticmethod
-        def DayAffectionGainChecker():
-
-            curr_date = datetime.datetime.now()
-
-            if not persistent.affection_reset_date:
-                persistent.affection_reset_date = curr_date
-            
-            elif curr_date.day is not persistent.affection_reset_date.day:
-                persistent.affection_day_gain = 5
-            
-                persistent.affection_reset_date = curr_date
-                fae_utilities.log("Daily affection cap has been reset to {0}".format(persistent.affection_day_gain))
-            
-        
-        @staticmethod
-        def __StatusMore(affection_status):
-
-            return fae_affection._AffectionStateInRange(
-                Affection._getAffectionStatus(),
-                (None, affection_status)
-            )
-        
-
-        @staticmethod
-        def __StatusLess(affection_status):
-
-            return fae_affection._AffectionStateInRange(
-                Affection._getAffectionStatus(),
-                (None, affection_status)
-            )
-        
-
-        @staticmethod
-        def __isAffection(affection_status, higher=False, lower=False):
-
-            if higher and lower:
-                return True
-            
-
-            if higher:
-                return Affection.__StatusMore(affection_status)
-            
-            elif lower:
-                return Affection.__StatusLess(affection_status)
-            
-            return Affection._getAffectionStatus() == affection_status
-        
-
-        @staticmethod
-        def isNormal(higher=False, lower=False):
-
-            return Affection.__isAffection(fae_affection.NORMAL, higher, lower)
-        
-
-        @staticmethod
-        def isHappy(higher=False, lower=False):
-
-            return Affection.__isAffection(fae_affection.HAPPY, higher, lower)
-        
-
-        @staticmethod
-        def isAffectionate(higher=False, lower=False):
-
-            return Affection.__isAffection(fae_affection.AFFECTIONATE, higher, lower)
-        
-
-        @staticmethod
-        def isEnamoured(higher=False, lower=False):
-
-            return Affection.__isAffection(fae_affection.ENAMOURED, higher, lower)
-        
-        
-        @staticmethod
-        def isLove(higher=False, lower=False):
-
-            return Affection.__isAffection(fae_affection.LOVE, higher, lower)
-        
-
-        @staticmethod
-        def _getAffectionStatus():
-
-            
-            i = 1
-            for border in [
-                fae_affection.AFFECTION_LOVE_BORDER,
-                fae_affection.AFFECTION_ENAMOURED_BORDER,
-                fae_affection.AFFECTION_AFFECTIONATE_BORDER,
-                fae_affection.AFFECTION_HAPPY_BORDER
-            ]:
-
-                if fae_affection._AffectionBorderCompare(persistent.affection, border) >= 0:
-                    return fae_affection._AFFECTION_STATUS_ORDER[-i]
-                
-                i += 1
-        
-
-        def _findAffectionLevel():
-
-            affection_status = Affection._getAffectionStatus()
-
-
-            if affection_status == fae_affection.ENAMOURED:
-                return "LOVE"
-            
-            elif affection_status == fae_affection.ENAMOURED:
-                return "ENAMOURED"
-            
-            elif affection_status == fae_affection.AFFECTIONATE:
-                return "AFFECTIONATE"
-            
-            elif affection_status == fae_affection.HAPPY:
-                return "HAPPY"
-            
-            elif affection_status == fae_affection.NORMAL:
-                return "NORMAL"
-            
-
-            else:
-                store.fae_utilities.log(
-                    message="Unable to get level name for affection {0}. affection_status was {1}".format(
-                        store.persistent.affection,
-                        Affection._getAffectionStatus()
-                    ),
-                    logseverity=store.fae_utilities.SEVERITY_WARN
-                )
-
-                return "UNKNOWN"
-
-
-init 10 python in fae_globals:
-
-    curr_affection_status = store.fae_affection.NORMAL
-
-default persistent.affection = 0.0
-
-default persistent.affection_day_gain = 10
+default persistent.affection_day_gain = 5
 default persistent.affection_reset_date = None
-
-
+default persistent.affection = 25.0
 init -2 python in fae_affection:
+
 
     import store
     import store.fae_utilities as fae_utilities
     import random
 
-    AFFECTION_LOVE_BORDER = 1000
-    AFFECTION_ENAMOURED_BORDER = 500
-    AFFECTION_AFFECTIONATE_BORDER = 250
-    AFFECTION_HAPPY_BORDER = 100
-    AFFECTION_NORMAL_BORDER = 0
-
+    AFF_BORDER_LOVE = 1000
+    AFF_BORDER_ENAMORED = 500
+    AFF_BORDER_AFFECTIONATE = 250
+    AFF_BORDER_HAPPY = 100
+    AFF_BORDER_NORMAL = 0
 
     NORMAL = 1
     HAPPY = 2
@@ -198,7 +20,7 @@ init -2 python in fae_affection:
     ENAMOURED = 4
     LOVE = 5
 
-    _AFFECTION_STATUS_ORDER = [
+    _AFF_STATUS_ORDER = [
         NORMAL,
         HAPPY,
         AFFECTIONATE,
@@ -207,86 +29,304 @@ init -2 python in fae_affection:
     ]
 
 
-    def _checkAffectionStatus(status):
+    def get_relationship_length_multiplier():
+
+        relationship_length_multiplier = 1 + (fae_utilities.get_total_gameplay_months() / 10)
+        if relationship_length_multiplier > 1.5:
+            relationship_length_multiplier = 1.5
+        
+        return relationship_length_multiplier
+
+
+    def _isAffStatusValid(status):
 
         return (
-            status in _AFFECTION_STATUS_ORDER
+            status in _AFF_STATUS_ORDER
             or status is None
         )
     
-    def _AffectionBorderCompare(value, border):
+    def _compareAffBorders(value, border):
 
         return value - border
-    
 
-    def _AffectionStatusCompare(status_1, status_2):
-
+    def _compareAffectionStatuses(status_1, status_2):
 
         if status_1 == status_2:
             return 0
-        
-        if not _checkAffectionStatus(status_1) or not _checkAffectionStatus(status_2):
+
+        if not _isAffStatusValid(status_1) or not _isAffStatusValid(status_2):
             return 0
-        
 
-        if _AFFECTION_STATUS_ORDER.index(status_1) < _AFFECTION_STATUS_ORDER.index(status_2):
+        #If state 1 is less than state 2, return -1
+        if _AFF_STATUS_ORDER.index(status_1) < _AFF_STATUS_ORDER.index(status_2):
             return -1
-        
 
+        #Else return 1
         return 1
-    
 
-    def _checkAffectionRange(affection_range):
+    def _isAffRangeValid(affection_range):
 
         if affection_range is None:
             return True
-        
-        low_sect, high_sect = affection_range
 
-        if low_sect is None and high_sect is None:
+        #deconstruct the tuple
+        low_bound, high_bound = affection_range
+
+        #No low bound and no high bound is equivalent to just no range
+        if low_bound is None and high_bound is None:
             return True
-        
 
+        #Now test to see if the individual parts are valid
         if (
-            not _checkAffectionStatus(low_sect)
-            or not _checkAffectionStatus(high_sect)
+            not _isAffStatusValid(low_bound)
+            or not _isAffStatusValid(high_bound)
         ):
             return False
-        
-        if low_sect is None or high_sect is None:
+
+        #Now if one side is None, and we know the other is valid, this is also valid
+        if low_bound is None or high_bound is None:
             return True
-        
 
-        return _AffectionStatusCompare(low_sect, high_sect) <= 0
-    
-    def _AffectionStateInRange(affection_status, affection_range):
+        #Finally compare this to make sure we don't have an inversion
+        return _compareAffectionStatuses(low_bound, high_bound) <= 0
 
-        if affection_status is None or not _checkAffectionStatus(affection_status):
+    def _isAffStatusWithinRange(affection_status, affection_range):
+
+
+        if affection_status is None or not _isAffStatusValid(affection_status):
             return False
-        
+
+        #No affection_range is a full range, so this is always True
         if affection_range is None:
             return True
-        
 
-        low_sect, high_sect = affection_range
-    
-        if low_sect is None and high_sect is None:
+        #Now, deconstruct the tuple
+        low_bound, high_bound = affection_range
+
+        #If low and high are none, it's also a full range, always True
+        if low_bound is None and high_bound is None:
             return True
-        
 
-        if low_sect is None:
+        #Now we run compareTo checks
+        #Firstly, single-bounded checks (one side None)
+        if low_bound is None:
+            #We only care about the high bound
+            return _compareAffectionStatuses(affection_status, high_bound) <= 0
 
-            return _AffectionStatusCompare(affection_status, high_sect) <= 0
-        
-        if high_sect is None:
+        if high_bound is None:
+            #Only the low bound matters
+            return _compareAffectionStatuses(affection_status, low_bound) >= 0
 
-            return _AffectionStatusCompare(aff_status, low_sect) >= 0
-        
-        if low_sect == high_sect:
-            return affection_status == low_sect
-        
+        #If the range is only for the single level, so they should just be equal
+        if low_bound == high_bound:
+            return affection_status == low_bound
+
+        #With the outlier cases done, simply check if we're within the range
         return (
-            _AffectionStatusCompare(affection_status, low_sect) >= 0
-            and _AffectionStatusCompare(affection_status, high_sect) <= 0
+            _compareAffectionStatuses(affection_status, low_bound) >= 0
+            and _compareAffectionStatuses(affection_status, high_bound) <= 0
         )
+
+
+init -2 python:
+    
+    class Affection(object):
+
+
+        @staticmethod
+        def calculatedAffectionGain(base=1, bypass=False):
+
+            to_add = base * fae_affection.get_relationship_length_multiplier()
+
+            if (
+                not persistent._fae_player_confession_accepted
+                and (persistent.affection + to_add) > (fae_affection.AFF_BORDER_LOVE -1)
+            ):
+
+                persistent.affection = fae_affection.AFF_BORDER_LOVE -1
+                fae_utilities.log("Affection blocked - CN!")
+                return
+
+            if bypass:
+
+                persistent.affection += to_add
+                fae_utilities.log("Affection increased!")
+            
+            elif persistent.affection_day_gain > 0:
+                persistent.affection_day_gain -= to_add
+                persistent.affection += to_add
+
+                if persistent.affection_day_gain < 0:
+                    persistent.affection_day_gain = 0
+                
+                fae_utilities.log("Affection increased")
+        
+        @staticmethod
+        def calculatedAffectionLoss(base=1):
+
+            persistent.affection -= base * fae_affection.get_relationship_length_multiplier()
+            fae_utilities.log("Affection decreased")
+        
+        @staticmethod
+        def percentageAffectionGain(percentage_gain):
+
+            to_add = persistent.affection * (float(percentage_gain) / 100)
+            if (not persistent._fae_player_confession_accepted and (persistent.affection + to_add) > (fae_affection.AFF_BORDER_LOVE -1)):
+                
+                persistent.affection = fae_affection.AFF_BORDER_LOVE -1
+                fae_utilities.log("Affection blocked - CN!")
+
+            else:
+                persistent.affection += to_add
+                fae_utilities.log("Affection+")
+
+        @staticmethod
+        def percentageAffectionLoss(percentage_loss):
+
+            if persistent.affection == 0:
+                persistent.affection -= (float(percentage_loss) / 10)
+
+            else:
+                persistent.affection -= abs(persistent.affection * (float(percentage_loss) / 100))
+            
+            fae_utilities.log("Affection decreased")
+
+        @staticmethod
+        def checkResetDailyAffectionGain():
+
+            current_date = datetime.datetime.now()
+
+            if not persistent.affection_reset_date:
+                persistent.affection_reset_date = current_date
+
+            elif current_date.day is not persistent.affection_reset_date.day:
+                persistent.affection_reset_date = 5 * fae_affection.get_relationship_length_multiplier()
+                persistent.affection_reset_date = current_date
+                fae_utilities.log("Daily affection cap reset; new cap is: {0}".format(persistent.affection_day_gain))
+
+
+        
+        @staticmethod
+        def __isStatusGreaterThan(aff_status):
+
+            return fae_affection._isAffStatusWithinRange(
+                Affection._getAffectionStatus(),
+                (aff_status, None)
+            )
+
+
+        @staticmethod
+        def __isStateLessThan(aff_status):
+            return fae_affection._isAffStatusWithinRange(
+                Affection._getAffectionStatus(),
+                (None, aff_status)
+            )
+
+        
+        @staticmethod
+        def __isAff(aff_status, higher=False, lower=False):
+
+            if higher and lower:
+                return True
+
+            if higher:
+                return Affection.__isStatusGreaterThan(aff_status)
+
+            elif lower:
+                return Affection.__isStatusLessThan(aff_status)
+
+            return Affection._getAffectionStatus() == aff_status
+
+
+        @staticmethod
+        def isNormal(higher=False, lower=False):
+
+            return Affection.__isAff(fae_affection.NORMAL, higher, lower)
+
+
+        @staticmethod
+        def isHappy(higher=False, lower=False):
+
+            return Affection.__isAff(fae_affection.HAPPY, higher, lower)
+
+        @staticmethod
+        def isAffectionate(higher=False, lower=False):
+
+            return Affection.__isAff(fae_affection.AFFECTIONATE, higher, lower)
+
+
+        @staticmethod
+        def isEnamoured(higher=False, lower=False):
+
+            return Affection.__isAff(fae_affection.ENAMOURED, higher, lower)
+
+
+        @staticmethod
+        def isLove(higher=False, lower=False):
+
+            return Affection.__isAff(fae_affection.LOVE, higher, lower)
+
+        @staticmethod
+        def _getAffectionStatus():
+
+            i = 1
+            for border in [
+                fae_affection.AFF_BORDER_LOVE,
+                fae_affection.AFF_BORDER_ENAMORED,
+                fae_affection.AFF_BORDER_AFFECTIONATE,
+                fae_affection.AFF_BORDER_HAPPY,
+                fae_affection.AFF_BORDER_NORMAL
+            ]:
+
+
+                if fae_affection._compareAffBorders(persistent.affection, border) >= 0:
+                    return fae_affection._AFF_STATUS_ORDER[-i]
+
+                # We can't go any further beyond happy; return it
+                if border == fae_affection.AFF_BORDER_HAPPY:
+                    return fae_affection._AFF_STATUS_ORDER[0]
+
+                i += 1
+
+        def _getAffinityTierName():
+            affection_status = Affection._getAffectionStatus()
+            if affection_status == fae_affection.ENAMOURED:
+                return "LOVE"
+
+            elif affection_status == fae_affection.ENAMOURED:
+                return "ENAMOURED"
+
+            elif affection_status == fae_affection.AFFECTIONATE:
+                return "AFFECTIONATE"
+
+            elif affection_status == fae_affection.HAPPY:
+                return "HAPPY"
+
+            elif affection_status == fae_affection.NORMAL:
+                return "NORMAL"
+
+            else:
+                store.fae_utilities.log(
+                    message="Unable to get tier name for affection {0}; affection_state was {1}".format(
+                        store.persistent.affection,
+                        Affection._getAffectionStatus()
+                    ),
+                    logseverity=store.fae_utilities.SEVERITY_WARN
+                )
+                return "UNKNOWN"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

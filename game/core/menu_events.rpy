@@ -82,14 +82,6 @@ init -2 python:
 label mglist:
 
     show sayori idle at t22
-
-
-    python:
-        mg_list = []
-
-        #ttt = minigame(_("Tic-Tac-Toe"), 'mg_ttt', ttt_prep)
-        #mg_list.append(ttt)
-
     call screen minigame_ui() nopredict
     hide screen minigame_ui
     show screen hidden1(True)
@@ -102,7 +94,7 @@ screen minigame_ui():
     vbox:
         xcenter 250
         
-        for i in mg_list:
+        for i in store.fae_games.mg_list:
             if i.available:
                 textbutton i.name action [Function(i), Hide("minigame_ui"), Jump("ch30_loop")]
         

@@ -142,7 +142,7 @@ init -3 python:
                 raise Exception("Label {0} does not exist.".format(label))
             
 
-            if not fae_affection._checkAffectionRange(affection_range):
+            if not fae_affection._isAffRangeValid(affection_range):
                 raise Exception("Affection range: {0} is invalid.".format(affection_range))
             
             #STUFF WHICH SHOULDN'T CHANGE FROM PERSISTENT DATA
@@ -225,7 +225,7 @@ init -3 python:
             if not affection_status:
                 affection_status = fae_affection._getAffectionStatus()
             
-            return fae_affection._AffectionStateInRange(affection_status, self.affection_range)
+            return fae_affection._isAffStatusWithinRange(affection_status, self.affection_range)
         
         def __load(self):
             """

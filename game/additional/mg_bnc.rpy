@@ -41,9 +41,6 @@ init 10 python:
         
         if restart:
             renpy.call(self.label)
-        
-    #bnc = minigame(_("Bows & Cows"), 'mg_bnc', bnc_prep)
-    #mg_list.append(bnc)
 
 screen mg_bnc_scr():
     layer "master"
@@ -139,26 +136,26 @@ label mg_bnc:
 
 label mg_bnc_s_comment(state = -1, restart = False): #Sayori's comment. 0 = initial, -2 = annoyed, other = state reaction
     hide screen mg_bnc_scr
-    if state == 0:
+    if state == 0: # Starting prompt
         s abaaaoa "I propose you a number of [bnc.guessed_len] digits..."
         s "Try to guess it."
-    elif state == -1:
+    elif state == -1: # Game end (restart or out of tries.)
         if restart:
             s bbaaada "Are you giving up?"
         else:
             s abaacia "Your tries are over."
-        if bnc.bulls + bnc.cows == bnc.guessed_len:
+        if bnc.bulls + bnc.cows == bnc.guessed_len: # NO CLUE WHAT THIS IS. FUCK THIS CODE
             s "You were close to the right answer."
         elif restart:
             s abaadaa"OK, I'll tell you the right answer."
         s abaaloa "The right number was {i}[bnc.guessed]{/i}."
         s ebaacqa"Let me think of another number."
         $ bnc(restart = True)
-    elif state == 1:
+    elif state == 1: # Correct answer
         s abaacoa "You're right. It was {i}[bnc.guessed]{/i}!"
         s abaaaea "Let's play one more time."
         $bnc(restart = True)
-    elif state == -2:
+    elif state == -2: # If you try to guess past the amount you're allowed to guess
         s gbaaipa "OK, you win, {i}meanie{/i}!"
         s "I'm really annoyed right now..."
         $ mg_list.remove(bnc)

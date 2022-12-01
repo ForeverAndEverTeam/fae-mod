@@ -369,7 +369,7 @@ init 5 python:
             unlocked=True,
             prompt="Personal Intelligence",
             random=True,
-            category=["[player]", "[s_name]", "Life", "Society"]
+            category=["[player]", "Sayori", "Life", "Society"]
         ),
         chat_group=CHAT_GROUP_NORMAL
     )
@@ -512,11 +512,11 @@ label s_topic_pronouns:
     menu:
         s "Which pronouns would you like me to refer to you by?{fast}"
         "He/Him":
-            abgbcoa "Alright! From now on I’ll use {i}He/Him{/i}."  
+            s abgbcoa "Alright! From now on I’ll use {i}He/Him{/i}."  
         "She/Her":
-            abgbcoa "Alright! From now on I’ll use {i}She/Her{/i}."
+            s abgbcoa "Alright! From now on I’ll use {i}She/Her{/i}."
         "They/Them":
-            abgbcoa "Alright! From now on I’ll use {i}They/Them{/i}."
+            s abgbcoa "Alright! From now on I’ll use {i}They/Them{/i}."
     s abhfaoa "And of course if you’d ever like me to use different ones, just ask!"
     s abgbaaa "The most important thing for me is that you’re comfortable expressing yourself."
     return
@@ -2484,8 +2484,8 @@ label s_stopic_bulls_and_cows:
     $ persistent.fae_bnc_unlocked = True
     
     $ bnc = minigame(_("Bows & Cows"), 'mg_bnc', bnc_prep)
-    $ mg_list = []
-    $ mg_list.append(bnc)
+    #$ mg_list = []
+    $ store.fae_games.mg_list.append(bnc)
 
     return
 
@@ -2519,8 +2519,8 @@ label s_topic_reversi:
     $ persistent.fae_reversi_unlocked = True
     
     $ reversi = minigame(_("Reversi"), 'mg_reversi', reversi_prep)
-    $ mg_list = []
-    $ mg_list.append(reversi)
+    # $ mg_list = []
+    $ store.fae_games.mg_list.append(reversi)
     return
 
 
@@ -2532,9 +2532,9 @@ init 5 python:
             persistent._chat_db,
             label="s_answer_programming",
             unlocked=True,
-            prompt="Depression",
+            prompt="Programming",
             random=True,
-            category=["Personal", "Depression"]
+            category=["Hobbies"]
         ),
         chat_group=CHAT_GROUP_NORMAL
     )
@@ -2557,9 +2557,9 @@ init 5 python:
             persistent._chat_db,
             label="s_answer_visual_novels",
             unlocked=True,
-            prompt="Depression",
+            prompt="Visual Novels",
             random=True,
-            category=["Personal", "Depression"]
+            category=["Hobbies", "Games"]
         ),
         chat_group=CHAT_GROUP_NORMAL
     )
@@ -2687,7 +2687,7 @@ label sayori_love_count:
 
             $ persistent._fae_sayori_love_count += 1
         
-        $ Affection.getAffectionGain()
+        $ Affection.calculatedAffectionGain()
     
     elif Affection.isNormal(higher=True) and persistent._fae_sayori_love_count % 5 == 0:
 
@@ -2715,7 +2715,7 @@ label sayo_love_too:
 
     if datetime.datetime.now() > persistent._fae_sayori_love_count_time + datetime.timedelta(minutes=3):
 
-        $ Affection.getAffectionGain()
+        $ Affection.calculatedAffectionGain()
     
     $ persistent._fae_sayori_love_count_time = datetime.datetime.now()
 
@@ -3057,7 +3057,7 @@ label s_topics_backups:
     show sayori bbaaafa at t11 zorder fae_sprites.FAE_SAYORI_ZORDER with dissolve
     pause 2
     s bbaaaca "Can you do something for me, [player]?"
-    s bbbcaca "Go to [insert savedir logic here], and copy the file called ‘persistent’."
+    s bbbcaca "Go to [renpy.config.savedir], and copy the file called ‘persistent’."
     s bbbcaaa "Please keep it safe, on somewhere like a USB."
     s abbcaca "So if anything {i}does{/i} happen to your computer, {w=0.5}{nw}"
     extend abbcaaa "my memories will be safe when you restore the game."
@@ -3065,6 +3065,4 @@ label s_topics_backups:
     s bbfccaa "It would mean so much to me."
     return "derandom"
 
-
- 
 

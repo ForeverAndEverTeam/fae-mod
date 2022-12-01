@@ -4,6 +4,20 @@ init -990 python:
 
     _easter = easter.easter(datetime.datetime.today().year)
 
+
+init -100 python in fae_utilities:
+    
+    import store
+
+    
+    def get_total_gameplay_length():
+
+        if store.persistent.fae_first_visit_date is not None:
+            return datetime.datetime.now() - store.persistent.fae_first_visit_date
+
+        else:
+            return datetime.datetime.now() - datetime.datetime.today()
+
 define FAE_NEW_YEARS_DAY = datetime.date(datetime.date.today().year, 1, 1)
 define FAE_VALENTINES_DAY = datetime.date(datetime.date.today().year, 2, 14)
 define FAE_EASTER = datetime.date(_easter.year, _easter.month, _easter.day)

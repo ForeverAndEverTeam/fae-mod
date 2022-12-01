@@ -909,10 +909,7 @@ screen preferences():
             hbox:
             #We disable updating on the main menu because it causes graphical issues
             #due to the spaceroom not being loaded in
-                if not main_menu:
-                    textbutton _("Update Version"):
-                        action Function(renpy.call_in_new_context, 'forced_update_now')
-                        style "navigation_button"
+                
 
                 textbutton _("Import DDLC Save Data"):
                     action Function(renpy.call_in_new_context, 'import_ddlc_persistent_in_settings')
@@ -1947,4 +1944,4 @@ screen qab():
 
 
 screen fae_jump_timer(time, expiry_label):
-    timer timeout action Jump(expiry_label)
+    timer time action Jump(expiry_label)

@@ -171,10 +171,7 @@ label fae_event_check:
     
     if fae_isNYD():
         jump fae_nyd_autoload
-    
-label fae_ch30_after_holiday:
 
-    pass
     
 
 
@@ -193,7 +190,7 @@ label ch30_init:
 
         persistent._fae_version = config.version
 
-        Affection.DayAffectionGainChecker()
+        Affection.checkResetDailyAffectionGain()
 
         Sayori.setInChat(True)
 
@@ -201,7 +198,7 @@ label ch30_init:
             persistent._fae_prev_regret = fae_regrets.RegretTypes.LONG_ABSENSE
         
         elif not persistent._fae_prev_regret:
-            Affection.getAffectionGain()
+            Affection.calculatedAffectionGain()
             
         persistent.fae_visit_counter += 1
         persistent.fae_last_visit_date = datetime.datetime.now()
@@ -307,7 +304,7 @@ label ch30_loop:
     label select_topic:
 
         while persistent._event_list:
-            call cnc(True, True) from _call_cnc
+            call cnc(True, True)
 
 label after_random_pick:
 
@@ -399,9 +396,9 @@ label fae_force_quit_attempt:
         s "You can't just leave like that!"
         python:
 
-            Affection.AffectionLossPercentile(2)
-            Sayori.add_new_regret_awaiting(fae_regrets.RegretTypes.UNEXPECTED_QUIT)
-            Sayori.add_regret_quit(fae_regrets.RegretTypes.UNEXPECTED_QUIT)
+            Affection.percentageAffectionLoss(2)
+            Sayori.add_new_regret_awaiting(fae_regrets.RegretTypes.unexpected_quit)
+            Sayori.add_regret_quit(fae_regrets.RegretTypes.unexpected_quit)
 
         hide screen hidden1
         $ renpy.jump("confirm_quit")

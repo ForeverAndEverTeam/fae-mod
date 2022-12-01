@@ -644,6 +644,7 @@ label fae_event_door_open:
     scene black
     menu:
         "...":
+            pause 2.0
             jump fae_event_door_open
         "Gently open the door":
             hide black
