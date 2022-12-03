@@ -318,7 +318,7 @@ label after_random_pick:
 
 
 
-label cnc(show_sayori=True, notify=True):
+label cnc(show_sayori=True, notify=False):
 
     if show_sayori:
         show sayori idle at fae_center zorder fae_sprites.FAE_SAYORI_ZORDER

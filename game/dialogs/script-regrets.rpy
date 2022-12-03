@@ -75,7 +75,7 @@ label regret_cheat_game:
     s "Don't do it again!"
     s "I forgive you."
 
-    $ persistent._fae_player_awaiting_apologies.remove(fae_regrets.RegretTypes.cheat_game)
+    $ Sayori.deleteRegret(fae_regrets.RegretTypes.cheat_game)
     return
 
 
@@ -94,7 +94,7 @@ init 5 python:
 label regret_unexpected_quit:
     s "Thank you."
     
-    $ persistent._fae_player_awaiting_apologies.remove(fae_regrets.RegretTypes.unexpected_quit)
+    $ Sayori.deleteRegret(fae_regrets.RegretTypes.unexpected_quit)
 
     return
 
@@ -137,7 +137,7 @@ label regret_bad_name:
     s bbfdaca "Were you just kidding?"
     s bbfdaaa "I hope you weren’t being serious."
     s abhfaoa "Thank you for apologising though, apology accepted!"
-    $ persistent._fae_player_awaiting_apologies.remove(fae_regrets.RegretTypes.bad_name)
+    $ Sayori.deleteRegret(fae_regrets.RegretTypes.bad_name)
     return
 
 
@@ -160,7 +160,7 @@ label regret_long_absence:
     s abbbaoa "I understand, we all get a little busy sometimes."
     s abgbcaa "I’m just glad you’re back safe and sound!"
     s abhfaoa "So, where were we?"
-    $ persistent._fae_player_awaiting_apologies.remove(fae_regrets.RegretTypes.long_absence)
+    $ Sayori.deleteRegret(fae_regrets.RegretTypes.long_absence)
 
     return
 
@@ -182,7 +182,7 @@ label regret_offense:
     s bbaaaaa "I understand that sometimes we forget to think before we speak, and say the wrong things."
     s abhfaoa "I’m just glad you took responsibility, let’s move on shall we."
 
-    $ persistent._fae_player_awaiting_apologies.remove(fae_regrets.RegretTypes.offense)
+    $ Sayori.deleteRegret(fae_regrets.RegretTypes.offense)
 
     return
 

@@ -121,7 +121,7 @@ label talk_pinit(irc=False):
 
     if isinstance(_selection, basestring):
         $ ats(_selection)
-        $ renpy.jump(cnc(True, False))
+        jump cnc
     
     elif _selection == -1:
         jump talk_menu_wip

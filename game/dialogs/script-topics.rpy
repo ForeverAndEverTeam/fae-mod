@@ -2532,8 +2532,8 @@ init 5 python:
             persistent._chat_db,
             label="s_answer_programming",
             unlocked=True,
-            prompt="Programming",
-            random=True,
+            prompt="Do you like programming?",
+            random=False,
             category=["Hobbies"]
         ),
         chat_group=CHAT_GROUP_NORMAL
@@ -2557,7 +2557,7 @@ init 5 python:
             persistent._chat_db,
             label="s_answer_visual_novels",
             unlocked=True,
-            prompt="Visual Novels",
+            prompt="Have you ever played visual novels?",
             random=True,
             category=["Hobbies", "Games"]
         ),
