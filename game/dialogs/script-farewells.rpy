@@ -335,7 +335,7 @@ init 5 python:
 
 label s_farewell_restart:
     s abhfaoa "Oh, you want to restart the game?"
-    if persistent.cheat_game = True:
+    if persistent.cheat_game:
         s fbhemja "You better not be trying to get the original game back!"
         s abfccaa "Ehehehe~ just kidding, [player]! I’ll be waiting!"
     else:

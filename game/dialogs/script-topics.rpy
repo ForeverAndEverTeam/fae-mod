@@ -335,7 +335,7 @@ init 5 python:
             unlocked=True,
             prompt="Quitting the game.",
             random=True,
-            category=["Game", "[player]", "[s_name]"]
+            category=["Game", "[player]", "Sayori"]
         ),
         chat_group=CHAT_GROUP_NORMAL
     )
@@ -461,7 +461,7 @@ init 5 python:
             label="s_player_colours",
             unlocked=True,
             prompt="What is your favorite colour?",
-            random=True,
+            random=False,
             category=["Personal", "Preferences"]
     ),
     chat_group=CHAT_GROUP_NORMAL
@@ -3057,7 +3057,7 @@ label s_topics_backups:
     show sayori bbaaafa at t11 zorder fae_sprites.FAE_SAYORI_ZORDER with dissolve
     pause 2
     s bbaaaca "Can you do something for me, [player]?"
-    s bbbcaca "Go to [renpy.config.savedir], and copy the file called ‘persistent’."
+    s bbbcaca "Go to '[renpy.config.savedir]', and copy the file called ‘persistent’."
     s bbbcaaa "Please keep it safe, on somewhere like a USB."
     s abbcaca "So if anything {i}does{/i} happen to your computer, {w=0.5}{nw}"
     extend abbcaaa "my memories will be safe when you restore the game."

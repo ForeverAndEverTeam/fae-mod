@@ -453,8 +453,19 @@ init 999 python in fae_inputs:
     setattr(renpy.display.behavior.Input, 'event', event_ov)
 
 
+init -1 python in fae_hotkeys:
 
-init -1 python:
+    talk_enabled = False
+
+    calendar_enabled = False
+
+    music_enabled = False
+
+    play_enabled = False
+
+
+init python:
+
     
     def init_qabs():
 
@@ -489,13 +500,30 @@ init -1 python:
         config.underlay.append(
             renpy.Keymap(Mute=fae_music.mute())
         )
-        #config.underlay.append(
-        #    renpy.Keymap(inc_musicvol=inc_vol)
-        #)
-        #config.underlay.append(
-        #    renpy.Keymap(dec_musicvol=red_vol)
-        #)
     
+    def remove_qabs():
+
+        config.underlay.append(
+            renpy.Keymap(dialogue=None)
+        )
+
+        config.underlay.append(
+            renpy.Keymap(music=None)
+        )
+
+        config.underlay.append(
+            renpy.Keymap(games=None)
+        )
+
+        config.underlay.append(
+            renpy.Keymap(calendar=None)
+        )
+
+        config.underlay.append(
+            renpy.Keymap(Mute=fae_music.mute())
+        )
+
+
 
 init -50 python:
 

@@ -148,7 +148,9 @@ label ch30_setup:
             pass
 
     #if not persistent.fae_sayori_closed:
-    #    jump fae_crash_greeting
+    #    $ ats("fae_crash_greet")
+
+    #    jump cnc(T)
 
     #FALL THROUGH
 
@@ -319,6 +321,8 @@ label after_random_pick:
 
 
 label cnc(show_sayori=True, notify=False):
+
+    $ remove_qabs()
 
     if show_sayori:
         show sayori idle at fae_center zorder fae_sprites.FAE_SAYORI_ZORDER

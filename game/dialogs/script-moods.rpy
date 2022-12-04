@@ -160,6 +160,17 @@ label s_mood_excited: #Excited player
     s abgccoa "Well, I hope things keep going well for you, and that today gets even better, [player]!" 
     return
 
+init 5 python:
+
+    chatReg(
+        Chat(
+            persistent._mood_db,
+            label="s_mood_happy",
+            unlocked=True,
+            prompt="Happy"
+        ),
+        chat_group=CHAT_GROUP_MOOD
+    )
 
 #Reactions
 label s_mood_happy: #Happy player
@@ -168,6 +179,18 @@ label s_mood_happy: #Happy player
     s bbfcaaa "And I feel happy too when you’re around!"
     s abgccaa "So I’ll try my best to keep it that way!"
     return
+
+init 5 python:
+
+    chatReg(
+        Chat(
+            persistent._mood_db,
+            label="s_mood_sad",
+            unlocked=True,
+            prompt="Sad"
+        ),
+        chat_group=CHAT_GROUP_MOOD
+    )
 
 label s_mood_sad:  #Sad player
     s bbhfifa "Oh, I'm so sorry, [player]."
@@ -185,6 +208,19 @@ label s_mood_sad:  #Sad player
     s abhfcaa "And that person is me, [player]."
     return
 
+init 5 python:
+
+    chatReg(
+        Chat(
+            persistent._mood_db,
+            label="s_mood_bored",
+            unlocked=True,
+            prompt="Bored",
+            affection_range=(fae_affection.HAPPY, None)
+        ),
+        chat_group=CHAT_GROUP_MOOD
+    )
+
 label s_mood_bored: #Bored player
     $ random_mg = renpy.random.choice(store.fae_games.mg_list).name
     s abhfmja "Hmm…{w=0.5}{nw}"
@@ -192,6 +228,18 @@ label s_mood_bored: #Bored player
     s abbbaoa "You can start a game in the {i}'Play'{/i} menu!"
     s abbcaaa "And I'm always working on making other games for us to play too!"
     return 
+
+init 5 python:
+
+    chatReg(
+        Chat(
+            persistent._mood_db,
+            label="s_mood_tired",
+            unlocked=True,
+            prompt="Tired"
+        ),
+        chat_group=CHAT_GROUP_MOOD
+    )
 
 label s_mood_tired: #Tired player 
     s abhfaca "Oh, you’re feeling tired, [player]? I think you should rest for a little while, okay?"
@@ -202,13 +250,37 @@ label s_mood_tired: #Tired player
     jump confirm_quit
     return 
 
+init 5 python:
+
+    chatReg(
+        Chat(
+            persistent._mood_db,
+            label="s_mood_sleepy",
+            unlocked=True,
+            prompt="Sleepy"
+        ),
+        chat_group=CHAT_GROUP_MOOD
+    )
+
 label s_mood_sleepy: #Sleepy player 
     s abhfaaa "Alright [player], you should head to bed soon so you feel well rested tomorrow." 
     s abgccma "And when you wake up, have a big hearty breakfast before you start the day! It'll make you feel much better."
     s abhfcoa "Good night, [player]!"
     s abhfcoa "Sweet dreams."
     jump confirm_quit
-    return 
+    return
+
+init 5 python:
+
+    chatReg(
+        Chat(
+            persistent._mood_db,
+            label="s_mood_lonely",
+            unlocked=True,
+            prompt="Lonely"
+        ),
+        chat_group=CHAT_GROUP_MOOD
+    )
 
 label s_mood_lonely: #Lonely player
     s bbhfiaa "Awh… don't worry, [player]!"
@@ -221,6 +293,18 @@ label s_mood_lonely: #Lonely player
     s abbccaa "I'm sure they can help you just as much as I can!"
     return
 
+init 5 python:
+
+    chatReg(
+        Chat(
+            persistent._mood_db,
+            label="s_mood_sick",
+            unlocked=True,
+            prompt="Sick"
+        ),
+        chat_group=CHAT_GROUP_MOOD
+    )
+
 label s_mood_sick: #Sick player
     s bbgcjca "Oh no… I'm so sorry that you feel sick [player]..." 
     s bbhajoa "I hope you’re feeling at least somewhat okay, maybe you should go rest for a little while?" 
@@ -231,6 +315,18 @@ label s_mood_sick: #Sick player
     extend abhfcaa "and we can talk whenever you feel up to it again!" 
     s abhfaoa "Get well soon, [player]!" 
     return
+
+init 5 python:
+
+    chatReg(
+        Chat(
+            persistent._mood_db,
+            label="s_mood_nervous",
+            unlocked=True,
+            prompt="Nervous"
+        ),
+        chat_group=CHAT_GROUP_MOOD
+    )
 
 label s_mood_nervous: #Nervous player
     s abhfica "Oh? You’re nervous about something [player]? Did something happen?"
@@ -244,6 +340,18 @@ label s_mood_nervous: #Nervous player
         s abgccaa "No matter what happens, I’ll always support you."  
     return
 
+init 5 python:
+
+    chatReg(
+        Chat(
+            persistent._mood_db,
+            label="s_mood_unmotivated",
+            unlocked=True,
+            prompt="Unmotivated"
+        ),
+        chat_group=CHAT_GROUP_MOOD
+    )
+
 label s_mood_unmotivated: #Unmotivated player
     s bbhaaab "Awh… I understand that feeling all too well…{w=0.5}{nw}"
     extend abbcaaa "But I hope you'll get your motivation back."
@@ -255,6 +363,18 @@ label s_mood_unmotivated: #Unmotivated player
     s abbbaaa "And If you need to, there's no shame in giving yourself some time to rest and take a break from things as well."
     s abgccoa "After a while, some motivation should pop back up into that unmotivated brain of yours!" 
     return
+
+init 5 python:
+
+    chatReg(
+        Chat(
+            persistent._mood_db,
+            label="s_mood_depressed",
+            unlocked=True,
+            prompt="Depressed"
+        ),
+        chat_group=CHAT_GROUP_MOOD
+    )
 
 label s_mood_depressed: #Depressed player
     s bbhfjla "[player]... I'm so sorry to hear that."
