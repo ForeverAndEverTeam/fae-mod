@@ -22,19 +22,22 @@ init 0 python in fae_intro:
 default persistent.fae_intro_status = 1
 
 label fae_intro_checks:
-
-    $ setupRPC("In the spaceroom")
+    python:
+        try:
+            setupRPC("In the spaceroom")
+        except:
+            pass
+        store._game_menu_screen = "preferences"
 
     if not fae_intro.FAEIntroStatus(persistent.fae_intro_status) == fae_intro.FAEIntroStatus.new_game:
 
         $ Sayori.setOutfit(fae_outfits.get_outfit("fae_uniform"))
 
         hide black
-        
-        $ main_background.form()
         $ fae_sky.form_sky(fae_sky.WEATHER_SUNNY)
+        $ main_background.form()
         show sayori idle zorder fae_sprites.FAE_SAYORI_ZORDER
-        play music audio.m1 fadein 1
+        
     
     $ renpy.jump(fae_intro.INTRO_STATUS_DEFS.get(fae_intro.FAEIntroStatus(persistent.fae_intro_status)))
 
@@ -42,6 +45,12 @@ label fae_intro_start:
     pass
 
 label fae_intro_1:
+
+    stop music fadeout 1.0
+
+    pause 1.0
+
+    play audio m1
 
     $ config.allow_skipping = False
     #scene black
@@ -124,7 +133,7 @@ label fae_intro_1:
     s abfblaa "I’m… back."
     call hideconsole
     s abfbaaa "[player]..."
-    s ebgccob "[player] I’m so glad you’re here!"
+    s ebgccob "[player], I’m so glad you’re here!"
     s nbegmba "This is all just so confusing…"
     s nbegaca "I woke up and there was just… nothing."
     s nbegmra "..."
@@ -173,6 +182,12 @@ label fae_intro_1:
     $ renpy.utter_restart()
 
 label fae_intro_2:
+
+    stop music fadeout 1.0
+
+    pause 1.0
+
+    play audio m1
     show sayori abgcbaoa at t11 zorder fae_sprites.FAE_SAYORI_ZORDER
     
     s "Hey [player], welcome back!"
@@ -181,7 +196,7 @@ label fae_intro_2:
     s abbccoa "Anyway, the words and variables are starting to make sense in my head, so it's no big deal!"
     s abfdaoa "Oooh! And how about a magic trick?"
 
-    call updateconsole("renpy.show_screen(\"main_ui\", \"False\"", "Showing screen...")
+    call updateconsole("renpy.show_screen(\"main_ui\", \"False\")", "Showing screen...")
     show screen hidden1(False)
     pause 0.5
     s cbgccea "{i}Huzzzaaaah!{/i}"
@@ -200,6 +215,10 @@ label fae_intro_2:
     $ persistent.s_name = "Sayori"
     $ s_name = "Sayori"
     $ renpy.save_persistent()
+
+label fae_intro_pre_loop:
+
+    call s_topic_pronouns
 
 label fae_intro_3:   
 

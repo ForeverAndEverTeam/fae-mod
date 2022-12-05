@@ -322,12 +322,10 @@ label s_greeting_7:
     s abhfaka "Look who's back!"
     s abagaoa "It's [player], of course!"
 
-    if gender is True:
+    if persistent.gender == "F":
         s abagcaa "And it looks like she's ready to spend some time with her sunshine."
-
-    elif gender is False:
+    elif persistent.gender == "H":
         s abagcaa "And it looks like he's ready to spend some time with his sunshine."
-
     else:
         s abagcaa "And it looks like they're ready to spend some time with their sunshine."
     return

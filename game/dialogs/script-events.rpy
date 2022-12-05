@@ -615,6 +615,7 @@ label fae_event_sayori_desk_hide:
     show emptydesk at t11 zorder 4
     pause 0.5
     $ style.say_dialogue = style.whisper
+    window hide
     s "Ehehehe, [player] will never see this coming, Mr. Cow!"
     s "Oh! I think they're here! Shhh, get down!" 
     s "Ready? 3... 2... 1..."
@@ -647,10 +648,10 @@ label fae_event_door_open:
             pause 2.0
             jump fae_event_door_open
         "Gently open the door":
-            hide black
-            show Sayori
             $ main_background.form()
             $ fae_sky.reload_sky()
+            hide black
+            show Sayori
             s bbegmoajj "Whoops! Sorry about that!"
             s abegaoaj "Welcome back, [player]! {w=0.5}{nw}"
             extend gbaamoj "Sorry if I scared you!"

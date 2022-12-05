@@ -9,16 +9,40 @@ init python in fae_notifs:
 
     FAE_WINDOW = None
 
+    from plyer import notification
+
+
+    def notify():
+        title = 'Sayori'
+        message = 'I have something to tell you!'
+        #icon = (renpy.config.gamedir + '\\mod_assets\\' + 'Logo.png')
+        #icon = 'icon.ico'
+        if renpy.windows or renpy.linux:
+
+            return (
+                notification.notify(
+                    title=title,
+                    message=message,
+                    app_icon=(renpy.config.gamedir + '/mod_assets/icon.ico'),
+                    timeout=10
+                )
+            )
+        else:
+            return None
+
+
     if renpy.windows:
 
         try:
 
-            import plyer
+            from plyer import notification
 
             can_show_notifs = True
         
         except ImportError:
             can_show_notifs = False
+
+            store.fae_utilities.log("Couldn't import plyer")
 
         #from plyer import notification
         if store.fae_notifs.can_show_notifs:
@@ -31,7 +55,7 @@ init python in fae_notifs:
                 #icon = 'icon.ico'
 
                 return (
-                    plyer.notification.notify(
+                    notification.notify(
                         title=title,
                         message=message,
                         app_icon=(renpy.config.gamedir + '/mod_assets/icon.ico'),

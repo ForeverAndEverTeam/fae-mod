@@ -648,23 +648,6 @@ define s = DynamicCharacter('s_name', image='sayori', what_prefix='', what_suffi
 
 define _dismiss_pause = config.developer
 
-## [BETA] Pronoun Variables
-# This section adds the feature to use player pronouns within the game text easily.
-# To use this feature, simply ask the user for their pronoun and use it here.
-# For capitalization, use heC, himC, areC and hesC
-default persistent.he = ""
-default persistent.him = ""
-default persistent.are = ""
-default persistent.hes = ""
-default he = persistent.he
-default him = persistent.him
-default are = persistent.are
-default hes = persistent.hes
-default he_capital = he.capitalize()
-default him_capital = him.capitalize()
-default are_capital = are.capitalize()
-default hes_capital = hes.capitalize()
-
 ## Extra Settings Variables
 # This section controls whether the mod is censored or is in let's play mode.
 default persistent.uncensored_mode = False
@@ -707,7 +690,7 @@ default persistent.fae_visit_counter = 0
 default persistent.fae_nickname_given = False
 default persistent.game_crash = False
 default persistent._fae_player_south_hemisphere = True
-
+default persistent.gender = "M"
 default persistent.last_playthrough = persistent.playthrough
 default persistent.fae_sayori_closed = False
 default persistent.fae_intro_complete = False

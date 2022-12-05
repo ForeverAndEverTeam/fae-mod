@@ -963,7 +963,7 @@ init python:
             
             elif not store.persistent.fae_repeat_chat and not store.persistent._oot:
 
-                atq("silence_is_golden")
+                ats("silence_is_golden")
             
         return
     

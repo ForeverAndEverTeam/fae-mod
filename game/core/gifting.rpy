@@ -27,11 +27,11 @@ init -100 python:
 
 label fae_cookies:
 
-    $ refresh()
-
     $ store.fae_gifts.cookies = True
 
-    $ store.fae_sprites._auto_gen("abhfaaa")
+    $ refresh()
+
+    #$ store.fae_sprites._auto_gen("abhfaaa")
 
     s abhfaaa "I found cookies!"
 
@@ -42,8 +42,8 @@ label fae_cookies:
 label fae_otter:
 
     $ store.fae_gifts.otter = True
-    
-    $ store.fae_sprites._auto_gen("abhfaaa")
+
+    $ refresh()
 
     s "I found an otter!"
 

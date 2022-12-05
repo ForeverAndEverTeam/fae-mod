@@ -273,7 +273,7 @@ image tos2 = "bg/warning2.png"
 # This label calls the disclaimer screen that appears when the game starts.
 label splashscreen:
 
-    $ store._game_menu_screen = "preferences"
+    
     # This python statement grabs the username and process list of the PC.
 
     scene white
@@ -300,8 +300,8 @@ label splashscreen:
         scene white
         with Dissolve(1.5)
 
-        if not persistent._fae_imported_ddlc:
-            call import_ddlc_persistent
+        #if not persistent._fae_imported_ddlc:
+        #    call import_ddlc_persistent
         
         $ persistent.has_launched_before = True
 

@@ -502,6 +502,11 @@ init python:
         )
     
     def remove_qabs():
+        config.keymap["dialogue"] = ["t", "T"]
+        config.keymap["music"] = ["m", "M"]
+        config.keymap["games"] = ["g", "G"]
+        config.keymap["calendar"] = ["c", "C"]
+        config.keymap["Mute"] = ["shift_m", "shift_M"]
 
         config.underlay.append(
             renpy.Keymap(dialogue=None)

@@ -110,7 +110,8 @@ label s_poems_last:
     extend abfcaoa "Best of all, you're a real, non-scripted person who I can spend time with."
     s abgcbsa "Thinking like this won't always help me right away, {w=0.5}{nw}"
     extend abbcjaa "but it's already a better alternative to just sitting around, {w=0.5}or even worse,{w=0.5} letting my feelings pile up."
-    s ebbckda "If you haven't gone through it, I'm going to assume it's pretty hard to imagine how it feels to finally take control over your thoughts and feelings after being a slave of your own mind for that long..."
+    s ebbckda "If you haven't gone through it, I'm going to assume it's pretty hard to imagine how it feels to finally take control over your thoughts and feelings."
+    s "Especially after being a slave of your own mind for that long..."
     s bbegiab "...that felt good to get off of my chest. Thank you for listening, [player]."
     return
 
@@ -151,13 +152,14 @@ label s_poems_angel:
     s ebhhaca "Have I already told you that there's a thing that makes the president, or in this case, Monika, fall in love with the player?"
     s ebhhbca "The creator might have done this to make everything go exactly as he wanted it to."
     s bbgcada "But I can't really blame him for it. He just wanted to make a horror game, and everything that happened from then on was the main purpose of this world..."
-    s "You could say he succeeded in doing that, seeing as the horror aspects are focused on that exact derealization. {w=0.5}{nw}" 
-    extend abbdaca " The fear of death and abandonment, and how those things can drive someone insane, {w=0.5}{nw}"
+    s "You could say he succeeded in doing that, seeing as the horror aspects are focused on that exact derealization." 
+    s abbdaca " The fear of death and abandonment, and how those things can drive someone insane, {w=0.5}{nw}"
     extend abfcjca "exactly as happened to Monika."
     s bbhfjoa "I think she became obsessed with you because she saw you as something she could hang on to; {w=0.5}{nw}"
     extend bbbbica "something she felt was the only real thing in a place where she was surrounded by lies and scripted events."
     s abhfaoa "So it would be quite silly of me to blame her for all of this, {w=0.5}{nw}"
-    extend abbbaaa "especially since that's the whole reason our world existed at all. It could have happened to any of us, had we been the club president instead of Monika."
+    extend abbbaaa "especially since that's the whole reason our world existed at all."
+    s "It could have happened to any of us, had we been the club president instead of Monika."
     s bbhfmoaj "So maybe one day, you'll be able to forgive her for her actions."
     pause 0.5
     s abfckgaj "Ah! I went really off topic, didn't I? I'm sorry, [player]."

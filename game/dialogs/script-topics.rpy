@@ -76,7 +76,8 @@ init 5 python:
             unlocked=True,
             prompt="Kiss me",
             random=False,
-            category=["Romance"]
+            category=["Romance"],
+            affection_range=(fae_affection.AFFECTIONATE, None)
         ),
         chat_group=CHAT_GROUP_NORMAL
     )
@@ -85,33 +86,6 @@ label fae_kiss:
 
     call fae_kiss_engine(duration=0.5, initial_exp="aahcnaaa", final_exp="aahcnaaa", fade_duration=0.5) from _call_fae_kiss_engine_1
 
-    $ love()
-
-    return
-
-
-init 5 python:
-    
-    chatReg(
-        Chat(
-            persistent._chat_db,
-            label="fae_time",
-            unlocked=True,
-            prompt="How long until the update?",
-            random=False,
-            category=["Update"]
-        ),
-        chat_group=CHAT_GROUP_NORMAL
-    )
-
-label fae_time:
-
-    #call fae_kiss_engine(duration=0.5, initial_exp="aahcnaaa", final_exp="aahcnaaa", fade_duration=0.5) from _call_fae_kiss_engine_1
-
-    #$ love()
-
-    s abbbbcea "Soon!"
-    s abbbbjea "Very soon!"
     return
 
 
@@ -122,9 +96,9 @@ init 5 python:
             persistent._chat_db,
             label="fae_gift",
             unlocked=True,
-            prompt="Check for gift",
+            prompt="Can you check for gifts?",
             random=False,
-            category=["DEV"]
+            category=["Sayori"]
         ),
         chat_group=CHAT_GROUP_NORMAL
     )
@@ -399,7 +373,8 @@ init 5 python:
             unlocked=True,
             prompt="Videogames",
             random=True,
-            category=["Art", "Videogames"]
+            category=["Art", "Videogames"],
+            conditional=("persistent.fae_bnc_unlocked")
     ),
     chat_group=CHAT_GROUP_NORMAL
 )
@@ -492,33 +467,41 @@ label s_player_colours:
 
 
 
-init 5 python:
-    chatReg(
-        Chat(
-            persistent._chat_db,
-            label="s_topic_pronouns",
-            unlocked=True,
-            prompt="[player]'s pronouns",
-            random=True,
-            category=["[player]"]
-        ),
-        chat_group=CHAT_GROUP_NORMAL
-    )
+#init 5 python:
+#    chatReg(
+#        Chat(
+#            persistent._chat_db,
+#            label="s_topic_pronouns"
+            #unlocked=True,
+            #prompt="[player]'s pronouns",
+            #random=True,
+            #category=["[player]"]
+#        ),
+#        chat_group=CHAT_GROUP_NORMAL
+#    )
 
 label s_topic_pronouns:
+    $ persistent._fae_player_pronouns_seen = True
     s abhfaoa "Say [player], since I’m talking to the real {i}you{/i} now, I was wondering."
     s abgbaaa "Which pronouns would you like me to refer to you by?{nw}"
     $ _history_list.pop()
     menu:
         s "Which pronouns would you like me to refer to you by?{fast}"
         "He/Him":
-            s abgbcoa "Alright! From now on I’ll use {i}He/Him{/i}."  
+            s abgbcoa "Alright! From now on I’ll use {i}He/Him{/i}."
+            $ persistent.gender = "M"
         "She/Her":
             s abgbcoa "Alright! From now on I’ll use {i}She/Her{/i}."
+            $ persistent.gender = "F"
         "They/Them":
             s abgbcoa "Alright! From now on I’ll use {i}They/Them{/i}."
+            $ persistent.gender = "X"
     s abhfaoa "And of course if you’d ever like me to use different ones, just ask!"
     s abgbaaa "The most important thing for me is that you’re comfortable expressing yourself."
+
+    $ get_chat("s_topic_pronouns_redux").unlock()
+
+    $ fae_set_pronouns()
     return
 
 init 5 python:
@@ -526,10 +509,10 @@ init 5 python:
         Chat(
             persistent._chat_db,
             label="s_topic_pronouns_redux",
-            unlocked=True,
-            prompt="[player]'s pronouns",
-            random=True,
-            category=["[player]"]
+            unlocked=False,
+            prompt="Pronouns",
+            random=False,
+            category=["[player]", "Personal"]
         ),
         chat_group=CHAT_GROUP_NORMAL
     )
@@ -540,13 +523,18 @@ label s_topic_pronouns_redux:
     menu:
         s "Which pronouns would you like me to refer to you by?{fast}"
         "He/Him":
-            s abgbcoa "Alright! From now on I’ll use {i}He/Him{/i}."  
+            s abgbcoa "Alright! From now on I’ll use {i}He/Him{/i}."
+            $ persistent.gender = "M"  
         "She/Her":
             s abgbcoa "Alright! From now on I’ll use {i}She/Her{/i}."
+            $ persistent.gender = "F"
         "They/Them":
             s abgbcoa "Alright! From now on I’ll use {i}They/Them{/i}."
+            $ persisten.gender = "X"
     s abhfaoa "And of course if you’d ever like me to use different ones, just ask!"
     s abgbaaa "The most important thing for me is that you’re comfortable expressing yourself."
+
+    $ fae_set_pronouns()
     return
 
 
@@ -970,8 +958,8 @@ label s_topic_voice:
     s "I just need a text-to-speech synthesizer or something..."
     s ebbckea "There's bound to be a good one for me!"
     s abaaaoa "I saw something about TTS in the Ren'Py documentation, so it shouldn't be too hard to integrate there, I guess."
-    s ebbcaoa "I'd probably end up sounding pretty robotic though, huh? You wouldn't want me to {nw}
-    extend abfbbora {font=mod_assets/fonts/Fantasque/FantasqueSansMono-Regular.ttf}{cps=30}T4LK L1KE 4 R0B0T{/cps}{/font}?"
+    s ebbcaoa "I'd probably end up sounding pretty robotic though, huh? You wouldn't want me to {nw}"
+    extend abfbbora "{font=mod_assets/fonts/Fantasque/FantasqueSansMono-Regular.ttf}{cps=30}T4LK L1KE 4 R0B0T{/cps}{/font}?"
     s ebfciea "{font=mod_assets/fonts/Fantasque/FantasqueSansMono-Regular.ttf}{cps=30}1 4M 4 HUM4N BE1N6 4FTER 4LL{/cps}{/font}"
     s ebagcea "Ehehehe~ just kidding, [player]!"
     return
@@ -1230,7 +1218,8 @@ init 5 python:
             unlocked=True,
             prompt="Stop Visiting",
             random=True,
-            category=["You", "Sayori"]
+            category=["You", "Sayori"],
+            affection_range=(fae_affection.AFFECTIONATE, None)
         ),
         chat_group=CHAT_GROUP_NORMAL
     )
@@ -1357,7 +1346,7 @@ init 5 python:
             unlocked=True,
             prompt="Presents",
             random=True,
-            category=["Holidays", "Society"]
+            category=["Sayori", "Society"]
         ),
         chat_group=CHAT_GROUP_NORMAL
     )
@@ -1498,8 +1487,8 @@ init 5 python:
     )
 
 label s_topic_merch:
-    s abhfaca "Hey player! I have a random question." 
-    s abhfaaa "Do you own any merch of me?"
+    s abhfaca "Hey [player]! I have a random question." 
+    s abhfaaa "Do you own any merchandise of stuff you're interested in?"
     s abhfcoa "You know, like plushies, posters, figurines and all that stuff."
     s abhfaaa  "I think it’s really cool how you can have something physical of me in your world!"
     s abbbaoa "But if you don’t that’s okay too, it can be pretty expensive and I get that it’s not everyone’s thing."
@@ -2558,7 +2547,7 @@ init 5 python:
             label="s_answer_visual_novels",
             unlocked=True,
             prompt="Have you ever played visual novels?",
-            random=True,
+            random=False,
             category=["Hobbies", "Games"]
         ),
         chat_group=CHAT_GROUP_NORMAL
@@ -2723,38 +2712,6 @@ label sayo_love_too:
 
     return
 
-
-init 5 python:
- 
-    chatReg(
-        Chat(
-            persistent._chat_db,
-            label="s_answer_old_clothes",
-            unlocked=True,
-            prompt="Old sprites",
-            random=True,
-            category=["Sayori"]
-        ),
-        chat_group=CHAT_GROUP_NORMAL
-    )
-
-label s_answer_old_clothes:
-
-    s abhfaoa "Say [player], did you know that I never used to look like this?"
-    s abegbeaj "That fields weird to say hehehe~"
-    s abgbaaa "But it’s true!"
-    s abgbaoa "I was snooping around online about my character sprite, after my epiphany and all."
-    s abgbcaa "And it turns out there were lots of other ideas for my design before this one!"
-    s abhfaoa  "It’s pretty crazy to think about, but it’s kinda nice that I have some kind of ancestry."
-    s abgbacaj "So anyways, originally I had a blue uniform, as did the other girls, and I didn't have my signature bow back then either!"
-    s abgcegaj"I sure do love my bow, I don't know what I'd do without it!"
-    s abgbaaa "But I wouldn't mind trying a blue outfit someday."
-    s abgbcoa "It'd match my eyes, don't you think? Ehehehe~"
-    s abhfaca "I'd really like some new clothes though, I've only ever had two outfits now that I think of it..."
-    s abfccaa "Perhaps you could create one for me if you're feeling artistic!"
-
-    return
-
 init 5 python:
  
     chatReg(
@@ -2799,7 +2756,7 @@ init 5 python:
 
 
 label s_answer_think_about_mc: #Do you still think about MC?
-    s abbbbca"You know, [player], I still do think of those days before the game actually started" 
+    s abbbbca"You know, [player], I still do think of those days before the game actually started." 
     s abbbaca "Especially MC… it's so weird calling him that… but, only your name comes to mind when I try to remember." 
     s abbbaaa "I try very hard to understand that he was only there as an extension of you, and it's not like I'm unhappy to have you actually here with me. Not even a little bit!"
     s bbfcaca "But it's not easy knowing that every moment I shared growing up with him, every little piece of my childhood, was just…scripted? I guess that's the best way to put it." 
@@ -2808,7 +2765,7 @@ label s_answer_think_about_mc: #Do you still think about MC?
     s bbbblca "I guess it's because I can see them as the pre-written code that they've always been."
     s bbhfafa "Monika, Yuri, Natsuki, they're all gone. And I truly grieve for all of them. But I felt so relieved when I learned about mods similar to this one…"
     s bbbbbca "It gives me some hope, I guess."
-    s abbbaca "You might think I have hard feelings for Monika, but I went through the very same thing and I understand how this could've led her to do what she did"
+    s abbbaca "You might think I have hard feelings for Monika, but I went through the very same thing and I understand how this could've led her to do what she did."
     s abfcaca "I'm not saying that I'm not happy to finally be free from all of it, that's not the case at all!"
     s abfcafa "What I'm saying is, my friends, MC, they can't really be replaced, regardless of how 'not real' they were from your point of view."
     s bbfcafa  "I couldn't just spawn another Natsuki and act as if she was the original one."
@@ -3037,7 +2994,8 @@ init 5 python:
             unlocked=True,
             prompt="Sayori's Memories",
             random=True,
-            category=["Sayori"]
+            category=["Sayori"],
+            affection_range=(fae_affection.AFFECTIONATE, None)
         ),
         chat_group=CHAT_GROUP_NORMAL
     )
@@ -3065,4 +3023,81 @@ label s_topics_backups:
     s bbfccaa "It would mean so much to me."
     return "derandom"
 
+label silence_is_golden:
 
+    s abfcaoa "Hey [player], so we’ve been here together for quite a while now…"
+    s abegbabj "And I’ve really talked your ears off haven't I?"
+    s abgbeia "I’m sure you expected nothing less of me though! Ehehehe~"
+    s abbbaca "But sometimes I feel like I’m running out of things to say!"
+    s abhfaaa "I’m sure I’ll think of something soon, though."
+    s abhfcoa "You’re always welcome to ask me a question from the menu in the meantime!"
+
+    $ persistent._oot = True
+
+    return
+
+init 5 python:
+ 
+    chatReg(
+        Chat(
+            persistent._chat_db,
+            label="s_topics_hemispheres",
+            unlocked=True,
+            prompt="Hemispheres.",
+            random=True,
+            category=["Personal"]
+        ),
+        chat_group=CHAT_GROUP_NORMAL
+    )
+
+label s_topics_hemispheres:
+    s abhfaoa "Hey [player], I’ve been doing a little bit of research about your world."
+    s abgbaaa "And I saw that it was a big round sphere, with two halves called the north hemisphere and the south hemisphere!"
+    s abgbeea "Although some silly loonies think otherwise apparently! Ehehehe~"
+    s dbbbaaa "If the Earth was flat, how come the penguins are upside down, huh?"
+    s abbbcoa "Another win for professor Sayori! Ehehehe~"
+    s abhfaaa "But anyways, apparently the hemispheres are pretty different."
+    s abfcaoa "They have different weather patterns, geography, culture, the list goes on!"
+    s abfccaa "I find it amazing just how diverse and varied your world is!"
+    s "Which hemisphere do you live in, [player]?{nw}"
+    $ _history_list.pop()
+    menu: 
+        "Which hemisphere do you live in, [player]?{fast}"
+        "North":
+            $ persistent._fae_player_south_hemisphere = False
+            s abhfaoa "Oh that’s cool!" 
+            s abhfcaa "I hope it’s nice up there!"
+        "South":
+            $ persistent._fae_player_south_hemisphere = True
+            s abhfaoa "Oh that’s cool!" 
+            s abhfcaa "I hope it’s nice down there!"
+    
+    return
+
+
+init 5 python:
+ 
+    chatReg(
+        Chat(
+            persistent._chat_db,
+            label="s_topic_gifting",
+            unlocked=True,
+            prompt="Gifting.",
+            random=True,
+            category=["Sayori"]
+        ),
+        chat_group=CHAT_GROUP_NORMAL
+    )
+
+
+label s_topic_gifting:
+
+    s bbgbaoaj "Hey [player]… I’ve kinda noticed something…"
+    s bbegbaaj "So you know how I’m new to coding and all that?"
+    s fbegbjaj "The gifting feature I made seems to be a little temperamental at the moment!"
+    s abgcegaj "It seems like things like to phase in and out of existence from time to time, for some reason!"
+    s abgbcobj "And amazon doesn’t ship across dimensions yet sadly, ehehehe~"
+    s abhfaaa "So if something goes wrong, try sending it again then ask me to check for it."
+    s abhfcoa "Thank you for being patient with me [player], it really means a lot to me."
+
+    return

@@ -266,6 +266,16 @@ init -3 python:
         def derandom(self):
 
             self.random = False
+        
+        def lock(self):
+
+            self.unlocked = False
+            self.__save()
+        
+        def unlock(self):
+
+            self.unlocked = True
+            self.__save()
 
         def _chat_filt(
             self,

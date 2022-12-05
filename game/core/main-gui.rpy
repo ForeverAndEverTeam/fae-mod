@@ -204,7 +204,7 @@ screen neat_menu(menu_parts, cls, ols, cat_length):
                             hover_sound gui.hover_sound
                             activate_sound gui.activate_sound
                     else:
-                        textbutton _("back"):
+                        textbutton _("Back"):
                             style "t_m_button"
                             action [ Return(-1), Function(prior_adjust.change, 0) ]
                             hover_sound gui.hover_sound

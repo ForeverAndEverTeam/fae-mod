@@ -12,6 +12,26 @@ init -890 python in fae_globals:
     if tt_detected:
         store.persistent._fae_pm_has_went_back_in_time = True
 
+init 999 python:
+
+    def random_chat():
+
+        fae_random_chat_rate.adjustRandFrequency(persistent._fae_random_chat_freq)
+
+define FAE_PRONOUN_GENDER_MAP = {
+    "his": {"M": "his", "F": "her", "X": "their"},
+    "he": {"M": "he", "F": "she", "X": "they"},
+    "hes": {"M": "he's", "F": "she's", "X": "they're"},
+    "heis": {"M": "he is", "F": "she is", "X": "they are"},
+    "bf": {"M": "boyfriend", "F": "girlfriend", "X": "partner"},
+    "man": {"M": "man", "F": "woman", "X": "person"},
+    "boy": {"M": "boy", "F": "girl", "X": "person"},
+    "guy": {"M": "guy", "F": "girl", "X": "person"},
+    "him": {"M": "him", "F": "her", "X": "them"},
+    "himself": {"M": "himself", "F": "herself", "X": "themselves"},
+    "hero": {"M": "hero", "F": "heroine", "X": "hero"}
+}
+
 init python:
 
     import subprocess
@@ -58,6 +78,33 @@ init python:
         renpy.show("sayori idle", at_list=[t11], zorder=store.fae_sprites.FAE_SAYORI_ZORDER)
         
         renpy.hide("black")
+    
+    def fae_set_pronouns(key=None):
+        """
+        Sets gender specific word replacements
+
+        Few examples:
+            "It is his pen." (if the player's gender is declared as male)
+            "It is her pen." (if the player's gender is declared as female)
+            "It is their pen." (if player's gender is not declared)
+
+        For all available pronouns/words check the keys in MAS_PRONOUN_GENDER_MAP
+
+        IN:
+            key - Optional[Literal["M", "F", "X"]] - key (perhaps current gender) to set the pronouns for
+                If None, uses persistent.gender
+        """
+        store = renpy.store
+
+        if key is None:
+            key = store.persistent.gender
+
+        for word, sub_map in store.FAE_PRONOUN_GENDER_MAP.items():
+            if key in sub_map:
+                value = sub_map[key]
+            else:
+                value = sub_map["X"]
+            setattr(store, word, value)
         
 
 
@@ -122,7 +169,9 @@ label ch30_autoload:
         if not config.developer:
             config.allow_skipping = False
     
-    $ store.fae_utilities.makedirifnot("{0}/gifts/".format(renpy.config.gamedir))
+    $ store.fae_utilities.makedirifnot("{0}/gifts/".format(renpy.config.basedir))
+
+    $ fae_set_pronouns()
 
     jump ch30_main
 
@@ -146,6 +195,8 @@ label ch30_setup:
             setupRPC("In the spaceroom")
         except:
             pass
+    
+        random_chat()
 
     #if not persistent.fae_sayori_closed:
     #    $ ats("fae_crash_greet")
@@ -179,9 +230,18 @@ label fae_event_check:
 
 label ch30_init:
 
+
     $ persistent.fae_sayori_closed = False
 
     #$ setupRPC("In the spaceroom")
+
+    #if store.fae_notifs.can_show_notifs and persistent._fae_notifs_enabled:
+
+    #    if renpy.windows:
+    #        $ store.fae_notifs.notifyWindows()
+        
+    #    elif renpy.linux:
+    #        $ store.fae_notifs.notifyLinux()
 
     $ persistent.autoload = "ch30_autoload"
 
@@ -260,7 +320,7 @@ label ch30_init:
 
 label ch30_loop:
 
-
+    
     call spaceroom(False, None) from _call_spaceroom
 
     $ init_qabs()
@@ -306,7 +366,7 @@ label ch30_loop:
     label select_topic:
 
         while persistent._event_list:
-            call cnc(True, True)
+            call cnc_notify(True)
 
 label after_random_pick:
 
@@ -320,7 +380,7 @@ label after_random_pick:
 
 
 
-label cnc(show_sayori=True, notify=False):
+label cnc(show_sayori=True):
 
     $ remove_qabs()
 
@@ -333,15 +393,6 @@ label cnc(show_sayori=True, notify=False):
 
         if renpy.has_label(_chat):
 
-            if notify:
-
-                if store.fae_notifs.can_show_notifs and persistent._fae_notifs_enabled:
-
-                    if renpy.windows:
-                        $ fae_notifs.notifyWindows()
-                    
-                    elif renpy.linux:
-                        $ fae_notifs.notifyLinux()
 
             $ Sayori.setInChat(True)
 
@@ -379,6 +430,64 @@ label cnc(show_sayori=True, notify=False):
 
     jump ch30_loop
 
+label cnc_notify(show_sayori=True):
+
+    $ remove_qabs()
+
+    if show_sayori:
+        show sayori idle at fae_center zorder fae_sprites.FAE_SAYORI_ZORDER
+
+    #show sayori idle at t11 zorder store.fae_sprites.SAYO_ZORDER
+    if persistent._event_list:
+        $ _chat_notify = persistent._event_list.pop(0)
+
+        if renpy.has_label(_chat_notify):
+
+            if store.fae_notifs.can_show_notifs and persistent._fae_notifs_enabled:
+
+                if renpy.windows:
+
+                    $ fae_notifs.notifyWindows()
+                
+                elif renpy.linux:
+
+                    $ fae_notifs.notifyLinux()
+
+            $ Sayori.setInChat(True)
+
+            hide screen hidden1#(True)
+
+            call expression _chat_notify from _call_expression_10
+    
+    python:
+        return_keys = _return if isinstance(_return, dict) else dict()
+
+        chat_obj = get_chat(_chat_notify)
+
+        if chat_obj is not None:
+            chat_obj.seen_no += 1
+            chat_obj.latest_seen = datetime.datetime.now()
+
+            if "derandom" in return_keys:
+                chat_obj.random = False
+            if "love" in return_keys:
+                love()
+    
+    if "quit" in return_keys:
+        $ persistent.fae_sayori_closed = True
+        #$ fae_clearNotifs()
+        jump confirm_quit
+    
+    python:
+        global LCC
+        LCC = datetime.datetime.now()
+        Sayori.setInChat(False)
+    
+    window hide
+
+    show screen hidden1(True)
+
+    jump ch30_loop
 
 label fae_force_quit_attempt:
 

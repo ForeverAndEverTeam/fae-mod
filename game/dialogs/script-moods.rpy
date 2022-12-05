@@ -285,7 +285,10 @@ init 5 python:
 label s_mood_lonely: #Lonely player
     s bbhfiaa "Awh… don't worry, [player]!"
     s abbccaa "You can always spend time with me."
-    s abbbaoa "We could play a game, chat, or read some poems if you want to!"
+    if persistent.fae_bnc_unlocked:
+        s abbbaoa "We could play a game, chat, or read some poems if you want to!"
+    else:
+        s abbbaoa "We could chat, or read some poems if you want to!"
     s abhaaca "But if you still feel lonely, then perhaps you could try to find some people who like the same things you do!"
     s abhhaaa "Maybe you could catch up with an old friend?"
     s abhhcoa "Or make a new one!"
@@ -310,7 +313,7 @@ label s_mood_sick: #Sick player
     s bbhajoa "I hope you’re feeling at least somewhat okay, maybe you should go rest for a little while?" 
     s abhaiaa "I’ll wait for you, that's not a problem for me." 
     s bbgbica "But I really care about your health, [player], {w=0.5}{nw}"
-    extend bbgccoa " and I don't think sitting in front of a screen will get you healed up any quicker!" 
+    extend bbgccoa "and I don't think sitting in front of a screen will get you healed up any quicker!" 
     s bbhfaaa "I'm not going anywhere, {w=0.5}{nw}"
     extend abhfcaa "and we can talk whenever you feel up to it again!" 
     s abhfaoa "Get well soon, [player]!" 
@@ -353,8 +356,8 @@ init 5 python:
     )
 
 label s_mood_unmotivated: #Unmotivated player
-    s bbhaaab "Awh… I understand that feeling all too well…{w=0.5}{nw}"
-    extend abbcaaa "But I hope you'll get your motivation back."
+    s bbhaaab "Aww... I understand that feeling all too well, {w=0.5}{nw}"
+    extend abbcaaa "but I'm sure you'll get your motivation back, [player]."
     s abbbaca "Maybe you could try to write a poem about your emotions, just like I always did?" 
     s abbcaca "I found it helpful to let it all out in some way and be honest with myself."
     s abgccoa "And it also might help you find some inspiration to get you motivated again!" 

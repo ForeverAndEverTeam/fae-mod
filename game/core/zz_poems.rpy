@@ -484,7 +484,7 @@ The universe gives fruits of life to all of us.
 They all have diverse sizes and shapes.
 But no-one knows their real taste,
 Because each person tastes them in their own way.
-Some people can only  feel a bitter taste,
+Some people can only feel a bitter taste,
 even if their fruit is one of the best ones.
 Others feel they are sweet and very tasty,
 Whatever fruit it may be that they have got in their hands.
@@ -541,7 +541,7 @@ In the wind of my beliefs
 The belief that my life is not vain,
 And that my real fate
 Is to give to the world
-As much as a I can give
+As much as I can give
 As a flying old leaf,
 As an useless former part of a big tree.
 I'm flying with the fast air streams,
@@ -598,7 +598,7 @@ Just like there's nothing completely white."""
 I seem to see things that I have never seen before.
 I seem to just now feel all that I’ve never felt around.
 So I can see anything that has happened here before.
-I started doing what I used not to know how to do.
+I started doing what I used to not know how to do.
 I saw here, an afterlight,
 That started to shine down on the gloom around me.
 It said that my life had been just a puppet-show.
