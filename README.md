@@ -145,7 +145,7 @@ See "LICENSE" for license information
 
 Made in accordance with Team Salvato's IP Guidelines
 
-Copyright (c) 2018-2021 Alexander Osipov and the other creators
+Copyright (c) 2018-2022 Alexander Osipov and the other creators
 
 </details>
 
