@@ -3,22 +3,24 @@ default persistent._fae_player_bday = None
 
 default peristent._fae_player_confirmed_bday = False
 
-#init 5 python:
-#    chatReg(
-#        Chat(
-#            persistent._chat_db,
-#            label="s_player_birthday",
-#            unlocked=True,
-#            prompt="My birthday",
-#            category=["Setup", "You"],
-#            random=False,
-#            affection_range=(fae_affection.AFFECTIONATE, None)
-#        ),
-#        chat_group=CHAT_GROUP_NORMAL
-#    )
+init 5 python:
+    chatReg(
+        Chat(
+            persistent._chat_db,
+            label="s_player_birthday",
+            unlocked=True,
+            prompt="My birthday",
+            category=["Holidays", "You"],
+            random=True
+        ),
+        chat_group=CHAT_GROUP_NORMAL
+    )
 
 label s_player_birthday:
-    s "Shall you share your birthday?"
+    s abhfaoa "Hey [player], I was wondering."
+    s abgbaaa "You know I’m not too sure when my birthday is, {w=0.5}{nw}"
+    extend abgbcoa "but I’m sure you know when yours is! Ehehehe~"
+    s abhfaaa "When’s your birthday, [player]?"
     menu:
         "Sure!":
             s "Alright!"
@@ -72,12 +74,13 @@ label fae_bday_player_select_select:
             menu:
                 s "Are you sure it's [new_bday_str]? I'm never going to forget this date.{fast}"
                 "Yes, I'm sure!":
-                    s "Then it's settled!"
+                    s abbbaoa "Alright, I’ll mark [new_bday_str] on the calendar!"
+                    s abgbcaa "I’ll be sure to throw an amazing party for you as soon as I figure out how to get some decorations in here! Ehehehe~"
 
                 "Actually...":
                     s "Aha! I figured you weren't so sure."
                     s "Try again~"
-                    jump fae_bday_player_bday_select_select
+                    jump fae_bday_player_select_select
 
         "No.":
             s "Oh, that's wrong?"
@@ -112,9 +115,10 @@ label fae_bday_player_select_select:
 
 
 label birthdate_set:
-    if old_bday is not None:
-        $ old_bday = old_bday.replace(year=fae_player_bday_curr().year)
+    
     $ persistent._fae_player_confirmed_bday = True
+
+    $ get_chat("s_player_birthday").lock()
     return
 
 

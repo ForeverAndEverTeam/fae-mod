@@ -108,6 +108,12 @@ define FAE_NEW_YEARS_EVE = datetime.date(datetime.date.today().year, 12, 31)
 # This init python statement sets up the functions, keymaps and channels
 # for the game.
 init python:
+
+    def reset():
+
+        persistent.fae_d25_seen = False
+        persistent.fae_seen_bday = False
+
     # These variable declarations adjusts the mapping for certain actions in-game.
     config.keymap['game_menu'].remove('mouseup_3')
     config.keymap['hide_windows'].append('mouseup_3')
@@ -245,6 +251,7 @@ define audio.fall = "sfx/fall.ogg"
 
 #MOD AUDIO
 define audio.s1 = "<loop 0>mod_assets/bgm/s1_ac.ogg"
+define audio.s2 = "<loop 0>mod_assets/bgm/Slepyori_-_Loop.ogg"
 
 
 
@@ -689,7 +696,7 @@ default persistent.fae_last_visit_date = datetime.datetime.now()
 default persistent.fae_visit_counter = 0
 default persistent.fae_nickname_given = False
 default persistent.game_crash = False
-default persistent._fae_player_south_hemisphere = True
+default persistent._fae_player_south_hemisphere = None
 default persistent.gender = "M"
 default persistent.last_playthrough = persistent.playthrough
 default persistent.fae_sayori_closed = False
@@ -702,6 +709,8 @@ default persistent.sessions = {
     "total_sessions": 0,
     "first_session": datetime.datetime.now()
 }
+
+
 #########################
 #NON-PERSISTENT DEFAULTS#
 #########################
@@ -937,9 +946,11 @@ init -999 python:
         if (
             not renpy.get_screen("input")
             and not renpy.get_screen("choice")
+            and not renpy.get_screen("preferences")
+            and not renpy.get_screen("history")
             and fae_globals.allow_force_quit
         ):
-            renpy.call("fae_force_quit_attempt")
+            renpy.call("force_quit")
 
 
     class FAEEvent(object):

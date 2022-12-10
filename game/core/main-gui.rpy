@@ -54,6 +54,8 @@ label tell:
         else:
             say_menu.append((_("I love you!"), "love"))
         
+        say_menu.append((_("I want to tell you something..."), "compliment"))
+        
         say_menu.append((_("I'm sorry."), "sorry"))
 
         say_menu.append((_("Goodbye"), "farewell"))
@@ -74,13 +76,14 @@ label tell:
     elif schoice == "sorry":
         jump regret_init
     
+    elif schoice == "compliment":
+        jump compliment_init
+    
     elif schoice == "farewell":
         jump farewell_options
     
     elif schoice == "back":
         jump talk_menu_wip
-    
-
     
     return
 
@@ -88,7 +91,7 @@ label tell:
 label boop:
 
     s "Did you just boop me?"
-    s "Eheheeh"
+    s "Ehehehe~"
     return
 
 

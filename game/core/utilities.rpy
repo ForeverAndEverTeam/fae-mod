@@ -987,6 +987,8 @@ init python:
     
     def d_check():
 
+        reset()
+
         fae_sky.reload_sky()
 
         if persistent.fae_last_visit_date.year != datetime.datetime.now().year:

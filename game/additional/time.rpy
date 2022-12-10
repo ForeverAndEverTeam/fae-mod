@@ -9,7 +9,7 @@ init -100 python in fae_utilities:
     
     import store
 
-    
+
     def get_total_gameplay_length():
 
         if store.persistent.fae_first_visit_date is not None:
@@ -78,6 +78,10 @@ init -3 python:
             return True
         else:
             return False
+    
+    def fae_is_night():
+        if datetime.time(persistent.fae_moonup) >= datetime.datetime.now().time() > datetime.time(persistent.fae_sunup):
+            return True
 
 
     

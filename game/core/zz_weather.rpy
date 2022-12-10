@@ -1,4 +1,4 @@
-# Images courtesy of JN Team
+# ASSETS COURTESY OF JN TEAM
 
 # Sky types
 image sky day overcast = "mod_assets/backgrounds/atmosphere/sky/sky_day_overcast.png"
@@ -65,37 +65,15 @@ image particles snow:
     "mod_assets/backgrounds/atmosphere/particles/snow.png"
     snow_scroll
 
-image space 1:
-    "images/cg/monika/mask.png"
-    sky_scroll
-image space 2:
-    "images/cg/monika/mask_2.png"
-    sky_scroll
-image space 3:
-    "images/cg/monika/mask_3.png"
-    sky_scroll
-
-#SKY FILES
-
-image sky day sunny:
-    "mod_assets/masks/sky_day.png"
-    sky_scroll
-
-image sky evening sunny:
-    "mod_assets/masks/sky_sunset.png"
-    sky_scroll
-
-image sky night sunny:
-    "mod_assets/masks/sky_night.png"
-    sky_scroll
-
-image particles snow:
-    "mod_assets/images/atmosphere/particles/snow.png"
-    snow_scroll
-
-image particles rain:
-    "mod_assets/images/atmosphere/particles/rain.png"
-    rain_scroll
+# Transforms
+transform cloud_scroll:
+    # Clouds shift from left to right
+    subpixel True
+    topleft
+    parallel:
+        xoffset 0 yoffset 0
+        linear 30 xoffset -1280
+        repeat
 
 transform snow_scroll:
     subpixel True
@@ -113,45 +91,29 @@ transform rain_scroll:
         linear 2 xoffset 220  yoffset 1280
         repeat
 
-transform cloud_scroll:
-    # Clouds shift from left to right
-    subpixel True
-    topleft
-    parallel:
-        xoffset 0 yoffset 0
-        linear 30 xoffset -1280
-        repeat
+# Transitions
+define weather_change_transition = Dissolve(0.75)
+define dim_change_transition = Dissolve(0.25)
 
-transform sky_scroll:
-    # Clouds shift from left to right
-    subpixel True
-    topleft
-    parallel:
-        xoffset 0 yoffset 0
-        linear 60 xoffset -1280
-        repeat
 
-init 0 python in fae_sky:
+init 0 python in fae_atmosphere:
+
     from Enum import Enum
     import os
     import random
     import store
-    import store.fae_utilities as fae_utilities
     import store.fae_preferences as fae_preferences
+    import store.fae_utilities as fae_utilities
 
-    # Zorder indexes
-    # Complete order is:
-    # V PROPS
-    # V SAYORI
-    # V BACKGROUND
-    # V DIM
-    # SKY
-    _DIM_Z_ORDER = 2
-    _CLOUDS_Z_ORDER = -1
-    _SKY_Z_ORDER = -2
+    _DIM_Z_INDEX = 6
+    _PARTICLES_Z_INDEX = -3
+    _CLOUDS_Z_INDEX = -6
+    _SKY_Z_INDEX = -8
 
     class FAEWeatherTypes(Enum):
-
+        """
+        Identifiers for different weather objects, used for sanity checks when changing weather.
+        """
         overcast = 1
         rain = 2
         sunny = 3
@@ -159,47 +121,53 @@ init 0 python in fae_sky:
         glitch = 5
         snow = 6
 
-
     class FAEWeather():
         def __init__(
             self,
             weather_type,
             day_sky_image,
             night_sky_image,
-            evening_sky_image,
+            notify_text=list(),
             dim_image=None,
-            #day_clouds_image=None,
-            #night_clouds_image=None,
-            #day_particles_image=None,
-            #night_particles_image=None,
+            day_clouds_image=None,
+            night_clouds_image=None,
+            day_particles_image=None,
+            night_particles_image=None,
             #weather_sfx=None
         ):
             """
-            Initializes a new instance of weather.
+            Initialises a new instance of FAEWeather.
 
-            FEED:
-                day_sky_image = name of image to show for the weather event
-                evening_sky_image = name of image to show for evening
-                night_sky_image = name of the image to show for evening
-                dim_image = name of dimming effect to use
+            IN:
+                - weather_type - FAEWeatherTypes type describing this weather
+                - day_sky_image - Name of the image to show for this weather during the day
+                - night_sky_image - Name of the image to show for this weather during the night
+                - notify_text - The text to show via popup if the weather changes, and Natsuki decides to react
+                - dim_image - Name of the dimming effect to use, or None
+                - day_clouds_image - Name of the clouds to use for this weather during the day, or None
+                - night_clouds_image - Name of the clouds to use for this weather during the night, or None
+                - day_particles_image - Name of the particles to use for this weather during the day, or None
+                - night_particles_image - Name of the particles to use for this weather during the night, or None
+                - weather_sfx - File path of the weather sound effect to use, or None
             """
-
             self.weather_type = weather_type
             self.day_sky_image = day_sky_image
-            self.evening_sky_image = evening_sky_image
             self.night_sky_image = night_sky_image
+            self.notify_text = notify_text
             self.dim_image = dim_image
-            #self.day_particles_image = day_particles_image
-            #self.night_particles_image = night_particles_image
+            self.day_clouds_image = day_clouds_image
+            self.night_clouds_image = night_clouds_image
+            self.day_particles_image = day_particles_image
+            self.night_particles_image = night_particles_image
             #self.weather_sfx = weather_sfx
-    """
+
     WEATHER_OVERCAST = FAEWeather(
         weather_type=FAEWeatherTypes.overcast,
         day_sky_image="sky day overcast",
         night_sky_image="sky night overcast",
         dim_image="dim light",
-        #day_clouds_image="clouds day heavy",
-        #night_clouds_image="clouds night heavy",
+        day_clouds_image="clouds day heavy",
+        night_clouds_image="clouds night heavy",
     )
 
     WEATHER_RAIN = FAEWeather(
@@ -244,98 +212,74 @@ init 0 python in fae_sky:
         day_clouds_image="clouds day light",
         night_clouds_image="clouds night light"
     )
-    WEATHER_SUNNY1 = FAEWeather(
-        weather_type=FAEWeatherTypes.sunny,
-        day_sky_image="sky day sunny",
-        night_sky_image="sky night sunny",
-        day_clouds_image="clouds day light",
-        night_clouds_image="clouds night light"
-    )
-
-    """
-    
-    WEATHER_SUNNY = FAEWeather(
-        weather_type=FAEWeatherTypes.sunny,
-        day_sky_image="sky day sunny",
-        evening_sky_image="sky evening sunny",
-        night_sky_image="sky night sunny",
-        dim_image="dim medium",
-    )
 
     WEATHER_GLITCH = FAEWeather(
         weather_type=FAEWeatherTypes.glitch,
-        day_sky_image="space 2",
-        evening_sky_image="space 2",
-        night_sky_image="space 2",
-        
-    )
+        day_sky_image="sky glitch_fuzzy",
+        night_sky_image="sky glitch_fuzzy")
 
-    
-  
     current_weather = None
 
-    def reload_sky(with_transition=True):
+    def updateSky(with_transition=True):
 
-        """
-        Shows the sky based on sunrise/sunset times specified in persistent.
-        
-        FEED:
-            with_transition = If True, will visually fade in the new weather
-        """
+        showSky(random.choice([
+            WEATHER_OVERCAST,
+                    WEATHER_RAIN,
+                    WEATHER_THUNDER,
+                    WEATHER_SUNNY,
+                    WEATHER_SUNNY,
+                    WEATHER_SUNNY,
+                    WEATHER_SNOW,
+                    WEATHER_SNOW
+        ]),
+        with_transition=with_transition)
 
-        form_sky(WEATHER_SUNNY, with_transition=with_transition)
+    
+    def showSky(weather, with_transition=True):
 
-        """
+        sky_to_show = weather.day_sky_image if store.fae_is_day() else weather.night_sky_image
+        clouds_to_show = weather.day_clouds_image if store.fae_is_day() else weather.night_clouds_image
 
-        if store.persistent._fae_weather_setting == int(fae_preferences.weather.FAEWeatherSettings.random):
-
-
-            form_sky(random.choice([
-                WEATHER_OVERCAST,
-                WEATHER_RAIN,
-                WEATHER_THUNDER,
-                WEATHER_SUNNY,
-                WEATHER_SUNNY,
-                WEATHER_SUNNY,
-                WEATHER_SNOW,
-                WEATHER_SNOW
-            ]),
-            with_transition = with_transition)
-        
-        else:
-            form_sky(WEATHER_SUNNY, with_transition=with_transition)
-        """
-
-    def form_sky(weather, with_transition=True):
-
-        """
-        Shows the specified sky with clouds/dimming effect
-        FEED:
-            weather = Weather to set
-            with_transition = If True, will visually fade in new weather
-        """
-
-        if store.fae_is_day():
-            sky_to_show = weather.day_sky_image
-        elif store.fae_is_evening():
-            sky_to_show = weather.evening_sky_image
-        
-        else:
-            sky_to_show = weather.night_sky_image
-        
-        renpy.show(name=sky_to_show, zorder=_SKY_Z_ORDER)
+        # Show the selected sky
+        renpy.show(name=sky_to_show, zorder=_SKY_Z_INDEX)
         if with_transition:
             renpy.with_statement(trans=store.weather_change_transition)
-        
+
+        # Add the clouds, if defined
+        if clouds_to_show:
+            renpy.show(name=clouds_to_show, zorder=_CLOUDS_Z_INDEX)
+            if with_transition:
+                renpy.with_statement(trans=store.weather_change_transition)
+
+        else:
+            renpy.hide("clouds")
+
+        # Add the particles, if defined
+        if weather.day_particles_image or weather.night_particles_image:
+            if store.fae_is_day() and weather.day_particles_image:
+                renpy.show(name=weather.day_particles_image, zorder=_PARTICLES_Z_INDEX)
+
+            elif weather.night_particles_image:
+                renpy.show(name=weather.night_particles_image, zorder=_PARTICLES_Z_INDEX)
+
+            if with_transition:
+                renpy.with_statement(trans=store.weather_change_transition)
+
+        else:
+            renpy.hide("particles")
+
+        # Add the dimming effect, if defined
         if weather.dim_image:
-            renpy.show(name=weather.dim_image, zorder=_DIM_Z_ORDER)
+            renpy.show(name=weather.dim_image, zorder=_DIM_Z_INDEX)
             if with_transition:
                 renpy.with_statement(trans=store.dim_change_transition)
-        
+
         else:
             renpy.hide("dim")
-        
 
-        #sky_to_show = weather.day_sky_image if store.fae_is_day() elif store.fae_is_evening() else weather.night_sky_image
-define weather_change_transition = Dissolve(0.75)
-define dim_change_transition = Dissolve(0.25)
+        global current_weather
+        current_weather = weather
+
+
+
+

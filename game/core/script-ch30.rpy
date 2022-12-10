@@ -157,6 +157,9 @@ label ch30_autoload:
     if fae_is_evening():
         play music s1
     
+    if not fae_is_day() and not fae_is_evening():
+        play music s2
+    
 
     scene black
 
@@ -186,6 +189,7 @@ label ch30_setup:
 
     $ main_background.form()
 
+    #$ fae_sky.form_sky(fae_sky.WEATHER_THUNDER, with_transition=False)
     $ fae_sky.reload_sky()
 
     $ Sayori.setOutfit(fae_outfits.get_outfit("fae_uniform"))
@@ -198,50 +202,38 @@ label ch30_setup:
     
         random_chat()
 
-    #if not persistent.fae_sayori_closed:
-    #    $ ats("fae_crash_greet")
-
-    #    jump cnc(T)
-
     #FALL THROUGH
 
 label fae_event_check:
 
     if fae_isPlayerBday():
-        jump fae_player_bday_autoload
+        call fae_player_bday_autoload
+        jump after_holiday
 
     if fae_isO31():
-        jump fae_o31_autoload
+        call fae_o31_autoload
+        jump after_holiday
     
     if fae_isD25():
-        jump fae_d25_autoload
+        call fae_d25_autoload
+        jump after_holiday
     
     if fae_isF14():
-        jump fae_f14_autoload
+        call fae_f14_autoload
+        jump after_holiday
     
     if fae_isNYE():
-        jump fae_nye_autoload
+        call fae_nye_autoload
+        jump after_holiday
     
     if fae_isNYD():
-        jump fae_nyd_autoload
-
-    
+        call fae_nyd_autoload
+        jump after_holiday
 
 
 label ch30_init:
 
-
     $ persistent.fae_sayori_closed = False
-
-    #$ setupRPC("In the spaceroom")
-
-    #if store.fae_notifs.can_show_notifs and persistent._fae_notifs_enabled:
-
-    #    if renpy.windows:
-    #        $ store.fae_notifs.notifyWindows()
-        
-    #    elif renpy.linux:
-    #        $ store.fae_notifs.notifyLinux()
 
     $ persistent.autoload = "ch30_autoload"
 
@@ -257,9 +249,9 @@ label ch30_init:
         Sayori.setInChat(True)
 
         if (datetime.datetime.now() - persistent.fae_last_visit_date).total_seconds() / 604800 >= 1:
-            persistent._fae_prev_regret = fae_regrets.RegretTypes.LONG_ABSENSE
+            Sayori.add_regret_quit(fae_regrets.RegretTypes.long_absence)
         
-        elif not persistent._fae_prev_regret:
+        elif not persistent._fae_player_apology_type_on_quit:
             Affection.calculatedAffectionGain()
             
         persistent.fae_visit_counter += 1
@@ -287,7 +279,7 @@ label ch30_init:
 
             if (
                 random.randint(0, 1) == 1
-                and (not persistent.fae_mood_on_quit and not persistent._fae_await_apology_quit)
+                and (not persistent.fae_mood_on_quit and not persistent._fae_player_apology_type_on_quit)
                 and fae_events.event_selector()
             ):
                 ats(fae_events.event_selector())
@@ -296,7 +288,7 @@ label ch30_init:
             else:
                 ats(fae_greetings.greet_sel())
                 persistent.fae_mood_on_quit = None
-                persistent._fae_await_apology_quit = None
+                persistent._fae_player_apology_type_on_quit = None
                 reveal()
                 renpy.call("cnc")
                 
@@ -315,8 +307,14 @@ label ch30_init:
     #show screen hidden1(True)
     show screen hidden1(True)
 
-    #FALL THRouGH
+    
 
+    #FALL THRouGH
+label after_holiday:
+
+    pass
+
+    
 
 label ch30_loop:
 
@@ -409,10 +407,10 @@ label cnc(show_sayori=True):
             chat_obj.seen_no += 1
             chat_obj.latest_seen = datetime.datetime.now()
 
-            if "derandom" in return_keys:
-                chat_obj.random = False
-            if "love" in return_keys:
-                love()
+        if "derandom" in return_keys:
+            chat_obj.random = False
+        if "love" in return_keys:
+            love()
     
     if "quit" in return_keys:
         $ persistent.fae_sayori_closed = True
@@ -489,31 +487,30 @@ label cnc_notify(show_sayori=True):
 
     jump ch30_loop
 
-label fae_force_quit_attempt:
+label force_quit:
 
     if (
         fae_intro.FAEIntroStatus(persistent.fae_intro_status) == fae_intro.FAEIntroStatus.complete
-        and fae_farewells.FAEForceQuitStates(persistent.fae_force_quit_state) == fae_farewells.FAEForceQuitStates.not_force_quit
+        and fae_farewells.FAEForceQuitStates(persistent.fae_player_force_quit_state) == fae_farewells.FAEForceQuitStates.not_force_quit
     ):
+
         $ ats("farewell_force_quit")
         $ renpy.jump("cnc")
     
     elif not fae_intro.FAEIntroStatus(persistent.fae_intro_status) == fae_intro.FAEIntroStatus.complete:
 
         $ renpy.jump("confirm_quit")
+
     
     else:
 
-        s "Wait what?"
+        s "YOU CAN'T LEAVE LIKE THAT!"
 
-        s "You can't just leave like that!"
         python:
-
             Affection.percentageAffectionLoss(2)
             Sayori.add_new_regret_awaiting(fae_regrets.RegretTypes.unexpected_quit)
             Sayori.add_regret_quit(fae_regrets.RegretTypes.unexpected_quit)
-
-        hide screen hidden1
+        
         $ renpy.jump("confirm_quit")
 
 

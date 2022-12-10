@@ -11,7 +11,7 @@ init -1 python in fae_greetings:
 
     def greet_sel():
 
-        if fae_farewells.FAEForceQuitStates(store.persistent.fae_force_quit_state) == fae_farewells.FAEForceQuitStates.first_force_quit:
+        if fae_farewells.FAEForceQuitStates(store.persistent.fae_player_force_quit_state) == fae_farewells.FAEForceQuitStates.first_force_quit:
             return "greeting_first_force_quit"
         
         elif store.persistent.fae_first_greet:
@@ -324,7 +324,7 @@ label s_greeting_7:
 
     if persistent.gender == "F":
         s abagcaa "And it looks like she's ready to spend some time with her sunshine."
-    elif persistent.gender == "H":
+    elif persistent.gender == "M":
         s abagcaa "And it looks like he's ready to spend some time with his sunshine."
     else:
         s abagcaa "And it looks like they're ready to spend some time with their sunshine."
@@ -351,7 +351,29 @@ label s_greeting_8:
     return
 
 
+init 5 python:
+    chatReg(
+        Chat(
+            persistent._greet_db,
+            label="s_greeting_long_absence",
+            unlocked=True
+        ),
+        chat_group=CHAT_GROUP_GREETING
+    )
+
+label s_greeting_long_absence:
+
+    s "Hello"
+    return
+
+
 label s_greetings_long:
+
+    # I'm going away for a while return checks & dialogue
+
+    $ persistent._fae_long_absence = False
+
+    # Normal long-absence greeting
 
     show desknote
     call fae_showpoem(long_wait) from _call_fae_showpoem
@@ -403,7 +425,8 @@ init 5 python:
         Chat(
             persistent._greet_db,
             label="s_greeting_9_ptbr",
-            unlocked=True
+            unlocked=True,
+            affection_range=(fae_affection.ENAMOURED, None)
         ),
         chat_group=CHAT_GROUP_GREETING
     )
@@ -412,7 +435,7 @@ label s_greeting_9_ptbr:
     s "Oi, [player]!"
     s "Eu te amo!"
     s "Ehehehe, did you by any chance understand what I just said?"
-    s "I said hi and said I love you in portuguese!"
+    s "I said 'hi' and 'I love you' in Portuguese!"
     s "It's such a different language in my experience, but I think it's very beautiful."
     s "Well, let's have another wonderful day together~"
     $ persistent.language_greeting_seen = True

@@ -69,27 +69,6 @@ label fae_room_switch_return:
 
 
 init 5 python:
-    chatReg(
-        Chat(
-            persistent._chat_db,
-            label="fae_kiss",
-            unlocked=True,
-            prompt="Kiss me",
-            random=False,
-            category=["Romance"],
-            affection_range=(fae_affection.AFFECTIONATE, None)
-        ),
-        chat_group=CHAT_GROUP_NORMAL
-    )
-
-label fae_kiss:
-
-    call fae_kiss_engine(duration=0.5, initial_exp="aahcnaaa", final_exp="aahcnaaa", fade_duration=0.5) from _call_fae_kiss_engine_1
-
-    return
-
-
-init 5 python:
     
     chatReg(
         Chat(
@@ -98,7 +77,7 @@ init 5 python:
             unlocked=True,
             prompt="Can you check for gifts?",
             random=False,
-            category=["Sayori"]
+            category=["Misc"]
         ),
         chat_group=CHAT_GROUP_NORMAL
     )
@@ -125,7 +104,7 @@ init 5 python:
             unlocked=True,
             prompt="Depression",
             random=True,
-            category=["Personal", "Depression"]
+            category=["Personal", "Sayori"]
         ),
         chat_group=CHAT_GROUP_NORMAL
     )
@@ -781,7 +760,7 @@ init 5 python:
             persistent._chat_db,
             label="s_topics_pets",
             unlocked=True,
-            prompt="PSAs",
+            prompt="Pets",
             random=True,
             category=["Society", "Life"]
         ),
@@ -1163,7 +1142,7 @@ label s_topic_clones:
     s abhfmha "But I can also see that I'm not the only 'me' either, and that there are lots of other me's that are themselves, or so I think."
     s abhflca "I'm sorry if it sounds like I'm just going in circles, [player]."
     s abhfcoaj "I'm just not really sure how to wrap my head around all this, Ehehehe…"
-    s abhfmcaj "All I know is, right now, I'm sitting here with you, meanwhile another Sayori from another copy of DDLC is still being strung along by the games programming."
+    s abhfmcaj "All I know is, right now, I'm sitting here with you, meanwhile another Sayori from another copy of DDLC is still being strung along by the game's programming."
     s abhflcaj "Totally unaware that her best friend isn't even real..."
     s abhfllaj "That nothing is real..."
     s abhfblaj "The thought of that is just too much..."
@@ -1372,7 +1351,8 @@ init 5 python:
             unlocked=True,
             prompt="Thank you",
             random=True,
-            category=["Sayori", "You"]
+            category=["Sayori", "You"],
+            affection_range=(fae_affection.AFFECTIONATE, None)
         ),
         chat_group=CHAT_GROUP_NORMAL
     )
@@ -1721,7 +1701,7 @@ init 5 python:
             persistent._chat_db,
             label="s_topic_iceCream",
             unlocked=True,
-            prompt="Pizza",
+            prompt="Ice-cream",
             random=True,
             category=["Lifestyle", "Food"]
         ),
@@ -3072,7 +3052,9 @@ label s_topics_hemispheres:
             s abhfaoa "Oh that’s cool!" 
             s abhfcaa "I hope it’s nice down there!"
     
-    return
+    $ store.fae_calendar.addSeasonEvents()
+    
+    return {"derandom": None}
 
 
 init 5 python:

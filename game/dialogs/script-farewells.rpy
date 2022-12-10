@@ -2,7 +2,7 @@ default persistent._farewell_db = dict()
 
 default persistent.fae_first_leave_response = None
 
-default persistent.fae_force_quit_state = 1
+default persistent.fae_player_force_quit_state = 1
 
 
 init -1 python in fae_farewells:
@@ -57,14 +57,6 @@ init -1 python in fae_farewells:
         if store.persistent.fae_first_leave_response is None:
 
             return "first_leave"
-        
-        #kwargs = dict()
-
-        #farewell_pool = store.Chat.chat_filt(
-        #    FAREWELL_DEFS.values(),
-        #    affection=Affection._getAffectionStatus(),
-        #    **kwargs
-        #)
 
         farewell_pool = [
             ("s_farewell_1"),
@@ -76,8 +68,6 @@ init -1 python in fae_farewells:
             ("s_farewell_7")
         ]
 
-
-
         return random.choice(farewell_pool)
 
 label farewell_init:
@@ -87,7 +77,9 @@ label farewell_init:
 
 label farewell_force_quit:
 
-    $ persistent.fae_force_quit_state = int(fae_farewells.FAEForceQuitStates.first_force_quit)
+    s "You can't just leave!"
+
+    $ persistent.fae_player_force_quit_state = int(fae_farewells.FAEForceQuitStates.first_force_quit)
     if not persistent.fae_first_leave_response:
         $ persistent.fae_first_leave_response = int(fae_farewells.FAEFirstQuitCats.force_quit)
 

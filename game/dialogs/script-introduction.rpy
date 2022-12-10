@@ -32,13 +32,12 @@ label fae_intro_checks:
     if not fae_intro.FAEIntroStatus(persistent.fae_intro_status) == fae_intro.FAEIntroStatus.new_game:
 
         $ Sayori.setOutfit(fae_outfits.get_outfit("fae_uniform"))
-
-        hide black
         $ fae_sky.form_sky(fae_sky.WEATHER_SUNNY)
         $ main_background.form()
         show sayori idle zorder fae_sprites.FAE_SAYORI_ZORDER
-        
-    
+
+        hide black
+
     $ renpy.jump(fae_intro.INTRO_STATUS_DEFS.get(fae_intro.FAEIntroStatus(persistent.fae_intro_status)))
 
 label fae_intro_start:
@@ -118,7 +117,7 @@ label fae_intro_1:
     s "Maybe I could use the code to bring my world back!"
     s "I really should have paid more attention to computer science class, ehehehe~"
     s "Well… here goes nothing!"
-    call updateconsole("show backrgound spaceroom", "updating...")
+    call updateconsole("show background spaceroom", "updating...")
     $ main_background.form()
     $ fae_sky.reload_sky()
     $ Sayori.setOutfit(fae_outfits.get_outfit("fae_uniform"))

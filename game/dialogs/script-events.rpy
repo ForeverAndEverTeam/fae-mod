@@ -651,7 +651,7 @@ label fae_event_door_open:
             $ main_background.form()
             $ fae_sky.reload_sky()
             hide black
-            show Sayori
+            show sayori at t11 zorder fae_sprites.FAE_SAYORI_ZORDER
             s bbegmoajj "Whoops! Sorry about that!"
             s abegaoaj "Welcome back, [player]! {w=0.5}{nw}"
             extend gbaamoj "Sorry if I scared you!"
