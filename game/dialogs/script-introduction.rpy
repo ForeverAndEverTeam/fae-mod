@@ -49,7 +49,7 @@ label fae_intro_1:
 
     pause 1.0
 
-    play audio m1
+    play music m1
 
     $ config.allow_skipping = False
     #scene black
@@ -186,7 +186,7 @@ label fae_intro_2:
 
     pause 1.0
 
-    play audio m1
+    play music m1
     show sayori abgcbaoa at t11 zorder fae_sprites.FAE_SAYORI_ZORDER
     
     s "Hey [player], welcome back!"

@@ -55,7 +55,6 @@ init -3 python:
     import re
     import store.fae_affection as fae_affection
     import store.fae_utilities as fae_utilities
-    import webbrowser
 
 
 

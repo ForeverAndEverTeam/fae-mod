@@ -75,6 +75,8 @@ init -100 python in fae_utilities:
 
 init -985 python in fae_utilities:
 
+    ## FUCK THIS MOD
+
     
     def pdget(key, table, validator=None, defval=None):
         """

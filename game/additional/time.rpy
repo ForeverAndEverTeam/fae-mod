@@ -150,14 +150,32 @@ init -10 python:
             return _date == fae_player_bday_curr(_date)
         return _date == fae_player_bday_curr()
 
+init -10 python:
+
+    def fae_isplayer_bday(_date=None, use_date_year=False):
+
+        if _date is None:
+            _date = datetime.date.today()
+        
+        if persistent._fae_player_bday is None:
+            return False
+
+        elif use_date_year:
+            return _date == fae_player_bday_curr(_date)
+        
+        return _date == fae_player_bday_curr()
+
 init -11 python:
     
     def fae_player_bday_curr(_date=None):
 
         if _date is None:
-            _date == datetime.date.today()
+            _date = datetime.date.today()
         if persistent._fae_player_bday is None:
             return None
+
+        else:
+            return store.fae_utilities.add_years(persistent._fae_player_bday, _date.year-persistent._fae_player_bday.year)
 
 
 init python in fae_utilities:

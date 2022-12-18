@@ -49,7 +49,8 @@ init -1 python in fae_farewells:
             ("I'm going to work out.", "s_farewell_work_out"),
             ("I'm going to work.", "s_farewell_work"),
             ("I'm going to do chores.", "s_farewell_chores"),
-            ("I'm going to restart.", "s_farewell_restart")
+            ("I'm going to restart.", "s_farewell_restart"),
+            ("I'll be going away for a while.", "s_farewell_long_absence")
         ]
     
     def farewell_pick():
@@ -335,3 +336,73 @@ label s_farewell_restart:
         s abfccaa "Alright, [player]."
         s abfcaoa "I’ll be waiting!"
     return { "quit": None }
+
+init 5 python:
+    chatReg(
+        Chat(
+            persistent._farewell_db,
+            label="s_farewell_long_absence",
+            unlocked=True,
+            affection_range=(fae_affection.NORMAL, None)
+        ),
+        chat_group=CHAT_GROUP_FAREWELL
+    )
+
+
+label s_farewell_long_absence:
+    s bbfcaaa "Aww… {w=0.5}{nw}"
+    extend bbfcaca "I hate to see you go, [player]."
+    s abfcaca "Do you know how long you’ll be gone for?{nw}"
+    $ _history_list.pop()
+    menu:
+        s "Do you know how long you’ll be gone for?{fast}"
+        "A few days.":
+            $ persistent._fae_absence_choice = "days"
+            s abfcksa "Oh! {w=0.5}{nw}"
+            extend abfcaoa "That’s okay, [player]!"
+            s bbgcaoa "Don’t forget about me! Ehehehe~"
+            s abgccoa "See you when you come back!"
+            if Affection.isEnamoured():
+                s bbgcaaa "I love you, [player]"
+
+        "A few weeks":
+            $ persistent._fae_absence_choice = "weeks"
+            s abgckca "Eh? {w=0.5}{nw}"
+            extend abgcaca "That’s quite a while, [player]!"
+            s bbfcaaa "Don’t forget about me, will you?"
+            s abfccaa "I’ll be waiting here for you!"
+            if Affection.isEnamoured():
+                s bbfcaaa "I love you, [player]!"
+                s abfcaoa "See you when you get back!"
+            else:
+                s abfcaoa "See you when you get back!"
+
+        "A few months":
+            $ persistent._fae_absence_choice = "months"
+            s abfckga "M-months?!"
+            s abfcaca "[player]... {w=0.5}{nw}"
+            extend bbfcaca "That’s an awfully long time."
+            s bbfcbca "Well… {w=0.5}{nw}"
+            extend bbfcaaa "I guess you can’t help it."
+            s bbfcaoa "Just make sure to come back to me, okay [player]?"
+            if Affection.isEnamoured():
+                s bbfcaaa "I love you."
+        
+        "I don’t know":
+            $ persistent._fae_absence_choice = "unknown"
+            s abfcbfa "..."
+            s bbfcmoaj "That’s a little concerning, [player]."
+            s bbfcacaj "Are you sure you don’t know?"
+            s abfcaaa "If you don’t know, I guess you don’t know."
+            s abfccaa "I’ll wait for you, {w=0.5}{nw}"
+            extend bbfcaaa "no matter how long it takes!"
+            if Affection.isEnamoured():
+                s bbfcaaa "I love you, [player]."
+            s abfccaa "I’ll be waiting!"
+        "Nevermind":
+            $ persistent._fae_absence_choice = False
+            s abfcaca "Oh? Are you not leaving?"
+            s abfccoa "That’s good, [player]!"
+            s bbfccoa "Ehehehe~"
+            return
+    return { "quit": None}

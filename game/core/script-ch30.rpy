@@ -222,13 +222,10 @@ label fae_event_check:
         call fae_f14_autoload
         jump after_holiday
     
-    if fae_isNYE():
-        call fae_nye_autoload
-        jump after_holiday
-    
     if fae_isNYD():
         call fae_nyd_autoload
         jump after_holiday
+
 
 
 label ch30_init:
@@ -238,6 +235,7 @@ label ch30_init:
     $ persistent.autoload = "ch30_autoload"
 
     python:
+        _fae_AffStart()
         import random
 
         fae_data.runRuntimeTransfer()
@@ -248,11 +246,12 @@ label ch30_init:
 
         Sayori.setInChat(True)
 
-        if (datetime.datetime.now() - persistent.fae_last_visit_date).total_seconds() / 604800 >= 1:
+        if (datetime.datetime.now() - persistent.fae_last_visit_date).total_seconds() / 604800 >= 1 and persistent._fae_absence_choice is None:
             Sayori.add_regret_quit(fae_regrets.RegretTypes.long_absence)
         
         elif not persistent._fae_player_apology_type_on_quit:
             Affection.calculatedAffectionGain()
+        
             
         persistent.fae_visit_counter += 1
         persistent.fae_last_visit_date = datetime.datetime.now()
@@ -273,12 +272,17 @@ label ch30_init:
         fae_utilities.log("Outfit Set.")
         
         fae_events.EVENT_RETURN_OUTFIT = fae_outfits.get_outfit(store.persistent.fae_outfit_quit)
-               
+            
+        if store.persistent._fae_absence_choice is not None:
+            ats("s_greeting_long_absence")
+            reveal()
+            renpy.jump("cnc")
+
         
         if not cielp("^greeting_"):
 
             if (
-                random.randint(0, 1) == 1
+                random.randint(0, 16) == 1
                 and (not persistent.fae_mood_on_quit and not persistent._fae_player_apology_type_on_quit)
                 and fae_events.event_selector()
             ):
@@ -317,7 +321,6 @@ label after_holiday:
     
 
 label ch30_loop:
-
     
     call spaceroom(False, None) from _call_spaceroom
 

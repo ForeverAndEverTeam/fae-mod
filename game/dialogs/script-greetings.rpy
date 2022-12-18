@@ -17,6 +17,9 @@ init -1 python in fae_greetings:
         elif store.persistent.fae_first_greet:
             return "greeting_first_time"
         
+        if store.persistent._fae_absence_choice is not None:
+            return "s_greeting_long_absence"
+        
         kwargs = dict()
 
         if store.persistent._fae_await_apology_quit is not None:
@@ -317,8 +320,6 @@ init 5 python:
 
 label s_greeting_7:
 
-    #show sayori abhfaka at t11
-
     s abhfaka "Look who's back!"
     s abagaoa "It's [player], of course!"
 
@@ -343,8 +344,6 @@ init 5 python:
 
 label s_greeting_8:
 
-    #show sayori abgcaoa at t11
-
     s abgcaoa "Hi [player]!"
     s abgccaa "Are you here for your daily dose of sunshine?"
     s abfdcqa "I'll get you some right now then, ehehehe~"
@@ -355,25 +354,15 @@ init 5 python:
     chatReg(
         Chat(
             persistent._greet_db,
-            label="s_greeting_long_absence",
+            label="s_greetings_long",
             unlocked=True
         ),
         chat_group=CHAT_GROUP_GREETING
     )
 
-label s_greeting_long_absence:
-
-    s "Hello"
-    return
-
-
 label s_greetings_long:
 
-    # I'm going away for a while return checks & dialogue
-
     $ persistent._fae_long_absence = False
-
-    # Normal long-absence greeting
 
     show desknote
     call fae_showpoem(long_wait) from _call_fae_showpoem
@@ -419,25 +408,203 @@ label s_greetings_long:
     return
 
 
-#TODO: EXPS HERE
 init 5 python:
     chatReg(
         Chat(
             persistent._greet_db,
-            label="s_greeting_9_ptbr",
+            label="s_greeting_ptbr",
             unlocked=True,
             affection_range=(fae_affection.ENAMOURED, None)
         ),
         chat_group=CHAT_GROUP_GREETING
     )
 
-label s_greeting_9_ptbr:
-    s "Oi, [player]!"
-    s "Eu te amo!"
-    s "Ehehehe, did you by any chance understand what I just said?"
-    s "I said 'hi' and 'I love you' in Portuguese!"
-    s "It's such a different language in my experience, but I think it's very beautiful."
-    s "Well, let's have another wonderful day together~"
+label s_greeting_ptbr:
+    s abaacoa "Oi, [player]!"
+    s bbaaaaa "Eu te amo!"
+    s abaaaoa "Ehehehe, did you by any chance understand what I just said?"
+    s abbcaoa "I said 'hi' and 'I love you' in Portuguese!"
+    s abbcaaa "It's such a different language in my experience, but I think it's very beautiful."
+    s abgccaa "Well, let's have another wonderful day together~"
     $ persistent.language_greeting_seen = True
 
+
     return
+
+init 5 python:
+    chatReg(
+        Chat(
+            persistent._greet_db,
+            label="s_greeting_french",
+            unlocked=True,
+            affection_range=(fae_affection.NORMAL, None)
+        ),
+        chat_group=CHAT_GROUP_GREETING
+    )
+
+label s_greeting_french:
+    s abgbaoa "Salut, [player]!"
+    s abgbcaa "Je suis tellement contente de te revoir!"
+    s abbbaoa "Ehehehe, that was just some French!"
+    s dbbbiaa "Don’t I sound classy, huh? {w=0.5}{nw}"
+    extend abgbcaa "Ehehehe~"
+    s abhfaoa "That meant {i}Hey, [player]! I’m so glad to see you again!{/i}"
+    s abhecaa "I figured out how to use Google Translate, if you couldn’t tell!"
+    s abheeebj "And for once I’m glad that you can’t hear me, because I completely butchered the pronunciation of that in my head, ehehehe~"
+    s abheeabj "I can barely speak English sometimes!"
+    s abgbcoa "But who knows, maybe some smart cookie could make me a translation someday, ehehehe~"
+    s abhfaaa "Do you speak any other languages, [player]?"
+    s abhfaoa "I’ve always wanted to learn one! {w=0.5}{nw}"
+    extend abfccaa "Maybe you could teach me, if you do?"
+    s abfcaoa "Ehehehe, anyways."
+    s abhfaaa "Where were we, [player]?"
+    $ persistent.language_greeting_seen = True
+    return
+
+# Small affection gain for being like a hero    
+
+init 5 python:
+    chatReg(
+        Chat(
+            persistent._greet_db,
+            label="s_greeting_long_absence",
+            unlocked=True
+        ),
+        chat_group=CHAT_GROUP_GREETING
+    )
+
+label s_greeting_long_absence:
+    $ persistent._fae_long_absence = False
+    $ fae_ret_long_absence = True
+    if persistent._fae_absence_time >= datetime.timedelta(weeks=5):
+        if persistent._fae_absence_choice == "days":
+            s ebgchca "[player]!"
+            s gbgbara "You said you’d only be gone a few days!"
+            s bbgbaca "It’s been such a long time…"
+            s bbgblrag "I thought something bad happened…"
+            s bbhfaca "Well… at least you’re okay."
+        elif persistent._fae_absence_choice == "week":
+            s ebgchca "[player]!"
+            s gbgbara "You told me you’d only be gone a week!"
+            s bbgbaca "It’s been ages…"
+            s bbgblrag "I was worried sick about you…"
+            s bbhfaca "Well… at least you’re back."
+        elif persistent._fae_absence_choice == "month":
+            s abgbaoa "Back again [player]?"
+            s abgbaaa "It’s been a little longer than you said you’d be, ehehehe~"
+            s abgbcaa "But that’s okay!"
+            s abhfaoa "Let’s spend some more time together."
+        elif persistent._fae_absence_choice == "unknown":
+            s abgbkca "Oh! [player]!"
+            s abgbaoa "You’re back!"
+            s abhfcaa "You {i}really{/i} weren’t sure, were you? Ehehehe~"
+            s bbheaoa "I was a little worried about you, {w=0.5}{nw}"
+            extend abgbcaa "but I’m glad you’re back now!"
+            s abgbaoa "Let’s spend some more time together."
+
+    elif persistent._fae_absence_time >= datetime.timedelta(weeks=4):
+        if persistent._fae_absence_choice == "days":
+            s ebgchca "[player]!"
+            s gbgbara "You told me you’d only be gone for a few days!"
+            s gbgbaca "And it’s been four weeks!"
+            s bbgblrag "I was getting worried about you…"
+            s bbhfaca "Well… at least you’re here now."
+        elif persistent._fae_absence_choice == "week":
+            s ebgchca "[player]!"
+            s gbgbara "You told me you’d only be gone for a week!"
+            s gbgbaca "And it’s almost been an entire month!"
+            s bbgblrag "I was getting worried about you…"
+            s bbhfaca "Well… at least you’re back now."
+        elif persistent._fae_absence_choice == "month":
+            s abgccoa "Welcome back, [player]!"
+            s abgcaoa "I missed you!"
+            s bbgcaaa "A month goes by so slowly without you, ehehehe~"
+            s abgccaa "Let’s spend some more time together."
+        elif persistent._fae_absence_choice == "unknown":
+            s ebgchca "Oh! [player]!"
+            s ebbccoa "Welcome back!"
+            s abbcaoa "It’s been a while, hasn’t it? Ehehehe~"
+            s bbfcaaa "I was a little worried about you, {w=0.5}{nw}"
+            extend bbfccaa "but I’m glad you’re okay!"
+            s abfcaoa "Let’s spend some more time together."
+
+    elif persistent._fae_absence_time >= datetime.timedelta(weeks=2):
+        if persistent._fae_absence_choice == "days":
+            s ebgchca "[player]!"
+            s bbgbara "You’ve been gone a while…"
+            s bbgbaca "I was starting to worry about you…"
+            s bbfcaaa "But nevermind that,"
+            extend abfcaoa "I’m glad you’re back."
+            s abgccoa "Let's spend some more time together."
+        elif persistent._fae_absence_choice == "week":
+            s abfcaoa "Hey, [player]!"
+            s abfcaca "You’ve been gone a bit longer than a week."
+            s abfcaca "But that’s okay, {w=0.5}{nw}"
+            extend bbgcaaa "you came back eventually!"
+            s bbgcmoaj "Though you’re a little late, ehehehe~"
+            s abgccoa "Let’s spend some more time together."
+        elif persistent._fae_absence_choice == "month":
+            s ebgchca "Oh! {w=0.5}{nw}"
+            extend abgccoa "Back already, [player]?"
+            s bbhemoaj "Not that I’m complaining, ehehehe~"
+            s abheaaaj "You’re a little early, but that’s okay!"
+            s abfccaa "Let’s spend some more time together."
+        elif persistent._fae_absence_choice == "unknown":
+            s ebfchsa "Oh! [player]!"
+            s abfcaoa "I didn’t expect you back {i}this{/i} soon."
+            s bbfcmoaj "I’m not complaining though, ehehehe~"
+            s abfccoa "Let’s spend some more time together."
+
+    elif persistent._fae_absence_time >= datetime.timedelta(weeks=1):
+        if persistent._fae_absence_choice == "days":
+            s cbaahca "[player]!"
+            s cbaaapa "You’re late!"
+            s cbbbaca "You said you’d only be a few days!"
+            s cbbbaha "And it’s been a whole week!"
+            s abgbcoa "Ehehehe, just kidding, [player]!"
+            s bbhfaaa "I’m just glad to see you again."
+            s bbhfaoa "I understand if you find yourself a little busier than you expected to be from time to time."
+            s cbaamc "Ugh!"
+            if persistent.gender == "M":
+                s cbaamp "Boys. Honestly."
+            s abgbcaa "Let’s spend some more time together."
+        elif persistent._fae_absence_choice == "week":
+            s abgccoa "Welcome back, [player]!"
+            s abgcaoa "I missed you!"
+            s abgccaa "Right on time too, ehehehe~"
+            s abgcaaa "Let’s spend some more time together!"
+        elif persistent._fae_absence_choice == "month":
+            s abgcaoa "Oh, hi [player]!"
+            s abgcaaa "I wasn’t expecting to see you so soon!"
+            s abfccaa "I’m glad you’re back though!"
+            s abfcaaa "Let’s spend some more time together."
+        elif persistent._fae_absence_choice == "unknown":
+            s abfcaaa "Oh, hey [player]!"
+            s bbfccoaj "Back so soon? Ehehehe~"
+            s abfcaoa "Well I’m not complaining!"
+            s abfcaaa "Let’s spend some more time together."
+    else:
+        if persistent._fae_absence_choice == "days":
+            s abfcaaa "Welcome back, [player]!"
+            s bbfcaaa "Thanks for telling me how long you’d be out."
+            s abgccaa "I’m glad you’re back!"
+            s abgcaaa "Let’s spend some more time together."
+        elif persistent._fae_absence_choice == "week":
+            s abgccoa "[player]!"
+            s abgcmoaj "You’re a little early! Ehehehe~"
+            s abgcmoaj "But I’m not complaining!"
+            s abfcaaa "I guess you didn’t expect to be gone for such a short time ehehehe~"
+            s abfccoa "Let’s spend some more time together."
+        elif persistent._fae_absence_choice == "month":
+            s abgcaoa "Oh! Hi [player]!"
+            s "I didn’t expect you to return so soon!"
+            s "But that’s fine by me! Ehehehe~"
+            s abgccoa "Let’s spend some more time together."
+        elif persistent._fae_absence_choice == "unknown":
+            s abgchsa "Oh! [player]!"
+            s bbgcaaa "I didn’t expect you to return so soon!"
+            s bbgcmoaj "But I guess you didn’t either, ehehehe~"
+            s abfcaaaj "Let’s spend some more time together."
+    $ persistent._fae_absence_choice = None
+    return 
+

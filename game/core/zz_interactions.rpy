@@ -485,9 +485,10 @@ init python:
             renpy.Keymap(dialogue=dlg)
         )
 
-        config.underlay.append(
-            renpy.Keymap(music=music_init)
-        )
+        if persistent.fae_player_music_allowed:
+            config.underlay.append(
+                renpy.Keymap(music=music_init)
+            )
 
         config.underlay.append(
             renpy.Keymap(games=mg)

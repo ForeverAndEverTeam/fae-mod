@@ -23,7 +23,7 @@ style edited is default:
     text_align gui.text_xalign
     layout ("subtitle" if gui.text_xalign else "tex")
 
-style whisper is default:
+style sayori_whisper is default:
     font gui.default_font
     size 20
 

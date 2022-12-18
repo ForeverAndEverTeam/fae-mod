@@ -434,7 +434,8 @@ init -1 python in fae_outfits:
         "eyewear",
         "accessory",
         "clothes",
-        "headgear"
+        "headgear",
+        "necklace"
     ]
 
 
@@ -593,6 +594,10 @@ init -1 python in fae_outfits:
     class FAEHeadgear(FAEAcs):
 
         pass
+
+    class FAENecklace(FAEAcs):
+
+        pass
     
 
     class FAEOutfit():
@@ -608,7 +613,8 @@ init -1 python in fae_outfits:
             hairstyle,
             accessory=None,
             eyewear=None,
-            headgear=None
+            headgear=None,
+            necklace=None
         ):
             """
             ref_name = Unique identifier for this item for internal use
@@ -639,6 +645,7 @@ init -1 python in fae_outfits:
             self.accessory = accessory
             self.eyewear = eyewear
             self.headgear = headgear
+            self.necklace = necklace
         
         @staticmethod
         def call_all():
@@ -662,14 +669,15 @@ init -1 python in fae_outfits:
 
         
         @staticmethod
-        def outfit_fllt(
+        def outfit_filt(
             outfit_list,
             unlocked=None,
             is_fae_outfit=None,
             not_ref_name=None,
             has_accessory=None,
             has_eyewear=None,
-            has_headgear=None
+            has_headgear=None,
+            has_necklace=None
         ):
             """
             Gives a filtered list of outfits based on search params
@@ -695,7 +703,8 @@ init -1 python in fae_outfits:
                     not_ref_name,
                     has_accessory,
                     has_eyewear,
-                    has_headgear
+                    has_headgear,
+                    has_necklace
                 )
             ]
         
@@ -731,6 +740,9 @@ init -1 python in fae_outfits:
 
             if self.headgear and not self.headgear.unlocked:
                 self.headgear.unlock()
+            
+            if self.necklace and not self.necklace.unlocked:
+                self.necklace.unlock()
         
         def lock(self):
 
@@ -758,6 +770,9 @@ init -1 python in fae_outfits:
             
             if self.accessory and isinstance(self.accessory, FAEAccessory):
                 dict_outfit["accessory"] = self.accessory.ref_name
+            
+            if self.necklace and isinstance(self.necklace, FAENecklace):
+                dict_outfit["necklace"] = self.necklace.ref_name
             
             return json.dumps(dict_outfit)
 
@@ -793,7 +808,8 @@ init -1 python in fae_outfits:
             not_ref_name=None,
             has_accessory=None,
             has_eyewear=None,
-            has_headgear=None
+            has_headgear=None,
+            has_necklace=None
         ):
             """
             True if outfit matches search params, False if not
@@ -821,6 +837,9 @@ init -1 python in fae_outfits:
                 return False
 
             elif has_headgear is not None and bool(self.has_headgear) != has_headgear:
+                return False
+            
+            elif has_necklace is not None and bool(self.necklace) != has_necklace:
                 return False
 
             return True
@@ -851,6 +870,9 @@ init -1 python in fae_outfits:
 
             if not outfit.headgear:
                 outfit.headgear = get_acs("fae_none")
+            
+            if not outfit.necklace:
+                outfit.necklace = get_acs("fae_none")
 
             __ALL_OUTFITS[outfit.ref_name] = outfit
             if outfit.ref_name not in store.persistent.fae_outfit_list:
@@ -894,7 +916,8 @@ init -1 python in fae_outfits:
             FAEEyewear: "eyewear",
             FAEAccessory: "acessory",
             FAEClothes: "clothes",
-            FAEHeadgear: "headgear"
+            FAEHeadgear: "headgear",
+            FAENecklace: "necklace"
         }
 
         for pose in store.fae_sprites.FAEPose:
@@ -982,6 +1005,9 @@ init -1 python in fae_outfits:
             elif json["cat"] == "headgear":
                 acs = FAEHeadgear(**kwargs)
             
+            elif json["cat"] == "necklace":
+                wearable = FAENecklace(**kwargs)
+            
             if not _check_acs_sprites(acs):
                 fae_utilities.log("Cannot load acs {0} as sprites are missing".format(acs.ref_name))
                 return False
@@ -1020,6 +1046,7 @@ init -1 python in fae_outfits:
             or not isinstance(json["hairstyle"], basestring)
             or "eyewear" in json and not isinstance(json["eyewear"], basestring)
             or "headgear" in json and not isinstance(json["headgear"], basestring)
+            or "necklace" in json and not isinstance(json["necklace"], basestring)
         ):
             fae_utilities.log("Cannot load outfit as data is incorrect.")
             return False
@@ -1051,6 +1078,10 @@ init -1 python in fae_outfits:
         elif "headgear" in json and not json["headgear"] in __ALL_ACS:
             fae_utilities.log("Cannot load outfit {0} as headgear doesn't exist.".format(json["ref_name"]))
             return False
+
+        elif "necklace" in json and not json["necklace"] in __ALL_ACS:
+            fae_utilities.log("Cannot load outfit {0} as specified necklace does not exist.".format(json["reference_name"]))
+            return False
         
         else:
             outfit = FAEOutfit(
@@ -1062,7 +1093,8 @@ init -1 python in fae_outfits:
                 hairstyle=__ALL_ACS[json["hairstyle"]],
                 accessory=__ALL_ACS[json["accessory"]] if "accessory" in json else None,
                 eyewear=__ALL_ACS[json["eyewear"]] if "eyewear" in json else None,
-                headgear=__ALL_ACS[json["headgear"]] if "headgear" in json else None
+                headgear=__ALL_ACS[json["headgear"]] if "headgear" in json else None,
+                necklace=__ALL_ACS[json["necklace"]] if "necklace" in json else None
             )
 
             if not isinstance(outfit.clothes, FAEClothes):
@@ -1084,6 +1116,10 @@ init -1 python in fae_outfits:
             elif outfit.headgear and not isinstance(outfit.headgear, FAEHeadgear):
                 fae_utilities.log("Cannot load outfit {0} because headgear is not valid.".format(outfit.ref_name))
                 return False
+
+            elif outfit.necklace and not isinstance(outfit.necklace, FAENecklace):
+                fae_utilities.log("Cannot load outfit {0} because necklace is not valid.".format(outfit.ref_name))
+                return False
             
             if outfit.unlocked:
                 if (
@@ -1092,6 +1128,7 @@ init -1 python in fae_outfits:
                     or outfit.accessory and not outfit.accessory.unlocked
                     or outfit.eyewear and not outfit.eyewear.unlocked
                     or outfit.headgear and not outfit.headgear.unlocked
+                    or outfit.necklace and not outift.necklace.unlocked
                 ):
                     fae_utilities.log("Outfit {0} contains locked elements; locking outfit.".format(outfit.ref_name))
                     outfit.unlocked = False
@@ -1128,6 +1165,10 @@ init -1 python in fae_outfits:
             
             except TypeError:
                 fae_utilities.log("Unable to read file {0}; corrupt, or invalid JSON.".format(file))
+
+            except ValueError:
+                fae_utilities.log("Unable to read file {0}; corrupt file or invalid JSON.".format(file_name))
+
             
             except:
                 raise
@@ -1156,6 +1197,10 @@ init -1 python in fae_outfits:
             
             except TypeError:
                 fae_utilities.log("Unable to read file {0}; corrupt or bad JSON.".format(name))
+
+            except ValueError:
+                fae_utilities.log("Unable to read file {0}; corrupt file or invalid JSON.".format(file_name))
+
             
             except:
                 raise
@@ -1166,7 +1211,7 @@ init -1 python in fae_outfits:
 
     def deload_user_outfit():
 
-        __ALL_OUTFITS = FAEOutfit.outfit_fllt(
+        __ALL_OUTFITS = FAEOutfit.outfit_filt(
             outfit_list=find_all_outfits(),
             is_fae_outfit=True)
     
@@ -1217,12 +1262,22 @@ init -1 python in fae_outfits:
 
     def store_user_outfit(outfit):
 
-        outfit.is_fae_outfit = False
-        outfit.ref_name = "{0}_{1}_{2}".format(
-            store.persistent.playername,
-            outfit.disp_name.replace(" ", "_"),
-            int(time.time())
-        ).lower()
+        new_user_outfit = FAEOutfit(
+            ref_name="{0}_{1}_{2}".format(
+                store.persistent.playername,
+                outfit.disp_name.replace(" ", "_"),
+                int(time.time())
+            ).lower(),
+            disp_name=outfit.disp_name,
+            unlocked=True,
+            is_fae_outfit=False,
+            clothes=outfit.clothes,
+            hairstyle=outfit.hairstyle,
+            accessory=outfit.accessory,
+            eyewear=outfit.eyewear,
+            headgear=outfit.headgear,
+            necklace=outfit.necklace
+        )
 
         if fae_utilities.makedirifnot(__USER_OUTFITS_DIR):
             fae_utilities.log("Custom outfits dir was not found and was created.")
@@ -1282,7 +1337,7 @@ init -1 python in fae_outfits:
 
     
     __reg_acs(FAEHairstyle(
-        ref_name="bow",
+        ref_name="fae_bow",
         disp_name="Bow",
         unlocked=True,
         is_fae_acs=True
@@ -1315,7 +1370,7 @@ init -1 python in fae_outfits:
         unlocked=True,
         is_fae_outfit=True,
         clothes=get_acs("base"),
-        hairstyle=get_acs("bow")
+        hairstyle=get_acs("fae_bow")
     ))
 
     __reg_outfit(FAEOutfit(
@@ -1324,7 +1379,7 @@ init -1 python in fae_outfits:
         unlocked=True,
         is_fae_outfit=True,
         clothes=get_acs("fae_uniform"),
-        hairstyle=get_acs("bow")
+        hairstyle=get_acs("fae_bow")
     ))
 
     __reg_outfit(FAEOutfit(
@@ -1333,7 +1388,7 @@ init -1 python in fae_outfits:
         unlocked=True,
         is_fae_outfit=True,
         clothes=get_acs("casual"),
-        hairstyle=get_acs("bow")
+        hairstyle=get_acs("fae_bow")
     ))
             
     
@@ -1385,9 +1440,12 @@ init -1 python in fae_outfits:
 
 
 label outfit_wear_outfit:
-    if len(list(fae_outfits.find_all_outfits())) == 0:
-        s "I don't have any"
+
+    if not fae_outfits.find_all_outfits():
+
+        s "I don't have any."
         jump ch30_loop
+
     
     s "Another one?"
     show sayori idle at fae_left
@@ -1395,15 +1453,16 @@ label outfit_wear_outfit:
     python:
 
         options = []
-        available_outfits = fae_outfits.FAEOutfit.filter_outfits(
+        available_outfits = fae_outfits.FAEOutfit.outfit_filt(
             outfit_list = fae_outfits.find_all_outfits(),
             unlocked=True)
+        
         available_outfits.sort(key = lambda option: option.disp_name)
 
         for outfit in available_outfits:
-            options.append((fae_utilities.RenpySubSub(outfit.disp_name), outfit))
+            options.append((fae_utilities.RenpySubSub(outift.disp_name), outfit))
         
-        options.insert(0, ("You pick!", "random"))
+        options.insert(0, ("Yu pick!", "random"))
     
     call screen neat_menu_scroll(options, ("Nevermind.", None))
     show sayori at fae_center
@@ -1420,12 +1479,13 @@ label outfit_wear_outfit:
 
         $ Sayori.setOutfit(
             random.choice(
-                fae_outfits.FAEOutfit.filter_outfits(
+                fae_outfits.FAEOutfit.outfit_filt(
                     outfit_list=fae_outfits.find_all_outfits(),
                     unlocked=True,
                     not_ref_name=Sayori.findOutfitName())
             )
         )
+        
         with Fade(out_time=0.1, hold_time=1, in_time=0.5, color="#181212")
 
         s "Done"

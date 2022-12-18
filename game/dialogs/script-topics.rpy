@@ -3083,3 +3083,68 @@ label s_topic_gifting:
     s abhfcoa "Thank you for being patient with me [player], it really means a lot to me."
 
     return
+
+
+init 5 python:
+ 
+    chatReg(
+        Chat(
+            persistent._chat_db,
+            label="s_topic_boba",
+            unlocked=True,
+            prompt="Boba",
+            random=True,
+            category=["Food"]
+        ),
+        chat_group=CHAT_GROUP_NORMAL
+    )
+
+
+label s_topic_boba:
+
+    s abhfaoa "Hey [player], do you remember when Yuri used to make tea for everyone?"
+    s abfcaaa "She had all sorts of flavours, and some even tasted fruity and minty!"
+    s abfcaoa "I really enjoyed it, especially while reading." 
+    s abhfaaa "But there's something similar that I {i}really{/i} like."
+    s abgbaoa "Can you guess what it is?"
+    extend abbbaaa "It's another kind of tea, and it's very popular these days!"
+    s abgbcoa "Ding ding!" 
+    extend abgbaaa "If you guessed boba tea, you're correct!"
+    s abgbama "There's such a big variety of flavours to choose from,"
+    extend abgbkma "and some of them are so sweet and creamy,"
+    extend abgbcka "they’re delicious!"
+    s abgcaea "And the chewy boba pearls make you feel like you're having a snack and a drink {i}at the same time!{/i}"
+    s abfcaaa "Or, if you're not a big fan of boba, some places offer jelly or pudding in the bottom instead."
+    s abfcaoa "Talk about two for the price of one, huh?"
+    extend abfccoa "I'd say that's a great deal!"
+    s abfcaaa "I'd love to get some with you one day, [player]!"
+    return
+
+init 5 python:
+ 
+    chatReg(
+        Chat(
+            persistent._chat_db,
+            label="s_topics_like_flowers",
+            unlocked=True,
+            prompt="Liking flowers",
+            random=True,
+            category=["Lifestyle"]
+        ),
+        chat_group=CHAT_GROUP_NORMAL
+    )
+
+label s_topics_like_flowers:
+    s abhfaoa "Hey [player], do you like flowers?"
+    s abgbcaa "I think they’re one of the many beautiful things nature can create!"
+    s abgbaoa "They’re colourful, have pretty shapes, and some of them even smell sweet!"
+    s abhfaaa "I remember when I used to walk in the flower meadows outside of the city."
+    s bbgbaoa "But... I think it's selfish to pluck a flower, even if it were to be a gift."
+    s abgbaaa "So I prefer just to look at them, and then leave them be."
+    s bbegboaj "Although, I did do it in one of my poems..."
+    s abegaaa "But just for the analogy."
+    s abgbaoa "But on the bright side, you can plant them in flower pots!"
+    s abgbcaa "So in return for taking care of them, you have a beautiful flower buddy!"
+    s abgcaoa "And I think that’s a better gift,"
+    extend abgccaa "ehehehe~"
+    return

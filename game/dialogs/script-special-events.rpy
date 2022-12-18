@@ -85,7 +85,7 @@ label fae_bday_player_select_select:
         "No.":
             s "Oh, that's wrong?"
             s "Then try again!"
-            jump fae_bday_player_bday_select_select
+            jump fae_bday_player_select_select
     
     if persistent._fae_player_bday is not None:
         python:

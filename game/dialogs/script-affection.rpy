@@ -1,6 +1,18 @@
 default persistent.affection_day_gain = 5
 default persistent.affection_reset_date = None
 default persistent.affection = 25.0
+
+init -2 python:
+    def _fae_AffStart():
+
+        if persistent.sessions["last_session_end"] is not None:
+            persistent._fae_absence_time = (
+                    datetime.datetime.now() -
+                    persistent.sessions["last_session_end"]
+            )
+        else:
+            persistent._fae_absence_time = datetime.timedelta(days=0)
+            
 init -2 python in fae_affection:
 
 
@@ -126,11 +138,14 @@ init -2 python in fae_affection:
             _compareAffectionStatuses(affection_status, low_bound) >= 0
             and _compareAffectionStatuses(affection_status, high_bound) <= 0
         )
+    
 
 
 init -2 python:
     
     class Affection(object):
+
+        __capped_aff_dates = list()
 
 
         @staticmethod
@@ -147,10 +162,11 @@ init -2 python:
                 fae_utilities.log("Affection blocked - CN!")
                 return
 
-            if bypass:
+            if bypass and persistent._affection_daily_bypasses > 0:
 
                 persistent.affection += to_add
-                fae_utilities.log("Affection increased!")
+                persistent._affection_daily_bypasses -= 1
+                fae_utilities.log("Affection increased! (B)")
             
             elif persistent.affection_day_gain > 0:
                 persistent.affection_day_gain -= to_add
@@ -160,6 +176,9 @@ init -2 python:
                     persistent.affection_day_gain = 0
                 
                 fae_utilities.log("Affection increased")
+            
+            else:
+                fae_utilities.log("Affection increased!")
         
         @staticmethod
         def calculatedAffectionLoss(base=1):
@@ -195,14 +214,23 @@ init -2 python:
         def checkResetDailyAffectionGain():
 
             current_date = datetime.datetime.now()
+            if current_date in Affection.__capped_aff_dates:
+                return
 
             if not persistent.affection_reset_date:
                 persistent.affection_reset_date = current_date
 
             elif current_date.day is not persistent.affection_reset_date.day:
-                persistent.affection_reset_date = 5 * fae_affection.get_relationship_length_multiplier()
+                persistent.affection_day_gain = 5 * fae_affection.get_relationship_length_multiplier()
                 persistent.affection_reset_date = current_date
+                persistent._affection_daily_bypasses = 5
                 fae_utilities.log("Daily affection cap reset; new cap is: {0}".format(persistent.affection_day_gain))
+        
+        @staticmethod
+        def writeCap():
+            fae_utilities.log("Daily affection cap reached!")
+            if not datetime.datetime.today().isoformat() in Affection.__capped_aff_dates:
+                Affection.__capped_aff_dates.append(datetime.datetime.today().isoformat())
 
 
         
