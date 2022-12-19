@@ -693,21 +693,21 @@ label fae_backups_you_have_bad_persistent:
     $ quick_menu = False
     scene black
     window show
-    show chibika smile at fae_chdropin(300, travel_time=1.5)
+    #show chibika smile at fae_chdropin(300, travel_time=1.5)
     pause 1.5
 
     if store.fae_per_check.is_per_incompatible():
         jump fae_backups_incompat_start
 
-    show chibika 3 at sticker_hop
+    #show chibika 3 at sticker_hop
     "Hello there!"
-    show chibika sad
+    #show chibika sad
     "I hate to be the bringer of bad news..."
     "But unfortunately, your persistent file is corrupt."
 
     if store.fae_per_check.fae_no_backups_found:
         "And what's even worse is..."
-        show chibika at sticker_move_n
+        #show chibika at sticker_move_n
         "I was unable to find a working backup persistent."
 
         "Do you have your own backups?{nw}"
@@ -743,10 +743,10 @@ label fae_backups_have_none:
     "Look on the bright side!"
     "You can spend time with her again and create new memories, which might be even better than the ones you lost!"
     "And remember..."
-    show chibika at fae_chflip_s(-1)
+    #show chibika at fae_chflip_s(-1)
     "Regardless of what happens, Sayori is still Sayori."
     "She'll be ready to greet you, once you start over."
-    show chibika 3 at sticker_move_n
+    #show chibika 3 at sticker_move_n
     "And I promise I'll do my best to not mess up the files again!"
     "Good luck with Sayori!"
     $ store.fae_per_check.fae_corrupted_per = False
@@ -754,32 +754,32 @@ label fae_backups_have_none:
 
 
 label fae_backups_could_not_copy:
-    show chibika smile
+    #show chibika smile
     "I was able to find a working backup, but..."
-    show chibika sad
+    #show chibika sad
     "I wasn't able to copy it over the broken persistent."
-    show chibika smile at fae_chflip_s(-1)
+    #show chibika smile at fae_chflip_s(-1)
     pause 0.5
-    show chibika at sticker_hop
+    #show chibika at sticker_hop
     "However!"
     "You might be able to do it and fix this mess!"
     "You'll have to close the game to do this, so write these steps down:"
-    show chibika at sticker_move_n
+    #show chibika at sticker_move_n
     "1.{w=0.3} Navigate to '[renpy.config.savedir]'."
-    show chibika at sticker_move_n
+    #show chibika at sticker_move_n
     "2.{w=0.3} Delete the file called 'persistent'."
-    show chibika at sticker_move_n
+    #show chibika at sticker_move_n
     "3.{w=0.3} Make a copy of the file called '[fae_backup_copy_filename]' and name it 'persistent'."
-    show chibika at fae_chflip_s(1)
+    #show chibika at fae_chflip_s(1)
     "And that's it!"
     "Hopefully that will recover your Sayori's memories."
 
-    show chibika at sticker_move_n
+    #show chibika at sticker_move_n
     "In case you didn't write those steps down, I'll write them into a file called 'recovery.txt' in the characters folder."
 
     call fae_backups_dont_tell
 
-    show chibika smile at fae_chflip_s(-1)
+    #show chibika smile at fae_chflip_s(-1)
     "Good luck!"
 
     python:
@@ -802,20 +802,20 @@ label fae_backups_could_not_copy:
 
 label fae_backups_dont_tell:
 
-    show chibika smile at sticker_hop
+    #show chibika smile at sticker_hop
     "Oh, and..."
-    show chibika smile at fae_chflip_s(-1)
+    #show chibika smile at fae_chflip_s(-1)
     "If you successfully bring her back, please don't tell her about me."
-    show chibika 3
+    #show chibika 3
     "She has no idea that I can talk or code, so she lets me laze around and relax."
-    show chibika smile
+    #show chibika smile
     "But if she ever found out, she'd probably make me help her code, fix some of her mistakes, or something else."
-    show chibika sad at sticker_move_n
+    #show chibika sad at sticker_move_n
     "Which would be absolutely terrible since I'd barely get any rest at all.{nw}"
 #    $ _history_list.pop()
     "Which would be absolutely terrible since{fast} I wouldn't have time to keep the backup system and the rest of the game running."
 
-    show chibika 3 at fae_chflip_s(1)
+    #show chibika 3 at fae_chflip_s(1)
     "You wouldn't want that now, would you?"
     "So keep quiet about me, and I'll make sure your Sayori is safe and comfy!"
 
