@@ -1,7 +1,7 @@
 default persistent.affection_day_gain = 5
 default persistent.affection_reset_date = None
 default persistent.affection = 25.0
-
+default persistent._affection_daily_bypasses = 5
 init -2 python:
     def _fae_AffStart():
 
@@ -12,7 +12,7 @@ init -2 python:
             )
         else:
             persistent._fae_absence_time = datetime.timedelta(days=0)
-            
+
 init -2 python in fae_affection:
 
 

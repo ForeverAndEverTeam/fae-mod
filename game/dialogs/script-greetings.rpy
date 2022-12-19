@@ -17,9 +17,6 @@ init -1 python in fae_greetings:
         elif store.persistent.fae_first_greet:
             return "greeting_first_time"
         
-        if store.persistent._fae_absence_choice is not None:
-            return "s_greeting_long_absence"
-        
         kwargs = dict()
 
         if store.persistent._fae_await_apology_quit is not None:
@@ -30,8 +27,6 @@ init -1 python in fae_greetings:
 
         else:
             kwargs.update({"no_categories": ["Mood", "Regret"]})
-
-        #TODO: ADD "IF" STATEMENTS FOR LEAVE CONDITIONS
 
         #RETURN GREETING
 
@@ -48,19 +43,7 @@ label greeting_first_time:
     $ persistent.fae_first_greet = False
     return
 
-init 5 python:
-    chatReg(
-        Chat(
-            persistent._greet_db,
-            label="s_1",
-            unlocked=True
-        ),
-        chat_group=CHAT_GROUP_GREETING
-    )
 
-label s_1:
-    s "Hello~"
-    return
 
 label greeting_first_force_quit:
     s "Hello~"
@@ -107,25 +90,6 @@ label s_greeting_2: #Try to keep it poetic while translating
     s "{i}You fill my heart with joy, ehehehe~{/i}"
     return
 
-
-init 5 python:
-    chatReg(
-        Chat(
-            persistent._greet_db,
-            label="s_greeting_3_rus",
-            unlocked=True
-        ),
-        chat_group=CHAT_GROUP_GREETING
-    )
-
-label s_greeting_3_rus:
-    s "Привет, [player]!"
-    s abagcoa "Я рада, что ты здесь."
-    s abhhaoa "If you didn't understand what that means, don't worry!"
-    s "I just said 'Hello, [player]! I'm glad you're here.' in Russian!"
-    $ persistent.language_greeting_seen = True
-
-    return
 
 init 5 python:
     chatReg(

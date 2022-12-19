@@ -248,6 +248,10 @@ label ch30_init:
 
         if (datetime.datetime.now() - persistent.fae_last_visit_date).total_seconds() / 604800 >= 1 and persistent._fae_absence_choice is None:
             Sayori.add_regret_quit(fae_regrets.RegretTypes.long_absence)
+            ats("s_greetings_long")
+            reveal()
+            renpy.jump("cnc")
+
         
         elif not persistent._fae_player_apology_type_on_quit:
             Affection.calculatedAffectionGain()
