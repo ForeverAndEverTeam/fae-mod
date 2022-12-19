@@ -681,7 +681,6 @@ init -900 python:
     # run the backup system if persistents arent screwd
     if (
             not store.fae_per_check.is_per_bad()
-            and persistent._fae_moni_chksum is None
     ):
         __fae__memoryCleanup()
         __fae__memoryBackup()
@@ -725,12 +724,12 @@ label fae_backups_you_have_bad_persistent:
 
 label fae_backups_have_some:
 
-    show chibika smile at sticker_hop
+    #show chibika smile at sticker_hop
     "That's a relief!"
-    "Please copy them into '[renpy.config.savedir]' to restore your Monika's memories."
+    "Please copy them into '[renpy.config.savedir]' to restore your Sayori's memories."
 
     call fae_backups_dont_tell
-    show chibika smile at fae_chflip_s(-1)
+    #show chibika smile at fae_chflip_s(-1)
     "Good luck!"
 
     jump _quit
@@ -740,16 +739,16 @@ label fae_backups_have_none:
 
     "I'm sorry, but we won't be able to restore her memory, then..."
     "But..."
-    show chibika smile at sticker_move_n
+    #show chibika smile at sticker_move_n
     "Look on the bright side!"
     "You can spend time with her again and create new memories, which might be even better than the ones you lost!"
     "And remember..."
     show chibika at fae_chflip_s(-1)
-    "Regardless of what happens, Monika is still Monika."
+    "Regardless of what happens, Sayori is still Sayori."
     "She'll be ready to greet you, once you start over."
     show chibika 3 at sticker_move_n
     "And I promise I'll do my best to not mess up the files again!"
-    "Good luck with Monika!"
+    "Good luck with Sayori!"
     $ store.fae_per_check.fae_corrupted_per = False
     return
 
@@ -773,7 +772,7 @@ label fae_backups_could_not_copy:
     "3.{w=0.3} Make a copy of the file called '[fae_backup_copy_filename]' and name it 'persistent'."
     show chibika at fae_chflip_s(1)
     "And that's it!"
-    "Hopefully that will recover your Monika's memories."
+    "Hopefully that will recover your Sayori's memories."
 
     show chibika at sticker_move_n
     "In case you didn't write those steps down, I'll write them into a file called 'recovery.txt' in the characters folder."
@@ -818,7 +817,7 @@ label fae_backups_dont_tell:
 
     show chibika 3 at fae_chflip_s(1)
     "You wouldn't want that now, would you?"
-    "So keep quiet about me, and I'll make sure your Monika is safe and comfy!"
+    "So keep quiet about me, and I'll make sure your Sayori is safe and comfy!"
 
     return
 
@@ -839,7 +838,7 @@ label fae_backups_incompat_start:
         if fae_hasRPYFiles():
             jump fae_backups_incompat_updater_cannot_because_rpy
 
-        show chibika smile at fae_chflip_s(1)
+        
         "Hello there!"
         "Let's try updating again!"
         $ store.fae_per_check.reset_incompat_per_flags()
@@ -860,7 +859,7 @@ label fae_backups_incompat_start:
 
     # otherwise, this might be the first time a user sees this
 
-    show chibika 3 at sticker_hop
+    
     "Hello there!{nw}"
     # cannot pop history, no history for some reason
     menu:
@@ -870,7 +869,7 @@ label fae_backups_incompat_start:
         "Take me to the updater.":
             jump fae_backups_incompat_updater_start_intro
 
-    show chibika sad at fae_chflip_s(-1)
+    
     "Unfortunately, your persistent is running version v[fae_per_check.fae_per_version], which is incompatible with this build of FAE (v[config.version])."
     "The only way I can fix this is if you update FAE or you restore with a compatible persistent."
 
@@ -879,7 +878,6 @@ label fae_backups_incompat_start:
 label fae_backups_incompat_what_do:
     # selection label to determine what to do next
 
-    show chibika sad at fae_chflip_s(1)
     "What would you like to do?{nw}"
     # cannot pop history, no history for some reason
     menu:
@@ -892,20 +890,17 @@ label fae_backups_incompat_what_do:
 
 label fae_backups_incompat_user_will_restore:
     $ persistent._fae_incompat_per_user_will_restore = True
-    show chibika smile at sticker_hop
     "Alright!"
 
     $ _sp_per = os.path.normcase(renpy.config.savedir + "/" + fae_per_check.per_unstable)
     "Please copy a compatible persistent into '[renpy.config.savedir]'."
     "Then delete the file called '[fae_per_check.per_unstable]'."
 
-    show chibika smile at fae_chflip_s(-1)
     "Good luck!"
     jump _quit
 
 
 label fae_backups_incompat_user_will_restore_again:
-    show chibika sad at fae_chflip_s(-1)
     "Oh no!"
 
     # NOTE: don't want say that restoring didn't work in case the user just
@@ -919,7 +914,6 @@ label fae_backups_incompat_user_will_restore_again:
 label fae_backups_incompat_updater_cannot_because_rpy:
     $ persistent._fae_incompat_per_rpy_files_found = True
 
-    show chibika sad at sticker_hop
     "Unfortunately the updater won't work because you have RPY files in your game directory."
 
     "I'll have to delete those files for this to work. Is that okay?{nw}"
@@ -932,7 +926,6 @@ label fae_backups_incompat_updater_cannot_because_rpy:
 
 
 label fae_backups_incompat_updater_cannot_because_rpy_again:
-    show chibika sad at fae_chflip_s(-1)
     "Oh no!"
 
     "It seems that there are still RPY files in your game directory."
@@ -946,25 +939,24 @@ label fae_backups_incompat_updater_cannot_because_rpy_again:
 
 
 label fae_backups_incompat_rpy_yes_del:
-    show chibika smile at sticker_hop
     "Ok!"
 
     call fae_rpy_file_delete(False)
     hide screen fae_py_console_teaching
 
     if fae_hasRPYFiles():
-        show chibika sad at fae_chflip_s(-1)
+        
         "Oh no!"
         "It seems that I was unable to delete all of the RPY files."
         "You will have to delete them manually."
-        show chibika smile at fae_chflip_s(1)
+        
         "Good luck!"
         jump _quit
 
     # otherwise, no rpy files found now, so we good
     $ persistent._fae_incompat_per_rpy_files_found = False
 
-    show chibika 3 at sticker_hop
+    
     "Done!"
     "Let's try updating now!"
     jump fae_backups_incompat_updater_start
@@ -975,7 +967,7 @@ label fae_backups_incompat_rpy_no_del:
     # but if they hit update again, they will get this.
     $ persistent._fae_incompat_per_rpy_files_found = False
 
-    show chibika sad at fae_chflip_s(-1)
+    
     "Oh..."
     "Well the updater won't work while those files exist, so I guess your only option is to restore a persistent backup."
     jump fae_backups_incompat_user_will_restore
@@ -986,7 +978,7 @@ label fae_backups_incompat_updater_start_intro:
     if fae_hasRPYFiles():
         jump fae_backups_incompat_updater_cannot_because_rpy
 
-    show chibika smile at sticker_hop
+    
     "Ok!"
     jump fae_backups_incompat_updater_start
 
@@ -995,11 +987,11 @@ label fae_backups_incompat_updater_failed:
     if fae_hasRPYFiles():
         jump fae_backups_incompat_updater_cannot_because_rpy
 
-    show chibika sad
+    
     "Oh no!"
     "It seems that the updater failed to update FAE."
 
-    show chibika smile at fae_chflip_s(1)
+    
     "Lets try again!"
 
     # fall through
@@ -1036,7 +1028,7 @@ label fae_backups_incompat_updater_start:
     #"hol up" # use this to debug cancel returns
 
     pause 1.0
-    show chibika 3 at sticker_hop
+    
     pause 0.5
 
     if updater_rv == FAEUpdaterDisplayable.RET_VAL_CANCEL:
@@ -1045,16 +1037,16 @@ label fae_backups_incompat_updater_start:
 
         pause 0.5
         "Hey!"
-        show chibika sad at fae_chflip_s(-1)
+        
         "Don't cancel out of the updater! You need to update FAE!"
         jump fae_backups_incompat_what_do
 
     # all other cases are messed up updater
     "Oh!"
-    show chibika sad at fae_chflip_s(-1)
+    
     "It seems that the updater failed to update."
     "Make sure to fix any updater issues and try again."
-    show chibika 3
+    
     "Good luck!"
 
     jump _quit

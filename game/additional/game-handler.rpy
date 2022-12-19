@@ -10,11 +10,15 @@ init -10 python in fae_games:
 
         if sys.maxsize > 2**32:
             return platform.system() == 'Windows' or platform.system() == 'Linux' or platform.system() == 'Darwin'
-    
+
         else:
             return platform.system() == 'Windows'
 
+init python in fae_games:
 
+    import store
+
+    mg_list = []
 
 init python:
     zorder_game = 4
