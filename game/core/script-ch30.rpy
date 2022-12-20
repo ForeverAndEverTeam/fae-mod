@@ -246,16 +246,21 @@ label ch30_init:
 
         Sayori.setInChat(True)
 
-        if (datetime.datetime.now() - persistent.fae_last_visit_date).total_seconds() / 604800 >= 1 and persistent._fae_absence_choice is None:
-            Sayori.add_regret_quit(fae_regrets.RegretTypes.long_absence)
-            ats("s_greetings_long")
+        if store.persistent._fae_absence_choice is not None:
+            persistent.fae_visit_counter += 1
+            persistent.fae_last_visit_date = datetime.datetime.now()
+            ats("s_greeting_long_away")
             reveal()
             renpy.jump("cnc")
 
+        if (datetime.datetime.now() - persistent.fae_last_visit_date).total_seconds() / 604800 >= 2 and persistent._fae_absence_choice is None:
+            Sayori.add_regret_quit(fae_regrets.RegretTypes.long_absence)
+            ats("s_greeting_long_absence")
+            reveal()
+            renpy.jump("cnc")
         
         elif not persistent._fae_player_apology_type_on_quit:
             Affection.calculatedAffectionGain()
-        
             
         persistent.fae_visit_counter += 1
         persistent.fae_last_visit_date = datetime.datetime.now()
@@ -277,11 +282,6 @@ label ch30_init:
         
         fae_events.EVENT_RETURN_OUTFIT = fae_outfits.get_outfit(store.persistent.fae_outfit_quit)
             
-        if store.persistent._fae_absence_choice is not None:
-            ats("s_greeting_long_absence")
-            reveal()
-            renpy.jump("cnc")
-
         
         if not cielp("^greeting_"):
 

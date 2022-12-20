@@ -318,13 +318,16 @@ init 5 python:
     chatReg(
         Chat(
             persistent._greet_db,
-            label="s_greetings_long",
-            unlocked=True
+            label="s_greetings_long_absence",
+            unlocked=True,
+            extra_props={
+                "regret_type": fae_regrets.RegretTypes.long_absence,
+            }
         ),
         chat_group=CHAT_GROUP_GREETING
     )
 
-label s_greetings_long:
+label s_greetings_long_absence:
 
     $ persistent._fae_long_absence = False
 
@@ -412,7 +415,7 @@ label s_greeting_french:
     s abbbaoa "Ehehehe, that was just some French!"
     s dbbbiaa "Don’t I sound classy, huh? {w=0.5}{nw}"
     extend abgbcaa "Ehehehe~"
-    s abhfaoa "That meant {i}Hey, [player]! I’m so glad to see you again!{/i}"
+    s abhfaoa "That meant \"{i}Hey, [player]! I’m so glad to see you again!{/i}\""
     s abhecaa "I figured out how to use Google Translate, if you couldn’t tell!"
     s abheeebj "And for once I’m glad that you can’t hear me, because I completely butchered the pronunciation of that in my head, ehehehe~"
     s abheeabj "I can barely speak English sometimes!"
@@ -431,13 +434,13 @@ init 5 python:
     chatReg(
         Chat(
             persistent._greet_db,
-            label="s_greeting_long_absence",
+            label="s_greeting_long_away",
             unlocked=True
         ),
         chat_group=CHAT_GROUP_GREETING
     )
 
-label s_greeting_long_absence:
+label s_greeting_long_away:
     $ persistent._fae_long_absence = False
     $ fae_ret_long_absence = True
     if persistent._fae_absence_time >= datetime.timedelta(weeks=5):

@@ -316,7 +316,7 @@ init -2 python:
 
                 i += 1
 
-        def _getAffinityTierName():
+        def _getAffectionTierName():
             affection_status = Affection._getAffectionStatus()
             if affection_status == fae_affection.ENAMOURED:
                 return "LOVE"

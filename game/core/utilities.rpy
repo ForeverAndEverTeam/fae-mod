@@ -245,6 +245,11 @@ init -1 python in fae_utilities:
 
         #store.fae_events.FAEHoliday.storeAll()
 
+        if store.persistent._affection_daily_bypasses > 5:
+            store.persistent._affection_daily_bypasses = 5
+        
+        
+
         store.main_background.save()
 
 
@@ -465,7 +470,7 @@ init -1 python in fae_random_chat_rate:
 
 
 #default persistent.fae_random_chat_rate = fae_utilities.random_chat_rate.SOMETIMES
-default persistent.fae_repeat_chat = True
+default persistent.fae_repeat_chat = False
 
 
 init 3 python:

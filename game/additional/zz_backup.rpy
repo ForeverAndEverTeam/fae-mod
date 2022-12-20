@@ -998,55 +998,8 @@ label fae_backups_incompat_updater_failed:
 
 label fae_backups_incompat_updater_start:
 
-    # setup for unstable
-    $ persistent._fae_unstable_mode = True
-    $ fae_updater.force = True
+    "Oki doki!"
 
-    # call the update label
-    $ persistent._fae_incompat_per_forced_update = True
-    $ persistent._fae_incompat_per_forced_update_failed = False
-    call update_now
-    $ persistent._fae_incompat_per_forced_update_failed = True
-    $ updater_rv = _return
-
-    # NOTE: if we got here, we assume that the updater failed to update for
-    #   whatever reason. The actual reasons could be:
-    #   1. couldn't move the update folder - RET_VAL_MOVE_FOLDER is returned
-    #   2. renpy couldn't update for some reason - None is returned
-    #   3. user had to hit cancel from the updater menu, because they timed
-    #       out or had connection issues - RET_VAL_RETRY_CANCEL is returend
-    #   4. user hit cancel for their own reasons - RET_VAL_CANCEL is returned
-    #       NOTE: why don't we lock or remove the cancel button? The user
-    #       might have their own reasons for canceling the update check:
-    #       - maybe they are on low bandwidth/metered connections?
-    #       - maybe they actually want to stay on stable and have a backup
-    #           persistent to us?
-    #       - maybe its maybelline?
-    #       either way, since the user has an unstable per, no need for
-    #       extravagant handholding.
-
-    #"hol up" # use this to debug cancel returns
-
-    pause 1.0
-    
-    pause 0.5
-
-    if updater_rv == FAEUpdaterDisplayable.RET_VAL_CANCEL:
-        # user just hit cancel because they wanted to.
-        $ store.fae_per_check.reset_incompat_per_flags()
-
-        pause 0.5
-        "Hey!"
-        
-        "Don't cancel out of the updater! You need to update FAE!"
-        jump fae_backups_incompat_what_do
-
-    # all other cases are messed up updater
-    "Oh!"
-    
-    "It seems that the updater failed to update."
-    "Make sure to fix any updater issues and try again."
-    
-    "Good luck!"
+    "Remember to go to the {a=https://github.com/ForeverAndEverTeam/fae-mod/releases}releases page{/a} and download the latest version!"
 
     jump _quit

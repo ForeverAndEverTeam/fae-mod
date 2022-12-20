@@ -55,9 +55,6 @@ init -1 python in fae_farewells:
     
     def farewell_pick():
 
-        if store.persistent.fae_first_leave_response is None:
-
-            return "first_leave"
 
         farewell_pool = [
             ("s_farewell_1"),
