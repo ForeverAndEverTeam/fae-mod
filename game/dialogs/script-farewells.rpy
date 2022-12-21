@@ -273,7 +273,7 @@ label s_farewell_sleep:
                 s abgcceb "Yay!"
                 call fae_kiss_short
             "Another time":
-                s bbhfbaa "Alright then…"
+                s bbhfbaa "Alright then..."
     s abfcaaa "Sweet dreams, [player]!"
     return { "quit": None }
 
@@ -347,7 +347,7 @@ init 5 python:
 
 
 label s_farewell_long_absence:
-    s bbfcaaa "Aww… {w=0.5}{nw}"
+    s bbfcaaa "Aww... {w=0.5}{nw}"
     extend bbfcaca "I hate to see you go, [player]."
     s abfcaca "Do you know how long you’ll be gone for?{nw}"
     $ _history_list.pop()
@@ -363,7 +363,7 @@ label s_farewell_long_absence:
                 s bbgcaaa "I love you, [player]"
 
         "A few weeks":
-            $ persistent._fae_absence_choice = "weeks"
+            $ persistent._fae_absence_choice = "week"
             s abgckca "Eh? {w=0.5}{nw}"
             extend abgcaca "That’s quite a while, [player]!"
             s bbfcaaa "Don’t forget about me, will you?"
@@ -375,11 +375,11 @@ label s_farewell_long_absence:
                 s abfcaoa "See you when you get back!"
 
         "A few months":
-            $ persistent._fae_absence_choice = "months"
+            $ persistent._fae_absence_choice = "month"
             s abfckga "M-months?!"
             s abfcaca "[player]... {w=0.5}{nw}"
             extend bbfcaca "That’s an awfully long time."
-            s bbfcbca "Well… {w=0.5}{nw}"
+            s bbfcbca "Well... {w=0.5}{nw}"
             extend bbfcaaa "I guess you can’t help it."
             s bbfcaoa "Just make sure to come back to me, okay [player]?"
             if Affection.isEnamoured():

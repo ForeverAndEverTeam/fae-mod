@@ -13,7 +13,7 @@ label s_poems_sunshine:
     else:
         s "He really was the one who made my life a bit happier."
     s bbaglaa "So, I'm very thankful for his care."
-    s nbaglca "But I was blind back then… {w=0.5}{nw}" 
+    s nbaglca "But I was blind back then... {w=0.5}{nw}" 
     extend bbagjoa "Just like the other girls, {w=0.5}{nw}"
     extend bbagmba "so I couldn't see that there was nothing behind him." 
     s bbagjfa "I couldn't see that he was just a shell."
@@ -28,13 +28,13 @@ label s_poems_sunshine:
 
 label s_poems_bottles:
     s bbhfbaa "I remember the time that I had plenty of friends, and I comforted them often, {w=0.5}{nw}"
-    extend bbgbmba "ignoring my own needs for comfort and support…"
+    extend bbgbmba "ignoring my own needs for comfort and support..."
     s bbhfjoa "But each time I did that, I felt emptier and emptier, like a water bottle..."
     s "So I used bottles of happy thoughts as an analogy in my poem."
     if persistent.last_playthrough > 0:
         s bbhemoaj "Ironically, all of those 'bottles' would shatter shortly after I'd written this poem."
     s bbhejoaj "I spent a lot of time writing this one, actually. {w=0.5}{nw}"
-    extend bbfcjoaj "I didn't even have time to get my homework done, ehehehe…"
+    extend bbfcjoaj "I didn't even have time to get my homework done, ehehehe..."
     s bahdiia "So, I hope you liked it. {w=0.5}{nw}"
     extend abfdaha "I wouldn't want all of the time I spent on it to go to waste."
     return
@@ -59,7 +59,7 @@ label s_poems_flower:
     show sayori nbaglfa at t11
     pause 1
     s bbaglfag "Why does it still hurt so much?"
-    s "Even after being freed from my blindness…"
+    s "Even after being freed from my blindness..."
     pause 1
     s bbagdoag "Oops! I think my flowers might not have fully grown back just yet! Sorry, [player]."
     pause 0.5
@@ -69,20 +69,20 @@ label s_poems_flower:
 
 label s_poems_last:
 #This is the Get Out of My Head poem
-    s bbfbmecj "Oh no, not this one…"
+    s bbfbmecj "Oh no, not this one..."
     s bbfdmeaj "You know, my reasoning behind writing this poem was pretty dark." 
     s bbfbmobj "But now that I look back on it, {w=0.5}{nw}"
-    extend bbeejobj " I can't help but feel a bit embarrassed about it…"
+    extend bbeejobj " I can't help but feel a bit embarrassed about it..."
     s bbfciobj "I think I made it a bit too raw, {w=0.5}{nw}"
     extend bbegmobj "and remembering why I wrote it in the first place makes me feel really uneasy."
     s "It was my cry for help, when Monika was messing with my code."
     s bbfcjha "She made me think that things would be much better for everyone else if I was gone."
-    s bbhabfa "And that everybody hated me… {w=0.5}{nw}"
+    s bbhabfa "And that everybody hated me... {w=0.5}{nw}"
     extend bbhajfa "Including you."
     s "She and her coding were stronger than me, so I..."
     show sayori nbhaff at t11
     pause 1
-    s "All of these memories…" 
+    s "All of these memories..." 
     s gbhafc "I would rather forget about them, {w=0.5}{nw}"
     extend bbgcjca "but they still haunt me even now."
     s bbbbmca "I still remember almost everything I felt back then."
@@ -91,11 +91,11 @@ label s_poems_last:
     show sayori gbhalf at t11
     pause 1
     s bbhamca "I don't really know how to feel about everything that happened, if I'm being honest..."
-    s gbhamba "On one hand, it really disturbs me… {w=0.5}{nw}"
-    extend gbbbkba "Knowing that someone was able to get inside my head like that… {w=0.5}{nw}"
+    s gbhamba "On one hand, it really disturbs me... {w=0.5}{nw}"
+    extend gbbbkba "Knowing that someone was able to get inside my head like that... {w=0.5}{nw}"
     extend fbhaaba "and make me lose control of my own thoughts."
     s bbhakf "It makes me feel something that's hard to put into words."
-    s bbhamgc "It makes me feel… icky, maybe? {w=0.5}{nw}"
+    s bbhamgc "It makes me feel... icky, maybe? {w=0.5}{nw}"
     extend bbbcacc "That would be one way to put it."
     s bbhamoj "But on the other hand, {w=0.5}{nw}"
     extend abbcjaa "it helps me appreciate my life and my happiness much better than I ever could before."
@@ -117,16 +117,16 @@ label s_poems_last:
 
 label s_poems_fruits:
     s abhfaoa "This poem is about the different ways that people perceive the world around them."
-    s "As you probably know, most people can be labeled as a pessimist or an optimist…"
+    s "As you probably know, most people can be labeled as a pessimist or an optimist..."
     s abbbaaa "Pessimists tend to see many things in a negative light, sometimes including the world in its entirety."
     s abbbboa "While optimists see things from a more hopeful perspective. They try to see the best in every situation, even really bad ones."
     s abgdaoa "I used to consider myself being somewhere in between those two labels, but lately, I think I'm leaning towards being an optimist."
-    s aahdbsa "Though, to me, neither of the two are correct, because there are a lot of bittersweet things in life, lots of gray areas too…"
+    s aahdbsa "Though, to me, neither of the two are correct, because there are a lot of bittersweet things in life, lots of gray areas too..."
     s abagboa "But if someone feels really upset about something, it's nice to try to share a more hopeful perspective for them to make them feel better about it. {w=0.5}{nw}"
     extend abgcaaa "So, that's what I did for the people around me!"
     s abagaca "And I still do it, but not nearly as often as before. It can get pretty lonely, you know?" 
     s bbagmoa "Always being that beacon in someone else's life, while letting yourself sink deeper and deeper in your own problems."
-    s abagdia "But for once, I don't feel the need to put myself below anyone… {w=0.5}{nw}"
+    s abagdia "But for once, I don't feel the need to put myself below anyone... {w=0.5}{nw}"
     extend abgccob "It actually kind of feels like you're the one being that beacon of hope instead of me."
     s bbagbab "So thank you, [player], for always being there for me."
     s abgccoa "I hope I can always be here for you, too."
@@ -144,7 +144,7 @@ label s_poems_angel:
     s gbaglcaj "I guess she was the type of person to undervalue the people in her life, and then regret it in the long run."
     s ebagbba "In the end, I'm here with you now. Despite everything that happened, I chose to look to the future instead of living in the past."
     s bbegmoaj "Maybe if Monika hadn't done any of this in the first place, I would still have done it, and nothing would have changed."
-    s bbgcmba  "I don't know if it's a good or bad thing that she's gone now…"
+    s bbgcmba  "I don't know if it's a good or bad thing that she's gone now..."
     s "And I don't know whether she would apologize to other girls, or at least just to me."
     s bbbccoaj "But I know, she felt very sorry for everything she had done."
     s bbgcmoa "Maybe that's just wishful thinking on my side, but I at least {i}hope{/i} she did."
@@ -175,7 +175,7 @@ label s_poems_leaf:
     s abfcaaa"{i}'A leaf in the wind'{/i} is how I can describe the past 'me' in short:{w=0.5}{nw}"
     extend abbbaaa " I was alive as long as there was wind pushing me forward..."
     s abaacaa "But now, I feel much stronger than I used to feel, so I can 'fly' much further than before."
-    s bbaaaoa "Well, anyway… I hope you understand what this poem means to me now, [player]."
+    s bbaaaoa "Well, anyway... I hope you understand what this poem means to me now, [player]."
     return
 
 label s_poems_prose:
@@ -199,11 +199,11 @@ label s_poems_prose:
 
 label s_poems_afterlight:
     s abaaaoa "This poem is about the time I became self-aware."
-    s "It forced me to face a bunch of feelings that I couldn't make sense of, and gave me abilities that I could barely understand, or work out how to use…"
-    s bbfbkca "Just imagine suddenly finding out, that everything you knew… {w=0.5}{nw}"
+    s "It forced me to face a bunch of feelings that I couldn't make sense of, and gave me abilities that I could barely understand, or work out how to use..."
+    s bbfbkca "Just imagine suddenly finding out, that everything you knew... {w=0.5}{nw}"
     extend bbfbbca "Was all a lie."
     s "Just like that."
-    s bbgchcaj "And if that wasn't scary enough, imagine being able to manipulate your own existence with your mind alone…"
+    s bbgchcaj "And if that wasn't scary enough, imagine being able to manipulate your own existence with your mind alone..."
     s bbgchgaj "It makes you change the way you think, perceive the world- It changes everything!"
     if persistent.last_playthrough < 4:
         s nahblfa "I became aware of everything that {i}should{/i} have happened,{w=0.5}{nw}"
@@ -229,7 +229,7 @@ label s_poems_val:
     s cbgcnaa "I tried to show that my love for you has no dimensional limits." 
     s "Ehehehe~"
     s abhfkda "Ironically, the card had a limit for how much I could write in it."
-    s "So I had to try and express all of my love using as little words as possible…"
+    s "So I had to try and express all of my love using as little words as possible..."
     s abaaaoa "I hope you can understand the meaning regardless."
     s abhhdia "Short but meaningful... Doesn't that sound really romantic?"
     s bbagmda "But, I still feel a bit guilty because I think it's not good enough..."

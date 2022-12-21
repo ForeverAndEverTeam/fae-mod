@@ -80,7 +80,7 @@ label compliment_best_girl:
     $ Affection.calculatedAffectionGain(bypass=get_chat("compliment_best_girl").seen_no == 0)
     s abagcea "I'm the best girl? Aww, you're so sweet, [player]!" 
     s abagdka "I'm really happy you think so! It means a lot to me, ehehehe~" 
-    s bbfclfc "After all, I always thought that I might be the least likable given the fact most would choose one of my friends over me, but…"
+    s bbfclfc "After all, I always thought that I might be the least likable given the fact most would choose one of my friends over me, but..."
     pause 2.0
     if Affection.isAffectionate():
         s abfbcqa "I'm glad you care so much about me! I love you, [player]~" 
@@ -105,7 +105,7 @@ init 5 python:
 label compliment_beautiful:
     $ Affection.calculatedAffectionGain(bypass=get_chat("compliment_beautiful").seen_no == 0)
     s abhfmkb "You think so, [player]? Aww, I don't know what to say, ehehehe~"
-    s bbhfmebj "Especially since I'm pretty messy sometimes, ahahaha…"
+    s bbhfmebj "Especially since I'm pretty messy sometimes, ahahaha..."
     s abfccea "But that means so much to me coming from you, [player]!"
     if Affection.isAffectionate():
         s abfcdqa "Remember that you're the most beautiful person in the world to me too!"
@@ -170,8 +170,8 @@ label compliment_love_eyes:
     $ Affection.calculatedAffectionGain(bypass=get_chat("compliment_love_eyes").seen_no == 0)
     s abhfkoa "Aww, I'm glad you think so, [player]!" 
     s abegikb "How about we have a staring contest then? Teehee~" 
-    s abegmobj "Only kidding, of course! Unless that's something you're really interested in…"
-    s abhfmabj "Ehehehe! Anyway…"
+    s abegmobj "Only kidding, of course! Unless that's something you're really interested in..."
+    s abhfmabj "Ehehehe! Anyway..."
     s abbbkoa "I think blue suits me really well! It represents happiness and sensitivity, and I always try my best to connect with others in a positive way."
     s abbbcqa "And I think they make me unique and give me something to be confident about!"
     return 
@@ -215,7 +215,7 @@ label compliment_look_up_to_you:
     $ Affection.calculatedAffectionGain(bypass=get_chat("compliment_look_up_to_you").seen_no == 0)
     s abfbksa "You do? You look up to me? That's so kind of you, [player]!" 
     s bbfbmoaj "Honestly, I didn't expect to hear that from you. I always thought there were other people who are actually worth looking up to."
-    s bbfblhaj "And I never really considered myself to be… that kind of person, I guess."
+    s bbfblhaj "And I never really considered myself to be... that kind of person, I guess."
     s abfcaka "But the fact that I can be that someone for you makes it really special!" 
     s abaaloa "You're someone I look up to as well, {w=0.5}{nw}"
     extend bbaaiaa "you inspire and motivate me every single day."
@@ -280,9 +280,9 @@ init 5 python:
 label compliment_like_your_writing:
     $ Affection.calculatedAffectionGain(bypass=get_chat("compliment_like_your_writing").seen_no == 0)
     s abaanea "Aww, that means a lot to me, [player]! Thank you so much!"
-    s abaamoaj "You know, since there isn't much else for me to do in here, I try to put a lot of effort into my poetry…"
+    s abaamoaj "You know, since there isn't much else for me to do in here, I try to put a lot of effort into my poetry..."
     s abbbmhaj "Sometimes it's hard for me to think of what to write, {w=0.5}{nw}"
-    extend bbbbaaaj "or I get a bit too insecure about my abilities…"
+    extend bbbbaaaj "or I get a bit too insecure about my abilities..."
     s abbbcka "But if you really look forward to seeing my creations, I think it's worth it!"
     s abbbksa "Do you write, [player]? I'd love to see your work someday if you do!"
     s abhfcka "I'm sure you can write some amazing things too, ehehehe~"

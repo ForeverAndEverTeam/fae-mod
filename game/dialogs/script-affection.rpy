@@ -5,10 +5,10 @@ default persistent._affection_daily_bypasses = 5
 init -2 python:
     def _fae_AffStart():
 
-        if persistent.sessions["last_session_end"] is not None:
+        if persistent.fae_last_visit_date is not None:
             persistent._fae_absence_time = (
                     datetime.datetime.now() -
-                    persistent.sessions["last_session_end"]
+                    persistent.fae_last_visit_date
             )
         else:
             persistent._fae_absence_time = datetime.timedelta(days=0)

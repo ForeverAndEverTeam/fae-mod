@@ -64,9 +64,7 @@ init 5 python:
         chat_group=CHAT_GROUP_GREETING
     )
 
-label s_greeting_1: #The really first greeting of this mod
-
-    #show sayori abagaaa at t11 zorder 2
+label s_greeting_1: 
 
     s abagaaa "I'm glad to see you again."
     s abaaaoa "Let's have a good time together!"
@@ -443,20 +441,24 @@ init 5 python:
 label s_greeting_long_away:
     $ persistent._fae_long_absence = False
     $ fae_ret_long_absence = True
+
     if persistent._fae_absence_time >= datetime.timedelta(weeks=5):
         if persistent._fae_absence_choice == "days":
+            $ Affection.percentageAffectionLoss(5)
             s ebgchca "[player]!"
             s gbgbara "You said you’d only be gone a few days!"
-            s bbgbaca "It’s been such a long time…"
-            s bbgblrag "I thought something bad happened…"
-            s bbhfaca "Well… at least you’re okay."
+            s bbgbaca "It’s been such a long time..."
+            s bbgblrag "I thought something bad happened..."
+            s bbhfaca "Well... at least you’re okay."
         elif persistent._fae_absence_choice == "week":
+            $ Affection.percentageAffectionLoss(2)
             s ebgchca "[player]!"
             s gbgbara "You told me you’d only be gone a week!"
-            s bbgbaca "It’s been ages…"
-            s bbgblrag "I was worried sick about you…"
-            s bbhfaca "Well… at least you’re back."
+            s bbgbaca "It’s been ages..."
+            s bbgblrag "I was worried sick about you..."
+            s bbhfaca "Well... at least you’re back."
         elif persistent._fae_absence_choice == "month":
+            $ Affection.percentageAffectionLoss(1)
             s abgbaoa "Back again [player]?"
             s abgbaaa "It’s been a little longer than you said you’d be, ehehehe~"
             s abgbcaa "But that’s okay!"
@@ -471,17 +473,19 @@ label s_greeting_long_away:
 
     elif persistent._fae_absence_time >= datetime.timedelta(weeks=4):
         if persistent._fae_absence_choice == "days":
+            $ Affection.percentageAffectionLoss(5)
             s ebgchca "[player]!"
             s gbgbara "You told me you’d only be gone for a few days!"
             s gbgbaca "And it’s been four weeks!"
-            s bbgblrag "I was getting worried about you…"
-            s bbhfaca "Well… at least you’re here now."
+            s bbgblrag "I was getting worried about you..."
+            s bbhfaca "Well... at least you’re here now."
         elif persistent._fae_absence_choice == "week":
+            $ Affection.percentageAffectionLoss(2)
             s ebgchca "[player]!"
             s gbgbara "You told me you’d only be gone for a week!"
             s gbgbaca "And it’s almost been an entire month!"
-            s bbgblrag "I was getting worried about you…"
-            s bbhfaca "Well… at least you’re back now."
+            s bbgblrag "I was getting worried about you..."
+            s bbhfaca "Well... at least you’re back now."
         elif persistent._fae_absence_choice == "month":
             s abgccoa "Welcome back, [player]!"
             s abgcaoa "I missed you!"
@@ -497,13 +501,15 @@ label s_greeting_long_away:
 
     elif persistent._fae_absence_time >= datetime.timedelta(weeks=2):
         if persistent._fae_absence_choice == "days":
+            $ Affection.percentageAffectionLoss(3)
             s ebgchca "[player]!"
-            s bbgbara "You’ve been gone a while…"
-            s bbgbaca "I was starting to worry about you…"
+            s bbgbara "You’ve been gone a while..."
+            s bbgbaca "I was starting to worry about you..."
             s bbfcaaa "But nevermind that,"
             extend abfcaoa "I’m glad you’re back."
             s abgccoa "Let's spend some more time together."
         elif persistent._fae_absence_choice == "week":
+            $ Affection.percentageAffectionLoss(1)
             s abfcaoa "Hey, [player]!"
             s abfcaca "You’ve been gone a bit longer than a week."
             s abfcaca "But that’s okay, {w=0.5}{nw}"
@@ -524,6 +530,7 @@ label s_greeting_long_away:
 
     elif persistent._fae_absence_time >= datetime.timedelta(weeks=1):
         if persistent._fae_absence_choice == "days":
+            $ Affection.percentageAffectionLoss(1)
             s cbaahca "[player]!"
             s cbaaapa "You’re late!"
             s cbbbaca "You said you’d only be a few days!"

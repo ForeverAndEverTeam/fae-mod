@@ -541,7 +541,7 @@ label fae_event_mr_cow_transform:
     
     s abhfcqa "There we go, ehehehe~"
     s abhfcoa "Welcome back, [player]!" 
-    s abhabsa "I was just kinda starting to miss you so…"
+    s abhabsa "I was just kinda starting to miss you so..."
     s abhacea "I dug in the code until I could rescue Mr. Cow!"
     s abbbloa "It was hard work, buuuuut!"
     s abgcdoa "Now I'll always have someone to cuddle with, and it'll never get {i}too{/i} lonely in here!"
@@ -573,7 +573,7 @@ label fae_event_pointy_stick_stabber_girl:
 
     s abbcckc "Hi, [player]! Ready to chop up some bitches?"
     s "Does this look like the face of mercy, [player]?"
-    s bbfceea "AHAHAHA…{nw}"
+    s bbfceea "AHAHAHA...{nw}"
     extend bbfcdia "Just kidding!"
     s abbciia "Sorry about that!"
     

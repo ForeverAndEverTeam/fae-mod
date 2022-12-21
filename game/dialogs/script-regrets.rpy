@@ -178,7 +178,7 @@ init 5 python:
 
 label regret_offense:
     s bbaalra "Thank you for apologising, [player]."
-    s bbaamca "What you said really hurt but…"
+    s bbaamca "What you said really hurt but..."
     s bbaaaaa "I understand that sometimes we forget to think before we speak, and say the wrong things."
     s abhfaoa "I’m just glad you took responsibility, let’s move on shall we."
 

@@ -206,23 +206,23 @@ label ch30_setup:
 
 label fae_event_check:
 
-    if fae_isPlayerBday():
+    if fae_isPlayerBday() and not persistent.fae_seen_bday:
         call fae_player_bday_autoload
         jump after_holiday
 
-    if fae_isO31():
+    if fae_isO31() and not persistent.fae_o31_seen:
         call fae_o31_autoload
         jump after_holiday
     
-    if fae_isD25():
+    if fae_isD25() and not persistent.fae_d25_seen:
         call fae_d25_autoload
         jump after_holiday
     
-    if fae_isF14():
+    if fae_isF14() and not persistent.fae_f14_seen:
         call fae_f14_autoload
         jump after_holiday
     
-    if fae_isNYD():
+    if fae_isNYD() and not persistent.fae_j01_seen:
         call fae_nyd_autoload
         jump after_holiday
 

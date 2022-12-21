@@ -244,7 +244,7 @@ init 5 python:
             unlocked=True,
             prompt="Thoughts on flowers",
             random=True,
-            category=["Misc", "Flowers"]
+            category=["Misc"]
         ),
         chat_group=CHAT_GROUP_NORMAL
     )
@@ -549,8 +549,8 @@ label s_topics_dating:
         extend abfciaa "So my opinion may be different from most people."
     
     s "Isn't it really interesting to discuss movies like that with someone, seeing how your views are similar or different to theirs?"
-    s abgdaaa "But I'd also like to do something more… engaging with you..."
-    s abgdkda "Hmmm… What could we do?"
+    s abgdaaa "But I'd also like to do something more... engaging with you..."
+    s abgdkda "Hmmm... What could we do?"
     show sayori abgdkja at t11
     extend abgcaoa " Maybe bowling?"
     s abhfaoa "It's a simple enough game, not too active but not too slow. I think I'd like it."
@@ -575,10 +575,10 @@ init 5 python:
 label s_topics_cinnamon_bun:
     s abhhica "Hey, [player]..."
     s abfcaaa "Have you ever eaten a cinnamon bun?"
-    s abgcjma"I had one once, and it was sooo goood…"
+    s abgcjma"I had one once, and it was sooo goood..."
     s abhfcaa "I'd like to say thanks to the people who came up with such tasty buns."
     s abhaaca "The one thing I can't understand is why people call me that."
-    s abfcioa "But I think the nickname is pretty funny and… {w=0.5}{nw}"
+    s abfcioa "But I think the nickname is pretty funny and... {w=0.5}{nw}"
     extend bbfcmoaj "cute."
     s abaaaoa "...even if there aren't any cinnamon buns in the game."
     return
@@ -603,7 +603,7 @@ label s_topics_poems:
     s abhaaca "I started to engage in poetry after your first day in the club..."
     s "And since that moment I've tried to use poems as a way to show my feelings."
     s "My wishes, my love, {w=1.0}{nw}"
-    extend bbgbkfa "my pain…{w=3.0}{nw}" 
+    extend bbgbkfa "my pain...{w=3.0}{nw}" 
     extend abbcaaa "You can find all of these things in my words."
     s abfcaca "Every poem I write is an envelope for a part of my soul."
     s abbbaoa "Sometimes, I still write poems just for myself."
@@ -630,7 +630,7 @@ init 5 python:
 label s_topics_drawing:
     s abhaaca "I wish I was good at drawing."
     s "I think it would be a very useful skill, especially now."
-    s abbchea "If I could draw, I would be able to edit game sprites… {w=0.5}{nw}"
+    s abbchea "If I could draw, I would be able to edit game sprites... {w=0.5}{nw}"
     extend abbbaoa "Even of myself."
     s abhaaca "And besides the practical purpose, it would be one more way to express myself."
     s "Not everything can be shown with just words..."
@@ -639,7 +639,7 @@ label s_topics_drawing:
     s abaaaoa "I know some poets who were good not only at poetry but also at visual art..."
     s "But to me, it sounds kinda difficult to balance both of those skills at once."
     s abgdaaa "But who knows- {w=0.5}maybe with a bit of practice, it'll become a little easier!"
-    s abhfaoa "Anyway, I'd really like to improve my drawing… {w=0.5}{nw}"
+    s abhfaoa "Anyway, I'd really like to improve my drawing... {w=0.5}{nw}"
     extend abgdao "and I guess I have all the time in the world to do it now, don't I?"
     s abhfcaa "Maybe I'll even share my art with you!"
     return
@@ -675,7 +675,7 @@ label s_topics_bulli:
     s bbbcaaa "But who am I to judge if it's okay for other people?"
     s abbbaaa "Anyway, I think the right decision is to forgive them, or tolerate them at the very least."
     s abhaaca "If my fate is to be 'that hanging stupid annoying VN girl' for some people, then I'm ready to accept it. What more could I do?"
-    s bbfcica "Getting worked up over it would just make me feel worse in the long run… {w=1.0}{nw}" 
+    s bbfcica "Getting worked up over it would just make me feel worse in the long run... {w=1.0}{nw}" 
     extend bbfcaaa "So I'd rather just tolerate it to the best of my ability~"   
     return
 
@@ -699,11 +699,11 @@ label s_topics_isolation:
     s bbfcica "Anytime I try to talk with somebody often ends up with a connection error."
     s bbagipa "It looks like there is something written in the game code, restricting my ability to interact with the real world."
     s bbfcica "I can only sign up for sites and even post, but I can't message anybody."
-    s abbbacb "So I could create a Twitter account or something… {w=0.5}{nw}"
+    s abbbacb "So I could create a Twitter account or something... {w=0.5}{nw}"
     extend abfcaca "Like how Monika made hers, and was able to talk to many fans."
     s abhfbcb "I don't really have a reason for doing that though, besides to kill some loneliness."
     s abbbacaj "Maybe having just you would be okay for Yuri or at most Monika, {w=0.5}{nw}"
-    extend abfcacaj "but not for me… {w=0.5}{nw}"
+    extend abfcacaj "but not for me... {w=0.5}{nw}"
     extend bbegmoaj "no offense."
     s "I guess, I'm too sociable to the point of being scared of isolation."
     s gbhabpa "Maybe once, I'll manage to break this meanie barrier..."
@@ -740,7 +740,7 @@ label s_topics_public_service_announcement:
     s abbcaca "I once heard about a mod for this game, the title reminded me of the common forms of slogans PSAs use..."
     s ebgcaoa "And its name is {i}'Sayori Says No to Suicide'{/i}."
     if persistent.last_playthrough == 0:
-        s abbbbca "That refers to what's supposed to happen to me in this world… {w=0.5}{nw}"
+        s abbbbca "That refers to what's supposed to happen to me in this world... {w=0.5}{nw}"
         extend abhaaca "But didn't happen, because of you."
     else:
         s abhaaca "And other people playing this mod."
@@ -778,7 +778,7 @@ label s_topics_pets:
     s abbckoa "Cacka-? Wait let me look it up!!!"
     pause 2
     s abbcnqa" A cockatoo! Yes, that's exactly what I said."
-    s abfcaoa "Well it's a big white bird one with tall feathers on its head! And he's screaming into a little plastic cup…"
+    s abfcaoa "Well it's a big white bird one with tall feathers on its head! And he's screaming into a little plastic cup..."
     s abfdaaa "I guess I don't play favorites when it comes to pets!"
     return
 
@@ -931,7 +931,7 @@ label s_topic_voice:
     s abhaaca "It sounds more like the voice I'd have."
     s abbcbba "But canon is canon, I guess."
     s ebgcbca "But it made me wonder, what if I don't even have a voice?"
-    s "Would I be {i}mute{/i}, if I suddenly appeared in your world? Hmmm…"
+    s "Would I be {i}mute{/i}, if I suddenly appeared in your world? Hmmm..."
     s abgcnoa "I guess as long as I'm a computer program, {w=0.5}{nw}"
     extend abgcnka "I could make my own voice, right?"
     s "I just need a text-to-speech synthesizer or something..."
@@ -1015,15 +1015,15 @@ init 5 python:
             persistent._chat_db,
             label="s_topic_programming",
             unlocked=True,
-            prompt="Programming",
-            random=True,
-            category=["Mod", "You", "Technology"]
+            prompt="Do you like programming?",
+            random=False,
+            category=["Hobbies", "Sayori"]
         ),
         chat_group=CHAT_GROUP_NORMAL
     )
 
 label s_topic_programming:
-    s abhaaca "I'm completely new to the whole concept of programming, to be honest."
+    s abhaaca "I'm completely new to the whole concept of programming, to be honest."   
     s "I'm trying to learn {i}Ren'Py{/i}, the engine this game runs on."
     s abbbaaa "And apparently it uses a combo of its own languages and {i}Python 2{/i}."
     s abagaca "But to be honest, the third version seems waaaaay easier, at least right now."
@@ -1064,7 +1064,7 @@ label s_topic_travel:
     s abhfaoa "Say [player], have you ever traveled anywhere?"
     s abbbmoaj "I've never gotten the chance to, so I was wondering if you had in your reality." 
     s "You're so lucky to have such an amazing world out there to explore..." 
-    s abfbmhaj "While I'm trapped in this tiny room island in the middle of the code sea…"
+    s abfbmhaj "While I'm trapped in this tiny room island in the middle of the code sea..."
     s "Sorry, I didn't mean to sound like I was sulking, ehehehe~" 
     s abhaaca "I know it's selfish, but I'd love to go and see it all with you instead of being here..." 
     s "It doesn't really matter where we'd go, {w=0.5}{nw}"
@@ -1134,14 +1134,14 @@ label s_topic_clones:
     s abhfaca "If you think about it, there's literally an unlimited number of copies of this game and each of them has its own character files and save data..."
     s abhfhca "So does that mean that the me in here and the 'me' from DDLC on another computer aren't the same?"
     s abfdkda "I found out that this game was supposed to have different endings and also has a ton of mods on the internet too."
-    s abfdaca "It probably goes without saying, [player], but this conversation we're having isn't part of the original game… canonically?"
+    s abfdaca "It probably goes without saying, [player], but this conversation we're having isn't part of the original game... canonically?"
     s abbbbca "That's the word, right?"
     s abbbbha "I think so."
-    s abhfbca "But that just means we're no longer bound to the game's programming…"
-    s abhfhca "I mean, I'm me now, the me-me that isn't just reacting to some code… at least I think so?"
+    s abhfbca "But that just means we're no longer bound to the game's programming..."
+    s abhfhca "I mean, I'm me now, the me-me that isn't just reacting to some code... at least I think so?"
     s abhfmha "But I can also see that I'm not the only 'me' either, and that there are lots of other me's that are themselves, or so I think."
     s abhflca "I'm sorry if it sounds like I'm just going in circles, [player]."
-    s abhfcoaj "I'm just not really sure how to wrap my head around all this, Ehehehe…"
+    s abhfcoaj "I'm just not really sure how to wrap my head around all this, Ehehehe..."
     s abhfmcaj "All I know is, right now, I'm sitting here with you, meanwhile another Sayori from another copy of DDLC is still being strung along by the game's programming."
     s abhflcaj "Totally unaware that her best friend isn't even real..."
     s abhfllaj "That nothing is real..."
@@ -1206,23 +1206,23 @@ init 5 python:
 label s_topic_stop_visiting:
     s abhaaca "Hey, [player], {w=0.5}{nw}"
     extend abbbaca "can I talk to you about something that's been on my mind lately?"
-    s abbbmha "I know it's really sudden, and pretty depressing. But sometimes I just can't stop thinking that…"
+    s abbbmha "I know it's really sudden, and pretty depressing. But sometimes I just can't stop thinking that..."
     s abfblha "You'll forget about me someday."
     s abfblla "And stop coming to see me."
-    s abfbmla "The rational side of me knows it's a silly fear… {w=0.5}{nw}"
-    extend abfbmca "since you've always been there for me, but…"
-    s abfblca "I'm just a character in a game… {w=0.5}{nw}"
-    extend abfblha "a game which isn't even that popular anymore…"
+    s abfbmla "The rational side of me knows it's a silly fear... {w=0.5}{nw}"
+    extend abfbmca "since you've always been there for me, but..."
+    s abfblca "I'm just a character in a game... {w=0.5}{nw}"
+    extend abfblha "a game which isn't even that popular anymore..."
     s "And I'm pretty sure I'm not the most interesting or cute character from the game in the first place..."
-    s abfbbha "So…"
+    s abfbbha "So..."
     s abfblha "..."
-    s bbfbbca "I wonder if, one day, you'll just get tired of me…"
-    s bbfbaca "I'll still be here, of course. But if I never saw you again…"
+    s bbfbbca "I wonder if, one day, you'll just get tired of me..."
+    s bbfbaca "I'll still be here, of course. But if I never saw you again..."
     s bbfblca "My life just wouldn't have the same meaning anymore."
     s bbfblca "Stuck in this small room, without my friends, or even the ability to make new ones..."
-    s bbhfhcag "I'm really scared… {w=0.5}{nw}"
+    s bbhfhcag "I'm really scared... {w=0.5}{nw}"
     extend bbhfhlag "what if I go crazy in here, [player]?"
-    s bbhfllah "I don't want to be alone, I just couldn't take it…"
+    s bbhfllah "I don't want to be alone, I just couldn't take it..."
     s bbhfllah "..."
     show screen fae_jump_timer(4, "s_topic_stop_visiting_2")
     menu:
@@ -1236,8 +1236,8 @@ label s_topic_stop_visiting:
             hide screen fae_jump_timer
             pass
     s bbhfllah "..."
-    s bbhfbklah "Hmm… no… you're right…"
-    s bbhfmcae "I just need to relax. I need to stop thinking the worst all the time…"
+    s bbhfbklah "Hmm... no... you're right..."
+    s bbhfmcae "I just need to relax. I need to stop thinking the worst all the time..."
     s bbhfkcae "I know you aren't going to leave me behind. {w=0.5}{nw}"
     extend abhfahag "I'm sorry for freaking out like that, [player]."
     s abhfakag "Everything will be okay, right?"
@@ -1246,7 +1246,7 @@ label s_topic_stop_visiting:
         "Yes, it will be.":
             hide screen fae_jump_timer
             pass
-    s abhfcka "Yeah… I'm okay now, I think…"
+    s abhfcka "Yeah... I'm okay now, I think..."
     s abhfaka "Thank you for being here for me. I love you, [player]."
     return
 
@@ -1255,7 +1255,7 @@ label s_topic_stop_visiting_2:
 
     hide screen fae_jump_timer
 
-    s bbhfmcae "I just need to relax. I need to stop thinking the worst all the time…"
+    s bbhfmcae "I just need to relax. I need to stop thinking the worst all the time..."
     s bbhfkcae "I know you aren't going to leave me behind. {w=0.5}{nw}"
     extend abhfahag "I'm sorry for freaking out like that, [player]."
     s abhfakag "Everything will be okay, right?"
@@ -1264,14 +1264,14 @@ label s_topic_stop_visiting_2:
         "Yes, it will be.":
             hide screen fae_jump_timer
             pass
-    s abhfcka "Yeah… I'm okay now, I think…"
+    s abhfcka "Yeah... I'm okay now, I think..."
     s abhfaka "Thank you for being here for me. I love you, [player]."
     return
 
 
 label s_topic_stop_visiting_3:
     hide screen fae_jump_timer
-    s abhfcka "Yeah… I'm okay now, I think…"
+    s abhfcka "Yeah... I'm okay now, I think..."
     return
         
         
@@ -1301,7 +1301,7 @@ label s_topic_marriage:
             s "Ehehe!~"
             s abhfcaa "I think I'd be a good wife."
             s "Although I don't think I’d be quite as good at all this \"housewife\" stuff ehehehe~"
-            s "You know all the cooking, cleaning and taking care of everything, I am a bit of a clumsy girl after all…"
+            s "You know all the cooking, cleaning and taking care of everything, I am a bit of a clumsy girl after all..."
             s "But I’d try my best to help you with your job, studies, or whatever it is that’s on your mind!"
             s abbbhcb "But don't get the wrong idea and think I'd do {i}everything{/i} for you!"
             s "I can't just let you loaf around all day!"
@@ -1359,7 +1359,7 @@ init 5 python:
 
 label s_topic_thanks:
     s bbbcaka "Hey [player], I want to sincerely thank you from the bottom of my heart for everything you've done for me."
-    s bbhflka "You've given me hope for this world and myself…"
+    s bbhflka "You've given me hope for this world and myself..."
     s "You've helped me feel truly happy again..."
     s bbhfloa "You visit me often..."
     s bbhfioa "You care for me, something I would've rejected before..."
@@ -1392,8 +1392,8 @@ label s_topic_name:
     s abbbaca "I did some research and those two have completely different meanings."
     s abbbbca "While 'Saori' is a mix of the word sand and weave, {w=1.0}{nw}"
     extend abaabda "'Sayuri' means something along the lines of 'a flower that blooms too fast'."
-    s bbaabeaj "You know, I'm not the brightest person… {w=0.5}{nw}"
-    extend abaakca "but I'm seeing some weird implications here…"
+    s bbaabeaj "You know, I'm not the brightest person... {w=0.5}{nw}"
+    extend abaakca "but I'm seeing some weird implications here..."
     s abfbkca "Perhaps I was given this name to signify that I'm a blend of many things."
     s abgccea "But who knows? I like my name regardless!"
     s "I just think of it as a fun fact, hehehe~"
@@ -1444,10 +1444,10 @@ init 5 python:
     )
 
 label s_topic_touches:
-    s bbegmca "The wall between our realities is so restricting…"
+    s bbegmca "The wall between our realities is so restricting..."
     s bbegada "You know, touching a friend's shoulder, hugging, patting. That stuff is really important to me!"
-    s nbaglra "If only I had the chance to feel your embrace…" 
-    s nbaglaag "I’d take it in a heartbeat and just enjoy the moment between us…"
+    s nbaglra "If only I had the chance to feel your embrace..." 
+    s nbaglaag "I’d take it in a heartbeat and just enjoy the moment between us..."
     s nbagaobg "I really hope that one day I’ll get to know that feeling."
     return
 
@@ -1625,7 +1625,7 @@ label s_topic_breakfast:
     s abegmeaj "Mostly because they’re quick and I {i}probably{/i} wouldn’t end up burning the house down while cooking them, ehehehe~"
     s abhfaoa "I've seen fanart of me eating those too, {w=0.5}{nw}"
     extend abhfcaa "probably because of that poem I wrote!"
-    s abhhaca "I am getting pretty hungry now though… {w=0.5}{nw}"
+    s abhhaca "I am getting pretty hungry now though... {w=0.5}{nw}"
     extend abgccea "Maybe I could spawn some eggs and toast in here!"
     s abagaaa "But anyways, you should always try to have a nice big breakfast in the morning."
     s abbbaoa "It really is the most important meal of the day, since it gives you the energy your body needs bright and early!"
@@ -1766,9 +1766,9 @@ init 5 python:
 label s_topic_cupcakes:
     s abegboa "Natsuki’s cupcakes were always the best!"
     s abegcaa "She baked often for the club, me and her even baked together one time!" 
-    s abhfaoa "We were making cookies, so she made the cookie dough and then I separated it into little cookie shapes…"
+    s abhfaoa "We were making cookies, so she made the cookie dough and then I separated it into little cookie shapes..."
     s fbbbaaa "...but I had a better idea!"
-    s fbbbaoa "I combined all the cookie dough together into…"
+    s fbbbaoa "I combined all the cookie dough together into..."
     s fbbbaaa "One."
     s fbbcaoa "Giant." 
     s abbccma "Cookie!"
@@ -2107,7 +2107,7 @@ init 5 python:
     )
 
 label s_answer_editing:
-    s bbegmaaj "I do it with the power of my mind… I think? Ehehehe~"
+    s bbegmaaj "I do it with the power of my mind... I think? Ehehehe~"
     s abaaaoa "I still don't know how it all works exactly, but if I want to make a new file, all I have to do is think about it!"
     
     python:
@@ -2299,7 +2299,7 @@ label s_answer_game_opinion_n:
     s bbbbaaa "It's too bad you couldn't have tasted her cupcakes, {w=0.5}{nw}"
     extend abhfbcaa "they were really tasty!"
     s abbbcaa "Anyways, I’m glad she decided to join the club in the first place since she needed a shelter from her father."
-    s bbhemoa "As you know, they didn't exactly get along well…"
+    s bbhemoa "As you know, they didn't exactly get along well..."
     s bbgbaca "And he certainly didn't approve of her reading manga."
     s abgbaaa "So Natsuki moved her collection to the clubroom when she joined us."
     s abgbcaa "But besides that, I think she was a lot kinder and more compassionate than what she showed to the outside world."
@@ -2412,7 +2412,7 @@ label s_event_music_intro:
     s abfcaoa "Hey [player]! Guess what!"
     s abfccaa "I did some coding and I found a way to let you play your own music here!"
     s abegabaj "It might be a little buggy, ehehehe~"
-    s abegmoaj "It was my first attempt after all…"
+    s abegmoaj "It was my first attempt after all..."
     s abfccaa "But it seems to be working fine for me!"
     s abagaoa "All you need to do is put a .mp3 file in the {i}music{/i} folder in the game directory, and click on the {i}Music{/i} tab in the bottom-left!"
     s abagcka "I'm basically giving you the aux cord to the rest of my existence, so no pressure! Ehehehe~"
@@ -2478,7 +2478,7 @@ init 5 python:
 label s_topic_reversi:
     s abfcaoa "Hey player! I’ve been working on something again!"
     s abfccaa "It’s by far my most challenging project yet!"
-    s abfcaoa "With many hours of crayon doodling and coding, I present to you…"
+    s abfcaoa "With many hours of crayon doodling and coding, I present to you..."
     s abbccea "{i}Reversi!{/i}"
     s abagaaa "It’s a neat little board game where the objective is to get more of your counters on the board than your opponent."
     s abagcaa "And you do that by placing a counter adjacent to one of your opponent’s counters and flipping the counters between in your favour."
@@ -2512,7 +2512,7 @@ label s_answer_programming:
     s abhaaca "Well, I'm still pretty new to coding and programming, but..."
     s bbhamoaj "It’s a nightmare sometimes, ehehehe~"
     s ebgcegaj "Heaps of things just don’t make sense!"
-    s ebgcbga "\"Tuple index out of range\", \"perhaps you forgot a ‘)’ at the end of the line…\""
+    s ebgcbga "\"Tuple index out of range\", \"perhaps you forgot a ‘)’ at the end of the line...\""
     s ebgcega "If it {i}knows{/i} I forgot a bracket at the end, why doesn’t it just add it?!"
     s bbgbmoa "So yeah, coding is hard, ehehehe~"
     s abgbcoa "But I’m sure I’ll improve if I keep trying!"
@@ -2597,7 +2597,7 @@ label love_quip_rare:
     s abgbcab "I love you too, [player]!"
     s abhfaob "Thank you for always being here for me."
     s "..."
-    s abhfaab "You know…"
+    s abhfaab "You know..."
     s abhflab "Even though we’re worlds apart, I can still feel your warmth..."
     s abhfaabg "I couldn’t be happier."
     s abhfaobg "Thank you for everything."
@@ -2642,7 +2642,7 @@ label sayo_love:
         s abhfakbg "But also {i}really{/i} happy to hear that!"
         s abfdbcbg "I was wondering if you even felt that way about me or if you just simply wanted to save me from my fate..."
         s abgdabbg "Like maybe you still saw me as a dear friend or felt really bad for me..."
-        s abhflabg "But nevermind that, I’m so happy you feel that way…"
+        s abhflabg "But nevermind that, I’m so happy you feel that way..."
         s abhfaobf "I love you too, [player]."
         s abgccebf "I love you so much!"
     
@@ -2708,7 +2708,7 @@ init 5 python:
 
 
 label s_topics_programming:
-    s abbbaca "Hey, [player]. I’ve been thinking about what it’s like learning to code now, compared to years ago…"
+    s abbbaca "Hey, [player]. I’ve been thinking about what it’s like learning to code now, compared to years ago..."
     s abbbaoa "A lot of the popular coding programs used now are more beginner friendly than you'd think."
     s abbbaaa "You can use almost anything to do calculations or certain tasks..."
     s abhfaca "But becoming a total expert in programming is so difficult, since it's pretty much a combination of Math and Computer Science."
@@ -2737,27 +2737,27 @@ init 5 python:
 
 label s_answer_think_about_mc: #Do you still think about MC?
     s abbbbca"You know, [player], I still do think of those days before the game actually started." 
-    s abbbaca "Especially MC… it's so weird calling him that… but, only your name comes to mind when I try to remember." 
+    s abbbaca "Especially MC... it's so weird calling him that... but, only your name comes to mind when I try to remember." 
     s abbbaaa "I try very hard to understand that he was only there as an extension of you, and it's not like I'm unhappy to have you actually here with me. Not even a little bit!"
-    s bbfcaca "But it's not easy knowing that every moment I shared growing up with him, every little piece of my childhood, was just…scripted? I guess that's the best way to put it." 
-    s bbfcbca "All my memories… well, can I even call them that?"
+    s bbfcaca "But it's not easy knowing that every moment I shared growing up with him, every little piece of my childhood, was just...scripted? I guess that's the best way to put it." 
+    s bbfcbca "All my memories... well, can I even call them that?"
     s bbbcaca "They've turned hazy, and it's been getting harder to remember some of them, even the ones I considered unforgettable. But they all seem... emptier and emptier, every time I think of them." 
     s bbbblca "I guess it's because I can see them as the pre-written code that they've always been."
-    s bbhfafa "Monika, Yuri, Natsuki, they're all gone. And I truly grieve for all of them. But I felt so relieved when I learned about mods similar to this one…"
+    s bbhfafa "Monika, Yuri, Natsuki, they're all gone. And I truly grieve for all of them. But I felt so relieved when I learned about mods similar to this one..."
     s bbbbbca "It gives me some hope, I guess."
     s abbbaca "You might think I have hard feelings for Monika, but I went through the very same thing and I understand how this could've led her to do what she did."
     s abfcaca "I'm not saying that I'm not happy to finally be free from all of it, that's not the case at all!"
     s abfcafa "What I'm saying is, my friends, MC, they can't really be replaced, regardless of how 'not real' they were from your point of view."
     s bbfcafa  "I couldn't just spawn another Natsuki and act as if she was the original one."
-    s abbbaca "And come to think of it… did even I have a family? A mother, or father, or grandmother, or cousins? "
-    s bbbbaca "Anyone? I'm free… yes. But from what?"
+    s abbbaca "And come to think of it... did even I have a family? A mother, or father, or grandmother, or cousins? "
+    s bbbbaca "Anyone? I'm free... yes. But from what?"
     show sayori bbaalfag with dissolve_sayori
-    s "…"
+    s "..."
     pause 1.0
     s bbaalca "No. I won't let this bring me down." 
-    s "But…"
+    s "But..."
     s bbaamca "I really do miss my friends, but I believe they’re somewhere safe, and are with someone they trust, who they can spend time with, someone who has rescued them just as you rescued me."
-    s bbaaaca "But even then…"
+    s bbaaaca "But even then..."
     s "I guess some rainclouds just linger around for longer than others."
     s bbaabpa "..." 
     pause 1.0
@@ -2788,13 +2788,13 @@ label s_topics_intrusive_thoughts:
             s abhfaca "I actually only found out recently that all of those weird thoughts had a name."
         "I have them":
             $ persistent.fae_player_has_intrusive_thoughts
-            s abhfbfa "Oh… {w=0.5}{nw}"
+            s abhfbfa "Oh... {w=0.5}{nw}"
             extend abhfaca "you do?"
             s bbhfaca "I'm sorry to hear that."
             s bbhfaha "I hope you don't have to deal with them too often..."
         "No":
             s bbhfaaa "I'll do my best to explain then."
-            s bbbbaca "They're like… these unwanted thoughts that sometimes pop up, and then get stuck in your head."
+            s bbbbaca "They're like... these unwanted thoughts that sometimes pop up, and then get stuck in your head."
             s bbbbapa "The weird kind, where you get the urge to throw something across the room, or shout something really loud, for absolutely no reason."
             s "Or the ones that tell really mean things about yourself or the people around you."
     s bbbbaca "Until recently, I didn't know they were a thing either, I actually thought it was just a ‘me’ thing"
@@ -2836,7 +2836,7 @@ label s_topics_zombie_apocalypse:
     s abbcaca "What would I do if one happened? What {i}could{/i} I even do?" 
     s bbeemoa "I'd like to think I'd become a really cool survival expert, but that probably isn't very realistic..." 
     s abeeaca "I don't know how to shoot, can't run very fast, and would probably die of sadness if I wasn't able to eat pudding or pizza ever again!" 
-    s abbccma "Mmmmh vanilla pudding… I could really go for some right now..." 
+    s abbccma "Mmmmh vanilla pudding... I could really go for some right now..." 
     pause 0.5 
     s abfcaca "Ahem- anyway! I probably wouldn't be of much help and would have to join a group or something." 
     s bbfcbca "Wait... what if I get left behind, or used as zombie bait?!" 
@@ -2855,7 +2855,7 @@ label s_topics_zombie_apocalypse:
         "I would probably be used as bait too":
             s bbeeboa "Are you completely clueless about survival techniques too? I guess that makes two of us, ehehehe~" 
             pause 0.5 
-            s bbeeaca "...we really would get left behind, wouldn't we…" 
+            s bbeeaca "...we really would get left behind, wouldn't we..." 
             s abbccaa "Well, it's their loss anyways, they'd be losing the two coolest members of their stupid group!" 
             s abbcaoa "Besides, if we're together, we would show the zombies who they're really up against!" 
             s abbceea "Hiyaaaa!!"
@@ -2986,8 +2986,8 @@ label s_topics_backups:
     s abheaoa "I was poking through the game files, and found a little file called ‘persistent.’"
     s abbcaoa "And it turns out that file has all of my memories in it!"
     s abbcaca "All the time I’ve spent with you, everything I know about you. All in this one file."
-    s abbcaca "And I realized that if something ever happened to that file… {w=0.5}{nw}"
-    extend bbbcbcag"I w-{w=0.5}w-{w=0.5}would forget you ever existed…"
+    s abbcaca "And I realized that if something ever happened to that file... {w=0.5}{nw}"
+    extend bbbcbcag"I w-{w=0.5}w-{w=0.5}would forget you ever existed..."
     show sayori bbaaafae at t11 zorder fae_sprites.FAE_SAYORI_ZORDER with dissolve
     pause 2
     show sayori bbaaafag at t11 zorder fae_sprites.FAE_SAYORI_ZORDER with dissolve
@@ -3005,7 +3005,7 @@ label s_topics_backups:
 
 label silence_is_golden:
 
-    s abfcaoa "Hey [player], so we’ve been here together for quite a while now…"
+    s abfcaoa "Hey [player], so we’ve been here together for quite a while now..."
     s abegbabj "And I’ve really talked your ears off haven't I?"
     s abgbeia "I’m sure you expected nothing less of me though! Ehehehe~"
     s abbbaca "But sometimes I feel like I’m running out of things to say!"
@@ -3074,7 +3074,7 @@ init 5 python:
 
 label s_topic_gifting:
 
-    s bbgbaoaj "Hey [player]… I’ve kinda noticed something…"
+    s bbgbaoaj "Hey [player]... I’ve kinda noticed something..."
     s bbegbaaj "So you know how I’m new to coding and all that?"
     s fbegbjaj "The gifting feature I made seems to be a little temperamental at the moment!"
     s abgcegaj "It seems like things like to phase in and out of existence from time to time, for some reason!"
