@@ -1,20 +1,28 @@
-﻿## This template version is 3.0.0. When asked to provide the template version
+﻿init -1200 python:
+
+    renpy.config.allow_skipping = True
+
+
+## This template version is 3.0.0. When asked to provide the template version
 ## you are using, give them this version number. 
 ### DO NOT REMOVE OR CHANGE THE ABOVE COMMENT. ###
 
 ## options.rpy
+#init python:
+#    config.use_cpickle = False
+#define config.quit_action = Function(fae_quit_override)
 
 # This file customizes what your mod is and and how it starts and builds!
 
 # This controls what your mod is called.
-define config.name = "Forever&Ever"
+define config.name = "Forever & Ever (DEV-ALPHA)"
 
 # This controls whether you want your mod name to show in the main menu.
 # If your mod name is big, it is suggested to turn this off.
 define gui.show_name = True
 
 # This controls the version number of your mod.
-define config.version = "0.0.5 alpha"
+define config.version = "0.1.0"
 
 # This adds information about your mod in the About screen.
 # DDLC does not have a 'About' screen so you can leave this blank.
@@ -25,7 +33,7 @@ define gui.about = _("")
 # Note:
 #   The build name is ASCII only so no numbers, spaces, or semicolons.
 #   Example: Doki Doki Yuri Time to DokiDokiYuriTime
-define build.name = "DDLCModTemplateTwo"
+define build.name = "Forever&Ever"
 
 # This configures whether your mod has sound effects.
 define config.has_sound = True
@@ -36,9 +44,11 @@ define config.has_music = True
 # This configures whether your mod has voices.
 define config.has_voice = False
 
+define config.rollback_enabled = False
+
 # This configures what music will play when you launch your mod and in the 
 # main menu.
-define config.main_menu_music = audio.t1
+define config.main_menu_music = audio.s1
 
 # These variables control the transition effects of DDLC when entering and exiting
 # a menu.
@@ -82,13 +92,12 @@ default preferences.sfx_volume = 0.75
 #   Windows: %AppData%/RenPy/
 #   macOS: $HOME/Library/RenPy/ (Un-hide the Library Folder)
 #   Linux: $HOME/.renpy/
-define config.save_directory = "DDLCModTemplateTwo"
+define config.save_directory = "Forever&Ever"
+
 
 # This controls the window logo of your mod.
 define config.window_icon = "gui/window_icon.png"
 
-# This controls whether your mod allows the player to skip dialogue.
-define config.allow_skipping = True
 
 # This controls whether your mod saves automatically.
 define config.has_autosave = False
@@ -173,49 +182,12 @@ init python:
     ## subdirectories.
     ##  "**.psd" matches psd files anywhere in the project.
 
-    # These variables declare the packages to build your mod that is Team Salvato
-    # IPG compliant. Do not mess with these variables whatsoever.
-    build.package(build.directory_name + "Mod",'zip','mod',description="Ren'Py 6 DDLC Compliant Mod")
-    build.package(build.directory_name + "Renpy7Mod",'zip','windows linux mac renpy mod',description="Ren'Py 7 DDLC Compliant Mod")
-
-    # These variables declare the archives that will be made to your packaged mod.
-    # To add another archive, make a build.archive variable like in this example:
-    build.archive("scripts", 'mod all')
-    build.archive("mod_assets", 'mod all')
-
-    # Do not touch these lines. This is so Ren'Py can add your mods' py file
-    # and a special launcher for Linux and macOS to run your mod. 
-    try: 
-        build.renpy_patterns.remove(('renpy.py', ['all']))
-        build.classify_renpy("renpy.py", "renpy all")
-    except: pass
-    
-    try:
-        build.early_base_patterns.remove(('*.sh', None))
-        build.classify("LinuxLauncher.sh", "linux") ## Linux Launcher Script
-        build.classify("*.sh", None)
-    except: pass
-    
-    #############################################################
-    # These variables classify packages for PC and Android platforms.
-    # Make sure to add 'all' to your build.classify variable if you are planning
-    # to build your mod on Android like in this example.
-    #   Example: build.classify("game/**.pdf", "scripts all")
-    
-    build.classify("game/mod_assets/**", "mod_assets all")
-    build.classify("game/**.rpyc", "scripts all")
-    build.classify("game/README.md", None)
-    build.classify("game/**.txt", "scripts all")
-    build.classify("game/**.chr", "scripts all")
-    build.classify("game/advanced_scripts/**","scripts all") ## Backwards Compatibility
-    build.classify("game/tl/**", "scripts all") ## Translation Folder
-
-    build.classify('**~', None)
     build.classify('**.bak', None)
-    build.classify('**/.**', None)
-    build.classify('**/#**', None)
     build.classify('**/thumbs.db', None)
     build.classify('**.rpy', None)
+    build.classify('**~', None)
+    build.classify('**/.**', None)
+    build.classify('**/#**', None)    
     build.classify('**.psd', None)
     build.classify('**.sublime-project', None)
     build.classify('**.sublime-workspace', None)
@@ -224,10 +196,63 @@ init python:
     build.classify('/game/10', None)
     build.classify('/game/cache/*.*', None)
     build.classify('**.rpa', None)
-    build.classify('README.html','mod all')
-    build.classify('README.linux', 'linux')
+    build.classify("game/dev/**", None)
+    build.classify('gifts/*', None)
+    build.classify('game/submods/*', None)
+    build.classify("log/**", None)
+    build.classify("*.log", None)
+    build.classify("errors.txt", None)
+    build.classify("log.txt", None)
+    #build.classify("game/bgm/**", None)
+
+    build.include_update = True
+
+    build.classify("game/mod_assets/**", "all")
+    build.classify("game/**.rpyc", "all")
+    build.classify("game/gui/**", "all")
+    build.classify("game/python-packages/**", "all")
+    build.classify('README.html', "all")
+    build.classify("game/RPASongMetadata.json", "all")
+    build.classify("renpy/**", "all")
+    build.classify("lib/**", "all")
+
+    # These variables declare the packages to build your mod that is Team Salvato
+    # IPG compliant. Do not mess with these variables whatsoever.
+    #build.package(build.directory_name + "Mod",'zip','mod',description="Ren'Py 6 DDLC Compliant Mod")
+    #build.package(build.directory_name + "Renpy7Mod",'zip','windows linux mac renpy mod',description="Ren'Py 7 DDLC Compliant Mod")
+    build.package(build.directory_name + "Mod", 'zip', "all", description="Ren'Py 8 DDLC Compliant Mod")
+
+    # These variables declare the archives that will be made to your packaged mod.
+    # To add another archive, make a build.archive variable like in this example:
+    #build.archive("scripts", 'mod all')
+    #build.archive("mod_assets", 'mod all')
+
+    # Do not touch these lines. This is so Ren'Py can add your mods' py file
+    # and a special launcher for Linux and macOS to run your mod. 
+    #try: 
+    #    build.renpy_patterns.remove(('renpy.py', ['all']))
+    #    build.classify_renpy("renpy.py", "renpy all")
+    #except: pass
+    
+    #try:
+    #    build.early_base_patterns.remove(('*.sh', None))
+    #    build.classify("LinuxLauncher.sh", "linux") ## Linux Launcher Script
+    #    build.classify("*.sh", None)
+    #except: pass
+    
+    #############################################################
+    # These variables classify packages for PC and Android platforms.
+    # Make sure to add 'all' to your build.classify variable if you are planning
+    # to build your mod on Android like in this example.
+    #   Example: build.classify("game/**.pdf", "scripts all")
+
+    #build.classify("game/**", None)
+
+    
+
+    #build.classify('README.linux', 'linux')
    
     # This sets' README.html as documentation
-    build.documentation('README.html')
+    #build.documentation('README.html')
 
     build.include_old_themes = False

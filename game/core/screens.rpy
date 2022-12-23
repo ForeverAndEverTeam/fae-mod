@@ -4,6 +4,11 @@
 
 ## Initialization
 ################################################################################
+init -1 python:
+
+    layout.FAE_TT_NOTIF = (
+        "Enabling this will let Sayori use your system notifications, and check if FaE is your active window"
+    )
 
 init offset = -1
 
@@ -15,14 +20,20 @@ default extra_settings = True
 
 # This controls the color of outlines in the game like
 # text, say, navigation, labels and such.
-define -2 text_outline_color = "#6AB7E7"
+define -2 text_outline_color = "#3BB7FF"
+
 
 
 ################################################################################
 ## In-game screens
 ################################################################################
 
-
+screen minigame(ai_mode):
+    default chess = ChessDisplayable(chess_ai=ai_mode)
+    add "bg chessboard"
+    add chess
+    if chess.winner:
+        timer 6.0 action Return(chess.winner)
 ## Say screen ##################################################################
 ##
 ## The say screen is used to display dialogue to the player. It takes two
@@ -153,6 +164,65 @@ screen choice(items):
                 textbutton i.caption action i.action
 
 
+style talk_choice_button_text is choice_button_text
+
+style talk_choice_vbox is choice_vbox:
+    xcenter 250
+
+style talk_choice_button is choice_button
+
+screen talk_choice(items):
+    style_prefix "talk_choice"
+
+    vbox:
+        for i in items:
+            textbutton i.caption action i.action
+
+screen fae_select_sidebar(items):
+
+    style_prefix "choice"
+
+    vbox:
+
+        xpos 60
+
+        for i in items:
+            
+            if "kwargs=" in i.caption:
+
+                $ kwarg = i.caption.split("(kwargs=")[-1].replace(")", "")
+                $ caption = i.caption.replace(" (kwargs=" + kwarg + ")", "")
+
+                if "#" in kwarg:
+                    
+                    $ kwarg = kwarg.replace(", ", ",").split(",")
+                    
+                    if len(kwarg) == 1:
+                        $ kwarg.append('#ffe6f4')
+                    
+                    $ arg1 = kwarg[0]
+                    $ arg2 = kwarg[-1]
+                    
+                    textbutton caption:
+                        idle_background Frame(im.MatrixColor(im.MatrixColor("gui/button/choice_idle_background.png", im.matrix.desaturate() * im.matrix.contrast(1.29) * im.matrix.colorize("#00f", "#fff") * im.matrix.saturation(120)), 
+                            im.matrix.desaturate() * im.matrix.colorize(arg1, arg2)), gui.choice_button_borders)
+                        hover_background Frame(im.MatrixColor(im.MatrixColor("gui/button/choice_hover_background.png", im.matrix.desaturate() * im.matrix.contrast(1.29) * im.matrix.colorize("#00f", "#fff") * im.matrix.saturation(120)), 
+                            im.matrix.desaturate() * im.matrix.colorize(arg1, "#fff")), gui.choice_button_borders)
+                        action i.action
+
+                else:
+
+                    textbutton caption:
+                        style kwarg
+                        action i.action
+
+            else:
+
+                textbutton i.caption action i.action
+
+
+
+
 ## When this is true, menu captions will be spoken by the narrator. When false,
 ## menu captions will be displayed as empty buttons.
 define config.narrator_menu = True
@@ -215,7 +285,12 @@ default quick_menu = True
 #style quick_button is default
 #style quick_button_text is button_text
 
+init python:
+    
+    def FileActionMod(name, page=None, **kwargs):
 
+        if renpy.current_screen().screen_name[0] == "save":
+            return Show(screen="dialog", message="There's no point in saving anymore.\nDon't worry, I'm not going anywhere.", ok_action=Hide("dialog"))
 
 
 ################################################################################
@@ -227,12 +302,111 @@ default quick_menu = True
 ## This screen is included in the main and game menus, and provides navigation
 ## to other menus, and to start the game.
 
-init python:
+init 4 python:
     def FinishEnterName():
-        if not player: return
+        global player
+
+        if not player: 
+            return
+        
+        
+        if (
+            fae_bad_name_comp.search(player)
+            or fae_awk_name_comp.search(player)
+        ):
+
+            renpy.call_in_new_context("fae_bad_name_input")
+            player = ""
+            renpy.show(
+                "chibi demon",
+                layer="screens",
+                zorder=10
+            )
+            return
+        
         persistent.playername = player
         renpy.hide_screen("name_input")
         renpy.jump_out_of_context("start")
+
+
+label fae_bad_name_input:
+    show screen navigation
+
+    $ disable_esc()
+
+    if not renpy.seen_label("fae_bad_name_input.first_time_bad_name"):
+
+        label .first_time_bad_name:
+            play sound "sfx/glitch3.ogg"
+            window show
+
+            hide screen name_input
+
+            show screen confirm(message="Invalid Name", ok_action=Return)
+
+            window auto
+    else:
+        hide screen name_input
+
+        show screen confirm(message="Invalid Name", ok_action=Return)
+    
+    $ enable_esc()
+    hide screen navigation
+    return
+
+screen fake_main_menu():
+    style_prefix "main_menu"
+
+    add "game_menu_bg"
+
+    frame:
+        pass
+
+    vbox:
+        style_prefix "navigation"
+
+        xpos gui.navigation_xpos
+        yalign 0.8
+
+        spacing gui.navigation_spacing
+
+        textbutton _("Just Sayori")
+
+        textbutton _("Load Game")
+
+        textbutton _("Settings")
+
+        if store.fae_submod_utilities.submod_def:
+            textbutton _("Submods")
+
+        textbutton _("Hotkeys")
+
+        if renpy.variant("pc"):
+
+            textbutton _("Help")
+
+            textbutton _("Quit")
+
+    if gui.show_name:
+
+        vbox:
+            text "[config.name!t]":
+                style "main_menu_title"
+
+            text "[config.version]":
+                style "main_menu_version"
+
+    # add "fake_menu_logo"
+    add Image(
+        "mod_assets/Logo.png"
+    ) subpixel True xcenter 240 ycenter 120 zoom 0.60
+    # add "fake_menu_art_m"
+    add Image(
+        "gui/menu_art_s.png"
+    ) subpixel True xcenter 1000 ycenter 640 zoom 1.00
+
+    key "K_ESCAPE" action Quit(confirm=False)
+
 
 screen navigation():
 
@@ -244,47 +418,56 @@ screen navigation():
 
         spacing gui.navigation_spacing
 
-        if not persistent.autoload or not main_menu:
+        #if not persistent.autoload or not main_menu:
 
-            if main_menu:
+        if main_menu:
 
-                if persistent.playthrough == 1:
-                    textbutton _("ŔŗñĮ¼»ŧþŀÂŻŕěōì«") action If(persistent.playername, true=Start(), false=Show(screen="name_input", message="Please enter your name", ok_action=Function(FinishEnterName)))
-                else:
-                    textbutton _("New Game") action If(persistent.playername, true=Start(), false=Show(screen="name_input", message="Please enter your name", ok_action=Function(FinishEnterName)))
+            #if persistent.playthrough == 1:
+            #    textbutton _("ŔŗñĮ¼»ŧþŀÂŻŕěōì«") action If(persistent.playername, true=Start(), false=Show(screen="name_input", message="Please enter your name", ok_action=Function(FinishEnterName)))
+            #else:
+            textbutton _("Just Sayori") action If(persistent.playername, true=Start(), false=Show(screen="name_input", message="Please enter your name", ok_action=Function(FinishEnterName)))
 
-            else:
-
-                textbutton _("History") action [ShowMenu("history"), SensitiveIf(renpy.get_screen("history") == None)]
-
-                textbutton _("Save Game") action [ShowMenu("save"), SensitiveIf(renpy.get_screen("save") == None)]
-
-            textbutton _("Load Game") action [ShowMenu("load"), SensitiveIf(renpy.get_screen("load") == None)]
-
-
-            if _in_replay:
-
-                textbutton _("End Replay") action EndReplay(confirm=True)
-
-            elif not main_menu:
-                if persistent.playthrough != 3:
-                    textbutton _("Main Menu") action MainMenu()
-                else:
-                    textbutton _("Main Menu") action NullAction()
-
-            textbutton _("Settings") action [ShowMenu("preferences"), SensitiveIf(renpy.get_screen("preferences") == None)]
-
-            #textbutton _("About") action ShowMenu("about")
-
-            if renpy.variant("pc"):
-
-                ## Help isn't necessary or relevant to mobile devices.
-                textbutton _("Help") action [Help("README.html"), Show(screen="dialog", message="The help file has been opened in your browser.", ok_action=Hide("dialog"))]
-
-                ## The quit button is banned on iOS and unnecessary on Android.
-                textbutton _("Quit") action Quit(confirm=not main_menu)
         else:
-            timer 1.75 action Start("autoload_yurikill")
+
+            textbutton _("History") action [ShowMenu("history"), SensitiveIf(renpy.get_screen("history") == None)]
+
+            textbutton _("Save Game") action [ShowMenu("save"), SensitiveIf(renpy.get_screen("save") == None)]
+
+        textbutton _("Load Game") action [ShowMenu("load"), SensitiveIf(renpy.get_screen("load") == None)]
+
+
+        if _in_replay:
+
+            textbutton _("End Replay") action EndReplay(confirm=True)
+
+        elif not main_menu:
+        #    if persistent.playthrough != 3:
+            textbutton _("Main Menu") action NullAction(), Show("dialog", message="There's no point!\nYou'll just get back here!", ok_action=Hide("dialog")) #MainMenu()
+
+        textbutton _("Settings") action [ShowMenu("preferences"), SensitiveIf(renpy.get_screen("preferences") == None)]
+
+        if store.fae_submod_utilities.submod_def:
+            textbutton _("Submods") action [ShowMenu("submods"), SensitiveIf(renpy.get_screen("submods") == None)]
+
+        textbutton _("QABs") action [ShowMenu("qab"), SensitiveIf(renpy.get_screen("qab") == None)]
+
+        #textbutton _("About") action ShowMenu("about")
+
+        if store.fae_notifs.can_show_notifs and not main_menu:
+            textbutton _("Alerts") action [ShowMenu("notif_settings"), SensitiveIf(renpy.get_screen("notif_settings") == None)]
+
+        if renpy.variant("pc"):
+
+            ## Help isn't necessary or relevant to mobile devices.
+            textbutton _("Help") action [Help("README.html"), Show(screen="dialog", message="The help file has been opened in your browser.", ok_action=Hide("dialog"))]
+
+            ## The quit button is banned on iOS and unnecessary on Android.
+            textbutton _("Quit") action Quit(confirm=(None))# if main_menu else _confirm_quit))
+        
+        #if not main_menu:
+        textbutton _("Return") action Return()
+        #else:
+        #    timer 1.75 action Start("autoload_yurikill")
 
 
 
@@ -296,27 +479,7 @@ screen navigation():
 ## http://www.renpy.org/doc/html/screen_special.html#main-menu
 
 screen main_menu():
-    python:
-        # Note: 'event_name': callback
-        callbacks = {
-            'ready': readyCallback,
-            'disconnected': disconnectedCallback,
-            'error': errorCallback,
-            }
-        discord_rpc.initialize('951882871289806899', callbacks=callbacks, log=False)
-        start = time.time()
-        print(start)
-        discord_rpc.update_connection()
-        discord_rpc.run_callbacks()
-        discord_rpc.update_presence(
-            **{
-                'details': 'Main Menu',
-                'start_timestamp': start,
-                'large_image_key': 'logo'
-                }
-                )
-        discord_rpc.update_connection()
-        discord_rpc.run_callbacks()
+
     # This ensures that any other menu screen is replaced.
     tag menu
 
@@ -324,7 +487,7 @@ screen main_menu():
 
     
     add "menu_bg"
-    add "menu_art_m"
+    add "menu_art_s"
     frame:
         pass
 
@@ -368,7 +531,8 @@ screen game_menu(title, scroll=None):
 
     # Add the backgrounds.
     if main_menu:
-        add gui.main_menu_background
+        #add gui.main_menu_background
+        add "menu_bg"
     else:
         key "mouseup_3" action Return()
         add gui.game_menu_background
@@ -377,15 +541,18 @@ screen game_menu(title, scroll=None):
 
     frame:
         style "game_menu_outer_frame"
+        #pass
 
         hbox:
 
             # Reserve space for the navigation section.
             frame:
                 style "game_menu_navigation_frame"
+            #    pass
 
             frame:
                 style "game_menu_content_frame"
+                #pass
 
                 if scroll == "viewport":
 
@@ -423,10 +590,10 @@ screen game_menu(title, scroll=None):
     if not main_menu and persistent.playthrough == 2 and not persistent.menu_bg_m and renpy.random.randint(0, 49) == 0:
         on "show" action Show("game_menu_m")
 
-    textbutton _("Return"):
-        style "return_button"
+    #textbutton _("Return"):
+        #style "return_button"
 
-        action Return()
+        #action Return()
 
     label title
 
@@ -496,13 +663,9 @@ screen load():
 
 init python:
     def FileActionMod(name, page=None, **kwargs):
-        if persistent.playthrough == 1 and not persistent.deleted_saves and renpy.current_screen().screen_name[0] == "load" and FileLoadable(name):
-            return Show(screen="dialog", message="File error: \"characters/sayori.chr\"\n\nThe file is missing or corrupt.",
-                ok_action=Show(screen="dialog", message="The save file is corrupt. Starting a new game.", ok_action=Function(renpy.full_restart, label="start")))
-        elif persistent.playthrough == 3 and renpy.current_screen().screen_name[0] == "save":
-            return Show(screen="dialog", message="There's no point in saving anymore.\nDon't worry, I'm not going anywhere.", ok_action=Hide("dialog"))
-        else:
-            return FileAction(name)
+        if renpy.current_screen().screen_name[0] == "save":
+            return Show(screen="dialog", message="There's no point in saving. \nNot when we're sitting here doing nothing...", ok_action=Hide("dialog"))
+            
 
 
 screen file_slots(title):
@@ -588,23 +751,29 @@ screen file_slots(title):
 ## themselves.
 ##
 ## https://www.renpy.org/doc/html/screen_special.html#preferences
+init python:
+    if renpy.windows:
+        config.tts_voice = "Mark"
+    elif renpy.macintosh:
+        config.tts_voice = "Alex"
+    else:
+        config.tts_voice = "english_rp"
+
+$ ostts=config.tts_voice
+
+define persistent.animate_room = True
 
 screen preferences():
 
     tag menu
 
-    if renpy.mobile:
-        $ cols = 2
-    else:
-        $ cols = 4
+    default tooltip = Tooltip("")
 
     use game_menu(_("Settings"), scroll="viewport"):
 
+
         vbox:
-            if extra_settings:
-                xoffset 35
-            else:
-                xoffset 50
+            xoffset 50
 
             hbox:
                 box_wrap True
@@ -612,113 +781,280 @@ screen preferences():
                 if renpy.variant("pc"):
 
                     vbox:
-                        style_prefix "radio"
+                        style_prefix "generic_fancy_check"
                         label _("Display")
-                        textbutton _("Windowed") action Preference("display", "window")
+                        textbutton _("Window") action Preference("display", "window")
                         textbutton _("Fullscreen") action Preference("display", "fullscreen")
+
                 if config.developer:
-                    vbox:
-                        style_prefix "radio"
-                        label _("Rollback Side")
-                        textbutton _("Disable") action Preference("rollback side", "disable")
-                        textbutton _("Left") action Preference("rollback side", "left")
-                        textbutton _("Right") action Preference("rollback side", "right")
+                        vbox:
+                            style_prefix "radio"
+                            label _("Rollback Side")
+                            textbutton _("Disable") action Preference("rollback side", "disable")
+                            textbutton _("Left") action Preference("rollback side", "left")
+                            textbutton _("Right") action Preference("rollback side", "right")
+
+                #vbox:
+                    #style_prefix "generic_fancy_check"
+                    #label _("Graphics")
+
+                    #textbutton _("Dark Mode"):
+                        #action [Function(fae_settings._ui_change_wrapper, persistent._fae_dark_mode_enabled), Function(fae_settings._dark_mode_toggle)]
+                        #selected persistent._fae_dark_mode_enabled
 
                 vbox:
-                    style_prefix "check"
-                    label _("Skip")
-                    textbutton _("Unseen Text") action Preference("skip", "toggle")
-                    textbutton _("After Choices") action Preference("after choices", "toggle")
-                    #textbutton _("Transitions") action InvertSelected(Preference("transitions", "toggle"))
-                
-                if extra_settings:
-                    vbox:
-                        style_prefix "check"
-                        label _("Extra Settings")
-                        textbutton _("Uncensored Mode") action If(persistent.uncensored_mode, 
-                            ToggleField(persistent, "uncensored_mode"), 
-                            Show("confirm", message="Are you sure you want to turn on Uncensored Mode?\nDoing so will enable more adult/sensitive\ncontent in your playthrough.\n\nThis setting will be dependent on the modder if\nthey programmed these checks in their story.", 
-                                yes_action=[Hide("confirm"), ToggleField(persistent, "uncensored_mode")],
-                                no_action=Hide("confirm")
-                            ))
-                        textbutton _("Let's Play Mode") action If(persistent.lets_play, 
-                            ToggleField(persistent, "lets_play"),
-                            [ToggleField(persistent, "lets_play"), Show("dialog", 
-                                message="You have enabled Let's Play Mode.\nThis mode allows you to skip content that\ncontains sensitive information or apply alternative\nstory options.\n\nThis setting will be dependent on the modder\nif they programmed these checks in their story.", 
-                                ok_action=Hide("dialog")
-                            )])
+                    style_prefix "generic_fancy_check"
+                    label _("Gameplay")
+                    
+                    textbutton _("Repeat Topics"):
+                        action [
+                            ToggleField(
+                                object=persistent,
+                                field="fae_repeat_chat",
+                                true_value=True,
+                                false_value=False
+                            )
+                        ]
+                    textbutton _("Notifications") action [
+                        ToggleField(
+                            object=persistent,
+                            field="_fae_notifs_enabled",
+                            true_value=True,
+                            false_value=False
                             
+                            )
+                        ]
 
-                ## Additional vboxes of type "radio_pref" or "check_pref" can be
-                ## added here, to add additional creator-defined preferences.
 
             null height (4 * gui.pref_spacing)
 
+
             hbox:
-                if extra_settings:
-                    xoffset 15
                 style_prefix "slider"
                 box_wrap True
+
+                python:
+
+                    if fae_randchat_prev != persistent._fae_random_chat_freq:
+
+                        fae_random_chat_rate.adjustRandFrequency(
+                            persistent._fae_random_chat_freq
+                        )
+                    
+                    rc_display = fae_random_chat_rate.getRandChatDisp(
+                        persistent._fae_random_chat_freq
+                    )
+
+                    store.fae_randchat_prev = persistent._fae_random_chat_freq
+
+
+
+                vbox:
+
+                    hbox:
+                        label _("Random Chatter  ")
+                        label _("[[ " + rc_display + " ]")
+                    
+                    bar value FieldValue(
+                        persistent,
+                        "_fae_random_chat_freq",
+                        range=4,
+                        style="slider"
+                    )
+                    
+                    #label _("Random Talk: {0}".format(fae_utilities.random_chat_rate.get_random_chat_frequency_desc()))
+
+                    #bar value FieldValue(
+                    #    object=persistent,
+                    #    field="fae_random_chat_rate",
+                    #    range=4,
+                    #    style="slider",
+                    #    step=1
+                    #)
 
                 vbox:
 
                     label _("Text Speed")
 
-                    #bar value Preference("text speed")
-                    bar value FieldValue(_preferences, "text_cps", range=180, max_is_zero=False, style="slider", offset=20)
+                    bar value FieldValue(_preferences, "text_cps", range=170, max_is_zero=False, style="slider", offset=30)
 
                     label _("Auto-Forward Time")
 
                     bar value Preference("auto-forward time")
 
                 vbox:
-                    if extra_settings:
-                        xoffset 15
-                    
-                    if config.has_music:
-                        label _("Music Volume")
+                    label _("Music Volume")
+                    hbox:
+                        bar value Preference("music volume")
 
-                        hbox:
-                            bar value Preference("music volume")
-
-                    if config.has_sound:
-
-                        label _("Sound Volume")
-
-                        hbox:
-                            bar value Preference("sound volume")
-
-                            if config.sample_sound:
-                                textbutton _("Test") action Play("sound", config.sample_sound)
+                    label _("Sound Volume")
+                    hbox:
+                        bar value Preference("sound volume")
 
 
-                    if config.has_voice:
-                        label _("Voice Volume")
+                    null height gui.pref_spacing
 
-                        hbox:
-                            bar value Preference("voice volume")
+                    textbutton _("Mute All"):
+                        style "check_button"
+                        action Preference("all mute", "toggle")
 
-                            if config.sample_voice:
-                                textbutton _("Test") action Play("voice", config.sample_voice)
+            hbox:
+            #We disable updating on the main menu because it causes graphical issues
+            #due to the spaceroom not being loaded in
+                
 
-                    if config.has_music or config.has_sound or config.has_voice:
-                        null height gui.pref_spacing
+                textbutton _("Import DDLC Save Data"):
+                    action Function(renpy.call_in_new_context, 'import_ddlc_persistent_in_settings')
+                    style "navigation_button"
 
-                        textbutton _("Mute All"):
-                            action Preference("all mute", "toggle")
-                            style "mute_all_button"
+################
+#OBSOLETE SCREEN
+################
+#screen preferences():
 
-            if config.developer:  
-                hbox:
-                    vbox:
-                        textbutton _("Export Mod Icon as ICO"):
-                            action Function(saveIco, "mod_assets/DDLCModTemplateLogo.png")
-                            style "navigation_button"
-                            
-    text "v[config.version]":
-                xalign 1.0 yalign 1.0
-                xoffset -10 yoffset -10
-                style "main_menu_version"
+#    tag menu
+
+#    if renpy.mobile:
+#        $ cols = 2
+#    else:
+#        $ cols = 4
+
+#    use game_menu(_("Settings")):
+
+#        viewport id "preferences":
+#            scrollbars "vertical"
+#            mousewheel True
+#            draggable True
+
+
+
+#            vbox:
+
+#                yoffset 0
+#                xoffset 50
+                #if extra_settings:
+                #    xoffset 35
+                #else:
+                #    xoffset 50
+
+#                hbox:
+#                    box_wrap True
+
+#                    if renpy.variant("pc"):
+
+#                        vbox:
+#                            style_prefix "radio"
+#                            label _("Display")
+#                            textbutton _("Windowed") action Preference("display", "window")
+#                            textbutton _("Fullscreen") action Preference("display", "fullscreen")
+#                    if config.developer:
+#                        vbox:
+#                            style_prefix "radio"
+#                            label _("Rollback Side")
+#                            textbutton _("Disable") action Preference("rollback side", "disable")
+#                            textbutton _("Left") action Preference("rollback side", "left")
+#                            textbutton _("Right") action Preference("rollback side", "right")
+
+#                    vbox:
+#                        style_prefix "check"
+#                        label _("Skip")
+#                        textbutton _("Unseen Text") action Preference("skip", "toggle")
+#                        textbutton _("After Choices") action Preference("after choices", "toggle")
+#                        textbutton _("Transitions") action InvertSelected(Preference("transitions", "toggle"))
+
+#                    vbox:
+#                        style_prefix "check"
+#                        label _("Chatter")
+#                        textbutton _("Repeat Topics") action [
+#                            ToggleField(
+#                                object=persistent,
+#                                field="repeat_chat",
+#                                true_value=True,
+#                                false_value=False)
+#                        ]
+#                hbox:
+#                    style_prefix "slider"
+#                    box_wrap True
+
+#                    vbox:
+#                        label _("Random Talk: {0}".format(sayo_utilities.rcf.get_desc()))
+
+#                        bar value FieldValue(
+#                            object=persistent,
+#                            field="sayo_rctf",
+#                            range=6,
+#                            style="slider",
+#                            step=1
+#                        )
+
+
+                #null height (4 * gui.pref_spacing)
+
+#                hbox:
+                    #if extra_settings:
+                        #xoffset 15
+#                    style_prefix "slider"
+#                    box_wrap True
+
+#                    vbox:
+
+#                        label _("Text Speed")
+
+#                        #bar value Preference("text speed")
+#                        bar value FieldValue(_preferences, "text_cps", range=180, max_is_zero=False, style="slider", offset=20)
+
+#                        label _("Auto-Forward Time")
+
+#                        bar value Preference("auto-forward time")
+
+#                    vbox:
+                        #if extra_settings:
+                            #xoffset 15
+                        
+#                        if config.has_music:
+#                            label _("Music Volume")
+
+#                            hbox:
+#                                bar value Preference("music volume")
+
+#                        if config.has_sound:
+
+#                            label _("Sound Volume")
+
+#                            hbox:
+#                                bar value Preference("sound volume")
+
+#                                if config.sample_sound:
+#                                    textbutton _("Test") action Play("sound", config.sample_sound)
+
+
+#                        if config.has_voice:
+#                            label _("Voice Volume")
+
+#                            hbox:
+#                                bar value Preference("voice volume")
+
+#                                if config.sample_voice:
+#                                    textbutton _("Test") action Play("voice", config.sample_voice)
+
+#                        if config.has_music or config.has_sound or config.has_voice:
+#                            null height gui.pref_spacing
+
+#                            textbutton _("Mute All"):
+#                                action Preference("all mute", "toggle")
+#                                style "mute_all_button"
+
+#                if config.developer:  
+#                    hbox:
+#                        vbox:
+#                            textbutton _("Export Mod Icon as ICO"):
+#                                action Function(saveIco, "mod_assets/DDLCModTemplateLogo.png")
+#                                style "navigation_button"
+                                
+#    text "v[config.version]":
+#                xalign 1.0 yalign 1.0
+#                xoffset -10 yoffset -10
+#                style "main_menu_version"
 
 
 
@@ -1021,6 +1357,41 @@ image confirm_glitch:
     pause 0.02
     repeat
 
+
+screen reload(message, ok_action):
+
+    modal True
+
+    zorder 200
+
+    style_prefix "confirm"
+
+    add "gui/overlay/confirm.png"
+
+    frame:
+
+        vbox:
+            xalign .5
+            yalign .5
+            spacing 30
+
+            label _(message):
+                style "confirm_prompt"
+                xalign 0.5
+
+            hbox:
+                xalign 0.5
+                spacing 50
+
+                textbutton _("Restart") action Quit(confirm=True)
+
+
+            hbox:
+                xalign 0.5
+                spacing 50
+
+                textbutton _("I'll do it myself") action Hide("reload")
+
 screen confirm(message, yes_action, no_action):
 
     ## Ensure other screens do not get input while this screen is displayed.
@@ -1058,7 +1429,12 @@ screen confirm(message, yes_action, no_action):
     #key "game_menu" action no_action
 
 
+init -2 python:
 
+    def ingame_regret_await_check():
+
+        if Sayori.isInGame():
+            fae_regrets.add_new_regret_awaiting(fae_regrets.RegretTypes.CHEATING)
 
 ## Skip indicator screen #######################################################
 ##
@@ -1127,7 +1503,31 @@ transform notify_appear:
         linear .5 alpha 0.0
 
 
+screen notif_settings():
 
+    tag menu
+    use game_menu(("Alerts"), scroll="viewport"):
+
+        default tooltip = Tooltip("")
+
+        vbox:
+            style_prefix "generic_fancy_check"
+            hbox:
+                spacing 25
+                textbutton _("User Notifications"):
+                    action [ToggleField(
+                                object=persistent,
+                                field="_fae_notifs_enabled",
+                                true_value=True,
+                                false_value=False)]
+                    
+                    hovered tooltip.Action(layout.FAE_TT_NOTIF)
+        
+    text tooltip.value:
+        xalign 0 yalign 1.0
+        xoffset 300 yoffset -10
+        style "main_menu_version"
+                
 ## NVL screen ##################################################################
 ##
 ## This screen is used for NVL-mode dialogue and menus.
@@ -1430,3 +1830,114 @@ transform bsod_qrcode(x):
 ## This controls the maximum number of NVL-mode entries that can be displayed at
 ## once.
 define config.nvl_list_length = 6
+
+screen submods():
+
+    tag menu
+
+    use game_menu(("Submods")):
+
+
+        viewport id "scrollme":
+            scrollbars "vertical"
+            mousewheel True
+            draggable True
+
+            vbox:
+
+                style_prefix "check"
+                xfill True
+                xmaximum 1000
+
+                for submod in sorted(store.fae_submod_utilities.submod_def.values(), key=lambda x: x.name):
+
+                    vbox:
+                        xfill True
+                        xmaximum 1000
+
+                        label submod.name:
+                            yanchor 0
+                            xalign 0.0
+                            text_text_align 0.0
+                        
+                        if submod.coauthors:
+                            $ authors = "v{0}{{space=20}}by {1}, {2}".format(submod.version, submod.author, ", ".join(submod.coauthors))
+                        
+                        else:
+                            $ authors = "v{0}{{space=20}}by {1}".format(submod.version, submod.author)
+                        
+                        text "[authors]":
+                            yanchor 0.0
+                            xalign 0.0
+                            text_align 0.0
+                            layout "greedy"
+                            style "main_menu_version"
+                        
+                        if submod.description:
+                            text submod.description text_align 0.0
+                    
+                    if submod.settings_pane:
+                        $ renpy.display.screen.use_screen(submod.settings_pane, _name="{0}_{1}".format(submod.author, submod.name))
+
+
+
+screen qab():
+    tag menu
+
+    use game_menu(("Hotkeys"), scroll="viewport"):
+
+        default tooltip = GetTooltip("")
+
+        # making each indivual list a vbox essentially lets us auto-align
+        vbox:
+            spacing 25
+
+            hbox:
+                style_prefix "check"
+                vbox:
+                    label _("General")
+                    spacing 10
+                    text _("Music")
+                    text _("Play")
+                    text _("Talk")
+                    text _("Bookmark")
+                    text _("Fullscreen")
+                    text _("Screenshot")
+                    text _("Settings")
+
+                vbox:
+                    label _("")
+                    spacing 10
+                    text _("M")
+                    text _("P")
+                    text _("T")
+                    text _("B")
+                    text _("F")
+                    text _("S")
+                    text _("Esc")
+
+            hbox:
+                style_prefix "check"
+                vbox:
+                    label _("Music")
+                    spacing 10
+                    text _("Volume Up")
+                    text _("Volume Down")
+                    text _("Mute")
+
+                vbox:
+                    label _("")
+                    spacing 10
+                    text _("+")
+                    text _("-")
+                    text _("Shift-M")
+
+    # there are lesser used hotkeys in Help that aren't needed here
+    text "Click 'Help' for the complete list.":
+        xalign 1.0 yalign 0.0
+        xoffset -10
+        style "main_menu_version"
+
+
+screen fae_jump_timer(time, expiry_label):
+    timer time action Jump(expiry_label)

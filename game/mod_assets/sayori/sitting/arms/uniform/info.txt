@@ -1,4 +1,0 @@
-"a" = folded arms
-"b" = backsleeve
-"cb" = cookie bite
-"c" = cookie
