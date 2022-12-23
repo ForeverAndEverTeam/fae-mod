@@ -15,7 +15,7 @@
 # This file customizes what your mod is and and how it starts and builds!
 
 # This controls what your mod is called.
-define config.name = "Forever & Ever (DEV-ALPHA)"
+define config.name = "Forever & Ever"
 
 # This controls whether you want your mod name to show in the main menu.
 # If your mod name is big, it is suggested to turn this off.
@@ -203,7 +203,7 @@ init python:
     build.classify("*.log", None)
     build.classify("errors.txt", None)
     build.classify("log.txt", None)
-    #build.classify("game/bgm/**", None)
+    build.classify("game/bgm/**", None)
 
     build.include_update = True
 
@@ -215,6 +215,8 @@ init python:
     build.classify("game/RPASongMetadata.json", "all")
     build.classify("renpy/**", "all")
     build.classify("lib/**", "all")
+    #build.classify("game/dev/**", None)
+    #build.classify("game/submods/**", None)
 
     # These variables declare the packages to build your mod that is Team Salvato
     # IPG compliant. Do not mess with these variables whatsoever.
