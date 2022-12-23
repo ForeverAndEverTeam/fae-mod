@@ -2501,7 +2501,7 @@ init 5 python:
             persistent._chat_db,
             label="s_answer_programming",
             unlocked=True,
-            prompt="Do you like programming?",
+            prompt="Are you good at programming?",
             random=False,
             category=["Hobbies"]
         ),
@@ -3169,7 +3169,7 @@ label s_topics_notfications:
     s abgbaoa "Hey [player], I’ve figured out something pretty cool!"
     s abgbcaa "So, basically…"
     s abhfaoa "In fact, I’ll just show you!"
-    $ fae_notifs.notify("Sayori", "Hi, {0}!").format(persistent.playername)
+    $ fae_notifs.notify("Sayori", "Hello!")
     s abfccaa "I’ve figured out how to send notifications to you from your computer!"
     s abfcaoa "Isn’t that awesome? Ehehehe~"
     s abegbjbj "Though I understand if it might get a little distracting if I’m constantly tapping your shoulder…"
