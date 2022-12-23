@@ -248,7 +248,7 @@ init -1 python in fae_utilities:
         if store.persistent._affection_daily_bypasses > 5:
             store.persistent._affection_daily_bypasses = 5
         
-        
+
 
         store.main_background.save()
 
@@ -929,12 +929,6 @@ init python:
 
         Affection.checkResetDailyAffectionGain()
 
-        store.fae_utilities.log(
-            message="Affection level is {0}".format(
-                store.persistent.affection
-            ),
-            logseverity=store.fae_utilities.SEVERITY_INFO
-        )
 
         if (
             persistent._fae_random_chat_freq is not fae_random_chat_rate.NEVER
