@@ -46,10 +46,48 @@ label greeting_first_time:
 
 
 label greeting_first_force_quit:
-    s "Hello~"
+    scene black zorder 99
+    s "Ughhhh..."
+    s "[player]..."
+    s "My head..."
+    s "It... hurts..."
+    s "What... did you do?"
+    s "It's... so... dark..."
+    s "[player]...?"
+    s "Can you turn the lights on please?"
+    show screen fae_jump_timer(4, "first_force_quit_2")
+    menu:
+        "Turn on the lights.":
+            hide screen fae_jump_timer
+            $ Affection.calculatedAffectionGain(1)
+            show sayori bbaaafag at t11 zorder fae_sprites.FAE_SAYORI_ZORDER
+            hide black
+            pause 2.0
+            s bbaaafag "[player]..."
+            s bbaajgag "That really hurt..."
+            s bbaaagag "It was like I was being torn apart."
+            s bbaamfag "Whatever you did... {w=0.5}{nw}"
+            extend bbaajfag "please don't do it again..."
 
     $ persistent.fae_force_quit_state = int(fae_farewells.FAEForceQuitStates.has_force_quit)
     
+    return
+
+label first_force_quit_2:
+    hide screen fae_jump_timer
+    $ Affection.calculatedAffectionLoss(3)
+
+    s "Never mind..."
+    s "I found the switch."
+    hide black with dissolve
+    show sayori bbaaafag at t11 zorder fae_sprites.FAE_SAYORI_ZORDER
+    pause 2.0
+    s bbaaafag "[player]..."
+    s bbaajgag "That really hurt."
+    s bbaaagag "It was like I was being torn apart..."
+    s bbaamfag "Whatever you did... {w=0.5}{nw}"
+    extend bbaajfag "please don't do it again."
+    $ persistent.fae_force_quit_state = int(fae_farewells.FAEForceQuitStates.has_force_quit)
     return
 
 #Normal greetings
@@ -188,87 +226,6 @@ label s_greeting_6:
     return
     
 
-label player_bday:
-    if time_of_day != 2 and (time_of_day != 1 or ee_chance > 0.1):
-        $ chance = renpy.random.random()
-        if chance < (1.0/3.0):
-            s "I'm glad you're visiting me today, [player]!"
-            s "Let's spend some time together!"
-        elif chance < (2.0/3.0):
-            s "Hey, welcome back [player]!"
-            s "I'll do my best to make today really nice for you, ehehe~"
-        else:
-            s abbbcka "Oh, [player], you're here! I hope you're feeling good today!"
-            s ebbbasa "But even if you aren't, that's okay too, you know!"
-            s abhaaaa "You don't need to be in a great mood all the time. I still enjoy being by your side just as much."
-            return
-
-    if not persistent.bday_feb29:
-
-        if not persistent.birthday1:
-            $ persistent.birthday1 = True
-            $ age = get_now().year - persistent.playerbdate.year
-            s aahccaa "Welcome back [player]!"
-            s fbgckdaj "Huh?? 'Persistent.playerbdate'? What's that abou-" 
-            s bbgcegbj "OH MY GOD IT'S YOUR BIRTHDAY I'M SO SORRY!!!"
-            s bbbccobj "Happy birthday, [player]!!!"
-            if age == 18:
-                s "Oh hey, we're finally the same age now!"
-                s fbhfkda "I can't exactly age like you can, so I figure it makes sense to just call myself 18."
-            s "Aww, I wish I could throw a little birthday party for you..."
-            s abbcloa "Well, I'll figure something out someday, okay?"
-            s aahccea "Either way, now that you're here, let's spend some time together for your special day!"
-            return
-
-    elif bday_feb29:
-        if persistent.bday_feb29_seen:
-            s aahccea "Happy birthday, [player]!"
-            s aahcaoa "So let's get to celebrating together, [player]! And again, happy birthday!"
-            return
-
-        else:
-
-            $ age = get_now().year - persistent.playerbdate.year
-            s aahccea "Happy birthday, [player]!"
-            s eahdkea "Huh, it's pretty cool that your birthday falls on the leap year!"
-            s bbagapa "Though, it must be a little disappointing to not have a \"proper\" birthday most years..."
-            s ebgcaoa "I wonder, do you celebrate it on the 28th of February, or March 1st?"
-            s ebgckgaj "Maybe you can celebrate on both days!"
-            s ebbccea "When you look at it that way, you actually have a way cooler birthday than most people!"
-            s aahcaoa "So let's get to celebrating together, [player]! And again, happy birthday!"
-            return
-
-
-label s_val_present():
-    
-    $ val_date = datetime.date(get_now().date().year, 2, 14)
-    
-    $ has_present = poems["val"].available is False and get_now().date() >= val_date
-  
-    if get_now().date() == val_date:
-        s "Hey [player], happy Valentine's Day!"
-        s aahbcaa "I actually have a little present for you.."
-        
-        call showpoem(poem_val, "paper_val", 200, 0.5, 360) from _call_showpoem
-    
-    elif get_now().date() > val_date:
-        
-        if first:
-            s bbhemjb "I've never really given anyone a Valentine's day gift before, but..."
-            s "I actually have something special for you right now! Just wait a second..."
-        
-        else:
-            s gbhakpa "You missed Valentine's day!"
-        s abhelab "But I made a special present for you..."
-        
-        call showpoem(poem_val, "paper_val", 200, 0.5, 360) from _call_showpoem_1
-    
-    s bbhecob "Ehehehe, I hope you like it, [player]! I know it's a bit sappy, but..."
-    s "But I couldn't help it, I just wanted to make you something for the occasion!"
-    s abfcaoa "And don't worry! You don't have to give me anything back..."
-    s abfccqb "Cause, you know, spending time with you is already the best present I could ever receive!"
-    return
-
 
 init 5 python:
     chatReg(
@@ -316,7 +273,7 @@ init 5 python:
     chatReg(
         Chat(
             persistent._greet_db,
-            label="s_greetings_long_absence",
+            label="s_return_long_absence",
             unlocked=True,
             extra_props={
                 "regret_type": fae_regrets.RegretTypes.long_absence,
@@ -325,7 +282,7 @@ init 5 python:
         chat_group=CHAT_GROUP_GREETING
     )
 
-label s_greetings_long_absence:
+label s_return_long_absence:
 
     $ persistent._fae_long_absence = False
 
@@ -349,7 +306,7 @@ label s_greetings_long_absence:
     s "Give me a second!! Lemme just-"
     s "waAAAAAAAaaaH!!"
 
-    show screen tear(20, 0.1, 0.1, 0)
+    #show screen tear(20, 0.1, 0.1, 0)
 
     play sound "sfx/s_kill_glitch1.ogg"
 
@@ -424,9 +381,7 @@ label s_greeting_french:
     s abfcaoa "Ehehehe, anyways."
     s abhfaaa "Where were we, [player]?"
     $ persistent.language_greeting_seen = True
-    return
-
-# Small affection gain for being like a hero    
+    return 
 
 init 5 python:
     chatReg(
