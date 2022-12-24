@@ -13,8 +13,7 @@ If you own a DDLC+ copy, please download the original game from it's [official w
 
 ## REPORTING BUGS
 Please report bugs on our [issues](https://github.com/ForeverAndEverTeam/fae-mod/issues) page.
-Please do not raise issues about the current version, as we are in the middle of a re-write of the mod.
-Issues related to the current version, will be ignored, and closed by default.
+Please be as detailed as possible when reporting, to make our lives easier when fixing.
 
 <details>
   <summary>NEW CREDITS</summary>
