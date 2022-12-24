@@ -27,7 +27,7 @@ style poem_vbar is vscrollbar:
 
     ysize 700
 
-style sayori_handwriting:
+style sayori_text:
     font "gui/font/s1.ttf"
     size 34
     color "#000"
@@ -48,7 +48,7 @@ init python in fae_poems:
     }
 
     writer_def = {
-        "sayori": "sayori_handwriting"
+        "sayori": "sayori_text"
     }
 
     if store.persistent.playerbdate is not None:
