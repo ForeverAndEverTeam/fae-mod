@@ -1,6 +1,6 @@
 default persistent.affection_day_gain = 5
 default persistent.affection_reset_date = None
-default persistent.affection = 25.0
+default persistent.affection = 0
 default persistent._affection_daily_bypasses = 5
 init -2 python:
     def _fae_AffStart():
@@ -175,10 +175,10 @@ init -2 python:
                 if persistent.affection_day_gain < 0:
                     persistent.affection_day_gain = 0
                 
-                fae_utilities.log("Affection increased")
+                fae_utilities.log("Affection increased!")
             
             else:
-                fae_utilities.log("Affection increased!")
+                Affection.writeCap()
         
         @staticmethod
         def calculatedAffectionLoss(base=1):
@@ -197,7 +197,7 @@ init -2 python:
 
             else:
                 persistent.affection += to_add
-                fae_utilities.log("Affection+")
+                fae_utilities.log("Affection increased!")
 
         @staticmethod
         def percentageAffectionLoss(percentage_loss):
