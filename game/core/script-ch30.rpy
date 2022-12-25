@@ -187,8 +187,6 @@ label ch30_setup:
 
     show black zorder 99
 
-   
-
     python:
         main_background.form()
 
@@ -199,6 +197,8 @@ label ch30_setup:
         fae_outfits.FAEAcs.call_all()
         fae_outfits.FAEOutfit.call_all()
         fae_utilities.log("Outfit data loaded.")
+        persistent._fae_version = config.version
+        fae_utilities.log("Current persisted version post-mig check: {0}".format(store.persistent._fae_version))
 
         #Sayori.setOutfit(fae_outfits.get_outfit("fae_uniform"))
         try:
@@ -262,9 +262,9 @@ label ch30_init:
 
         if (datetime.datetime.now() - persistent.fae_last_visit_date).total_seconds() / 604800 >= 2 and persistent._fae_absence_choice is None:
             Sayori.add_regret_quit(fae_regrets.RegretTypes.long_absence)
-            ats("s_greeting_long_absence")
-            reveal()
-            renpy.jump("cnc")
+            #ats("s_return_long_absence")
+            #reveal()
+            #renpy.jump("cnc")
         
         elif not persistent._fae_player_apology_type_on_quit:
             Affection.calculatedAffectionGain()
@@ -308,21 +308,12 @@ label ch30_init:
                 renpy.call("cnc")
                 
     #$ begin_song()
-
-
-    if (
-        store.fae_per_check.is_per_corrupt()
-        and not renpy.seen_label("fae_corrupted_persistent")
-    ):
-        $ ats("fae_corrupted_persistent")
     
     show sayori idle at t11 zorder store.fae_sprites.FAE_SAYORI_ZORDER
     #show bg spaceroom zorder 1
     hide black with Dissolve(2)
     #show screen hidden1(True)
     show screen hidden1(True)
-
-    
 
     #FALL THRouGH
 label after_holiday:
@@ -518,7 +509,7 @@ label force_quit:
     
     else:
 
-        s "YOU CAN'T LEAVE LIKE THAT!"
+        s ebgchga "YOU CAN'T LEAVE LIKE THAT!"
 
         python:
             Affection.percentageAffectionLoss(2)

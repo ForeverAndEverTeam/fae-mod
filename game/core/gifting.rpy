@@ -7,13 +7,13 @@ init -100 python:
     def look_for_gift():
         
 
-        if renpy.exists("gifts/cookies.gift"):
+        if renpy.exists("{0}/gifts/cookies.gift").format(renpy.config.basedir):
             
             store.fae_utilities.removeFileDir("{0}/gifts/cookies.gift".format(renpy.config.basedir))
 
             renpy.call("fae_cookies")
         
-        if renpy.exists("gifts/otter.gift"):
+        if renpy.exists("{0}/gifts/otter.gift").format(renpy.config.basedir):
 
             store.fae_utilities.removeFileDir("{0}/gifts/otter.gift".format(renpy.config.basedir))
 

@@ -1,5 +1,3 @@
-image nothing = Null()
-
 init -50 python in fae_sprites:
 
     import store
@@ -71,7 +69,6 @@ init -50 python in fae_sprites:
     FAE_SAYORI_ZORDER = 3
 
     pose = "sitting"
-
 
     _FAE_SAYORI_IMAGES_PATH = "mod_assets/sayori/"
 

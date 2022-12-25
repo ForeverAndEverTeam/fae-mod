@@ -19,8 +19,8 @@ init -1 python in fae_greetings:
         
         kwargs = dict()
 
-        if store.persistent._fae_await_apology_quit is not None:
-            kwargs.update({"extra_props": [("regret_type", store.persistent._fae_await_apology_quit)]})
+        if store.persistent._fae_player_apology_type_on_quit is not None:
+            kwargs.update({"extra_props": [("regret_type", store.persistent._fae_player_apology_type_on_quit)]})
         
         elif store.persistent.fae_mood_on_quit is not None:
             kwargs.update({"extra_props": [("mood_type", store.persistent.fae_mood_on_quit)]})
@@ -69,7 +69,7 @@ label greeting_first_force_quit:
             s bbaamfag "Whatever you did... {w=0.5}{nw}"
             extend bbaajfag "please don't do it again..."
 
-    $ persistent.fae_force_quit_state = int(fae_farewells.FAEForceQuitStates.has_force_quit)
+    $ persistent.fae_player_force_quit_state = int(fae_farewells.FAEForceQuitStates.has_force_quit)
     
     return
 
@@ -87,7 +87,7 @@ label first_force_quit_2:
     s bbaaagag "It was like I was being torn apart..."
     s bbaamfag "Whatever you did... {w=0.5}{nw}"
     extend bbaajfag "please don't do it again."
-    $ persistent.fae_force_quit_state = int(fae_farewells.FAEForceQuitStates.has_force_quit)
+    $ persistent.fae_player_force_quit_state = int(fae_farewells.FAEForceQuitStates.has_force_quit)
     return
 
 #Normal greetings

@@ -309,10 +309,6 @@ init 10 python:
         scheme = int(scheme)
         reversi(True, scheme = scheme)
     
-    ## Add this game to the minigame list
-    #reversi = minigame(_("Reversi"), 'mg_reversi', reversi_prep)
-    #mg_list.append(reversi)
-    
     
 image reversi_selectable:
     "mod_assets/images/minigames/checkers_selected.png"
