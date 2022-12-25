@@ -349,7 +349,7 @@ label s_greetings_long_absence:
     s "Give me a second!! Lemme just-"
     s "waAAAAAAAaaaH!!"
 
-    show screen tear(20, 0.1, 0.1, 0, 40)
+    show screen tear(20, 0.1, 0.1, 0)
 
     play sound "sfx/s_kill_glitch1.ogg"
 

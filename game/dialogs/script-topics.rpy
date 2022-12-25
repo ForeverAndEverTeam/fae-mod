@@ -3148,3 +3148,43 @@ label s_topics_like_flowers:
     s abgcaoa "And I think that’s a better gift,"
     extend abgccaa "ehehehe~"
     return
+
+
+init 5 python:
+ 
+    chatReg(
+        Chat(
+            persistent._chat_db,
+            label="s_topics_notfications",
+            unlocked=True,
+            prompt="Notifications",
+            random=True,
+            category=["Sayori"]
+        ),
+        chat_group=CHAT_GROUP_NORMAL
+    )
+
+
+label s_topics_notfications:
+    s abgbaoa "Hey [player], I’ve figured out something pretty cool!"
+    s abgbcaa "So, basically…"
+    s abhfaoa "In fact, I’ll just show you!"
+    $ fae_notifs.notify("Sayori", "Hi, {0}!").format(persistent.playername)
+    s abfccaa "I’ve figured out how to send notifications to you from your computer!"
+    s abfcaoa "Isn’t that awesome? Ehehehe~"
+    s abegbjbj "Though I understand if it might get a little distracting if I’m constantly tapping your shoulder…"
+    s abfcaoa "So I was wondering…"
+    s abfcaaa "Would you like desktop notifications on or off? {w=0.5}{nw}"
+    extend abgcaoa "I’ll only send them when I have something to talk about!"
+    menu:
+        "Yes":
+            $ persistent._fae_notifs_enabled = True
+            s abgccaa "Yay! {w=0.5}{nw}"
+            extend abgbaoa "Will do, [player]!"
+            s abgbcaa "Just let me know if you ever change your mind."
+            s abegaobj "I’ll try not to talk your ears off too much, ehehehe~"
+        "No":
+            $ persistent._fae_notifs_enabled = False
+            s bbhfaaa "That’s okay, [player]."
+            s abgbaoa "Just let me know if you ever change your mind."
+    return "derandom"

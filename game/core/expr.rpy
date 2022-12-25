@@ -1,4 +1,4 @@
-
+image nothing = Null()
 
 init -50 python in fae_sprites:
 
@@ -247,6 +247,7 @@ init -50 python in fae_sprites:
             (0, 0), "{0}{1}/hair/[Sayori._outfit.hairstyle.ref_name]/a.png".format(_FAE_SAYORI_IMAGES_PATH, pose),
         ])
 
+        
         if blush:
             ad_hoc.extend([
                 (0, 0), "{0}{1}/body/blush/{2}.png".format(_FAE_SAYORI_IMAGES_PATH, pose, blush),
@@ -256,6 +257,16 @@ init -50 python in fae_sprites:
             (0, 0), "{0}{1}/eyes/{2}.png".format(_FAE_SAYORI_IMAGES_PATH, pose, eyes),
             (0, 0), "{0}{1}/mouth/{2}.png".format(_FAE_SAYORI_IMAGES_PATH, pose, mouth),
             ])
+        
+        if store.Sayori._outfit.necklace:
+            ad_hoc.extend([
+                (0, 0), "{0}{1}/necklace/[Sayori._outfit.necklace.ref_name]/{1}.png".format(_FAE_SAYORI_IMAGES_PATH, pose),
+            ])
+
+        if store.Sayori._outfit.accessory:
+            ad_hoc.extend([
+                (0, 0), "{0}{1}/accessory/[Sayori._outfit.accessory.ref_name]/{1}.png".format(_FAE_SAYORI_IMAGES_PATH, pose),
+        ])
 
         if tears:
             ad_hoc.extend([
@@ -263,10 +274,19 @@ init -50 python in fae_sprites:
             ])
         
         ad_hoc.extend([
-              
             (0, 0), "{0}{1}/eyebrows/{2}.png".format(_FAE_SAYORI_IMAGES_PATH, pose, eyebrows),
-            
         ])
+
+        if store.Sayori._outfit.headgear:
+            ad_hoc.extend([
+                (0, 0), "{0}{1}/headgear/[Sayori._outfit.headgear.ref_name]/{1}.png".format(_FAE_SAYORI_IMAGES_PATH, pose),
+            ])
+
+        if store.Sayori._outfit.eyewear:
+            ad_hoc.extend([
+                (0, 0), "{0}{1}/eyewear/[Sayori._outfit.eyewear.ref_name]/{1}.png".format(_FAE_SAYORI_IMAGES_PATH, pose),
+            ])
+
         if store.fae_gifts.cookies:
 
             ad_hoc.extend([
@@ -276,7 +296,7 @@ init -50 python in fae_sprites:
         if store.fae_gifts.otter:
 
             ad_hoc.extend([
-                (0, 0), "mod_assets/images/acs/otter.png"
+                (0, 0), "mod_assets/images/acs/otter.png",
             ])
         
         if store.fae_gifts.chibi:

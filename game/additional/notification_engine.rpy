@@ -12,9 +12,9 @@ init python in fae_notifs:
     from plyer import notification
 
 
-    def notify():
-        title = 'Sayori'
-        message = 'I have something to tell you!'
+    def notify(title, message):
+        title = title
+        message = message
         #icon = (renpy.config.gamedir + '\\mod_assets\\' + 'Logo.png')
         #icon = 'icon.ico'
         if renpy.windows or renpy.linux:

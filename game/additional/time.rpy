@@ -22,18 +22,10 @@ define FAE_NEW_YEARS_DAY = datetime.date(datetime.date.today().year, 1, 1)
 define FAE_VALENTINES_DAY = datetime.date(datetime.date.today().year, 2, 14)
 define FAE_EASTER = datetime.date(_easter.year, _easter.month, _easter.day)
 define FAE_SAYORI_BIRTHDAY = datetime.date(datetime.date.today().year, 5, 1)
-define FAE_HALLOWEEN = datetime.date(datetime.date.today().year, 11, 3)
+define FAE_HALLOWEEN = datetime.date(datetime.date.today().year, 10, 31)
 define FAE_CHRISTMAS_EVE = datetime.date(datetime.date.today().year, 12, 24)
 define FAE_CHRISTMAS_DAY = datetime.date(datetime.date.today().year, 12, 25)
 define FAE_NEW_YEARS_EVE = datetime.date(datetime.date.today().year, 12, 31)
-
-define fae_nyd = datetime.date(datetime.date.today().year, 1, 1)
-define fae_f14 = datetime.date(datetime.date.today().year, 2, 14)
-define fae_easter = datetime.date(_easter.year, _easter.month, _easter.day)
-define fae_d24 = datetime.date(datetime.date.today().year, 12, 24)
-define fae_d25 = datetime.date(datetime.date.today().year, 12, 25)
-
-define fae_o31 = datetime.date(datetime.date.today().year, 11, 3)
 
 init -3 python:
 
@@ -108,7 +100,7 @@ init -10 python:
         if _date is None:
             _date = datetime.date.today()
         
-        return _date == fae_o31.replace(year=_date.year)
+        return _date == FAE_HALLOWEEN.replace(year=_date.year)
     
     def fae_isD25(_date=None):
 

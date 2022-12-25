@@ -98,7 +98,7 @@ init 0 python:
         
 
         @staticmethod
-        def isWearingAcs(ref_name):
+        def isWearingAccessory(ref_name):
 
             return Sayori._outfit.accessory.ref_name == ref_name
 
@@ -715,7 +715,7 @@ init -1 python in fae_outfits:
         ACS_CATS_PATH_DEFS = {
             FAEHairstyle: "hair",
             FAEEyewear: "eyewear",
-            FAEAccessory: "acessory",
+            FAEAccessory: "accessory",
             FAEClothes: "clothes",
             FAEHeadgear: "headgear",
             FAENecklace: "necklace"
@@ -1165,6 +1165,20 @@ init -1 python in fae_outfits:
         is_fae_acs=True
     ))
 
+    __reg_acs(FAENecklace(
+        ref_name="fae_scarf",
+        disp_name="Scarf",
+        unlocked=False,
+        is_fae_acs=True
+    ))
+
+    __reg_acs(FAEAccessory(
+        ref_name="fae_headphones",
+        disp_name="Headphones",
+        unlocked=True,
+        is_fae_acs=True
+    ))
+
     __reg_outfit(FAEOutfit(
         ref_name="base",
         disp_name="Base",
@@ -1190,6 +1204,16 @@ init -1 python in fae_outfits:
         is_fae_outfit=True,
         clothes=get_acs("casual"),
         hairstyle=get_acs("fae_bow")
+    ))
+
+    __reg_outfit(FAEOutfit(
+        ref_name="fae_christmas",
+        disp_name="Christmas Outfit",
+        unlocked=False,
+        is_fae_outfit=True,
+        clothes=get_acs("fae_uniform"),
+        hairstyle=get_acs("fae_bow"),
+        necklace=get_acs("fae_scarf")
     ))
             
     

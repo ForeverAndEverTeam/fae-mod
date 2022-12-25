@@ -187,14 +187,20 @@ label ch30_setup:
 
     show black zorder 99
 
-    $ main_background.form()
-
-    #$ fae_sky.form_sky(fae_sky.WEATHER_THUNDER, with_transition=False)
-    $ fae_sky.reload_sky()
-
-    $ Sayori.setOutfit(fae_outfits.get_outfit("fae_uniform"))
+   
 
     python:
+        main_background.form()
+
+        fae_atmosphere.showSky(fae_atmosphere.WEATHER_SUNNY, with_transition=False)
+
+        fae_outfits.get_user_acs()
+        fae_outfits.call_user_outfit()
+        fae_outfits.FAEAcs.call_all()
+        fae_outfits.FAEOutfit.call_all()
+        fae_utilities.log("Outfit data loaded.")
+
+        #Sayori.setOutfit(fae_outfits.get_outfit("fae_uniform"))
         try:
             setupRPC("In the spaceroom")
         except:
@@ -206,25 +212,26 @@ label ch30_setup:
 
 label fae_event_check:
 
-    if fae_isPlayerBday() and not persistent.fae_seen_bday:
-        call fae_player_bday_autoload
-        jump after_holiday
+    if fae_isPlayerBday():
+        jump fae_player_bday_autoload
+        
 
-    if fae_isO31() and not persistent.fae_o31_seen:
-        call fae_o31_autoload
-        jump after_holiday
+    if fae_isO31():
+        jump fae_o31_autoload
+        
     
-    if fae_isD25() and not persistent.fae_d25_seen:
-        call fae_d25_autoload
-        jump after_holiday
+    if fae_isD25():
+        $ fae_outfits.get_acs("fae_scarf").unlock()
+        $ fae_outfits.get_outfit("fae_christmas").unlock()
+        $ Sayori.setOutfit(fae_outfits.get_outfit("fae_christmas"))
+        jump fae_d25_autoload
     
-    if fae_isF14() and not persistent.fae_f14_seen:
-        call fae_f14_autoload
-        jump after_holiday
+    if fae_isF14():
+        jump fae_f14_autoload
+        
     
-    if fae_isNYD() and not persistent.fae_j01_seen:
-        call fae_nyd_autoload
-        jump after_holiday
+    if fae_isNYD():
+        jump fae_nyd_autoload
 
 
 
