@@ -46,28 +46,6 @@ init 5 python:
     chatReg(
         Chat(
             persistent._flatter_db,
-            prompt="I think you're cute.",
-            label="compliment_cute",
-            unlocked=True,
-            affection_range=(fae_affection.HAPPY, fae_affection.LOVE)
-        ),
-        chat_group=CHAT_GROUP_FLATTER
-    )
-
-label compliment_cute:
-
-    $ Affection.getAffectionGain(bypass=get_chat("compliment_cute").seen_no == 0)
-
-    return
-
-
-    
-
-init 5 python:
-
-    chatReg(
-        Chat(
-            persistent._flatter_db,
             prompt="I think you're best girl!",
             label="compliment_best_girl",
             unlocked=True,

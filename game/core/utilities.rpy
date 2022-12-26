@@ -998,22 +998,7 @@ init python:
 
         persistent.fae_last_visit_date = datetime.datetime.now()
 
-        holiday_list = fae_events.selectHolidays()
-
-        if holiday_list:
-            holiday_list.sort(key = lambda holiday: holiday.priority)
-            while len(holiday_list) > 0:
-                holiday = holiday_list.pop()
-                atq(holiday.label)
-
-                if len(holiday_list) > 0:
-                    atq("event_interlude")
-                
-                else:
-                    atq("ch30_loop")
-            
-            renpy.jump("cnc")
-
+        
         return
 
 
