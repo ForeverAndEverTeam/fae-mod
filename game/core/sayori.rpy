@@ -1287,7 +1287,7 @@ label outfit_wear_outfit:
         for outfit in available_outfits:
             options.append((fae_utilities.RenpySubSub(outift.disp_name), outfit))
         
-        options.insert(0, ("Yu pick!", "random"))
+        options.insert(0, ("You pick!", "random"))
     
     call screen neat_menu_scroll(options, ("Nevermind.", None))
     show sayori at fae_center

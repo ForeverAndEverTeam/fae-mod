@@ -352,8 +352,7 @@ init 5 python:
             unlocked=True,
             prompt="Videogames",
             random=True,
-            category=["Art", "Videogames"],
-            conditional=("persistent.fae_bnc_unlocked")
+            category=["Art", "Videogames"]
     ),
     chat_group=CHAT_GROUP_NORMAL
 )
@@ -2400,7 +2399,7 @@ init 5 python:
             label="s_event_music_intro",
             unlocked=True,
             prompt="music",
-            conditional="not persistent.fae_custom_music_unlocked",
+            conditional="not persistent.fae_reversi_unlocked and not persistent.fae_custom_music_unlocked",
             random=True,
             category=["Music"],
             affection_range=(fae_affection.HAPPY, None)
@@ -2437,7 +2436,7 @@ init 5 python:
     )
 
 label s_stopic_bulls_and_cows:
-    s abfcaoa "Hey player! I have something to show you!"
+    s abfcaoa "Hey [player]! I have something to show you!"
     s abagaaa "So, remember how I coded the music player a little while ago?"
     s abfccaa "I tried to code something a little more complex this time, so I made a game!"
     s abagaaa "It’s called {i}Bows and Cows{/i}, my version of Bulls and Cows, ehehehe~"
@@ -2467,7 +2466,7 @@ init 5 python:
             label="s_topic_reversi",
             unlocked=True,
             prompt="Reversi",
-            conditional="not persistent.fae_reversi_unlocked",
+            conditional="not persistent.fae_bnc_unlocked and not persistent.fae_bnc_unlocked",
             random=True,
             category=["Games"],
             affection_range=(fae_affection.HAPPY, None)
@@ -2476,7 +2475,7 @@ init 5 python:
     )
 
 label s_topic_reversi:
-    s abfcaoa "Hey player! I’ve been working on something again!"
+    s abfcaoa "Hey [player]! I’ve been working on something again!"
     s abfccaa "It’s by far my most challenging project yet!"
     s abfcaoa "With many hours of crayon doodling and coding, I present to you..."
     s abbccea "{i}Reversi!{/i}"
@@ -3188,3 +3187,15 @@ label s_topics_notfications:
             s bbhfaaa "That’s okay, [player]."
             s abgbaoa "Just let me know if you ever change your mind."
     return "derandom"
+
+
+label s_topic_broken:
+
+    s bbeemo "So this is kinda embarrassing."
+    s bbeemo "I was messing around in the code, and accidentally broke something!"
+    s bbbcmo "I'm sorry, but I'll have to reset the game since I don't know what went wrong!"
+    s bbbcao "See you in a bit, [player]!"
+    $ fae_root.falsify(55)
+    $ persistent.fae_reset=True
+    $ renpy.full_restart(label="ch30_autoload")
+    return

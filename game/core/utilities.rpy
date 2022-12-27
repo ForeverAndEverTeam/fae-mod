@@ -1,3 +1,13 @@
+init -999 python in fae_root:
+    import store
+
+    def falsify(affection):
+
+        store.persistent.fae_bnc_unlocked = False
+        store.persistent.fae_reversi_unlocked = False
+        store.persistent.fae_custom_music_unlocked = False
+        store.persistent.affection = affection
+
 init -100 python in fae_utilities:
 
     import ctypes
@@ -992,28 +1002,11 @@ init python:
 
         fae_sky.reload_sky()
 
-        if persistent.fae_last_visit_date.year != datetime.datetime.now().year:
-            fae_events.resetHolidays()
-        
+               
 
         persistent.fae_last_visit_date = datetime.datetime.now()
 
-        holiday_list = fae_events.selectHolidays()
-
-        if holiday_list:
-            holiday_list.sort(key = lambda holiday: holiday.priority)
-            while len(holiday_list) > 0:
-                holiday = holiday_list.pop()
-                atq(holiday.label)
-
-                if len(holiday_list) > 0:
-                    atq("event_interlude")
-                
-                else:
-                    atq("ch30_loop")
-            
-            renpy.jump("cnc")
-
+        
         return
 
 

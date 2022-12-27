@@ -216,6 +216,7 @@ init 5 python:
             label="s_mood_bored",
             unlocked=True,
             prompt="Bored",
+            conditional="persistent.fae_bnc_unlocked or persistent.fae_reversi_unlocked",
             affection_range=(fae_affection.HAPPY, None)
         ),
         chat_group=CHAT_GROUP_MOOD

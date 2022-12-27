@@ -191,16 +191,24 @@ label ch30_setup:
         main_background.form()
 
         fae_atmosphere.showSky(fae_atmosphere.WEATHER_SUNNY, with_transition=False)
-
+        
+        Affection.checkResetDailyAffectionGain()
         fae_outfits.get_user_acs()
         fae_outfits.call_user_outfit()
         fae_outfits.FAEAcs.call_all()
         fae_outfits.FAEOutfit.call_all()
         fae_utilities.log("Outfit data loaded.")
+        if fae_outfits.outfit_exists(persistent.fae_outfit_quit):
+            Sayori.setOutfit(fae_outfits.get_outfit(persistent.fae_outfit_quit))
+        else:
+            Sayori.setOutfit(fae_outfits.get_outfit("fae_uniform"))
         persistent._fae_version = config.version
         fae_utilities.log("Current persisted version post-mig check: {0}".format(store.persistent._fae_version))
-
-        #Sayori.setOutfit(fae_outfits.get_outfit("fae_uniform"))
+        if persistent.affection >= 500:
+            if not persistent.fae_reset:
+                ats("s_topic_broken")
+                reveal()
+                renpy.jump("cnc")
         try:
             setupRPC("In the spaceroom")
         except:
