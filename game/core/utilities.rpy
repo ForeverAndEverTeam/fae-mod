@@ -1,10 +1,12 @@
 init -999 python in fae_root:
+    import store
 
-    def falsify():
+    def falsify(affection):
 
-        persistent.fae_bnc_unlocked = False
-        persistent.fae_reversi_unlocked = False
-        persistent.fae_custom_music_unlocked = False
+        store.persistent.fae_bnc_unlocked = False
+        store.persistent.fae_reversi_unlocked = False
+        store.persistent.fae_custom_music_unlocked = False
+        store.persistent.affection = affection
 
 init -100 python in fae_utilities:
 

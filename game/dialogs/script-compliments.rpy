@@ -60,7 +60,7 @@ label compliment_best_girl:
     s abagdka "I'm really happy you think so! It means a lot to me, ehehehe~" 
     s bbfclfc "After all, I always thought that I might be the least likable given the fact most would choose one of my friends over me, but..."
     pause 2.0
-    if Affection.isAffectionate():
+    if Affection.isAffectionate(higher=True):
         s abfbcqa "I'm glad you care so much about me! I love you, [player]~" 
     else:
         s abfbcqa "I'm glad you care so much about me!"
@@ -85,7 +85,7 @@ label compliment_beautiful:
     s abhfmkb "You think so, [player]? Aww, I don't know what to say, ehehehe~"
     s bbhfmebj "Especially since I'm pretty messy sometimes, ahahaha..."
     s abfccea "But that means so much to me coming from you, [player]!"
-    if Affection.isAffectionate():
+    if Affection.isAffectionate(higher=True):
         s abfcdqa "Remember that you're the most beautiful person in the world to me too!"
     return 
 
@@ -173,7 +173,9 @@ label compliment_kind:
     s abhfaka "I'm happy you think so! I always try to be welcoming and pleasant to others around me."
     s abbbcqa "And I think you're really kind too, {w=0.5}{nw}"
     extend abgccoa "you always make my days brighter with your company!"
-    s abhfcka "I just want you to know that I really appreciate that, I love you so much, [player]~"
+    s abhfcka "I just want you to know that I really appreciate that."
+    if Affection.isLove(higher=True):
+        s "I love you so much, [player]~"
     return 
 
 init 5 python:
@@ -239,7 +241,9 @@ label compliment_thank_for_being_here:
     s abhfaoa "And thank you for being here for me too, it means a lot to me."
     s abbcmoaj "You know, you've done so much to help me and you've always been by my side, {w=0.5}{nw}"
     extend bbbciaa "despite everything that happened..."
-    s abaacaa "And I really can't thank you enough for that. I love you so much, [player]." 
+    s abaacaa "And I really can't thank you enough for that."
+    if Affection.isLove(higher=True):
+        s "I love you so much, [player]." 
     return  
 
 init 5 python:

@@ -536,7 +536,7 @@ label fae_kiss_short(**kwargs):
     python:
         kwargs.setdefault("duration", 0.5)
         kwargs.setdefault("fade_duration", 0.5)
-        kwargs.setdefault("initial_exp", "6hua")
+        kwargs.setdefault("initial_exp", "aaaabaa")
     call fae_kiss_engine(**kwargs) from _call_fae_kiss_engine
     return
 

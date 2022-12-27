@@ -199,13 +199,11 @@ label ch30_setup:
         fae_utilities.log("Outfit data loaded.")
         persistent._fae_version = config.version
         fae_utilities.log("Current persisted version post-mig check: {0}".format(store.persistent._fae_version))
-        if not persistent.fae_has_cheated:
-            if persistent.affection >= 500:
-                fae_utilities.log("Has cheated")
-                fae_root.falsify()
-                persistent.fae_has_cheated = True
-                Affection.lockAffection()
-
+        if persistent.affection >= 500:
+            if not persistent.fae_reset:
+                ats("s_topic_broken")
+                reveal()
+                renpy.jump("cnc")
         try:
             setupRPC("In the spaceroom")
         except:
