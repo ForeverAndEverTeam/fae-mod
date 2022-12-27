@@ -1,3 +1,11 @@
+init -999 python in fae_root:
+
+    def falsify():
+
+        persistent.fae_bnc_unlocked = False
+        persistent.fae_reversi_unlocked = False
+        persistent.fae_custom_music_unlocked = False
+
 init -100 python in fae_utilities:
 
     import ctypes
@@ -992,9 +1000,7 @@ init python:
 
         fae_sky.reload_sky()
 
-        if persistent.fae_last_visit_date.year != datetime.datetime.now().year:
-            fae_events.resetHolidays()
-        
+               
 
         persistent.fae_last_visit_date = datetime.datetime.now()
 
