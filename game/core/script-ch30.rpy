@@ -202,6 +202,7 @@ label ch30_setup:
         if not persistent.fae_has_cheated:
             if persistent.affection >= 500:
                 fae_utilities.log("Has cheated")
+                fae_root.falsify()
                 persistent.fae_has_cheated = True
                 persistent.affection = 25
         try:
