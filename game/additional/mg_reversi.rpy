@@ -308,6 +308,7 @@ init 10 python:
         scheme = renpy.invoke_in_new_context(renpy.input, _("Input the scheme ID"), allow = "0123456789-")
         scheme = int(scheme)
         reversi(True, scheme = scheme)
+
     
     
 image reversi_selectable:
@@ -315,7 +316,8 @@ image reversi_selectable:
     zoom 0.75
     
 image reversi_cursor:
-    Matrix("mod_assets/images/minigames/checkers_selected.png",
+    
+    im.MatrixColor("mod_assets/images/minigames/checkers_selected.png",
     (0, 0, 0, 0, 0,
     0, 0, 0, 0, 1,
     0, 1, 0, 0, 0,
