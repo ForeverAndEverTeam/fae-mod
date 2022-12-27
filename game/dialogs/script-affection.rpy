@@ -147,6 +147,12 @@ init -2 python:
 
         __capped_aff_dates = list()
 
+        @staticmethod
+        def lockAffection():
+            persistent.affection_day_gain = 0
+            persistent.affection_reset_date = None
+            persistent.affection = 0
+            persistent._affection_daily_bypasses = 0
 
         @staticmethod
         def calculatedAffectionGain(base=1, bypass=False):
