@@ -2638,12 +2638,13 @@ label sayo_love:
         s ebhfhgb "Huh!? O-{w=1.0}Oh my gosh!"
         s abhebebj "I didn't expect to hear that from you, [player]!"
         s abheegbj "Uwaaaa! I'm so embarrassed!"
-        s abhfakbg "But also {i}really{/i} happy to hear that!"
-        s abfdbcbg "I was wondering if you even felt that way about me or if you just simply wanted to save me from my fate..."
-        s abgdabbg "Like maybe you still saw me as a dear friend or felt really bad for me..."
-        s abhflabg "But nevermind that, I’m so happy you feel that way..."
-        s abhfaobf "I love you too, [player]."
-        s abgccebf "I love you so much!"
+        if Affection.isEnamoured(higher=True):
+            s abhfakbg "But also {i}really{/i} happy to hear that!"
+            s abfdbcbg "I was wondering if you even felt that way about me or if you just simply wanted to save me from my fate..."
+            s abgdabbg "Like maybe you still saw me as a dear friend or felt really bad for me..."
+            s abhflabg "But nevermind that, I’m so happy you feel that way..."
+            s abhfaobf "I love you too, [player]."
+            s abgccebf "I love you so much!"
     
     # Fall through
 
