@@ -199,8 +199,11 @@ label ch30_setup:
         fae_utilities.log("Outfit data loaded.")
         persistent._fae_version = config.version
         fae_utilities.log("Current persisted version post-mig check: {0}".format(store.persistent._fae_version))
-
-        #Sayori.setOutfit(fae_outfits.get_outfit("fae_uniform"))
+        if not persistent.fae_has_cheated:
+            if persistent.affection >= 500:
+                fae_utilities.log("Has cheated")
+                persistent.fae_has_cheated = True
+                persistent.affection = 25
         try:
             setupRPC("In the spaceroom")
         except:
