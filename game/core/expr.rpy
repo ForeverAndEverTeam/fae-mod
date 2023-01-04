@@ -518,19 +518,6 @@ init 1 python in fae_sprites:
 
     renpy.display.image.ImageReference.find_target = _find_target_override
 
-init -1 python in fae_sprites:
-
-    def show_empty_desk():
-        """
-        Shows empty desk
-        """
-        renpy.show(
-            "emptydesk",
-            tag="emptydesk",
-            at_list=[store.i11],
-            zorder=store.fae_sprites.FAE_SAYORI_ZORDER - 1
-        )
-
 image emptydesk = Composite(
     (1280, 720),
     (0, 0), "mod_assets/sayori/table/chair.png",
