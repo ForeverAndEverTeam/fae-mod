@@ -1,16 +1,5 @@
 default persistent.first_run = True
 
-init -890 python in fae_globals:
-    import datetime
-    import store
-
-    tt_detected = (
-        store.fae_getLastSeshEnd() - datetime.datetime.now()
-            > datetime.timedelta(hours=30)
-    )
-
-    if tt_detected:
-        store.persistent._fae_pm_has_went_back_in_time = True
 
 init 999 python:
 
