@@ -1831,56 +1831,6 @@ transform bsod_qrcode(x):
 ## once.
 define config.nvl_list_length = 6
 
-screen submods():
-
-    tag menu
-
-    use game_menu(("Submods")):
-
-
-        viewport id "scrollme":
-            scrollbars "vertical"
-            mousewheel True
-            draggable True
-
-            vbox:
-
-                style_prefix "check"
-                xfill True
-                xmaximum 1000
-
-                for submod in sorted(store.fae_submod_utilities.submod_def.values(), key=lambda x: x.name):
-
-                    vbox:
-                        xfill True
-                        xmaximum 1000
-
-                        label submod.name:
-                            yanchor 0
-                            xalign 0.0
-                            text_text_align 0.0
-                        
-                        if submod.coauthors:
-                            $ authors = "v{0}{{space=20}}by {1}, {2}".format(submod.version, submod.author, ", ".join(submod.coauthors))
-                        
-                        else:
-                            $ authors = "v{0}{{space=20}}by {1}".format(submod.version, submod.author)
-                        
-                        text "[authors]":
-                            yanchor 0.0
-                            xalign 0.0
-                            text_align 0.0
-                            layout "greedy"
-                            style "main_menu_version"
-                        
-                        if submod.description:
-                            text submod.description text_align 0.0
-                    
-                    if submod.settings_pane:
-                        $ renpy.display.screen.use_screen(submod.settings_pane, _name="{0}_{1}".format(submod.author, submod.name))
-
-
-
 screen qab():
     tag menu
 
