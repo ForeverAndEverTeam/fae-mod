@@ -14,81 +14,6 @@ define config.gl2 = True
 define config.log_live2d_loading = False
 # This python statement starts singleton to make sure only one copy of the mod
 # is running.
-python early:
-
-    import io
-    import os
-    import datetime
-    import random
-    import traceback
-    from collections import defaultdict
-
-
-    class FAEExtraPropable(object):
-
-        EX_PFX = "ex__"
-        _EX_LEN = len(EX_PFX)
-
-
-        def __init__(self, ex_props=None):
-
-            if ex_props is None:
-                ex_props = {}
-
-            self.ex_props = ex_props
-
-        def __contains__(self, item):
-            return item in self.ex_props
-
-        def __len__(self):
-            return len(self.ex_props)
-
-        def __getattr__(self, key):
-            if key.startswith(self.EX_PFX):
-                return self.ex_props.get(key[self._EX_LEN:], None)
-
-            return super().__getattr__(key)
-
-        def __setattr__(self, key, value):
-            if key.startswith(self.EX_PFX):
-                # the real property name is without the prefix
-                stripped_key = key[self._EX_LEN:]
-                if len(stripped_key) > 0:
-                    self.ex_props[stripped_key] = value
-
-            super().__setattr__(key, value)
-        
-        def ex_has(self, key):
-
-            return key in self
-
-        def ex_iter(self):
-
-            return (item for item in self.ex_props.items())
-
-        def ex_pop(self, key, default=None):
-
-            return self.ex_props.pop(key, default)
-
-
-        @staticmethod
-        def repr_out(obj):
-
-            try:
-
-                ex_props = obj.ex_props
-                if ex_props is None:
-                    return "<exprops: ()>"
-
-                props = [
-                    "{0}: {1}".format(key, value)
-                    for key, value in ex_props.items()
-                ]
-                return "<exprops: ({0})>".format(", ".join(props))
-
-            except:
-                return ""
-
 
 init -1500 python:
     import os
@@ -984,13 +909,6 @@ init -985 python:
 
 
 init -999 python:
-
-    def label_callback(name, abnormal):
-
-        fae_globals.last_label = fae_globals.current_label
-        fae_globals.current_label = name
-    
-    config.label_callback = label_callback
 
     def quit_input_check():
 
