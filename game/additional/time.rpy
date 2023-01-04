@@ -596,11 +596,3 @@ init -985 python:
             validator=store.fae_ev_data_ver._verify_int_nn,
             defval=1
         )
-
-
-    def fae_TTDetected():
-        """
-        Checks if time travel was detected
-        NOTE: TT detection occurs at init -890
-        """
-        return store.fae_globals.tt_detected
