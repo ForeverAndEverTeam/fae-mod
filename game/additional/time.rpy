@@ -327,23 +327,23 @@ init 10 python in fae_time:
 
     def _pp_spring():
 
-        store.fae_submod_utilities.getAndRunFunctions(key=PLUGIN_PP_SPRING)
+        return
 
     
     def _pp_summer():
 
 
-        store.fae_submod_utilities.getAndRunFunctions(key=PLUGIN_PP_SUMMER)
+        return
 
     
     def _pp_fall():
 
-        store.fae_submod_utilities.getAndRunFunctions(key=PLUGIN_PP_FALL)
+        return
 
     
     def _pp_winter():
 
-        store.fae_submod_utilities.getAndRunFunctions(key=PLUGIN_PP_WINTER)
+        return
 
     
     _season_pp_defs = {
@@ -399,66 +399,6 @@ init 900 python:
     persistent._fae_current_season = store.fae_time._seasonalReset(
         persistent._fae_current_season
     )
-
-init -999 python in fae_ev_data_ver:
-    import builtins
-    import renpy
-    import datetime
-
-    def _verify_int(val, allow_none=True):
-        return _verify_item(val, int, allow_none)
-
-
-    def _verify_int_nn(val):
-        return _verify_int(val, False)
-    
-
-    def _verify_item(val, _type, allow_none=True):
-        """
-        Verifies the given value has the given type/instance
-
-        IN:
-            val - value to verify
-            _type - type to check
-            allow_none - If True, None should be considered good value,
-                false means bad value
-                (Default: True)
-
-        RETURNS: True if the given value has the given type/instance,
-            false otherwise
-        """
-        if val is None:
-            return allow_none
-
-        # otherwise check item
-        return isinstance(val, _type)
-
-    def _verify_str(val, allow_none=True):
-        if val is None:
-            return allow_none
-
-        return isinstance(val, str) or isinstance(val, unicode)
-
-    def _verify_dt(val, allow_none=True):
-        if (
-                isinstance(val, datetime.datetime)
-                and val.year < 1900
-            ):
-            return False
-        return _verify_item(val, datetime.datetime, allow_none)
-
-
-    def _verify_dt_nn(val):
-        return _verify_dt(val, False)
-
-    def _verify_td(val, allow_none=True):
-        if val is None:
-            return allow_none
-        return _verify_item(val, datetime.timedelta, allow_none)
-
-
-    def _verify_td_nn(val):
-        return _verify_td(val, False)
 
 
 init -995 python in fae_utilities:
