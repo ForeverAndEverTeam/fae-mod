@@ -204,21 +204,6 @@ init 2 python:
 
         return timekeeper + passed_time <= _now
 
-    def fae_hasRPYFiles():
-        """
-        Checks if there are rpy files in the gamedir
-        """
-        return len(fae_getRPYFiles()) > 0
-
-    def fae_getRPYFiles():
-        """
-        Gets a list of rpy files in the gamedir
-        """
-        rpyCheckStation = store.FAEDockingStation(renpy.config.gamedir)
-
-        return rpyCheckStation.getPackageList(".rpy")
-
-
 init python:
 
     def love(love_time=None):
