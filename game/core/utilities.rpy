@@ -159,11 +159,6 @@ init -985 python in fae_utilities:
             #validator=store.fae_ev_data_ver._verify_dt_nn,
             defval=fae_getFirstSesh()
         )
-    
-    def fae_TTDetected():
-
-        return store.fae_globals.tt_detected
-    
 
 init -898 python in fae_globals:
 
