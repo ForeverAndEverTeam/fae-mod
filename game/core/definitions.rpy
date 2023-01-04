@@ -901,13 +901,6 @@ init python in fae_utilities:
         return re.search(__CURSE_CHECKER, string.lower())
 
 
-init -985 python:
-
-    def fae_getWindowTitle():
-
-        return renpy.game.interface.window_caption
-
-
 init -999 python:
 
     def quit_input_check():
