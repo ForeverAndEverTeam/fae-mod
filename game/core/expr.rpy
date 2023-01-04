@@ -5,65 +5,6 @@ init -50 python in fae_sprites:
     import store.fae_utilities as fae_utilities
     import store.fae_gifts as fae_gifts
 
-    ZOOM = "zoom="
-
-    default_zoom_level = 3
-
-    if store.persistent._fae_zoom_setting is None:
-        store.persistent._fae_zoom_setting = default_zoom_level
-        zoom_level = default_zoom_level
-    
-    else:
-        zoom_level = store.persistent._fae_zoom_setting
-    
-    zoom_step = 0.05
-    default_value_zoom = 1.25
-    value_zoom = default_value_zoom
-    max_zoom = 20
-
-    default_x = 0
-    default_y = 0
-    adjust_x = default_x
-    adjust_y = default_y
-#   y_step = 40
-    y_step = 20
-
-
-    def change_zoom():
-
-        global value_zoom, adjust_y
-        if zoom_level > default_zoom_level:
-            value_zoom = default_value_zoom + (
-                (zoom_level-default_zoom_level) * zoom_step
-            )
-            adjust_y = default_y + ((zoom_level-default_zoom_level) * y_step)
-
-        elif zoom_level < default_zoom_level:
-            value_zoom = default_value_zoom - (
-                (default_zoom_level-zoom_level) * zoom_step
-            )
-            adjust_y = default_y
-        else:
-            # zoom level is at 10
-            value_zoom = default_value_zoom
-            adjust_y = default_y
-
-        store.persistent._fae_zoom_setting = zoom_level
-    
-
-    def restore_zoom():
-
-        global zoom_level
-        zoom_level = default_zoom_level
-        change_zoom()
-    
-    def zoom_out():
-
-        global zoom_level
-        zoom_level = 0
-        change_zoom()
-    
-    
     
 
     FAE_SAYORI_ZORDER = 3
