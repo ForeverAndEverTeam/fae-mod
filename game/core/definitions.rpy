@@ -898,8 +898,7 @@ init -1 python:
             or fae_isNYE()
             or fae_isF14()
         )
-    def fae_maxPlaytime():
-        return datetime.datetime.now() - datetime.datetime(2017, 9, 22)
+
 
 init 21 python:
 
@@ -1004,22 +1003,4 @@ init -999 python:
             and fae_globals.allow_force_quit
         ):
             renpy.call("force_quit")
-
-
-    class FAEEvent(object):
-
-        def __init__(self):
-            self.__eventhandlers = []
-
-        def __iadd__(self, handler):
-            self.__eventhandlers.append(handler)
-            return self
-
-        def __isub__(self, handler):
-            self.__eventhandlers.remove(handler)
-            return self
-
-        def __call__(self, *args, **keywargs):
-            for eventhandler in self.__eventhandlers:
-                eventhandler(*args, **keywargs)
 
