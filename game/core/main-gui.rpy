@@ -363,63 +363,6 @@ style t_n_m_n_s_button is t_n_m_button
 style t_n_m_n_s_button_text is t_n_m_button_text:
     bold True
 
-
-
-
-screen fae_gen_scrollable_menu(items, display_area, scroll_align, *args):
-    style_prefix "scrollable_menu"
-
-    fixed:
-        area display_area
-
-        vbox:
-            ypos 0
-            yanchor 0
-
-            viewport:
-                id "viewport"
-                yfill False
-                mousewheel True
-
-                vbox:
-                    for item_prompt, item_value, is_italic, is_bold in items:
-                        textbutton item_prompt:
-                            if is_italic and is_bold:
-                                style "scrollable_menu_crazy_button"
-
-                            elif is_italic:
-                                style "scrollable_menu_new_button"
-
-                            elif is_bold:
-                                style "scrollable_menu_special_button"
-
-                            xsize display_area[2]
-                            action Return(item_value)
-
-            for final_items in args:
-                if final_items[4] > 0:
-                    null height final_items[4]
-
-                textbutton _(final_items[0]):
-                    if final_items[2] and final_items[3]:
-                        style "scrollable_menu_crazy_button"
-
-                    elif final_items[2]:
-                        style "scrollable_menu_new_button"
-
-                    elif final_items[3]:
-                        style "scrollable_menu_special_button"
-
-                    xsize display_area[2]
-                    action Return(final_items[1])
-
-        bar:
-            style "classroom_vscrollbar"
-            value YScrollValue("viewport")
-            xalign scroll_align
-
-
-
 python early:
     import io
     import datetime
