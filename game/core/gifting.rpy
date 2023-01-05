@@ -89,24 +89,5 @@ init -100 python in fae_gifts:
 
     chibi = False
 
-    class FAEGift():
-        def __init__(self, gift, zorder):
-
-            self.gift = gift
-            self.zorder = zorder
-            ext = "{0}.gift".format(gift)
-
-        def find(self):
-
-            renpy.show(
-                gift=ext,
-                zorder=self.zorder
-            )
-    
-    COOKIES = FAEGift(
-        gift="cookies",
-        zorder=FAE_GIFT_ZORDER
-    )
-
     
 
