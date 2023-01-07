@@ -63,6 +63,20 @@ init 11 python in fae_poems:
 
     def gpbc(category, unseen=False):
 
+        """
+        Gives a list of poems in given cat
+
+        FEED:
+            category:
+                cat to search
+            
+            unseen:
+                whether we want to see only unseen poems.
+        
+        RETURN:
+            List of poems fitting specs
+        """
+
         if unseen:
             return [
                 poem
@@ -79,6 +93,10 @@ init 11 python in fae_poems:
 
     def fsp():
 
+        """
+        Gives a list of poems seeen by cat
+        """
+
         return sorted([
             poem
             for poem in poem_list.values()
@@ -87,6 +105,9 @@ init 11 python in fae_poems:
 
     
     def fup():
+        """
+        Gives a list of unseen poems by cat
+        """
         
         return sorted([
             poem
@@ -96,11 +117,28 @@ init 11 python in fae_poems:
 
     
     def poemfinder(poem_code):
+        """
+        Get poem by it's code
+
+        FEED:
+            poem_code: code of poem
+        
+        RETURN:
+            poem is there's a poem with the code
+            Otherwise None
+        """
 
         return poem_list.get(poem_code, None)
 
     
     def gsp():
+
+        """
+        Gets a list of seen poems in scrollable menu format (ordered by category)
+
+        RETURN:
+            A list of seen poems in the format for a mas gen scrollable menu
+        """
 
         return sorted([
             (poem.prompt, poem, False, False)
@@ -110,6 +148,19 @@ init 11 python in fae_poems:
 
     
     def grp(category, unseen=True):
+        """
+        Gets a random poem from the specified category
+        IN:
+            category:
+                category to search for
+
+            unseen:
+                whether or not we only want unseen poems
+                defaults to True
+
+        OUT:
+            A random poem
+        """
 
         up_no = len(gpbc(category, unseen=True))
 
@@ -143,6 +194,43 @@ init 10 python:
             author="sayori",
             ad_hoc=None
         ):
+            """
+            FAEPoem constructor
+
+            Similar to the Poem class from DDLC, but excludes the yuri variables and adds a poem id property.
+
+
+            poem_code:
+                identifier for the poem.
+                (NOTE: Must be unique)
+
+            category:
+                category for the poem is under (So we can get poems by category)
+
+            prompt:
+                prompt for this poem (So it can be viewed by a scrollable menu)
+
+            paper:
+                paper to use for this poem. If None, assumes from the paper category map
+                    (Default: None)
+
+            title:
+                poem title (supports renpy substitution)
+                    (Default: '')
+
+            text:
+                poem contents (supports renpy substitution)
+                    (Default: '')
+
+            author:
+                poem author
+                (Default: sayori)
+
+            ex_props:
+                extra tags for the poem (used for dialogue flow based on it)
+                If None, an empty dict is assumed
+                    (Default: None)
+            """
 
             if poem_code in store.fae_poems.poem_list:
                 raise Exception ("poem_code {0} already exists in the poem matrix.".format(poem_code))
@@ -162,10 +250,25 @@ init 10 python:
 
         
         def is_seen(self):
+            """
+            Checks if the poem is seen
+
+            OUT:
+                boolean:
+                    - True if poem was seen before
+                    - False otherwise
+            """
 
             return self.poem_code in store.persistent._fae_seen_poems
 
         def seen_no(self):
+            """
+            Gets the shown count of the poem
+
+            OUT:
+                integer:
+                    - The amount of times this poem was seen
+            """
 
             return store.persistent._fae_seen_poems.get(self.poem_code, 0)
 
