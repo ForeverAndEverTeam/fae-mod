@@ -759,59 +759,6 @@ init python:
         
             f.close()
 
-init -100 python in fae_utilities:
-    import datetime
-
-    def add_years(initial_date, years):
-
-        try:
-
-            return initial_date.replace(year=initial_date.year + years)
-        except ValueError:
-
-            # We handle the only exception feb 29
-            return  initial_date + (datetime.date(initial_date.year + years, 1, 1)
-                                - datetime.date(initial_date.year, 1, 1))
-    
-    def add_months(starting_date, months):
-
-        old_month = starting_date.month
-        old_year = starting_date.year
-        old_day = starting_date.day
-
-        if months and (months/12 + old_year) % 4 != 0 and old_month == 2 and old_day == 29:
-            old_month = 3
-            old_day = 1
-        
-        # get the total of months
-        total_months = old_month + months
-
-        # get the new month based on date
-        new_month = total_months % 12
-
-        # handle december specially
-        new_month = 12 if new_month == 0 else new_month
-
-        # get the new year
-        new_year = old_year + int(total_months / 12)
-        if new_month == 12:
-            new_year -= 1
-
-        #Try adding a month, if that doesn't work (there aren't enough days in the month)
-        #keep subtracting days till it works.
-        date_worked=False
-        reduce_days=0
-        while reduce_days<=3 and not date_worked:
-            try:
-                new_date = starting_date.replace(year=new_year,month=new_month,day=old_day-reduce_days)
-                date_worked = True
-            except ValueError:
-                reduce_days+=1
-
-        if not date_worked:
-            raise ValueError('Adding months failed')
-
-        return new_date
 
 init -1 python:
 
@@ -900,7 +847,6 @@ init python in fae_utilities:
 
         return re.search(__CURSE_CHECKER, string.lower())
 
-
 init -999 python:
 
     def quit_input_check():
@@ -915,3 +861,19 @@ init -999 python:
         ):
             renpy.call("force_quit")
 
+    class FAEEvent():
+
+        def __init__(self):
+            self.__eventhandlers = []
+
+        def __iadd__(self, handler):
+            self.__eventhandlers.append(handler)
+            return self
+
+        def __isub__(self, handler):
+            self.__eventhandlers.remove(handler)
+            return self
+
+        def __call__(self, *args, **keywargs):
+            for eventhandler in self.__eventhandlers:
+                eventhandler(*args, **keywargs)
