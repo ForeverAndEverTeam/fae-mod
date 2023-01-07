@@ -627,15 +627,6 @@ default persistent.last_playthrough = persistent.playthrough
 default persistent.fae_sayori_closed = False
 default persistent.fae_intro_complete = False
 
-default persistent.sessions = {
-    "last_session_end": None,
-    "current_session_start": None,
-    "total_playtime": datetime.timedelta(seconds=0),
-    "total_sessions": 0,
-    "first_session": datetime.datetime.now()
-}
-
-
 #########################
 #NON-PERSISTENT DEFAULTS#
 #########################
@@ -770,68 +761,6 @@ init -1 python:
             or fae_isNYE()
             or fae_isF14()
         )
-
-
-init 21 python:
-
-    def fae_input(prompt, default="", allow=None, exclude="{}", length=None, with_none=None, pixel_width=None, screen="input", screen_kwargs={}):
-
-
-        renpy.exports.mode("input")
-
-        roll_forward = renpy.exports.roll_forward_info()
-
-
-        if not isinstance(roll_forward, basestring):
-            roll_forward = None
-        
-        if roll_forward is not None:
-            default = roll_forward
-        
-        fixed = renpy.in_fixed_rollback()
-
-        if renpy.has_screen(screen):
-            widget_properties = { }
-            widget_properties["input"] = dict(default=default, length=length, allow=allow, exclude=exclude, editable=not fixed, pixel_width=pixel_width)
-
-            screen_kwargs["prompt"] = prompt
-
-            renpy.show_screen(screen, _transient=True, _widget_properties=widget_properties, **screen_kwargs)
-        
-        else:
-
-            if screen != "input":
-                raise Exception("The '{}' screen does not exist.".format(screen))
-            
-            renpy.ui.window(style="input_window")
-            renpy.ui.vbox()
-            renpy.ui.text(prompt, style="input_prompt")
-            inputwidget = renpy.ui.input(default, length=length, style="input_text", allow=allow, exclude=exclude)
-
-            if fixed:
-
-                inputwidget.disable()
-            
-            renpy.ui.close()
-        
-        renpy.exports.shown_window()
-
-        if not renpy.game.after_rollback:
-            renpy.loadsave.force_autosave(True)
-        
-        if fixed:
-            renpy.ui.saybehavior()
-
-        rv = renpy.ui.interact(mouse="prompt", type="input", roll_forward=roll_forward)
-        renpy.exports.checkpoint(rv)
-
-        if with_none is None:
-            with_none = renpy.config.implicit_with_none
-
-        if with_none:
-            renpy.game.interface.do_with(None, None)
-        
-        return rv
 
 init python in fae_utilities:
 
