@@ -43,8 +43,6 @@ init python in fae_poems:
     poetry_selector_matrix = lambda x:x[1].category
 
     paper_category_defs = {
-        "f14": "mod_assets/poem_stuff/f14.png",
-        "d25": "mod_assets/poem_stuff/d25.png",
     }
 
     writer_def = {
@@ -56,12 +54,16 @@ init python in fae_poems:
 
     def poem_unlocked():
 
+        """
+        Check to see if there's any poems unlocked
+        """
+
         return len(store.persistent._fae_seen_poems) > 0
 
 init 11 python in fae_poems:
     import store
 
-    def gpbc(category, unseen=False):
+    def getPoemByCat(category, unseen=False):
 
         """
         Gives a list of poems in given cat
@@ -91,7 +93,7 @@ init 11 python in fae_poems:
             if poem.category == category
         ]
 
-    def fsp():
+    def findSeenPoems():
 
         """
         Gives a list of poems seeen by cat
@@ -104,7 +106,7 @@ init 11 python in fae_poems:
         ], key=poetry_categorising_matrix)
 
     
-    def fup():
+    def findUnseenPoems():
         """
         Gives a list of unseen poems by cat
         """
@@ -131,7 +133,7 @@ init 11 python in fae_poems:
         return poem_list.get(poem_code, None)
 
     
-    def gsp():
+    def getSeenPoemsMenu():
 
         """
         Gets a list of seen poems in scrollable menu format (ordered by category)
@@ -147,7 +149,7 @@ init 11 python in fae_poems:
         ], key=poetry_selector_matrix)
 
     
-    def grp(category, unseen=True):
+    def getRandomPoem(category, unseen=True):
         """
         Gets a random poem from the specified category
         IN:
@@ -162,9 +164,9 @@ init 11 python in fae_poems:
             A random poem
         """
 
-        up_no = len(gpbc(category, unseen=True))
+        up_no = len(getPoemByCat(category, unseen=True))
 
-        ap_no = len(gpbc(category, unseen=False))
+        ap_no = len(getPoemByCat(category, unseen=False))
 
         cp_len = ap_no-1
 
@@ -176,7 +178,7 @@ init 11 python in fae_poems:
         
         p_no = renpy.random.randint(0, cp_len)
 
-        return gpbc(category, unseen=unseen)[p_no]
+        return getPoemByCat(category, unseen=unseen)[p_no]
 
 init 10 python:
 
