@@ -3190,13 +3190,3 @@ label s_topics_notfications:
     return "derandom"
 
 
-label s_topic_broken:
-
-    s bbeemo "So this is kinda embarrassing."
-    s bbeemo "I was messing around in the code, and accidentally broke something!"
-    s bbbcmo "I'm sorry, but I'll have to reset the game since I don't know what went wrong!"
-    s bbbcao "See you in a bit, [player]!"
-    $ fae_root.falsify(55)
-    $ persistent.fae_reset=True
-    $ renpy.full_restart(label="ch30_autoload")
-    return

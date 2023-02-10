@@ -251,7 +251,7 @@ label compliment_like_seeing_happy:
     s abhfcka "Aww! That's so cute of you to say, [player]! Thank you so much!" 
     s ebbckea "I am {i}happy{/i} to make you {i}happy{/i} when you see me {i}happy{/i}, ehehehe~"
     s ebbbcka "I like seeing you happy as well! It makes all the time we spend together worth it."
-    $ persitent.fae_like_seeing_happy = True
+    $ persistent.fae_like_seeing_happy = True
     return
 
 init 5 python:
