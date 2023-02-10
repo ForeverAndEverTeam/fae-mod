@@ -21,7 +21,6 @@ init python:
         config.keymap["dialogue"] = ["t", "T"]
         config.keymap["music"] = ["m", "M"]
         config.keymap["games"] = ["g", "G"]
-        config.keymap["calendar"] = ["c", "C"]
         config.keymap["Mute"] = ["shift_m", "shift_M"]
         #config.keymap["inc_musicvol"] = [
         #    "shift_K_PLUS","K_EQUALS","K_KP_PLUS"
@@ -44,10 +43,6 @@ init python:
         )
 
         config.underlay.append(
-            renpy.Keymap(calendar=show_calendar)
-        )
-
-        config.underlay.append(
             renpy.Keymap(Mute=fae_music.mute())
         )
     
@@ -55,7 +50,6 @@ init python:
         config.keymap["dialogue"] = ["t", "T"]
         config.keymap["music"] = ["m", "M"]
         config.keymap["games"] = ["g", "G"]
-        config.keymap["calendar"] = ["c", "C"]
         config.keymap["Mute"] = ["shift_m", "shift_M"]
 
         config.underlay.append(
@@ -68,10 +62,6 @@ init python:
 
         config.underlay.append(
             renpy.Keymap(games=None)
-        )
-
-        config.underlay.append(
-            renpy.Keymap(calendar=None)
         )
 
         config.underlay.append(

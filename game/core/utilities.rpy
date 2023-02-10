@@ -36,6 +36,13 @@ init -1 python in fae_utilities:
     import store
     import store.fae_globals as fae_globals
 
+    
+    def reset():
+
+        atq("s_topic_reversi")
+
+        atq("s_stopic_bulls_and_cows")
+
     def save_game():
 
         
@@ -214,6 +221,14 @@ init -1 python in fae_random_chat_rate:
 
     def adjustRandFrequency(slider_value):
 
+        """
+        Changes the random amount based on slider
+
+        FEED:
+            slider_value: value from the random chat rate slider
+            Value will be between 0 and 4
+        """
+
         global rand_low
         global rand_high
 
@@ -228,9 +243,23 @@ init -1 python in fae_random_chat_rate:
     
     def getRandChatDisp(slider_value):
 
+        """
+        Uses the slider value and displays relevant string
+
+        FEED:
+            slider_value: value from the random chat rate slider
+        
+        RESULT:
+            string that correlates to the random chat setting
+        """
+
         return SLIDER_DEFS_DISP.get(slider_value, "UNKNOWN")
 
     def setWaitingTime():
+
+        """
+        Sets the wait time for the next topic. Depends on random chat setting
+        """
 
         global randchat_time_left
 
@@ -245,6 +274,11 @@ init -1 python in fae_random_chat_rate:
         return _RANDOM_CHAT_FREQUENCY_TIMER_DEFS.get(store.persistent.fae_random_chat_rate)
     
     def wait():
+
+        """
+        Pauses Ren'Py for a short time.
+        Events before a random topic can be handled.
+        """
 
         global randchat_time_left
 
@@ -264,6 +298,13 @@ init -1 python in fae_random_chat_rate:
             renpy.pause(WAITING_TIME, hard=True)
     
     def waitedLongEnough():
+
+        """
+        Is the waiting time done?
+
+        RESULT:
+            True if wait time is up, otherwise False
+        """
 
         global randchat_time_left
 

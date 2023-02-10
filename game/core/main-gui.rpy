@@ -21,7 +21,7 @@ screen hidden1(active=False):
 
         textbutton _("Play") action [ SensitiveIf(active==True), Function(mg)]
 
-        textbutton _("Calendar") action [ SensitiveIf(active==True), Function(show_calendar)]
+        
 
 
 screen hidden_fake(active=False):
@@ -38,7 +38,7 @@ screen hidden_fake(active=False):
 
         textbutton _("UGxheQ==") action [ SensitiveIf(active==True), Function(mg)]
 
-        textbutton _("Q2FsZW5kYXI=") action [ SensitiveIf(active==True), Function(show_calendar)]
+        
 
 
 

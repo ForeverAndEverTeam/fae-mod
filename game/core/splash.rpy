@@ -417,9 +417,5 @@ label confirm_quit:
     #python:
     $ fae_utilities.save_game()
 
-
-    $ store.fae_logging.logging.shutdown()
-
-
     $ renpy.quit()
     return

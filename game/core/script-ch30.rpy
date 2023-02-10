@@ -77,7 +77,7 @@ init python:
             "It is her pen." (if the player's gender is declared as female)
             "It is their pen." (if player's gender is not declared)
 
-        For all available pronouns/words check the keys in MAS_PRONOUN_GENDER_MAP
+        For all available pronouns/words check the keys in FAE_PRONOUN_GENDER_MAP
 
         IN:
             key - Optional[Literal["M", "F", "X"]] - key (perhaps current gender) to set the pronouns for
@@ -165,6 +165,10 @@ label ch30_autoload:
 
     $ fae_set_pronouns()
 
+    if persistent.affection >= 100 and not persistent.reset:
+        $ fae_utilities.reset()
+        
+
     jump ch30_main
 
 
@@ -191,13 +195,7 @@ label ch30_setup:
             Sayori.setOutfit(fae_outfits.get_outfit(persistent.fae_outfit_quit))
         else:
             Sayori.setOutfit(fae_outfits.get_outfit("fae_uniform"))
-        persistent._fae_version = config.version
-        fae_utilities.log("Current persisted version post-mig check: {0}".format(store.persistent._fae_version))
-        if persistent.affection >= 500:
-            if not persistent.fae_reset:
-                ats("s_topic_broken")
-                reveal()
-                renpy.jump("cnc")
+
         try:
             setupRPC("In the spaceroom")
         except:
@@ -229,6 +227,8 @@ label fae_event_check:
     
     if fae_isNYD():
         jump fae_nyd_autoload
+    
+    
 
 
 
@@ -242,10 +242,7 @@ label ch30_init:
         _fae_AffStart()
         import random
 
-        fae_data.runRuntimeTransfer()
-
-        persistent._fae_version = config.version
-
+        
         Affection.checkResetDailyAffectionGain()
 
         Sayori.setInChat(True)

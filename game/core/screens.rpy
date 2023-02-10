@@ -311,8 +311,7 @@ init 4 python:
         
         
         if (
-            fae_bad_name_comp.search(player)
-            or fae_awk_name_comp.search(player)
+            fae_bad_name_list.search(player)
         ):
 
             renpy.call_in_new_context("fae_bad_name_input")
@@ -446,8 +445,7 @@ screen navigation():
 
         textbutton _("Settings") action [ShowMenu("preferences"), SensitiveIf(renpy.get_screen("preferences") == None)]
 
-        if store.fae_submod_utilities.submod_def:
-            textbutton _("Submods") action [ShowMenu("submods"), SensitiveIf(renpy.get_screen("submods") == None)]
+
 
         textbutton _("QABs") action [ShowMenu("qab"), SensitiveIf(renpy.get_screen("qab") == None)]
 
