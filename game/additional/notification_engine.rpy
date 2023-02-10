@@ -15,8 +15,7 @@ init python in fae_notifs:
     def notify(title, message):
         title = title
         message = message
-        #icon = (renpy.config.gamedir + '\\mod_assets\\' + 'Logo.png')
-        #icon = 'icon.ico'
+        
         if renpy.windows or renpy.linux:
 
             return (
@@ -51,8 +50,6 @@ init python in fae_notifs:
 
                 title = 'Sayori'
                 message = 'I have something to tell you!'
-                #icon = (renpy.config.gamedir + '\\mod_assets\\' + 'Logo.png')
-                #icon = 'icon.ico'
 
                 return (
                     notification.notify(
