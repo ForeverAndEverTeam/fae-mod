@@ -17,7 +17,6 @@ Please be as detailed as possible when reporting, to make our lives easier when 
 
 ## CLOUD STORAGE
 Please ensure you run the mod from LOCAL storage.
-
 Running the mod from locations such as OneDrive cause bugs that we can't fix.
 
 <details>
