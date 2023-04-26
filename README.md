@@ -15,6 +15,10 @@ If you own a DDLC+ copy, please download the original game from it's [official w
 Please report bugs on our [issues](https://github.com/ForeverAndEverTeam/fae-mod/issues) page.
 Please be as detailed as possible when reporting, to make our lives easier when fixing.
 
+## CLOUD STORAGE
+Please ensure you run the mod from LOCAL storage.
+Running the mod from locations such as OneDrive cause bugs that we can't fix.
+
 <details>
   <summary>NEW CREDITS</summary>
   
