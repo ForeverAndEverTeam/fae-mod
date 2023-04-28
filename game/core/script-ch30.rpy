@@ -164,11 +164,7 @@ label ch30_autoload:
     $ store.fae_utilities.makedirifnot("{0}/gifts/".format(renpy.config.basedir))
 
     $ fae_set_pronouns()
-
-    if persistent.affection >= 100 and not persistent.reset:
-        $ fae_utilities.reset()
-        
-
+      
     jump ch30_main
 
 
