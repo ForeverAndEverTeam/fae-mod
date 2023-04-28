@@ -24,4 +24,4 @@ init -999 python:
 
     class InstallError(Exception):
         def __init__(self, message):
-            return
+            self.message = message
