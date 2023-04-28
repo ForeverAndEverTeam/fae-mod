@@ -3189,7 +3189,6 @@ label s_topics_notfications:
             s abgbaoa "Just let me know if you ever change your mind."
     return "derandom"
 
-# Here's your fucking credit you pompous bastards
 
 init 5 python:
  
