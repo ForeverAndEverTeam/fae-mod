@@ -77,6 +77,8 @@ label sayori_give_nickname:
         $ persistent.fae_nickname_current_nickname = nickname
         $ s_name = persistent.fae_nickname_current_nickname
 
+        $ Affection.calculatedAffectionGain(5)
+
         s abfcaob "Aww that’s a great nickname! {w=0.5}{nw}" 
         extend abgccab "I love it!"
         s abgcaob "Thanks, [player]!"

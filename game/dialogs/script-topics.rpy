@@ -3267,6 +3267,7 @@ init 5 python:
         ),
         chat_group=CHAT_GROUP_NORMAL
     )
+
 label s_topics_pps:
     s abfcaoa "Hey [player], do you know about pen pals?"
     s abfcaaa "It’s when people form friendships just by writing letters to each other, it’s really sweet!"
@@ -3282,5 +3283,46 @@ label s_topics_pps:
     extend abfcaaa "Or sent letters to a faraway friend or family member?"
     s abbcaoa "If not, I think it’s something you should consider!"
     s abgbcaa "It’s nice to stay connected with people, even if you’re far apart physically."
+
+    return
+
+init 5 python:
+ 
+    chatReg(
+        Chat(
+            persistent._chat_db,
+            label="s_topics_location",
+            unlocked=True,
+            prompt="Place of living",
+            random=True,
+            category=["Life", "You"]
+        ),
+        chat_group=CHAT_GROUP_NORMAL
+    )
+
+label s_topics_location:
+    s abgbaoa "Hey player, I was wondering…"
+    s abgbaaa "What’s it like where you live?"
+    s abgcaoa "Like… do you live in a big city, or in the countryside, {w=0.5}{nw}"
+    extend abgdaaa "or by the sea, or maybe somewhere in between?"
+    s abfccoa "I’ve been thinking about where I’d like to live most, if I had the choice!"
+    s abegbba "Since… well I can’t really remember what it was like where I lived before, {w=0.5}{nw}"
+    extend abegaca "besides a few pictures and ideas…"
+    s abfdaba "It was pretty suburban but I can’t recall experiencing much day-to day life there…"
+    s abbdaoa "But I suppose that gives me more room to use my imagination! {w=0.5}{nw}"
+    extended abgccaa "Ehehehe~"
+    s abgbaoa "Living in a big city could be cool! {w=0.5}{nw}"
+    extend abgccaa "They look so lively and energetic, and have lots to experience!"
+    s abegbma "...and enough restaurants to feed a hungry Sayori! {w=0.5}{nw}"
+    extend abegcaa "Ehehehe~"
+    s abfcaoa "But I’d also enjoy living in the countryside too! {w=0.5}{nw}"
+    extend abgccaa "I’d love to meet all the animals and go exploring in the forests and fields!"
+    s abgcegb "Uwaaaa It’s so hard to choose!"
+    s abgbcoa "Ehehehe, anyways! "
+    s abhfaaa "No matter where I’d live, I’d always try to make the most of it!"
+    s abhfaoa "And I’d travel too, to experience a little bit of everything!"
+    s abgbaaa "What do you think, [player]?"
+    s abgcaoa "You’ve got a big big world out there to explore, {w=0.5}{nw}"
+    extend abgccaa "I’m sure you’ll find somewhere with the perfect opportunities for you if you haven’t already!"
 
     return
