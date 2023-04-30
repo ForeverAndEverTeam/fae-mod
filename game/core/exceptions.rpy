@@ -20,8 +20,3 @@ python early:
         def __str__(self):
             return "DDLC mods/mod projects cannot be run from a cloud folder. Move your mod/mod project to another location and try again."
 
-init -999 python:
-
-    class InstallError(Exception):
-        def __init__(self, message):
-            self.message = message

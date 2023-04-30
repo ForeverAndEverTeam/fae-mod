@@ -850,6 +850,13 @@ init -1 python:
             or fae_isF14()
         )
 
+init -999 python:
+
+    class InstallError(Exception):
+        def __init__(self, message):
+            self.message = message
+
+
 init python in fae_utilities:
 
     import re
