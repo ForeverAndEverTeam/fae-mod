@@ -3310,7 +3310,7 @@ label s_topics_location:
     extend abegaca "besides a few pictures and ideas…"
     s abfdaba "It was pretty suburban but I can’t recall experiencing much day-to day life there…"
     s abbdaoa "But I suppose that gives me more room to use my imagination! {w=0.5}{nw}"
-    extended abgccaa "Ehehehe~"
+    extend abgccaa "Ehehehe~"
     s abgbaoa "Living in a big city could be cool! {w=0.5}{nw}"
     extend abgccaa "They look so lively and energetic, and have lots to experience!"
     s abegbma "...and enough restaurants to feed a hungry Sayori! {w=0.5}{nw}"
