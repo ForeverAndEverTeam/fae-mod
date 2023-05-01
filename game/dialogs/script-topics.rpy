@@ -68,19 +68,19 @@ label fae_room_switch_return:
     return
 
 
-init 5 python:
+#init 5 python:
     
-    chatReg(
-        Chat(
-            persistent._chat_db,
-            label="fae_gift",
-            unlocked=True,
-            prompt="Can you check for gifts?",
-            random=False,
-            category=["Misc"]
-        ),
-        chat_group=CHAT_GROUP_NORMAL
-    )
+#    chatReg(
+#        Chat(
+#            persistent._chat_db,
+#            label="fae_gift",
+#            unlocked=True,
+#            prompt="Can you check for gifts?",
+#            random=False,
+#            category=["Misc"]
+#        ),
+#        chat_group=CHAT_GROUP_NORMAL
+#    )
 
 label fae_gift:
     s "Sure!"
