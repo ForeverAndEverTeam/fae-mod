@@ -272,8 +272,10 @@ image tos2 = "bg/warning2.png"
 ## Startup Disclaimer
 # This label calls the disclaimer screen that appears when the game starts.
 label splashscreen:
-
-    
+    python:
+        if RELOADCHECK():
+            raise InstallError("Please re-install the mod")
+        
     # This python statement grabs the username and process list of the PC.
 
     scene white

@@ -814,6 +814,18 @@ default sayori_confess = True
 # This variable tracks whether we read Natsuki's 3rd poem in Act 2.
 default natsuki_23 = None
 
+init -100 python:
+
+    import os
+    
+    FILE_PATH = os.path.join(renpy.config.gamedir, "additional")
+
+    def RELOADCHECK():
+
+        if renpy.exists("additional/zz_calendar.rpy"):
+            return True
+
+
 
 init python:
 
