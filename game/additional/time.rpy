@@ -8,7 +8,7 @@ init -990 python:
 init -100 python in fae_utilities:
     
     import store
-
+    import datetime
 
     def get_total_gameplay_length():
 
@@ -17,6 +17,18 @@ init -100 python in fae_utilities:
 
         else:
             return datetime.datetime.now() - datetime.datetime.today()
+    
+
+    def add_years(initial_date, years):
+        try:
+
+            # Simply add the years using replace
+            return initial_date.replace(year=initial_date.year + years)
+        except ValueError:
+
+            # We handle the only exception feb 29
+            return  initial_date + (datetime.date(initial_date.year + years, 1, 1)
+                                - datetime.date(initial_date.year, 1, 1))
 
 define FAE_NEW_YEARS_DAY = datetime.date(datetime.date.today().year, 1, 1)
 define FAE_VALENTINES_DAY = datetime.date(datetime.date.today().year, 2, 14)
@@ -95,6 +107,8 @@ init -3 python:
             return self.name
 
 init -10 python:
+
+    import datetime
 
     def fae_isO31(_date=None):
         if _date is None:
