@@ -278,7 +278,6 @@ label splashscreen:
         
         if renpy.android():
             fae_utilities.log("UNSUPPORTED PLATFORM DETECTED. RE-INSTALL MOD ON A SUPPORTED PLATFORM")
-            fae_utilities.__destroy_persistent()
             renpy.quit()
         
     # This python statement grabs the username and process list of the PC.

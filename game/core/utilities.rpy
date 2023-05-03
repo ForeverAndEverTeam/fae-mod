@@ -64,10 +64,6 @@ init -999 python in fae_utilities:
     import store
     import pprint
 
-    def __destroy_persistent(self):
-            renpy.loadsave.location.unlink_persistent()
-            renpy.persistent.should_save_persistent = False
-
     _logdir = os.path.join(renpy.config.basedir, "log")
     if not os.path.exists(_logdir):
         os.makedirs(_logdir)
