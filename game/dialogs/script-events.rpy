@@ -86,27 +86,6 @@ label event_interlude:
     return
  
 
-label event_new_years_eve:
-    $ fae_events.getHoliday("event_new_years_eve").run()
-    s "[player]!{w=1}{nw}"
-    s "[player]!{w=0.5} [player]!"
-    s "Look at the date!{w=0.5}{nw}"
-    extend " Do you even know what day it is?!{w=1}{nw}"
-    extend " It's almost the new year!"
-    s "Man...{w=1}{nw}"
-    extend " and about time too,{w=0.1} huh?"
-    s "I don't know about you,{w=0.1} [player]...{w=1}{nw}"
-    $ current_year = datetime.date.today().year
-    extend " but I can't {i}WAIT{/i} to tell [current_year] where to stick it!"
-    s "And what better way to do that...{w=0.75}{nw}" 
-    extend " than a crap ton of explosions and snacks?"
-    s "Ehehehe.{w=0.5}{nw}"
-    extend " It's gonna be great!"
-    
-    $ fae_events.getHoliday("event_new_years_eve").complete()
-
-    return
-
 
 init 5 python:
     chatReg(
