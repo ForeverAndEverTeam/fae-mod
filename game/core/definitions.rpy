@@ -824,8 +824,8 @@ init -100 python:
 
         if renpy.exists("additional/zz_calendar.rpy"):
             return True
-
-
+        else:
+            return False
 
 init python:
 
