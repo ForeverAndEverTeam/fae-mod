@@ -1,15 +1,3 @@
-init -999 python in fae_root:
-    import store
-
-    def falsify(affection):
-
-        store.persistent.fae_bnc_unlocked = False
-        store.persistent.fae_reversi_unlocked = False
-        store.persistent.fae_custom_music_unlocked = False
-        store.persistent.affection = affection
-
-
-
 init python:
 
     def love(love_time=None):
