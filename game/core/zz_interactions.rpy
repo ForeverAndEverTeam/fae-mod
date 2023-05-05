@@ -22,12 +22,6 @@ init python:
         config.keymap["music"] = ["m", "M"]
         config.keymap["games"] = ["g", "G"]
         config.keymap["Mute"] = ["shift_m", "shift_M"]
-        #config.keymap["inc_musicvol"] = [
-        #    "shift_K_PLUS","K_EQUALS","K_KP_PLUS"
-        #]
-        #config.keymap["dec_musicvol"] = [
-        #    "K_MINUS","shift_K_UNDERSCORE","K_KP_MINUS"
-        #]
 
         config.underlay.append(
             renpy.Keymap(dialogue=dlg)

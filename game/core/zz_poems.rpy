@@ -275,10 +275,6 @@ init 10 python:
             return store.persistent._fae_seen_poems.get(self.poem_code, 0)
 
 
-
-
-
-
 label fae_showpoem(poem=None, paper=None, post_label=None):
 
     #No poems?
