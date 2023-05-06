@@ -49,7 +49,7 @@ label tell:
     python:
 
         say_menu = []
-        if time_love(time_since=datetime.timedelta(0,10)):
+        if time_love(time_since=datetime.timedelta(0,10)) and Affection._getAffectionTierName() == "LOVE":
             say_menu.append((_("I love you too!"), "love_too"))
         else:
             if Affection._getAffectionTierName() == "LOVE":
