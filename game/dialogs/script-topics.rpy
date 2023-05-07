@@ -26,18 +26,18 @@ init -1 python in chats:
 #TESTING TOPICS#
 ################
 
-init 5 python:
-    chatReg(
-        Chat(
-            persistent._chat_db,
-            label="fae_room_switch",
-            unlocked=True,
-            prompt="Can we go somewhere else?",
-            random=False,
-            category=["Location"]
-        ),
-        chat_group=CHAT_GROUP_NORMAL
-    )
+#init 5 python:
+#    chatReg(
+#        Chat(
+#            persistent._chat_db,
+#            label="fae_room_switch",
+#            unlocked=True,
+#            prompt="Can we go somewhere else?",
+#            random=False,
+#            category=["Location"]
+#        ),
+#        chat_group=CHAT_GROUP_NORMAL
+#    )
 
 label fae_room_switch:
     s "Sure!"
@@ -47,18 +47,18 @@ label fae_room_switch:
     return
 
 
-init 5 python:
-    chatReg(
-        Chat(
-            persistent._chat_db,
-            label="fae_room_switch_return",
-            unlocked=True,
-            prompt="Can we go back to the Spaceroom?",
-            random=False,
-            category=["Location"]
-        ),
-        chat_group=CHAT_GROUP_NORMAL
-    )
+#init 5 python:
+#    chatReg(
+#        Chat(
+#            persistent._chat_db,
+#            label="fae_room_switch_return",
+#            unlocked=True,
+#            prompt="Can we go back to the Spaceroom?",
+#            random=False,
+#            category=["Location"]
+#        ),
+#        chat_group=CHAT_GROUP_NORMAL
+#    )
 
 label fae_room_switch_return:
     s "Sure!"
