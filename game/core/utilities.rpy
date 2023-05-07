@@ -528,8 +528,6 @@ init python:
     
     def h_check():
 
-
-        
         return
     
     def d_check():

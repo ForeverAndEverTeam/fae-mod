@@ -5,8 +5,6 @@ init -50 python in fae_sprites:
     import store.fae_utilities as fae_utilities
     import store.fae_gifts as fae_gifts
 
-    
-
     FAE_SAYORI_ZORDER = 3
 
     pose = "sitting"

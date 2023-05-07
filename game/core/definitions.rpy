@@ -650,10 +650,6 @@ define mc = DynamicCharacter('player', what_prefix='"', what_suffix='"', ctc="ct
 
 define s = DynamicCharacter('s_name', image='sayori', what_prefix='', what_suffix='', ctc="ctc", ctc_position="fixed")
 
-
-
-
-
 # This variable determines whether to allow the player to dismiss pauses.
 # By default this is set by config.developer which is normally set to false
 # once you packaged your mod.
