@@ -54,14 +54,16 @@ label fae_otter:
 
 label fae_chibi:
 
-    if store.fae_gifts.cookies:
+    if store.fae_gifts.Gifts.cookies:
+        python:
+            import store.fae_gifts as fae_gifts
 
-        $ store.fae_gifts.cookies = False
+            fae_gifts.Gifts.cookies = False
 
-        $ store.fae_gifts.chibi = True
+            fae_gifts.Gifts.chibi = True
     
     else:
-        $ store.fae_gifts.chibi = True
+        $ store.fae_gifts.Gifts.chibi = True
     
     $ store.fae_sprites._auto_gen("abhfaaa")
     
