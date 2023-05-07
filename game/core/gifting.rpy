@@ -88,5 +88,7 @@ init -100 python in fae_gifts:
         otter = False
 
         cookies = False
+
+        chibi = False
     
 

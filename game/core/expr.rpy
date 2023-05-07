@@ -223,19 +223,19 @@ init -50 python in fae_sprites:
                 (0, 0), "{0}{1}/eyewear/[Sayori._outfit.eyewear.ref_name]/{1}.png".format(_FAE_SAYORI_IMAGES_PATH, pose),
             ])
 
-        if store.fae_gifts.cookies:
+        if store.fae_gifts.Gifts.cookies:
 
             ad_hoc.extend([
                 (0, 0), "mod_assets/images/food/cookies.png",
             ])
         
-        if store.fae_gifts.otter:
+        if store.fae_gifts.Gifts.otter:
 
             ad_hoc.extend([
                 (0, 0), "mod_assets/images/acs/otter.png",
             ])
         
-        if store.fae_gifts.chibi:
+        if store.fae_gifts.Gifts.chibi:
 
             ad_hoc.extend([
                 (0, 0), "mod_assets/images/acs/chibi.png"
