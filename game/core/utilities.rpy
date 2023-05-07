@@ -28,18 +28,12 @@ init -1 python in fae_utilities:
 
     def save_game():
 
-        
-
         store.Chat._save_chat_data()
 
         store.fae_outfits.FAEOutfit.store_all()
 
-        #store.fae_events.FAEHoliday.storeAll()
-
         if store.persistent._affection_daily_bypasses > 5:
             store.persistent._affection_daily_bypasses = 5
-        
-
 
         store.main_background.save()
 
@@ -140,9 +134,6 @@ init -999 python in fae_utilities:
     def RenpySubSub(string):
 
         return string.replace("[", "[[").replace("{", "{{")
-
-
-
 
 
 default persistent._fae_random_chat_freq = fae_random_chat_rate.SOMETIMES
@@ -475,8 +466,6 @@ init -990 python in fae_globals:
 
 init python:
 
-    
-
     LCC = datetime.datetime.now()
     PRIOR_CHECK_MINUTELY = datetime.datetime.now()
     PRIOR_CHECK_HOURLY = PRIOR_CHECK_MINUTELY.hour
@@ -484,21 +473,15 @@ init python:
 
     def minute_check():
 
-        #checkReaction()
-
-        #fae_clearNotifs()
-
         fae_utilities.save_game()
 
         Affection.checkResetDailyAffectionGain()
-
 
         if (
             persistent._fae_random_chat_freq is not fae_random_chat_rate.NEVER
             #and datetime.datetime.now() > LCC + datetime.timedelta(minutes=fae_random_chat_rate.get_random_chat_timer())
             and not persistent._event_list
         ):
-
 
             if not persistent.fae_repeat_chat:
                 chat_pool = Chat.chat_filt(
@@ -555,11 +538,8 @@ init python:
 
         fae_sky.reload_sky()
 
-               
-
         persistent.fae_last_visit_date = datetime.datetime.now()
 
-        
         return
 
 
