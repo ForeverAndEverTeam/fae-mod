@@ -28,7 +28,7 @@ init -100 python:
 
 label fae_cookies:
 
-    $ store.fae_gifts.cookies = True
+    $ store.fae_gifts.Gifts.cookies = True
 
     $ refresh()
 
