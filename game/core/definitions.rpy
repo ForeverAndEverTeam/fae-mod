@@ -858,8 +858,7 @@ init python in fae_utilities:
 
 
     def string_has_cursing(string):
-
-
+        
         return re.search(__CURSE_CHECKER, string.lower())
 
 init -999 python:
