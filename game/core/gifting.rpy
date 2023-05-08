@@ -10,7 +10,7 @@ init -100 python:
 
         if renpy.exists(gift_path + "/cookies.gift"):
             
-            store.fae_utilities.removeFileDir(gift_path + "/cookies.gift".format(renpy.config.basedir))
+            store.fae_utilities.removeFileDir(gift_path + "/cookies.gift")
 
             renpy.call("fae_cookies")
         
