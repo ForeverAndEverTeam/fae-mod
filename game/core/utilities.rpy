@@ -285,7 +285,7 @@ init -1 python in fae_random_chat_rate:
         return randchat_time_left == 0 and rand_low != 0
 
 
-#default persistent.fae_random_chat_rate = fae_utilities.random_chat_rate.SOMETIMES
+
 default persistent.fae_repeat_chat = False
 
 init -990 python in fae_globals:
@@ -294,8 +294,6 @@ init -990 python in fae_globals:
     import store
 
     sesh_start = store.datetime.datetime.now()
-
-    #pia = False
 
     allow_force_quit = True
 
@@ -479,7 +477,6 @@ init python:
 
         if (
             persistent._fae_random_chat_freq is not fae_random_chat_rate.NEVER
-            #and datetime.datetime.now() > LCC + datetime.timedelta(minutes=fae_random_chat_rate.get_random_chat_timer())
             and not persistent._event_list
         ):
 
@@ -505,7 +502,6 @@ init python:
                 if (not persistent.fae_repeat_chat):
                     store.persistent._oot = False
                 
-                #Affection.getAffectionGain()
                 atq(random.choice(chat_pool).label)
             
             elif not store.persistent.fae_repeat_chat and not store.persistent._oot:
