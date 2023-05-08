@@ -227,10 +227,6 @@ label fae_event_check:
     else:
         $ holidayReset()
     
-    
-
-
-
 label ch30_init:
 
     $ persistent.fae_sayori_closed = False
@@ -255,9 +251,6 @@ label ch30_init:
 
         if (datetime.datetime.now() - persistent.fae_last_visit_date).total_seconds() / 604800 >= 2 and persistent._fae_absence_choice is None:
             Sayori.add_regret_quit(fae_regrets.RegretTypes.long_absence)
-            #ats("s_return_long_absence")
-            #reveal()
-            #renpy.jump("cnc")
         
         elif not persistent._fae_player_apology_type_on_quit:
             Affection.calculatedAffectionGain()
@@ -300,20 +293,15 @@ label ch30_init:
                 reveal()
                 renpy.call("cnc")
                 
-    #$ begin_song()
     
     show sayori idle at t11 zorder store.fae_sprites.FAE_SAYORI_ZORDER
-    #show bg spaceroom zorder 1
     hide black with Dissolve(2)
-    #show screen hidden1(True)
     show screen hidden1(True)
 
-    #FALL THRouGH
+    #FALL THROUGH
 label after_holiday:
 
     pass
-
-    
 
 label ch30_loop:
     
@@ -371,8 +359,7 @@ label after_random_pick:
     show screen hidden1(True)
 
     jump ch30_loop
-    
-    #show screen hidden1(True)
+
 
 
 
@@ -383,7 +370,6 @@ label cnc(show_sayori=True):
     if show_sayori:
         show sayori idle at fae_center zorder fae_sprites.FAE_SAYORI_ZORDER
 
-    #show sayori idle at t11 zorder store.fae_sprites.SAYO_ZORDER
     if persistent._event_list:
         $ _chat = persistent._event_list.pop(0)
 
@@ -392,7 +378,7 @@ label cnc(show_sayori=True):
 
             $ Sayori.setInChat(True)
 
-            hide screen hidden1#(True)
+            hide screen hidden1
 
             call expression _chat from _call_expression
     
@@ -412,7 +398,6 @@ label cnc(show_sayori=True):
     
     if "quit" in return_keys:
         $ persistent.fae_sayori_closed = True
-        #$ fae_clearNotifs()
         jump confirm_quit
     
     python:
@@ -433,7 +418,6 @@ label cnc_notify(show_sayori=True):
     if show_sayori:
         show sayori idle at fae_center zorder fae_sprites.FAE_SAYORI_ZORDER
 
-    #show sayori idle at t11 zorder store.fae_sprites.SAYO_ZORDER
     if persistent._event_list:
         $ _chat_notify = persistent._event_list.pop(0)
 
@@ -451,7 +435,7 @@ label cnc_notify(show_sayori=True):
 
             $ Sayori.setInChat(True)
 
-            hide screen hidden1#(True)
+            hide screen hidden1
 
             call expression _chat_notify from _call_expression_10
     
@@ -471,7 +455,6 @@ label cnc_notify(show_sayori=True):
     
     if "quit" in return_keys:
         $ persistent.fae_sayori_closed = True
-        #$ fae_clearNotifs()
         jump confirm_quit
     
     python:
@@ -510,9 +493,3 @@ label force_quit:
             Sayori.add_regret_quit(fae_regrets.RegretTypes.unexpected_quit)
         
         $ renpy.jump("confirm_quit")
-
-
-
-
-
-
