@@ -167,12 +167,7 @@ init 0 python in fae_sky:
             day_sky_image,
             night_sky_image,
             evening_sky_image,
-            dim_image=None,
-            #day_clouds_image=None,
-            #night_clouds_image=None,
-            #day_particles_image=None,
-            #night_particles_image=None,
-            #weather_sfx=None
+            dim_image=None
         ):
             """
             Initializes a new instance of weather.
@@ -189,71 +184,7 @@ init 0 python in fae_sky:
             self.evening_sky_image = evening_sky_image
             self.night_sky_image = night_sky_image
             self.dim_image = dim_image
-            #self.day_particles_image = day_particles_image
-            #self.night_particles_image = night_particles_image
-            #self.weather_sfx = weather_sfx
-    """
-    WEATHER_OVERCAST = FAEWeather(
-        weather_type=FAEWeatherTypes.overcast,
-        day_sky_image="sky day overcast",
-        night_sky_image="sky night overcast",
-        dim_image="dim light",
-        #day_clouds_image="clouds day heavy",
-        #night_clouds_image="clouds night heavy",
-    )
-
-    WEATHER_RAIN = FAEWeather(
-        weather_type=FAEWeatherTypes.rain,
-        day_sky_image="sky day rain",
-        night_sky_image="sky night rain",
-        dim_image="dim medium",
-        day_clouds_image="clouds day heavy",
-        night_clouds_image="clouds night heavy",
-        day_particles_image="particles rain",
-        night_particles_image="particles rain",
-        #weather_sfx="mod_assets/sfx/rain_muffled.ogg"
-    )
-
-    WEATHER_THUNDER = FAEWeather(
-        weather_type=FAEWeatherTypes.thunder,
-        day_sky_image="sky day thunder",
-        night_sky_image="sky night thunder",
-        dim_image="dim heavy",
-        day_clouds_image="clouds day thunder",
-        night_clouds_image="clouds night heavy",
-        day_particles_image="particles rain",
-        night_particles_image="particles rain",
-        #weather_sfx="mod_assets/sfx/rain_muffled.ogg"
-    )
-
-    WEATHER_SNOW = FAEWeather(
-        weather_type=FAEWeatherTypes.snow,
-        day_sky_image="sky day snow",
-        night_sky_image="sky night overcast",
-        dim_image="dim light",
-        day_clouds_image="clouds day light",
-        night_clouds_image="clouds night light",
-        day_particles_image="particles snow",
-        night_particles_image="particles snow",
-    )
-
-    WEATHER_SUNNY = FAEWeather(
-        weather_type=FAEWeatherTypes.sunny,
-        day_sky_image="sky day sunny",
-        night_sky_image="sky night sunny",
-        day_clouds_image="clouds day light",
-        night_clouds_image="clouds night light"
-    )
-    WEATHER_SUNNY1 = FAEWeather(
-        weather_type=FAEWeatherTypes.sunny,
-        day_sky_image="sky day sunny",
-        night_sky_image="sky night sunny",
-        day_clouds_image="clouds day light",
-        night_clouds_image="clouds night light"
-    )
-
-    """
-    
+ 
     WEATHER_SUNNY = FAEWeather(
         weather_type=FAEWeatherTypes.sunny,
         day_sky_image="sky day sunny",
@@ -335,7 +266,5 @@ init 0 python in fae_sky:
         else:
             renpy.hide("dim")
         
-
-        #sky_to_show = weather.day_sky_image if store.fae_is_day() elif store.fae_is_evening() else weather.night_sky_image
 define weather_change_transition = Dissolve(0.75)
 define dim_change_transition = Dissolve(0.25)
