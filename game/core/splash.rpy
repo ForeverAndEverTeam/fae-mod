@@ -306,16 +306,13 @@ label splashscreen:
         scene white
         with Dissolve(1.5)
 
-        #if not persistent._fae_imported_ddlc:
-        #    call import_ddlc_persistent
-        
-        $ persistent.has_launched_before = True
-
-        $ renpy.save_persistent()
-        
-        $ config.allow_skipping = False
-    
     python:
+        
+        persistent.has_launched_before = True
+        renpy.save_persistent()
+        
+        config.allow_skipping = False
+    
         basedir = config.basedir.replace("\\", "/")
 
         with open(basedir + "/game/faerun", "w") as versfile:
@@ -325,11 +322,12 @@ label splashscreen:
         jump autoload
     
     show white
+    python:
 
-    $ persistent.ghost_menu = False
-    $ splash_message = splash_message_default
-    $ config.main_menu_music = audio.s1
-    $ renpy.music.play(config.main_menu_music)
+        persistent.ghost_menu = False
+        splash_message = splash_message_default
+        config.main_menu_music = audio.s1
+        renpy.music.play(config.main_menu_music)
     show intro with Dissolve(0.5, alpha=True)
     pause 2.5
     hide intro with Dissolve(0.5, alpha=True)
@@ -346,7 +344,6 @@ label splashscreen:
 
     if not persistent.fae_first_visit_date:
         $ persistent.fae_first_visit_date = datetime.datetime.now()
-    
 
     return
 
@@ -403,25 +400,17 @@ label autoload:
 
     jump ch30_autoload
 
-
-
-# This label loads the label saved in the autoload variable. 
-
-
 # This label sets the main menu music to Doki Doki Literature Club before the
 # menu starts
 label before_main_menu:
 
-
     $ config.main_menu_music = audio.s1
     
-    #$ store._game_menu_screen = "preferences"
     return
 
 
 label confirm_quit:
-    #python:
-    $ fae_utilities.save_game()
-
-    $ renpy.quit()
+    python:
+        fae_utilities.save_game()
+        renpy.quit()
     return
