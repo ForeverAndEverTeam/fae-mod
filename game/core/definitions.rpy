@@ -652,11 +652,6 @@ define s = DynamicCharacter('s_name', image='sayori', what_prefix='', what_suffi
 
 define _dismiss_pause = config.developer
 
-## Extra Settings Variables
-# This section controls whether the mod is censored or is in let's play mode.
-default persistent.uncensored_mode = False
-default persistent.lets_play = False
-
 ## Variables
 # This section declares variables when the mod runs for the first time on all saves.
 # To make a new persistent variable, make a new variable with the 'persistent.' in it's name
