@@ -279,7 +279,6 @@ init 1 python in fae_sprites:
         "c": FAEArms.cookie,
         "d": FAEArms.cookiebite,
         "e": FAEArms.doublepoint,
-        #"f": FAEArms.leftindex,
         "f": FAEArms.leftrest,
         "g": FAEArms.lefttouch,
         "h": FAEArms.none
@@ -364,9 +363,6 @@ init 1 python in fae_sprites:
     def _exp_renderer(exp_code):
         if len(exp_code) < 6:
             raise ValueError("Invalid expression code: {0}".format(exp_code))
-        
-        #pose = exp_code[-1]
-        #exp_code = exp_code[0]
 
         eyebrows = exp_code[0]
         exp_code = exp_code[1:]
@@ -380,8 +376,6 @@ init 1 python in fae_sprites:
         arms2 = exp_code[0]
         exp_code = exp_code[1:]
 
-        #hair = exp_code[0]
-        #exp_code = exp_code[1:]
 
         eyes = exp_code[0]
         exp_code = exp_code[1:]
@@ -408,12 +402,10 @@ init 1 python in fae_sprites:
             
 
         return {
-            #"pose": POSE_DEF[pose],
             "eyebrows": EYEBROWS_DEF[eyebrows],
             "backarm": BACKARM_DEF[backarm],
             "arms": ARMS_DEF[arms],
             "arms2": ARMS2_DEF[arms2],
-            #"hair": HAIR_DEF[hair],
             "eyes": EYES_DEF[eyes],
             "mouth": MOUTH_DEF[mouth],
             "blush": BLUSH_DEF.get(blush),
@@ -435,8 +427,6 @@ init 1 python in fae_sprites:
 
         renpy.display.image.images[("sayori", exp_code)] = disp
 
-        #if exp_code not in _existing_attr_list:
-        #    _existing_attr_list.append(exp_code)
 
     def _find_target_override(self):
         
