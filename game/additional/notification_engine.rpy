@@ -93,8 +93,3 @@ init python in fae_notifs:
 
         store.fae_utilities.fae_log.warning("Cannot detect current session type, disabling notifications.")
     
-   
-    
-    
-
-
