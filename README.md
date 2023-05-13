@@ -1,156 +1,132 @@
+<p align="center">
+    <img src="https://justnatsuki.club/img/guest/fae/forever_and_ever_logo.png" height="300"/>
+</p>
+<br>
+
 # Forever and Ever (FAE)
-"Forever & Ever" is a mod for the free game [Doki Doki Literature Club](https://www.ddlc.moe) from [Team Salvato](http://teamsalvato.com/). In it, you can become closer to Sayori than ever before! You have all the time in the world to build the perfect relationship with our cinnamon bun as the star of the show. At the heart of the mod, we took a mental health based approach in line with the experiences Sayori had in the original game, so we can hopefully support people by offering a source of positivity, advice, and unconditional understanding. 
+
+_Forever & Ever_ is a mod for the free game [Doki Doki Literature Club](https://www.ddlc.moe) from [Team Salvato](http://teamsalvato.com/).
+
+In it, you can become closer to Sayori than ever before! You have all the time in the world to build the perfect relationship with our cinnamon bun as the star of the show. At the heart of the mod, we took a mental health based approach in line with the experiences Sayori had in the original game, so we can hopefully support people by offering a source of positivity, advice, and unconditional understanding.
+
 Currently we have a whole range of unique dialogue, questions, and games for you and Sayori to enjoy, and we have so many more ideas for the near future! We're very active around the mod and on our discord server and we promise to deliver frequent updates and announcements so there's always something new and exciting to do! 
 Why not get creative and try to add a feature or two yourself? (I'm sure she'd love that!)
 
-Please check the [Releases](https://github.com/ForeverAndEverTeam/fae-mod/releases) page for the latest stable build.
-Also, please don't clone the master branch to download the mod. 
-Use a stable release instead!
+---
 
-## СOMPATIBILITY NOTICE 
-This mod is incompatible with Doki Doki Literature Club Plus. 
-If you own a DDLC+ copy, please download the original game from it's [official website](https://ddlc.moe) to install the mod.
+## Compatability notice
 
-## REPORTING BUGS
-Please report bugs on our [issues](https://github.com/ForeverAndEverTeam/fae-mod/issues) page.
-Please be as detailed as possible when reporting, to make our lives easier when fixing.
+This mod is designed for use with a copy of the original game by Team Salvato, available at from the [official website](https://ddlc.moe).
 
-<details>
-  <summary>NEW CREDITS</summary>
-  
-## DIRECTOR
+*Please note that we do **not** officially support installations using mod management software, nor do we support installations from sources other than our official GitHub. DDLC+ is not supported.*
 
-[Orcaramelo](https://github.com/Orcaramelo)
+---
 
-## PROGRAMMING
+## Installation
 
-[Nathan](https://github.com/TRIDENT1313) (Lead)
+*Use these instructions if you haven't played Forever and Ever before.*
 
-## ART
+**Read the instructions carefully.**
 
-[Orcaramelo](https://github.com/Orcaramelo) (Lead), [Nemu-sus](https://github.com/Nemu-sus)
+1. Download a fresh copy of DDLC from the [official site](https://ddlc.moe). **Do not use a Steam installation**.
+2. Extract/unzip DDLC.
+3. Download the latest release [here](https://github.com/ForeverAndEverTeam/fae-mod/releases): select the ZIP file starting with `Forever.Ever` (I.E `Forever.Ever.V0.1.0.New.Beginnings.zip`). **Do not download the source code, as this will result in future updates failing.**
+4. Extract/unzip the FAE mod files.
+5. Copy everything in the FAE mod files to the DDLC folder. If asked to replace files, select _Yes_.
+6. Delete `scripts.rpa` in the `game` folder of the DDLC folder.
+7. Finally, launch `Forever&Ever.exe` if you are on Windows, or `Forever&Ever.sh` if you are on Linux.
 
-## MUSIC
+---
 
-SlightlyAmiss (Theme), [Multimokia](https://github.com/multimokia) (Music box loop)
+## Updating
 
-## WRITING
+*Use these instructions if you already have Forever and Ever installed.*
 
-Sayori, [Orcaramelo](https://github.com/Orcaramelo), [Emilia/Monika (EYLO)](https://www.reddit.com/u/EmiliaMonika?utm_medium=android_app&utm_source=share), [Otter](https://github.com/my-otter-self), [Nathan](https://github.com/TRIDENT1313), Sobb
+**Read the instructions carefully.**
 
-</details>
+1. Stop Forever and Ever, if you are currently playing the mod.
+2. **Back up your persistent**.
+3. Download the latest release [here](https://github.com/ForeverAndEverTeam/fae-mod/releases): select the ZIP file starting with `Forever.Ever` (I.E `Forever.Ever.V0.1.0.New.Beginnings.zip`). **Do not download the source code, as this will result in future updates failing.**
+4. Extract/unzip the FAE release files.
+5. Copy everything in the FAE release files to the DDLC folder. If asked to replace files, select _Yes_.
+6. Finally, launch `Forever&Ever.exe` if you are on Windows, or `Forever&Ever.sh` if you are on Linux.
 
-<details>
-  <summary>SPECIAL THANKS</summary>
-  
-[Emilia/Monika (EYLO)](https://www.reddit.com/u/EmiliaMonika?utm_medium=android_app&utm_source=share), [Nathan](https://github.com/TRIDENT1313)
+---
 
+## Bugs and feedback
 
-Team Salvato and Team Monika, The "Just Natsuki" team, Independent supporters of "Just {doki_name}" mod, The Ren'Py developer team, The Reddit DDLC community, The Russian DDLC community
+To report bugs, request support or provide input with/to the mod, please raise a new issue [here](https://github.com/ForeverAndEverTeam/fae-mod/issues).
 
-</details>
+---
 
-<details>
-  <summary>LEGACY CREDITS</summary>
+# Brought to you by
 
-## Project Lead:
-Alexander Osipov (aka AlexanDDOS, GitHub, Reddit, VK, FB)
+## Current contributors
 
-## Programming:
+_Bottling up those happy thoughts!_
 
-AlexanDDOS
+- [Orcaramelo](https://github.com/Orcaramelo): Project Lead, Lead Artist, Writer
+- [Nathan](https://github.com/TRIDENT1313): Lead Developer, Writer
+- [Sayori](https://www.youtube.com/channel/UCwH1ro8D7kE73jhkWU3APkA): Lead Writer, Musician
+- [Emilia/Monika (EYLO)](https://www.reddit.com/u/EmiliaMonika?utm_medium=android_app&utm_source=share): Writer
 
-vignedev
+## Previous contributors
 
-Dan Salvato (original scripts)
+_Thank you for your help in bringing FaE to life - we wouldn't be here without you!_
 
-DDLC Mod Template team (mod base)
+- [Otter](https://github.com/my-otter-self): Writer
+- [Nemu-sus](https://github.com/Nemu-sus): Artist
+- [NekoLaiS](https://github.com/NekoLaiS): Programmer
+- Sobbcat: Writer
+- SlightlyAmiss: Musician
+- [AlexanDDOS](https://github.com/AlexanDDOS): Project Lead, Lead Developer, Writer, Tester
+- ElReyZero: Programmer
+- Venus: Writer
+- tberriman: Proofreader
+- vermicellibug: Proofreader
+- Atlas: Proofreader
+- Lucian Pavel: Artist
+- Vova Petelin: Translator (Russian)
+- ElReyZero: Translator (Spanish)
+- littlebin: Translator (Chinese), Tester
+- Leon9023: Tester
+- Evgeny Zotov: Tester
+- MarioXenobladefan614: Tester
 
-ElReyZero (small fixes)
+## Special thanks
 
-## Old Sayori Sprite Artists:
+- [Monika After Story Team](https://github.com/Monika-After-Story/MonikaModDev)
+  - Adapted source code and systems used with permission
+  - Weather assets used with permission
+  - Ongoing support
+- [Just Natsuki Team](https://github.com/Just-Natsuki-Team/NatsukiModDev)
+  - Adapted source code and systems used with permission
+  - Weather assets used with permission
+  - Ongoing support
+- [multimokia](https://github.com/multimokia): Night theme (_Slepyori_)
+- [/r/DDLC](reddit.com/r/ddlc/)
+- Pipe98x: SFX (drawing cross)
+- sirrealist2: SFX (drawing circle/line)
+- Fj0rd_: Prerelease Sayori spritework
+- **Our community, for your ongoing patience and support**
 
-Excluded since 0.4.0
+_You're all awesome!_
 
-Fj0rd_ (Reddit, the original Sayori art)
+---
 
-AlexanDDOS (Sprite compositor & editor)
+# Community
 
-## New Sayori Sprite Artists:
+Follow us on [Twitter!](https://twitter.com/JustSayoriDev)
 
-Orcaramelo
+Interested in taking part in a growing community of Sayori fans just like you, or just a chat with the team?
 
-Nemu-sus
+If so, then please consider joining us on Discord: we'd love to see you there!
 
-AlexanDDOS (Sprite compositor)
+**Please note we do not handle technical support or mod suggestions on Discord.**
 
-## Misc Arts & Edits:
-
-AlexanDDOS (Sprite edits)
-
-Team Salvato artists (original sprites)
-
-Lucian Pavel (Santa hat original model, excluded from the stable version)
-
-## Writers (without proofreading and translation):
-
-AlexanDDOS
-
-Orcaramelo
-
-Venus
-
-## Proofreaders:
-
-tberriman
-
-vermicellibug
-
-Atlas
-
-## Translators:
-
-AlexanDDOS (Russian, Esperanto & Toki Pona (WIP))
-
-Vova Petelin (Russian)
-ElReyZero (Spanish)
-
-littlebin (Chinese)
-
-## SFX:
-
-Pipe98x (drawing cross)
-
-sirrealist2 (drawing circle/line)
-
-## Testers & Platinum Troubleshooters:
-
-AlexanDDOS
-
-Leon9023 (Reddit, VK)
-
-Evgeny Zotov
-
-littlebin
-
-MarioXenobladefan614
-
-</details>
-
-<details>
-  <summary>License & Copyright</summary>
-  
-See "LICENSE" for license information
-
-Made in accordance with Team Salvato's IP Guidelines
-
-Copyright (c) 2018-2022 Alexander Osipov and the other creators
-
-</details>
-
-### Community
-You can [follow us on twitter](https://twitter.com/JustSayoriDev) for game updates.
-
-Feel free to join our discord server too:
-
- [![Discord](banner)](https://discord.gg/ZqfEddFKux)
+<br>
+<p align="center">
+    <a href="https://discord.gg/GswMG6RU">
+        <img src="https://discordapp.com/api/guilds/762798961437311016/widget.png?style=banner4"/>
+    </a>
+</p>
