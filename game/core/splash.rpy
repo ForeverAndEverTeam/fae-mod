@@ -322,12 +322,13 @@ label splashscreen:
         jump autoload
     
     show white
-    python:
 
+    python:
         persistent.ghost_menu = False
         splash_message = splash_message_default
         config.main_menu_music = audio.s1
         renpy.music.play(config.main_menu_music)
+    
     show intro with Dissolve(0.5, alpha=True)
     pause 2.5
     hide intro with Dissolve(0.5, alpha=True)
@@ -339,8 +340,6 @@ label splashscreen:
     pause 2.0
     hide splash_warning with Dissolve(0.5, alpha=True)
     $ config.allow_skipping = False
-
-    
 
     if not persistent.fae_first_visit_date:
         $ persistent.fae_first_visit_date = datetime.datetime.now()
@@ -356,11 +355,12 @@ label warningscreen:
 # This label checks if the save loaded matches the anti-cheat stored in the save.
 label after_load:
 
+    python:
 
-    $ config.allow_skipping = False
-    $ _dismiss_pause = config.developer
-    $ persistent.ghost_menu = False
-    $ style.say_dialogue = style.normal
+        config.allow_skipping = False
+        _dismiss_pause = config.developer
+        persistent.ghost_menu = False
+        style.say_dialogue = style.normal
 
     if anticheat != persistent.anticheat:
         stop music
