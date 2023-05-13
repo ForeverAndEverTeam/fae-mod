@@ -114,8 +114,8 @@ init -999 python in fae_utilities:
             try:
                 os.remove(path)
                 return True
-            except Exception as exception:
-                fae_log("Failed to delete file on path {0}; {1}".format(path, exception.message))
+            except Exception as e:
+                fae_log("Failed to delete file on path {0}; {1}".format(path, e.message))
                 return False
         else:
             renpy.notify("File doesn't exist.")
