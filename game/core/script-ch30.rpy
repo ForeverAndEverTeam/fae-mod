@@ -126,7 +126,6 @@ label ch30_autoload:
     python:
         quick_menu = True
         style.say_dialogue = style.normal
-        in_sayori_kill = None
         
         if not config.developer:
             config.allow_skipping = False
@@ -274,8 +273,6 @@ label after_holiday:
     pass
 
 label ch30_loop:
-    
-    call spaceroom(False, None) from _call_spaceroom
 
     $ init_qabs()
 
