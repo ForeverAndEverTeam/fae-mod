@@ -834,6 +834,13 @@ init -1 python:
 
     def fae_isSpecialDay():
 
+        """
+        Checks if today is a special day(birthday, anniversary or holiday)
+
+        RETURNS:
+            boolean indicating if today is a special day.
+        """
+
         return (
             fae_isO31()
             or fae_isD25()

@@ -618,18 +618,4 @@ init python:
     def refresh():
         renpy.show("sayori idle normal")
 
-label fae_show_empty_desk(hide_dlg_box=True):
-    if hide_dlg_box:
-        window hide
-    $ store.fae_sprites.show_empty_desk()
-    hide sayori with dissolve_sayori
-    return
 
-label fae_return_desk(exp="sayori abhfaaa", show_dlg_box=True):
-
-    if show_dlg_box:
-        window auto
-    $ renpy.show(exp, tag="sayori", at_list=[i11], zorder=store.fae_sprites.FAE_SAYORI_ZORDER)
-    $ renpy.with_statement(dissolve_sayori)
-    hide emptydesk
-    return

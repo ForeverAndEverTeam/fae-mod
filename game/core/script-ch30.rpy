@@ -96,36 +96,6 @@ init python:
             setattr(store, word, value)
         
 
-
-label spaceroom(scene_change=True, sayori_exp=None, dissolve_all=False, hide_sayori=False, show_empty_desk=True):
-
-    if scene_change:
-        scene black
-        hide black
-        $ main_background.form()
-        
-        $ fae_sky.reload_sky()
-    python:
-
-        if hide_sayori:
-            if not scene_change:
-                renpy.hide("sayori")
-            if show_empty_desk:
-                store.fae_sprites.show_empty_desk()
-        else:
-
-            if sayori_exp is None:
-                sayori_exp = "sayori idle"
-            
-            if not renpy.showing(sayori_exp):
-                renpy.show(sayori_exp, tag="sayori", at_list=[t11], zorder=store.fae_sprites.FAE_SAYORI_ZORDER)
-
-                if not dissolve_all:
-                    renpy.with_statement(None)
-    
-    window hide
-    return
-
 label ch30_main:
 
     $ quick_menu = True
