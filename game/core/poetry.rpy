@@ -189,7 +189,6 @@ init 10 python in fae_poems:
 
     
 
-
     # These variables declare each poem for the characters' in the game for
     # the poem sharing mini-game.
 
