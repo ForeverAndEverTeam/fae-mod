@@ -185,8 +185,10 @@ init 10 python in fae_poems:
 
     poem_list = list()
 
-    poem_list.append("sunshine")
-    poem_list.append("bottles")
+    poem_list = ["sunshine", "bottles", "flower", "last", "angel", "last", "fruits", "leaf", "prose", "afterlight"]
+
+    
+
 
     # These variables declare each poem for the characters' in the game for
     # the poem sharing mini-game.
