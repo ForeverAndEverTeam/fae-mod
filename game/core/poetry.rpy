@@ -141,7 +141,7 @@ init 10 python in fae_poems:
         if poem is None:
             return
         
-        if not isinstance(poem, Poem):
+        if not isinstance(poem, FAEPoem):
             raise TypeError(f"poem must be a Poem instance, not {type(poem).__name__}")
     
         
