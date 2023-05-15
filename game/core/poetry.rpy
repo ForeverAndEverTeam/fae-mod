@@ -1,5 +1,5 @@
-init 10 python in fae_poems:
-    import store
+
+init 1 python in fae_poems:
 
     class Author(object):
         """
@@ -20,7 +20,7 @@ init 10 python in fae_poems:
     
     author_s = Author("sayori")
 
-    class FAEPoem(renpy.text.text.Text):
+    class Poem(renpy.text.text.Text):
         """
         `author`: str | Author
             The author (no way!!!) of the poem. Either a string or an `Author` instance, and if it's the case,
@@ -78,7 +78,7 @@ init 10 python in fae_poems:
 
             poem = title + ("\n\n" + text if separate_title_from_text and title else text)
 
-            super(FAEPoem, self).__init__(poem, style=style, **properties)
+            super(Poem, self).__init__(poem, style=style, **properties)
             
             self.author = author
             self.paper = renpy.easy.displayable_or_none(paper) or Null()
@@ -115,7 +115,7 @@ init 10 python in fae_poems:
 
         return music
 
-    def show_poem(poem):
+    def show_poem(poem, paper_sound=audio.page_turn, music=True, from_current=True, revert_music=True):
         """
         Call this function to show a poem from a label.
 
@@ -141,13 +141,22 @@ init 10 python in fae_poems:
         if poem is None:
             return
         
-        if not isinstance(poem, FAEPoem):
+        if not isinstance(poem, Poem):
             raise TypeError(f"poem must be a Poem instance, not {type(poem).__name__}")
     
-        
+        if paper_sound is not None:
+            renpy.sound.play(paper_sound)
 
         _window_hide()
 
+        if music is True:
+            music = poem.music
+
+        if music:
+            previous_music = renpy.music.get_playing()
+            music = format_music_string(music, get_pos()) if from_current else music
+            renpy.music.play(music, "music_poem", loop=True, fadein=2.0)
+            renpy.music.stop(fadeout=2.0)
         
         allow_skipping = config.allow_skipping
         config.allow_skipping = False
@@ -160,13 +169,20 @@ init 10 python in fae_poems:
         renpy.hide_screen("poem")
         renpy.transition(dissolve)
 
+        if not persistent.first_poem:
+            persistent.first_poem = True
+
         config.allow_skipping = allow_skipping
         store._skipping = skipping
         
-       
+        if music and revert_music:
+            if previous_music:
+                previous_music = format_music_string(previous_music, get_pos("music_poem")) if from_current else previous_music
+                renpy.music.play(previous_music, loop=True, fadein=2.0)
+
+            renpy.music.stop("music_poem", fadeout=2.0)
+        
         store._window_auto = True
-
-
 
 
     #TODO: MAKE SCREEN AND STUFF
@@ -174,7 +190,7 @@ init 10 python in fae_poems:
     # These variables declare each poem for the characters' in the game for
     # the poem sharing mini-game.
 
-    long_wait = FAEPoem(
+    long_wait = Poem(
         author_s,
         title=_(""),
         text=_("""\
@@ -186,7 +202,7 @@ Taking a very long nap\n
     )
 
 
-    poem_sunshine = FAEPoem(
+    poem_sunshine = Poem(
         author_s,
         title =_("Dear Sunshine"),
         text = _("""\
@@ -205,7 +221,7 @@ I want breakfast."""
     )
 
 #Bottles
-    poem_bottles = FAEPoem(
+    poem_bottles = Poem(
         author_s,
         title = _("Bottles"),
         text = _("""\
@@ -247,7 +263,7 @@ Inside my head."""
 
 
 #The Last Flower (name by AlexanDDOS)
-    poem_flower = FAEPoem(
+    poem_flower = Poem(
         author_s,
         title = _("The Last Flower"),
         text=("""\
@@ -264,7 +280,7 @@ Is but a barren wasteland!"""
 
 
 #Get Out of My Head (aka %)
-    poem_last = FAEPoem(
+    poem_last = Poem(
         author_s,
         title = _("%"),
         text = _("""\
@@ -284,7 +300,7 @@ It just stops moving."""
     )
     
 #Fruits of the life (by AlexanDDOS)
-    poem_fruits = FAEPoem(
+    poem_fruits = Poem(
         author_s,
         title = _("Fruits of life"),
         text = _("""\
@@ -309,7 +325,7 @@ Finding a way to make others taste their fruits the same."""
 
 
 #Fallen Angel (By AlexanDDOS)
-    poem_angel = FAEPoem(
+    poem_angel = Poem(
         author_s,
         title = _("Fallen Angel"),
         text = _("""\
@@ -336,7 +352,7 @@ Is this not what you want to do with me after all?"""
     
 
 # A Leaf (By AlexanDDOS)
-    poem_leaf = FAEPoem(
+    poem_leaf = Poem(
         author_s,
         title = _("A Leaf"),
         text = _("""\
@@ -375,7 +391,7 @@ Like I can be more than just a half-dead leaf."""
     
 
     # Prose Poem (By AlexanDDOS)
-    poem_prose = FAEPoem(
+    poem_prose = Poem(
         author_s,
         title = _("Prose Poem"),
         text = _("""\
@@ -391,7 +407,7 @@ Just like there's nothing completely white."""
     )
         
     # Afterlight (By AlexanDDOS)
-    poem_afterlight = FAEPoem(
+    poem_afterlight = Poem(
         author_s,
         title = _("Afterlight"),
         text = _("""\
@@ -415,7 +431,7 @@ Where nobody can avoid the pain."""
 
 # A Valentine (By AlexanDDOS)
 # Call with these args: (poem_val, "paper_val", 200, 0.5, 360)
-    poem_val = FAEPoem(
+    poem_val = Poem(
         author_s,
         title = _("A Valentine"),
         text = _("""\
@@ -502,7 +518,7 @@ label poem_list:
 
         poem_list = list()
 
-        poem_list = [((_("sunshine"), "poem_sunshine")), ((_("bottles"), "poem_bottles")), ((_("flower"), "poem_flower")), ((_("last"), "poem_last")), ((_("angel"), "poem_angel")), ((_("fruits"), "poem_fruits")), ((_("leaf"), "poem_leaf")), ((_("prose"), "poem_prose")), ((_("afterlight"), "poem_afterlight")), ((_("nevermind"), "nevermind"))] 
+        poem_list = [((_("sunshine"), poem_sunshine)), ((_("bottles"), poem_bottles)), ((_("flower"), "poem_flower")), ((_("last"), "poem_last")), ((_("angel"), "poem_angel")), ((_("fruits"), "poem_fruits")), ((_("leaf"), "poem_leaf")), ((_("prose"), "poem_prose")), ((_("afterlight"), "poem_afterlight")), ((_("nevermind"), "nevermind"))] 
 
         madechoice = renpy.display_menu(poem_list, screen="talk_choice")
 
