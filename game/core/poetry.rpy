@@ -1,4 +1,5 @@
 init 10 python in fae_poems:
+    import store
 
     class Author(object):
         """
@@ -505,9 +506,8 @@ label poem_list:
 
         madechoice = renpy.display_menu(poem_list, screen="talk_choice")
 
-    if madechoice == "nevermind":
-        return
-
-    $ showpoem(madechoice)
+    if not madechoice == "nevermind":
+        $ fae_poems.show_poem(madechoice)
+    
 
     return
