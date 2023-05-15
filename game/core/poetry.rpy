@@ -17,7 +17,7 @@ init 10 python in fae_poems:
             self.separate_title_from_text = separate_title_from_text
             self.music = music
     
-    author_s = Author("sayori", music=audio.tsayori)
+    author_s = Author("sayori")
 
     class FAEPoem(renpy.text.text.Text):
         """
@@ -77,7 +77,7 @@ init 10 python in fae_poems:
 
             poem = title + ("\n\n" + text if separate_title_from_text and title else text)
 
-            super(Poem, self).__init__(poem, style=style, **properties)
+            super(FAEPoem, self).__init__(poem, style=style, **properties)
             
             self.author = author
             self.paper = renpy.easy.displayable_or_none(paper) or Null()
@@ -114,7 +114,7 @@ init 10 python in fae_poems:
 
         return music
 
-    def show_poem(poem, paper_sound=audio.page_turn, music=True, from_current=True, revert_music=True):
+    def show_poem(poem):
         """
         Call this function to show a poem from a label.
 
@@ -143,19 +143,10 @@ init 10 python in fae_poems:
         if not isinstance(poem, Poem):
             raise TypeError(f"poem must be a Poem instance, not {type(poem).__name__}")
     
-        if paper_sound is not None:
-            renpy.sound.play(paper_sound)
+        
 
         _window_hide()
 
-        if music is True:
-            music = poem.music
-
-        if music:
-            previous_music = renpy.music.get_playing()
-            music = format_music_string(music, get_pos()) if from_current else music
-            renpy.music.play(music, "music_poem", loop=True, fadein=2.0)
-            renpy.music.stop(fadeout=2.0)
         
         allow_skipping = config.allow_skipping
         config.allow_skipping = False
@@ -168,19 +159,10 @@ init 10 python in fae_poems:
         renpy.hide_screen("poem")
         renpy.transition(dissolve)
 
-        if not persistent.first_poem:
-            persistent.first_poem = True
-
         config.allow_skipping = allow_skipping
         store._skipping = skipping
         
-        if music and revert_music:
-            if previous_music:
-                previous_music = format_music_string(previous_music, get_pos("music_poem")) if from_current else previous_music
-                renpy.music.play(previous_music, loop=True, fadein=2.0)
-
-            renpy.music.stop("music_poem", fadeout=2.0)
-        
+       
         store._window_auto = True
 
 
@@ -523,9 +505,9 @@ label poem_list:
 
         madechoice = renpy.display_menu(poem_list, screen="talk_choice")
 
-        if madechoice == "nevermind":
-            return
+    if madechoice == "nevermind":
+        return
 
-        showpoem(madechoice)
+    $ showpoem(madechoice)
 
     return
