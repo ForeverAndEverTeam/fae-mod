@@ -183,11 +183,8 @@ init 10 python in fae_poems:
         
         store._window_auto = True
 
-    poem_list = list()
 
-    poem_list = ["sunshine", "bottles", "flower", "last", "angel", "last", "fruits", "leaf", "prose", "afterlight"]
 
-    madechoice = renpy.display_menu(poem_list, screen="talk_choice")
 
     #TODO: MAKE SCREEN AND STUFF
 
@@ -513,4 +510,22 @@ default poem_last_author = None
 # Depreciation Warning
 label showpoem(poem, **properties):
     "This feature is now depreciated. Please use {i}$ show_poem(){/i} instead.\nRefer to {u}poem_responses/poems.rpy{/u}on how to call a poem anew."
+    return
+
+
+label poem_list:
+    
+    python:
+
+        poem_list = list()
+
+        poem_list = [((_("sunshine"), "sunshine")), ((_("bottles"), "bottles")), ((_("flower"), "flower")), ((_("last"), "last")), ((_("angel"), "angel")), ((_("fruits"), "fruits")), ((_("leaf"), "leaf")), ((_("prose"), "prose")), ((_("afterlight"), "afterlight")), ((_("nevermind"), "nevermind"))] 
+
+        madechoice = renpy.display_menu(poem_list, screen="talk_choice")
+
+        if madechoice == "nevermind":
+            return
+
+        showpoem(madechoice)
+
     return

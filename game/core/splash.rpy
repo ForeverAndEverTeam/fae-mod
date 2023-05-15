@@ -276,7 +276,7 @@ label splashscreen:
         if RELOADCHECK():
             raise InstallError("Please re-install the mod")
         
-        if renpy.android():
+        if renpy.android:
             fae_utilities.log("UNSUPPORTED PLATFORM DETECTED. RE-INSTALL MOD ON A SUPPORTED PLATFORM")
             renpy.quit()
         
