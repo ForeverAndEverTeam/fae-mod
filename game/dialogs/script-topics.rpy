@@ -2165,69 +2165,7 @@ init 5 python:
 label s_answer_read:
     s  ebbcaoa "Okay! Just pick the one you want to read."
 
-    python:
-
-        poetry_list = [
-            #("The Life of a Hopeless Romantic", poem_d_day)#, False, False)
-            ("Bottles", poem_bottles, False, False),
-            ("Sunshine", poem_sunshine, False, False),
-            ("Flower", poem_flower, False, False),
-            ("Last", poem_last, False, False),
-            ("Fruits", poem_fruits, False, False),
-            ("Angel", poem_angel, False, False),
-            ("Leaf", poem_leaf, False, False),
-            ("Prose", poem_prose, False, False),
-            ("Afterlight", poem_afterlight, False, False)
-        ]
-
-        ret_back = ("Nevermind", False, False, False, 20)
-
-        #poetry_list.extend(fae_poems.gsp())
-
-
-    call screen fae_gen_scrollable_menu(poetry_list, fae_ui.SCROLLABLE_MENU_TXT_MEDIUM_AREA, fae_ui.SCROLLABLE_MENU_XALIGN, ret_back)
-
-
-    $ _poem = _return
-
-    if not _poem:
-        return "prompt"
-
-    if _poem == poem_bottles:
-        call fae_showpoem(_poem)
-        
-
-    elif _poem == poem_sunshine:
-        call fae_showpoem(_poem)
-        
-    
-    elif _poem == poem_flower:
-        call fae_showpoem(_poem)
-        
-
-    elif _poem == poem_last:
-        call fae_showpoem(_poem)
-        
-    
-    elif _poem == poem_fruits:
-        call fae_showpoem(_poem)
-        
-    
-    elif _poem == poem_angel:
-        call fae_showpoem(_poem)
-        
-    
-    elif _poem == poem_leaf:
-        call fae_showpoem(_poem)
-        
-    
-    elif _poem == poem_prose:
-        call fae_showpoem(_poem)
-        
-    
-    elif _poem == poem_afterlight:
-        call fae_showpoem(_poem)
-        
+    call poem_list      
 
     return
 

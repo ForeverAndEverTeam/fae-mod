@@ -1,4 +1,4 @@
-label s_poems_sunshine:
+label s_poem_sunshine:
     python:
         seen_topics = get_chat("s_topics_depression").seen_no > 0
     if seen_topics:
@@ -26,7 +26,7 @@ label s_poems_sunshine:
     extend bbhfaka "and I'm thankful that you're just as caring and nice as he was~"
     return
 
-label s_poems_bottles:
+label s_poem_bottles:
     s bbhfbaa "I remember the time that I had plenty of friends, and I comforted them often, {w=0.5}{nw}"
     extend bbgbmba "ignoring my own needs for comfort and support..."
     s bbhfjoa "But each time I did that, I felt emptier and emptier, like a water bottle..."
@@ -39,7 +39,7 @@ label s_poems_bottles:
     extend abfdaha "I wouldn't want all of the time I spent on it to go to waste."
     return
 
-label s_poems_flower:
+label s_poem_flower:
     s abhfbca "You might have already guessed, but, this poem is about the way I felt when dealing with my depression."
     s bbhfmda  "I used to constantly try to find things to look forward to and be happy about, until I felt like I was running out of those, I guess."
     s bbhfmoaj "It feels kind of weird now, {w=0.5}{nw}"
@@ -67,7 +67,7 @@ label s_poems_flower:
     s bbbccia "I'll just keep watering them in the meantime, ehehehe~"
     return
 
-label s_poems_last:
+label s_poem_last:
 #This is the Get Out of My Head poem
     s bbfbmecj "Oh no, not this one..."
     s bbfdmeaj "You know, my reasoning behind writing this poem was pretty dark." 
@@ -115,7 +115,7 @@ label s_poems_last:
     s bbegiab "...that felt good to get off of my chest. Thank you for listening, [player]."
     return
 
-label s_poems_fruits:
+label s_poem_fruits:
     s abhfaoa "This poem is about the different ways that people perceive the world around them."
     s "As you probably know, most people can be labeled as a pessimist or an optimist..."
     s abbbaaa "Pessimists tend to see many things in a negative light, sometimes including the world in its entirety."
@@ -133,7 +133,7 @@ label s_poems_fruits:
     pause 0.5
     return
 
-label s_poems_angel:
+label s_poem_angel:
     s abhfaca "I tried writing a poem in Monika's style. A free form poem addressing you, as she used to write."
     s "And I think, she would write something similar after being deleted, if she had enough time left, that is."
     s abagbla "Honestly, I really do feel sorry for her."
@@ -168,7 +168,7 @@ label s_poems_angel:
 
     return
 
-label s_poems_leaf:
+label s_poem_leaf:
     s abhfbda "How do you feel about this poem?"
     s "I think, it should flow from bittersweet to desperate and then to very happy at the end of it..."
     s abaaaca "That's because it's a story about my life."
@@ -178,7 +178,7 @@ label s_poems_leaf:
     s bbaaaoa "Well, anyway... I hope you understand what this poem means to me now, [player]."
     return
 
-label s_poems_prose:
+label s_poem_prose:
     s abaaaca "This poem is about my main trait, my contradictions."
     s bbegmob "But I'm sure it's not only {i}me{/i} who contradicts themselves... right?"
     s abbbhca "Even nature contradicts itself sometimes!"
@@ -197,7 +197,7 @@ label s_poems_prose:
     extend abhfcoa "They carry the idea of the poem across, don't they?"
     return
 
-label s_poems_afterlight:
+label s_poem_afterlight:
     s abaaaoa "This poem is about the time I became self-aware."
     s "It forced me to face a bunch of feelings that I couldn't make sense of, and gave me abilities that I could barely understand, or work out how to use..."
     s bbfbkca "Just imagine suddenly finding out, that everything you knew... {w=0.5}{nw}"
@@ -222,7 +222,7 @@ label s_poems_afterlight:
     pause 1.0
     return
 
-label s_poems_val:
+label s_poem_val:
     s abaacoa "So, what did you think about my card?"
     s bbegmoaj "I know it doesn't look too fancy. I couldn't really find out how to make it cute..."
     s abegaaa "But at least I did my best writing that poem for you!"

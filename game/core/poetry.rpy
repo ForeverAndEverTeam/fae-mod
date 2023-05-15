@@ -1,5 +1,5 @@
 
-init 1 python in fae_poems:
+init 1 python:
 
     class Author(object):
         """
@@ -115,7 +115,7 @@ init 1 python in fae_poems:
 
         return music
 
-    def show_poem(poem, paper_sound=audio.page_turn, music=True, from_current=True, revert_music=True):
+    def showmadechoice(poem, paper_sound=audio.page_turn, music=True, from_current=True, revert_music=True):
         """
         Call this function to show a poem from a label.
 
@@ -155,7 +155,7 @@ init 1 python in fae_poems:
         if music:
             previous_music = renpy.music.get_playing()
             music = format_music_string(music, get_pos()) if from_current else music
-            renpy.music.play(music, "music_poem", loop=True, fadein=2.0)
+            renpy.music.play(music, "musicmadechoice", loop=True, fadein=2.0)
             renpy.music.stop(fadeout=2.0)
         
         allow_skipping = config.allow_skipping
@@ -169,18 +169,18 @@ init 1 python in fae_poems:
         renpy.hide_screen("poem")
         renpy.transition(dissolve)
 
-        if not persistent.first_poem:
-            persistent.first_poem = True
+        if not persistent.firstmadechoice:
+            persistent.firstmadechoice = True
 
         config.allow_skipping = allow_skipping
         store._skipping = skipping
         
         if music and revert_music:
             if previous_music:
-                previous_music = format_music_string(previous_music, get_pos("music_poem")) if from_current else previous_music
+                previous_music = format_music_string(previous_music, get_pos("musicmadechoice")) if from_current else previous_music
                 renpy.music.play(previous_music, loop=True, fadein=2.0)
 
-            renpy.music.stop("music_poem", fadeout=2.0)
+            renpy.music.stop("musicmadechoice", fadeout=2.0)
         
         store._window_auto = True
 
@@ -468,7 +468,7 @@ screen poem(poem):
 
                 vbar value YScrollValue("poem_vp")
         
-    if not persistent.first_poem:
+    if not persistent.firstmadechoice:
         add "gui/poem_dismiss.png" xpos 1050 ypos 590
     
     key ["repeat_K_UP", "K_UP"] action Scroll("poem_vp", "vertical decrease", 20)
@@ -478,8 +478,8 @@ screen poem(poem):
 
 style poem_vscrollbar:
     xsize 20
-    base_bar Frame("gui/scrollbar/vertical_poem_bar.png", tile=False)
-    thumb Frame("gui/scrollbar/vertical_poem_thumb.png", left=6, top=6, tile=True)
+    base_bar Frame("gui/scrollbar/verticalmadechoice_bar.png", tile=False)
+    thumb Frame("gui/scrollbar/verticalmadechoice_thumb.png", left=6, top=6, tile=True)
     unscrollable "hide"
     bar_invert True
 
@@ -508,7 +508,7 @@ default poem_last_author = None
 
 # Depreciation Warning
 label showpoem(poem, **properties):
-    "This feature is now depreciated. Please use {i}$ show_poem(){/i} instead.\nRefer to {u}poem_responses/poems.rpy{/u}on how to call a poem anew."
+    "This feature is now depreciated. Please use {i}$ showmadechoice(){/i} instead.\nRefer to {u}poem_responses/poems.rpy{/u}on how to call a poem anew."
     return
 
 
@@ -523,7 +523,72 @@ label poem_list:
         madechoice = renpy.display_menu(poem_list, screen="talk_choice")
 
     if not madechoice == "nevermind":
-        $ fae_poems.show_poem(madechoice)
+        $ faemadechoices.showmadechoice(madechoice)
     
 
     return
+
+
+
+
+init 5 python:
+
+    chatReg(
+        Chat(
+            persistent._chat_db,
+            label="poem_redux",
+            unlocked=True,
+            prompt="Let's talk about a poem",
+            random=False,
+            category=["Poetry"]
+        ),
+        chat_group=CHAT_GROUP_NORMAL
+    )
+
+label poem_redux:
+    python:
+
+        poem_list = [((_("sunshine"), poem_sunshine)), ((_("bottles"), poem_bottles)), ((_("flower"), poem_flower)), ((_("last"), poem_last)), ((_("angel"), poem_angel)), ((_("fruits"), poem_fruits)), ((_("leaf"), poem_leaf)), ((_("prose"), poem_prose)), ((_("afterlight"), poem_afterlight)), ((_("nevermind"), "nevermind"))] 
+
+        madechoice = renpy.display_menu(poem_list, screen="talk_choice")
+
+    if madechoice == "nevermind":
+        return
+    
+    if madechoice == poem_bottles:
+        call s_poems_bottles
+        return
+
+    elif madechoice == poem_sunshine:
+        call s_poems_sunshine
+        return
+    
+    elif madechoice == poem_flower:
+        call s_poems_flower
+        return
+    elif madechoice == poem_last:
+        call s_poems_last
+        return
+    
+    elif madechoice == poem_fruits:
+        call s_poems_fruits
+        return
+    
+    elif madechoice == poem_angel:
+        call s_poems_angel
+        return
+    
+    elif madechoice == poem_leaf:
+        call s_poems_leaf
+        return
+    
+    elif madechoice == poem_prose:
+        call s_poems_prose
+        return
+    
+    elif madechoice == poem_afterlight:
+        call s_poems_afterlight
+    return
+    
+    
+
