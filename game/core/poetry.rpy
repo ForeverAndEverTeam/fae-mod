@@ -561,7 +561,7 @@ label poem_redux:
             ((_("nevermind"), "nevermind"))
             ] 
 
-        madechoice = renpy.display_menu(poem_list, screen="talk_choice")
+        madechoice = renpy.display_menu(poem_list, screen="scroll")
 
     if madechoice == "nevermind":
         return
