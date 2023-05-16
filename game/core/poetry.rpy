@@ -523,7 +523,7 @@ label poem_list:
         madechoice = renpy.display_menu(poem_list, screen="scroll")
 
     if not madechoice == "nevermind":
-        $ faemadechoices.showmadechoice(madechoice)
+        $ show_poem(madechoice)
     
 
     return
