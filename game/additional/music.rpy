@@ -16,7 +16,7 @@ init -1 python in fae_music:
     
     def mute():
 
-        renpy.music.stop
+        renpy.music.set_volume(0)
     
 
 label music_menu:
