@@ -104,7 +104,7 @@ _Thank you for your help in bringing FaE to life - we wouldn't be here without y
   - Weather assets used with permission
   - Ongoing support
 - [multimokia](https://github.com/multimokia): Night theme (_Slepyori_)
-- [/r/DDLC](reddit.com/r/ddlc/)
+- [/r/DDLCMods](reddit.com/r/ddlcmods/)
 - Pipe98x: SFX (drawing cross)
 - sirrealist2: SFX (drawing circle/line)
 - Fj0rd_: Prerelease Sayori spritework
@@ -122,7 +122,6 @@ Interested in taking part in a growing community of Sayori fans just like you, o
 
 If so, then please consider joining us on Discord: we'd love to see you there!
 
-**Please note we do not handle technical support or mod suggestions on Discord.**
 
 <br>
 <p align="center">
