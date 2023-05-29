@@ -67,7 +67,7 @@ _Bottling up those happy thoughts!_
 
 - [Orcaramelo](https://github.com/Orcaramelo): Project Lead, Lead Artist, Writer
 - [Nathan](https://github.com/TRIDENT1313): Lead Developer, Writer
-- [Sayori](https://www.youtube.com/channel/UCwH1ro8D7kE73jhkWU3APkA): Lead Writer, Musician
+- Sayori: Lead Writer, Musician
 - [Emilia/Monika (EYLO)](https://www.reddit.com/u/EmiliaMonika?utm_medium=android_app&utm_source=share): Writer
 
 ## Previous contributors
@@ -120,12 +120,4 @@ Follow us on [Twitter!](https://twitter.com/JustSayoriDev)
 
 Interested in taking part in a growing community of Sayori fans just like you, or just a chat with the team?
 
-If so, then please consider joining us on Discord: we'd love to see you there!
-
-
-<br>
-<p align="center">
-    <a href="https://discord.gg/GswMG6RU">
-        <img src="https://discordapp.com/api/guilds/762798961437311016/widget.png?style=banner4"/>
-    </a>
-</p>
+If so, then please consider joining us on [Discord](https://discord.gg/nUWzgVZ9WT): we'd love to see you there!
