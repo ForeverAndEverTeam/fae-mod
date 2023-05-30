@@ -5,8 +5,6 @@ init -50 python in fae_sprites:
     import store.fae_utilities as fae_utilities
     import store.fae_gifts as fae_gifts
 
-    
-
     FAE_SAYORI_ZORDER = 3
 
     pose = "sitting"
@@ -225,19 +223,19 @@ init -50 python in fae_sprites:
                 (0, 0), "{0}{1}/eyewear/[Sayori._outfit.eyewear.ref_name]/{1}.png".format(_FAE_SAYORI_IMAGES_PATH, pose),
             ])
 
-        if store.fae_gifts.cookies:
+        if store.fae_gifts.Gifts.cookies:
 
             ad_hoc.extend([
                 (0, 0), "mod_assets/images/food/cookies.png",
             ])
         
-        if store.fae_gifts.otter:
+        if store.fae_gifts.Gifts.otter:
 
             ad_hoc.extend([
                 (0, 0), "mod_assets/images/acs/otter.png",
             ])
         
-        if store.fae_gifts.chibi:
+        if store.fae_gifts.Gifts.chibi:
 
             ad_hoc.extend([
                 (0, 0), "mod_assets/images/acs/chibi.png"
@@ -281,7 +279,6 @@ init 1 python in fae_sprites:
         "c": FAEArms.cookie,
         "d": FAEArms.cookiebite,
         "e": FAEArms.doublepoint,
-        #"f": FAEArms.leftindex,
         "f": FAEArms.leftrest,
         "g": FAEArms.lefttouch,
         "h": FAEArms.none
@@ -366,9 +363,6 @@ init 1 python in fae_sprites:
     def _exp_renderer(exp_code):
         if len(exp_code) < 6:
             raise ValueError("Invalid expression code: {0}".format(exp_code))
-        
-        #pose = exp_code[-1]
-        #exp_code = exp_code[0]
 
         eyebrows = exp_code[0]
         exp_code = exp_code[1:]
@@ -382,8 +376,6 @@ init 1 python in fae_sprites:
         arms2 = exp_code[0]
         exp_code = exp_code[1:]
 
-        #hair = exp_code[0]
-        #exp_code = exp_code[1:]
 
         eyes = exp_code[0]
         exp_code = exp_code[1:]
@@ -410,12 +402,10 @@ init 1 python in fae_sprites:
             
 
         return {
-            #"pose": POSE_DEF[pose],
             "eyebrows": EYEBROWS_DEF[eyebrows],
             "backarm": BACKARM_DEF[backarm],
             "arms": ARMS_DEF[arms],
             "arms2": ARMS2_DEF[arms2],
-            #"hair": HAIR_DEF[hair],
             "eyes": EYES_DEF[eyes],
             "mouth": MOUTH_DEF[mouth],
             "blush": BLUSH_DEF.get(blush),
@@ -423,8 +413,8 @@ init 1 python in fae_sprites:
             
         }
 
-    
-
+   
+    # Dynamic sprite gen from Monika After Story Team (https://github.com/Monika-After-Story)
 
     def _auto_gen(exp_code):
         """
@@ -437,10 +427,15 @@ init 1 python in fae_sprites:
 
         renpy.display.image.images[("sayori", exp_code)] = disp
 
-        #if exp_code not in _existing_attr_list:
-        #    _existing_attr_list.append(exp_code)
 
     def _find_target_override(self):
+
+        """
+        This method tries to find an image by its reference. It can be a displayable or tuple.
+        If this method can't find an image and it follows the pattern of Monika's sprites, it'll try to generate one.
+
+        Main change to this function is the ability to auto generate displayables
+        """
         
         name = self.name
 
@@ -517,6 +512,19 @@ init 1 python in fae_sprites:
         return True
 
     renpy.display.image.ImageReference.find_target = _find_target_override
+
+init -1 python in fae_sprites:
+
+    def show_empty_desk():
+        """
+        Shows empty desk
+        """
+        renpy.show(
+            "emptydesk",
+            tag="emptydesk",
+            at_list=[store.i11],
+            zorder=store.fae_sprites.FAE_SAYORI_ZORDER - 1
+        )
 
 image emptydesk = Composite(
     (1280, 720),
@@ -617,18 +625,4 @@ init python:
     def refresh():
         renpy.show("sayori idle normal")
 
-label fae_show_empty_desk(hide_dlg_box=True):
-    if hide_dlg_box:
-        window hide
-    $ store.fae_sprites.show_empty_desk()
-    hide sayori with dissolve_sayori
-    return
 
-label fae_return_desk(exp="sayori abhfaaa", show_dlg_box=True):
-
-    if show_dlg_box:
-        window auto
-    $ renpy.show(exp, tag="sayori", at_list=[i11], zorder=store.fae_sprites.FAE_SAYORI_ZORDER)
-    $ renpy.with_statement(dissolve_sayori)
-    hide emptydesk
-    return

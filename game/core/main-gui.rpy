@@ -21,7 +21,7 @@ screen hidden1(active=False):
 
         textbutton _("Play") action [ SensitiveIf(active==True), Function(mg)]
 
-        textbutton _("Calendar") action [ SensitiveIf(active==True), Function(show_calendar)]
+        
 
 
 screen hidden_fake(active=False):
@@ -38,7 +38,7 @@ screen hidden_fake(active=False):
 
         textbutton _("UGxheQ==") action [ SensitiveIf(active==True), Function(mg)]
 
-        textbutton _("Q2FsZW5kYXI=") action [ SensitiveIf(active==True), Function(show_calendar)]
+        
 
 
 
@@ -49,12 +49,14 @@ label tell:
     python:
 
         say_menu = []
-        if time_love(time_since=datetime.timedelta(0,10)):
+        if time_love(time_since=datetime.timedelta(0,10)) and Affection._getAffectionTierName() == "LOVE":
             say_menu.append((_("I love you too!"), "love_too"))
         else:
-            say_menu.append((_("I love you!"), "love"))
+            if Affection._getAffectionTierName() == "LOVE":
+                say_menu.append((_("I love you!"), "love"))
         
-        say_menu.append((_("I want to tell you something..."), "compliment"))
+        if persistent.affection >= 0:
+            say_menu.append((_("I want to tell you something..."), "compliment"))
         
         say_menu.append((_("I'm sorry."), "sorry"))
 
@@ -363,259 +365,4 @@ style t_n_m_n_s_button is t_n_m_button
 style t_n_m_n_s_button_text is t_n_m_button_text:
     bold True
 
-python early:
-    import io
-    import datetime
-    import traceback
-    import string
-    
-    import pygame
 
-    class CustomButton(renpy.Displayable):
-        import pygame
-
-        _STATE_IDLE = 0
-        _STATE_HOVER = 1
-        _STATE_DISABLED = 2
-
-        _INDEX_TEXT = 0
-        _INDEX_BUTTON = 1
-
-        def __init__(self,
-                idle_text,
-                hover_text,
-                disable_text,
-                idle_back,
-                hover_back,
-                disable_back,
-                xpos,
-                ypos,
-                width,
-                height,
-                hover_sound=None,
-                activate_sound=None,
-                enable_when_disabled=False,
-                sound_when_disabled=False,
-                return_value=True
-            ):
-
-            super(renpy.Displayable, self).__init__()
-
-            self.xpos = xpos
-            self.ypos = ypos
-            self.width = width
-            self.height = height
-            self.hover_sound = hover_sound
-            self.activate_sound = activate_sound
-            self.enable_when_disabled = enable_when_disabled
-            self.sound_when_disabled = sound_when_disabled
-            self.return_value = return_value
-            self.disabled = False
-            self.hovered = False
-            self._button_click = 1
-            self._button_down = pygame.MOUSEBUTTONUP
-
-            self._button_states = {
-                self._STATE_IDLE: (idle_text, idle_back),
-                self._STATE_HOVER: (hover_text, hover_back),
-                self._STATE_DISABLED: (disable_text, disable_back)
-            }
-
-
-            self._state = self._STATE_IDLE
-        
-        def _isOverMe(self, x, y):
-
-            return (
-                0 <= (x - self.xpos) <= self.width
-                and 0 <= (y - self.ypos) <= self.height
-            )
-        
-        def _playActivateSound(self):
-
-            if not self.disabled or self.sound_when_disabled:
-                renpy.play(self.activate_sound, channel="sound")
-
-        def _playHoverSound(self):
-
-            if not self.disabled or self.sound_when_disabled:
-                renpy.play(self.hover_sound, channel="sound")
-
-        @staticmethod
-        def create_st(
-                text_str,
-                incl_disb_text,
-                *args,
-                **kwargs
-        ):
-
-            if incl_disb_text:
-                disb_button = Text(
-                    text_str,
-                    font=gui.default_font,
-                    size=gui.text_size,
-                    color=fae_globals.button_text_insensitive_color,
-                    outlines=[]
-                )
-            
-            else:
-                disb_button = Null()
-            
-            return CustomButton(
-                Text(
-                    text_str,
-                    font=gui.default_font,
-                    size=gui.text_size,
-                    color=fae_globals.choice_button_text_idle_color,
-                    outlines=[]
-                ),
-                Text(
-                    text_str,
-                    font=gui.default_font,
-                    size=gui.text_size,
-                    color=fae_globals.button_text_hover_color,
-                    outlines=[],
-                ),
-                disb_button,
-                *args,
-                **kwargs
-            )
-        
-        @staticmethod
-        def create_stb(
-                text_str,
-                incl_disb_text,
-                *args,
-                **kwargs
-        ):
-            
-            if incl_disb_text:
-                disb_button = Text(
-                    text_str,
-                    font=gui.default_font,
-                    size=gui.text_size,
-                    color=fae_globals.button_text_insensitive_color,
-                    outlines=[]
-                )
-                disb_back = CustomButton._gen_bg("insensitive")
-            else:
-                disb_button = Null()
-                disb_back = Null()
-
-            return CustomButton(
-                Text(
-                    text_str,
-                    font=gui.default_font,
-                    size=gui.text_size,
-                    color=fae_globals.button_text_idle_color,
-                    outlines=[]
-                ),
-                Text(
-                    text_str,
-                    font=gui.default_font,
-                    size=gui.text_size,
-                    color=fae_globals.button_text_hover_color,
-                    outlines=[],
-                ),
-                disb_button,
-                CustomButton._gen_bg("idle"),
-                CustomButton._gen_bg("hover"),
-                disb_back,
-                *args,
-                **kwargs
-            )
-        
-        @staticmethod
-        def _gen_bg(prefix):
-
-            gen_frame = prefixFrame(
-                getPropFromStyle("choice_button", "background"),
-                prefix
-            )
-
-            if gen_frame is None:
-
-                return Frame(
-                    fae_getTimeFile(
-                        "mod_assets/buttons/generic/{0}_bg.png".format(prefix)
-                    ),
-                    Borders(5,5,5,5)
-                )
-            
-            return gen_frame
-        
-        def disable(self):
-
-            self.disabled = True,
-            self._state = self._STATE_DISABLED
-        
-        def enable(self):
-
-            self.disabled = False
-            self._state = self._STATE_IDLE
-        
-        def getSize(self):
-
-            return (self.width, self.height)
-        
-        def ground(self):
-
-            if not self.disabled or self.enable_when_disabled:
-                self.hovered = False
-            
-                if self.disabled:
-                    self._state = self._STATE_DISABLED
-                else:
-                    self._state = self._STATE_IDLE
-        
-        def render(self, width, height, st, at):
-
-            render_text, render_back = self._button_states[self._state]
-            render_text = renpy.render(render_text, width, height, st, at)
-            render_back = renpy.render(render_back, self.width, self.height, st, at)
-
-            rt_w, rt_h = render_text.get_size()
-
-            r = renpy.Render(self.width, self.height)
-
-            r.blit(render_back, (0, 0))
-            r.blit(
-                render_text,
-                (int((self.width - rt_w) / 2), int((self.height - rt_h) / 2))
-            )
-
-            return r
-        
-        def event(self, ev, x, y, st):
-
-            if self._state != self._STATE_DISABLED or self.enable_when_disabled:
-
-                if ev.type == pygame.MOUSEMOTION:
-                    is_over_me = self._isOverMe(x, y)
-                    if self.hovered:
-                        if not is_over_me:
-                            self.hovered = False
-                            self._state = self._STATE_IDLE
-                            renpy.redraw(self, 0.0)
-                    
-                    elif is_over_me:
-                        self.hovered = True
-                        self._state = self._STATE_HOVER
-                        
-                        if self.hover_sound:
-                            self._playHoverSound()
-                        
-                        renpy.redraw(self, 0.8)
-                
-                elif (
-                    ev.type == self._button_down
-                    and ev.button == self._button_click
-                ):
-                    if self.hovered:
-                        if self.activate_sound:
-                            self._playActivateSound()
-                        
-                        return self.return_value
-            
-            return None
-    

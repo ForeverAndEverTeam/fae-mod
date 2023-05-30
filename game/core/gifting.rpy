@@ -6,17 +6,17 @@ init -100 python:
 
     def look_for_gift():
         
-        gift_path = renpy.config.basedir
+        gift_path = os.path.join(renpy.config.basedir, "/gifts")
 
-        if renpy.exists(gift_path + "/gifts/cookies.gift"):
+        if renpy.exists(gift_path + "/cookies.gift"):
             
-            store.fae_utilities.removeFileDir("{0}/gifts/cookies.gift".format(renpy.config.basedir))
+            store.fae_utilities.removeFileDir(gift_path + "/cookies.gift")
 
             renpy.call("fae_cookies")
         
-        if renpy.exists(gift_path + "/gifts/otter.gift"):
+        if renpy.exists(gift_path + "/otter.gift"):
 
-            store.fae_utilities.removeFileDir(gift_path + "/gifts/otter.gift")
+            store.fae_utilities.removeFileDir(gift_path + "/otter.gift")
 
             renpy.call("fae_otter")
 
@@ -28,7 +28,7 @@ init -100 python:
 
 label fae_cookies:
 
-    $ store.fae_gifts.cookies = True
+    $ store.fae_gifts.Gifts.cookies = True
 
     $ refresh()
 
@@ -54,14 +54,16 @@ label fae_otter:
 
 label fae_chibi:
 
-    if store.fae_gifts.cookies:
+    if store.fae_gifts.Gifts.cookies:
+        python:
+            import store.fae_gifts as fae_gifts
 
-        $ store.fae_gifts.cookies = False
+            fae_gifts.Gifts.cookies = False
 
-        $ store.fae_gifts.chibi = True
+            fae_gifts.Gifts.chibi = True
     
     else:
-        $ store.fae_gifts.chibi = True
+        $ store.fae_gifts.Gifts.chibi = True
     
     $ store.fae_sprites._auto_gen("abhfaaa")
     
@@ -83,11 +85,12 @@ init -100 python in fae_gifts:
 
     FAE_GIFT_ZORDER = 5
 
-    cookies = False
+    class Gifts():
 
-    otter = False
+        otter = False
 
-    chibi = False
+        cookies = False
 
+        chibi = False
     
 

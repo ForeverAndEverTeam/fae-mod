@@ -33,19 +33,7 @@ define FAE_NEW_YEARS_EVE = datetime.date(datetime.date.today().year, 12, 31)
 # This init python statement sets up the functions, keymaps and channels
 # for the game.
 init python:
-
-    def reset():
-
-        persistent.fae_d25_seen = False
-        persistent.fae_seen_bday = False
-
-    # These variable declarations adjusts the mapping for certain actions in-game.
-    config.keymap['game_menu'].remove('mouseup_3')
-    config.keymap['hide_windows'].append('mouseup_3')
-    config.keymap['self_voicing'] = []
-    config.keymap['clipboard_voicing'] = []
-    config.keymap['toggle_skip'] = []
-
+    import os
     # This variable declaration registers the music poem channel for the poem sharing music.
     renpy.music.register_channel("music_poem", mixer="music", tight=True)
     
@@ -115,6 +103,98 @@ init python:
         persistent.are = are
         persistent.hes = hes
     
+    def holidayReset():
+        
+        Sayori.setOutfit(fae_outfits.get_outfit("fae_uniform"))
+
+
+init -990 python in fae_globals:
+    import re
+    import store
+
+    fae_bad_name_comp = {
+        "^[a@][s\$][s\$]$",
+        "[a@][s\$][s\$]h[o0][l1][e3][s\$]?",
+        "b[a@][s\$][t\+][a@]rd",
+        "b[e3][a@][s\$][t\+][i1][a@]?[l1]([i1][t\+]y)?",
+        "b[e3][a@][s\$][t\+][i1][l1][i1][t\+]y",
+        "b[e3][s\$][t\+][i1][a@][l1]([i1][t\+]y)?",
+        "b[i1][t\+]ch[s\$]?",
+        "b[i1][t\+]ch[e3]r[s\$]?",
+        "b[i1][t\+]ch[e3][s\$]",
+        "b[i1][t\+]ch[i1]ng?",
+        "b[l1][o0]wj[o0]b[s\$]?",
+        "c[l1][i1][t\+]",
+        "^(c|k|ck|q)[o0](c|k|ck|q)[s\$]?$",
+        "(c|k|ck|q)[o0](c|k|ck|q)[s\$]u",
+        "(c|k|ck|q)[o0](c|k|ck|q)[s\$]u(c|k|ck|q)[e3]d",
+        "(c|k|ck|q)[o0](c|k|ck|q)[s\$]u(c|k|ck|q)[e3]r",
+        "(c|k|ck|q)[o0](c|k|ck|q)[s\$]u(c|k|ck|q)[i1]ng",
+        "(c|k|ck|q)[o0](c|k|ck|q)[s\$]u(c|k|ck|q)[s\$]",
+        "^cum[s\$]?$",
+        "cumm??[e3]r",
+        "cumm?[i1]ngcock",
+        "(c|k|ck|q)um[s\$]h[o0][t\+]",
+        "(c|k|ck|q)un[i1][l1][i1]ngu[s\$]",
+        "(c|k|ck|q)un[i1][l1][l1][i1]ngu[s\$]",
+        "(c|k|ck|q)unn[i1][l1][i1]ngu[s\$]",
+        "(c|k|ck|q)un[t\+][s\$]?",
+        "(c|k|ck|q)un[t\+][l1][i1](c|k|ck|q)",
+        "(c|k|ck|q)un[t\+][l1][i1](c|k|ck|q)[e3]r",
+        "(c|k|ck|q)un[t\+][l1][i1](c|k|ck|q)[i1]ng",
+        "cyb[e3]r(ph|f)u(c|k|ck|q)",
+        "d[a@]mn",
+        "d[i1]ck",
+        "d[i1][l1]d[o0]",
+        "d[i1][l1]d[o0][s\$]",
+        "d[i1]n(c|k|ck|q)",
+        "d[i1]n(c|k|ck|q)[s\$]",
+        "[e3]j[a@]cu[l1]",
+        "(ph|f)[a@]g[s\$]?",
+        "(ph|f)[a@]gg[i1]ng",
+        "(ph|f)[a@]gg?[o0][t\+][s\$]?",
+        "(ph|f)[a@]gg[s\$]",
+        "(ph|f)[e3][l1][l1]?[a@][t\+][i1][o0]",
+        "(ph|f)u(c|k|ck|q)",
+        "(ph|f)u(c|k|ck|q)[s\$]?",
+        "g[a@]ngb[a@]ng[s\$]?",
+        "g[a@]ngb[a@]ng[e3]d",
+        "g[a@]y",
+        "h[o0]m?m[o0]",
+        "h[o0]rny",
+        "j[a@](c|k|ck|q)\-?[o0](ph|f)(ph|f)?",
+        "j[e3]rk\-?[o0](ph|f)(ph|f)?",
+        "j[i1][s\$z][s\$z]?m?",
+        "[ck][o0]ndum[s\$]?",
+        "mast(e|ur)b(8|ait|ate)",
+        "n[i1]gg?[e3]r[s\$]?",
+        "[o0]rg[a@][s\$][i1]m[s\$]?",
+        "[o0]rg[a@][s\$]m[s\$]?",
+        "p[e3]nn?[i1][s\$]",
+        "p[i1][s\$][s\$]",
+        "p[i1][s\$][s\$][o0](ph|f)(ph|f)",
+        "p[o0]rn",
+        "p[o0]rn[o0][s\$]?",
+        "p[o0]rn[o0]gr[a@]phy",
+        "pr[i1]ck[s\$]?",
+        "pu[s\$][s\$][i1][e3][s\$]",
+        "pu[s\$][s\$]y[s\$]?",
+        "[s\$][e3]x",
+        "[s\$]h[i1][t\+][s\$]?",
+        "[s\$][l1]u[t\+][s\$]?",
+        "[s\$]mu[t\+][s\$]?",
+        "[s\$]punk[s\$]?",
+        "[t\+]w[a@][t\+][s\$]?"
+    }
+    
+    STANDARD_ALPHABETICAL_CHARACTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz-"
+init 3 python:
+    import store.fae_globals as fae_globals
+    import re
+
+    fae_bad_name_list = re.compile('|'.join(fae_globals.fae_bad_name_comp), re.IGNORECASE)
+
+    
 
 ## Music
 # This section declares the music available to be played in the mod.
@@ -177,10 +257,6 @@ define audio.fall = "sfx/fall.ogg"
 #MOD AUDIO
 define audio.s1 = "<loop 0>mod_assets/bgm/s1_ac.ogg"
 define audio.s2 = "<loop 0>mod_assets/bgm/Slepyori_-_Loop.ogg"
-
-
-
-
 
 ## Backgrounds
 # This section declares the backgrounds available to be shown in the mod.
@@ -570,20 +646,11 @@ define mc = DynamicCharacter('player', what_prefix='"', what_suffix='"', ctc="ct
 
 define s = DynamicCharacter('s_name', image='sayori', what_prefix='', what_suffix='', ctc="ctc", ctc_position="fixed")
 
-
-
-
-
 # This variable determines whether to allow the player to dismiss pauses.
 # By default this is set by config.developer which is normally set to false
 # once you packaged your mod.
 
 define _dismiss_pause = config.developer
-
-## Extra Settings Variables
-# This section controls whether the mod is censored or is in let's play mode.
-default persistent.uncensored_mode = False
-default persistent.lets_play = False
 
 ## Variables
 # This section declares variables when the mod runs for the first time on all saves.
@@ -626,15 +693,6 @@ default persistent.gender = "M"
 default persistent.last_playthrough = persistent.playthrough
 default persistent.fae_sayori_closed = False
 default persistent.fae_intro_complete = False
-
-default persistent.sessions = {
-    "last_session_end": None,
-    "current_session_start": None,
-    "total_playtime": datetime.timedelta(seconds=0),
-    "total_sessions": 0,
-    "first_session": datetime.datetime.now()
-}
-
 
 #########################
 #NON-PERSISTENT DEFAULTS#
@@ -735,6 +793,18 @@ default sayori_confess = True
 # This variable tracks whether we read Natsuki's 3rd poem in Act 2.
 default natsuki_23 = None
 
+init -100 python:
+
+    import os
+    
+    FILE_PATH = os.path.join(renpy.config.gamedir, "additional")
+
+    def RELOADCHECK():
+
+        if renpy.exists("additional/zz_calendar.rpy"):
+            return True
+        else:
+            return False
 
 init python:
 
@@ -759,63 +829,17 @@ init python:
         
             f.close()
 
-init -100 python in fae_utilities:
-    import datetime
-
-    def add_years(initial_date, years):
-
-        try:
-
-            return initial_date.replace(year=initial_date.year + years)
-        except ValueError:
-
-            # We handle the only exception feb 29
-            return  initial_date + (datetime.date(initial_date.year + years, 1, 1)
-                                - datetime.date(initial_date.year, 1, 1))
-    
-    def add_months(starting_date, months):
-
-        old_month = starting_date.month
-        old_year = starting_date.year
-        old_day = starting_date.day
-
-        if months and (months/12 + old_year) % 4 != 0 and old_month == 2 and old_day == 29:
-            old_month = 3
-            old_day = 1
-        
-        # get the total of months
-        total_months = old_month + months
-
-        # get the new month based on date
-        new_month = total_months % 12
-
-        # handle december specially
-        new_month = 12 if new_month == 0 else new_month
-
-        # get the new year
-        new_year = old_year + int(total_months / 12)
-        if new_month == 12:
-            new_year -= 1
-
-        #Try adding a month, if that doesn't work (there aren't enough days in the month)
-        #keep subtracting days till it works.
-        date_worked=False
-        reduce_days=0
-        while reduce_days<=3 and not date_worked:
-            try:
-                new_date = starting_date.replace(year=new_year,month=new_month,day=old_day-reduce_days)
-                date_worked = True
-            except ValueError:
-                reduce_days+=1
-
-        if not date_worked:
-            raise ValueError('Adding months failed')
-
-        return new_date
 
 init -1 python:
 
     def fae_isSpecialDay():
+
+        """
+        Checks if today is a special day(birthday, anniversary or holiday)
+
+        RETURNS:
+            boolean indicating if today is a special day.
+        """
 
         return (
             fae_isO31()
@@ -824,67 +848,12 @@ init -1 python:
             or fae_isF14()
         )
 
+init -999 python:
 
-init 21 python:
+    class InstallError(Exception):
+        def __init__(self, message):
+            self.message = message
 
-    def fae_input(prompt, default="", allow=None, exclude="{}", length=None, with_none=None, pixel_width=None, screen="input", screen_kwargs={}):
-
-
-        renpy.exports.mode("input")
-
-        roll_forward = renpy.exports.roll_forward_info()
-
-
-        if not isinstance(roll_forward, basestring):
-            roll_forward = None
-        
-        if roll_forward is not None:
-            default = roll_forward
-        
-        fixed = renpy.in_fixed_rollback()
-
-        if renpy.has_screen(screen):
-            widget_properties = { }
-            widget_properties["input"] = dict(default=default, length=length, allow=allow, exclude=exclude, editable=not fixed, pixel_width=pixel_width)
-
-            screen_kwargs["prompt"] = prompt
-
-            renpy.show_screen(screen, _transient=True, _widget_properties=widget_properties, **screen_kwargs)
-        
-        else:
-
-            if screen != "input":
-                raise Exception("The '{}' screen does not exist.".format(screen))
-            
-            renpy.ui.window(style="input_window")
-            renpy.ui.vbox()
-            renpy.ui.text(prompt, style="input_prompt")
-            inputwidget = renpy.ui.input(default, length=length, style="input_text", allow=allow, exclude=exclude)
-
-            if fixed:
-
-                inputwidget.disable()
-            
-            renpy.ui.close()
-        
-        renpy.exports.shown_window()
-
-        if not renpy.game.after_rollback:
-            renpy.loadsave.force_autosave(True)
-        
-        if fixed:
-            renpy.ui.saybehavior()
-
-        rv = renpy.ui.interact(mouse="prompt", type="input", roll_forward=roll_forward)
-        renpy.exports.checkpoint(rv)
-
-        if with_none is None:
-            with_none = renpy.config.implicit_with_none
-
-        if with_none:
-            renpy.game.interface.do_with(None, None)
-        
-        return rv
 
 init python in fae_utilities:
 
@@ -896,10 +865,8 @@ init python in fae_utilities:
 
 
     def string_has_cursing(string):
-
-
+        
         return re.search(__CURSE_CHECKER, string.lower())
-
 
 init -999 python:
 
@@ -915,3 +882,19 @@ init -999 python:
         ):
             renpy.call("force_quit")
 
+    class FAEEvent():
+
+        def __init__(self):
+            self.__eventhandlers = []
+
+        def __iadd__(self, handler):
+            self.__eventhandlers.append(handler)
+            return self
+
+        def __isub__(self, handler):
+            self.__eventhandlers.remove(handler)
+            return self
+
+        def __call__(self, *args, **keywargs):
+            for eventhandler in self.__eventhandlers:
+                eventhandler(*args, **keywargs)

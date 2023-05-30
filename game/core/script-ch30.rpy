@@ -77,7 +77,7 @@ init python:
             "It is her pen." (if the player's gender is declared as female)
             "It is their pen." (if player's gender is not declared)
 
-        For all available pronouns/words check the keys in MAS_PRONOUN_GENDER_MAP
+        For all available pronouns/words check the keys in FAE_PRONOUN_GENDER_MAP
 
         IN:
             key - Optional[Literal["M", "F", "X"]] - key (perhaps current gender) to set the pronouns for
@@ -95,36 +95,6 @@ init python:
                 value = sub_map["X"]
             setattr(store, word, value)
         
-
-
-label spaceroom(scene_change=True, sayori_exp=None, dissolve_all=False, hide_sayori=False, show_empty_desk=True):
-
-    if scene_change:
-        scene black
-        hide black
-        $ main_background.form()
-        
-        $ fae_sky.reload_sky()
-    python:
-
-        if hide_sayori:
-            if not scene_change:
-                renpy.hide("sayori")
-            if show_empty_desk:
-                store.fae_sprites.show_empty_desk()
-        else:
-
-            if sayori_exp is None:
-                sayori_exp = "sayori idle"
-            
-            if not renpy.showing(sayori_exp):
-                renpy.show(sayori_exp, tag="sayori", at_list=[t11], zorder=store.fae_sprites.FAE_SAYORI_ZORDER)
-
-                if not dissolve_all:
-                    renpy.with_statement(None)
-    
-    window hide
-    return
 
 label ch30_main:
 
@@ -156,7 +126,6 @@ label ch30_autoload:
     python:
         quick_menu = True
         style.say_dialogue = style.normal
-        in_sayori_kill = None
         
         if not config.developer:
             config.allow_skipping = False
@@ -164,7 +133,7 @@ label ch30_autoload:
     $ store.fae_utilities.makedirifnot("{0}/gifts/".format(renpy.config.basedir))
 
     $ fae_set_pronouns()
-
+      
     jump ch30_main
 
 
@@ -191,13 +160,7 @@ label ch30_setup:
             Sayori.setOutfit(fae_outfits.get_outfit(persistent.fae_outfit_quit))
         else:
             Sayori.setOutfit(fae_outfits.get_outfit("fae_uniform"))
-        persistent._fae_version = config.version
-        fae_utilities.log("Current persisted version post-mig check: {0}".format(store.persistent._fae_version))
-        if persistent.affection >= 500:
-            if not persistent.fae_reset:
-                ats("s_topic_broken")
-                reveal()
-                renpy.jump("cnc")
+
         try:
             setupRPC("In the spaceroom")
         except:
@@ -230,8 +193,9 @@ label fae_event_check:
     if fae_isNYD():
         jump fae_nyd_autoload
 
-
-
+    else:
+        $ holidayReset()
+    
 label ch30_init:
 
     $ persistent.fae_sayori_closed = False
@@ -242,10 +206,7 @@ label ch30_init:
         _fae_AffStart()
         import random
 
-        fae_data.runRuntimeTransfer()
-
-        persistent._fae_version = config.version
-
+        
         Affection.checkResetDailyAffectionGain()
 
         Sayori.setInChat(True)
@@ -259,9 +220,6 @@ label ch30_init:
 
         if (datetime.datetime.now() - persistent.fae_last_visit_date).total_seconds() / 604800 >= 2 and persistent._fae_absence_choice is None:
             Sayori.add_regret_quit(fae_regrets.RegretTypes.long_absence)
-            #ats("s_return_long_absence")
-            #reveal()
-            #renpy.jump("cnc")
         
         elif not persistent._fae_player_apology_type_on_quit:
             Affection.calculatedAffectionGain()
@@ -304,24 +262,17 @@ label ch30_init:
                 reveal()
                 renpy.call("cnc")
                 
-    #$ begin_song()
     
     show sayori idle at t11 zorder store.fae_sprites.FAE_SAYORI_ZORDER
-    #show bg spaceroom zorder 1
     hide black with Dissolve(2)
-    #show screen hidden1(True)
     show screen hidden1(True)
 
-    #FALL THRouGH
+    #FALL THROUGH
 label after_holiday:
 
     pass
 
-    
-
 label ch30_loop:
-    
-    call spaceroom(False, None) from _call_spaceroom
 
     $ init_qabs()
 
@@ -375,8 +326,7 @@ label after_random_pick:
     show screen hidden1(True)
 
     jump ch30_loop
-    
-    #show screen hidden1(True)
+
 
 
 
@@ -387,7 +337,6 @@ label cnc(show_sayori=True):
     if show_sayori:
         show sayori idle at fae_center zorder fae_sprites.FAE_SAYORI_ZORDER
 
-    #show sayori idle at t11 zorder store.fae_sprites.SAYO_ZORDER
     if persistent._event_list:
         $ _chat = persistent._event_list.pop(0)
 
@@ -396,7 +345,7 @@ label cnc(show_sayori=True):
 
             $ Sayori.setInChat(True)
 
-            hide screen hidden1#(True)
+            hide screen hidden1
 
             call expression _chat from _call_expression
     
@@ -416,7 +365,6 @@ label cnc(show_sayori=True):
     
     if "quit" in return_keys:
         $ persistent.fae_sayori_closed = True
-        #$ fae_clearNotifs()
         jump confirm_quit
     
     python:
@@ -437,7 +385,6 @@ label cnc_notify(show_sayori=True):
     if show_sayori:
         show sayori idle at fae_center zorder fae_sprites.FAE_SAYORI_ZORDER
 
-    #show sayori idle at t11 zorder store.fae_sprites.SAYO_ZORDER
     if persistent._event_list:
         $ _chat_notify = persistent._event_list.pop(0)
 
@@ -455,7 +402,7 @@ label cnc_notify(show_sayori=True):
 
             $ Sayori.setInChat(True)
 
-            hide screen hidden1#(True)
+            hide screen hidden1
 
             call expression _chat_notify from _call_expression_10
     
@@ -475,7 +422,6 @@ label cnc_notify(show_sayori=True):
     
     if "quit" in return_keys:
         $ persistent.fae_sayori_closed = True
-        #$ fae_clearNotifs()
         jump confirm_quit
     
     python:
@@ -514,9 +460,3 @@ label force_quit:
             Sayori.add_regret_quit(fae_regrets.RegretTypes.unexpected_quit)
         
         $ renpy.jump("confirm_quit")
-
-
-
-
-
-

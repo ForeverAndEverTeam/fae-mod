@@ -154,7 +154,7 @@ label mg_bnc_s_comment(state = -1, restart = False): #Sayori's comment. 0 = init
     elif state == 1: # Correct answer
         s abaacoa "You're right. It was {i}[bnc.guessed]{/i}!"
         s abaaaea "Let's play one more time."
-        $bnc(restart = True)
+        $ bnc(restart = True)
     elif state == -2: # If you try to guess past the amount you're allowed to guess
         s gbaaipa "OK, you win, {i}meanie{/i}!"
         s "I'm really annoyed right now..."

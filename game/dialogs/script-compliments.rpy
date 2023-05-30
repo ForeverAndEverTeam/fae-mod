@@ -49,7 +49,7 @@ init 5 python:
             prompt="I think you're best girl!",
             label="compliment_best_girl",
             unlocked=True,
-            affection_range=(fae_affection.HAPPY, fae_affection.LOVE)
+            affection_range=(fae_affection.LOVE, None)
         ),
         chat_group=CHAT_GROUP_FLATTER
     )
@@ -78,8 +78,8 @@ init 5 python:
             persistent._flatter_db,
             prompt="I think you're beautiful.",
             label="compliment_beautiful",
-            unlocked=True
-            #affection_range=(fae_affection.HAPPY, fae_affection.LOVE)
+            unlocked=True,
+            affection_range=(fae_affection.LOVE, None)
         ),
         chat_group=CHAT_GROUP_FLATTER
     )
@@ -154,8 +154,8 @@ init 5 python:
             persistent._flatter_db,
             prompt="I love your eyes.",
             label="compliment_love_eyes",
-            unlocked=True
-            #affection_range=(fae_affection.HAPPY, fae_affection.LOVE)
+            unlocked=True,
+            affection_range=(fae_affection.ENAMOURED, None)
         ),
         chat_group=CHAT_GROUP_FLATTER
     )
@@ -182,7 +182,7 @@ init 5 python:
             prompt="You're so kind...",
             label="compliment_kind",
             unlocked=True,
-            affection_range=(fae_affection.HAPPY, fae_affection.LOVE)
+            #affection_range=(fae_affection.HAPPY, fae_affection.LOVE)
         ),
         chat_group=CHAT_GROUP_FLATTER
     )
@@ -210,7 +210,7 @@ init 5 python:
             prompt="I look up to you.",
             label="compliment_look_up_to_you",
             unlocked=True,
-            affection_range=(fae_affection.HAPPY, fae_affection.LOVE)
+            affection_range=(fae_affection.AFFECTIONATE, None)
         ),
         chat_group=CHAT_GROUP_FLATTER
     )
@@ -238,7 +238,7 @@ init 5 python:
             prompt="I like seeing you happy.",
             label="compliment_like_seeing_happy",
             unlocked=True,
-            affection_range=(fae_affection.HAPPY, fae_affection.LOVE)
+            affection_range=(fae_affection.HAPPY, None)
         ),
         chat_group=CHAT_GROUP_FLATTER
     )
@@ -251,7 +251,7 @@ label compliment_like_seeing_happy:
     s abhfcka "Aww! That's so cute of you to say, [player]! Thank you so much!" 
     s ebbckea "I am {i}happy{/i} to make you {i}happy{/i} when you see me {i}happy{/i}, ehehehe~"
     s ebbbcka "I like seeing you happy as well! It makes all the time we spend together worth it."
-    $ persitent.fae_like_seeing_happy = True
+    $ persistent.fae_like_seeing_happy = True
     return
 
 init 5 python:
@@ -262,7 +262,7 @@ init 5 python:
             prompt="Thanks for being here for me.",
             label="compliment_thank_for_being_here",
             unlocked=True,
-            affection_range=(fae_affection.HAPPY, fae_affection.LOVE)
+            affection_range=(fae_affection.HAPPY, None)
         ),
         chat_group=CHAT_GROUP_FLATTER
     )
@@ -290,7 +290,7 @@ init 5 python:
             prompt="I like your writing.",
             label="compliment_like_your_writing",
             unlocked=True,
-            affection_range=(fae_affection.HAPPY, fae_affection.LOVE)
+            #affection_range=(fae_affection.HAPPY, fae_affection.LOVE)
         ),
         chat_group=CHAT_GROUP_FLATTER
     )
@@ -318,7 +318,7 @@ init 5 python:
             prompt="You're a ball of sunshine!",
             label="compliment_ball_of_sunshine",
             unlocked=True,
-            affection_range=(fae_affection.HAPPY, fae_affection.LOVE)
+            affection_range=(fae_affection.AFFECTIONATE, None)
         ),
         chat_group=CHAT_GROUP_FLATTER
     )

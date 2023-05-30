@@ -22,8 +22,8 @@ init -1 python in fae_greetings:
         if store.persistent._fae_player_apology_type_on_quit is not None:
             kwargs.update({"extra_props": [("regret_type", store.persistent._fae_player_apology_type_on_quit)]})
         
-        elif store.persistent.fae_mood_on_quit is not None:
-            kwargs.update({"extra_props": [("mood_type", store.persistent.fae_mood_on_quit)]})
+        #elif store.persistent.fae_mood_on_quit is not None:
+        #    kwargs.update({"extra_props": [("mood_type", store.persistent.fae_mood_on_quit)]})
 
         else:
             kwargs.update({"no_categories": ["Mood", "Regret"]})
@@ -537,3 +537,72 @@ label s_greeting_long_away:
     $ persistent._fae_absence_choice = None
     return 
 
+init 5 python:
+    chatReg(
+        Chat(
+            persistent._greet_db,
+            label="s_greeting_weather",
+            unlocked=True,
+            affection_range=(fae_affection.AFFECTIONATE, None),
+            conditional="fae_is_day()"
+        ),
+        chat_group=CHAT_GROUP_GREETING
+    )
+
+label s_greeting_weather:
+    
+    #*weather overcast*
+    $ fae_atmosphere.showSky(fae_atmosphere.WEATHER_OVERCAST)
+    s abgbaoa "Hi again, [player]!"
+    s abgbcaa "Guess who’s been tinkering with the files again? {w=0.5}{nw}"
+    extend abgccoa "Me! Ehehehe~"
+    s abgcaaa "Don’t worry though! {w=0.5}{nw}"
+    extend abbcaoa "I haven’t broken anything!"
+    s abegbibj "Hopefully… ehehehe~"
+    s abgbaoa "You know, the more time I spend here, {w=0.5}{nw}"
+    extend abbbcaa "the more control I realise I have over the environment!"
+    s abgcaoa "I found some files about weather, {w=0.5}{nw}"
+    extend abbccaa "and when I bring them to mind, the weather changes!"
+    s abgcaoa "I feel like a superhero! {w=0.5}{nw}"
+    extend abgccaa "Ehehehe~"
+    s abgbaoa "Here, I’ll show you."
+    s nbgblaa "Let’s say I wanted it to be sunny..."
+    s gbgbloa "Aaaand... {w=0.5}{nw}"
+    extend ebgcaea "Abracadabra!" 
+    # *weather changes to rain*
+    $ fae_atmosphere.showSky(fae_atmosphere.WEATHER_RAIN)
+    pause 0.5
+    s ebgcbga "Wah! No that’s not right!"
+    s gbgdbca "Which one was it again…" 
+    #*weather changes to thunder* 
+    $ fae_atmosphere.showSky(fae_atmosphere.WEATHER_THUNDER)
+    pause 0.5
+    s ebgcega "Nope, no, that’s definitely not it either!"
+    #*weather changes to snowy*
+    $ fae_atmosphere.showSky(fae_atmosphere.WEATHER_SNOW)
+    pause 0.5
+    s gbbbbca "I’ll just flick through them all! I’ll find it eventually!"
+    #*weather changes to rainy then thunder then snowy*
+    python:
+        fae_atmosphere.showSky(fae_atmosphere.WEATHER_RAIN, False)
+        renpy.pause(0.5)
+        fae_atmosphere.showSky(fae_atmosphere.WEATHER_THUNDER, False)
+        renpy.pause(0.5)
+        fae_atmosphere.showSky(fae_atmosphere.WEATHER_SNOW, False)
+        renpy.pause(0.5)
+    pause 2.0
+    s ebgcega "Uwaaaa!"
+    #*weather changes to rainy then thunder then snowy then sunny*
+    python:
+        fae_atmosphere.showSky(fae_atmosphere.WEATHER_RAIN, False)
+        fae_atmosphere.showSky(fae_atmosphere.WEATHER_THUNDER, False)
+        fae_atmosphere.showSky(fae_atmosphere.WEATHER_SNOW, False)
+        fae_atmosphere.showSky(fae_atmosphere.WEATHER_SUNNY, False)
+    s abfbaoa "There! At last!"
+    s gbegbjbj "It was much easier when you weren’t looking…"
+    s abgbcoa "Oh well, it’s sunny now anywho! I win!"
+    s abegaabj "I do need to practise it a little more though… ehehehe~"
+    s abfccoa "So if you ever want me to change the weather, just ask!"
+    s abbcaaa "I might get it right first time if you’re lucky! {w=0.5}{nw}"
+    extend abgccoa "Ehehehe~" 
+    return

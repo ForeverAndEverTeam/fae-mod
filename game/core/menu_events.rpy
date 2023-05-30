@@ -17,6 +17,22 @@ screen scs(items):
         for i in items:
             textbutton i.caption action i.action
 
+screen scroll(items): 
+    
+    style_prefix "choice"
+    
+    viewport:
+        area (10, 25, 800, 400)
+        if len(items) >= 6:
+            scrollbars "vertical"
+            mousewheel True
+            draggable True
+            
+        vbox:
+            spacing 20
+            for i in items:
+                textbutton i.caption action i.action
+
 
 label talk_menu_wip:
 

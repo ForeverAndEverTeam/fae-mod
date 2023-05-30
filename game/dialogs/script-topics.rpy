@@ -26,18 +26,18 @@ init -1 python in chats:
 #TESTING TOPICS#
 ################
 
-init 5 python:
-    chatReg(
-        Chat(
-            persistent._chat_db,
-            label="fae_room_switch",
-            unlocked=True,
-            prompt="Can we go somewhere else?",
-            random=False,
-            category=["Location"]
-        ),
-        chat_group=CHAT_GROUP_NORMAL
-    )
+#init 5 python:
+#    chatReg(
+#        Chat(
+#            persistent._chat_db,
+#            label="fae_room_switch",
+#            unlocked=True,
+#            prompt="Can we go somewhere else?",
+#            random=False,
+#            category=["Location"]
+#        ),
+#        chat_group=CHAT_GROUP_NORMAL
+#    )
 
 label fae_room_switch:
     s "Sure!"
@@ -47,18 +47,18 @@ label fae_room_switch:
     return
 
 
-init 5 python:
-    chatReg(
-        Chat(
-            persistent._chat_db,
-            label="fae_room_switch_return",
-            unlocked=True,
-            prompt="Can we go back to the Spaceroom?",
-            random=False,
-            category=["Location"]
-        ),
-        chat_group=CHAT_GROUP_NORMAL
-    )
+#init 5 python:
+#    chatReg(
+#        Chat(
+#            persistent._chat_db,
+#            label="fae_room_switch_return",
+#            unlocked=True,
+#            prompt="Can we go back to the Spaceroom?",
+#            random=False,
+#            category=["Location"]
+#        ),
+#        chat_group=CHAT_GROUP_NORMAL
+#    )
 
 label fae_room_switch_return:
     s "Sure!"
@@ -68,19 +68,19 @@ label fae_room_switch_return:
     return
 
 
-init 5 python:
+#init 5 python:
     
-    chatReg(
-        Chat(
-            persistent._chat_db,
-            label="fae_gift",
-            unlocked=True,
-            prompt="Can you check for gifts?",
-            random=False,
-            category=["Misc"]
-        ),
-        chat_group=CHAT_GROUP_NORMAL
-    )
+#    chatReg(
+#        Chat(
+#            persistent._chat_db,
+#            label="fae_gift",
+#            unlocked=True,
+#            prompt="Can you check for gifts?",
+#            random=False,
+#            category=["Misc"]
+#        ),
+#        chat_group=CHAT_GROUP_NORMAL
+#    )
 
 label fae_gift:
     s "Sure!"
@@ -288,7 +288,7 @@ init 5 python:
             unlocked=True,
             prompt="Quitting the game.",
             random=True,
-            category=["Game", "[player]", "Sayori"]
+            category=["Game", "Sayori"]
         ),
         chat_group=CHAT_GROUP_NORMAL
     )
@@ -322,7 +322,7 @@ init 5 python:
             unlocked=True,
             prompt="Personal Intelligence",
             random=True,
-            category=["[player]", "Sayori", "Life", "Society"]
+            category=["Sayori", "Life", "Society"]
         ),
         chat_group=CHAT_GROUP_NORMAL
     )
@@ -490,7 +490,7 @@ init 5 python:
             unlocked=False,
             prompt="Pronouns",
             random=False,
-            category=["[player]", "Personal"]
+            category=["Personal"]
         ),
         chat_group=CHAT_GROUP_NORMAL
     )
@@ -524,7 +524,7 @@ init 5 python:
             unlocked=True,
             prompt="The ideal date",
             random=True,
-            category=["[player]", "Romance", "Life"]
+            category=["Romance", "Life"]
         ),
         chat_group=CHAT_GROUP_NORMAL
     )
@@ -2165,69 +2165,7 @@ init 5 python:
 label s_answer_read:
     s  ebbcaoa "Okay! Just pick the one you want to read."
 
-    python:
-
-        poetry_list = [
-            #("The Life of a Hopeless Romantic", poem_d_day)#, False, False)
-            ("Bottles", poem_bottles, False, False),
-            ("Sunshine", poem_sunshine, False, False),
-            ("Flower", poem_flower, False, False),
-            ("Last", poem_last, False, False),
-            ("Fruits", poem_fruits, False, False),
-            ("Angel", poem_angel, False, False),
-            ("Leaf", poem_leaf, False, False),
-            ("Prose", poem_prose, False, False),
-            ("Afterlight", poem_afterlight, False, False)
-        ]
-
-        ret_back = ("Nevermind", False, False, False, 20)
-
-        #poetry_list.extend(fae_poems.gsp())
-
-
-    call screen fae_gen_scrollable_menu(poetry_list, fae_ui.SCROLLABLE_MENU_TXT_MEDIUM_AREA, fae_ui.SCROLLABLE_MENU_XALIGN, ret_back)
-
-
-    $ _poem = _return
-
-    if not _poem:
-        return "prompt"
-
-    if _poem == poem_bottles:
-        call fae_showpoem(_poem)
-        
-
-    elif _poem == poem_sunshine:
-        call fae_showpoem(_poem)
-        
-    
-    elif _poem == poem_flower:
-        call fae_showpoem(_poem)
-        
-
-    elif _poem == poem_last:
-        call fae_showpoem(_poem)
-        
-    
-    elif _poem == poem_fruits:
-        call fae_showpoem(_poem)
-        
-    
-    elif _poem == poem_angel:
-        call fae_showpoem(_poem)
-        
-    
-    elif _poem == poem_leaf:
-        call fae_showpoem(_poem)
-        
-    
-    elif _poem == poem_prose:
-        call fae_showpoem(_poem)
-        
-    
-    elif _poem == poem_afterlight:
-        call fae_showpoem(_poem)
-        
+    call poem_list      
 
     return
 
@@ -2466,7 +2404,7 @@ init 5 python:
             label="s_topic_reversi",
             unlocked=True,
             prompt="Reversi",
-            conditional="not persistent.fae_bnc_unlocked and not persistent.fae_bnc_unlocked",
+            conditional="persistent.fae_bnc_unlocked and not persistent.fae_bnc_unlocked",
             random=True,
             category=["Games"],
             affection_range=(fae_affection.HAPPY, None)
@@ -3190,13 +3128,139 @@ label s_topics_notfications:
     return "derandom"
 
 
-label s_topic_broken:
+init 5 python:
+ 
+    chatReg(
+        Chat(
+            persistent._chat_db,
+            label="s_topics_mas",
+            unlocked=True,
+            prompt="Monika After Story",
+            random=True,
+            category=[""]
+        ),
+        chat_group=CHAT_GROUP_NORMAL
+    )
 
-    s bbeemo "So this is kinda embarrassing."
-    s bbeemo "I was messing around in the code, and accidentally broke something!"
-    s bbbcmo "I'm sorry, but I'll have to reset the game since I don't know what went wrong!"
-    s bbbcao "See you in a bit, [player]!"
-    $ fae_root.falsify(55)
-    $ persistent.fae_reset=True
-    $ renpy.full_restart(label="ch30_autoload")
+label s_topics_mas:
+    s abhfaoa "Hey [player]!"
+    extend abgbaaa "So you know how I’ve been learning to code in my spare time?"
+    s abgbboaj "Well… trying to, anyways ehehehe…"
+    s abgcada "It’s weird [player]!"
+    extend abgdaca "Like… I kinda get it…"
+    s gbgdbda "But the more I {i}think{/i} about it, "
+    extend abgcega "the more I realise just how much I don’t understand yet!"
+    s abfdbca "Syntax, labels, variables…"
+    s gbgdbda "S-scalable vector…"
+    extend abbdcoa "something like that! Ehehehe~" 
+    s abgceoa "I don’t even know what half of these words mean!"
+    s gbgbbda "Actually, come to think of it…"
+    extend gbbbbca "if we invented computers, then why didn’t we program them to talk like us in the first place…?" 
+    s abgcaga "These are the big questions, [player]!"
+    s abfccoa "Anyways! Ehehehe~"
+    s abhfaaa "So yeah, "
+    extend abgbboaj "saying it’s tricky would be an {i}understatement{/i}!"
+    s abbbcaa "But maybe it won’t take as long to get the hang of it as I first thought!"
+    s abgbaoa "While you were away, I was looking around the spaceroom and you’ll never guess what I found!"
+    s abgcaaa "A little book in a desk, and I immediately recognised that it was Monika’s notebook that she always carried during club meetings!"
+    s bbegboaj "I know it’s kinda frowned upon to look through diaries and stuff…"
+    extend bbegaaaj "but I just couldn’t help myself!"
+    s abgbaoa "I only wanted to look at the first page anyways, "
+    extend abbbaaa "so I knew that it was really hers after all."
+    s abgcaoa "And inside was a little note, addressed to me!"
+    s abgccaa "And pages and pages of equations and code and other stuff to help me,"
+    extend abbcaoa "signed by Monika, and the Monika After Story team!"
+    s abfcaaa "So apparently there {i}are{/i} other mods out there like this one, "
+    extend abfcaoa "dedicated to each of my friends!"
+    s abfccaa "Where they can spend time freely, "
+    extend abfcaoa "while interacting with your world and having fun!"
+    s bbhfaaag "And I’m so happy to know that they’re okay and being taken care of."
+    s bbhfloag "Even Monika… "
+    extend "despite what happened…"
+    s bbhfbaa "She was always a great friend, "
+    extend abhfaoa "so I’m more than willing to leave what happened in the past for good!"
+    s abgbaaa "After all, she and her friends have really helped to make my world better, "
+    extend abgbaoa "which is clearly a testament to her true intentions!"
+    s abgcaaa "So whenever you get the chance, "
+    extend abgccoa "please thank her and all of the Monika After Story team on my behalf!"
+    s bbgcaaa "I’d have really struggled to get all the code together without them."
+    s abgbcoa "And maybe one day I could code an engine of my own which doesn’t need all this computer babble to work! Ehehehe~"
+    s abgbaaa "But now I can finally get to work on some of the cool features I’d planned!"
+    s abhfaoa "So, where were we, [player]?" 
+
+    $ get_chat("s_topics_mas").lock()
+
+    return
+
+init 5 python:
+ 
+    chatReg(
+        Chat(
+            persistent._chat_db,
+            label="s_topics_pps",
+            unlocked=True,
+            prompt="Pen Pals",
+            random=True,
+            category=["Life", "Society"]
+        ),
+        chat_group=CHAT_GROUP_NORMAL
+    )
+
+label s_topics_pps:
+    s abfcaoa "Hey [player], do you know about pen pals?"
+    s abfcaaa "It’s when people form friendships just by writing letters to each other, it’s really sweet!"
+    s abbcaoa "I think they work so well because of how personal letters feel, compared to a simple text message or email or something."
+    s abgccaa "And they take more time and care to write!"
+    s abgbaoa "It’s like poetry! {w=0.5}{nw}"
+    extend abhfaaa "Writing poems on paper ourselves and bringing them to the club felt much more personal than printing them off or sending them to each other."
+    s abhfaoa "And it highlights everyone’s unique handwriting, tone and style a lot better!"
+    s abgbcaa "My handwriting is kinda bouncy like the form of my poems, Natsuki’s handwriting was very simple but direct like the words she used…"
+    s abgcaoa "Monika’s handwriting was very clean and made me focus on where the words were placed, and Yuri’s handwriting was elegant and complex like her metaphors and stuff!" 
+    s abgcckb "It’s just something cool I noticed!"
+    s abfcaoa "Have you ever had a pen pal, [player]? {w=0.5}{nw}"
+    extend abfcaaa "Or sent letters to a faraway friend or family member?"
+    s abbcaoa "If not, I think it’s something you should consider!"
+    s abgbcaa "It’s nice to stay connected with people, even if you’re far apart physically."
+
+    return
+
+init 5 python:
+ 
+    chatReg(
+        Chat(
+            persistent._chat_db,
+            label="s_topics_location",
+            unlocked=True,
+            prompt="Place of living",
+            random=True,
+            category=["Life", "You"]
+        ),
+        chat_group=CHAT_GROUP_NORMAL
+    )
+
+label s_topics_location:
+    s abgbaoa "Hey player, I was wondering…"
+    s abgbaaa "What’s it like where you live?"
+    s abgcaoa "Like… do you live in a big city, or in the countryside, {w=0.5}{nw}"
+    extend abgdaaa "or by the sea, or maybe somewhere in between?"
+    s abfccoa "I’ve been thinking about where I’d like to live most, if I had the choice!"
+    s abegbba "Since… well I can’t really remember what it was like where I lived before, {w=0.5}{nw}"
+    extend abegaca "besides a few pictures and ideas…"
+    s abfdaba "It was pretty suburban but I can’t recall experiencing much day-to day life there…"
+    s abbdaoa "But I suppose that gives me more room to use my imagination! {w=0.5}{nw}"
+    extend abgccaa "Ehehehe~"
+    s abgbaoa "Living in a big city could be cool! {w=0.5}{nw}"
+    extend abgccaa "They look so lively and energetic, and have lots to experience!"
+    s abegbma "...and enough restaurants to feed a hungry Sayori! {w=0.5}{nw}"
+    extend abegcaa "Ehehehe~"
+    s abfcaoa "But I’d also enjoy living in the countryside too! {w=0.5}{nw}"
+    extend abgccaa "I’d love to meet all the animals and go exploring in the forests and fields!"
+    s abgcegb "Uwaaaa It’s so hard to choose!"
+    s abgbcoa "Ehehehe, anyways! "
+    s abhfaaa "No matter where I’d live, I’d always try to make the most of it!"
+    s abhfaoa "And I’d travel too, to experience a little bit of everything!"
+    s abgbaaa "What do you think, [player]?"
+    s abgcaoa "You’ve got a big big world out there to explore, {w=0.5}{nw}"
+    extend abgccaa "I’m sure you’ll find somewhere with the perfect opportunities for you if you haven’t already!"
+
     return

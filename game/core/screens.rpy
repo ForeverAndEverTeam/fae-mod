@@ -311,8 +311,7 @@ init 4 python:
         
         
         if (
-            fae_bad_name_comp.search(player)
-            or fae_awk_name_comp.search(player)
+            fae_bad_name_list.search(player)
         ):
 
             renpy.call_in_new_context("fae_bad_name_input")
@@ -354,59 +353,6 @@ label fae_bad_name_input:
     hide screen navigation
     return
 
-screen fake_main_menu():
-    style_prefix "main_menu"
-
-    add "game_menu_bg"
-
-    frame:
-        pass
-
-    vbox:
-        style_prefix "navigation"
-
-        xpos gui.navigation_xpos
-        yalign 0.8
-
-        spacing gui.navigation_spacing
-
-        textbutton _("Just Sayori")
-
-        textbutton _("Load Game")
-
-        textbutton _("Settings")
-
-        if store.fae_submod_utilities.submod_def:
-            textbutton _("Submods")
-
-        textbutton _("Hotkeys")
-
-        if renpy.variant("pc"):
-
-            textbutton _("Help")
-
-            textbutton _("Quit")
-
-    if gui.show_name:
-
-        vbox:
-            text "[config.name!t]":
-                style "main_menu_title"
-
-            text "[config.version]":
-                style "main_menu_version"
-
-    # add "fake_menu_logo"
-    add Image(
-        "mod_assets/Logo.png"
-    ) subpixel True xcenter 240 ycenter 120 zoom 0.60
-    # add "fake_menu_art_m"
-    add Image(
-        "gui/menu_art_s.png"
-    ) subpixel True xcenter 1000 ycenter 640 zoom 1.00
-
-    key "K_ESCAPE" action Quit(confirm=False)
-
 
 screen navigation():
 
@@ -446,8 +392,7 @@ screen navigation():
 
         textbutton _("Settings") action [ShowMenu("preferences"), SensitiveIf(renpy.get_screen("preferences") == None)]
 
-        if store.fae_submod_utilities.submod_def:
-            textbutton _("Submods") action [ShowMenu("submods"), SensitiveIf(renpy.get_screen("submods") == None)]
+
 
         textbutton _("QABs") action [ShowMenu("qab"), SensitiveIf(renpy.get_screen("qab") == None)]
 

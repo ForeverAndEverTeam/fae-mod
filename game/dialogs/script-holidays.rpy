@@ -66,6 +66,7 @@ label fae_f14_autoload:
             extend bbgbaabg "and that truly means so much to me."
             s abgccob "So I’ll take any opportunity to tell you just how much I appreciate you!"
             s abgcaia "Couple or not, you can still expect lots of hugs and heart shaped chocolates from me every year! Ehehehe~"
+            
         
         else:
             hide black
@@ -89,6 +90,8 @@ label fae_f14_autoload:
                     $ Affection.calculatedAffectionGain(bypass=True)
                     s abfccab "Ehehehe~"
                     s abgcaia "And as soon as I get better at coding, you can expect lots of hugs and heart shaped chocolates from me every year! Ehehehe~"
+        
+        $ persistent.fae_f14_seen = True
     else:
         s "Welcome back, [player]!"
     jump after_holiday

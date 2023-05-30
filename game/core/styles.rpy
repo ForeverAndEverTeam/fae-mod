@@ -267,22 +267,19 @@ style choice_vbox:
 
     spacing gui.choice_spacing
 
-#style choice_button is default:
-style choice_button is generic_button_light:
+style choice_button is default:
+#style choice_button is generic_button_light:
     properties gui.button_properties("choice_button")
     hover_sound gui.hover_sound
     activate_sound gui.activate_sound
     idle_background Frame("gui/button/choice_idle_background.png", gui.choice_button_borders)
     hover_background Frame("gui/button/choice_hover_background.png", gui.choice_button_borders)
 
-#style choice_button_text is default:
-style choice_button_text is generic_button_text_light:
+style choice_button_text is default:
+#style choice_button_text is generic_button_text_light:
     properties gui.button_text_properties("choice_button")
     outlines []
 
-style choice_button_text_dark is generic_button_text_dark:
-    text_align 0.5
-    layout "subtitle"
 
 style quick_button:
     properties gui.button_properties("quick_button")

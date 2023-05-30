@@ -234,6 +234,7 @@ init -2 python:
         
         @staticmethod
         def writeCap():
+
             fae_utilities.log("Daily affection cap reached!")
             if not datetime.datetime.today().isoformat() in Affection.__capped_aff_dates:
                 Affection.__capped_aff_dates.append(datetime.datetime.today().isoformat())
@@ -251,6 +252,7 @@ init -2 python:
 
         @staticmethod
         def __isStateLessThan(aff_status):
+
             return fae_affection._isAffStatusWithinRange(
                 Affection._getAffectionStatus(),
                 (None, aff_status)
@@ -323,6 +325,7 @@ init -2 python:
                 i += 1
 
         def _getAffectionTierName():
+            
             affection_status = Affection._getAffectionStatus()
             if affection_status == fae_affection.ENAMOURED:
                 return "LOVE"

@@ -9,7 +9,7 @@ init -999 python:
         RPC = Presence(client_id)  # Initialize the client class
         RPC.connect() # Start the handshake loop
 
-        print(RPC.update(state=status, large_image='faelogo', details="Spending Time With Sayori", start=time.time(), large_text="Forever & Ever"))  # Set the presence
+        if status is None:
+            raise Exception("Must provide status")
 
-        #while True:  # The presence will stay on as long as the program is running
-        #    time.sleep(15)
+        print(RPC.update(state=status, large_image='faelogo', details="Spending Time With Sayori", start=time.time(), large_text="Forever & Ever"))  # Set the presence

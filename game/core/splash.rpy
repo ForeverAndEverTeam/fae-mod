@@ -272,8 +272,14 @@ image tos2 = "bg/warning2.png"
 ## Startup Disclaimer
 # This label calls the disclaimer screen that appears when the game starts.
 label splashscreen:
-
-    
+    python:
+        if RELOADCHECK():
+            raise InstallError("Please re-install the mod")
+        
+        if renpy.android:
+            fae_utilities.log("UNSUPPORTED PLATFORM DETECTED. RE-INSTALL MOD ON A SUPPORTED PLATFORM")
+            renpy.quit()
+        
     # This python statement grabs the username and process list of the PC.
 
     scene white
@@ -300,16 +306,13 @@ label splashscreen:
         scene white
         with Dissolve(1.5)
 
-        #if not persistent._fae_imported_ddlc:
-        #    call import_ddlc_persistent
-        
-        $ persistent.has_launched_before = True
-
-        $ renpy.save_persistent()
-        
-        $ config.allow_skipping = False
-    
     python:
+        
+        persistent.has_launched_before = True
+        renpy.save_persistent()
+        
+        config.allow_skipping = False
+    
         basedir = config.basedir.replace("\\", "/")
 
         with open(basedir + "/game/faerun", "w") as versfile:
@@ -320,10 +323,12 @@ label splashscreen:
     
     show white
 
-    $ persistent.ghost_menu = False
-    $ splash_message = splash_message_default
-    $ config.main_menu_music = audio.s1
-    $ renpy.music.play(config.main_menu_music)
+    python:
+        persistent.ghost_menu = False
+        splash_message = splash_message_default
+        config.main_menu_music = audio.s1
+        renpy.music.play(config.main_menu_music)
+    
     show intro with Dissolve(0.5, alpha=True)
     pause 2.5
     hide intro with Dissolve(0.5, alpha=True)
@@ -336,11 +341,8 @@ label splashscreen:
     hide splash_warning with Dissolve(0.5, alpha=True)
     $ config.allow_skipping = False
 
-    
-
     if not persistent.fae_first_visit_date:
         $ persistent.fae_first_visit_date = datetime.datetime.now()
-    
 
     return
 
@@ -353,11 +355,12 @@ label warningscreen:
 # This label checks if the save loaded matches the anti-cheat stored in the save.
 label after_load:
 
+    python:
 
-    $ config.allow_skipping = False
-    $ _dismiss_pause = config.developer
-    $ persistent.ghost_menu = False
-    $ style.say_dialogue = style.normal
+        config.allow_skipping = False
+        _dismiss_pause = config.developer
+        persistent.ghost_menu = False
+        style.say_dialogue = style.normal
 
     if anticheat != persistent.anticheat:
         stop music
@@ -397,29 +400,17 @@ label autoload:
 
     jump ch30_autoload
 
-
-
-# This label loads the label saved in the autoload variable. 
-
-
 # This label sets the main menu music to Doki Doki Literature Club before the
 # menu starts
 label before_main_menu:
 
-
     $ config.main_menu_music = audio.s1
     
-    #$ store._game_menu_screen = "preferences"
     return
 
 
 label confirm_quit:
-    #python:
-    $ fae_utilities.save_game()
-
-
-    $ store.fae_logging.logging.shutdown()
-
-
-    $ renpy.quit()
+    python:
+        fae_utilities.save_game()
+        renpy.quit()
     return

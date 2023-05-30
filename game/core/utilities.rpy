@@ -1,204 +1,3 @@
-init -999 python in fae_root:
-    import store
-
-    def falsify(affection):
-
-        store.persistent.fae_bnc_unlocked = False
-        store.persistent.fae_reversi_unlocked = False
-        store.persistent.fae_custom_music_unlocked = False
-        store.persistent.affection = affection
-
-init -100 python in fae_utilities:
-
-    import ctypes
-    import random
-    import math
-    from collections import defaultdict
-
-    def insert_sort(sort_list, item, key):
-
-        index = len(sort_list) - 1
-        while index >= 0 and key(sort_list[index]) > key(item):
-            index -= 1
-
-        sort_list.insert(index + 1, item)
-
-    def nz_count(value_list):
-        
-        count = 0
-        for value in value_list:
-            count += int(value != 0)
-
-        return count
-
-
-    def ev_distribute(value_list, amt, nz=False):
-       
-        # determine effective size
-        size = len(value_list)
-        if nz:
-            size -= nz_count(value_list)
-
-        # deteremine distribution amount
-        d_amt = amt / size
-
-        # now distribute
-        for index in range(len(value_list)):
-            if not nz or value_list[index] > 0:
-                value_list[index] += d_amt
-
-        # leftovers
-        return amt % size
-
-
-    def lo_distribute(value_list, leftovers, reverse=False, nz=False):
-
-        if nz:
-            size = nz_count(value_list)
-        else:
-            size = len(value_list)
-
-        # apply ev distribute if leftovesr is too large
-        if leftovers >= size:
-            leftovers = ev_distribute(value_list, leftovers, nz=nz)
-
-        # dont add leftovers if none leftover
-        if leftovers < 1:
-            return
-
-        # determine direction
-        if reverse:
-            indexes = range(len(value_list)-1, -1, -1)
-        else:
-            indexes = range(len(value_list))
-
-        # apply leftovers
-        index = 0
-        while leftovers > 0 and index < len(indexes):
-            real_index = indexes[index]
-            if not nz or value_list[real_index] > 0:
-                value_list[real_index] += 1
-                leftovers -= 1
-
-            index += 1
-
-
-init -985 python in fae_utilities:
-
-    ## FUCK THIS MOD
-
-    
-    def pdget(key, table, validator=None, defval=None):
-        """
-        Protected Dict GET
-        Gets an item from a dict, using protections to ensure this item is
-        valid
-
-        IN:
-            key - key of item to get
-            table - dict to get from
-            validator - function to call with the item to validate it
-                If None, no validating done
-                (Default: None)
-            defval - default value to return if could not get from dict
-        """
-        if table is not None and key in table:
-
-            item = table[key]
-
-            if validator is None:
-                return item
-
-            if validator(table[key]):
-                return item
-
-        return defval
-    import datetime
-
-    def fae_getSessionLength():
-
-        _now = datetime.datetime.now()
-        return _now - store.fae_utilities.pdget(
-            "current_session_start",
-            persistent.sessions,
-            #validator=store.fae_ev_data_ver._verify_dt_nn,
-            defval=_now
-        )
-    
-    def fae_getAbsenceLength():
-
-        return fae_getCurrSeshStart() - fae_getLastSeshEnd()
-    
-    def fae_getCurrSeshStart():
-        
-        return store.fae_utilities.pdget(
-            "current_session_start",
-            persistent.sessions,
-            #validator=store.fae_ev_data_ver._verify_dt_nn,
-            defval=fae_getFirstSesh()
-        )
-    
-    def fae_getFirstSesh():
-
-        return store.fae_utilities.pdget(
-            "first_session",
-            persistent.sessions,
-            #validator=store.fae_ev_data_ver._verify_dt_nn,
-            defval=datetime.datetime.now()
-        )
-    
-    def fae_isFirstSeshPast(_date):
-
-        return fae_getFirstSesh().date() > _date
-
-    def fae_getLastSeshEnd():
-
-        return store.fae_utilities.pdget(
-            "last_session_end",
-            persistent.sessions,
-            #validator=store.fae_ev_data_ver._verify_dt_nn,
-            defval=fae_getFirstSesh()
-        )
-
-init -898 python in fae_globals:
-
-    is_steam = "steamapps" in renpy.config.basedir.lower()
-
-
-    
-init 2 python:
-
-    def fae_timePastSince(timekeeper, passed_time, _now=None):
-        """
-        Checks if a certain amount of time has passed since the time in the timekeeper
-        IN:
-            timekeeper:
-                variable holding the time we last checked whatever it restricts
-                (can be datetime.datetime or datetime.date)
-
-            passed_time:
-                datetime.timedelta of the amount of time which should
-                have passed since the last check in order to return True
-
-            _now:
-                time to check against (If none, now is assumed, (Default: None))
-        OUT:
-            boolean:
-                - True if it has been passed_time units past timekeeper
-                - False otherwise
-        """
-        if timekeeper is None:
-            return True
-
-        elif _now is None:
-            _now = datetime.datetime.now()
-
-        #If our timekeeper is holding a datetime.date, we need to convert it to a datetime.datetime
-        if not isinstance(timekeeper, datetime.datetime):
-            timekeeper = datetime.datetime.combine(timekeeper, datetime.time())
-
-        return timekeeper + passed_time <= _now
-
 init python:
 
     def love(love_time=None):
@@ -225,20 +24,16 @@ init -1 python in fae_utilities:
     import store
     import store.fae_globals as fae_globals
 
-    def save_game():
+    
 
-        
+    def save_game():
 
         store.Chat._save_chat_data()
 
         store.fae_outfits.FAEOutfit.store_all()
 
-        #store.fae_events.FAEHoliday.storeAll()
-
         if store.persistent._affection_daily_bypasses > 5:
             store.persistent._affection_daily_bypasses = 5
-        
-
 
         store.main_background.save()
 
@@ -319,8 +114,8 @@ init -999 python in fae_utilities:
             try:
                 os.remove(path)
                 return True
-            except Exception as exception:
-                fae_log("Failed to delete file on path {0}; {1}".format(path, exception.message))
+            except Exception as e:
+                fae_log("Failed to delete file on path {0}; {1}".format(path, e.message))
                 return False
         else:
             renpy.notify("File doesn't exist.")
@@ -339,9 +134,6 @@ init -999 python in fae_utilities:
     def RenpySubSub(string):
 
         return string.replace("[", "[[").replace("{", "{{")
-
-
-
 
 
 default persistent._fae_random_chat_freq = fae_random_chat_rate.SOMETIMES
@@ -403,6 +195,14 @@ init -1 python in fae_random_chat_rate:
 
     def adjustRandFrequency(slider_value):
 
+        """
+        Changes the random amount based on slider
+
+        FEED:
+            slider_value: value from the random chat rate slider
+            Value will be between 0 and 4
+        """
+
         global rand_low
         global rand_high
 
@@ -417,9 +217,23 @@ init -1 python in fae_random_chat_rate:
     
     def getRandChatDisp(slider_value):
 
+        """
+        Uses the slider value and displays relevant string
+
+        FEED:
+            slider_value: value from the random chat rate slider
+        
+        RESULT:
+            string that correlates to the random chat setting
+        """
+
         return SLIDER_DEFS_DISP.get(slider_value, "UNKNOWN")
 
     def setWaitingTime():
+
+        """
+        Sets the wait time for the next topic. Depends on random chat setting
+        """
 
         global randchat_time_left
 
@@ -434,6 +248,11 @@ init -1 python in fae_random_chat_rate:
         return _RANDOM_CHAT_FREQUENCY_TIMER_DEFS.get(store.persistent.fae_random_chat_rate)
     
     def wait():
+
+        """
+        Pauses Ren'Py for a short time.
+        Events before a random topic can be handled.
+        """
 
         global randchat_time_left
 
@@ -454,12 +273,19 @@ init -1 python in fae_random_chat_rate:
     
     def waitedLongEnough():
 
+        """
+        Is the waiting time done?
+
+        RESULT:
+            True if wait time is up, otherwise False
+        """
+
         global randchat_time_left
 
         return randchat_time_left == 0 and rand_low != 0
 
 
-#default persistent.fae_random_chat_rate = fae_utilities.random_chat_rate.SOMETIMES
+
 default persistent.fae_repeat_chat = False
 
 init -990 python in fae_globals:
@@ -468,8 +294,6 @@ init -990 python in fae_globals:
     import store
 
     sesh_start = store.datetime.datetime.now()
-
-    #pia = False
 
     allow_force_quit = True
 
@@ -640,10 +464,6 @@ init -990 python in fae_globals:
 
 init python:
 
-    def show_calendar():
-
-        renpy.call_in_new_context("fae_start_calendar_read_only")
-
     LCC = datetime.datetime.now()
     PRIOR_CHECK_MINUTELY = datetime.datetime.now()
     PRIOR_CHECK_HOURLY = PRIOR_CHECK_MINUTELY.hour
@@ -651,21 +471,14 @@ init python:
 
     def minute_check():
 
-        #checkReaction()
-
-        #fae_clearNotifs()
-
         fae_utilities.save_game()
 
         Affection.checkResetDailyAffectionGain()
 
-
         if (
             persistent._fae_random_chat_freq is not fae_random_chat_rate.NEVER
-            #and datetime.datetime.now() > LCC + datetime.timedelta(minutes=fae_random_chat_rate.get_random_chat_timer())
             and not persistent._event_list
         ):
-
 
             if not persistent.fae_repeat_chat:
                 chat_pool = Chat.chat_filt(
@@ -689,7 +502,6 @@ init python:
                 if (not persistent.fae_repeat_chat):
                     store.persistent._oot = False
                 
-                #Affection.getAffectionGain()
                 atq(random.choice(chat_pool).label)
             
             elif not store.persistent.fae_repeat_chat and not store.persistent._oot:
@@ -712,8 +524,6 @@ init python:
     
     def h_check():
 
-
-        
         return
     
     def d_check():
@@ -722,11 +532,8 @@ init python:
 
         fae_sky.reload_sky()
 
-               
-
         persistent.fae_last_visit_date = datetime.datetime.now()
 
-        
         return
 
 

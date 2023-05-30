@@ -1,4 +1,4 @@
-#Credit to the JN team who wrote the original code this was based off
+# Credit to the JN team who wrote the original code this was based off
 
 
 init python in chat_handler:
@@ -14,7 +14,6 @@ init python in chat_handler:
         store.CHAT_GROUP_REGRET: store.fae_regrets.REGRET_DEFS,
         store.CHAT_GROUP_FLATTER: store.fae_flatter.COMPLIMENT_DEFS,
         store.CHAT_GROUP_MOOD: store.fae_moods.MOOD_DEFS,
-        #store.CHAT_GROUP_DEV: store.fae_dev_tools.DEV_DEFS
     }
 
 init 6 python in chat_handler:
@@ -98,6 +97,7 @@ init -3 python:
         contional - yes (insert requirements here)
         
         random - whether it's random (duh)
+
         """
 
         def __init__(
@@ -221,6 +221,16 @@ init -3 python:
         
         def now_affection_in_affection_range(self, affection_status=None):
 
+            """
+            Is the affection level within the topic's affection range?
+
+            FEED:
+                affection_status: Affection level to test if the topic can be shown. If None, the current affection is used.
+            
+            RESULT:
+                True if cureent affection is within the range, otherwise False
+            """
+
             if not affection_status:
                 affection_status = fae_affection._getAffectionStatus()
             
@@ -264,14 +274,36 @@ init -3 python:
 
         def derandom(self):
 
+            """
+            Set random to False
+            Stops a topic being brought up randomly.
+            """
+
             self.random = False
         
+        def random(self):
+
+            """
+            Set random to True
+            Makes a topic be brought up randomly.
+            """
+
+            self.random = True
+        
         def lock(self):
+
+            """
+            Lock the topic so it can't be seen.
+            """
 
             self.unlocked = False
             self.__save()
         
         def unlock(self):
+
+            """
+            Unlock the topic so it can be seen
+            """
 
             self.unlocked = True
             self.__save()
@@ -518,7 +550,3 @@ init -3 python:
                 omi[category].append(chat)
         
         return omi
-
-
-
-
