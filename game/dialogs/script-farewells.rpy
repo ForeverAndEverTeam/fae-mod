@@ -266,14 +266,6 @@ init 5 python:
 label s_farewell_sleep:
     s abhfaoa "Heading to bed, [player]?"
     s abhfcaa "Hope you have a good night’s sleep!"
-    if Affection.isEnamoured():
-        s abhebob "...can I have a goodnight kiss? Ehehehe~"
-        menu: 
-            "Sure, Sayori":
-                s abgcceb "Yay!"
-                call fae_kiss_short
-            "Another time":
-                s bbhfbaa "Alright then..."
     s abfcaaa "Sweet dreams, [player]!"
     return { "quit": None }
 
