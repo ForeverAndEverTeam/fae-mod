@@ -133,6 +133,9 @@ label ch30_autoload:
     $ store.fae_utilities.makedirifnot("{0}/gifts/".format(renpy.config.basedir))
 
     $ fae_set_pronouns()
+
+    if not persistent.games_reset:
+        $ ResetGames()
       
     jump ch30_main
 

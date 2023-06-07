@@ -5,7 +5,7 @@ init python in fae_games:
 
     import store
 
-    mg_list = []
+    mg_list_redux = []
 
 init python:
     zorder_game = 4

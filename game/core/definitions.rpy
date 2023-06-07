@@ -807,6 +807,7 @@ init -100 python:
             return False
 
 init python:
+    import store.fae_games as fae_games
 
     def boop():
         """
@@ -818,6 +819,23 @@ init python:
         renpy.show_screen("hidden1", True)
         Sayori.setInChat(False)
         renpy.jump("ch30_loop")
+        
+    
+    def ResetGames():
+
+        if persistent.fae_bnc_unlocked:
+            fae_games.mg_list_redux.append("bnc")
+
+            get_chat("s_stopic_bulls_and_cows").lock()
+        
+        if persistent.fae_reversi_unlocked:
+            fae_games.mg_list_redux.append("reversi")
+
+            get_chat("s_topic_reversi").lock()
+        
+        persistent.games_reset = True
+            
+
         
 
     PATH = renpy.config.basedir
