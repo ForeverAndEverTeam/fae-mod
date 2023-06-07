@@ -2391,7 +2391,7 @@ label s_stopic_bulls_and_cows:
     
     $ bnc = minigame(_("Bows & Cows"), 'mg_bnc', bnc_prep)
     #$ mg_list = []
-    $ store.fae_games.mg_list.append(bnc)
+    $ store.fae_games.mg_list_redux.append(bnc)
 
     return
 
@@ -2426,7 +2426,7 @@ label s_topic_reversi:
     
     $ reversi = minigame(_("Reversi"), 'mg_reversi', reversi_prep)
     # $ mg_list = []
-    $ store.fae_games.mg_list.append(reversi)
+    $ store.fae_games.mg_list_redux.append(reversi)
     return
 
 
