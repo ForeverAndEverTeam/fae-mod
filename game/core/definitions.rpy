@@ -693,6 +693,7 @@ default persistent.gender = "M"
 default persistent.last_playthrough = persistent.playthrough
 default persistent.fae_sayori_closed = False
 default persistent.fae_intro_complete = False
+default persistent.games_reset = False
 
 #########################
 #NON-PERSISTENT DEFAULTS#
