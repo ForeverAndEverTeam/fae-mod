@@ -133,6 +133,9 @@ label ch30_autoload:
     $ store.fae_utilities.makedirifnot("{0}/gifts/".format(renpy.config.basedir))
 
     $ fae_set_pronouns()
+
+    if not persistent.games_reset:
+        $ ResetGames()
       
     jump ch30_main
 
@@ -256,7 +259,10 @@ label ch30_init:
                 renpy.call("cnc", False)
             
             else:
-                ats(fae_greetings.greet_sel())
+                try:
+                    ats(fae_greetings.greet_sel())
+                except:
+                    ats("s_greeting_5")
                 persistent.fae_mood_on_quit = None
                 persistent._fae_player_apology_type_on_quit = None
                 reveal()

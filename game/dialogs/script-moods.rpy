@@ -223,7 +223,7 @@ init 5 python:
     )
 
 label s_mood_bored: #Bored player
-    $ random_mg = renpy.random.choice(store.fae_games.mg_list).name
+    $ random_mg = renpy.random.choice(store.fae_games.mg_list_redux).name
     s abhfmja "Hmm…{w=0.5}{nw}"
     extend abhfaaa " if you're bored, would you like to play [random_mg] with me?"
     s abbbaoa "You can start a game in the {i}'Play'{/i} menu!"

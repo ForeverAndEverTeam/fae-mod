@@ -110,7 +110,7 @@ screen minigame_ui():
     vbox:
         xcenter 250
         
-        for i in store.fae_games.mg_list:
+        for i in store.fae_games.mg_list_redux:
             if i.available:
                 textbutton i.name action [Function(i), Hide("minigame_ui"), Jump("ch30_loop")]
         

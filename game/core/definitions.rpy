@@ -693,6 +693,7 @@ default persistent.gender = "M"
 default persistent.last_playthrough = persistent.playthrough
 default persistent.fae_sayori_closed = False
 default persistent.fae_intro_complete = False
+default persistent.games_reset = False
 
 #########################
 #NON-PERSISTENT DEFAULTS#
@@ -807,6 +808,7 @@ init -100 python:
             return False
 
 init python:
+    import store.fae_games as fae_games
 
     def boop():
         """
@@ -818,6 +820,26 @@ init python:
         renpy.show_screen("hidden1", True)
         Sayori.setInChat(False)
         renpy.jump("ch30_loop")
+        
+    
+    def ResetGames():
+
+        if persistent.fae_bnc_unlocked:
+            bnc = minigame(_("Bows & Cows"), 'mg_bnc', bnc_prep)
+            fae_games.mg_list_redux.append(bnc)
+
+            get_chat("s_stopic_bulls_and_cows").lock()
+        
+        if persistent.fae_reversi_unlocked:
+            reversi = minigame(_("Reversi"), 'mg_reversi', reversi_prep)
+
+            fae_games.mg_list_redux.append(reversi)
+
+            get_chat("s_topic_reversi").lock()
+        
+        persistent.games_reset = True
+            
+
         
 
     PATH = renpy.config.basedir
