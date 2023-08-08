@@ -525,7 +525,7 @@ label poem_list:
         madechoice = renpy.display_menu(poem_list, screen="scroll")
 
     if not madechoice == "nevermind":
-        $ showmadechoic(madechoice)
+        $ showmadechoice(madechoice)
     
 
     return
