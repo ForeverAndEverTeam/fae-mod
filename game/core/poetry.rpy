@@ -506,9 +506,11 @@ style sayori_text:
 
 default poem_last_author = None
 
-# Depreciation Warning
+# This feature is now depreciated. Please use {i}$ showmadechoice(){/i} instead.
+# Refer to poem_responses/poems.rpy on how to call a poem anew.
+# Basically works the same as showmadechoice(), but used for Sayori's poem after long absence
 label showpoem(poem, **properties):
-    "This feature is now depreciated. Please use {i}$ showmadechoice(){/i} instead.\nRefer to {u}poem_responses/poems.rpy{/u}on how to call a poem anew."
+    $ showmadechoice(poem)
     return
 
 
@@ -518,12 +520,12 @@ label poem_list:
 
         poem_list = list()
 
-        poem_list = [((_("sunshine"), poem_sunshine)), ((_("bottles"), poem_bottles)), ((_("flower"), "poem_flower")), ((_("last"), "poem_last")), ((_("angel"), "poem_angel")), ((_("fruits"), "poem_fruits")), ((_("leaf"), "poem_leaf")), ((_("prose"), "poem_prose")), ((_("afterlight"), "poem_afterlight")), ((_("nevermind"), "nevermind"))] 
+        poem_list = [((_("sunshine"), poem_sunshine)), ((_("bottles"), poem_bottles)), ((_("flower"), poem_flower)), ((_("last"), poem_last)), ((_("angel"), poem_angel)), ((_("fruits"), poem_fruits)), ((_("leaf"), poem_leaf)), ((_("prose"), poem_prose)), ((_("afterlight"), poem_afterlight)), ((_("nevermind"), "nevermind"))] 
 
         madechoice = renpy.display_menu(poem_list, screen="scroll")
 
     if not madechoice == "nevermind":
-        $ show_poem(madechoice)
+        $ showmadechoic(madechoice)
     
 
     return
