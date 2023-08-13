@@ -825,15 +825,13 @@ init python:
     def ResetGames():
 
         if persistent.fae_bnc_unlocked:
-            bnc = minigame(_("Bows & Cows"), 'mg_bnc', bnc_prep)
-            fae_games.mg_list_redux.append(bnc)
+            atq("s_stopic_bulls_and_cows")
 
             get_chat("s_stopic_bulls_and_cows").lock()
         
         if persistent.fae_reversi_unlocked:
-            reversi = minigame(_("Reversi"), 'mg_reversi', reversi_prep)
 
-            fae_games.mg_list_redux.append(reversi)
+            atq("s_topic_reversi")
 
             get_chat("s_topic_reversi").lock()
         

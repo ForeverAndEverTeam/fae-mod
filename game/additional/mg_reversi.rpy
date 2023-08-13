@@ -429,7 +429,7 @@ label mg_reversi_s_comment(id = 0): #Sayori's comment; -1/1 = Sayori's victory/d
     hide screen mg_reversi_scr
     
     if id == -1: # Sayori wins
-        $random_id = renpy.random.randint(0, 2)
+        $ random_id = renpy.random.randint(0, 2)
         if random_id == 0:
             s ebbccea "Yay! I won this game!"
             s abgcaoa "Don't worry, you'll have better luck next time~"
