@@ -520,7 +520,16 @@ label poem_list:
 
         poem_list = list()
 
-        poem_list = [((_("sunshine"), poem_sunshine)), ((_("bottles"), poem_bottles)), ((_("flower"), poem_flower)), ((_("last"), poem_last)), ((_("angel"), poem_angel)), ((_("fruits"), poem_fruits)), ((_("leaf"), poem_leaf)), ((_("prose"), poem_prose)), ((_("afterlight"), poem_afterlight)), ((_("nevermind"), "nevermind"))] 
+        poem_list = [((_("sunshine"), poem_sunshine)), 
+                    ((_("bottles"), poem_bottles)), 
+                    ((_("flower"), poem_flower)), 
+                    ((_("last"), poem_last)), 
+                    ((_("angel"), poem_angel)), 
+                    ((_("fruits"), poem_fruits)), 
+                    ((_("leaf"), poem_leaf)), 
+                    ((_("prose"), poem_prose)), 
+                    ((_("afterlight"), poem_afterlight)), 
+                    ((_("nevermind"), "nevermind"))] 
 
         madechoice = renpy.display_menu(poem_list, screen="scroll")
 
