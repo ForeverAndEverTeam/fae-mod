@@ -287,7 +287,7 @@ label s_return_long_absence:
     $ persistent._fae_long_absence = False
 
     show desknote
-    call fae_showpoem(long_wait) from _call_fae_showpoem
+    call showpoem(long_wait) from _call_fae_showpoem
 
     menu:
         "Call out for Sayori":
