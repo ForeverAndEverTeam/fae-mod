@@ -133,9 +133,6 @@ label ch30_autoload:
     $ store.fae_utilities.makedirifnot("{0}/gifts/".format(renpy.config.basedir))
 
     $ fae_set_pronouns()
-
-    if not persistent.games_reset:
-        $ ResetGames()
       
     jump ch30_main
 
@@ -148,16 +145,21 @@ label ch30_setup:
 
     show black zorder 99
 
+    if not persistent.mg_merge:
+        $ game_reset()
+        $ persistent.mg_merge = True
+        $ renpy.save_persistent()
+
     python:
         main_background.form()
 
         fae_atmosphere.showSky(fae_atmosphere.WEATHER_SUNNY, with_transition=False)
         
         Affection.checkResetDailyAffectionGain()
-        fae_outfits.get_user_acs()
-        fae_outfits.call_user_outfit()
-        fae_outfits.FAEAcs.call_all()
-        fae_outfits.FAEOutfit.call_all()
+        fae_outfits.load_custom_wearables()
+        fae_outfits.load_custom_outfits()
+        fae_outfits.FAEWearable.load_all()
+        fae_outfits.FAEOutfit.load_all()
         fae_utilities.log("Outfit data loaded.")
         if fae_outfits.outfit_exists(persistent.fae_outfit_quit):
             Sayori.setOutfit(fae_outfits.get_outfit(persistent.fae_outfit_quit))
@@ -212,17 +214,15 @@ label ch30_init:
         
         Affection.checkResetDailyAffectionGain()
 
-        Sayori.setInChat(True)
+        Sayori.setInChat(True)            
 
-        if store.persistent._fae_absence_choice is not None:
+        if (datetime.datetime.now() - persistent.fae_last_visit_date).total_seconds() / 604800 >= 2 and persistent._fae_absence_choice is None:
+            Sayori.add_regret_quit(fae_regrets.RegretTypes.long_absence)
             persistent.fae_visit_counter += 1
             persistent.fae_last_visit_date = datetime.datetime.now()
             ats("s_greeting_long_away")
             reveal()
             renpy.jump("cnc")
-
-        if (datetime.datetime.now() - persistent.fae_last_visit_date).total_seconds() / 604800 >= 2 and persistent._fae_absence_choice is None:
-            Sayori.add_regret_quit(fae_regrets.RegretTypes.long_absence)
         
         elif not persistent._fae_player_apology_type_on_quit:
             Affection.calculatedAffectionGain()
@@ -230,10 +230,10 @@ label ch30_init:
         persistent.fae_visit_counter += 1
         persistent.fae_last_visit_date = datetime.datetime.now()
 
-        fae_outfits.get_user_acs()
-        fae_outfits.call_user_outfit()
-        fae_outfits.FAEAcs.call_all()
-        fae_outfits.FAEOutfit.call_all()
+        fae_outfits.load_custom_wearables()
+        fae_outfits.load_custom_outfits()
+        fae_outfits.FAEWearable.load_all()
+        fae_outfits.FAEOutfit.load_all()
         fae_utilities.log("Outfit data loaded.")
 
         if fae_outfits.outfit_exists(persistent.fae_outfit_quit):
@@ -242,6 +242,8 @@ label ch30_init:
         
         else:
             Sayori.setOutfit(fae_outfits.get_outfit("fae_uniform"))
+
+        Sayori.setOutfit(fae_outfits.get_outfit("fae_hoodie"))
         
         fae_utilities.log("Outfit Set.")
         
@@ -279,6 +281,8 @@ label after_holiday:
     pass
 
 label ch30_loop:
+
+    hide black
 
     $ init_qabs()
 
@@ -424,7 +428,7 @@ label cnc_notify(show_sayori=True):
             if "derandom" in return_keys:
                 chat_obj.random = False
             if "love" in return_keys:
-                love()
+                fae_ILY()
     
     if "quit" in return_keys:
         $ persistent.fae_sayori_closed = True
