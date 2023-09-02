@@ -810,6 +810,17 @@ init -100 python:
 init python:
     import store.fae_games as fae_games
 
+    def game_reset():
+        """
+        One-off function to transfer games to persistent memory instead of local variables
+        """
+
+        persistent.fae_games_list = fae_games.mg_list_redo
+
+        fae_games.mg_list_redo.clear()
+
+        return
+
     def boop():
         """
         Boop screen code stuff
@@ -820,26 +831,9 @@ init python:
         renpy.show_screen("hidden1", True)
         Sayori.setInChat(False)
         renpy.jump("ch30_loop")
-        
     
-    def ResetGames():
-
-        if persistent.fae_bnc_unlocked:
-            atq("s_stopic_bulls_and_cows")
-
-            get_chat("s_stopic_bulls_and_cows").lock()
-        
-        if persistent.fae_reversi_unlocked:
-
-            atq("s_topic_reversi")
-
-            get_chat("s_topic_reversi").lock()
-        
-        persistent.games_reset = True
-            
-
-        
-
+    
+    
     PATH = renpy.config.basedir
 
     def makeFile(filename, filecontents):
@@ -848,7 +842,6 @@ init python:
             f.write(filecontents)
         
             f.close()
-
 
 init -1 python:
 
