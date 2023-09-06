@@ -61,7 +61,6 @@ init -1 python in fae_farewells:
             ("s_farewell_2"),
             ("s_farewell_3"),
             ("s_farewell_4"),
-            ("s_farewell_5"),
             ("s_farewell_6"),
             ("s_farewell_7")
         ]

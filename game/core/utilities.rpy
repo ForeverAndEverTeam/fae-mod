@@ -1,24 +1,3 @@
-init python:
-
-    def love(love_time=None):
-
-        if love_time is None:
-            love_time = datetime.datetime.now()
-        persistent._fae_ily_last = love_time
-
-    
-    def time_love(time_since):
-
-        check_time = datetime.datetime.now()
-
-        if persistent._fae_ily_last is None or persistent._fae_ily_last > check_time:
-            persistent._fae_ily_last = None
-            return False
-        
-        return (check_time - persistent._fae_ily_last) <= time_since
-
-
-
 init -1 python in fae_utilities:
     import re
     import store
@@ -30,12 +9,41 @@ init -1 python in fae_utilities:
 
         store.Chat._save_chat_data()
 
-        store.fae_outfits.FAEOutfit.store_all()
+        store.fae_outfits.FAEOutfit.save_all()
 
         if store.persistent._affection_daily_bypasses > 5:
             store.persistent._affection_daily_bypasses = 5
 
         store.main_background.save()
+
+init -3 python:
+
+    import datetime
+    
+    def fae_get_current_hour():
+
+        return datetime.datetime.now().hour
+
+    def fae_get_current_time_block():
+
+        current_hour = fae_get_current_hour()
+        if current_hour in range(3, 5):
+            return FAETimeBlocks.early_morning
+
+        elif current_hour in range(5, 9):
+            return FAETimeBlocks.mid_morning
+
+        elif current_hour in range(9, 12):
+            return FAETimeBlocks.late_morning
+
+        elif current_hour in range(12, 18):
+            return FAETimeBlocks.afternoon
+
+        elif current_hour in range(18, 22):
+            return FAETimeBlocks.evening
+
+        else:
+            return FAETimeBlocks.night
 
 
 init -999 python in fae_utilities:
@@ -459,6 +467,12 @@ init -990 python in fae_globals:
         "xrated",
         "xxx"
     }
+
+    DEFAULT_ALPHABETICAL_ALLOW_VALUES = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz-' "
+
+    # Numerical values allowed for text input
+    DEFAULT_NUMERICAL_ALLOW_VALUES = "1234567890"
+
 
 # Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc
 

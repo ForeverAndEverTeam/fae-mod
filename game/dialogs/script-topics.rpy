@@ -2334,10 +2334,10 @@ init 5 python:
     chatReg(
         Chat(
             persistent._chat_db,
-            label="s_event_music_intro",
+            label="s_event_music_intro_redux",
             unlocked=True,
             prompt="music",
-            conditional="not persistent.fae_reversi_unlocked and not persistent.fae_custom_music_unlocked",
+            conditional="not persistent.fae_reversi_unlocked_redux and not persistent.fae_custom_music_unlocked",
             random=True,
             category=["Music"],
             affection_range=(fae_affection.HAPPY, None)
@@ -2345,7 +2345,7 @@ init 5 python:
         chat_group=CHAT_GROUP_NORMAL
     )
 
-label s_event_music_intro:
+label s_event_music_intro_redux:
     s abfcaoa "Hey [player]! Guess what!"
     s abfccaa "I did some coding and I found a way to let you play your own music here!"
     s abegabaj "It might be a little buggy, ehehehe~"
@@ -2353,7 +2353,7 @@ label s_event_music_intro:
     s abfccaa "But it seems to be working fine for me!"
     s abagaoa "All you need to do is put a .mp3 file in the {i}music{/i} folder in the game directory, and click on the {i}Music{/i} tab in the bottom-left!"
     s abagcka "I'm basically giving you the aux cord to the rest of my existence, so no pressure! Ehehehe~"
-    $ persistent.fae_custom_music_unlocked = True
+    $ persistent.fae_custom_music_unlocked_redux = True
     return
 
 
@@ -2362,10 +2362,10 @@ init 5 python:
     chatReg(
         Chat(
             persistent._chat_db,
-            label="s_stopic_bulls_and_cows",
+            label="s_stopic_bulls_and_cows_redux",
             unlocked=True,
             prompt="Bulls and Cows",
-            conditional="not persistent.fae_bnc_unlocked",
+            conditional="not persistent.fae_bnc_unlocked_redux",
             random=True,
             category=["Games"],
             affection_range=(fae_affection.HAPPY, None)
@@ -2373,7 +2373,7 @@ init 5 python:
         chat_group=CHAT_GROUP_NORMAL
     )
 
-label s_stopic_bulls_and_cows:
+label s_stopic_bulls_and_cows_redux:
     s abfcaoa "Hey [player]! I have something to show you!"
     s abagaaa "So, remember how I coded the music player a little while ago?"
     s abfccaa "I tried to code something a little more complex this time, so I made a game!"
@@ -2387,11 +2387,15 @@ label s_stopic_bulls_and_cows:
     s abhhcaa "With a couple attempts and some clever thinking you should be able to figure out my number!"
     s abfccea "You can start a round in the {i}Play{/i} menu, good luck [player]!"
 
-    $ persistent.fae_bnc_unlocked = True
+    $ persistent.fae_bnc_unlocked_redux = True
     
     $ bnc = minigame(_("Bows & Cows"), 'mg_bnc', bnc_prep)
     #$ mg_list = []
-    $ store.fae_games.mg_list_redux.append(bnc)
+    $ persistent.games_reset_redo.append(bnc)
+
+    $ renpy.save_persistent()
+
+    $ get_chat("s_stopic_bulls_and_cows_redux").lock()
 
     return
 
@@ -2401,10 +2405,10 @@ init 5 python:
     chatReg(
         Chat(
             persistent._chat_db,
-            label="s_topic_reversi",
+            label="s_topic_reversi_redux",
             unlocked=True,
             prompt="Reversi",
-            conditional="persistent.fae_bnc_unlocked and not persistent.fae_bnc_unlocked",
+            conditional="persistent.fae_bnc_unlocked_redux",
             random=True,
             category=["Games"],
             affection_range=(fae_affection.HAPPY, None)
@@ -2412,7 +2416,7 @@ init 5 python:
         chat_group=CHAT_GROUP_NORMAL
     )
 
-label s_topic_reversi:
+label s_topic_reversi_redux:
     s abfcaoa "Hey [player]! I’ve been working on something again!"
     s abfccaa "It’s by far my most challenging project yet!"
     s abfcaoa "With many hours of crayon doodling and coding, I present to you..."
@@ -2422,11 +2426,13 @@ label s_topic_reversi:
     s abhhdaa "And [player], I’ve been practicing~"
     s abfccea "You can start a round in the {i}Play{/i} menu, good luck [player]!"
 
-    $ persistent.fae_reversi_unlocked = True
+    $ persistent.fae_reversi_unlocked_redux = True
     
     $ reversi = minigame(_("Reversi"), 'mg_reversi', reversi_prep)
     # $ mg_list = []
-    $ store.fae_games.mg_list_redux.append(reversi)
+    $ persistent.games_reset_redo.append(reversi)
+
+    $ get_chat("s_topic_reversi_redux").lock()
     return
 
 
@@ -3264,3 +3270,5 @@ label s_topics_location:
     extend abgccaa "I’m sure you’ll find somewhere with the perfect opportunities for you if you haven’t already!"
 
     return
+
+

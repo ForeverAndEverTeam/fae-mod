@@ -1,11 +1,15 @@
 default persistent._fae_game_db = dict()
-
+default persistent._fae_mg_list = list()
+default persistent.games_reset_redo = list()
 
 init python in fae_games:
 
     import store
 
-    mg_list_redux = []
+    persistent = renpy.game.persistent
+
+    mg_list_redo = []
+    persistent._fae_mg_list = mg_list_redo
 
 init python:
     zorder_game = 4

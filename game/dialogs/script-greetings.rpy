@@ -1,6 +1,12 @@
 default persistent._greet_db = dict()
 default persistent.fae_first_greet = True
 
+image desknote = Composite(
+    (1280, 720), 
+    (0,0), "mod_assets/sayori/table/chair.png", 
+    (0,0), "mod_assets/sayori/table/desk.png", 
+    (0,0),"mod_assets/sayori/table/note.png")
+
 init -1 python in fae_greetings:
     import random
     import store
@@ -60,8 +66,8 @@ label greeting_first_force_quit:
         "Turn on the lights.":
             hide screen fae_jump_timer
             $ Affection.calculatedAffectionGain(1)
-            show sayori bbaaafag at t11 zorder fae_sprites.FAE_SAYORI_ZORDER
             hide black
+            show sayori bbaaafag at t11 zorder fae_sprites.FAE_SAYORI_ZORDER
             pause 2.0
             s bbaaafag "[player]..."
             s bbaajgag "That really hurt..."
@@ -285,9 +291,12 @@ init 5 python:
 label s_return_long_absence:
 
     $ persistent._fae_long_absence = False
+    scene black
 
     show desknote
-    call fae_showpoem(long_wait) from _call_fae_showpoem
+
+    pause(5.0)
+    $ showmadechoice(long_wait)
 
     menu:
         "Call out for Sayori":
@@ -309,6 +318,10 @@ label s_return_long_absence:
     #show screen tear(20, 0.1, 0.1, 0)
 
     play sound "sfx/s_kill_glitch1.ogg"
+
+    $ main_background.form()
+
+    $ fae_atmosphere.showSky(fae_atmosphere.WEATHER_SUNNY, with_transition=False)
 
     show sayori cahberj at t11
 

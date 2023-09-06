@@ -168,19 +168,19 @@ init -50 python in fae_sprites:
         ad_hoc = [
             (1280, 720),
             (0, 0), _FAE_SAYORI_IMAGES_PATH + "table/chair.png",
-            (0, 0), "{0}{1}/arms/[Sayori._outfit.clothes.ref_name]/back-arm.png".format(_FAE_SAYORI_IMAGES_PATH, pose),
-            (0, 0), "{0}{1}/body/1.png".format(_FAE_SAYORI_IMAGES_PATH, pose),
+            (0, 0), "{0}{1}/arms/[Sayori._outfit.clothes.reference_name]/back-arm.png".format(_FAE_SAYORI_IMAGES_PATH, pose),
+            (0, 0), "{0}{1}/body/[Sayori._outfit.clothes.reference_name]/1.png".format(_FAE_SAYORI_IMAGES_PATH, pose),
             #(0, 0), "{0}{1}/clothes/[Sayori._outfit.clothes.ref_name]/1.png".format(_SAYORI_IMAGES_PATH, pose),
-            (0, 0), "{0}{1}/backarms/[Sayori._outfit.clothes.ref_name]/{2}.png".format(_FAE_SAYORI_IMAGES_PATH, pose, backarm),
+            (0, 0), "{0}{1}/backarms/[Sayori._outfit.clothes.reference_name]/{2}.png".format(_FAE_SAYORI_IMAGES_PATH, pose, backarm),
             ]
 
         ad_hoc.extend([
             (0, 0), _FAE_SAYORI_IMAGES_PATH + "table/desk_sh.png",
             (0, 0), _FAE_SAYORI_IMAGES_PATH + "table/desk.png",
-            (0, 0), "{0}{1}/arms/[Sayori._outfit.clothes.ref_name]/{2}.png".format(_FAE_SAYORI_IMAGES_PATH, pose, arms),
-            (0, 0), "{0}{1}/arms/[Sayori._outfit.clothes.ref_name]/{2}.png".format(_FAE_SAYORI_IMAGES_PATH, pose, arms2),
+            (0, 0), "{0}{1}/arms/[Sayori._outfit.clothes.reference_name]/{2}.png".format(_FAE_SAYORI_IMAGES_PATH, pose, arms),
+            (0, 0), "{0}{1}/arms/[Sayori._outfit.clothes.reference_name]/{2}.png".format(_FAE_SAYORI_IMAGES_PATH, pose, arms2),
             #(0, 0), "{0}{1}/hair/{2}.png".format(_SAYORI_IMAGES_PATH, pose, hair),
-            (0, 0), "{0}{1}/hair/[Sayori._outfit.hairstyle.ref_name]/a.png".format(_FAE_SAYORI_IMAGES_PATH, pose),
+            (0, 0), "{0}{1}/hair/[Sayori._outfit.hairstyle.reference_name]/a.png".format(_FAE_SAYORI_IMAGES_PATH, pose),
         ])
 
         
@@ -196,12 +196,12 @@ init -50 python in fae_sprites:
         
         if store.Sayori._outfit.necklace:
             ad_hoc.extend([
-                (0, 0), "{0}{1}/necklace/[Sayori._outfit.necklace.ref_name]/{1}.png".format(_FAE_SAYORI_IMAGES_PATH, pose),
+                (0, 0), "{0}{1}/necklace/[Sayori._outfit.necklace.reference_name]/{1}.png".format(_FAE_SAYORI_IMAGES_PATH, pose),
             ])
 
         if store.Sayori._outfit.accessory:
             ad_hoc.extend([
-                (0, 0), "{0}{1}/accessory/[Sayori._outfit.accessory.ref_name]/{1}.png".format(_FAE_SAYORI_IMAGES_PATH, pose),
+                (0, 0), "{0}{1}/accessory/[Sayori._outfit.accessory.reference_name]/{1}.png".format(_FAE_SAYORI_IMAGES_PATH, pose),
         ])
 
         if tears:
@@ -215,12 +215,12 @@ init -50 python in fae_sprites:
 
         if store.Sayori._outfit.headgear:
             ad_hoc.extend([
-                (0, 0), "{0}{1}/headgear/[Sayori._outfit.headgear.ref_name]/{1}.png".format(_FAE_SAYORI_IMAGES_PATH, pose),
+                (0, 0), "{0}{1}/headgear/[Sayori._outfit.headgear.reference_name]/{1}.png".format(_FAE_SAYORI_IMAGES_PATH, pose),
             ])
 
         if store.Sayori._outfit.eyewear:
             ad_hoc.extend([
-                (0, 0), "{0}{1}/eyewear/[Sayori._outfit.eyewear.ref_name]/{1}.png".format(_FAE_SAYORI_IMAGES_PATH, pose),
+                (0, 0), "{0}{1}/eyewear/[Sayori._outfit.eyewear.reference_name]/{1}.png".format(_FAE_SAYORI_IMAGES_PATH, pose),
             ])
 
         if store.fae_gifts.Gifts.cookies:
