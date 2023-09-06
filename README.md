@@ -94,6 +94,8 @@ _Thank you for your help in bringing FaE to life - we wouldn't be here without y
 
 ## Special thanks
 
+- DJMayDay: Black hoodie outfit, commisioned by Z
+
 - [Monika After Story Team](https://github.com/Monika-After-Story/MonikaModDev)
   - Adapted source code and systems used with permission
   - Weather assets used with permission
