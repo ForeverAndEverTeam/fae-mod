@@ -9,9 +9,46 @@ _Forever & Ever_ is a mod for the free game [Doki Doki Literature Club](https://
 
 In it, you can become closer to Sayori than ever before! You have all the time in the world to build the perfect relationship with our cinnamon bun as the star of the show. At the heart of the mod, we took a mental health based approach in line with the experiences Sayori had in the original game, so we can hopefully support people by offering a source of positivity, advice, and unconditional understanding.
 
-Currently we have a whole range of unique dialogue, questions, and games for you and Sayori to enjoy, and we have so many more ideas for the near future! We're very active around the mod and on our discord server and we promise to deliver frequent updates and announcements so there's always something new and exciting to do! 
-Why not get creative and try to add a feature or two yourself? (I'm sure she'd love that!)
+Currently we have a whole range of unique dialogue, questions, and games for you and Sayori to enjoy!
 
+# COMPLETION NOTICE
+
+# THE MOD IS COMPLETE AND THE FOREVER & EVER TEAM IS NOW DISBANDED
+
+As of writing, 1.0: The Curtain Call has just been released, and the mod is now complete.
+See below for a list of what you can and can't do with our mod.
+
+# CONTENT USE
+
+## Will there be translations/can I translate the mod
+### NO.
+We will not be allowing translations.
+
+## Can I port the mod?
+### NO
+I've reached out to someone already about porting the mod, but if the person requested doesn't do it, then nobody will.
+
+## Can I continue the mod?
+### NO
+The mod is now complete and the Forever & Ever team is now disbanded.
+
+## Can I use your content in {project/mod}?
+### NO
+We worked hard on this, despite challenges, both internal and external and we're going to protect it.
+You may not use our content without our express permission.
+
+# YOU MAY NOT
+- Use our content (assets, dialogue, code, music) for any purpose
+- Continue the mod under **any** name
+- Abuse the submod system.
+
+# YOU MAY
+
+- Submod
+- Add your own outfits
+- Anything not defined in the "you may not" section.
+
+We hope you've enjoyed our journey and the mod we've made.
 ---
 
 ## Compatability notice
@@ -55,7 +92,9 @@ This mod is designed for use with a copy of the original game by Team Salvato, a
 
 ## Bugs and feedback
 
-To report bugs, request support or provide input with/to the mod, please raise a new issue [here](https://github.com/ForeverAndEverTeam/fae-mod/issues).
+~~To report bugs, request support or provide input with/to the mod, please raise a new issue [here](https://github.com/ForeverAndEverTeam/fae-mod/issues).~~
+
+### BUG REPORTS WILL BE CLOSED, SIGHT UNSEEN.
 
 ---
 
