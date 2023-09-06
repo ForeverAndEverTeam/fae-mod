@@ -2365,7 +2365,7 @@ init 5 python:
             label="s_stopic_bulls_and_cows_redux",
             unlocked=True,
             prompt="Bulls and Cows",
-            conditional="persistentfae_custom_music_unlocked and not persistent.fae_bnc_unlocked_redux",
+            conditional="persistent.fae_custom_music_unlocked and not persistent.fae_bnc_unlocked_redux",
             random=True,
             category=["Games"],
             affection_range=(fae_affection.HAPPY, None)
