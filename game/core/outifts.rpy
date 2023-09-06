@@ -902,14 +902,6 @@ init -1 python in fae_outfits:
         is_fae_wearable=True
     ))
 
-    __register_wearable(FAEAccessory(
-        reference_name="fae_headphones",
-        display_name="Headphones",
-        unlocked=True,
-        is_fae_wearable=True
-    ))
-
-
     __register_outfit(FAEOutfit(
         reference_name="fae_uniform",
         display_name="School Uniform",
