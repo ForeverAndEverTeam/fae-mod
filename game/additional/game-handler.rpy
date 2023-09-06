@@ -1,5 +1,6 @@
 default persistent._fae_game_db = dict()
 default persistent._fae_mg_list = list()
+default persistent.games_reset_redo = list()
 
 init python in fae_games:
 
