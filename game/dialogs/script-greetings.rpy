@@ -1,6 +1,12 @@
 default persistent._greet_db = dict()
 default persistent.fae_first_greet = True
 
+image desknote = Composite(
+    (1280, 720), 
+    (0,0), "mod_assets/sayori/table/chair.png", 
+    (0,0), "mod_assets/sayori/table/desk.png", 
+    (0,0),"mod_assets/sayori/table/note.png")
+
 init -1 python in fae_greetings:
     import random
     import store
@@ -288,6 +294,8 @@ label s_return_long_absence:
     scene black
 
     show desknote
+
+    pause(5.0)
     $ showmadechoice(long_wait)
 
     menu:
