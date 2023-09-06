@@ -67,7 +67,6 @@ _Bottling up those happy thoughts!_
 
 - [Orcaramelo](https://github.com/Orcaramelo): Project Lead, Lead Artist, Writer
 - [Nathan](https://github.com/TRIDENT1313): Lead Developer, Writer
-- Sayori: Lead Writer, Musician
 - [Emilia/Monika (EYLO)](https://www.reddit.com/u/EmiliaMonika?utm_medium=android_app&utm_source=share): Writer
 
 ## Previous contributors
