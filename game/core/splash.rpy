@@ -282,6 +282,14 @@ label splashscreen:
         
     # This python statement grabs the username and process list of the PC.
 
+    if not persistent.fae_disclaimer_seen:
+        scene black
+        show text "{=gui_text}This mod is not a substitute for a real relationship and should not be treated as such." 
+
+        $ renpy.pause(10, True)
+
+        $ persistent.fae_disclaimer_seen = True
+
     scene white
     
     default persistent.has_launched_before = False
