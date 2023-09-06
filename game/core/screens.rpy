@@ -392,7 +392,7 @@ screen navigation():
 
         textbutton _("Settings") action [ShowMenu("preferences"), SensitiveIf(renpy.get_screen("preferences") == None)]
 
-
+        textbutton _("Submods") action [ShowMenu("submods"), SensitiveIf(renpy.get_screen("submods") == None)]
 
         textbutton _("QABs") action [ShowMenu("qab"), SensitiveIf(renpy.get_screen("qab") == None)]
 
@@ -1836,3 +1836,43 @@ screen qab():
 
 screen fae_jump_timer(time, expiry_label):
     timer time action Jump(expiry_label)
+
+
+screen submods():
+
+    tag menu
+
+    use game_menu(("submods")):
+
+        viewport id "scroll":
+            scrollbars "vertical"
+            mousewheel True
+            draggable True
+
+            vbox:
+                style_prefix "check"
+                xfill True
+                xmaximum 1000
+
+                for i in sorted(store.fae_extras.dictionary_submods.values(), key=lambda x: x.name):
+                    vbox:
+                        xfill True
+                        xmaximum 1000
+
+                        label i.name:
+                            yanchor 0
+                            xalign 0
+                            text_text_align 0.0
+                        
+                        $ authors = "{{space=20}}By {0}".format(i.creator)
+
+
+                        text "[authors]":
+                            yanchor 0
+                            xalign 0
+                            text_align 0.0
+                            style "main_menu_version"
+                        
+                        if i.description:
+                            text i.description text_align 0.0
+
